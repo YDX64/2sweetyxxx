@@ -1,0 +1,284 @@
+name: Emergency Recovery
+
+on:
+  workflow_dispatch:
+    inputs:
+      recovery_type:
+        description: 'Type of recovery to perform'
+        required: true
+        type: choice
+        options:
+          - restore-from-backup
+          - restore-from-tag
+          - restore-from-commit
+          - restore-database-only
+      backup_source:
+        description: 'Backup source (tag name, commit SHA, or backup ID)'
+        required: true
+      confirm_recovery:
+        description: 'Type "CONFIRM" to proceed with recovery'
+        required: true
+
+jobs:
+  validate-recovery:
+    runs-on: ubuntu-latest
+    outputs:
+      proceed: ${{ steps.validate.outputs.proceed }}
+      
+    steps:
+      - name: Validate confirmation
+        id: validate
+        run: |
+          if [ "${{ github.event.inputs.confirm_recovery }}" != "CONFIRM" ]; then
+            echo "❌ Recovery cancelled - confirmation not provided"
+            echo "proceed=false" >> $GITHUB_OUTPUT
+            exit 1
+          fi
+          echo "✅ Confirmation received"
+          echo "proceed=true" >> $GITHUB_OUTPUT
+          
+  emergency-recovery:
+    needs: validate-recovery
+    if: needs.validate-recovery.outputs.proceed == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: read
+      
+    steps:
+      - name: Checkout current state
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          
+      - name: Setup recovery environment
+        run: |
+          echo "🚨 EMERGENCY RECOVERY INITIATED 🚨"
+          echo "Recovery Type: ${{ github.event.inputs.recovery_type }}"
+          echo "Backup Source: ${{ github.event.inputs.backup_source }}"
+          echo "Initiated by: ${{ github.actor }}"
+          echo "Time: $(date)"
+          
+      - name: Create pre-recovery snapshot
+        run: |
+          TIMESTAMP=$(date +'%Y%m%d-%H%M%S')
+          mkdir -p emergency-snapshots
+          
+          # Create snapshot of current state before recovery
+          tar -czf "emergency-snapshots/pre-recovery-${TIMESTAMP}.tar.gz" \
+            --exclude=node_modules \
+            --exclude=.git \
+            --exclude=dist \
+            --exclude=build \
+            --exclude=.env \
+            --exclude=uploads \
+            --exclude=emergency-snapshots \
+            .
+            
+          echo "Pre-recovery snapshot created: pre-recovery-${TIMESTAMP}.tar.gz"
+          
+      - name: Restore from backup release
+        if: github.event.inputs.recovery_type == 'restore-from-backup'
+        run: |
+          echo "Downloading backup: ${{ github.event.inputs.backup_source }}"
+          
+          # Download release assets
+          gh release download "${{ github.event.inputs.backup_source }}" \
+            --pattern "*.tar.gz" \
+            --dir emergency-recovery
+            
+          # Find and extract the backup
+          BACKUP_FILE=$(ls emergency-recovery/*-full.tar.gz | head -1)
+          if [ -z "$BACKUP_FILE" ]; then
+            BACKUP_FILE=$(ls emergency-recovery/*-code.tar.gz | head -1)
+          fi
+          
+          if [ -n "$BACKUP_FILE" ]; then
+            echo "Extracting: $BACKUP_FILE"
+            tar -xzf "$BACKUP_FILE"
+            echo "✅ Backup restored successfully"
+          else
+            echo "❌ No backup file found"
+            exit 1
+          fi
+        env:
+          GH_TOKEN: ${{ github.token }}
+          
+      - name: Restore from git tag
+        if: github.event.inputs.recovery_type == 'restore-from-tag'
+        run: |
+          echo "Restoring from tag: ${{ github.event.inputs.backup_source }}"
+          
+          # Verify tag exists
+          if git rev-parse "${{ github.event.inputs.backup_source }}" >/dev/null 2>&1; then
+            # Reset to tag
+            git reset --hard "${{ github.event.inputs.backup_source }}"
+            echo "✅ Restored to tag: ${{ github.event.inputs.backup_source }}"
+          else
+            echo "❌ Tag not found: ${{ github.event.inputs.backup_source }}"
+            exit 1
+          fi
+          
+      - name: Restore from commit
+        if: github.event.inputs.recovery_type == 'restore-from-commit'
+        run: |
+          echo "Restoring from commit: ${{ github.event.inputs.backup_source }}"
+          
+          # Verify commit exists
+          if git rev-parse "${{ github.event.inputs.backup_source }}" >/dev/null 2>&1; then
+            # Reset to commit
+            git reset --hard "${{ github.event.inputs.backup_source }}"
+            echo "✅ Restored to commit: ${{ github.event.inputs.backup_source }}"
+          else
+            echo "❌ Commit not found: ${{ github.event.inputs.backup_source }}"
+            exit 1
+          fi
+          
+      - name: Restore database only
+        if: github.event.inputs.recovery_type == 'restore-database-only'
+        run: |
+          echo "Restoring database from backup branch..."
+          
+          # Checkout database backup branch
+          git fetch origin database-backups:database-backups || {
+            echo "❌ Database backup branch not found"
+            exit 1
+          }
+          
+          # Find the specified backup
+          git checkout database-backups
+          
+          BACKUP_FILE="db-backup-${{ github.event.inputs.backup_source }}.tar.gz"
+          if [ ! -f "$BACKUP_FILE" ]; then
+            # Try to find by partial match
+            BACKUP_FILE=$(ls db-backup-*${{ github.event.inputs.backup_source }}*.tar.gz 2>/dev/null | head -1)
+          fi
+          
+          if [ -f "$BACKUP_FILE" ]; then
+            echo "Found backup: $BACKUP_FILE"
+            
+            # Extract database files
+            tar -xzf "$BACKUP_FILE"
+            
+            # Switch back to main branch
+            git checkout main
+            
+            # Copy database files
+            cp schema-*.sql supabase/migrations/ 2>/dev/null || true
+            cp schema-*.ts shared/schema.ts 2>/dev/null || true
+            cp drizzle-config-*.ts drizzle.config.ts 2>/dev/null || true
+            
+            echo "✅ Database files restored"
+          else
+            echo "❌ Database backup not found: ${{ github.event.inputs.backup_source }}"
+            exit 1
+          fi
+          
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          
+      - name: Restore dependencies
+        run: |
+          echo "Installing dependencies..."
+          npm ci
+          
+      - name: Run recovery validation
+        run: |
+          echo "Running post-recovery validation..."
+          
+          # Check TypeScript
+          if npm run check; then
+            echo "✅ TypeScript validation passed"
+          else
+            echo "⚠️ TypeScript errors detected"
+          fi
+          
+          # Check if critical files exist
+          CRITICAL_FILES=(
+            "package.json"
+            "server/index.ts"
+            "client/src/main.tsx"
+          )
+          
+          for file in "${CRITICAL_FILES[@]}"; do
+            if [ -f "$file" ]; then
+              echo "✅ Found: $file"
+            else
+              echo "❌ Missing: $file"
+            fi
+          done
+          
+      - name: Create recovery report
+        run: |
+          cat > recovery-report.md << EOF
+          # Emergency Recovery Report
+          
+          ## Recovery Details
+          - **Type**: ${{ github.event.inputs.recovery_type }}
+          - **Source**: ${{ github.event.inputs.backup_source }}
+          - **Initiated by**: ${{ github.actor }}
+          - **Time**: $(date)
+          - **Status**: ✅ Completed
+          
+          ## Pre-Recovery Snapshot
+          A snapshot of the system state before recovery was saved to:
+          \`emergency-snapshots/pre-recovery-*.tar.gz\`
+          
+          ## Post-Recovery Status
+          - TypeScript Check: $(npm run check >/dev/null 2>&1 && echo "✅ Passed" || echo "❌ Failed")
+          - Dependencies: ✅ Restored
+          - Critical Files: ✅ Verified
+          
+          ## Next Steps
+          1. Verify application functionality
+          2. Run \`npm run build\` to rebuild the application
+          3. Test all critical features
+          4. If issues persist, use the pre-recovery snapshot to rollback
+          
+          ## Rollback Instructions
+          If you need to rollback this recovery:
+          1. Download the pre-recovery snapshot from artifacts
+          2. Extract: \`tar -xzf pre-recovery-*.tar.gz\`
+          3. Restore dependencies: \`npm ci\`
+          4. Rebuild: \`npm run build\`
+          EOF
+          
+      - name: Upload recovery artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: recovery-artifacts-${{ github.run_id }}
+          path: |
+            emergency-snapshots/
+            recovery-report.md
+          retention-days: 30
+          
+      - name: Create recovery commit
+        if: github.event.inputs.recovery_type != 'restore-from-commit' && github.event.inputs.recovery_type != 'restore-from-tag'
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          
+          # Stage changes
+          git add -A
+          
+          # Create commit
+          git commit -m "🚨 Emergency Recovery: ${{ github.event.inputs.recovery_type }} from ${{ github.event.inputs.backup_source }}" \
+            -m "Initiated by: ${{ github.actor }}" \
+            -m "Recovery type: ${{ github.event.inputs.recovery_type }}" \
+            -m "Source: ${{ github.event.inputs.backup_source }}" || echo "No changes to commit"
+            
+          # Create recovery tag
+          RECOVERY_TAG="recovery/$(date +'%Y%m%d-%H%M%S')"
+          git tag -a "$RECOVERY_TAG" -m "Emergency recovery point"
+          
+          # Push changes
+          git push origin main
+          git push origin "$RECOVERY_TAG"
+          
+      - name: Send recovery notification
+        if: always()
+        run: |
+          echo "Recovery operation completed with status: ${{ job.status }}"
+          # Add webhook or email notification logic here

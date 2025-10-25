@@ -1,0 +1,964 @@
+{
+  "sessionId": "session_1752038147604_1usqhb7s9hm",
+  "exportTime": "2025-07-09T05:19:01.748Z",
+  "stats": {
+    "total": 36,
+    "byLevel": {
+      "DEBUG": 0,
+      "INFO": 35,
+      "WARN": 0,
+      "ERROR": 1,
+      "CRITICAL": 0
+    },
+    "byCategory": {
+      "SYSTEM": 1,
+      "UI": 5,
+      "PERFORMANCE": 29,
+      "NETWORK": 1
+    },
+    "sessionDuration": 194144,
+    "errorRate": 2.7777777777777777
+  },
+  "logs": [
+    {
+      "id": "log_1752038301835_8dmfikyt",
+      "timestamp": "2025-07-09T05:18:21.835Z",
+      "level": "INFO",
+      "category": "SYSTEM",
+      "message": "Logging enabled",
+      "sessionId": "session_1752038147604_1usqhb7s9hm",
+      "url": "https://2sweety.com/admin",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+      "details": {},
+      "performance": {
+        "memory": {
+          "used": 97272579,
+          "total": 106807527,
+          "limit": 4294705152
+        },
+        "timing": {
+          "navigationStart": 1752038146661.6,
+          "now": 155173.1000000015
+        }
+      }
+    },
+    {
+      "id": "log_1752038301839_bevc7ox4",
+      "timestamp": "2025-07-09T05:18:21.839Z",
+      "level": "INFO",
+      "category": "UI",
+      "message": "User Click",
+      "sessionId": "session_1752038147604_1usqhb7s9hm",
+      "url": "https://2sweety.com/admin",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+      "details": {
+        "element": "BUTTON",
+        "text": "Disable Logging",
+        "className": "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-destructive text-destructive-foreground hover:bg-destructive/90 h-9 rounded-md px-3",
+        "id": ""
+      },
+      "performance": {
+        "memory": {
+          "used": 97272579,
+          "total": 106807527,
+          "limit": 4294705152
+        },
+        "timing": {
+          "navigationStart": 1752038146661.6,
+          "now": 155177.30000000447
+        }
+      }
+    },
+    {
+      "id": "log_1752038305117_sda45uy3",
+      "timestamp": "2025-07-09T05:18:25.117Z",
+      "level": "INFO",
+      "category": "UI",
+      "message": "User Click",
+      "sessionId": "session_1752038147604_1usqhb7s9hm",
+      "url": "https://2sweety.com/admin",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+      "details": {
+        "element": "BUTTON",
+        "text": "Auto Refresh",
+        "className": "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 w-full",
+        "id": ""
+      },
+      "performance": {
+        "memory": {
+          "used": 97258124,
+          "total": 105765928,
+          "limit": 4294705152
+        },
+        "timing": {
+          "navigationStart": 1752038146661.6,
+          "now": 158455.5
+        }
+      }
+    },
+    {
+      "id": "log_1752038307836_dk1jdp0k",
+      "timestamp": "2025-07-09T05:18:27.836Z",
+      "level": "INFO",
+      "category": "UI",
+      "message": "User Click",
+      "sessionId": "session_1752038147604_1usqhb7s9hm",
+      "url": "https://2sweety.com/admin",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+      "details": {
+        "element": "BUTTON",
+        "text": "users",
+        "className": "inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:text-foreground data-[state=active]:shadow-sm data-[state=active]:bg-gray-700",
+        "id": "radix-«r7l»-trigger-users"
+      },
+      "performance": {
+        "memory": {
+          "used": 96165740,
+          "total": 104186072,
+          "limit": 4294705152
+        },
+        "timing": {
+          "navigationStart": 1752038146661.6,
+          "now": 161174.80000000447
+        }
+      }
+    },
+    {
+      "id": "log_1752038308260_7ypztn7q",
+      "timestamp": "2025-07-09T05:18:28.260Z",
+      "level": "INFO",
+      "category": "PERFORMANCE",
+      "message": "Performance: resource",
+      "sessionId": "session_1752038147604_1usqhb7s9hm",
+      "url": "https://2sweety.com/admin",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+      "details": {
+        "name": "https://kvrlzpdyeezmhjiiwfnp.supabase.co/rest/v1/profiles?select=id%2Cname%2Cemail%2Crole%2Cphotos%2Ccreated_at%2Cupdated_at%2Csubscribers%28subscription_tier%2Csubscribed%2Csubscription_end%29&order=created_at.desc",
+        "duration": 514.1000000014901,
+        "startTime": 161077.1000000015
+      },
+      "performance": {
+        "memory": {
+          "used": 111444918,
+          "total": 120641898,
+          "limit": 4294705152
+        },
+        "timing": {
+          "navigationStart": 1752038146661.6,
+          "now": 161598.3999999985
+        }
+      }
+    },
+    {
+      "id": "log_1752038308341_ybft7m6u",
+      "timestamp": "2025-07-09T05:18:28.341Z",
+      "level": "INFO",
+      "category": "PERFORMANCE",
+      "message": "Performance: resource",
+      "sessionId": "session_1752038147604_1usqhb7s9hm",
+      "url": "https://2sweety.com/admin",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+      "details": {
+        "name": "https://kvrlzpdyeezmhjiiwfnp.supabase.co/rest/v1/profiles?select=id%2Cis_banned%2Cban_reason&id=in.%28c1975dd9-c592-4642-b330-6dd647b8c145%2C15f951f0-cc07-4e85-8ba2-c89f99f80395%2C67ba4874-139e-42b7-8b61-2136ba8a9343%2C444c3171-59cf-4761-8890-cfa0da7fb241%2Ca9a11816-b511-4a65-9465-971da0d99c2d%2C2045a419-5e78-40ba-a58d-445b71f78c62%2Ca70dd3e7-2ec5-435d-b052-87e9fc4bce07%2Cc89ed88c-4435-40be-af0b-6dbce35f822f%2C77777777-7777-7777-7777-777777777777%2C55555555-5555-5555-5555-555555555555%2C33333333-3333-3333-3333-333333333333%2Ceeeeeeee-eeee-eeee-eeee-eeeeeeeeeeee%2Cdddddddd-dddd-dddd-dddd-dddddddddddd%2C50505050-5050-5050-5050-505050505050%2C99999999-9999-9999-9999-999999999999%2Caaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa%2Ccccccccc-cccc-cccc-cccc-cccccccccccc%2C66666666-6666-6666-6666-666666666666%2C88888888-8888-8888-8888-888888888888%2C44444444-4444-4444-4444-444444444444%2C40404040-4040-4040-4040-404040404040%2C10101010-1010-1010-1010-101010101010%2Cffffffff-ffff-ffff-ffff-ffffffffffff%2C20202020-2020-2020-2020-202020202020%2C11111111-1111-1111-1111-111111111111%2C30303030-3030-3030-3030-303030303030%2C22222222-2222-2222-2222-222222222222%2C90033e13-fc1d-487a-9090-645c67072b12%2C638f59b1-c3a1-4739-b884-a326d1301948%2C56ed30c1-1309-4f24-b185-648df822c935%29",
+        "duration": 79.30000000447035,
+        "startTime": 161599.5
+      },
+      "performance": {
+        "memory": {
+          "used": 110818213,
+          "total": 120641585,
+          "limit": 4294705152
+        },
+        "timing": {
+          "navigationStart": 1752038146661.6,
+          "now": 161679.6000000015
+        }
+      }
+    },
+    {
+      "id": "log_1752038308513_xm28lyr4",
+      "timestamp": "2025-07-09T05:18:28.513Z",
+      "level": "INFO",
+      "category": "PERFORMANCE",
+      "message": "Performance: resource",
+      "sessionId": "session_1752038147604_1usqhb7s9hm",
+      "url": "https://2sweety.com/admin",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+      "details": {
+        "name": "https://lh3.googleusercontent.com/a/ACg8ocJifI8KZyDvbY8Ilr7Nx0vzng8S2zKYUAf2AXI91gd1w6BFXOY=s96-c",
+        "duration": 2.1999999955296516,
+        "startTime": 161743.70000000298
+      },
+      "performance": {
+        "memory": {
+          "used": 128045213,
+          "total": 138657957,
+          "limit": 4294705152
+        },
+        "timing": {
+          "navigationStart": 1752038146661.6,
+          "now": 161851.30000000447
+        }
+      }
+    },
+    {
+      "id": "log_1752038308513_5xha36a6",
+      "timestamp": "2025-07-09T05:18:28.513Z",
+      "level": "INFO",
+      "category": "PERFORMANCE",
+      "message": "Performance: resource",
+      "sessionId": "session_1752038147604_1usqhb7s9hm",
+      "url": "https://2sweety.com/admin",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+      "details": {
+        "name": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=300&h=400&fit=crop&crop=face",
+        "duration": 6.0999999940395355,
+        "startTime": 161759.30000000447
+      },
+      "performance": {
+        "memory": {
+          "used": 128045213,
+          "total": 138657957,
+          "limit": 4294705152
+        },
+        "timing": {
+          "navigationStart": 1752038146661.6,
+          "now": 161851.30000000447
+        }
+      }
+    },
+    {
+      "id": "log_1752038308513_7tzgdhrj",
+      "timestamp": "2025-07-09T05:18:28.513Z",
+      "level": "INFO",
+      "category": "PERFORMANCE",
+      "message": "Performance: resource",
+      "sessionId": "session_1752038147604_1usqhb7s9hm",
+      "url": "https://2sweety.com/admin",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+      "details": {
+        "name": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=300&h=400&fit=crop&crop=face",
+        "duration": 6.5,
+        "startTime": 161759.30000000447
+      },
+      "performance": {
+        "memory": {
+          "used": 128045213,
+          "total": 138657957,
+          "limit": 4294705152
+        },
+        "timing": {
+          "navigationStart": 1752038146661.6,
+          "now": 161851.3999999985
+        }
+      }
+    },
+    {
+      "id": "log_1752038308513_pzuxp8uz",
+      "timestamp": "2025-07-09T05:18:28.513Z",
+      "level": "INFO",
+      "category": "PERFORMANCE",
+      "message": "Performance: resource",
+      "sessionId": "session_1752038147604_1usqhb7s9hm",
+      "url": "https://2sweety.com/admin",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+      "details": {
+        "name": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=300&h=400&fit=crop&crop=face",
+        "duration": 6.5999999940395355,
+        "startTime": 161759.30000000447
+      },
+      "performance": {
+        "memory": {
+          "used": 128045213,
+          "total": 138657957,
+          "limit": 4294705152
+        },
+        "timing": {
+          "navigationStart": 1752038146661.6,
+          "now": 161851.3999999985
+        }
+      }
+    },
+    {
+      "id": "log_1752038308513_fg6s68ue",
+      "timestamp": "2025-07-09T05:18:28.513Z",
+      "level": "INFO",
+      "category": "PERFORMANCE",
+      "message": "Performance: resource",
+      "sessionId": "session_1752038147604_1usqhb7s9hm",
+      "url": "https://2sweety.com/admin",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+      "details": {
+        "name": "https://images.unsplash.com/photo-1519985176271-adb1088fa94c?w=300&h=400&fit=crop&crop=face",
+        "duration": 7.0999999940395355,
+        "startTime": 161759.30000000447
+      },
+      "performance": {
+        "memory": {
+          "used": 128045213,
+          "total": 138657957,
+          "limit": 4294705152
+        },
+        "timing": {
+          "navigationStart": 1752038146661.6,
+          "now": 161851.3999999985
+        }
+      }
+    },
+    {
+      "id": "log_1752038308513_cp7n15j3",
+      "timestamp": "2025-07-09T05:18:28.513Z",
+      "level": "INFO",
+      "category": "PERFORMANCE",
+      "message": "Performance: resource",
+      "sessionId": "session_1752038147604_1usqhb7s9hm",
+      "url": "https://2sweety.com/admin",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+      "details": {
+        "name": "https://images.unsplash.com/photo-1504593811423-6dd665756598?w=300&h=400&fit=crop&crop=face",
+        "duration": 7.0999999940395355,
+        "startTime": 161759.30000000447
+      },
+      "performance": {
+        "memory": {
+          "used": 128045213,
+          "total": 138657957,
+          "limit": 4294705152
+        },
+        "timing": {
+          "navigationStart": 1752038146661.6,
+          "now": 161851.3999999985
+        }
+      }
+    },
+    {
+      "id": "log_1752038308513_0ogpllrf",
+      "timestamp": "2025-07-09T05:18:28.513Z",
+      "level": "INFO",
+      "category": "PERFORMANCE",
+      "message": "Performance: resource",
+      "sessionId": "session_1752038147604_1usqhb7s9hm",
+      "url": "https://2sweety.com/admin",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+      "details": {
+        "name": "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=300&h=400&fit=crop&crop=face",
+        "duration": 7,
+        "startTime": 161759.30000000447
+      },
+      "performance": {
+        "memory": {
+          "used": 128045213,
+          "total": 138657957,
+          "limit": 4294705152
+        },
+        "timing": {
+          "navigationStart": 1752038146661.6,
+          "now": 161851.3999999985
+        }
+      }
+    },
+    {
+      "id": "log_1752038308513_n8wqqbkf",
+      "timestamp": "2025-07-09T05:18:28.513Z",
+      "level": "INFO",
+      "category": "PERFORMANCE",
+      "message": "Performance: resource",
+      "sessionId": "session_1752038147604_1usqhb7s9hm",
+      "url": "https://2sweety.com/admin",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+      "details": {
+        "name": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=400&fit=crop&crop=face",
+        "duration": 7,
+        "startTime": 161759.3999999985
+      },
+      "performance": {
+        "memory": {
+          "used": 128045213,
+          "total": 138657957,
+          "limit": 4294705152
+        },
+        "timing": {
+          "navigationStart": 1752038146661.6,
+          "now": 161851.5
+        }
+      }
+    },
+    {
+      "id": "log_1752038308513_0blcvgxz",
+      "timestamp": "2025-07-09T05:18:28.513Z",
+      "level": "INFO",
+      "category": "PERFORMANCE",
+      "message": "Performance: resource",
+      "sessionId": "session_1752038147604_1usqhb7s9hm",
+      "url": "https://2sweety.com/admin",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+      "details": {
+        "name": "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=300&h=400&fit=crop&crop=face",
+        "duration": 7.100000001490116,
+        "startTime": 161759.3999999985
+      },
+      "performance": {
+        "memory": {
+          "used": 128045213,
+          "total": 138657957,
+          "limit": 4294705152
+        },
+        "timing": {
+          "navigationStart": 1752038146661.6,
+          "now": 161851.5
+        }
+      }
+    },
+    {
+      "id": "log_1752038308513_jjv33atw",
+      "timestamp": "2025-07-09T05:18:28.513Z",
+      "level": "INFO",
+      "category": "PERFORMANCE",
+      "message": "Performance: resource",
+      "sessionId": "session_1752038147604_1usqhb7s9hm",
+      "url": "https://2sweety.com/admin",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+      "details": {
+        "name": "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=300&h=400&fit=crop&crop=face",
+        "duration": 7.100000001490116,
+        "startTime": 161759.3999999985
+      },
+      "performance": {
+        "memory": {
+          "used": 128045213,
+          "total": 138657957,
+          "limit": 4294705152
+        },
+        "timing": {
+          "navigationStart": 1752038146661.6,
+          "now": 161851.5
+        }
+      }
+    },
+    {
+      "id": "log_1752038308513_16aobrou",
+      "timestamp": "2025-07-09T05:18:28.513Z",
+      "level": "INFO",
+      "category": "PERFORMANCE",
+      "message": "Performance: resource",
+      "sessionId": "session_1752038147604_1usqhb7s9hm",
+      "url": "https://2sweety.com/admin",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+      "details": {
+        "name": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300&h=400&fit=crop&crop=face",
+        "duration": 7.200000002980232,
+        "startTime": 161759.3999999985
+      },
+      "performance": {
+        "memory": {
+          "used": 128045213,
+          "total": 138657957,
+          "limit": 4294705152
+        },
+        "timing": {
+          "navigationStart": 1752038146661.6,
+          "now": 161851.5
+        }
+      }
+    },
+    {
+      "id": "log_1752038308513_ozs5h5sn",
+      "timestamp": "2025-07-09T05:18:28.513Z",
+      "level": "INFO",
+      "category": "PERFORMANCE",
+      "message": "Performance: resource",
+      "sessionId": "session_1752038147604_1usqhb7s9hm",
+      "url": "https://2sweety.com/admin",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+      "details": {
+        "name": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=300&h=400&fit=crop&crop=face",
+        "duration": 7.300000004470348,
+        "startTime": 161759.3999999985
+      },
+      "performance": {
+        "memory": {
+          "used": 128045213,
+          "total": 138657957,
+          "limit": 4294705152
+        },
+        "timing": {
+          "navigationStart": 1752038146661.6,
+          "now": 161851.5
+        }
+      }
+    },
+    {
+      "id": "log_1752038308513_4hy3gadx",
+      "timestamp": "2025-07-09T05:18:28.513Z",
+      "level": "INFO",
+      "category": "PERFORMANCE",
+      "message": "Performance: resource",
+      "sessionId": "session_1752038147604_1usqhb7s9hm",
+      "url": "https://2sweety.com/admin",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+      "details": {
+        "name": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=300&h=400&fit=crop&crop=face",
+        "duration": 7.300000004470348,
+        "startTime": 161759.3999999985
+      },
+      "performance": {
+        "memory": {
+          "used": 128045213,
+          "total": 138657957,
+          "limit": 4294705152
+        },
+        "timing": {
+          "navigationStart": 1752038146661.6,
+          "now": 161851.5
+        }
+      }
+    },
+    {
+      "id": "log_1752038308513_hrtoeu2h",
+      "timestamp": "2025-07-09T05:18:28.513Z",
+      "level": "INFO",
+      "category": "PERFORMANCE",
+      "message": "Performance: resource",
+      "sessionId": "session_1752038147604_1usqhb7s9hm",
+      "url": "https://2sweety.com/admin",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+      "details": {
+        "name": "https://images.unsplash.com/photo-1463453091185-61582044d556?w=300&h=400&fit=crop&crop=face",
+        "duration": 7.399999998509884,
+        "startTime": 161759.5
+      },
+      "performance": {
+        "memory": {
+          "used": 128045213,
+          "total": 138657957,
+          "limit": 4294705152
+        },
+        "timing": {
+          "navigationStart": 1752038146661.6,
+          "now": 161851.5
+        }
+      }
+    },
+    {
+      "id": "log_1752038308513_ezaqbdiw",
+      "timestamp": "2025-07-09T05:18:28.513Z",
+      "level": "INFO",
+      "category": "PERFORMANCE",
+      "message": "Performance: resource",
+      "sessionId": "session_1752038147604_1usqhb7s9hm",
+      "url": "https://2sweety.com/admin",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+      "details": {
+        "name": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=400&fit=crop&crop=face",
+        "duration": 7.399999998509884,
+        "startTime": 161759.5
+      },
+      "performance": {
+        "memory": {
+          "used": 128045213,
+          "total": 138657957,
+          "limit": 4294705152
+        },
+        "timing": {
+          "navigationStart": 1752038146661.6,
+          "now": 161851.5
+        }
+      }
+    },
+    {
+      "id": "log_1752038308513_8244ay80",
+      "timestamp": "2025-07-09T05:18:28.513Z",
+      "level": "INFO",
+      "category": "PERFORMANCE",
+      "message": "Performance: resource",
+      "sessionId": "session_1752038147604_1usqhb7s9hm",
+      "url": "https://2sweety.com/admin",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+      "details": {
+        "name": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&h=400&fit=crop&crop=face",
+        "duration": 7.5,
+        "startTime": 161759.5
+      },
+      "performance": {
+        "memory": {
+          "used": 128045213,
+          "total": 138657957,
+          "limit": 4294705152
+        },
+        "timing": {
+          "navigationStart": 1752038146661.6,
+          "now": 161851.6000000015
+        }
+      }
+    },
+    {
+      "id": "log_1752038308513_0gn3se5q",
+      "timestamp": "2025-07-09T05:18:28.513Z",
+      "level": "INFO",
+      "category": "PERFORMANCE",
+      "message": "Performance: resource",
+      "sessionId": "session_1752038147604_1usqhb7s9hm",
+      "url": "https://2sweety.com/admin",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+      "details": {
+        "name": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=300&h=400&fit=crop&crop=face",
+        "duration": 7.600000001490116,
+        "startTime": 161759.5
+      },
+      "performance": {
+        "memory": {
+          "used": 128045213,
+          "total": 138657957,
+          "limit": 4294705152
+        },
+        "timing": {
+          "navigationStart": 1752038146661.6,
+          "now": 161851.6000000015
+        }
+      }
+    },
+    {
+      "id": "log_1752038308513_0fq1fehp",
+      "timestamp": "2025-07-09T05:18:28.513Z",
+      "level": "INFO",
+      "category": "PERFORMANCE",
+      "message": "Performance: resource",
+      "sessionId": "session_1752038147604_1usqhb7s9hm",
+      "url": "https://2sweety.com/admin",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+      "details": {
+        "name": "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=400&fit=crop&crop=face",
+        "duration": 42.5,
+        "startTime": 161759.5
+      },
+      "performance": {
+        "memory": {
+          "used": 128045213,
+          "total": 138657957,
+          "limit": 4294705152
+        },
+        "timing": {
+          "navigationStart": 1752038146661.6,
+          "now": 161851.6000000015
+        }
+      }
+    },
+    {
+      "id": "log_1752038308513_wxui646w",
+      "timestamp": "2025-07-09T05:18:28.513Z",
+      "level": "INFO",
+      "category": "PERFORMANCE",
+      "message": "Performance: resource",
+      "sessionId": "session_1752038147604_1usqhb7s9hm",
+      "url": "https://2sweety.com/admin",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+      "details": {
+        "name": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=400&fit=crop&crop=face",
+        "duration": 7.700000002980232,
+        "startTime": 161759.6000000015
+      },
+      "performance": {
+        "memory": {
+          "used": 128045213,
+          "total": 138657957,
+          "limit": 4294705152
+        },
+        "timing": {
+          "navigationStart": 1752038146661.6,
+          "now": 161851.70000000298
+        }
+      }
+    },
+    {
+      "id": "log_1752038308513_5e00jd8g",
+      "timestamp": "2025-07-09T05:18:28.513Z",
+      "level": "INFO",
+      "category": "PERFORMANCE",
+      "message": "Performance: resource",
+      "sessionId": "session_1752038147604_1usqhb7s9hm",
+      "url": "https://2sweety.com/admin",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+      "details": {
+        "name": "https://images.unsplash.com/photo-1519340333755-c892a4e0a8d3?w=300&h=400&fit=crop&crop=face",
+        "duration": 42.100000001490116,
+        "startTime": 161759.6000000015
+      },
+      "performance": {
+        "memory": {
+          "used": 128045213,
+          "total": 138657957,
+          "limit": 4294705152
+        },
+        "timing": {
+          "navigationStart": 1752038146661.6,
+          "now": 161851.70000000298
+        }
+      }
+    },
+    {
+      "id": "log_1752038308513_qnn9mq3a",
+      "timestamp": "2025-07-09T05:18:28.513Z",
+      "level": "INFO",
+      "category": "PERFORMANCE",
+      "message": "Performance: resource",
+      "sessionId": "session_1752038147604_1usqhb7s9hm",
+      "url": "https://2sweety.com/admin",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+      "details": {
+        "name": "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=300&h=400&fit=crop&crop=face",
+        "duration": 7.699999995529652,
+        "startTime": 161759.70000000298
+      },
+      "performance": {
+        "memory": {
+          "used": 128045213,
+          "total": 138657957,
+          "limit": 4294705152
+        },
+        "timing": {
+          "navigationStart": 1752038146661.6,
+          "now": 161851.70000000298
+        }
+      }
+    },
+    {
+      "id": "log_1752038308513_zlul961x",
+      "timestamp": "2025-07-09T05:18:28.513Z",
+      "level": "INFO",
+      "category": "PERFORMANCE",
+      "message": "Performance: resource",
+      "sessionId": "session_1752038147604_1usqhb7s9hm",
+      "url": "https://2sweety.com/admin",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+      "details": {
+        "name": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&h=400&fit=crop&crop=face",
+        "duration": 7.799999997019768,
+        "startTime": 161759.70000000298
+      },
+      "performance": {
+        "memory": {
+          "used": 128045213,
+          "total": 138657957,
+          "limit": 4294705152
+        },
+        "timing": {
+          "navigationStart": 1752038146661.6,
+          "now": 161851.70000000298
+        }
+      }
+    },
+    {
+      "id": "log_1752038308513_8pbpk3k7",
+      "timestamp": "2025-07-09T05:18:28.513Z",
+      "level": "INFO",
+      "category": "PERFORMANCE",
+      "message": "Performance: resource",
+      "sessionId": "session_1752038147604_1usqhb7s9hm",
+      "url": "https://2sweety.com/admin",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+      "details": {
+        "name": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=400&fit=crop&crop=face",
+        "duration": 7.699999995529652,
+        "startTime": 161759.80000000447
+      },
+      "performance": {
+        "memory": {
+          "used": 128045213,
+          "total": 138657957,
+          "limit": 4294705152
+        },
+        "timing": {
+          "navigationStart": 1752038146661.6,
+          "now": 161851.70000000298
+        }
+      }
+    },
+    {
+      "id": "log_1752038315978_q2v1uurl",
+      "timestamp": "2025-07-09T05:18:35.978Z",
+      "level": "INFO",
+      "category": "UI",
+      "message": "User Click",
+      "sessionId": "session_1752038147604_1usqhb7s9hm",
+      "url": "https://2sweety.com/admin",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+      "details": {
+        "element": "BUTTON",
+        "text": "Make ",
+        "className": "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 h-10 px-4 py-2 bg-green-600 hover:bg-green-500 text-white",
+        "id": ""
+      },
+      "performance": {
+        "memory": {
+          "used": 106777235,
+          "total": 115112739,
+          "limit": 4294705152
+        },
+        "timing": {
+          "navigationStart": 1752038146661.6,
+          "now": 169316.6000000015
+        }
+      }
+    },
+    {
+      "id": "log_1752038316035_k5ikpspd",
+      "timestamp": "2025-07-09T05:18:36.035Z",
+      "level": "INFO",
+      "category": "PERFORMANCE",
+      "message": "Performance: resource",
+      "sessionId": "session_1752038147604_1usqhb7s9hm",
+      "url": "https://2sweety.com/admin",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+      "details": {
+        "name": "https://kvrlzpdyeezmhjiiwfnp.supabase.co/auth/v1/user",
+        "duration": 54.20000000298023,
+        "startTime": 169318.6000000015
+      },
+      "performance": {
+        "memory": {
+          "used": 104675215,
+          "total": 115098459,
+          "limit": 4294705152
+        },
+        "timing": {
+          "navigationStart": 1752038146661.6,
+          "now": 169373.80000000447
+        }
+      }
+    },
+    {
+      "id": "log_1752038316082_4209gfon",
+      "timestamp": "2025-07-09T05:18:36.082Z",
+      "level": "INFO",
+      "category": "PERFORMANCE",
+      "message": "Performance: resource",
+      "sessionId": "session_1752038147604_1usqhb7s9hm",
+      "url": "https://2sweety.com/admin",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+      "details": {
+        "name": "https://kvrlzpdyeezmhjiiwfnp.supabase.co/rest/v1/profiles?select=role&id=eq.90033e13-fc1d-487a-9090-645c67072b12",
+        "duration": 45.30000000447035,
+        "startTime": 169373.8999999985
+      },
+      "performance": {
+        "memory": {
+          "used": 104675215,
+          "total": 115098459,
+          "limit": 4294705152
+        },
+        "timing": {
+          "navigationStart": 1752038146661.6,
+          "now": 169420
+        }
+      }
+    },
+    {
+      "id": "log_1752038316283_qkqx54lv",
+      "timestamp": "2025-07-09T05:18:36.283Z",
+      "level": "ERROR",
+      "category": "NETWORK",
+      "message": "PUT /api/admin/users/638f59b1-c3a1-4739-b884-a326d1301948/role",
+      "sessionId": "session_1752038147604_1usqhb7s9hm",
+      "url": "https://2sweety.com/admin",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+      "details": {
+        "method": "PUT",
+        "url": "/api/admin/users/638f59b1-c3a1-4739-b884-a326d1301948/role",
+        "status": 500,
+        "responseTime": 194,
+        "success": false,
+        "timestamp": "2025-07-09T05:18:36.283Z"
+      },
+      "performance": {
+        "memory": {
+          "used": 107053525,
+          "total": 115371901,
+          "limit": 4294705152
+        },
+        "timing": {
+          "navigationStart": 1752038146661.6,
+          "now": 169621.3999999985
+        }
+      }
+    },
+    {
+      "id": "log_1752038316285_22e4oeqg",
+      "timestamp": "2025-07-09T05:18:36.285Z",
+      "level": "INFO",
+      "category": "PERFORMANCE",
+      "message": "Performance: resource",
+      "sessionId": "session_1752038147604_1usqhb7s9hm",
+      "url": "https://2sweety.com/admin",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+      "details": {
+        "name": "https://2sweety.com/api/admin/users/638f59b1-c3a1-4739-b884-a326d1301948/role",
+        "duration": 162.5,
+        "startTime": 169427.3999999985
+      },
+      "performance": {
+        "memory": {
+          "used": 107053525,
+          "total": 115371901,
+          "limit": 4294705152
+        },
+        "timing": {
+          "navigationStart": 1752038146661.6,
+          "now": 169623.30000000447
+        }
+      }
+    },
+    {
+      "id": "log_1752038319143_tcep9c5e",
+      "timestamp": "2025-07-09T05:18:39.143Z",
+      "level": "INFO",
+      "category": "UI",
+      "message": "User Click",
+      "sessionId": "session_1752038147604_1usqhb7s9hm",
+      "url": "https://2sweety.com/admin",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+      "details": {
+        "element": "path",
+        "text": "",
+        "className": {},
+        "id": ""
+      },
+      "performance": {
+        "memory": {
+          "used": 108104886,
+          "total": 118540322,
+          "limit": 4294705152
+        },
+        "timing": {
+          "navigationStart": 1752038146661.6,
+          "now": 172481.20000000298
+        }
+      }
+    },
+    {
+      "id": "log_1752038327754_mqph1036",
+      "timestamp": "2025-07-09T05:18:47.754Z",
+      "level": "INFO",
+      "category": "PERFORMANCE",
+      "message": "Performance: resource",
+      "sessionId": "session_1752038147604_1usqhb7s9hm",
+      "url": "https://2sweety.com/admin",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+      "details": {
+        "name": "https://kvrlzpdyeezmhjiiwfnp.supabase.co/rest/v1/profiles?select=id&limit=1",
+        "duration": 55.20000000298023,
+        "startTime": 181036.6000000015
+      },
+      "performance": {
+        "memory": {
+          "used": 104534704,
+          "total": 113276772,
+          "limit": 4294705152
+        },
+        "timing": {
+          "navigationStart": 1752038146661.6,
+          "now": 181092.6000000015
+        }
+      }
+    }
+  ]
+}

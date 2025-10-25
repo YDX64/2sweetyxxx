@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials Fotoğraf Testi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .testimonial {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .profile-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+        }
+        .profile-info {
+            display: flex;
+            align-items: center;
+            margin-top: 15px;
+        }
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+        .success {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>2Sweety Testimonials Fotoğraf Testi</h1>
+    
+    <div class="testimonial">
+        <h3>Testimonial 1 - Sara</h3>
+        <div class="profile-info">
+            <img 
+                src="/media/images/sara_1.jpg" 
+                alt="Sara" 
+                class="profile-img"
+                onload="this.nextElementSibling.innerHTML = '✅ Fotoğraf yüklendi'"
+                onerror="this.nextElementSibling.innerHTML = '❌ Fotoğraf yüklenemedi'; this.src='/media/images/default_female.jpg'"
+            />
+            <div>
+                <div class="status">Yükleniyor...</div>
+                <strong>Zeynep & Ali</strong><br>
+                <small>İstanbul</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="testimonial">
+        <h3>Testimonial 2 - Emma</h3>
+        <div class="profile-info">
+            <img 
+                src="/media/images/emma_1.jpg" 
+                alt="Emma" 
+                class="profile-img"
+                onload="this.nextElementSibling.innerHTML = '✅ Fotoğraf yüklendi'"
+                onerror="this.nextElementSibling.innerHTML = '❌ Fotoğraf yüklenemedi'; this.src='/media/images/default_female.jpg'"
+            />
+            <div>
+                <div class="status">Yükleniyor...</div>
+                <strong>Selin & Cem</strong><br>
+                <small>Ankara</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="testimonial">
+        <h3>Testimonial 3 - Erik</h3>
+        <div class="profile-info">
+            <img 
+                src="/media/images/erik_1.jpg" 
+                alt="Erik" 
+                class="profile-img"
+                onload="this.nextElementSibling.innerHTML = '✅ Fotoğraf yüklendi'"
+                onerror="this.nextElementSibling.innerHTML = '❌ Fotoğraf yüklenemedi'; this.src='/media/images/default_male.jpg'"
+            />
+            <div>
+                <div class="status">Yükleniyor...</div>
+                <strong>Deniz & Berk</strong><br>
+                <small>İzmir</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="testimonial">
+        <h3>Fallback Test - Default Female</h3>
+        <div class="profile-info">
+            <img 
+                src="/media/images/default_female.jpg" 
+                alt="Default Female" 
+                class="profile-img"
+                onload="this.nextElementSibling.innerHTML = '✅ Default female fotoğraf yüklendi'"
+                onerror="this.nextElementSibling.innerHTML = '❌ Default female fotoğraf yüklenemedi'"
+            />
+            <div>
+                <div class="status">Yükleniyor...</div>
+                <strong>Default Female</strong><br>
+                <small>Fallback Test</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="testimonial">
+        <h3>Fallback Test - Default Male</h3>
+        <div class="profile-info">
+            <img 
+                src="/media/images/default_male.jpg" 
+                alt="Default Male" 
+                class="profile-img"
+                onload="this.nextElementSibling.innerHTML = '✅ Default male fotoğraf yüklendi'"
+                onerror="this.nextElementSibling.innerHTML = '❌ Default male fotoğraf yüklenemedi'"
+            />
+            <div>
+                <div class="status">Yükleniyor...</div>
+                <strong>Default Male</strong><br>
+                <small>Fallback Test</small>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        console.log('Testimonials fotoğraf testi başlatıldı');
+        
+        // Tüm fotoğrafları kontrol et
+        const images = document.querySelectorAll('img');
+        images.forEach((img, index) => {
+            console.log(`Fotoğraf ${index + 1}: ${img.src}`);
+        });
+    </script>
+</body>
+</html> 

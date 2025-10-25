@@ -1,0 +1,22 @@
+{
+  "profiles": {
+    "maja_carlsson": [
+      "/media/images/maja_1.jpg",
+      "/media/images/maja_2.jpg"
+    ],
+    "erik_andersson": [
+      "/media/images/erik_1.jpg",
+      "/media/images/erik_2.jpg"
+    ],
+    "anna_larsson": [
+      "/media/images/anna_1.jpg",
+      "/media/images/anna_2.jpg"
+    ],
+    "default_female": [
+      "/media/images/default_female.jpg"
+    ],
+    "default_male": [
+      "/media/images/default_male.jpg"
+    ]
+  }
+} 

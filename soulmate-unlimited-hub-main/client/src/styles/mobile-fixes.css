@@ -1,0 +1,107 @@
+/* Mobile-specific fixes for 2Sweety */
+
+/* Prevent iOS bounce effect */
+@media (max-width: 768px) {
+  body {
+    overscroll-behavior: none;
+  }
+  
+  /* Main scrollable container */
+  .main-scroll-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+  }
+  
+  /* Fix for keyboard pushing up content */
+  .keyboard-fix {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Bottom navigation specific fixes */
+  .bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+  }
+  
+  /* Chat interface specific fixes */
+  .chat-container {
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .chat-input-container {
+    position: sticky;
+    bottom: 0;
+    background: inherit;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  
+  /* Prevent input zoom on iOS */
+  input, textarea, select {
+    font-size: 16px !important;
+  }
+  
+  /* Fix for modals on mobile */
+  .modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+  }
+  
+  /* Prevent scroll when modal is open */
+  body.modal-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+  }
+}
+
+/* Android specific fixes */
+@media (max-width: 768px) and (pointer: coarse) {
+  /* Improve touch targets */
+  button, a, .clickable {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Fix for Android keyboard */
+  .android-keyboard-fix {
+    position: relative !important;
+  }
+}
+
+/* Landscape mode fixes */
+@media (max-width: 768px) and (orientation: landscape) {
+  .navigation-bar {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  
+  .navigation-bar button {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+  }
+}

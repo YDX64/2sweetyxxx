@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diğer Domainler için DNS Ayarları - Coolify</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #2980b9 0%, #8e44ad 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .domain-card {
+            background: white;
+            margin: 20px 0;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .domain-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .domain-name {
+            font-size: 1.8em;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            color: white;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .dns-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .dns-table th {
+            background: linear-gradient(45deg, #34495e, #2c3e50);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .dns-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        .dns-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        .dns-table tr:hover {
+            background-color: #e3f2fd;
+        }
+
+        .ip-highlight {
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .wildcard-highlight {
+            background: linear-gradient(45deg, #f39c12, #e67e22);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .code-block {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 10px;
+            font-family: 'Courier New', monospace;
+            margin: 15px 0;
+            overflow-x: auto;
+            border-left: 4px solid #4299e1;
+        }
+
+        .info {
+            background: linear-gradient(45deg, #74b9ff, #0984e3);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 4px solid #0984e3;
+        }
+
+        .warning {
+            background: linear-gradient(45deg, #fdcb6e, #e17055);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 4px solid #e17055;
+        }
+
+        .success {
+            background: linear-gradient(45deg, #00b894, #00cec9);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 4px solid #00b894;
+        }
+
+        .provider-section {
+            background: white;
+            margin: 20px 0;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .provider-title {
+            font-size: 1.5em;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: linear-gradient(45deg, #9b59b6, #8e44ad);
+            color: white;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 50px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .coolify-config {
+            background: #f8f9fa;
+            border: 2px solid #dee2e6;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        .coolify-config h4 {
+            color: #495057;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .domain-card {
+                padding: 15px;
+            }
+
+            .dns-table {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌐 Diğer Domainler için DNS Ayarları</h1>
+            <p>Coolify için tüm domain DNS konfigürasyonları</p>
+            <p><strong>VPS IP:</strong> <span class="ip-highlight">45.9.190.79</span></p>
+        </div>
+
+        <!-- 2SWEETY.COM -->
+        <div class="domain-card">
+            <div class="domain-name">🍭 2sweety.com (Ana Domain)</div>
+            
+            <table class="dns-table">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Name/Host</th>
+                        <th>Value/Points to</th>
+                        <th>TTL</th>
+                        <th>Açıklama</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>A</strong></td>
+                        <td>@ (veya 2sweety.com)</td>
+                        <td><span class="ip-highlight">45.9.190.79</span></td>
+                        <td>300</td>
+                        <td>Ana domain</td>
+                    </tr>
+                    <tr>
+                        <td><strong>A</strong></td>
+                        <td><span class="wildcard-highlight">*</span></td>
+                        <td><span class="ip-highlight">45.9.190.79</span></td>
+                        <td>300</td>
+                        <td>Tüm subdomain'ler</td>
+                    </tr>
+                    <tr>
+                        <td><strong>CNAME</strong></td>
+                        <td>www</td>
+                        <td>2sweety.com</td>
+                        <td>300</td>
+                        <td>www yönlendirmesi</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="coolify-config">
+                <h4>🎯 Coolify'da kullanım:</h4>
+                <div class="code-block">
+# Ana uygulama için:
+https://2sweety.com
+
+# API için:
+https://api.2sweety.com
+
+# Admin panel için:
+https://admin.2sweety.com
+
+# Multiple domains:
+https://2sweety.com,https://www.2sweety.com
+                </div>
+            </div>
+        </div>
+
+        <!-- DİĞER DOMAIN ÖRNEKLERİ -->
+        <div class="domain-card">
+            <div class="domain-name">📱 2sweety-app.com (Eğer Varsa)</div>
+            
+            <table class="dns-table">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Name/Host</th>
+                        <th>Value/Points to</th>
+                        <th>TTL</th>
+                        <th>Açıklama</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>A</strong></td>
+                        <td>@</td>
+                        <td><span class="ip-highlight">45.9.190.79</span></td>
+                        <td>300</td>
+                        <td>Ana domain</td>
+                    </tr>
+                    <tr>
+                        <td><strong>A</strong></td>
+                        <td><span class="wildcard-highlight">*</span></td>
+                        <td><span class="ip-highlight">45.9.190.79</span></td>
+                        <td>300</td>
+                        <td>Tüm subdomain'ler</td>
+                    </tr>
+                    <tr>
+                        <td><strong>CNAME</strong></td>
+                        <td>www</td>
+                        <td>2sweety-app.com</td>
+                        <td>300</td>
+                        <td>www yönlendirmesi</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="coolify-config">
+                <h4>🎯 Coolify'da kullanım:</h4>
+                <div class="code-block">
+# Ana uygulama:
+https://2sweety-app.com
+
+# API endpoint:
+https://api.2sweety-app.com
+
+# Staging:
+https://staging.2sweety-app.com
+                </div>
+            </div>
+        </div>
+
+        <!-- GENEL SUBDOMAIN STRATEJİSİ -->
+        <div class="provider-section">
+            <div class="provider-title">🚀 Subdomain Stratejisi</div>
+            
+            <div class="info">
+                <strong>📋 Önerilen Subdomain Yapısı:</strong>
+            </div>
+
+            <table class="dns-table">
+                <thead>
+                    <tr>
+                        <th>Subdomain</th>
+                        <th>Kullanım Amacı</th>
+                        <th>Örnek URL</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>api</strong></td>
+                        <td>Backend API</td>
+                        <td>api.2sweety.com</td>
+                    </tr>
+                    <tr>
+                        <td><strong>admin</strong></td>
+                        <td>Admin Panel</td>
+                        <td>admin.2sweety.com</td>
+                    </tr>
+                    <tr>
+                        <td><strong>app</strong></td>
+                        <td>React Client</td>
+                        <td>app.2sweety.com</td>
+                    </tr>
+                    <tr>
+                        <td><strong>staging</strong></td>
+                        <td>Test Ortamı</td>
+                        <td>staging.2sweety.com</td>
+                    </tr>
+                    <tr>
+                        <td><strong>dev</strong></td>
+                        <td>Development</td>
+                        <td>dev.2sweety.com</td>
+                    </tr>
+                    <tr>
+                        <td><strong>cdn</strong></td>
+                        <td>Static Files</td>
+                        <td>cdn.2sweety.com</td>
+                    </tr>
+                    <tr>
+                        <td><strong>docs</strong></td>
+                        <td>Dokümantasyon</td>
+                        <td>docs.2sweety.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- DNS PROVIDER'LARA GÖRE AYARLAR -->
+        <div class="provider-section">
+            <div class="provider-title">🌍 DNS Provider'lara Göre Ayarlar</div>
+
+            <!-- HOSTINGER -->
+            <h3 style="color: #2c3e50; margin: 20px 0 10px 0;">🔶 Hostinger (2sweety.com için)</h3>
+            <div class="code-block">
+# Hostinger DNS Zone:
+1. Hostinger Control Panel → Domains → 2sweety.com → DNS Zone
+2. A record ekle:
+   - Type: A
+   - Name: @ (veya boş bırak)
+   - Points to: 45.9.190.79
+   - TTL: 300
+
+3. Wildcard A record ekle:
+   - Type: A  
+   - Name: *
+   - Points to: 45.9.190.79
+   - TTL: 300
+
+4. CNAME ekle (opsiyonel):
+   - Type: CNAME
+   - Name: www
+   - Points to: 2sweety.com
+   - TTL: 300
+            </div>
+
+            <!-- CLOUDFLARE -->
+            <h3 style="color: #2c3e50; margin: 20px 0 10px 0;">☁️ Cloudflare (Diğer domainler için)</h3>
+            <div class="code-block">
+# Cloudflare DNS:
+1. Cloudflare Dashboard → DNS → Records
+2. Add record:
+   - Type: A
+   - Name: @ (veya domain adı)
+   - IPv4 address: 45.9.190.79
+   - Proxy status: DNS only (gri bulut)
+   - TTL: Auto
+
+3. Wildcard record:
+   - Type: A
+   - Name: *
+   - IPv4 address: 45.9.190.79
+   - Proxy status: DNS only (gri bulut)
+   - TTL: Auto
+            </div>
+
+            <!-- NAMECHEAP -->
+            <h3 style="color: #2c3e50; margin: 20px 0 10px 0;">🏪 Namecheap</h3>
+            <div class="code-block">
+# Namecheap DNS:
+1. Namecheap Dashboard → Domain List → Manage → Advanced DNS
+2. Add New Record:
+   - Type: A Record
+   - Host: @ 
+   - Value: 45.9.190.79
+   - TTL: Automatic
+
+3. Wildcard record:
+   - Type: A Record
+   - Host: *
+   - Value: 45.9.190.79
+   - TTL: Automatic
+            </div>
+
+            <!-- GODADDY -->
+            <h3 style="color: #2c3e50; margin: 20px 0 10px 0;">🌐 GoDaddy</h3>
+            <div class="code-block">
+# GoDaddy DNS:
+1. GoDaddy Dashboard → DNS → Manage Zones
+2. Add Record:
+   - Type: A
+   - Name: @
+   - Value: 45.9.190.79
+   - TTL: 1 Hour
+
+3. Wildcard:
+   - Type: A
+   - Name: *
+   - Value: 45.9.190.79
+   - TTL: 1 Hour
+            </div>
+        </div>
+
+        <!-- COOLIFY MULTI-DOMAIN KURULUMU -->
+        <div class="provider-section">
+            <div class="provider-title">⚙️ Coolify Multi-Domain Kurulumu</div>
+
+            <div class="warning">
+                <strong>⚠️ Önemli:</strong> Her domain için DNS ayarlarını yaptıktan sonra Coolify'da konfigüre edin!
+            </div>
+
+            <h4 style="color: #2c3e50; margin: 15px 0;">🎯 Senaryo 1: Aynı Uygulama, Farklı Domainler</h4>
+            <div class="code-block">
+# Coolify Domains alanına:
+https://2sweety.com,https://2sweety-app.com,https://www.2sweety.com
+
+# Hepsi aynı uygulamaya yönlendirilir
+            </div>
+
+            <h4 style="color: #2c3e50; margin: 15px 0;">🎯 Senaryo 2: Farklı Uygulamalar, Farklı Domainler</h4>
+            <div class="code-block">
+# Uygulama 1 (Frontend):
+https://2sweety.com
+
+# Uygulama 2 (API):
+https://api.2sweety.com
+
+# Uygulama 3 (Admin):
+https://admin.2sweety.com
+
+# Her biri ayrı Coolify project'i olarak kurulur
+            </div>
+
+            <h4 style="color: #2c3e50; margin: 15px 0;">🎯 Senaryo 3: Wildcard SSL ile Otomatik Subdomain</h4>
+            <div class="code-block">
+# Server Configuration → Wildcard Domain:
+https://2sweety.com
+
+# Yeni projeler otomatik subdomain alır:
+https://random-name.2sweety.com
+https://another-app.2sweety.com
+            </div>
+        </div>
+
+        <!-- DNS PROPAGATION & TEST -->
+        <div class="provider-section">
+            <div class="provider-title">🧪 DNS Test ve Kontrol</div>
+
+            <div class="success">
+                <strong>✅ DNS Kontrol Komutları:</strong>
+            </div>
+
+            <div class="code-block">
+# Her domain için test:
+nslookup 2sweety.com
+nslookup api.2sweety.com
+nslookup admin.2sweety.com
+
+# Dig ile detaylı kontrol:
+dig 2sweety.com A
+dig *.2sweety.com A
+
+# Global DNS propagation kontrol:
+# https://dnschecker.org kullanın
+
+# Ping test:
+ping 2sweety.com
+ping api.2sweety.com
+            </div>
+
+            <div class="info">
+                <strong>📊 DNS Propagation Süreleri:</strong><br>
+                • TTL 300 (5 dakika): Hızlı değişiklik<br>
+                • TTL 3600 (1 saat): Normal<br>
+                • TTL 86400 (24 saat): Stabil, yavaş değişiklik<br>
+                • Global propagation: 4-48 saat arası
+            </div>
+        </div>
+
+        <!-- TROUBLESHOOTING -->
+        <div class="provider-section">
+            <div class="provider-title">🛠️ Sorun Giderme</div>
+
+            <div class="warning">
+                <strong>❌ Yaygın Sorunlar:</strong><br><br>
+                <strong>1. DNS Propagation Yavaş:</strong><br>
+                • TTL değerini düşürün (300)<br>
+                • 24 saat bekleyin<br>
+                • Local DNS cache temizleyin<br><br>
+                
+                <strong>2. Subdomain Çalışmıyor:</strong><br>
+                • Wildcard (*) record'u kontrol edin<br>
+                • Coolify'da domain formatını kontrol edin<br><br>
+                
+                <strong>3. SSL Alınamıyor:</strong><br>
+                • DNS'in doğru IP'yi gösterdiğini onaylayın<br>
+                • 80 ve 443 portlarının açık olduğunu kontrol edin<br>
+                • Let's Encrypt rate limit kontrolü yapın
+            </div>
+
+            <div class="code-block">
+# DNS Cache temizleme:
+# Windows:
+ipconfig /flushdns
+
+# macOS:
+sudo dscacheutil -flushcache
+
+# Linux:
+sudo systemctl restart systemd-resolved
+
+# Browser cache:
+Ctrl+F5 (Hard Refresh)
+            </div>
+        </div>
+
+        <div class="footer">
+            <h3>🎊 DNS Kurulumu Tamamlandı!</h3>
+            <p>Tüm domainleriniz artık <span class="ip-highlight">45.9.190.79</span> VPS'inize yönlendiriliyor</p>
+            <p><strong>Sonraki Adım:</strong> Her domain için Coolify'da SSL kurulumu yapın</p>
+            <p><em>Hazırlayan: AI Assistant | Coolify Multi-Domain Guide</em></p>
+        </div>
+    </div>
+</body>
+</html> 
