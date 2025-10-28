@@ -1,0 +1,1714 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2Sweety Deployment Rehberi - İnteraktif Kılavuz</title>
+    <meta name="description" content="2Sweety dating platformu için kapsamlı deployment kılavuzu. GitHub, Coolify, MySQL, Firebase kurulumu adım adım.">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <!-- Prism.js for syntax highlighting -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #ec4899;
+            --secondary-color: #8b5cf6;
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+            --danger-color: #ef4444;
+            --dark-bg: #1a1a2e;
+            --dark-card: #16213e;
+            --light-bg: #f8f9fa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .main-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .header h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .header .subtitle {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        /* Progress Bar */
+        .progress-container {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .progress-bar-custom {
+            height: 30px;
+            border-radius: 15px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            transition: width 0.3s ease;
+        }
+
+        /* Main Content Area */
+        .content-wrapper {
+            display: flex;
+            gap: 30px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            flex: 0 0 280px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 25px;
+            height: fit-content;
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .sidebar h3 {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .nav-item {
+            padding: 12px 15px;
+            margin-bottom: 8px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .nav-item:hover {
+            background: linear-gradient(135deg, #ec4899, #8b5cf6);
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .nav-item.active {
+            background: linear-gradient(135deg, #ec4899, #8b5cf6);
+            color: white;
+            font-weight: 600;
+        }
+
+        .nav-item i {
+            font-size: 1.2rem;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .step-section {
+            display: none;
+        }
+
+        .step-section.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .step-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid var(--primary-color);
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #ec4899, #8b5cf6);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .step-header h2 {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin: 0;
+        }
+
+        /* Cards */
+        .info-card {
+            background: #f8f9fa;
+            border-left: 4px solid var(--primary-color);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .info-card.success {
+            border-left-color: var(--success-color);
+            background: #f0fdf4;
+        }
+
+        .info-card.warning {
+            border-left-color: var(--warning-color);
+            background: #fffbeb;
+        }
+
+        .info-card.danger {
+            border-left-color: var(--danger-color);
+            background: #fef2f2;
+        }
+
+        .info-card h4 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        /* Code Blocks */
+        .code-block {
+            position: relative;
+            margin: 20px 0;
+        }
+
+        .code-header {
+            background: #2d3748;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 10px 10px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .copy-btn {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 5px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .copy-btn:hover {
+            background: var(--secondary-color);
+            transform: scale(1.05);
+        }
+
+        .code-block pre {
+            margin: 0;
+            border-radius: 0 0 10px 10px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .code-block pre code {
+            font-size: 0.9rem;
+        }
+
+        /* Checklist */
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+
+        .checklist li {
+            padding: 12px;
+            margin: 8px 0;
+            background: white;
+            border-radius: 8px;
+            border: 2px solid #e5e7eb;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .checklist li:hover {
+            border-color: var(--primary-color);
+            transform: translateX(5px);
+        }
+
+        .checklist li input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        .checklist li.checked {
+            background: #f0fdf4;
+            border-color: var(--success-color);
+        }
+
+        /* Buttons */
+        .btn-custom {
+            padding: 12px 30px;
+            border-radius: 10px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary-custom {
+            background: linear-gradient(135deg, #ec4899, #8b5cf6);
+            color: white;
+        }
+
+        .btn-primary-custom:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(236, 72, 153, 0.3);
+        }
+
+        .btn-outline-custom {
+            background: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-outline-custom:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Navigation Buttons */
+        .step-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid #e5e7eb;
+        }
+
+        /* Collapsible Sections */
+        .collapsible {
+            background: #f8f9fa;
+            border-radius: 10px;
+            margin: 15px 0;
+            overflow: hidden;
+        }
+
+        .collapsible-header {
+            padding: 15px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--primary-color);
+            transition: background 0.3s ease;
+        }
+
+        .collapsible-header:hover {
+            background: #e5e7eb;
+        }
+
+        .collapsible-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 20px;
+        }
+
+        .collapsible-content.open {
+            max-height: 2000px;
+            padding: 20px;
+        }
+
+        /* Table of Contents */
+        .toc {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .toc h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .toc ul li {
+            padding: 8px 0;
+        }
+
+        .toc ul li a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .toc ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .content-wrapper {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                position: static;
+                width: 100%;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-container {
+                padding: 10px;
+            }
+
+            .header {
+                padding: 20px;
+            }
+
+            .main-content {
+                padding: 20px;
+            }
+
+            .step-navigation {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .btn-custom {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        /* Loading Animation */
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid var(--primary-color);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Success Message */
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .success-icon {
+            font-size: 5rem;
+            color: var(--success-color);
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <!-- Header -->
+        <div class="header">
+            <h1>💕 2Sweety Deployment Rehberi</h1>
+            <p class="subtitle">GitHub, Coolify ve MySQL ile Production Deployment - Adım Adım Kılavuz</p>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <h5 class="mb-3">İlerleme: <span id="progress-text">0/7 Adım Tamamlandı</span></h5>
+            <div class="progress">
+                <div class="progress-bar-custom" id="progress-bar" role="progressbar" style="width: 0%"></div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content-wrapper">
+            <!-- Sidebar Navigation -->
+            <div class="sidebar">
+                <h3><i class="bi bi-list-ul"></i> Adımlar</h3>
+                <div class="nav-item active" data-step="0">
+                    <i class="bi bi-info-circle"></i>
+                    <span>Genel Bakış</span>
+                </div>
+                <div class="nav-item" data-step="1">
+                    <i class="bi bi-1-circle"></i>
+                    <span>Ön Hazırlık</span>
+                </div>
+                <div class="nav-item" data-step="2">
+                    <i class="bi bi-2-circle"></i>
+                    <span>Database Kurulumu</span>
+                </div>
+                <div class="nav-item" data-step="3">
+                    <i class="bi bi-3-circle"></i>
+                    <span>Backend Deployment</span>
+                </div>
+                <div class="nav-item" data-step="4">
+                    <i class="bi bi-4-circle"></i>
+                    <span>Frontend Deployment</span>
+                </div>
+                <div class="nav-item" data-step="5">
+                    <i class="bi bi-5-circle"></i>
+                    <span>Domain & SSL</span>
+                </div>
+                <div class="nav-item" data-step="6">
+                    <i class="bi bi-6-circle"></i>
+                    <span>Test & Doğrulama</span>
+                </div>
+                <div class="nav-item" data-step="7">
+                    <i class="bi bi-7-circle"></i>
+                    <span>Tamamlandı!</span>
+                </div>
+            </div>
+
+            <!-- Main Content Area -->
+            <div class="main-content">
+                <!-- Step 0: Overview -->
+                <div class="step-section active" id="step-0">
+                    <div class="step-header">
+                        <div class="step-number">0</div>
+                        <h2>2Sweety Platform Genel Bakış</h2>
+                    </div>
+
+                    <div class="info-card">
+                        <h4><i class="bi bi-info-circle-fill"></i> Platform Mimarisi</h4>
+                        <p>2Sweety üç ana bileşenden oluşur:</p>
+                        <ul>
+                            <li><strong>Frontend:</strong> React 18.2 Web Uygulaması</li>
+                            <li><strong>Backend:</strong> PHP 7.4 + Apache REST API</li>
+                            <li><strong>Database:</strong> MySQL 8.0 (24 tablo)</li>
+                        </ul>
+                    </div>
+
+                    <div class="row mt-4">
+                        <div class="col-md-4">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-body text-center">
+                                    <i class="bi bi-code-slash" style="font-size: 3rem; color: var(--primary-color);"></i>
+                                    <h5 class="mt-3">Frontend</h5>
+                                    <p class="text-muted small">React + Firebase + Agora</p>
+                                    <p class="small">Chat, Video Calls, Payments</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-body text-center">
+                                    <i class="bi bi-server" style="font-size: 3rem; color: var(--secondary-color);"></i>
+                                    <h5 class="mt-3">Backend</h5>
+                                    <p class="text-muted small">PHP + MySQL</p>
+                                    <p class="small">REST API, Admin Panel</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-body text-center">
+                                    <i class="bi bi-database" style="font-size: 3rem; color: var(--success-color);"></i>
+                                    <h5 class="mt-3">Database</h5>
+                                    <p class="text-muted small">MySQL 8.0</p>
+                                    <p class="small">User Data, Transactions</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card warning mt-4">
+                        <h4><i class="bi bi-exclamation-triangle-fill"></i> Önemli Notlar</h4>
+                        <ul>
+                            <li>Deployment yaklaşık <strong>1-2 saat</strong> sürer</li>
+                            <li><strong>GitHub hesabı</strong> ve <strong>Coolify sunucusu</strong> gerekli</li>
+                            <li><strong>2 domain</strong> gerekli: <code>2sweety.com</code> ve <code>api.2sweety.com</code></li>
+                            <li>Firebase projesi hazır: <code>sweet-a6718</code></li>
+                        </ul>
+                    </div>
+
+                    <div class="toc mt-4">
+                        <h3>🗺️ Deployment Haritası</h3>
+                        <ul>
+                            <li>✅ <strong>Adım 1:</strong> Ön Hazırlık (Hesaplar, API Keys)</li>
+                            <li>✅ <strong>Adım 2:</strong> Database Kurulumu (MySQL)</li>
+                            <li>✅ <strong>Adım 3:</strong> Backend Deployment (PHP API)</li>
+                            <li>✅ <strong>Adım 4:</strong> Frontend Deployment (React)</li>
+                            <li>✅ <strong>Adım 5:</strong> Domain ve SSL</li>
+                            <li>✅ <strong>Adım 6:</strong> Test ve Doğrulama</li>
+                            <li>✅ <strong>Adım 7:</strong> Production'a Geçiş</li>
+                        </ul>
+                    </div>
+
+                    <div class="step-navigation">
+                        <button class="btn-custom btn-outline-custom" disabled>
+                            <i class="bi bi-arrow-left"></i> Önceki
+                        </button>
+                        <button class="btn-custom btn-primary-custom" onclick="nextStep()">
+                            Sonraki <i class="bi bi-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Step 1: Prerequisites -->
+                <div class="step-section" id="step-1">
+                    <div class="step-header">
+                        <div class="step-number">1</div>
+                        <h2>Ön Hazırlık ve Gereksinimler</h2>
+                    </div>
+
+                    <div class="info-card">
+                        <h4><i class="bi bi-clipboard-check-fill"></i> Gerekli Hesaplar</h4>
+                        <p>Deployment için şu hesaplara ihtiyacınız var:</p>
+                    </div>
+
+                    <div class="collapsible">
+                        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+                            <span><i class="bi bi-github"></i> GitHub Hesabı</span>
+                            <i class="bi bi-chevron-down"></i>
+                        </div>
+                        <div class="collapsible-content">
+                            <p><strong>Status:</strong> ✅ Zaten giriş yaptınız (YDX64)</p>
+                            <p>Repository: <a href="https://github.com/YDX64/2sweety" target="_blank">https://github.com/YDX64/2sweety</a></p>
+                        </div>
+                    </div>
+
+                    <div class="collapsible">
+                        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+                            <span><i class="bi bi-cloud"></i> Coolify Sunucusu</span>
+                            <i class="bi bi-chevron-down"></i>
+                        </div>
+                        <div class="collapsible-content">
+                            <p>Coolify self-hosted veya managed bir sunucuya ihtiyacınız var.</p>
+                            <ul>
+                                <li>Minimum 2GB RAM</li>
+                                <li>2 Core CPU</li>
+                                <li>20GB Storage</li>
+                                <li>Ubuntu 20.04+ veya Debian 11+</li>
+                            </ul>
+                            <p><strong>Kurulum:</strong> <a href="https://coolify.io/docs" target="_blank">Coolify Docs</a></p>
+                        </div>
+                    </div>
+
+                    <div class="collapsible">
+                        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+                            <span><i class="bi bi-globe"></i> Domain İsimleri</span>
+                            <i class="bi bi-chevron-down"></i>
+                        </div>
+                        <div class="collapsible-content">
+                            <p>İki domain gerekli:</p>
+                            <ol>
+                                <li><code>2sweety.com</code> - Frontend (React Web)</li>
+                                <li><code>api.2sweety.com</code> - Backend (PHP API)</li>
+                            </ol>
+                            <p>DNS ayarlarını Coolify sunucu IP'nize yönlendirin.</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card success mt-4">
+                        <h4><i class="bi bi-check-circle-fill"></i> Hazır Olan Yapılandırmalar</h4>
+                        <ul>
+                            <li>✅ Firebase Project: <code>sweet-a6718</code></li>
+                            <li>✅ GitHub Repository: Oluşturuldu ve push edildi</li>
+                            <li>✅ Dockerfile ve docker-compose: Hazır</li>
+                            <li>✅ Database Schema: <code>Gomeet.sql</code> (24 tablo)</li>
+                            <li>✅ Environment templates: <code>.env.coolify.*</code></li>
+                        </ul>
+                    </div>
+
+                    <h4 class="mt-4">🔑 API Keys ve Credentials</h4>
+                    <p>Aşağıdaki servislerin API key'lerini hazırlayın:</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>Gerekli API Keys</span>
+                            <button class="copy-btn" onclick="copyCode(this)">
+                                <i class="bi bi-clipboard"></i> Kopyala
+                            </button>
+                        </div>
+                        <pre><code class="language-bash"># Firebase (Zaten hazır)
+FIREBASE_PROJECT_ID=sweet-a6718
+FIREBASE_API_KEY=AIzaSyDCZoLgY9bFxRcNFuV6IljwMVnnx0TL2to
+
+# Payment Gateways (Opsiyonel)
+RAZORPAY_KEY_ID=
+STRIPE_SECRET_KEY=
+PAYPAL_CLIENT_ID=
+
+# Video/Audio Calls
+AGORA_APP_ID=
+
+# Push Notifications
+ONESIGNAL_APP_ID=94b2b6c5-fabb-4454-a2b7-75cf75b84789
+
+# Google Maps (Opsiyonel)
+GOOGLE_MAPS_API_KEY=</code></pre>
+                    </div>
+
+                    <div class="info-card warning">
+                        <h4><i class="bi bi-exclamation-triangle-fill"></i> Dikkat</h4>
+                        <p>API key'leri <code>docs/api/api-keys-guide.md</code> dosyasında detaylı anlatılmıştır.</p>
+                    </div>
+
+                    <div class="step-navigation">
+                        <button class="btn-custom btn-outline-custom" onclick="prevStep()">
+                            <i class="bi bi-arrow-left"></i> Önceki
+                        </button>
+                        <button class="btn-custom btn-primary-custom" onclick="nextStep()">
+                            Sonraki <i class="bi bi-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Step 2: Database Setup -->
+                <div class="step-section" id="step-2">
+                    <div class="step-header">
+                        <div class="step-number">2</div>
+                        <h2>MySQL Database Kurulumu</h2>
+                    </div>
+
+                    <div class="info-card">
+                        <h4><i class="bi bi-database-fill"></i> Database Bilgileri</h4>
+                        <ul>
+                            <li><strong>Database Name:</strong> <code>dating_db</code></li>
+                            <li><strong>Tables:</strong> 24 tablo</li>
+                            <li><strong>Schema File:</strong> <code>mobile-app/Gommet Database 1.5/Gomeet.sql</code></li>
+                            <li><strong>Size:</strong> ~228 KB (1,057 satır)</li>
+                        </ul>
+                    </div>
+
+                    <h4>🎯 Seçenek 1: Coolify MySQL Service</h4>
+                    <p>Coolify'da yeni MySQL database oluşturun:</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>Coolify Dashboard</span>
+                        </div>
+                        <pre><code class="language-plaintext">1. Resources → + New Resource → Database
+2. MySQL 8.0 seçin
+3. Yapılandırma:
+   Name: 2sweety-mysql
+   Database: dating_db
+   Username: dating_user
+   Password: [güçlü şifre oluştur]
+4. Create Database</code></pre>
+                    </div>
+
+                    <div class="info-card success">
+                        <h4><i class="bi bi-check-circle-fill"></i> Bağlantı Bilgilerini Kaydet</h4>
+                        <p>Database oluştuktan sonra şu bilgileri not edin:</p>
+                        <ul>
+                            <li>Host (genellikle <code>2sweety-mysql</code>)</li>
+                            <li>Port: <code>3306</code></li>
+                            <li>Database: <code>dating_db</code></li>
+                            <li>Username: <code>dating_user</code></li>
+                            <li>Password: [oluşturduğunuz şifre]</li>
+                        </ul>
+                    </div>
+
+                    <h4 class="mt-4">📥 SQL Dosyasını Import Etme</h4>
+                    <p>Database hazır olduktan sonra schema'yı import edin:</p>
+
+                    <div class="collapsible">
+                        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+                            <span><i class="bi bi-terminal"></i> Yöntem 1: Bash Script ile</span>
+                            <i class="bi bi-chevron-down"></i>
+                        </div>
+                        <div class="collapsible-content">
+                            <div class="code-block">
+                                <div class="code-header">
+                                    <span>database-setup.sh</span>
+                                    <button class="copy-btn" onclick="copyCode(this)">
+                                        <i class="bi bi-clipboard"></i> Kopyala
+                                    </button>
+                                </div>
+                                <pre><code class="language-bash"># Environment variables ayarla
+export DB_HOST=localhost
+export DB_PORT=3306
+export DB_NAME=dating_db
+export DB_USER=dating_user
+export DB_PASSWORD=your_password
+export DB_ROOT_PASSWORD=root_password
+export SQL_FILE=/path/to/Gomeet.sql
+
+# Script'i çalıştır
+cd "Gomeet Admin Panel 1.5"
+./database-setup.sh</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="collapsible">
+                        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+                            <span><i class="bi bi-code"></i> Yöntem 2: MySQL Command Line</span>
+                            <i class="bi bi-chevron-down"></i>
+                        </div>
+                        <div class="collapsible-content">
+                            <div class="code-block">
+                                <div class="code-header">
+                                    <span>MySQL Import</span>
+                                    <button class="copy-btn" onclick="copyCode(this)">
+                                        <i class="bi bi-clipboard"></i> Kopyala
+                                    </button>
+                                </div>
+                                <pre><code class="language-bash"># SQL dosyasını import et
+mysql -u dating_user -p dating_db < "mobile-app/Gommet Database 1.5/Gomeet.sql"
+
+# Doğrulama
+mysql -u dating_user -p dating_db -e "SHOW TABLES;"</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="collapsible">
+                        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+                            <span><i class="bi bi-window"></i> Yöntem 3: phpMyAdmin</span>
+                            <i class="bi bi-chevron-down"></i>
+                        </div>
+                        <div class="collapsible-content">
+                            <ol>
+                                <li>phpMyAdmin'e giriş yap</li>
+                                <li><code>dating_db</code> database'ini seç</li>
+                                <li>Import sekmesine git</li>
+                                <li><code>Gomeet.sql</code> dosyasını seç</li>
+                                <li>Go butonuna tıkla</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <h4 class="mt-4">✅ Doğrulama Kontrolleri</h4>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>SQL Doğrulama</span>
+                            <button class="copy-btn" onclick="copyCode(this)">
+                                <i class="bi bi-clipboard"></i> Kopyala
+                            </button>
+                        </div>
+                        <pre><code class="language-sql">-- Tablo sayısını kontrol et (24 olmalı)
+SELECT COUNT(*) FROM information_schema.tables
+WHERE table_schema = 'dating_db';
+
+-- Admin kullanıcısını kontrol et
+SELECT id, username, email FROM admin LIMIT 1;
+-- Sonuç: username='admin', password='admin@123'
+
+-- Ana tabloları kontrol et
+SELECT COUNT(*) FROM tbl_user;
+SELECT COUNT(*) FROM tbl_plan;
+SELECT COUNT(*) FROM tbl_setting;</code></pre>
+                    </div>
+
+                    <div class="info-card danger mt-4">
+                        <h4><i class="bi bi-shield-exclamation"></i> GÜVENLİK UYARISI</h4>
+                        <p>Default admin şifresini hemen değiştirin:</p>
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span>Admin Şifresini Değiştir</span>
+                                <button class="copy-btn" onclick="copyCode(this)">
+                                    <i class="bi bi-clipboard"></i> Kopyala
+                                </button>
+                            </div>
+                            <pre><code class="language-sql">UPDATE admin
+SET password = MD5('your_new_secure_password')
+WHERE id = 1;</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="step-navigation">
+                        <button class="btn-custom btn-outline-custom" onclick="prevStep()">
+                            <i class="bi bi-arrow-left"></i> Önceki
+                        </button>
+                        <button class="btn-custom btn-primary-custom" onclick="nextStep()">
+                            Sonraki <i class="bi bi-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Backend Deployment -->
+                <div class="step-section" id="step-3">
+                    <div class="step-header">
+                        <div class="step-number">3</div>
+                        <h2>PHP Backend Deployment</h2>
+                    </div>
+
+                    <div class="info-card">
+                        <h4><i class="bi bi-server"></i> Backend Bilgileri</h4>
+                        <ul>
+                            <li><strong>Technology:</strong> PHP 7.4 + Apache</li>
+                            <li><strong>Folder:</strong> <code>Gomeet Admin Panel 1.5</code></li>
+                            <li><strong>Domain:</strong> <code>api.2sweety.com</code></li>
+                            <li><strong>Endpoints:</strong> 50+ REST API endpoint</li>
+                        </ul>
+                    </div>
+
+                    <h4>🎯 Coolify'da Backend Oluşturma</h4>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>Coolify Application Settings</span>
+                        </div>
+                        <pre><code class="language-plaintext">Name: 2sweety-backend-api
+Source: GitHub → YDX64/2sweety
+Branch: main
+Base Directory: Gomeet Admin Panel 1.5
+Build Pack: Dockerfile
+Domain: api.2sweety.com</code></pre>
+                    </div>
+
+                    <h4 class="mt-4">🔧 Environment Variables</h4>
+                    <p>Coolify'da <strong>Environment Variables</strong> sekmesine gidin ve ekleyin:</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>Backend Environment Variables</span>
+                            <button class="copy-btn" onclick="copyCode(this)">
+                                <i class="bi bi-clipboard"></i> Kopyala
+                            </button>
+                        </div>
+                        <pre><code class="language-bash"># Database Configuration
+DB_HOST=2sweety-mysql
+DB_PORT=3306
+DB_NAME=dating_db
+DB_USER=dating_user
+DB_PASSWORD=your_database_password
+
+# API Configuration
+API_BASE_URL=https://api.2sweety.com
+APP_ENV=production
+
+# Firebase Admin SDK (Server-side)
+FIREBASE_PROJECT_ID=sweet-a6718
+FIREBASE_PRIVATE_KEY=your_firebase_private_key
+FIREBASE_CLIENT_EMAIL=your_firebase_client_email
+
+# Payment Gateways (Server-side secrets)
+RAZORPAY_KEY_ID=your_razorpay_key
+RAZORPAY_KEY_SECRET=your_razorpay_secret
+STRIPE_SECRET_KEY=sk_live_xxx
+PAYPAL_SECRET=your_paypal_secret
+
+# OneSignal
+ONESIGNAL_APP_ID=94b2b6c5-fabb-4454-a2b7-75cf75b84789
+ONESIGNAL_REST_API_KEY=your_rest_api_key
+
+# Agora
+AGORA_APP_ID=your_agora_app_id
+AGORA_APP_CERTIFICATE=your_agora_certificate
+
+# Security
+JWT_SECRET=your_jwt_secret_min_32_characters
+API_KEY=your_api_key_for_authentication</code></pre>
+                    </div>
+
+                    <div class="info-card warning mt-4">
+                        <h4><i class="bi bi-exclamation-triangle-fill"></i> Önemli</h4>
+                        <p><code>DB_HOST</code> değeri Coolify MySQL service'inin adı olmalı (örn: <code>2sweety-mysql</code>)</p>
+                    </div>
+
+                    <h4 class="mt-4">⚙️ Health Check</h4>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>Health Check Configuration</span>
+                        </div>
+                        <pre><code class="language-plaintext">Health Check Path: /api/health.php
+Health Check Method: GET
+Health Check Interval: 30 seconds
+Health Check Timeout: 10 seconds
+Health Check Retries: 3</code></pre>
+                    </div>
+
+                    <h4 class="mt-4">🚀 Deploy!</h4>
+                    <ol>
+                        <li>Tüm ayarları kontrol edin</li>
+                        <li><strong>Deploy</strong> butonuna tıklayın</li>
+                        <li>Build loglarını izleyin (3-5 dakika)</li>
+                        <li>Status: "Running" olana kadar bekleyin</li>
+                    </ol>
+
+                    <h4 class="mt-4">✅ Backend Test</h4>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>Health Endpoint Test</span>
+                            <button class="copy-btn" onclick="copyCode(this)">
+                                <i class="bi bi-clipboard"></i> Kopyala
+                            </button>
+                        </div>
+                        <pre><code class="language-bash"># Health check
+curl https://api.2sweety.com/api/health.php
+
+# Expected response:
+{
+  "status": "healthy",
+  "timestamp": "2024-10-25 23:30:00",
+  "service": "2Sweety Backend API",
+  "version": "1.0.0",
+  "database": "connected"
+}</code></pre>
+                    </div>
+
+                    <div class="step-navigation">
+                        <button class="btn-custom btn-outline-custom" onclick="prevStep()">
+                            <i class="bi bi-arrow-left"></i> Önceki
+                        </button>
+                        <button class="btn-custom btn-primary-custom" onclick="nextStep()">
+                            Sonraki <i class="bi bi-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Step 4: Frontend Deployment -->
+                <div class="step-section" id="step-4">
+                    <div class="step-header">
+                        <div class="step-number">4</div>
+                        <h2>React Frontend Deployment</h2>
+                    </div>
+
+                    <div class="info-card">
+                        <h4><i class="bi bi-palette-fill"></i> Frontend Bilgileri</h4>
+                        <ul>
+                            <li><strong>Technology:</strong> React 18.2</li>
+                            <li><strong>Folder:</strong> <code>GoMeet Web</code></li>
+                            <li><strong>Domain:</strong> <code>2sweety.com</code></li>
+                            <li><strong>Build Output:</strong> <code>build/</code> klasörü</li>
+                        </ul>
+                    </div>
+
+                    <h4>🎯 Coolify'da Frontend Oluşturma</h4>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>Coolify Application Settings</span>
+                        </div>
+                        <pre><code class="language-plaintext">Name: 2sweety-web-frontend
+Source: GitHub → YDX64/2sweety
+Branch: main
+Base Directory: GoMeet Web
+Build Pack: nixpacks (veya Static)
+Build Command: npm install && npm run build
+Publish Directory: build
+Start Command: [BOŞ BIRAK]
+Domain: 2sweety.com
+Additional Domain: www.2sweety.com</code></pre>
+                    </div>
+
+                    <div class="info-card warning">
+                        <h4><i class="bi bi-exclamation-triangle-fill"></i> ÖNEMLİ</h4>
+                        <p><strong>Start Command</strong> alanını <strong>BOŞ</strong> bırakın! Coolify otomatik olarak static dosyaları serve eder.</p>
+                    </div>
+
+                    <h4 class="mt-4">🔧 Build Arguments (EN ÖNEMLİ KISIM!)</h4>
+                    <p>Environment Variables → <strong>Build Arguments</strong> sekmesine gidin:</p>
+
+                    <div class="info-card danger">
+                        <h4><i class="bi bi-exclamation-circle-fill"></i> UYARI</h4>
+                        <ul>
+                            <li>❌ <strong>Runtime Variables</strong> DEĞİL</li>
+                            <li>❌ <strong>Secrets</strong> DEĞİL</li>
+                            <li>✅ <strong>BUILD ARGUMENTS</strong> kullanın!</li>
+                        </ul>
+                    </div>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>Frontend Build Arguments (Production)</span>
+                            <button class="copy-btn" onclick="copyCode(this)">
+                                <i class="bi bi-clipboard"></i> Kopyala
+                            </button>
+                        </div>
+                        <pre><code class="language-bash"># General
+ESLINT_NO_DEV_ERRORS=true
+GENERATE_SOURCEMAP=false
+SKIP_PREFLIGHT_CHECK=true
+
+# App Info
+REACT_APP_NAME=2Sweety
+REACT_APP_VERSION=1.0.0
+REACT_APP_ENVIRONMENT=production
+
+# API URLs - KENDİ BACKEND'İNİZ
+REACT_APP_API_BASE_URL=https://api.2sweety.com/api/
+REACT_APP_IMAGE_BASE_URL=https://api.2sweety.com/
+REACT_APP_PAYMENT_BASE_URL=https://api.2sweety.com/
+
+# Firebase Configuration
+REACT_APP_FIREBASE_API_KEY=AIzaSyDCZoLgY9bFxRcNFuV6IljwMVnnx0TL2to
+REACT_APP_FIREBASE_AUTH_DOMAIN=sweet-a6718.firebaseapp.com
+REACT_APP_FIREBASE_PROJECT_ID=sweet-a6718
+REACT_APP_FIREBASE_STORAGE_BUCKET=sweet-a6718.firebasestorage.app
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID=487435792097
+REACT_APP_FIREBASE_APP_ID=1:487435792097:web:12907427892d53c82251a0
+REACT_APP_FIREBASE_MEASUREMENT_ID=G-EQGMN8DYDP
+
+# OneSignal
+REACT_APP_ONESIGNAL_APP_ID=94b2b6c5-fabb-4454-a2b7-75cf75b84789
+
+# Payment Gateways (Client-side keys)
+REACT_APP_RAZORPAY_KEY_ID=rzp_live_xxx
+REACT_APP_STRIPE_PUBLISHABLE_KEY=pk_live_xxx
+REACT_APP_PAYPAL_CLIENT_ID=your_paypal_client_id
+
+# Agora
+REACT_APP_AGORA_APP_ID=your_agora_app_id
+
+# Google Maps
+REACT_APP_GOOGLE_MAPS_API_KEY=your_google_maps_key
+
+# Feature Flags
+REACT_APP_ENABLE_VIDEO_CALL=true
+REACT_APP_ENABLE_VOICE_CALL=true
+REACT_APP_ENABLE_GIFT_SENDING=true
+REACT_APP_ENABLE_PREMIUM_FEATURES=true
+REACT_APP_MAX_IMAGE_SIZE=5242880
+REACT_APP_MAX_IMAGES_PER_PROFILE=6</code></pre>
+                    </div>
+
+                    <div class="info-card success mt-4">
+                        <h4><i class="bi bi-lightbulb-fill"></i> İPUCU</h4>
+                        <p>Yukarıdaki tüm içeriği <code>GoMeet Web/.env.coolify.KENDI-BACKEND</code> dosyasından da kopyalayabilirsiniz!</p>
+                    </div>
+
+                    <h4 class="mt-4">🚀 Deploy!</h4>
+                    <ol>
+                        <li>Build Arguments'ı kontrol edin</li>
+                        <li><strong>Deploy</strong> butonuna tıklayın</li>
+                        <li>Build loglarını izleyin (5-10 dakika)</li>
+                        <li>Status: "Running" olana kadar bekleyin</li>
+                    </ol>
+
+                    <h4 class="mt-4">✅ Frontend Test</h4>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>Frontend Test</span>
+                        </div>
+                        <pre><code class="language-bash"># Browser'da aç
+https://2sweety.com
+
+# Kontrol listesi:
+✅ Sayfa açılıyor
+✅ Firebase bağlanıyor
+✅ Console'da hata yok (F12)
+✅ API çağrıları çalışıyor
+✅ Kayıt/giriş çalışıyor</code></pre>
+                    </div>
+
+                    <div class="step-navigation">
+                        <button class="btn-custom btn-outline-custom" onclick="prevStep()">
+                            <i class="bi bi-arrow-left"></i> Önceki
+                        </button>
+                        <button class="btn-custom btn-primary-custom" onclick="nextStep()">
+                            Sonraki <i class="bi bi-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Step 5: Domain & SSL -->
+                <div class="step-section" id="step-5">
+                    <div class="step-header">
+                        <div class="step-number">5</div>
+                        <h2>Domain ve SSL Yapılandırması</h2>
+                    </div>
+
+                    <div class="info-card">
+                        <h4><i class="bi bi-globe"></i> Domain Yapısı</h4>
+                        <ul>
+                            <li><strong>Frontend:</strong> <code>2sweety.com</code></li>
+                            <li><strong>Frontend (www):</strong> <code>www.2sweety.com</code> → redirect to non-www</li>
+                            <li><strong>Backend:</strong> <code>api.2sweety.com</code></li>
+                        </ul>
+                    </div>
+
+                    <h4>🌐 DNS Ayarları</h4>
+                    <p>Domain sağlayıcınızın DNS yönetim paneline gidin:</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>DNS Records</span>
+                        </div>
+                        <pre><code class="language-plaintext"># Frontend (2sweety.com)
+Type: A
+Name: @
+Value: [Coolify Sunucu IP]
+TTL: 3600
+
+# Frontend (www)
+Type: A
+Name: www
+Value: [Coolify Sunucu IP]
+TTL: 3600
+
+# Backend (api.2sweety.com)
+Type: A
+Name: api
+Value: [Coolify Sunucu IP]
+TTL: 3600</code></pre>
+                    </div>
+
+                    <div class="info-card warning">
+                        <h4><i class="bi bi-clock-fill"></i> DNS Propagation</h4>
+                        <p>DNS değişikliklerinin yayılması 5-30 dakika sürebilir. Sabırlı olun!</p>
+                    </div>
+
+                    <h4 class="mt-4">🔍 DNS Doğrulama</h4>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>DNS Check</span>
+                            <button class="copy-btn" onclick="copyCode(this)">
+                                <i class="bi bi-clipboard"></i> Kopyala
+                            </button>
+                        </div>
+                        <pre><code class="language-bash"># Frontend kontrolü
+dig 2sweety.com
+dig www.2sweety.com
+
+# Backend kontrolü
+dig api.2sweety.com
+
+# Hepsi Coolify sunucu IP'sini döndürmeli</code></pre>
+                    </div>
+
+                    <h4 class="mt-4">🔒 SSL Certificate (Let's Encrypt)</h4>
+                    <p>Coolify otomatik olarak SSL sertifikası oluşturur:</p>
+
+                    <div class="collapsible">
+                        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+                            <span><i class="bi bi-shield-lock"></i> Frontend SSL</span>
+                            <i class="bi bi-chevron-down"></i>
+                        </div>
+                        <div class="collapsible-content">
+                            <ol>
+                                <li>Coolify → 2sweety-web-frontend → <strong>Domains</strong></li>
+                                <li><strong>Generate Certificate</strong> butonuna tıklayın</li>
+                                <li>1-2 dakika bekleyin</li>
+                                <li>Status: "Certificate Valid" ✅</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="collapsible">
+                        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+                            <span><i class="bi bi-shield-lock"></i> Backend SSL</span>
+                            <i class="bi bi-chevron-down"></i>
+                        </div>
+                        <div class="collapsible-content">
+                            <ol>
+                                <li>Coolify → 2sweety-backend-api → <strong>Domains</strong></li>
+                                <li><strong>Generate Certificate</strong> butonuna tıklayın</li>
+                                <li>1-2 dakika bekleyin</li>
+                                <li>Status: "Certificate Valid" ✅</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="info-card success mt-4">
+                        <h4><i class="bi bi-check-circle-fill"></i> SSL Ayarları</h4>
+                        <p>Her iki uygulama için de:</p>
+                        <ul>
+                            <li>✅ <strong>Force HTTPS</strong> aktif olmalı</li>
+                            <li>✅ Tüm HTTP istekleri HTTPS'e yönlendirilir</li>
+                            <li>✅ Sertifika otomatik yenilenir (90 günde bir)</li>
+                        </ul>
+                    </div>
+
+                    <h4 class="mt-4">✅ SSL Doğrulama</h4>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>SSL Test</span>
+                            <button class="copy-btn" onclick="copyCode(this)">
+                                <i class="bi bi-clipboard"></i> Kopyala
+                            </button>
+                        </div>
+                        <pre><code class="language-bash"># Frontend SSL kontrolü
+curl -I https://2sweety.com
+# HTTP/2 200 dönmeli
+
+# Backend SSL kontrolü
+curl -I https://api.2sweety.com/api/health.php
+# HTTP/2 200 dönmeli
+
+# SSL detayları
+openssl s_client -connect 2sweety.com:443 -servername 2sweety.com
+openssl s_client -connect api.2sweety.com:443 -servername api.2sweety.com</code></pre>
+                    </div>
+
+                    <div class="step-navigation">
+                        <button class="btn-custom btn-outline-custom" onclick="prevStep()">
+                            <i class="bi bi-arrow-left"></i> Önceki
+                        </button>
+                        <button class="btn-custom btn-primary-custom" onclick="nextStep()">
+                            Sonraki <i class="bi bi-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Step 6: Testing -->
+                <div class="step-section" id="step-6">
+                    <div class="step-header">
+                        <div class="step-number">6</div>
+                        <h2>Test ve Doğrulama</h2>
+                    </div>
+
+                    <div class="info-card">
+                        <h4><i class="bi bi-check2-all"></i> Tam Test Süreci</h4>
+                        <p>Tüm sistemin çalıştığından emin olmak için kapsamlı testler yapın.</p>
+                    </div>
+
+                    <h4>✅ Frontend Test Checklist</h4>
+                    <ul class="checklist" id="frontend-checklist">
+                        <li><input type="checkbox"> Homepage açılıyor (<code>https://2sweety.com</code>)</li>
+                        <li><input type="checkbox"> Console'da JavaScript hatası yok (F12)</li>
+                        <li><input type="checkbox"> Firebase bağlantısı çalışıyor</li>
+                        <li><input type="checkbox"> Kullanıcı kaydı oluşturuluyor</li>
+                        <li><input type="checkbox"> Kullanıcı girişi çalışıyor</li>
+                        <li><input type="checkbox"> Profil fotoğrafı yüklenebiliyor</li>
+                        <li><input type="checkbox"> Chat açılıyor ve mesaj gönderilebiliyor</li>
+                        <li><input type="checkbox"> Video/ses arama başlatılabiliyor</li>
+                        <li><input type="checkbox"> Ödeme sayfası açılıyor</li>
+                        <li><input type="checkbox"> Mobil responsive çalışıyor</li>
+                    </ul>
+
+                    <h4 class="mt-4">✅ Backend Test Checklist</h4>
+                    <ul class="checklist" id="backend-checklist">
+                        <li><input type="checkbox"> Health endpoint yanıt veriyor</li>
+                        <li><input type="checkbox"> Settings endpoint çalışıyor</li>
+                        <li><input type="checkbox"> User authentication API çalışıyor</li>
+                        <li><input type="checkbox"> Profile endpoints çalışıyor</li>
+                        <li><input type="checkbox"> Database bağlantısı aktif</li>
+                        <li><input type="checkbox"> Image upload/download çalışıyor</li>
+                        <li><input type="checkbox"> CORS headers doğru</li>
+                        <li><input type="checkbox"> Error logging çalışıyor</li>
+                    </ul>
+
+                    <h4 class="mt-4">✅ Database Test</h4>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>Database Queries</span>
+                            <button class="copy-btn" onclick="copyCode(this)">
+                                <i class="bi bi-clipboard"></i> Kopyala
+                            </button>
+                        </div>
+                        <pre><code class="language-sql">-- Kayıtlı kullanıcı sayısı
+SELECT COUNT(*) FROM tbl_user;
+
+-- Payment planları
+SELECT * FROM tbl_plan;
+
+-- Ayarlar
+SELECT * FROM tbl_setting;
+
+-- Admin erişimi
+SELECT username, email FROM admin;</code></pre>
+                    </div>
+
+                    <h4 class="mt-4">🎯 Kullanıcı Akışı Testi</h4>
+                    <div class="collapsible">
+                        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+                            <span><i class="bi bi-person-plus"></i> Tam Kayıt Akışı</span>
+                            <i class="bi bi-chevron-down"></i>
+                        </div>
+                        <div class="collapsible-content">
+                            <ol>
+                                <li>Ana sayfayı aç: <code>https://2sweety.com</code></li>
+                                <li>Yeni kullanıcı kaydı oluştur</li>
+                                <li>Email/telefon doğrulaması</li>
+                                <li>Profil bilgilerini doldur</li>
+                                <li>Profil fotoğrafları yükle (min 2, max 6)</li>
+                                <li>İlgi alanlarını seç</li>
+                                <li>Konum izni ver</li>
+                                <li>Dashboard'a ulaş</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="collapsible">
+                        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+                            <span><i class="bi bi-chat-dots"></i> Chat Testi</span>
+                            <i class="bi bi-chevron-down"></i>
+                        </div>
+                        <div class="collapsible-content">
+                            <ol>
+                                <li>İki farklı kullanıcı oluştur</li>
+                                <li>Birbirlerini beğen (match oluştur)</li>
+                                <li>Chat sayfasını aç</li>
+                                <li>Mesaj gönder (Firebase Firestore)</li>
+                                <li>Gerçek zamanlı mesaj alımını kontrol et</li>
+                                <li>Fotoğraf/GIF gönder</li>
+                                <li>Notification kontrolü</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="collapsible">
+                        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+                            <span><i class="bi bi-camera-video"></i> Video/Audio Call Testi</span>
+                            <i class="bi bi-chevron-down"></i>
+                        </div>
+                        <div class="collapsible-content">
+                            <ol>
+                                <li>Match'lenmiş kullanıcılarla test et</li>
+                                <li>Video call başlat</li>
+                                <li>Agora RTC bağlantısını kontrol et</li>
+                                <li>Audio call başlat</li>
+                                <li>Kamera/mikrofon izinlerini test et</li>
+                                <li>Call history'yi kontrol et</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="collapsible">
+                        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+                            <span><i class="bi bi-credit-card"></i> Payment Testi</span>
+                            <i class="bi bi-chevron-down"></i>
+                        </div>
+                        <div class="collapsible-content">
+                            <ol>
+                                <li>Premium plan sayfasını aç</li>
+                                <li>Payment gateway seç (Razorpay/Stripe/PayPal)</li>
+                                <li>Test card ile ödeme yap</li>
+                                <li>Webhook alımını kontrol et</li>
+                                <li>Subscription status güncellenmeli</li>
+                                <li>Premium features unlock olmalı</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="info-card success mt-4">
+                        <h4><i class="bi bi-trophy-fill"></i> Tebrikler!</h4>
+                        <p>Tüm testler başarılı ise deployment tamamlanmıştır! 🎉</p>
+                    </div>
+
+                    <div class="step-navigation">
+                        <button class="btn-custom btn-outline-custom" onclick="prevStep()">
+                            <i class="bi bi-arrow-left"></i> Önceki
+                        </button>
+                        <button class="btn-custom btn-primary-custom" onclick="nextStep()">
+                            Sonraki <i class="bi bi-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Step 7: Completion -->
+                <div class="step-section" id="step-7">
+                    <div class="success-message" style="display: block;">
+                        <div class="success-icon">
+                            <i class="bi bi-check-circle-fill"></i>
+                        </div>
+                        <h2 style="color: var(--success-color);">🎉 Deployment Tamamlandı!</h2>
+                        <p class="lead mt-3">2Sweety platformunuz artık production'da!</p>
+
+                        <div class="row mt-5">
+                            <div class="col-md-6">
+                                <div class="card border-0 shadow-sm">
+                                    <div class="card-body">
+                                        <h5><i class="bi bi-globe" style="color: var(--primary-color);"></i> Frontend</h5>
+                                        <p class="mb-2"><strong>URL:</strong> <a href="https://2sweety.com" target="_blank">https://2sweety.com</a></p>
+                                        <p class="mb-2"><strong>Status:</strong> <span class="badge bg-success">Live</span></p>
+                                        <p class="small text-muted">React Web Application</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card border-0 shadow-sm">
+                                    <div class="card-body">
+                                        <h5><i class="bi bi-server" style="color: var(--secondary-color);"></i> Backend</h5>
+                                        <p class="mb-2"><strong>URL:</strong> <a href="https://api.2sweety.com" target="_blank">https://api.2sweety.com</a></p>
+                                        <p class="mb-2"><strong>Status:</strong> <span class="badge bg-success">Live</span></p>
+                                        <p class="small text-muted">PHP REST API</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="info-card mt-5">
+                            <h4><i class="bi bi-bookmark-check-fill"></i> Sonraki Adımlar</h4>
+                            <ul>
+                                <li>✅ Tüm özellikleri test edin</li>
+                                <li>✅ Payment gateway'leri yapılandırın</li>
+                                <li>✅ Analytics ekleyin (Google Analytics, Firebase Analytics)</li>
+                                <li>✅ Kullanıcı dokümantasyonu oluşturun</li>
+                                <li>✅ Marketing stratejisi planlayın</li>
+                                <li>✅ Regular backup ayarlayın</li>
+                                <li>✅ Monitoring ve alerting kurun</li>
+                            </ul>
+                        </div>
+
+                        <div class="info-card warning mt-4">
+                            <h4><i class="bi bi-shield-fill-exclamation"></i> Güvenlik Kontrolleri</h4>
+                            <ul>
+                                <li>🔒 Default admin şifresini değiştirin</li>
+                                <li>🔒 Database şifrelerini güçlendirin</li>
+                                <li>🔒 2FA'yi admin panel için aktif edin</li>
+                                <li>🔒 Regular security scan'ler yapın</li>
+                                <li>🔒 Failed login attempt'leri monitor edin</li>
+                            </ul>
+                        </div>
+
+                        <div class="info-card success mt-4">
+                            <h4><i class="bi bi-calendar-check-fill"></i> Düzenli Bakım</h4>
+                            <ul>
+                                <li>📅 Günlük: Log kontrolü</li>
+                                <li>📅 Haftalık: Database backup kontrolü</li>
+                                <li>📅 Aylık: Security update'leri</li>
+                                <li>📅 Aylık: Performance analizi</li>
+                                <li>📅 3 Ayda: Dependency update'leri</li>
+                            </ul>
+                        </div>
+
+                        <div class="text-center mt-5">
+                            <h4>📚 Faydalı Linkler</h4>
+                            <div class="mt-3">
+                                <a href="https://github.com/YDX64/2sweety" target="_blank" class="btn btn-outline-primary me-2">
+                                    <i class="bi bi-github"></i> GitHub Repository
+                                </a>
+                                <a href="docs/deployment/complete-guide.md" target="_blank" class="btn btn-outline-secondary me-2">
+                                    <i class="bi bi-book"></i> Tam Kılavuz
+                                </a>
+                                <a href="docs/api/api-keys-guide.md" target="_blank" class="btn btn-outline-info">
+                                    <i class="bi bi-key"></i> API Keys
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-5">
+                            <p class="text-muted">
+                                <i class="bi bi-heart-fill" style="color: var(--primary-color);"></i>
+                                2Sweety ile mutlu günler!
+                            </p>
+                            <p class="small text-muted">Generated with Claude Code</p>
+                        </div>
+
+                        <div class="step-navigation">
+                            <button class="btn-custom btn-outline-custom" onclick="prevStep()">
+                                <i class="bi bi-arrow-left"></i> Önceki
+                            </button>
+                            <button class="btn-custom btn-primary-custom" onclick="location.reload()">
+                                <i class="bi bi-arrow-clockwise"></i> Baştan Başla
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-sql.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+
+    <script>
+        let currentStep = 0;
+        const totalSteps = 8; // 0-7
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            updateProgress();
+            highlightCode();
+            initializeChecklists();
+        });
+
+        // Step Navigation
+        function showStep(step) {
+            // Hide all steps
+            document.querySelectorAll('.step-section').forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Show current step
+            document.getElementById(`step-${step}`).classList.add('active');
+
+            // Update sidebar
+            document.querySelectorAll('.nav-item').forEach((item, index) => {
+                if (index === step) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+
+            // Update progress
+            currentStep = step;
+            updateProgress();
+
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function nextStep() {
+            if (currentStep < totalSteps - 1) {
+                showStep(currentStep + 1);
+            }
+        }
+
+        function prevStep() {
+            if (currentStep > 0) {
+                showStep(currentStep - 1);
+            }
+        }
+
+        // Sidebar Navigation
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const step = parseInt(this.getAttribute('data-step'));
+                showStep(step);
+            });
+        });
+
+        // Progress Bar
+        function updateProgress() {
+            const progress = (currentStep / (totalSteps - 1)) * 100;
+            document.getElementById('progress-bar').style.width = progress + '%';
+            document.getElementById('progress-text').textContent = `${currentStep}/${totalSteps - 1} Adım Tamamlandı`;
+        }
+
+        // Code Highlighting
+        function highlightCode() {
+            if (typeof Prism !== 'undefined') {
+                Prism.highlightAll();
+            }
+        }
+
+        // Copy Code
+        function copyCode(button) {
+            const codeBlock = button.closest('.code-block').querySelector('code');
+            const text = codeBlock.textContent;
+
+            navigator.clipboard.writeText(text).then(() => {
+                const originalHTML = button.innerHTML;
+                button.innerHTML = '<i class="bi bi-check"></i> Kopyalandı!';
+                button.style.background = 'var(--success-color)';
+
+                setTimeout(() => {
+                    button.innerHTML = originalHTML;
+                    button.style.background = 'var(--primary-color)';
+                }, 2000);
+            });
+        }
+
+        // Collapsible Sections
+        function toggleCollapsible(header) {
+            const content = header.nextElementSibling;
+            const icon = header.querySelector('.bi-chevron-down, .bi-chevron-up');
+
+            if (content.classList.contains('open')) {
+                content.classList.remove('open');
+                icon.classList.remove('bi-chevron-up');
+                icon.classList.add('bi-chevron-down');
+            } else {
+                content.classList.add('open');
+                icon.classList.remove('bi-chevron-down');
+                icon.classList.add('bi-chevron-up');
+            }
+        }
+
+        // Checklist Functionality
+        function initializeChecklists() {
+            document.querySelectorAll('.checklist li').forEach(item => {
+                const checkbox = item.querySelector('input[type="checkbox"]');
+
+                checkbox.addEventListener('change', function() {
+                    if (this.checked) {
+                        item.classList.add('checked');
+                    } else {
+                        item.classList.remove('checked');
+                    }
+                });
+
+                // Click anywhere on item to toggle
+                item.addEventListener('click', function(e) {
+                    if (e.target.tagName !== 'INPUT') {
+                        checkbox.checked = !checkbox.checked;
+                        checkbox.dispatchEvent(new Event('change'));
+                    }
+                });
+            });
+        }
+
+        // Keyboard Navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight') {
+                nextStep();
+            } else if (e.key === 'ArrowLeft') {
+                prevStep();
+            }
+        });
+    </script>
+</body>
+</html>

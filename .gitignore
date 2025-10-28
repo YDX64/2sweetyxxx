@@ -2,6 +2,18 @@
 # 2Sweety - Git Ignore Configuration
 # =====================================================
 
+# ⚠️ IGNORE MOBILE APP - BAŞKA REPOSITORY'DE OLMALI
+mobile-app/
+**/GoMeet Flutter*/
+**/Flutter*/
+*.apk
+*.ipa
+
+# ⚠️ IGNORE DOCUMENTATION FOLDERS - GEREKSIZ
+Document/
+DENEME/
+**/56640280*/
+
 # Environment files with secrets
 .env
 .env.local
