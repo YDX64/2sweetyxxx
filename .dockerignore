@@ -1,0 +1,87 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Documentation
+*.md
+LICENSE
+docs/
+
+# Development
+.env
+.env.local
+.env.development
+.env.test
+.env.production.local
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Dependencies
+node_modules/
+GoMeet\ Web/node_modules/
+mobile-app/GoMeet\ Flutter\ code\ v1.5/node_modules/
+
+# Build outputs (we'll build fresh in Docker)
+GoMeet\ Web/build/
+GoMeet\ Web/dist/
+mobile-app/GoMeet\ Flutter\ code\ v1.5/build/
+mobile-app/GoMeet\ Flutter\ code\ v1.5/.dart_tool/
+
+# Mobile app (not needed for web deployment)
+mobile-app/
+52026309-gomeet-complete-social-dating-mobile-app-online-dating-match-chat-video-dating-dating-app/
+52026309-gomeet-complete-social-dating-mobile-app-online-dating-match-chat-video-dating-dating-app.zip
+
+# Admin panel (separate deployment)
+2Sweety\ Admin/
+Gomeet\ Admin\ Panel\ 1.5/
+
+# Archives and downloads
+*.zip
+*.tar.gz
+*.rar
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Testing
+coverage/
+.nyc_output/
+*.test.js
+*.spec.js
+__tests__/
+
+# Misc
+*.bak
+*.tmp
+*.temp
+.cache/
+
+# Database files (shouldn't be in Docker image)
+*.sql
+database-*.sh
+
+# Other deployment configs (not needed in Docker build)
+docker-compose*.yml
+kubernetes/
+nginx/ssl/
+
+# Claude AI files
+.claude/
+CLAUDE.md
+
+# Sensitive files
+*.key
+*.pem
+*.crt
+secrets/
