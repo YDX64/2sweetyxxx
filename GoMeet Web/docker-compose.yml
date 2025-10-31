@@ -1,0 +1,86 @@
+# ============================================
+# Docker Compose for 2Sweety - Local Development/Testing
+# Use this to test the production build locally
+# ============================================
+
+version: '3.8'
+
+services:
+  # React Web Application
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        # Build-time environment variables
+        # Replace these with your actual values for local testing
+        REACT_APP_API_BASE_URL: ${REACT_APP_API_BASE_URL:-https://gomeet.cscodetech.cloud/api/}
+        REACT_APP_IMAGE_BASE_URL: ${REACT_APP_IMAGE_BASE_URL:-https://gomeet.cscodetech.cloud/}
+        REACT_APP_PAYMENT_BASE_URL: ${REACT_APP_PAYMENT_BASE_URL:-https://gomeet.cscodetech.cloud/}
+
+        # Firebase Configuration
+        REACT_APP_FIREBASE_API_KEY: ${REACT_APP_FIREBASE_API_KEY:-AIzaSyDCZoLgY9bFxRcNFuV6IljwMVnnx0TL2to}
+        REACT_APP_FIREBASE_AUTH_DOMAIN: ${REACT_APP_FIREBASE_AUTH_DOMAIN:-sweet-a6718.firebaseapp.com}
+        REACT_APP_FIREBASE_PROJECT_ID: ${REACT_APP_FIREBASE_PROJECT_ID:-sweet-a6718}
+        REACT_APP_FIREBASE_STORAGE_BUCKET: ${REACT_APP_FIREBASE_STORAGE_BUCKET:-sweet-a6718.firebasestorage.app}
+        REACT_APP_FIREBASE_MESSAGING_SENDER_ID: ${REACT_APP_FIREBASE_MESSAGING_SENDER_ID:-487435792097}
+        REACT_APP_FIREBASE_APP_ID: ${REACT_APP_FIREBASE_APP_ID:-1:487435792097:web:12907427892d53c82251a0}
+        REACT_APP_FIREBASE_MEASUREMENT_ID: ${REACT_APP_FIREBASE_MEASUREMENT_ID:-G-EQGMN8DYDP}
+
+        # Third-party Services
+        REACT_APP_ONESIGNAL_APP_ID: ${REACT_APP_ONESIGNAL_APP_ID}
+        REACT_APP_AGORA_APP_ID: ${REACT_APP_AGORA_APP_ID}
+        REACT_APP_GOOGLE_MAPS_API_KEY: ${REACT_APP_GOOGLE_MAPS_API_KEY}
+
+        # Payment Gateways
+        REACT_APP_RAZORPAY_KEY_ID: ${REACT_APP_RAZORPAY_KEY_ID}
+        REACT_APP_PAYPAL_CLIENT_ID: ${REACT_APP_PAYPAL_CLIENT_ID}
+        REACT_APP_STRIPE_PUBLISHABLE_KEY: ${REACT_APP_STRIPE_PUBLISHABLE_KEY}
+
+        # Social Login
+        REACT_APP_GOOGLE_CLIENT_ID: ${REACT_APP_GOOGLE_CLIENT_ID}
+        REACT_APP_FACEBOOK_APP_ID: ${REACT_APP_FACEBOOK_APP_ID}
+
+    container_name: 2sweety-web
+
+    ports:
+      - "8080:8080"
+
+    environment:
+      - TZ=UTC
+
+    restart: unless-stopped
+
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+    # Resource limits (adjust based on your needs)
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 512M
+        reservations:
+          cpus: '0.5'
+          memory: 256M
+
+    networks:
+      - 2sweety-network
+
+networks:
+  2sweety-network:
+    driver: bridge
+
+# ============================================
+# Usage Instructions:
+# ============================================
+# 1. Create a .env file with your environment variables
+# 2. Build and run: docker-compose up --build
+# 3. Access app at: http://localhost:8080
+# 4. Stop: docker-compose down
+# 5. View logs: docker-compose logs -f web
+# ============================================
