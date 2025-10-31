@@ -19,14 +19,14 @@ RUN apk add --no-cache \
     git
 
 # Copy package files from GoMeet Web directory
-COPY GoMeet\ Web/package*.json ./
+COPY ["GoMeet Web/package.json", "GoMeet Web/package-lock.json*", "./"]
 
 # Install dependencies
 RUN npm ci --only=production --ignore-scripts && \
     npm cache clean --force
 
 # Copy all source code from GoMeet Web
-COPY GoMeet\ Web/ ./
+COPY ["GoMeet Web/", "./"]
 
 # Build arguments for environment variables
 ARG REACT_APP_API_BASE_URL=https://gomeet.cscodetech.cloud/api/
@@ -128,9 +128,9 @@ RUN echo 'server { \
 # Copy built application from builder stage
 COPY --from=builder /app/build /usr/share/nginx/html
 
-# Copy service workers if they exist
-COPY --from=builder /app/public/firebase-messaging-sw.js /usr/share/nginx/html/ 2>/dev/null || :
-COPY --from=builder /app/public/OneSignalSDKWorker.js /usr/share/nginx/html/ 2>/dev/null || :
+# Copy service workers from builder if they exist
+COPY --from=builder /app/public/firebase-messaging-sw.js* /usr/share/nginx/html/
+COPY --from=builder /app/public/OneSignalSDKWorker.js* /usr/share/nginx/html/
 
 # Set permissions
 RUN chmod -R 755 /usr/share/nginx/html
