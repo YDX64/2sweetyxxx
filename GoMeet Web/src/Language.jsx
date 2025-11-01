@@ -1567,7 +1567,10 @@ const resources = {
   },
 };
 
-const savedLanguage = localStorage.getItem('i18nextLng') || 'en';
+// Get saved language preference or default to 'en'
+const savedLanguage = localStorage.getItem('i18nextLng') ||
+                      sessionStorage.getItem('I18') ||
+                      'en';
 
 i18n
   .use(initReactI18next)
@@ -1577,11 +1580,18 @@ i18n
     fallbackLng: 'en',
     interpolation: {
       escapeValue: false
+    },
+    detection: {
+      order: ['localStorage', 'sessionStorage', 'navigator'],
+      lookupLocalStorage: 'i18nextLng',
+      lookupSessionStorage: 'I18',
+      caches: ['localStorage', 'sessionStorage']
     }
   });
 
 i18n.on('languageChanged', (lng) => {
   localStorage.setItem('i18nextLng', lng);
+  sessionStorage.setItem('I18', lng);
   document.documentElement.lang = lng;
   document.documentElement.dir = lng === 'ar' ? 'rtl' : 'ltr';
 });

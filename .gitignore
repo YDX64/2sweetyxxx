@@ -14,6 +14,9 @@ Document/
 DENEME/
 **/56640280*/
 
+# ⚠️ IGNORE SOULMATE FOLDER
+soulmate/
+
 # Environment files with secrets
 .env
 .env.local

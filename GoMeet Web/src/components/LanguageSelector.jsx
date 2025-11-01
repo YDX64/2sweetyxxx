@@ -1,6 +1,6 @@
 /* jshint esversion: 6 */
 /* jshint ignore:start */
-import React, { useState } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FaGlobe, FaMoon, FaSun, FaChevronDown } from 'react-icons/fa';
 import { useTheme } from '../Context/ThemeContext';
@@ -10,7 +10,7 @@ const LanguageSelector = () => {
   const { theme, toggleTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
 
-  const languages = [
+  const languages = useMemo(() => [
     { code: 'en', name: 'English', flag: '🇬🇧' },
     { code: 'sv', name: 'Svenska', flag: '🇸🇪' },
     { code: 'no', name: 'Norsk', flag: '🇳🇴' },
@@ -21,14 +21,37 @@ const LanguageSelector = () => {
     { code: 'zh', name: '中文', flag: '🇨🇳' },
     { code: 'fr', name: 'Français', flag: '🇫🇷' },
     { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
-    { code: 'ru', name: 'Русский', flag: '🇷🇺' }
-  ];
+    { code: 'ru', name: 'Русский', flag: '🇷🇺' },
+    { code: 'es', name: 'Español', flag: '🇪🇸' },
+    { code: 'it', name: 'Italiano', flag: '🇮🇹' },
+    { code: 'pt', name: 'Português', flag: '🇵🇹' },
+    { code: 'nl', name: 'Nederlands', flag: '🇳🇱' },
+    { code: 'ja', name: '日本語', flag: '🇯🇵' },
+    { code: 'ko', name: '한국어', flag: '🇰🇷' },
+    { code: 'hi', name: 'हिंदी', flag: '🇮🇳' },
+    { code: 'vi', name: 'Tiếng Việt', flag: '🇻🇳' }
+  ], []);
 
-  const currentLanguage = languages.find(lang => lang.code === i18n.language) || languages[0];
+  const currentLanguage = useMemo(() =>
+    languages.find(lang => lang.code === i18n.language) || languages[0],
+    [i18n.language, languages]
+  );
+
+  // Initialize language from localStorage on mount
+  useEffect(() => {
+    const savedLang = localStorage.getItem('i18nextLng') || sessionStorage.getItem('I18');
+    if (savedLang && languages.some(lang => lang.code === savedLang)) {
+      i18n.changeLanguage(savedLang);
+    }
+  }, [i18n, languages]);
 
   const changeLanguage = (langCode) => {
     i18n.changeLanguage(langCode);
+    localStorage.setItem('i18nextLng', langCode);
+    sessionStorage.setItem('I18', langCode); // For compatibility with Header.jsx
     setIsOpen(false);
+    // Force a reload to ensure translations are applied
+    window.location.reload();
   };
 
   return (

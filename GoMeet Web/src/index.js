@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import AgoraRTC, { AgoraRTCProvider } from "agora-rtc-react";
+import './Language'; // Initialize i18n
 
 const rootElement = document.getElementById('root');
 const root = ReactDOM.createRoot(rootElement);
