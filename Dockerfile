@@ -55,10 +55,10 @@ ENV NODE_ENV=production \
     SKIP_PREFLIGHT_CHECK=true \
     CI=false
 
-# Build the application
-RUN npm run build || true
+# Build the application (fail if build fails)
+RUN npm run build
 
-# Remove development dependencies
+# Remove development dependencies after successful build
 RUN rm -rf node_modules src
 
 # ============================================
@@ -128,9 +128,8 @@ RUN echo 'server { \
 # Copy built application from builder stage
 COPY --from=builder /app/build /usr/share/nginx/html
 
-# Copy service workers from builder if they exist
-COPY --from=builder /app/public/firebase-messaging-sw.js* /usr/share/nginx/html/
-COPY --from=builder /app/public/OneSignalSDKWorker.js* /usr/share/nginx/html/
+# Copy service workers from builder if they exist (ignore if missing)
+COPY --from=builder /app/public/*.js /usr/share/nginx/html/ 2>/dev/null || true
 
 # Set permissions
 RUN chmod -R 755 /usr/share/nginx/html
