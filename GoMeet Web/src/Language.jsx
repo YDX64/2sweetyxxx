@@ -1567,15 +1567,23 @@ const resources = {
   },
 };
 
+const savedLanguage = localStorage.getItem('i18nextLng') || 'en';
+
 i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: 'en',
+    lng: savedLanguage,
     fallbackLng: 'en',
     interpolation: {
       escapeValue: false
     }
   });
+
+i18n.on('languageChanged', (lng) => {
+  localStorage.setItem('i18nextLng', lng);
+  document.documentElement.lang = lng;
+  document.documentElement.dir = lng === 'ar' ? 'rtl' : 'ltr';
+});
 
 export default i18n;
