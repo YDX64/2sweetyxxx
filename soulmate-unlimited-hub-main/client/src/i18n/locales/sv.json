@@ -12,7 +12,7 @@
   "activating": "Aktiverar...",
   "active": "Aktiv",
   "activeChats": "Aktiva chattar",
-  "activeSubscription": "🎉 Du har en aktiv prenumeration: {tier}}",
+  "activeSubscription": "🎉 Du har en aktiv prenumeration: {{tier}}",
   "activeSubscriptions": "Aktiva Prenumerationer",
   "activeUsers": "Aktiva användare",
   "activity": "Aktivitet",
@@ -29,234 +29,231 @@
   "admin.subscription.manual.subscriptionType": "Prenumerationstyp",
   "admin.subscription.manual.title": "Manuell prenumerationshantering",
   "adminAccess": {
-    "loginRequired": {
-      "title": "Inloggning krävs",
-      "description": "Vänligen logga in för att komma åt adminpanelen.",
-      "button": "Gå till inloggning"
-    },
     "accessDenied": {
-      "title": "Åtkomst nekad",
-      "description": "Du har inte behörighet att komma åt adminpanelen.",
-      "yourRole": "Din roll",
-      "noRole": "Ingen roll tilldelad",
       "adminPermission": "Adminbehörighet",
-      "yes": "Ja",
+      "button": "Gå tillbaka hem",
+      "description": "Du har inte behörighet att komma åt adminpanelen.",
       "no": "Nej",
-      "button": "Gå tillbaka hem"
+      "noRole": "Ingen roll tilldelad",
+      "title": "Åtkomst nekad",
+      "yes": "Ja",
+      "yourRole": "Din roll"
     },
-    "debugMode": "FELSÖKNINGSLÄGE"
+    "debugMode": "FELSÖKNINGSLÄGE",
+    "loginRequired": {
+      "button": "Gå till inloggning",
+      "description": "Vänligen logga in för att komma åt adminpanelen.",
+      "title": "Inloggning krävs"
+    }
   },
   "adminActions": "Administratörsåtgärder",
   "adminContent": {
-    "title": "Innehållshantering",
-    "preview": "Förhandsgranska",
-    "save": "Spara",
-    "saving": "Sparar...",
-    "updateSuccess": "Innehållet uppdaterades framgångsrikt",
-    "updateError": "Misslyckades med att uppdatera innehåll",
-    "heroSection": "Hero-sektion",
     "badgeText": "Märkestext",
-    "subtitle": "Underrubrik",
-    "mission": "Uppdrag",
-    "missionTitle": "Uppdragstitel",
-    "missionDescription": "Uppdragsbeskrivning",
-    "statistics": "Statistik",
-    "value": "Värde",
+    "common": {
+      "noData": "Ingen data"
+    },
+    "heroSection": "Hero-sektion",
     "label": "Etikett",
     "lastUpdated": "Senast uppdaterad",
-    "seoSettings": "SEO-inställningar",
-    "metaTitle": "Meta-titel",
-    "metaTitlePlaceholder": "Sidtitel för sökmotorer",
     "metaDescription": "Meta-beskrivning",
     "metaDescriptionPlaceholder": "Kort beskrivning för sökmotorer (150-160 tecken)",
     "metaKeywords": "Meta-nyckelord",
+    "metaTitle": "Meta-titel",
+    "metaTitlePlaceholder": "Sidtitel för sökmotorer",
+    "mission": "Uppdrag",
+    "missionDescription": "Uppdragsbeskrivning",
+    "missionTitle": "Uppdragstitel",
     "pages": {
       "about": {
-        "title": "Om oss",
         "description": "Förenar hjärtan över hela världen med smart matchningsteknik och äkta relationer sedan 2020.",
         "mission": "Vårt uppdrag",
         "missionText": "På 2Sweety tror vi att alla förtjänar att hitta meningsfull kärlek...",
         "stats": {
-          "totalMatches": "Totala matchningar",
           "activeUsers": "Aktiva användare",
           "happyCouples": "Lyckliga par",
-          "satisfactionRate": "Nöjdhetsgrad"
-        }
-      },
-      "privacy": {
-        "title": "Integritet",
-        "description": "Din integritet är vår prioritet. Lär dig hur vi samlar in, använder och skyddar din personliga information.",
-        "lastUpdated": "December 2024"
-      },
-      "terms": {
-        "title": "Juridisk information",
-        "description": "Läs dessa villkor noggrant innan du använder 2Sweety.",
-        "lastUpdated": "December 2024"
+          "satisfactionRate": "Nöjdhetsgrad",
+          "totalMatches": "Totala matchningar"
+        },
+        "title": "Om oss"
       },
       "gdpr": {
-        "title": "EU",
         "description": "2Sweety följer helt Europeiska unionens allmänna dataskyddsförordning.",
-        "effectiveDate": "25 maj 2018"
+        "effectiveDate": "25 maj 2018",
+        "title": "EU"
+      },
+      "privacy": {
+        "description": "Din integritet är vår prioritet. Lär dig hur vi samlar in, använder och skyddar din personliga information.",
+        "lastUpdated": "December 2024",
+        "title": "Integritet"
+      },
+      "terms": {
+        "description": "Läs dessa villkor noggrant innan du använder 2Sweety.",
+        "lastUpdated": "December 2024",
+        "title": "Juridisk information"
       }
     },
+    "preview": "Förhandsgranska",
+    "save": "Spara",
+    "saving": "Sparar...",
     "seo": {
       "defaultKeywords": "dejting, kärlek, relationer, sverige",
       "keywordsPlaceholder": "dejting, kärlek, relationer, sverige"
     },
-    "common": {
-      "noData": "Ingen data"
-    }
+    "seoSettings": "SEO-inställningar",
+    "statistics": "Statistik",
+    "subtitle": "Underrubrik",
+    "title": "Innehållshantering",
+    "updateError": "Misslyckades med att uppdatera innehåll",
+    "updateSuccess": "Innehållet uppdaterades framgångsrikt",
+    "value": "Värde"
   },
   "adminDashboard": "Administratörspanel",
   "adminLogs": {
     "enhanced": {
-      "title": "Förbättrat loggsystem",
+      "activeCategories": "Aktiva kategorier",
+      "autoRefresh": "Automatisk uppdatering",
+      "categories": {
+        "admin": "Administratör",
+        "auth": "Autentisering",
+        "database": "Databas",
+        "error": "Fel",
+        "network": "Nätverk",
+        "payment": "Betalning",
+        "performance": "Prestanda",
+        "system": "System",
+        "userAction": "Användaråtgärd"
+      },
+      "clear": "Rensa",
+      "details": {
+        "category": "Kategori",
+        "details": "Detaljer",
+        "level": "Nivå",
+        "message": "Meddelande",
+        "network": "Nätverk",
+        "performance": "Prestanda",
+        "sessionId": "Sessions-ID",
+        "stackTrace": "Stack-spårning",
+        "timestamp": "Tidsstämpel",
+        "title": "Loggdetaljer",
+        "url": "URL",
+        "user": "Användare",
+        "userId": "Användar-ID"
+      },
       "disable": "Inaktivera",
       "enable": "Aktivera",
-      "logging": "Loggning",
-      "refresh": "Uppdatera",
-      "export": "Exportera",
-      "clear": "Rensa",
-      "totalLogs": "Totalt antal loggar",
-      "session": "Session",
       "errorRate": "Felfrekvens",
       "errors": "fel",
-      "categories": {
-        "auth": "Autentisering",
-        "userAction": "Användaråtgärd",
-        "network": "Nätverk",
-        "database": "Databas",
-        "payment": "Betalning",
-        "admin": "Administratör",
-        "error": "Fel",
-        "performance": "Prestanda",
-        "system": "System"
-      },
-      "activeCategories": "Aktiva kategorier",
-      "status": "Status",
-      "on": "PÅ",
-      "off": "AV",
-      "autoRefresh": "Automatisk uppdatering",
+      "export": "Exportera",
       "filters": {
-        "title": "Filter & Sökning",
+        "allCategories": "Alla kategorier",
+        "allLevels": "Alla nivåer",
+        "autoRefreshLabel": "Automatisk uppdatering",
+        "category": "Kategori",
+        "level": "Nivå",
         "search": "Sök",
         "searchPlaceholder": "Sök i loggar...",
-        "level": "Nivå",
-        "allLevels": "Alla nivåer",
-        "category": "Kategori",
-        "allCategories": "Alla kategorier",
-        "autoRefreshLabel": "Automatisk uppdatering"
+        "title": "Filter & Sökning"
       },
       "levels": {
+        "critical": "Kritisk",
         "debug": "Debug",
-        "info": "Info",
-        "warning": "Varning",
         "error": "Fel",
-        "critical": "Kritisk"
+        "info": "Info",
+        "warning": "Varning"
       },
+      "logging": "Loggning",
       "noLogs": {
         "disabled": "Loggning är för närvarande inaktiverad. Aktivera den för att börja samla in loggar.",
         "notFound": "Inga loggar hittades som matchar de aktuella filtren."
       },
-      "details": {
-        "title": "Loggdetaljer",
-        "level": "Nivå",
-        "category": "Kategori",
-        "timestamp": "Tidsstämpel",
-        "sessionId": "Sessions-ID",
-        "message": "Meddelande",
-        "url": "URL",
-        "userId": "Användar-ID",
-        "details": "Detaljer",
-        "performance": "Prestanda",
-        "network": "Nätverk",
-        "stackTrace": "Stack-spårning",
-        "user": "Användare"
-      }
+      "off": "AV",
+      "on": "PÅ",
+      "refresh": "Uppdatera",
+      "session": "Session",
+      "status": "Status",
+      "title": "Förbättrat loggsystem",
+      "totalLogs": "Totalt antal loggar"
     },
     "system": {
-      "title": "Systemloggar",
-      "session": "Session",
-      "total": "Totalt",
-      "errors": "Fel",
-      "filters": {
-        "level": "Nivå",
-        "category": "Kategori",
-        "autoRefresh": "Automatisk uppdatering"
-      },
-      "levels": {
-        "all": "Alla",
-        "error": "Fel",
-        "warning": "Varning",
-        "info": "Info",
-        "debug": "Debug",
-        "critical": "Kritisk"
+      "buttons": {
+        "clear": "Rensa",
+        "disable": "Inaktivera",
+        "enable": "Aktivera",
+        "export": "Exportera",
+        "logging": "Loggning",
+        "refresh": "Uppdatera"
       },
       "categories": {
+        "admin": "Administratör",
         "all": "Alla",
-        "roleManagement": "Rollhantering",
-        "userBan": "Användarblockering",
-        "permissionCheck": "Behörighetskontroll",
-        "database": "Databas",
         "auth": "Autentisering",
-        "system": "System",
-        "userAction": "Användaråtgärd",
+        "database": "Databas",
+        "error": "Fel",
         "network": "Nätverk",
         "payment": "Betalning",
-        "admin": "Administratör",
-        "error": "Fel",
-        "performance": "Prestanda"
-      },
-      "table": {
-        "time": "Tid",
-        "level": "Nivå",
-        "category": "Kategori",
-        "action": "Åtgärd",
-        "user": "Användare",
-        "admin": "Administratör",
-        "details": "Detaljer"
-      },
-      "noLogs": "Inga loggar hittades",
-      "loggingDisabled": "Loggning är för närvarande inaktiverad. Aktivera den för att börja samla in loggar.",
-      "filtersAndSearch": "Filter & Sökning",
-      "search": "Sök",
-      "searchPlaceholder": "Sök i loggar...",
-      "stats": {
-        "totalLogs": "Totalt antal loggar",
-        "errorRate": "Felfrekvens",
-        "errors": "fel",
-        "categories": "Kategorier",
-        "activeCategories": "Aktiva kategorier",
-        "status": "Status",
-        "on": "PÅ",
-        "off": "AV"
-      },
-      "buttons": {
-        "enable": "Aktivera",
-        "disable": "Inaktivera",
-        "logging": "Loggning",
-        "refresh": "Uppdatera",
-        "export": "Exportera",
-        "clear": "Rensa"
+        "performance": "Prestanda",
+        "system": "System",
+        "userAction": "Användaråtgärd"
       },
       "details": {
-        "title": "Loggdetaljer",
-        "time": "Tid",
         "action": "Åtgärd",
-        "userId": "Användar-ID",
         "adminId": "Admin-ID",
-        "error": "Fel",
         "details": "Detaljer",
-        "stackTrace": "Stack-spårning",
+        "error": "Fel",
         "message": "Meddelande",
-        "fields": {
-          "user": "Användare",
-          "url": "URL",
-          "performance": "Prestanda",
-          "network": "Nätverk",
-          "stackTrace": "Stack-spårning"
-        }
-      }
+        "stackTrace": "Stack-spårning",
+        "time": "Tid",
+        "title": "Loggdetaljer",
+        "userId": "Användar-ID"
+      },
+      "errors": "Fel",
+      "fields": {
+        "network": "Network",
+        "performance": "Performance",
+        "stackTrace": "Stack Trace",
+        "url": "URL",
+        "user": "User"
+      },
+      "filters": {
+        "autoRefresh": "Automatisk uppdatering",
+        "category": "Kategori",
+        "level": "Nivå"
+      },
+      "filtersAndSearch": "Filter & Sökning",
+      "levels": {
+        "all": "Alla",
+        "critical": "Kritisk",
+        "debug": "Debug",
+        "error": "Fel",
+        "info": "Info",
+        "warning": "Varning"
+      },
+      "loggingDisabled": "Loggning är för närvarande inaktiverad. Aktivera den för att börja samla in loggar.",
+      "noLogs": "Inga loggar hittades",
+      "search": "Sök",
+      "searchPlaceholder": "Sök i loggar...",
+      "session": "Session",
+      "stats": {
+        "activeCategories": "Aktiva kategorier",
+        "categories": "Kategorier",
+        "errorRate": "Felfrekvens",
+        "errors": "fel",
+        "off": "AV",
+        "on": "PÅ",
+        "status": "Status",
+        "totalLogs": "Totalt antal loggar"
+      },
+      "table": {
+        "action": "Åtgärd",
+        "admin": "Administratör",
+        "category": "Kategori",
+        "details": "Detaljer",
+        "level": "Nivå",
+        "time": "Tid",
+        "user": "Användare"
+      },
+      "title": "Systemloggar",
+      "total": "Totalt"
     }
   },
   "adminPanel": "Admin Panel",
@@ -264,88 +261,108 @@
   "adminPanelAccessGranted": "Administratörspanel åtkomst BEVILJAD",
   "adminPayments": {
     "conversionRate": "Konverteringsgrad",
-    "mrr": "MRR (Månatlig återkommande intäkt)",
     "estimatedMonthly": "Uppskattad månatlig",
     "manualSubscription": {
-      "title": "Manuell prenumerationstilldelning",
-      "userEmail": "Användarens e-post",
+      "duration": "Duration (Days)",
+      "durationPlaceholder": "30",
       "emailPlaceholder": "anvandare@exempel.se",
+      "grantButton": "Grant Subscription",
+      "reason": "Reason",
+      "reasons": {
+        "compensation": "Compensation",
+        "promotional": "Promotional Grant",
+        "support": "Customer Support",
+        "testing": "Testing Purpose"
+      },
       "subscriptionTier": "Prenumerationsnivå",
       "tiers": {
-        "silver": "Silver ($9.99/månad)",
         "gold": "Guld ($19.99/månad)",
-        "platinum": "Platina ($29.99/månad)"
+        "platinum": "Platina ($29.99/månad)",
+        "silver": "Silver ($9.99/månad)"
       },
-      "assignButton": "Tilldela prenumeration",
-      "assignSuccess": "Prenumeration tilldelad framgångsrikt",
-      "assignError": "Misslyckades med att tilldela prenumeration"
+      "title": "Manuell prenumerationstilldelning",
+      "userEmail": "Användarens e-post"
     },
-    "recentTransactions": "Senaste transaktioner",
-    "monthlyRevenue": "Månatlig intäkt",
-    "activeSubscriptions": "Aktiva prenumerationer",
-    "churnRate": "Avhoppsfrekvens",
-    "noTransactions": "Inga transaktioner hittades",
-    "manageSubscriptions": "Hantera prenumerationer",
-    "stripeStatus": "Stripe-status",
-    "stripeConnected": "Ansluten",
-    "stripeNotConnected": "Inte ansluten",
-    "webhookStatus": "Webhook-status",
-    "testMode": "Testläge"
+    "mrr": "MRR (Månatlig återkommande intäkt)",
+    "paymentStatus": {
+      "stripeConnection": "Stripe Connection",
+      "testMode": "Test Mode",
+      "title": "Payment System Status",
+      "webhookStatus": "Webhook Status"
+    },
+    "recentTransactions": {
+      "noTransactions": "No transactions available",
+      "noTransactionsDesc": "Transactions will appear here once users subscribe",
+      "plans": {
+        "gold": "Gold Plan",
+        "platinum": "Platinum Plan",
+        "silver": "Silver Plan"
+      },
+      "title": "Recent Transactions"
+    },
+    "stripe": {
+      "note": "These links open in the Stripe Dashboard. Ensure you have proper access permissions.",
+      "openDashboard": "Open Stripe Dashboard",
+      "title": "Stripe Dashboard Links",
+      "viewCustomers": "View Customers",
+      "viewPayments": "View Payments",
+      "viewSubscriptions": "View Subscriptions"
+    }
   },
   "adminRole": "Administratörsroll",
   "adminSecurityMessage": "Administratörspanel åtkomst är IP-begränsad. Vi rekommenderar att aktivera 2FA.",
   "adminSite": {
-    "configuration": {
-      "title": "Webbplatskonfiguration",
-      "siteName": "Webbplatsnamn",
-      "defaultLanguage": "Standardspråk",
-      "siteDescription": "Webbplatsbeskrivning",
-      "descriptionPlaceholder": "Där hjärtan möts och kärlekshistorier börjar"
-    },
     "appSettings": {
-      "title": "Appinställningar",
-      "registration": {
-        "label": "Registrering öppen",
-        "description": "Tillåt nya användarregistreringar"
+      "aiTranslation": {
+        "description": "Automatisk meddelandeöversättning",
+        "label": "AI-översättning"
       },
       "emailVerification": {
-        "label": "E-postverifiering",
-        "description": "Kräv e-postverifiering för nya användare"
+        "description": "Kräv e-postverifiering för nya användare",
+        "label": "E-postverifiering"
       },
       "photoModeration": {
-        "label": "Fotomoderering",
         "description": "Manuell granskning av profilbilder",
+        "label": "Fotomoderering",
         "manual": "Manuell"
       },
-      "aiTranslation": {
-        "label": "AI-översättning",
-        "description": "Automatisk meddelandeöversättning"
-      }
+      "registration": {
+        "description": "Tillåt nya användarregistreringar",
+        "label": "Registrering öppen"
+      },
+      "title": "Appinställningar"
     },
-    "security": {
-      "title": "Säkerhetsinställningar",
-      "twoFactor": {
-        "label": "Tvåfaktorsautentisering",
-        "description": "Krav på 2FA för adminpanel"
-      },
-      "sessionTimeout": {
-        "label": "Sessionstimeout",
-        "description": "Administratörssessionens varaktighet",
-        "hours": "8 timmar"
-      },
-      "ipRestriction": {
-        "label": "IP-begränsning",
-        "description": "Begränsa adminåtkomst per IP"
-      }
+    "configuration": {
+      "defaultLanguage": "Standardspråk",
+      "descriptionPlaceholder": "Där hjärtan möts och kärlekshistorier börjar",
+      "siteDescription": "Webbplatsbeskrivning",
+      "siteName": "Webbplatsnamn",
+      "title": "Webbplatskonfiguration"
     },
     "integrations": {
-      "title": "Integrationsstatus",
+      "connected": "Ansluten",
+      "emailService": "E-posttjänst (SMTP)",
+      "googleTranslate": "Google Translate API",
+      "needsSetup": "Behöver konfigureras",
       "stripe": "Stripe-betalning",
       "supabase": "Supabase-databas",
-      "googleTranslate": "Google Translate API",
-      "emailService": "E-posttjänst (SMTP)",
-      "connected": "Ansluten",
-      "needsSetup": "Behöver konfigureras"
+      "title": "Integrationsstatus"
+    },
+    "security": {
+      "ipRestriction": {
+        "description": "Begränsa adminåtkomst per IP",
+        "label": "IP-begränsning"
+      },
+      "sessionTimeout": {
+        "description": "Administratörssessionens varaktighet",
+        "hours": "8 timmar",
+        "label": "Sessionstimeout"
+      },
+      "title": "Säkerhetsinställningar",
+      "twoFactor": {
+        "description": "Krav på 2FA för adminpanel",
+        "label": "Tvåfaktorsautentisering"
+      }
     }
   },
   "adminUser": {
@@ -371,91 +388,52 @@
     "title": "Warning: Admin Authority"
   },
   "ads": {
-    "title": "Reklamhantering",
-    "stats": {
-      "impressions": "Visningar",
-      "clicks": "Klick",
-      "ctr": "CTR",
-      "revenue": "Intäkt",
-      "activePlacements": "Aktiva placeringar",
-      "totalImpressions": "Totala visningar",
-      "todayClicks": "Dagens klick",
-      "averageCtr": "Genomsnittlig CTR",
-      "monthlyRevenue": "Månatlig intäkt"
-    },
-    "placements": {
-      "title": "Reklamplaceringar",
-      "header": "Sidhuvud",
-      "sidebar": "Sidofält",
-      "feed": "Flöde",
-      "footer": "Sidfot",
-      "enabled": "Aktiverad",
-      "disabled": "Inaktiverad",
-      "size": "Storlek",
-      "position": "Position",
-      "visibility": "Synlighet"
-    },
-    "providers": {
-      "title": "Reklamleverantörer",
-      "googleAdsense": "Google AdSense",
-      "customAds": "Anpassade annonser",
-      "status": "Status",
-      "earnings": "Intäkter",
-      "configure": "Konfigurera"
-    },
-    "settings": {
-      "title": "Reklamsinställningar",
-      "frequency": "Visningsfrekvens",
-      "targeting": "Målgruppsinriktning",
-      "excludedPages": "Uteslutna sidor",
-      "mobileAds": "Mobilannonser",
-      "desktopAds": "Skrivbordsannonser",
-      "refreshRate": "Uppdateringsfrekvens",
-      "maxAdsPerPage": "Max annonser per sida"
-    },
-    "performance": {
-      "title": "Prestandaanalys",
-      "topPerforming": "Bäst presterande",
-      "worstPerforming": "Sämst presterande",
-      "recommendations": "Rekommendationer",
-      "optimize": "Optimera"
+    "banner": {
+      "title": "Advertisement"
     },
     "configuration": {
-      "title": "Webbplatskonfiguration",
-      "description": "Hantera reklamsinställningar och analyskonfigurationer för din webbplats",
-      "tabs": {
-        "advertising": "Annonsering",
-        "analytics": "Analys"
-      },
-      "sections": {
-        "googleAdsense": "Google AdSense",
-        "adPlacement": "Annonsplacering",
-        "googleAnalytics": "Google Analytics",
-        "facebookPixel": "Facebook Pixel",
-        "trackingSettings": "Spårningsinställningar"
-      },
       "buttons": {
         "refresh": "Uppdatera",
         "save": "Spara",
         "saving": "Sparar..."
       },
-      "status": {
-        "enabled": "Aktiverad",
-        "disabled": "Inaktiverad"
-      },
+      "description": "Hantera reklamsinställningar och analyskonfigurationer för din webbplats",
       "errors": {
         "loadFailed": "Misslyckades med att ladda konfigurationer",
         "saveFailed": "Misslyckades med att spara konfigurationer"
       },
+      "sections": {
+        "adPlacement": "Annonsplacering",
+        "facebookPixel": "Facebook Pixel",
+        "googleAdsense": "Google AdSense",
+        "googleAnalytics": "Google Analytics",
+        "trackingSettings": "Spårningsinställningar"
+      },
+      "status": {
+        "disabled": "Inaktiverad",
+        "enabled": "Aktiverad"
+      },
       "success": {
         "saved": "Konfiguration sparad framgångsrikt"
-      }
+      },
+      "tabs": {
+        "advertising": "Annonsering",
+        "analytics": "Analys"
+      },
+      "title": "Webbplatskonfiguration"
     },
     "disabledFeature": {
-      "title": "Inaktivera annonser",
       "description": "Trött på att se annonser? Inaktivera dem från att visas!",
-      "status": "Annonser är inaktiverade för Silver+ medlemmar"
-    }
+      "status": "Annonser är inaktiverade för Silver+ medlemmar",
+      "title": "Inaktivera annonser"
+    },
+    "native": {
+      "description": "Upgrade to remove ads",
+      "title": "Sponsored Content"
+    },
+    "placeholder": "Ad Space",
+    "removeAds": "Remove Ads - Upgrade to Silver",
+    "upgrade": "Upgrade"
   },
   "advanced": "Avancerad",
   "advancedAnalytics": "Avancerad analys",
@@ -497,35 +475,35 @@
   "approveReport": "Godkänn rapport",
   "auditTrail": "Revisionsspår",
   "auth": {
-    "signingInGoogle": "🔐 Signing in with Google",
-    "oauthRedirectUrl": "🔐 OAuth redirect URL:",
-    "googleSignInError": "🔐 Google sign in error:",
-    "googleSignInInitiated": "🔐 Google sign in initiated",
-    "googleSignInFailed": "🔐 Google sign in failed:",
-    "signingInApple": "🔐 Signing in with Apple",
     "appleSignInError": "🔐 Apple sign in error:",
-    "appleSignInInitiated": "🔐 Apple sign in initiated",
     "appleSignInFailed": "🔐 Apple sign in failed:",
-    "signingInFacebook": "🔐 Signing in with Facebook",
-    "facebookSignInError": "🔐 Facebook sign in error:",
-    "facebookSignInInitiated": "🔐 Facebook sign in initiated",
-    "facebookSignInFailed": "🔐 Facebook sign in failed:",
-    "signOutError": "🔧 [useAuth] Sign out error:",
-    "settingUpSubscriptions": "🔧 [useAuth] Setting up realtime subscriptions for user:",
-    "profileUpdateReceived": "🔧 [useAuth] Profile update received, reloading role.",
-    "subscribedToUserChannel": "🔧 [useAuth] Subscribed to user channel:",
-    "userChannelError": "[useAuth] Error subscribing to user channel:",
-    "roleChangeDetected": "🔧 [useAuth] Role change detected, reloading role.",
-    "subscribedToRolesChannel": "🔧 [useAuth] Subscribed to roles_permissions channel.",
-    "rolesChannelError": "[useAuth] Error subscribing to roles channel:",
-    "subscriptionSetupError": "🔧 [useAuth] Error setting up subscriptions:",
-    "removingSubscriptions": "🔧 [useAuth] Removing realtime subscriptions.",
-    "subscriptionRemoveError": "🔧 [useAuth] Error removing subscriptions:",
+    "appleSignInInitiated": "🔐 Apple sign in initiated",
+    "authInitError": "🔧 [useAuth] Error initializing auth:",
     "authStateChange": "🔧 [useAuth] Auth state change event:",
     "authStateChangeError": "Error handling auth state change:",
-    "authInitError": "🔧 [useAuth] Error initializing auth:",
     "cleaningUp": "🔧 [useAuth] Cleaning up auth provider.",
-    "noRoleFoundWarning": "No role found in database, defaulting to registered"
+    "facebookSignInError": "🔐 Facebook sign in error:",
+    "facebookSignInFailed": "🔐 Facebook sign in failed:",
+    "facebookSignInInitiated": "🔐 Facebook sign in initiated",
+    "googleSignInError": "🔐 Google sign in error:",
+    "googleSignInFailed": "🔐 Google sign in failed:",
+    "googleSignInInitiated": "🔐 Google sign in initiated",
+    "noRoleFoundWarning": "No role found in database, defaulting to registered",
+    "oauthRedirectUrl": "🔐 OAuth redirect URL:",
+    "profileUpdateReceived": "🔧 [useAuth] Profile update received, reloading role.",
+    "removingSubscriptions": "🔧 [useAuth] Removing realtime subscriptions.",
+    "roleChangeDetected": "🔧 [useAuth] Role change detected, reloading role.",
+    "rolesChannelError": "[useAuth] Error subscribing to roles channel:",
+    "settingUpSubscriptions": "🔧 [useAuth] Setting up realtime subscriptions for user:",
+    "signOutError": "🔧 [useAuth] Sign out error:",
+    "signingInApple": "🔐 Signing in with Apple",
+    "signingInFacebook": "🔐 Signing in with Facebook",
+    "signingInGoogle": "🔐 Signing in with Google",
+    "subscribedToRolesChannel": "🔧 [useAuth] Subscribed to roles_permissions channel.",
+    "subscribedToUserChannel": "🔧 [useAuth] Subscribed to user channel:",
+    "subscriptionRemoveError": "🔧 [useAuth] Error removing subscriptions:",
+    "subscriptionSetupError": "🔧 [useAuth] Error setting up subscriptions:",
+    "userChannelError": "[useAuth] Error subscribing to user channel:"
   },
   "authStateLoading": "Autentiseringstillstånd laddar, väntar...",
   "authStateNotLoaded": "Autentiseringstillstånd inte laddat än, väntar...",
@@ -536,7 +514,6 @@
   "autoTranslationDescription": "Översätt automatiskt inkommande meddelanden",
   "averageSessionTime": "Genomsnittlig sessionstid",
   "back": "Tillbaka",
-  "backText": "Tillbaka",
   "backToAdmin": "Tillbaka till admin",
   "backToSwiping": "Tillbaka till swipning",
   "backupDatabase": "Säkerhetskopiera databas",
@@ -549,14 +526,14 @@
   "banReasonLabel": "Blockeringsorsak",
   "banReasonPlaceholder": "Förklara orsaken till blockering...",
   "banReasons": {
-    "inappropriateContent": "Inappropriate content",
-    "spamFakeProfile": "Spam or fake profile",
-    "harassment": "Harassment",
-    "violatingTerms": "Violating terms of service",
+    "accountDeleted": "Account deleted by admin",
+    "bannedByAdmin": "Banned by admin",
     "custom": "Custom reason",
     "customReason": "Custom reason",
-    "bannedByAdmin": "Banned by admin",
-    "accountDeleted": "Account deleted by admin"
+    "harassment": "Harassment",
+    "inappropriateContent": "Inappropriate content",
+    "spamFakeProfile": "Spam or fake profile",
+    "violatingTerms": "Violating terms of service"
   },
   "banStatusUpdated": "Blockeringsstatus uppdaterad",
   "banText": "Blockera",
@@ -634,8 +611,8 @@
   "completeProfileToBeDiscovered": "Slutför din profil och bli upptäckt av fler personer!",
   "completeProfileToGetLikes": "Slutför din profil och lägg till foton!",
   "completeProfileToStart": "Slutför din profil för att börja upptäcka fantastiska personer",
+  "confirm": "Confirm",
   "confirmDeleteUser": "Är du säker på att du vill radera denna användare? Denna åtgärd kan inte ångras.",
-  "confirmText": "Bekräfta",
   "connectionError": "Anslutningsfel",
   "contactSales": "Kontakta vårt säljteam",
   "contactSupport": "Kontakta support",
@@ -649,7 +626,7 @@
   "contentUpdateSuccess": "Innehållet har uppdaterats framgångsrikt",
   "contentUpdated": "Innehåll uppdaterat",
   "contentUpdatedSuccessfully": "Innehåll uppdaterat framgångsrikt",
-  "continueText": "Fortsätt",
+  "continue": "Continue",
   "continueWithApple": "Fortsätt med Apple",
   "continueWithFacebook": "Fortsätt med Facebook",
   "continueWithGoogle": "Fortsätt med Google",
@@ -680,73 +657,73 @@
   "days90": "90 dagar",
   "daysAgo": "dagar sedan",
   "debug": {
+    "app": {
+      "appStateError": "❌ App state error:",
+      "appStateInitializing": "🚀 App state initializing...",
+      "appStateReady": "✅ App state ready"
+    },
     "matches": {
-      "fetching": "🚀 Fetching matches with direct Supabase query",
       "fetchError": "Error fetching matches:",
       "fetchSuccess": "✅ Fetched {{count}} matches",
+      "fetching": "🚀 Fetching matches with direct Supabase query",
       "newMatchDetected": "New match detected, refetching..."
     },
+    "network": {
+      "connectionLost": "📶 Connection lost",
+      "connectionRestored": "🌐 Connection restored",
+      "featuresUnavailable": "⚠️ Some features may be unavailable",
+      "syncingWithServer": "🔄 Syncing with server..."
+    },
     "profiles": {
-      "queryingUserCount": "👤 Querying user count...",
-      "totalUsers": "📊 Total users count: {count}}",
-      "queryingRoleBasedUsers": "🎭 Querying role-based users...",
-      "roleBasedUserCount": "🎯 Role-based filtered user count: {count}}",
-      "queryingActiveUsers": "🟢 Querying users active in last 30 days...",
-      "filteringViewedProfiles": "👁️ Filtering viewed profiles...",
-      "excludingViewedProfiles": "🚫 Excluding {{count}} viewed profiles",
-      "finalProfileCount": "✅ Final profile count: {count}}",
-      "fetchingRandomProfiles": "🎲 Fetching {{count}} random profiles...",
-      "settingProfiles": "📝 Setting profiles: {count}} profiles",
-      "profilesSet": "✅ Profiles set successfully",
-      "loadingProfiles": "⏳ Loading profiles...",
-      "profilesLoaded": "✅ Profiles loaded: {count}} profiles",
-      "fetchError": "❌ Profile fetch error:",
-      "swipeError": "❌ Swipe error:",
-      "noMoreProfiles": "📭 No more profiles",
-      "likeSent": "💖 Like sent - {{profileId}}",
-      "superLikeSent": "⭐ Super like sent - {{profileId}}",
-      "profilePassed": "⏭️ Profile passed - {{profileId}}",
       "actionError": "❌ Action error:",
-      "initiatingLike": "🚀 Initiating like",
-      "likeAction": "💝 Like action: {userId}} -> {{profileId}}",
       "checkingMutualLike": "🔄 Checking mutual like...",
-      "mutualLikeCheck": "💕 Mutual like status: {isMutual}}",
-      "processingMatch": "⚡ Processing match...",
+      "excludingViewedProfiles": "🚫 Excluding {{count}} viewed profiles",
+      "fetchError": "❌ Profile fetch error:",
+      "fetchingRandomProfiles": "🎲 Fetching {{count}} random profiles...",
+      "filteringViewedProfiles": "👁️ Filtering viewed profiles...",
+      "finalProfileCount": "✅ Final profile count: {{count}}",
+      "initiatingLike": "🚀 Initiating like",
+      "likeAction": "💝 Like action: {{userId}} -> {{profileId}}",
+      "likeSent": "💖 Like sent - {{profileId}}",
+      "loadingProfiles": "⏳ Loading profiles...",
       "matchCreated": "🎉 NEW MATCH! {{userId}} ↔ {{profileId}}",
-      "refreshingProfiles": "🔄 Refreshing profiles..."
+      "mutualLikeCheck": "💕 Mutual like status: {{isMutual}}",
+      "noMoreProfiles": "📭 No more profiles",
+      "processingMatch": "⚡ Processing match...",
+      "profilePassed": "⏭️ Profile passed - {{profileId}}",
+      "profilesLoaded": "✅ Profiles loaded: {{count}} profiles",
+      "profilesSet": "✅ Profiles set successfully",
+      "queryingActiveUsers": "🟢 Querying users active in last 30 days...",
+      "queryingRoleBasedUsers": "🎭 Querying role-based users...",
+      "queryingUserCount": "👤 Querying user count...",
+      "refreshingProfiles": "🔄 Refreshing profiles...",
+      "roleBasedUserCount": "🎯 Role-based filtered user count: {{count}}",
+      "settingProfiles": "📝 Setting profiles: {{count}} profiles",
+      "superLikeSent": "⭐ Super like sent - {{profileId}}",
+      "swipeError": "❌ Swipe error:",
+      "totalUsers": "📊 Total users count: {{count}}"
     },
     "subscription": {
-      "loadingSubscription": "📋 Loading subscription info...",
-      "subscriptionLoaded": "✅ Subscription loaded:",
-      "loadError": "❌ Subscription load error:",
       "checkingTier": "🔍 Checking subscription tier:",
-      "tierCheckResult": "📊 Tier check result:",
-      "startingStatusCheck": "🚀 Starting subscription status check...",
-      "loadingUserProfile": "👤 Loading user profile:",
-      "profileLoaded": "✅ Profile loaded:",
       "fetchingSubscription": "📥 Fetching subscription info:",
-      "subscriptionData": "📋 Subscription data:",
-      "subscriptionActive": "✅ Active subscription found:",
+      "loadError": "❌ Subscription load error:",
+      "loadingSubscription": "📋 Loading subscription info...",
+      "loadingUserProfile": "👤 Loading user profile:",
       "noActiveSubscription": "❌ No active subscription found",
-      "updatingSubscription": "💾 Updating subscription:",
-      "subscriptionUpdated": "✅ Subscription updated:",
-      "updateError": "❌ Subscription update error:",
-      "premiumUserCheck": "👑 Premium user check:",
-      "premiumUserStatus": "📊 Premium user status:",
+      "premiumAccessResult": "📊 Premium access result:",
       "premiumCheckComplete": "✅ Premium check complete:",
       "premiumFeatureAccess": "🔓 Premium feature access:",
-      "premiumAccessResult": "📊 Premium access result:"
-    },
-    "network": {
-      "connectionRestored": "🌐 Connection restored",
-      "syncingWithServer": "🔄 Syncing with server...",
-      "connectionLost": "📶 Connection lost",
-      "featuresUnavailable": "⚠️ Some features may be unavailable"
-    },
-    "app": {
-      "appStateInitializing": "🚀 App state initializing...",
-      "appStateReady": "✅ App state ready",
-      "appStateError": "❌ App state error:"
+      "premiumUserCheck": "👑 Premium user check:",
+      "premiumUserStatus": "📊 Premium user status:",
+      "profileLoaded": "✅ Profile loaded:",
+      "startingStatusCheck": "🚀 Starting subscription status check...",
+      "subscriptionActive": "✅ Active subscription found:",
+      "subscriptionData": "📋 Subscription data:",
+      "subscriptionLoaded": "✅ Subscription loaded:",
+      "subscriptionUpdated": "✅ Subscription updated:",
+      "tierCheckResult": "📊 Tier check result:",
+      "updateError": "❌ Subscription update error:",
+      "updatingSubscription": "💾 Updating subscription:"
     }
   },
   "debugCheckAgain": "Kontrollera igen",
@@ -772,7 +749,7 @@
   "description": "Beskrivning",
   "deselectAll": "Avmarkera alla",
   "developmentMode": "⚠️ UTVECKLINGSLÄGE",
-  "developmentModeAccess": "Utvecklingsläge åtkomst beviljad. Roll: {role}}",
+  "developmentModeAccess": "Utvecklingsläge åtkomst beviljad. Roll: {{role}}",
   "developmentModeNote": "Utvecklingsläge åtkomst",
   "disableMaintenanceMode": "Inaktivera underhållsläge",
   "discount": "Rabatt",
@@ -792,7 +769,7 @@
   "dismiss": "Avvisa",
   "dismissed": "Avvisad",
   "distance": "Avstånd",
-  "distanceKm": "{{distance}} km",
+  "distanceKm": "{{{distance}}} km",
   "dragDropPhotos": "Dra och släpp foton eller klicka för att välja",
   "dragToReorder": "Dra foton för att ordna om dem",
   "drinking": "Alkohol",
@@ -806,6 +783,7 @@
   "editProfile": "Redigera profil",
   "editProfileDescription": "Redigera din profil och få fler matchningar",
   "editText": "Redigera",
+  "editToChangeInterests": "Click edit to change interests",
   "editUser": "Redigera användare",
   "editingPlan": "Redigerar plan",
   "education": "Utbildning",
@@ -832,10 +810,23 @@
   "enterName": "Ange ditt namn",
   "enterYourName": "Ange ditt namn",
   "enterYourNamePlaceholder": "Ange ditt namn",
-  "error": "Fel",
+  "error": {
+    "details": "Error details",
+    "general": {
+      "occurred": "An error occurred"
+    },
+    "goHome": "Go to home",
+    "refresh": "Refresh page"
+  },
   "error.404.message": "Oj! Sidan hittades inte",
   "error.404.returnHome": "Tillbaka till startsidan",
   "errorBanningUser": "Ett fel uppstod vid blockering av användare.",
+  "errorBoundary": {
+    "errorDetails": "Error details",
+    "goToHomePage": "Go to home page",
+    "refreshPage": "Refresh page",
+    "title": "An error occurred"
+  },
   "errorDeletingUser": "Ett fel uppstod vid radering av användare.",
   "errorLoadingUsers": "Ett fel uppstod vid laddning av användare.",
   "errorLogs": "Felloggar",
@@ -845,8 +836,6 @@
   "errorToastTitle": "Fel",
   "errorUnbanningUser": "Ett fel uppstod vid borttagning av blockering.",
   "errorUpdatingRole": "Ett fel uppstod vid uppdatering av roll.",
-  "eslesmeKaldir": "Ta bort matchning",
-  "eslestiniz": "Ni har matchat!",
   "everyone": "Alla",
   "exclusiveEvents": "Exklusiva evenemang",
   "exclusiveFilters": "Exklusiva sökfilter",
@@ -878,28 +867,17 @@
   "faqPlanChangeQ": "Kan jag ändra min plan?",
   "faqTitle": "Vanliga frågor",
   "feature": {
-    "basicMatching": "Grundläggande matchning",
     "advancedFilters": "Avancerade filter",
-    "seeWhoLikesYou": "Se vem som gillar dig",
+    "basicMatching": "Grundläggande matchning",
+    "hdVideoCalls": "HD Video Calls",
+    "invisibleBrowsing": "Invisible Browsing",
+    "passport": "Passport",
+    "profileAnalytics": "Profile Analytics",
     "rewind": "Spola tillbaka",
-    "voiceCalls": "Röstsamtal",
-    "videoCalls": "Videosamtal",
-    "unlimitedLikes": "Obegränsade gillningar",
-    "prioritySupport": "Prioriterad support",
-    "adFree": "Reklamfri",
-    "premiumBadge": "Premium-märke",
-    "invisibleMode": "Osynligt läge",
-    "readReceipts": "Läskvitton",
-    "superLikes": "Super-gillningar",
-    "boosts": "Boosts",
-    "dailyLikes": "Dagliga gillningar",
-    "requires": {
-      "silver": "Silver-medlemskap krävs",
-      "gold": "Guld-medlemskap krävs",
-      "platinum": "Platina-medlemskap krävs",
-      "admin": "Administratörsåtkomst krävs",
-      "premium": "Premium-prenumeration krävs"
-    }
+    "seeWhoLikesYou": "Se vem som gillar dig",
+    "translation": "Translation",
+    "vipMatching": "VIP Matching",
+    "voiceCalls": "Röstsamtal"
   },
   "feature.advancedFilters": "Advanced filters",
   "feature.allFilters": "All filters",
@@ -938,7 +916,36 @@
   "feature.voiceCalls": "Röstsamtal",
   "featureFlags": "Feature Flags",
   "featureInDevelopment": "This feature is currently in development. More details with Premium membership!",
-  "features": "Funktioner",
+  "features": {
+    "advancedFilters": {
+      "description": "Filter by education, job, height, lifestyle and more"
+    },
+    "dailyLikes": {
+      "count": "{{count}} Daily Likes",
+      "description50": "Boost your chances with 50 daily likes instead of 10"
+    },
+    "disableAds": {
+      "description": "Tired of seeing advertisements? Disable them from showing!",
+      "tier": "Silver+",
+      "title": "Disable Ads"
+    },
+    "monthlyBoosts": {
+      "count": "{{count}} Boost per Month",
+      "description1": "Get 10x more visibility with monthly profile boost"
+    },
+    "seeWhoLikesYou": {
+      "description": "Discover who already liked your profile and start matching instantly"
+    },
+    "superLikes": {
+      "count": "{{count}} Super Likes",
+      "description5": "Stand out with 5 super likes per day"
+    },
+    "verifiedBadge": {
+      "description": "Show others that you are a legitimate user with this awesome badge",
+      "free": "Free with verification",
+      "title": "Verified Badge"
+    }
+  },
   "features.dailyLikes": "{{count}} daily likes",
   "features.dailySuperlikes": "{{count}} daily super likes",
   "features.monthlyBoosts": "{{count}} monthly boosts",
@@ -998,14 +1005,37 @@
   "googlePayFailed": "Google Pay-betalning misslyckades",
   "googlePaySuccess": "✅ Google Pay-betalning lyckades",
   "googleSignInError": "Google-inloggning misslyckades",
-  "gotItText": "Förstått",
+  "gotIt": "Got it",
   "grantFailed": "Beviljande misslyckades",
   "grantSubscription": "Bevilja prenumeration",
   "grantTierForDays": "{{tier}} {{duration}} gün için ver",
   "granting": "Beviljar...",
   "growthRate": "Büyüme Oranı",
   "guestNamePlaceholder": "Anna",
-  "guests": "Besökare",
+  "guestService": {
+    "accessControlError": "Error during access control",
+    "accessDenied": "Access denied",
+    "anonymous": "Anonymous",
+    "errorRetrievingStats": "Error while retrieving statistics",
+    "errorRetrievingVisitors": "Error occurred while retrieving visitors",
+    "noProfileVisitorsYet": "No profile visitors yet",
+    "profileVisitorsFound": "{{count}} profile visitors found",
+    "silverMembershipRequired": "Silver membership or higher required to view profile visitors",
+    "unableToHideVisitor": "Unable to hide visitor",
+    "unableToRetrieveVisitors": "Unable to retrieve visitors",
+    "visitorHidden": "Visitor hidden"
+  },
+  "guests": {
+    "distanceUnit": "km",
+    "goldPlus": "Gold+",
+    "tiers": {
+      "gold": "Gold",
+      "platinum": "Platinum",
+      "silver": "Silver"
+    },
+    "title": "Visitors",
+    "yearsOld": "years old"
+  },
   "happyCouples": "Happy Couples",
   "harassment": "Harassment",
   "hasAccountSignIn": "Har du redan ett konto? Logga in",
@@ -1013,6 +1043,63 @@
   "heightLabel": "Height (cm)",
   "heightPlaceholder": "Your height (cm)",
   "help": "Hjälp",
+  "helpCenter": {
+    "accountDeleteAnswer": "Go to Settings > Account > Delete Account. This action is permanent and cannot be undone.",
+    "accountDeleteQuestion": "How do I delete my account?",
+    "additionalResourcesTitle": "Additional Resources",
+    "appNotWorkingAnswer": "Try restarting the app, check your internet connection, update to the latest version, or contact support.",
+    "appNotWorkingQuestion": "The app is not working properly, what should I do?",
+    "communityForumButton": "Community Forum",
+    "contactFormMissingInfoToastDescription": "Please fill in all required fields",
+    "contactFormMissingInfoToastTitle": "Missing Information",
+    "contactFormSuccessToastDescription": "We'll get back to you as soon as possible",
+    "contactFormSuccessToastTitle": "Message Sent",
+    "contactFormTitle": "Contact Support",
+    "emailPlaceholder": "your.email@example.com",
+    "gettingStartedFaq": "Getting Started",
+    "helpCenterDescription": "Find answers to common questions or contact our support team",
+    "howMatchingWorksAnswer": "Our algorithm considers your preferences, location, interests, and activity to show you compatible profiles.",
+    "howMatchingWorksQuestion": "How does the matching system work?",
+    "howToAddPhotosAnswer": "Go to your profile settings, tap 'Add Photos', select from your gallery or take new photos. You can add up to 6 photos.",
+    "howToAddPhotosQuestion": "How do I add photos to my profile?",
+    "howToBlockUserAnswer": "Go to their profile, tap the three dots menu, and select 'Block'. They won't be able to see or contact you.",
+    "howToBlockUserQuestion": "How do I block someone?",
+    "howToCancelSubscriptionAnswer": "Go to Settings > Subscription to cancel. You can also cancel through your app store subscription settings.",
+    "howToCancelSubscriptionQuestion": "How can I cancel my subscription?",
+    "howToCreateProfileAnswer": "To create a profile, sign up with your email, add photos, write a bio, and verify your account for better matches.",
+    "howToCreateProfileQuestion": "How do I create a profile?",
+    "howToReportUserAnswer": "On their profile, tap the three dots menu and select 'Report'. Choose the reason and provide details.",
+    "howToReportUserQuestion": "How do I report a user?",
+    "howToVerifyProfileAnswer": "Go to profile settings and follow the verification process. Take a selfie matching the pose shown to get verified.",
+    "howToVerifyProfileQuestion": "How do I verify my profile?",
+    "liveChatButton": "Live Chat",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Describe your issue or question in detail...",
+    "namePlaceholder": "Your full name",
+    "notReceivingNotificationsAnswer": "Check your device settings, ensure notifications are enabled for the app, and verify your notification preferences.",
+    "notReceivingNotificationsQuestion": "I'm not receiving notifications, how to fix this?",
+    "quickAccessChatAction": "Start Chat",
+    "quickAccessChatDescription": "Chat with our support team in real-time",
+    "quickAccessEmailAction": "Send Email",
+    "quickAccessEmailDescription": "Send us an email for detailed support",
+    "quickAccessPhoneAction": "Call Now",
+    "quickAccessPhoneDescription": "Call our support hotline",
+    "quickAccessPhoneTitle": "Phone Support",
+    "refundPolicyAnswer": "Refunds are handled according to app store policies. Contact support for assistance with refund requests.",
+    "refundPolicyQuestion": "What is the refund policy?",
+    "safetyFaq": "Safety & Security",
+    "safetyGuideButton": "Safety Guide",
+    "safetyTipsAnswer": "Always meet in public places, tell friends your plans, trust your instincts, and never share personal information early.",
+    "safetyTipsQuestion": "What are the safety tips for dating?",
+    "sendMessageButton": "Send Message",
+    "subjectLabel": "Subject",
+    "subjectPlaceholder": "What can we help you with?",
+    "subscriptionFaq": "Subscription & Billing",
+    "technicalFaq": "Technical Support",
+    "userGuideButton": "User Guide",
+    "whatIsPremiumAnswer": "Premium includes unlimited likes, super likes, profile boosts, advanced filters, read receipts, and ad-free browsing.",
+    "whatIsPremiumQuestion": "What features are included in Premium?"
+  },
   "helpCenterDescription": "How can we help you?",
   "helpCenterTitle": "Help Center",
   "helpDesc": "FAQ and support",
@@ -1132,6 +1219,7 @@
   "interest.cooking": "Yemek Pişirme",
   "interest.cycling": "Cycling",
   "interest.dance": "Dance",
+  "interest.design": "Design",
   "interest.fashion": "Fashion",
   "interest.fitness": "Fitness",
   "interest.food": "Food",
@@ -1145,6 +1233,7 @@
   "interest.nature": "Nature",
   "interest.photography": "Photography",
   "interest.piano": "Piyano",
+  "interest.poetry": "Poetry",
   "interest.reading": "Reading",
   "interest.running": "Running",
   "interest.sports": "Sports",
@@ -1187,17 +1276,17 @@
   "interestedInPlaceholder": "Who would you like to meet?",
   "interests": "Interests",
   "interestsLabel": "Interests (Max 5)",
-  "interestsMinRequired": "{{status}} Select at least 3",
+  "interestsMinRequired": "{{{status}}} Select at least 3",
   "interestsSelected": "selected",
-  "interestsSelectionStatus": "{{count}}/5 selected • {{status}} Select at least 3",
+  "interestsSelectionStatus": "{{{count}}}/5 selected • {{{status}}} Select at least 3",
   "interestsStatusCheck": "✓",
   "interestsStatusWarning": "⚠️",
   "interestsTitle": "Interests",
   "interface": {
     "moreProfiles": "+{{count}} more profiles",
-    "syncing": "Syncing...",
+    "syncData": "Sync Data",
     "syncSuccess": "Data synced successfully",
-    "syncData": "Sync Data"
+    "syncing": "Syncing..."
   },
   "introduceYourself": "Introduce yourself... (At least 20 characters)",
   "invalidEmail": "Ogiltig e-postadress",
@@ -1217,11 +1306,11 @@
   "languageUpdateError": "Error updating language",
   "languageUpdated": "Language updated",
   "languages": {
-    "turkish": "Turkish",
     "english": "Engelska",
-    "swedish": "Swedish"
+    "swedish": "Swedish",
+    "turkish": "Turkish"
   },
-  "languagesSelected": "{{count}}/5 selected",
+  "languagesSelected": "{{{count}}}/5 selected",
   "languagesTitle": "Languages (Max 5)",
   "last7Days": "Last 7 days",
   "lastLike": "Last Like",
@@ -1249,29 +1338,21 @@
   "likes.viewProfiles": "View profiles you liked",
   "likesStats": "Gillningar",
   "limit": {
-    "daily": {
-      "likes": "Daglig gilla-gräns nådd",
-      "superLikes": "Daglig supergilla-gräns nådd"
-    },
     "description": {
       "dailyLikes": "Uppgradera för obegränsade gilla-markeringar",
       "dailySuperLikes": "Uppgradera för fler supergilla-markeringar",
       "monthlyBoosts": "Du har nått din månatliga boost-gräns"
     },
-    "monthly": {
-      "boosts": "Månatlig boost-gräns nådd"
-    },
-    "remaining": "kvar",
+    "exceeded": "Limit Exceeded",
     "title": {
-      "dailyLikes": "Daglig Gilla-Gräns",
       "dailySuperLikes": "Supergilla-Gräns"
     }
   },
   "limited": "Limited",
   "limits": {
     "reached": "Limit Reached",
-    "systemReady": "System redo",
     "systemNotReady": "System inte redo",
+    "systemReady": "System redo",
     "upgrade": "Uppgradera"
   },
   "loadFailed": "Load Failed",
@@ -1288,7 +1369,13 @@
   "loadingUsers": "Loading Users",
   "loadingUsersDescription": "Please wait while we fetch user data...",
   "loadingUsersTitle": "Loading Users",
-  "location": "Plats",
+  "location": {
+    "notSupported": "Geolocation is not supported by this browser.",
+    "permissionDenied": "Location access denied by user",
+    "positionUnavailable": "Location information unavailable",
+    "timeout": "Location request timed out",
+    "unknownError": "An unknown error occurred while getting your location."
+  },
   "location1": "New York",
   "location2": "Los Angeles",
   "location3": "Chicago",
@@ -1324,17 +1411,16 @@
   "matchedJustNow": "Matched just now",
   "matches": "Matchningar",
   "matchesStats": "Matchningar",
-  "maxAgeLabel": "{{age}} years",
+  "maxAgeLabel": "{{{age}}} years",
   "maxDistance": "Max Distance",
   "maxDistanceCardTitle": "Maximum Distance",
-  "maxDistanceDescription": "You will see people up to {{distance}} km away",
+  "maxDistanceDescription": "You will see people up to {{{distance}}} km away",
   "maxDistanceText": "radius",
-  "maxInterests": "Max {{max}}",
+  "maxInterests": "Max {{{max}}}",
   "maximumAge": "Maximum age",
   "maximumDistance": "Maximum distance",
   "men": "Men",
   "menu": "Meny",
-  "mesajAt": "Send Message",
   "messageBeforeMatch": "Message Before Match",
   "messageModeration": "Message Moderation",
   "messageRequired": "Meddelande krävs",
@@ -1344,7 +1430,7 @@
   "metaKeywords": "Meta Keywords",
   "metaTitle": "Meta Title",
   "metaTitlePlaceholder": "Page title (60 characters)",
-  "minAgeLabel": "{{age}} years",
+  "minAgeLabel": "{{{age}}} years",
   "minCharsRemaining": "At least {{{count}}} more characters",
   "minTwoPhotos": "Du behöver lägga till minst 1 foto",
   "minimumAge": "Minimum age",
@@ -1353,57 +1439,58 @@
   "missionDescription": "Mission Description",
   "missionTitle": "Mission Title",
   "moderation": {
-    "title": "Content Moderation",
     "actions": {
       "approve": "Approve",
-      "reject": "Reject",
-      "flag": "Flag"
+      "flag": "Flag",
+      "reject": "Reject"
     },
     "dialogs": {
       "approve": {
-        "title": "Approve Content",
-        "description": "This content will be approved and made visible to users."
-      },
-      "reject": {
-        "title": "Reject Content",
-        "description": "This content will be rejected and removed from the system."
+        "description": "This content will be approved and made visible to users.",
+        "title": "Approve Content"
       },
       "flag": {
-        "title": "Flag Content",
-        "description": "This content will be flagged for further review."
+        "description": "This content will be flagged for further review.",
+        "title": "Flag Content"
+      },
+      "reject": {
+        "description": "This content will be rejected and removed from the system.",
+        "title": "Reject Content"
       }
     },
-    "success": "Content {{action}} completed successfully",
-    "failed": "Failed to {{action}} content",
     "error": "An error occurred during moderation",
-    "unknownUser": "Unknown User",
-    "profilePhoto": "Profile Photo",
-    "reason": "Reason",
-    "notes": "Notes",
-    "notesPlaceholder": "Enter your moderation notes...",
-    "reasonPlaceholder": "Select reason for rejection or flagging...",
-    "pending": {
-      "title": "Pending Review",
-      "description": "Content awaiting moderation approval",
-      "noPending": "No Pending Content",
-      "allReviewed": "All uploaded content has been reviewed"
-    },
-    "stats": {
-      "totalFiles": "Total Files",
-      "originalSize": "Original Size",
-      "compressedSize": "Compressed Size",
-      "avgCompression": "Avg Compression",
-      "spaceSaved": "Space Saved"
-    },
+    "failed": "Failed to {{action}} content",
     "fileInfo": {
+      "compressed": "Compressed:",
       "file": "File:",
       "size": "Size:",
-      "compressed": "Compressed:",
       "uploaded": "Uploaded:"
-    }
+    },
+    "notes": "Notes",
+    "notesPlaceholder": "Enter your moderation notes...",
+    "pending": {
+      "allReviewed": "All uploaded content has been reviewed",
+      "description": "Content awaiting moderation approval",
+      "noPending": "No Pending Content",
+      "title": "Pending Review"
+    },
+    "profilePhoto": "Profile Photo",
+    "reason": "Reason",
+    "reasonPlaceholder": "Select reason for rejection or flagging...",
+    "stats": {
+      "avgCompression": "Avg Compression",
+      "compressedSize": "Compressed Size",
+      "originalSize": "Original Size",
+      "spaceSaved": "Space Saved",
+      "totalFiles": "Total Files"
+    },
+    "success": "Content {{action}} completed successfully",
+    "title": "Content Moderation",
+    "unknownUser": "Unknown User"
   },
   "moderationQueue": "Moderation Queue",
   "moderator": "Moderator",
+  "moderatorAccess": "🛡️ Moderator Access - All Premium Features Included",
   "moderatorPanel": "Moderator Panel",
   "moderatorPermissions": {
     "description": "Which moderator permissions would you like to activate for this user?",
@@ -1439,6 +1526,12 @@
   },
   "needHelp": "Need Help?",
   "networkError": "Nätverksfel",
+  "networkStatus": {
+    "connectionLost": "Connection lost",
+    "connectionRestored": "Connection restored",
+    "featuresUnavailable": "Some features may be unavailable",
+    "syncingWithServer": "Syncing with server..."
+  },
   "new": "new",
   "newLike": "Ny gillning",
   "newMatch": "New Match!",
@@ -1467,7 +1560,7 @@
   "noBioYet": "No bio written yet...",
   "noChangesToSave": "No Changes to Save",
   "noConversationsFound": "No conversations found",
-  "noConversationsMatchSearch": "No conversations match \"{{query}}\"",
+  "noConversationsMatchSearch": "No conversations match \"{{{query}}}\"",
   "noLikesYet": "You haven't liked anyone yet",
   "noMatches": "No matches",
   "noMatchesYet": "Inga matchningar än",
@@ -1516,7 +1609,7 @@
   "occupationLabel": "Occupation",
   "occupationPlaceholder": "Your occupation",
   "offline": "Offline",
-  "okText": "OK",
+  "ok": "OK",
   "onboarding.birthDate.question": "Ange ditt födelsedatum",
   "onboarding.birthDate.tooYoung": "You must be at least 18 years old",
   "onboarding.birthDate.warning": "⚠️ This information cannot be changed later",
@@ -1644,7 +1737,7 @@
   "options.zodiac.virgo": "Virgo",
   "orContinueWithEmail": "ELLER FORTSÄTT MED E-POST",
   "overview": "Overview",
-  "page": "Page {{current}} / {{total}}",
+  "page": "Page {{{current}}} / {{{total}}}",
   "pageDescription160": "Page description (160 characters)",
   "pageInfo": "Sayfa {{current}} / {{total}}",
   "pageSettings": "Page Settings",
@@ -1743,7 +1836,26 @@
   "portalError": "Portal Error",
   "portalUrlError": "Could not get portal URL",
   "postDuringPeakHours": "Yoğun saatlerde paylaş",
-  "preferences": "Preferences",
+  "preferences": {
+    "createError": "Error creating default preferences:",
+    "created": "Default preferences created:",
+    "creating": "Creating default preferences for user:",
+    "fetchError": "Error fetching preferences:",
+    "generalError": "Error in fetchPreferences:",
+    "loaded": "Preferences loaded:",
+    "saveError": {
+      "description": "Settings could not be saved, please try again",
+      "title": "Error"
+    },
+    "saved": {
+      "description": "Your preferences have been updated and saved permanently",
+      "title": "Settings saved"
+    },
+    "updateError": "Error updating preferences:",
+    "updateNoUser": "Cannot update preferences: no user or preferences",
+    "updateSuccess": "Preferences updated successfully:",
+    "updating": "Updating preferences with:"
+  },
   "preferencesSavedToastDesc": "Profiles will be updated according to your new preferences.",
   "preferencesSavedToastTitle": "Preferences saved",
   "premium": "Premium",
@@ -1778,9 +1890,9 @@
   "processing": "Processing...",
   "processingText": "Processing...",
   "profile": "Profil",
-  "profile.about.remainingChars": "{{{count}}} karakter kaldı",
+  "profile.about.remainingChars": "{{count}} karakter kaldı",
   "profile.bio.about": "Hakkında",
-  "profile.bio.minCharsRemaining": "At least {{{count}}} more characters",
+  "profile.bio.minCharsRemaining": "At least {{count}} more characters",
   "profile.bio.placeholder": "Introduce yourself... (At least 20 characters)",
   "profile.bio.placeholderEnd": " (Minst 20 tecken)",
   "profile.bio.placeholderStart": "Kendini tanıt... ",
@@ -1791,20 +1903,24 @@
   "profile.gender.other": "Diğer",
   "profile.interests.choose": "İlgi alanlarını seç",
   "profile.interests.maxReached": "Maksimum {{max}} ilgi alanı seçebilirsiniz",
-  "profile.interests.selected": "{{{count}}} seçildi",
+  "profile.interests.selected": "{{count}} seçildi",
   "profile.location.label": "Konum",
   "profile.location.placeholder": "Şehir, İlçe",
   "profile.occupation.label": "Meslek",
   "profile.occupation.placeholder": "Mesleğiniz",
   "profileAnalytics": "Profilanalys",
   "profileBoost": "Profilboost",
+  "profileCompletionCardDescription": "Complete your profile to increase your match potential",
+  "profileCompletionCardTitle": "Profile Completion",
+  "profileCompletionCompletedLabel": "Complete",
+  "profileCompletionTip": "Add more details to increase your visibility and get better matches",
   "profileDataNotFound": "Profile data not found",
   "profileError": "Profile Error",
   "profileExample1Name": "Emma, 24",
   "profileExample2Name": "James, 27",
   "profileHighlight": "Profile Highlight",
   "profileImageAlt": "Profil",
-  "profileLoadError": "Profile could not be loaded: {message}}",
+  "profileLoadError": "Profile could not be loaded: {{{message}}}",
   "profileModeration": "Profile Moderation",
   "profileNotFound": "Profile not found",
   "profileNotFoundError": "Profile Not Found",
@@ -1876,6 +1992,7 @@
   "religionLabel": "Religion",
   "religionPlaceholder": "Your religious belief (optional)",
   "removeFeature": "Remove Feature",
+  "removeMatch": "Remove Match",
   "report": "Report",
   "reportDate": "Report Date",
   "reportDetails": "Report Details",
@@ -1894,13 +2011,16 @@
   "resolvedToday": "Resolved Today",
   "restoreDatabase": "Restore Database",
   "retentionRates": "Retention Rates",
-  "retryText": "Försök igen",
+  "retry": "Retry",
   "revenueAnalytics": "Revenue Analytics",
   "reviewReport": "Review Report",
   "rewind": {
+    "error": {
+      "description": "Failed to rewind swipe",
+      "title": "Rewind Error"
+    },
     "failed": {
       "description": "Kunde inte ångra svep",
-      "error": "Ångring misslyckades",
       "title": "Ångring Misslyckades"
     },
     "success": {
@@ -1927,15 +2047,17 @@
   "roleUpdateError": "An error occurred while updating the plan",
   "roleUpdateSuccess": "User role has been updated successfully",
   "roleUpdated": "Role Updated",
-  "roleUpdatedMessage": "Plan {{role}} has been updated successfully",
+  "roleUpdatedMessage": "Plan {{{role}}} has been updated successfully",
   "roleWillBeAssigned": "role",
   "roles": {
+    "admin": "Admin",
     "makeAdmin": "Make Admin",
+    "makeGold": "Make Gold",
     "makeModerator": "Make Moderator",
+    "makePlatinum": "Make Platinum",
     "makeRegistered": "Make Registered",
     "makeSilver": "Make Silver",
-    "makeGold": "Make Gold",
-    "makePlatinum": "Make Platinum"
+    "moderator": "Moderator"
   },
   "safeEnvironment": "Säker miljö",
   "safeEnvironmentDesc": "Din integritet och säkerhet är våra topprioriteter med verifierade profiler",
@@ -1972,10 +2094,10 @@
   "seeWhoLikesYou": "Se vem som gillar dig",
   "seeWhoVisitedDescription": "Se vem som besökte din profil och interagera med dem",
   "selectAll": "Välj alla",
-  "selectAtLeast": "Select at least {{min}}",
+  "selectAtLeast": "Select at least {{{min}}}",
   "selectGender": "Select gender",
   "selectNewRole": "Select New Role",
-  "selectNewRoleFor": "Select new role for {{user}}",
+  "selectNewRoleFor": "Select new role for {{{user}}}",
   "selectPage": "Select Page",
   "selectPhoto": "Select Photo",
   "selectUser": "Select User",
@@ -2036,6 +2158,80 @@
   "signUp": "Registrera",
   "signUpSubtitle": "Gå med miljoner som hittar kärlek",
   "silver": "Silver",
+  "silverFeatureTest": {
+    "additionalTestsTitle": "Additional Tests",
+    "buttons": {
+      "runAll": "Run All Tests",
+      "testAdvancedFilters": "Test Advanced Filters",
+      "testBoost": "Test Boost",
+      "testCalls": "Test Voice/Video Calls",
+      "testLike": "Test Like",
+      "testRewind": "Test Rewind Feature",
+      "testSeeLikes": "Test \"See Who Likes You\"",
+      "testSuperLike": "Test Super Like",
+      "testing": "Testing..."
+    },
+    "currentRole": "Current Role",
+    "description": "Testing all Silver tier features for user: {{email}}",
+    "featureTestsTitle": "Feature Tests",
+    "features": {
+      "advancedFilters": {
+        "description": "Silver users can use advanced filters",
+        "name": "Advanced Filters"
+      },
+      "dailyLikes": {
+        "description": "Silver users get {{count}} daily likes",
+        "name": "{{count}} Daily Likes"
+      },
+      "dailySuperlikes": {
+        "description": "Silver users get {{count}} daily super likes",
+        "name": "{{count}} Daily Super Likes"
+      },
+      "maxPhotos": {
+        "description": "Silver users can upload up to {{count}} photos",
+        "name": "{{count}} Photos Max"
+      },
+      "monthlyBoosts": {
+        "description": "Silver users get {{count}} boost per month",
+        "name": "{{count}} Monthly Boost"
+      },
+      "readReceipts": {
+        "description": "Silver users can see read receipts",
+        "name": "Read Receipts"
+      },
+      "rewindFeature": {
+        "description": "Silver users can rewind their last swipe",
+        "name": "Rewind Feature"
+      },
+      "seeWhoLikesYou": {
+        "description": "Silver users can see who liked them",
+        "name": "See Who Likes You"
+      },
+      "unlimitedMessages": {
+        "description": "Silver users can send unlimited messages",
+        "name": "Unlimited Messages"
+      },
+      "videoCalls": {
+        "description": "Silver users can make video calls",
+        "name": "Video Calls"
+      },
+      "voiceCalls": {
+        "description": "Silver users can make voice calls",
+        "name": "Voice Calls"
+      }
+    },
+    "stats": {
+      "dailyLikes": "Daily Likes",
+      "monthlyBoosts": "Monthly Boosts",
+      "superLikes": "Super Likes"
+    },
+    "status": {
+      "failed": "Failed",
+      "notTested": "Not tested",
+      "passed": "Passed"
+    },
+    "title": "Silver Feature Test"
+  },
   "siteSettings": "Site Settings",
   "sixMonthPlan": "6 Month Plan",
   "sixMonthPlanDesc": "20% discount + 1 month free",
@@ -2074,77 +2270,78 @@
   "step3Button": "Start Messaging",
   "step3Description": "Start meaningful conversations after matching. Plan your first date!",
   "step3Title": "Chat & Meet",
-  "submitText": "Skicka",
+  "submit": "Submit",
   "subscription": {
-    "management": {
-      "grant": "Bevilja prenumeration",
-      "granted": "Prenumeration beviljad",
-      "failed": "Beviljande misslyckades",
-      "updating": "Uppdaterar...",
-      "activate": "Aktivera",
-      "deactivate": "Inaktivera"
-    },
-    "types": {
-      "silver": "Silver (Grundläggande Premium)",
-      "gold": "Guld (Premium Plus)",
-      "platinum": "Platina (Ultimate)"
-    },
     "durations": {
-      "7days": "7 dagar",
       "14days": "14 dagar",
       "30days": "30 dagar",
       "60days": "60 dagar",
+      "7days": "7 dagar",
       "90days": "90 dagar"
     },
     "features": {
       "dailyLikes": "{{count}} dagliga gillningar",
-      "superLikes": "{{count}} super-gillningar",
-      "monthlyBoosts": "{{count}} månatliga boosts"
+      "monthlyBoosts": "{{count}} månatliga boosts",
+      "superLikes": "{{count}} super-gillningar"
+    },
+    "limits": {
+      "dailyBoosts": "Dagliga boosts",
+      "dailyLikes": "Dagliga gillningar",
+      "dailyUsage": "Daglig användning",
+      "more": "mer",
+      "plan": "Plan",
+      "remaining": "återstående",
+      "superLikes": "Super-gillningar"
+    },
+    "manageSubscription": "Hantera prenumeration",
+    "management": {
+      "activate": "Aktivera",
+      "deactivate": "Inaktivera",
+      "failed": "Beviljande misslyckades",
+      "grant": "Bevilja prenumeration",
+      "granted": "Prenumeration beviljad",
+      "updating": "Uppdaterar..."
     },
     "status": {
       "currentPlan": "Nuvarande plan",
-      "validUntil": "Giltig till",
-      "timeRemaining": "Återstående tid",
       "daysRemaining": "Återstående dagar",
-      "features": "Funktioner"
+      "features": "Funktioner",
+      "timeRemaining": "Återstående tid",
+      "validUntil": "Giltig till"
     },
-    "limits": {
-      "dailyUsage": "Daglig användning",
-      "dailyLikes": "Dagliga gillningar",
-      "superLikes": "Super-gillningar",
-      "dailyBoosts": "Dagliga boosts",
-      "remaining": "återstående",
-      "plan": "Plan",
-      "more": "mer"
-    },
-    "tiers": {
-      "registered": "Gratis",
-      "silver": "Silver",
-      "gold": "Guld",
-      "platinum": "Platina"
-    },
-    "upgrade": "Uppgradera",
     "subscribenow": "Prenumerera nu",
-    "manageSubscription": "Hantera prenumeration"
+    "tiers": {
+      "gold": "Guld",
+      "platinum": "Platina",
+      "registered": "Gratis",
+      "silver": "Silver"
+    },
+    "types": {
+      "gold": "Guld (Premium Plus)",
+      "platinum": "Platina (Ultimate)",
+      "silver": "Silver (Grundläggande Premium)"
+    },
+    "upgrade": "Uppgradera"
   },
   "subscription.description": "Manage your subscription and monitor your daily usage limits",
   "subscription.error.description": "Ett fel uppstod under prenumerationsprocessen",
   "subscription.error.portalError": "Prenumerationsportalen kunde inte öppnas",
   "subscription.error.title": "Prenumerationsfel",
   "subscription.limits": {
-    "dailyLikes": "Dagliga gillningar",
-    "superLikes": "Super-gillningar",
-    "dailyBoosts": "Dagliga boosts",
-    "dailyUsage": "Daily Usage",
-    "remaining": "remaining",
-    "unlimited": "Unlimited",
-    "dailyLikeLimitReached": "Daily like limit reached",
-    "dailySuperLikeLimitReached": "Daily super like limit reached",
-    "upgradeMessage": "Daglig gräns nådd? Uppgradera för fler gillningar och funktioner!",
-    "upgradeTo": "Uppgradera till:",
     "currentFeatures": "Current features:",
+    "dailyBoosts": "Dagliga boosts",
+    "dailyLikeLimitReached": "Daily like limit reached",
+    "dailyLikes": "Dagliga gillningar",
+    "dailySuperLikeLimitReached": "Daily super like limit reached",
+    "dailyUsage": "Daily Usage",
+    "monthlyBoosts": "Monthly Boosts",
     "more": "more",
-    "plan": "Plan"
+    "plan": "Plan",
+    "remaining": "remaining",
+    "superLikes": "Super-gillningar",
+    "unlimited": "Unlimited",
+    "upgradeMessage": "Daglig gräns nådd? Uppgradera för fler gillningar och funktioner!",
+    "upgradeTo": "Uppgradera till:"
   },
   "subscription.manage": "Manage Subscription",
   "subscription.management.description": "Visit our upgrades page to see all available plans or manage your existing subscription through Stripe's secure portal.",
@@ -2152,27 +2349,27 @@
   "subscription.management.title": "Subscription Management",
   "subscription.management.viewPlans": "View All Plans",
   "subscription.status": {
-    "title": "Subscription Status",
     "currentPlan": "Current Plan",
-    "validUntil": "Valid Until",
-    "timeRemaining": "Time Remaining",
     "daysRemaining": "{{days}} days remaining",
     "expired": "Expired",
-    "features": "Features"
+    "features": "Features",
+    "timeRemaining": "Time Remaining",
+    "title": "Subscription Status",
+    "validUntil": "Valid Until"
   },
   "subscription.subscribenow": "Subscribe Now",
   "subscription.tiers": {
     "free": "Free",
-    "registered": "Free",
-    "silver": "Silver",
     "gold": "Gold",
-    "platinum": "Platinum"
+    "platinum": "Platinum",
+    "registered": "Free",
+    "silver": "Silver"
   },
   "subscription.title": "Subscription & Usage",
   "subscription.upgrade": "Uppgradera",
   "subscriptionActivated": "{{{tier}}} subscription activated!",
   "subscriptionCongratulations": "Congratulations!",
-  "subscriptionEnds": "Slutar: {date}}",
+  "subscriptionEnds": "Slutar: {{date}}",
   "subscriptionExpiresIn": "Your subscription expires in",
   "subscriptionExpiringNotification": "Subscription Expiring",
   "subscriptionExpiringNotificationMessage": "Your subscription expires soon",
@@ -2184,7 +2381,7 @@
   "subscriptionRenewedNotification": "Subscription Renewed",
   "subscriptionRenewedNotificationMessage": "Your subscription has been renewed",
   "subscriptionRole": {
-    "description": "This user will be given {{{role}}} subscription package and access to premium features.",
+    "description": "This user will be given {{role}} subscription package and access to premium features.",
     "title": "Subscription Authority"
   },
   "subscriptionSettingsDesc": "Manage your subscription and view usage limits",
@@ -2202,6 +2399,8 @@
   "sunday": "Pazar",
   "superLike": "Super Like",
   "superLikeDesc": "Sticka ut med 5 super-gillningar per dag",
+  "superLikeErrorDescription": "Unable to send super like. Please try again.",
+  "superLikeFailed": "Super Like Failed",
   "superLikeFeatureDescription": "Show your special interest and get more attention",
   "superLikeFeatureDetail": "Unlimited super likes",
   "superLikeFeatureTitle": "Super Like",
@@ -2217,17 +2416,19 @@
   "superLikesPerDay": "5 Super Likes/day",
   "support": "Support",
   "support247": "24/7 Kundtjänst",
+  "swipeErrorDescription": "Failed to save your action. Please check your internet connection and try again.",
+  "swipeFailed": "Swipe Failed",
   "swipesReset": "All swipes have been reset successfully",
   "swipesResetError": "Failed to reset swipes",
   "system": {
-    "ready": "System redo",
-    "notReady": "System inte redo",
-    "refresh": "Uppdatera",
-    "export": "Exportera",
     "clear": "Rensa",
+    "export": "Exportera",
+    "notReady": "System inte redo",
+    "ready": "System redo",
+    "refresh": "Uppdatera",
     "status": {
-      "on": "ON",
-      "off": "OFF"
+      "off": "OFF",
+      "on": "ON"
     }
   },
   "systemBackup": "System Backup",
@@ -2238,6 +2439,11 @@
   "takeAction": "Take Action",
   "terms": "Terms",
   "termsOfService": "Terms of Service",
+  "testServiceRole": {
+    "button": "Test Service Role",
+    "testing": "Testing...",
+    "title": "Test Service Role Key"
+  },
   "testimonial1": "We met on 2Sweety and it was love at first chat! Now we're planning our wedding.",
   "testimonial2": "The best dating app I've ever used. Found my perfect match in just two weeks!",
   "testimonial3": "Amazing algorithm that really understands compatibility. Highly recommend!",
@@ -2254,9 +2460,9 @@
   "thursday": "Perşembe",
   "tiers": {
     "basic": "Basic",
-    "silver": "Silver",
     "gold": "Gold",
-    "platinum": "Platinum"
+    "platinum": "Platinum",
+    "silver": "Silver"
   },
   "timeoutError": "Begäran timeout",
   "title": "Title",
@@ -2296,12 +2502,12 @@
   "typeYourMessage": "Type your message...",
   "typing": "typing",
   "unauthorizedAccess": "Unauthorized Access",
-  "unauthorizedAccessDesc": "You don't have permission to access this page. Your role: {role}}",
+  "unauthorizedAccessDesc": "You don't have permission to access this page. Your role: {{{role}}}",
   "unban": "Remove Ban",
   "unbanError": "Ett fel uppstod vid borttagning av blockering.",
   "unbanUser": "Unban User",
   "unbanningUser": "Unbanning user...",
-  "understoodText": "Förstått",
+  "understood": "Understood",
   "unknown": "Unknown",
   "unknownError": "Okänt fel uppstod",
   "unknownUser": "Unknown User",
@@ -2333,9 +2539,9 @@
   "upgradeToViewAnalytics": "Analitikleri görmek için premium'a yükseltin",
   "upload": {
     "noAuthToken": "No authentication token",
-    "uploadFailed": "Upload failed",
+    "photoDeleteError": "Error deleting photo:",
     "photoUploadError": "Error uploading photo:",
-    "photoDeleteError": "Error deleting photo:"
+    "uploadFailed": "Upload failed"
   },
   "uploadPhoto": "Ladda upp foto",
   "uploadPhotos": "Upload your photos",
@@ -2360,8 +2566,8 @@
   "userRating": "4,8/5 Användarbetätt",
   "userReports": "User Reports",
   "userRole": "User Role",
-  "userRoleChangedTo": "User role has been changed to {{role}}",
-  "userRoleUpdated": "User role updated to {{role}}.",
+  "userRoleChangedTo": "User role has been changed to {{{role}}}",
+  "userRoleUpdated": "User role updated to {{{role}}}.",
   "userUnbanSuccess": "User has been unbanned successfully",
   "userUnbanned": "User Unbanned",
   "userUnbannedMessage": "Användarens blockering borttagen.",
@@ -2381,32 +2587,32 @@
   },
   "value": "Value",
   "verification": {
-    "title": "Bli verifierad",
+    "comingSoon": "Coming soon",
     "description": "Visa andra att du är en legitim användare med den verifierade symbolen",
+    "emailInstructions": "We'll send a verification link to your registered email address.",
+    "error": "Verification failed",
+    "getVerified": "Bli verifierad",
     "methods": {
       "email": {
-        "title": "Email Verification",
-        "description": "Quick and easy verification through your email address"
-      },
-      "phone": {
-        "title": "Phone Verification",
-        "description": "Verify your identity with SMS verification"
+        "description": "Quick and easy verification through your email address",
+        "title": "Email Verification"
       },
       "idDocument": {
-        "title": "ID Document Verification",
-        "description": "Most secure verification with government-issued ID"
+        "description": "Most secure verification with government-issued ID",
+        "title": "ID Document Verification"
+      },
+      "phone": {
+        "description": "Verify your identity with SMS verification",
+        "title": "Phone Verification"
       }
     },
-    "verify": "Verify Now",
-    "verifying": "Verifying...",
+    "phoneInstructions": "We'll send a verification code to your registered phone number.",
     "submitted": "Verification request submitted",
     "success": "Verification successful!",
-    "error": "Verification failed",
-    "emailInstructions": "We'll send a verification link to your registered email address.",
-    "phoneInstructions": "We'll send a verification code to your registered phone number.",
-    "comingSoon": "Coming soon",
+    "title": "Bli verifierad",
     "verifiedBadge": "Verifierad symbol",
-    "getVerified": "Bli verifierad"
+    "verify": "Verify Now",
+    "verifying": "Verifying..."
   },
   "verified": "Verifierad",
   "verifiedProfiles": "Verifierade profiler",

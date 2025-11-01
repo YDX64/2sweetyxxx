@@ -12,7 +12,7 @@
   "activating": "Ativando...",
   "active": "Ativo",
   "activeChats": "Chats Ativos",
-  "activeSubscription": "🎉 Você tem uma assinatura ativa: {tier}}",
+  "activeSubscription": "🎉 Você tem uma assinatura ativa: {{tier}}",
   "activeSubscriptions": "Assinaturas Ativas",
   "activeUsers": "Usuários Ativos",
   "activity": "Atividade",
@@ -29,234 +29,231 @@
   "admin.subscription.manual.subscriptionType": "Tipo de Assinatura",
   "admin.subscription.manual.title": "Gerenciamento Manual de Assinatura",
   "adminAccess": {
-    "loginRequired": {
-      "title": "Login Necessário",
-      "description": "Por favor, faça login para acessar o painel de administração.",
-      "button": "Ir para o Login"
-    },
     "accessDenied": {
-      "title": "Acesso Negado",
-      "description": "Você não tem permissão para acessar o painel de administração.",
-      "yourRole": "Sua Função",
-      "noRole": "Nenhuma função atribuída",
       "adminPermission": "Permissão de Admin",
-      "yes": "Sim",
+      "button": "Voltar para a Home",
+      "description": "Você não tem permissão para acessar o painel de administração.",
       "no": "Não",
-      "button": "Voltar para a Home"
+      "noRole": "Nenhuma função atribuída",
+      "title": "Acesso Negado",
+      "yes": "Sim",
+      "yourRole": "Sua Função"
     },
-    "debugMode": "MODO DE DEPURIGAÇÃO"
+    "debugMode": "MODO DE DEPURIGAÇÃO",
+    "loginRequired": {
+      "button": "Ir para o Login",
+      "description": "Por favor, faça login para acessar o painel de administração.",
+      "title": "Login Necessário"
+    }
   },
   "adminActions": "Ações do Administrador",
   "adminContent": {
-    "title": "Gerenciamento de Conteúdo",
-    "preview": "Visualizar",
-    "save": "Salvar",
-    "saving": "Salvando...",
-    "updateSuccess": "Conteúdo atualizado com sucesso",
-    "updateError": "Falha ao atualizar conteúdo",
-    "heroSection": "Seção Principal",
     "badgeText": "Texto do Emblema",
-    "subtitle": "Subtítulo",
-    "mission": "Missão",
-    "missionTitle": "Título da Missão",
-    "missionDescription": "Descrição da Missão",
-    "statistics": "Estatísticas",
-    "value": "Valor",
+    "common": {
+      "noData": "Sem dados"
+    },
+    "heroSection": "Seção Principal",
     "label": "Rótulo",
     "lastUpdated": "Última atualização",
-    "seoSettings": "Configurações de SEO",
-    "metaTitle": "Meta Título",
-    "metaTitlePlaceholder": "Título da página para motores de busca",
     "metaDescription": "Meta Descrição",
     "metaDescriptionPlaceholder": "Breve descrição para motores de busca (150-160 caracteres)",
     "metaKeywords": "Meta Palavras-chave",
+    "metaTitle": "Meta Título",
+    "metaTitlePlaceholder": "Título da página para motores de busca",
+    "mission": "Missão",
+    "missionDescription": "Descrição da Missão",
+    "missionTitle": "Título da Missão",
     "pages": {
       "about": {
-        "title": "Sobre Nós",
         "description": "Unindo corações em todo o mundo com tecnologia de correspondência inteligente e relacionamentos genuínos desde 2020.",
         "mission": "Nossa Missão",
         "missionText": "Na 2Sweety, acreditamos que todos merecem encontrar um amor significativo...",
         "stats": {
-          "totalMatches": "Total de Combinações",
           "activeUsers": "Usuários Ativos",
           "happyCouples": "Casais Felizes",
-          "satisfactionRate": "Taxa de Satisfação"
-        }
-      },
-      "privacy": {
-        "title": "Privacidade",
-        "description": "Sua privacidade é nossa prioridade. Saiba como coletamos, usamos e protegemos suas informações pessoais.",
-        "lastUpdated": "Dezembro de 2024"
-      },
-      "terms": {
-        "title": "Informações Legais",
-        "description": "Leia estes termos com atenção antes de usar o 2Sweety.",
-        "lastUpdated": "Dezembro de 2024"
+          "satisfactionRate": "Taxa de Satisfação",
+          "totalMatches": "Total de Combinações"
+        },
+        "title": "Sobre Nós"
       },
       "gdpr": {
-        "title": "UE",
         "description": "O 2Sweety cumpre integralmente o Regulamento Geral sobre a Proteção de Dados da União Europeia.",
-        "effectiveDate": "25 de maio de 2018"
+        "effectiveDate": "25 de maio de 2018",
+        "title": "UE"
+      },
+      "privacy": {
+        "description": "Sua privacidade é nossa prioridade. Saiba como coletamos, usamos e protegemos suas informações pessoais.",
+        "lastUpdated": "Dezembro de 2024",
+        "title": "Privacidade"
+      },
+      "terms": {
+        "description": "Leia estes termos com atenção antes de usar o 2Sweety.",
+        "lastUpdated": "Dezembro de 2024",
+        "title": "Informações Legais"
       }
     },
+    "preview": "Visualizar",
+    "save": "Salvar",
+    "saving": "Salvando...",
     "seo": {
       "defaultKeywords": "namoro, amor, relacionamentos, portugal",
       "keywordsPlaceholder": "namoro, amor, relacionamentos, portugal"
     },
-    "common": {
-      "noData": "Sem dados"
-    }
+    "seoSettings": "Configurações de SEO",
+    "statistics": "Estatísticas",
+    "subtitle": "Subtítulo",
+    "title": "Gerenciamento de Conteúdo",
+    "updateError": "Falha ao atualizar conteúdo",
+    "updateSuccess": "Conteúdo atualizado com sucesso",
+    "value": "Valor"
   },
   "adminDashboard": "Painel do Administrador",
   "adminLogs": {
     "enhanced": {
-      "title": "Sistema de Logs Aprimorado",
+      "activeCategories": "Categorias Ativas",
+      "autoRefresh": "Atualização Automática",
+      "categories": {
+        "admin": "Administrador",
+        "auth": "Autenticação",
+        "database": "Banco de Dados",
+        "error": "Erro",
+        "network": "Rede",
+        "payment": "Pagamento",
+        "performance": "Desempenho",
+        "system": "Sistema",
+        "userAction": "Ação do Usuário"
+      },
+      "clear": "Limpar",
+      "details": {
+        "category": "Categoria",
+        "details": "Detalhes",
+        "level": "Nível",
+        "message": "Mensagem",
+        "network": "Rede",
+        "performance": "Desempenho",
+        "sessionId": "ID da Sessão",
+        "stackTrace": "Rastreamento de Pilha",
+        "timestamp": "Timestamp",
+        "title": "Detalhes do Log",
+        "url": "URL",
+        "user": "Usuário",
+        "userId": "ID do Usuário"
+      },
       "disable": "Desativar",
       "enable": "Ativar",
-      "logging": "Registro",
-      "refresh": "Atualizar",
-      "export": "Exportar",
-      "clear": "Limpar",
-      "totalLogs": "Total de Logs",
-      "session": "Sessão",
       "errorRate": "Taxa de Erro",
       "errors": "erros",
-      "categories": {
-        "auth": "Autenticação",
-        "userAction": "Ação do Usuário",
-        "network": "Rede",
-        "database": "Banco de Dados",
-        "payment": "Pagamento",
-        "admin": "Administrador",
-        "error": "Erro",
-        "performance": "Desempenho",
-        "system": "Sistema"
-      },
-      "activeCategories": "Categorias Ativas",
-      "status": "Status",
-      "on": "LIGADO",
-      "off": "DESLIGADO",
-      "autoRefresh": "Atualização Automática",
+      "export": "Exportar",
       "filters": {
-        "title": "Filtros e Pesquisa",
+        "allCategories": "Todas as Categorias",
+        "allLevels": "Todos os Níveis",
+        "autoRefreshLabel": "Atualização Automática",
+        "category": "Categoria",
+        "level": "Nível",
         "search": "Pesquisar",
         "searchPlaceholder": "Pesquisar logs...",
-        "level": "Nível",
-        "allLevels": "Todos os Níveis",
-        "category": "Categoria",
-        "allCategories": "Todas as Categorias",
-        "autoRefreshLabel": "Atualização Automática"
+        "title": "Filtros e Pesquisa"
       },
       "levels": {
+        "critical": "Crítico",
         "debug": "Depuração",
-        "info": "Informação",
-        "warning": "Aviso",
         "error": "Erro",
-        "critical": "Crítico"
+        "info": "Informação",
+        "warning": "Aviso"
       },
+      "logging": "Registro",
       "noLogs": {
         "disabled": "O registro está desativado. Ative-o para começar a coletar logs.",
         "notFound": "Nenhum log encontrado que corresponda aos filtros atuais."
       },
-      "details": {
-        "title": "Detalhes do Log",
-        "level": "Nível",
-        "category": "Categoria",
-        "timestamp": "Timestamp",
-        "sessionId": "ID da Sessão",
-        "message": "Mensagem",
-        "url": "URL",
-        "userId": "ID do Usuário",
-        "details": "Detalhes",
-        "performance": "Desempenho",
-        "network": "Rede",
-        "stackTrace": "Rastreamento de Pilha",
-        "user": "Usuário"
-      }
+      "off": "DESLIGADO",
+      "on": "LIGADO",
+      "refresh": "Atualizar",
+      "session": "Sessão",
+      "status": "Status",
+      "title": "Sistema de Logs Aprimorado",
+      "totalLogs": "Total de Logs"
     },
     "system": {
-      "title": "Logs do Sistema",
-      "session": "Sessão",
-      "total": "Total",
-      "errors": "Erros",
-      "filters": {
-        "level": "Nível",
-        "category": "Categoria",
-        "autoRefresh": "Atualização Automática"
-      },
-      "levels": {
-        "all": "Todos",
-        "error": "Erro",
-        "warning": "Aviso",
-        "info": "Informação",
-        "debug": "Depuração",
-        "critical": "Crítico"
+      "buttons": {
+        "clear": "Limpar",
+        "disable": "Desativar",
+        "enable": "Ativar",
+        "export": "Exportar",
+        "logging": "Registro",
+        "refresh": "Atualizar"
       },
       "categories": {
+        "admin": "Administrador",
         "all": "Todas",
-        "roleManagement": "Gerenciamento de Funções",
-        "userBan": "Banimento de Usuário",
-        "permissionCheck": "Verificação de Permissão",
-        "database": "Banco de Dados",
         "auth": "Autenticação",
-        "system": "Sistema",
-        "userAction": "Ação do Usuário",
+        "database": "Banco de Dados",
+        "error": "Erro",
         "network": "Rede",
         "payment": "Pagamento",
-        "admin": "Administrador",
-        "error": "Erro",
-        "performance": "Desempenho"
-      },
-      "table": {
-        "time": "Hora",
-        "level": "Nível",
-        "category": "Categoria",
-        "action": "Ação",
-        "user": "Usuário",
-        "admin": "Administrador",
-        "details": "Detalhes"
-      },
-      "noLogs": "Nenhum log encontrado",
-      "loggingDisabled": "O registro está desativado. Ative-o para começar a coletar logs.",
-      "filtersAndSearch": "Filtros e Pesquisa",
-      "search": "Pesquisar",
-      "searchPlaceholder": "Pesquisar logs...",
-      "stats": {
-        "totalLogs": "Total de Logs",
-        "errorRate": "Taxa de Erro",
-        "errors": "erros",
-        "categories": "Categorias",
-        "activeCategories": "Categorias Ativas",
-        "status": "Status",
-        "on": "LIGADO",
-        "off": "DESLIGADO"
-      },
-      "buttons": {
-        "enable": "Ativar",
-        "disable": "Desativar",
-        "logging": "Registro",
-        "refresh": "Atualizar",
-        "export": "Exportar",
-        "clear": "Limpar"
+        "performance": "Desempenho",
+        "system": "Sistema",
+        "userAction": "Ação do Usuário"
       },
       "details": {
-        "title": "Detalhes do Log",
-        "time": "Hora",
         "action": "Ação",
-        "userId": "ID do Usuário",
         "adminId": "ID do Admin",
-        "error": "Erro",
         "details": "Detalhes",
-        "stackTrace": "Rastreamento de Pilha",
+        "error": "Erro",
         "message": "Mensagem",
-        "fields": {
-          "user": "Usuário",
-          "url": "URL",
-          "performance": "Desempenho",
-          "network": "Rede",
-          "stackTrace": "Rastreamento de Pilha"
-        }
-      }
+        "stackTrace": "Rastreamento de Pilha",
+        "time": "Hora",
+        "title": "Detalhes do Log",
+        "userId": "ID do Usuário"
+      },
+      "errors": "Erros",
+      "fields": {
+        "network": "Network",
+        "performance": "Performance",
+        "stackTrace": "Stack Trace",
+        "url": "URL",
+        "user": "User"
+      },
+      "filters": {
+        "autoRefresh": "Atualização Automática",
+        "category": "Categoria",
+        "level": "Nível"
+      },
+      "filtersAndSearch": "Filtros e Pesquisa",
+      "levels": {
+        "all": "Todos",
+        "critical": "Crítico",
+        "debug": "Depuração",
+        "error": "Erro",
+        "info": "Informação",
+        "warning": "Aviso"
+      },
+      "loggingDisabled": "O registro está desativado. Ative-o para começar a coletar logs.",
+      "noLogs": "Nenhum log encontrado",
+      "search": "Pesquisar",
+      "searchPlaceholder": "Pesquisar logs...",
+      "session": "Sessão",
+      "stats": {
+        "activeCategories": "Categorias Ativas",
+        "categories": "Categorias",
+        "errorRate": "Taxa de Erro",
+        "errors": "erros",
+        "off": "DESLIGADO",
+        "on": "LIGADO",
+        "status": "Status",
+        "totalLogs": "Total de Logs"
+      },
+      "table": {
+        "action": "Ação",
+        "admin": "Administrador",
+        "category": "Categoria",
+        "details": "Detalhes",
+        "level": "Nível",
+        "time": "Hora",
+        "user": "Usuário"
+      },
+      "title": "Logs do Sistema",
+      "total": "Total"
     }
   },
   "adminPanel": "Painel de Administração",
@@ -264,88 +261,108 @@
   "adminPanelAccessGranted": "Acesso ao Painel de Administração CONCEDIDO",
   "adminPayments": {
     "conversionRate": "Taxa de Conversão",
-    "mrr": "MRR (Receita Recorrente Mensal)",
     "estimatedMonthly": "Estimativa Mensal",
     "manualSubscription": {
-      "title": "Atribuição Manual de Assinatura",
-      "userEmail": "E-mail do Usuário",
+      "duration": "Duration (Days)",
+      "durationPlaceholder": "30",
       "emailPlaceholder": "usuario@exemplo.com",
+      "grantButton": "Grant Subscription",
+      "reason": "Reason",
+      "reasons": {
+        "compensation": "Compensation",
+        "promotional": "Promotional Grant",
+        "support": "Customer Support",
+        "testing": "Testing Purpose"
+      },
       "subscriptionTier": "Nível de Assinatura",
       "tiers": {
-        "silver": "Prata (R$9.99/mês)",
         "gold": "Ouro (R$19.99/mês)",
-        "platinum": "Platina (R$29.99/mês)"
+        "platinum": "Platina (R$29.99/mês)",
+        "silver": "Prata (R$9.99/mês)"
       },
-      "assignButton": "Atribuir Assinatura",
-      "assignSuccess": "Assinatura atribuída com sucesso",
-      "assignError": "Falha ao atribuir assinatura"
+      "title": "Atribuição Manual de Assinatura",
+      "userEmail": "E-mail do Usuário"
     },
-    "recentTransactions": "Transações Recentes",
-    "monthlyRevenue": "Receita Mensal",
-    "activeSubscriptions": "Assinaturas Ativas",
-    "churnRate": "Taxa de Churn",
-    "noTransactions": "Nenhuma transação encontrada",
-    "manageSubscriptions": "Gerenciar Assinaturas",
-    "stripeStatus": "Status do Stripe",
-    "stripeConnected": "Conectado",
-    "stripeNotConnected": "Não conectado",
-    "webhookStatus": "Status do Webhook",
-    "testMode": "Modo de Teste"
+    "mrr": "MRR (Receita Recorrente Mensal)",
+    "paymentStatus": {
+      "stripeConnection": "Stripe Connection",
+      "testMode": "Test Mode",
+      "title": "Payment System Status",
+      "webhookStatus": "Webhook Status"
+    },
+    "recentTransactions": {
+      "noTransactions": "No transactions available",
+      "noTransactionsDesc": "Transactions will appear here once users subscribe",
+      "plans": {
+        "gold": "Gold Plan",
+        "platinum": "Platinum Plan",
+        "silver": "Silver Plan"
+      },
+      "title": "Recent Transactions"
+    },
+    "stripe": {
+      "note": "These links open in the Stripe Dashboard. Ensure you have proper access permissions.",
+      "openDashboard": "Open Stripe Dashboard",
+      "title": "Stripe Dashboard Links",
+      "viewCustomers": "View Customers",
+      "viewPayments": "View Payments",
+      "viewSubscriptions": "View Subscriptions"
+    }
   },
   "adminRole": "Função de Administrador",
   "adminSecurityMessage": "O acesso ao painel de administração é restrito por IP. Recomendamos ativar a 2FA.",
   "adminSite": {
-    "configuration": {
-      "title": "Configuração do Site",
-      "siteName": "Nome do Site",
-      "defaultLanguage": "Idioma Padrão",
-      "siteDescription": "Descrição do Site",
-      "descriptionPlaceholder": "Onde corações se encontram e histórias de amor começam"
-    },
     "appSettings": {
-      "title": "Configurações do Aplicativo",
-      "registration": {
-        "label": "Cadastro Aberto",
-        "description": "Permitir novos cadastros de usuários"
+      "aiTranslation": {
+        "description": "Tradução automática de mensagens",
+        "label": "Tradução por IA"
       },
       "emailVerification": {
-        "label": "Verificação de E-mail",
-        "description": "Exigir verificação de e-mail para novos usuários"
+        "description": "Exigir verificação de e-mail para novos usuários",
+        "label": "Verificação de E-mail"
       },
       "photoModeration": {
-        "label": "Moderação de Fotos",
         "description": "Revisão manual de fotos de perfil",
+        "label": "Moderação de Fotos",
         "manual": "Manual"
       },
-      "aiTranslation": {
-        "label": "Tradução por IA",
-        "description": "Tradução automática de mensagens"
-      }
+      "registration": {
+        "description": "Permitir novos cadastros de usuários",
+        "label": "Cadastro Aberto"
+      },
+      "title": "Configurações do Aplicativo"
     },
-    "security": {
-      "title": "Configurações de Segurança",
-      "twoFactor": {
-        "label": "Autenticação de Dois Fatores",
-        "description": "Exigir 2FA para o painel de administração"
-      },
-      "sessionTimeout": {
-        "label": "Tempo Limite da Sessão",
-        "description": "Duração da sessão do administrador",
-        "hours": "8 horas"
-      },
-      "ipRestriction": {
-        "label": "Restrição de IP",
-        "description": "Restringir acesso de administrador por IP"
-      }
+    "configuration": {
+      "defaultLanguage": "Idioma Padrão",
+      "descriptionPlaceholder": "Onde corações se encontram e histórias de amor começam",
+      "siteDescription": "Descrição do Site",
+      "siteName": "Nome do Site",
+      "title": "Configuração do Site"
     },
     "integrations": {
-      "title": "Status das Integrações",
+      "connected": "Conectado",
+      "emailService": "Serviço de E-mail (SMTP)",
+      "googleTranslate": "API do Google Tradutor",
+      "needsSetup": "Precisa de configuração",
       "stripe": "Pagamento Stripe",
       "supabase": "Banco de Dados Supabase",
-      "googleTranslate": "API do Google Tradutor",
-      "emailService": "Serviço de E-mail (SMTP)",
-      "connected": "Conectado",
-      "needsSetup": "Precisa de configuração"
+      "title": "Status das Integrações"
+    },
+    "security": {
+      "ipRestriction": {
+        "description": "Restringir acesso de administrador por IP",
+        "label": "Restrição de IP"
+      },
+      "sessionTimeout": {
+        "description": "Duração da sessão do administrador",
+        "hours": "8 horas",
+        "label": "Tempo Limite da Sessão"
+      },
+      "title": "Configurações de Segurança",
+      "twoFactor": {
+        "description": "Exigir 2FA para o painel de administração",
+        "label": "Autenticação de Dois Fatores"
+      }
     }
   },
   "adminUser": {
@@ -371,91 +388,52 @@
     "title": "Aviso: Autoridade de Administrador"
   },
   "ads": {
-    "title": "Gerenciamento de Anúncios",
-    "stats": {
-      "impressions": "Impressões",
-      "clicks": "Cliques",
-      "ctr": "CTR",
-      "revenue": "Receita",
-      "activePlacements": "Posicionamentos Ativos",
-      "totalImpressions": "Total de Impressões",
-      "todayClicks": "Cliques de Hoje",
-      "averageCtr": "CTR Médio",
-      "monthlyRevenue": "Receita Mensal"
-    },
-    "placements": {
-      "title": "Posicionamentos de Anúncios",
-      "header": "Cabeçalho",
-      "sidebar": "Barra Lateral",
-      "feed": "Feed",
-      "footer": "Rodapé",
-      "enabled": "Ativado",
-      "disabled": "Desativado",
-      "size": "Tamanho",
-      "position": "Posição",
-      "visibility": "Visibilidade"
-    },
-    "providers": {
-      "title": "Provedores de Anúncios",
-      "googleAdsense": "Google AdSense",
-      "customAds": "Anúncios Personalizados",
-      "status": "Status",
-      "earnings": "Ganhos",
-      "configure": "Configurar"
-    },
-    "settings": {
-      "title": "Configurações de Anúncios",
-      "frequency": "Frequência de Exibição",
-      "targeting": "Direcionamento de Público",
-      "excludedPages": "Páginas Excluídas",
-      "mobileAds": "Anúncios para Celular",
-      "desktopAds": "Anúncios para Desktop",
-      "refreshRate": "Taxa de Atualização",
-      "maxAdsPerPage": "Máximo de Anúncios por Página"
-    },
-    "performance": {
-      "title": "Análise de Desempenho",
-      "topPerforming": "Melhor Desempenho",
-      "worstPerforming": "Pior Desempenho",
-      "recommendations": "Recomendações",
-      "optimize": "Otimizar"
+    "banner": {
+      "title": "Advertisement"
     },
     "configuration": {
-      "title": "Configuração do Site",
-      "description": "Gerencie as configurações de publicidade e análise para o seu site",
-      "tabs": {
-        "advertising": "Publicidade",
-        "analytics": "Análise"
-      },
-      "sections": {
-        "googleAdsense": "Google AdSense",
-        "adPlacement": "Posicionamento de Anúncio",
-        "googleAnalytics": "Google Analytics",
-        "facebookPixel": "Pixel do Facebook",
-        "trackingSettings": "Configurações de Rastreamento"
-      },
       "buttons": {
         "refresh": "Atualizar",
         "save": "Salvar",
         "saving": "Salvando..."
       },
-      "status": {
-        "enabled": "Ativado",
-        "disabled": "Desativado"
-      },
+      "description": "Gerencie as configurações de publicidade e análise para o seu site",
       "errors": {
         "loadFailed": "Falha ao carregar configurações",
         "saveFailed": "Falha ao salvar configurações"
       },
+      "sections": {
+        "adPlacement": "Posicionamento de Anúncio",
+        "facebookPixel": "Pixel do Facebook",
+        "googleAdsense": "Google AdSense",
+        "googleAnalytics": "Google Analytics",
+        "trackingSettings": "Configurações de Rastreamento"
+      },
+      "status": {
+        "disabled": "Desativado",
+        "enabled": "Ativado"
+      },
       "success": {
         "saved": "Configuração salva com sucesso"
-      }
+      },
+      "tabs": {
+        "advertising": "Publicidade",
+        "analytics": "Análise"
+      },
+      "title": "Configuração do Site"
     },
     "disabledFeature": {
-      "title": "Desativar Anúncios",
       "description": "Cansado de ver anúncios? Desative-os!",
-      "status": "Anúncios estão desativados para membros Prata+"
-    }
+      "status": "Anúncios estão desativados para membros Prata+",
+      "title": "Desativar Anúncios"
+    },
+    "native": {
+      "description": "Upgrade to remove ads",
+      "title": "Sponsored Content"
+    },
+    "placeholder": "Ad Space",
+    "removeAds": "Remove Ads - Upgrade to Silver",
+    "upgrade": "Upgrade"
   },
   "advanced": "Avançado",
   "advancedAnalytics": "Análise Avançada",
@@ -497,35 +475,35 @@
   "approveReport": "Aprovar Relatório",
   "auditTrail": "Trilha de Auditoria",
   "auth": {
-    "signingInGoogle": "🔐 Entrando com o Google",
-    "oauthRedirectUrl": "🔐 URL de redirecionamento OAuth:",
-    "googleSignInError": "🔐 Erro de login do Google:",
-    "googleSignInInitiated": "🔐 Login do Google iniciado",
-    "googleSignInFailed": "🔐 Login do Google falhou:",
-    "signingInApple": "🔐 Entrando com a Apple",
     "appleSignInError": "🔐 Erro de login da Apple:",
-    "appleSignInInitiated": "🔐 Login da Apple iniciado",
     "appleSignInFailed": "🔐 Login da Apple falhou:",
-    "signingInFacebook": "🔐 Entrando com o Facebook",
-    "facebookSignInError": "🔐 Erro de login do Facebook:",
-    "facebookSignInInitiated": "🔐 Login do Facebook iniciado",
-    "facebookSignInFailed": "🔐 Login do Facebook falhou:",
-    "signOutError": "🔧 [useAuth] Erro ao sair:",
-    "settingUpSubscriptions": "🔧 [useAuth] Configurando assinaturas em tempo real para o usuário:",
-    "profileUpdateReceived": "🔧 [useAuth] Atualização de perfil recebida, recarregando função.",
-    "subscribedToUserChannel": "🔧 [useAuth] Inscrito no canal do usuário:",
-    "userChannelError": "[useAuth] Erro ao se inscrever no canal do usuário:",
-    "roleChangeDetected": "🔧 [useAuth] Mudança de função detectada, recarregando função.",
-    "subscribedToRolesChannel": "🔧 [useAuth] Inscrito no canal roles_permissions.",
-    "rolesChannelError": "[useAuth] Erro ao se inscrever no canal de funções:",
-    "subscriptionSetupError": "🔧 [useAuth] Erro ao configurar assinaturas:",
-    "removingSubscriptions": "🔧 [useAuth] Removendo assinaturas em tempo real.",
-    "subscriptionRemoveError": "🔧 [useAuth] Erro ao remover assinaturas:",
+    "appleSignInInitiated": "🔐 Login da Apple iniciado",
+    "authInitError": "🔧 [useAuth] Erro ao inicializar a autenticação:",
     "authStateChange": "🔧 [useAuth] Evento de mudança de estado de autenticação:",
     "authStateChangeError": "Erro ao lidar com a mudança de estado de autenticação:",
-    "authInitError": "🔧 [useAuth] Erro ao inicializar a autenticação:",
     "cleaningUp": "🔧 [useAuth] Limpando provedor de autenticação.",
-    "noRoleFoundWarning": "Nenhuma função encontrada no banco de dados, padrão para registrado"
+    "facebookSignInError": "🔐 Erro de login do Facebook:",
+    "facebookSignInFailed": "🔐 Login do Facebook falhou:",
+    "facebookSignInInitiated": "🔐 Login do Facebook iniciado",
+    "googleSignInError": "🔐 Erro de login do Google:",
+    "googleSignInFailed": "🔐 Login do Google falhou:",
+    "googleSignInInitiated": "🔐 Login do Google iniciado",
+    "noRoleFoundWarning": "Nenhuma função encontrada no banco de dados, padrão para registrado",
+    "oauthRedirectUrl": "🔐 URL de redirecionamento OAuth:",
+    "profileUpdateReceived": "🔧 [useAuth] Atualização de perfil recebida, recarregando função.",
+    "removingSubscriptions": "🔧 [useAuth] Removendo assinaturas em tempo real.",
+    "roleChangeDetected": "🔧 [useAuth] Mudança de função detectada, recarregando função.",
+    "rolesChannelError": "[useAuth] Erro ao se inscrever no canal de funções:",
+    "settingUpSubscriptions": "🔧 [useAuth] Configurando assinaturas em tempo real para o usuário:",
+    "signOutError": "🔧 [useAuth] Erro ao sair:",
+    "signingInApple": "🔐 Entrando com a Apple",
+    "signingInFacebook": "🔐 Entrando com o Facebook",
+    "signingInGoogle": "🔐 Entrando com o Google",
+    "subscribedToRolesChannel": "🔧 [useAuth] Inscrito no canal roles_permissions.",
+    "subscribedToUserChannel": "🔧 [useAuth] Inscrito no canal do usuário:",
+    "subscriptionRemoveError": "🔧 [useAuth] Erro ao remover assinaturas:",
+    "subscriptionSetupError": "🔧 [useAuth] Erro ao configurar assinaturas:",
+    "userChannelError": "[useAuth] Erro ao se inscrever no canal do usuário:"
   },
   "authStateLoading": "Estado de autenticação carregando, aguardando...",
   "authStateNotLoaded": "Estado de autenticação ainda não carregado, aguardando...",
@@ -536,7 +514,6 @@
   "autoTranslationDescription": "Traduza automaticamente as mensagens recebidas",
   "averageSessionTime": "Tempo Médio da Sessão",
   "back": "Voltar",
-  "backText": "Voltar",
   "backToAdmin": "Voltar para Admin",
   "backToSwiping": "Voltar a deslizar",
   "backupDatabase": "Fazer Backup do Banco de Dados",
@@ -549,14 +526,14 @@
   "banReasonLabel": "Motivo do Banimento",
   "banReasonPlaceholder": "Explique o motivo do banimento...",
   "banReasons": {
-    "inappropriateContent": "Conteúdo inadequado",
-    "spamFakeProfile": "Spam ou perfil falso",
-    "harassment": "Assédio",
-    "violatingTerms": "Violação dos termos de serviço",
+    "accountDeleted": "Conta excluída pelo administrador",
+    "bannedByAdmin": "Banido pelo administrador",
     "custom": "Motivo personalizado",
     "customReason": "Motivo personalizado",
-    "bannedByAdmin": "Banido pelo administrador",
-    "accountDeleted": "Conta excluída pelo administrador"
+    "harassment": "Assédio",
+    "inappropriateContent": "Conteúdo inadequado",
+    "spamFakeProfile": "Spam ou perfil falso",
+    "violatingTerms": "Violação dos termos de serviço"
   },
   "banStatusUpdated": "Status de banimento atualizado",
   "banText": "Banir",
@@ -634,8 +611,8 @@
   "completeProfileToBeDiscovered": "Complete seu perfil e seja descoberto por mais pessoas!",
   "completeProfileToGetLikes": "Complete seu perfil e adicione fotos!",
   "completeProfileToStart": "Complete seu perfil para começar a descobrir pessoas incríveis",
+  "confirm": "Confirm",
   "confirmDeleteUser": "Tem certeza de que deseja excluir este usuário? Esta ação não pode ser desfeita.",
-  "confirmText": "Confirmar",
   "connectionError": "Erro de Conexão",
   "contactSales": "Contate nossa equipe de vendas",
   "contactSupport": "Contatar Suporte",
@@ -649,7 +626,7 @@
   "contentUpdateSuccess": "O conteúdo foi atualizado com sucesso",
   "contentUpdated": "Conteúdo atualizado",
   "contentUpdatedSuccessfully": "Conteúdo atualizado com sucesso",
-  "continueText": "Continuar",
+  "continue": "Continue",
   "continueWithApple": "Continuar com a Apple",
   "continueWithFacebook": "Continuar com o Facebook",
   "continueWithGoogle": "Continuar com o Google",
@@ -680,73 +657,73 @@
   "days90": "90 dias",
   "daysAgo": "dias atrás",
   "debug": {
+    "app": {
+      "appStateError": "❌ Erro no estado do aplicativo:",
+      "appStateInitializing": "🚀 Inicializando estado do aplicativo...",
+      "appStateReady": "✅ Estado do aplicativo pronto"
+    },
     "matches": {
-      "fetching": "🚀 Buscando combinações com consulta direta ao Supabase",
       "fetchError": "Erro ao buscar combinações:",
       "fetchSuccess": "✅ {{count}} combinações buscadas",
+      "fetching": "🚀 Buscando combinações com consulta direta ao Supabase",
       "newMatchDetected": "Nova combinação detectada, buscando novamente..."
     },
+    "network": {
+      "connectionLost": "📶 Conexão perdida",
+      "connectionRestored": "🌐 Conexão restaurada",
+      "featuresUnavailable": "⚠️ Alguns recursos podem estar indisponíveis",
+      "syncingWithServer": "🔄 Sincronizando com o servidor..."
+    },
     "profiles": {
-      "queryingUserCount": "👤 Consultando contagem de usuários...",
-      "totalUsers": "📊 Contagem total de usuários: {count}}",
-      "queryingRoleBasedUsers": "🎭 Consultando usuários baseados em função...",
-      "roleBasedUserCount": "🎯 Contagem de usuários filtrados por função: {count}}",
-      "queryingActiveUsers": "🟢 Consultando usuários ativos nos últimos 30 dias...",
-      "filteringViewedProfiles": "👁️ Filtrando perfis visualizados...",
-      "excludingViewedProfiles": "🚫 Excluindo {{count}} perfis visualizados",
-      "finalProfileCount": "✅ Contagem final de perfis: {count}}",
-      "fetchingRandomProfiles": "🎲 Buscando {{count}} perfis aleatórios...",
-      "settingProfiles": "📝 Definindo perfis: {count}} perfis",
-      "profilesSet": "✅ Perfis definidos com sucesso",
-      "loadingProfiles": "⏳ Carregando perfis...",
-      "profilesLoaded": "✅ Perfis carregados: {count}} perfis",
-      "fetchError": "❌ Erro ao buscar perfil:",
-      "swipeError": "❌ Erro ao deslizar:",
-      "noMoreProfiles": "📭 Não há mais perfis",
-      "likeSent": "💖 Like enviado - {{profileId}}",
-      "superLikeSent": "⭐ Super like enviado - {{profileId}}",
-      "profilePassed": "⏭️ Perfil passado - {{profileId}}",
       "actionError": "❌ Erro de ação:",
-      "initiatingLike": "🚀 Iniciando like",
-      "likeAction": "💝 Ação de like: {userId}} -> {{profileId}}",
       "checkingMutualLike": "🔄 Verificando like mútuo...",
-      "mutualLikeCheck": "💕 Status de like mútuo: {isMutual}}",
-      "processingMatch": "⚡ Processando combinação...",
+      "excludingViewedProfiles": "🚫 Excluindo {{count}} perfis visualizados",
+      "fetchError": "❌ Erro ao buscar perfil:",
+      "fetchingRandomProfiles": "🎲 Buscando {{count}} perfis aleatórios...",
+      "filteringViewedProfiles": "👁️ Filtrando perfis visualizados...",
+      "finalProfileCount": "✅ Contagem final de perfis: {{count}}",
+      "initiatingLike": "🚀 Iniciando like",
+      "likeAction": "💝 Ação de like: {{userId}} -> {{profileId}}",
+      "likeSent": "💖 Like enviado - {{profileId}}",
+      "loadingProfiles": "⏳ Carregando perfis...",
       "matchCreated": "🎉 NOVA COMBINAÇÃO! {{userId}} ↔ {{profileId}}",
-      "refreshingProfiles": "🔄 Atualizando perfis..."
+      "mutualLikeCheck": "💕 Status de like mútuo: {{isMutual}}",
+      "noMoreProfiles": "📭 Não há mais perfis",
+      "processingMatch": "⚡ Processando combinação...",
+      "profilePassed": "⏭️ Perfil passado - {{profileId}}",
+      "profilesLoaded": "✅ Perfis carregados: {{count}} perfis",
+      "profilesSet": "✅ Perfis definidos com sucesso",
+      "queryingActiveUsers": "🟢 Consultando usuários ativos nos últimos 30 dias...",
+      "queryingRoleBasedUsers": "🎭 Consultando usuários baseados em função...",
+      "queryingUserCount": "👤 Consultando contagem de usuários...",
+      "refreshingProfiles": "🔄 Atualizando perfis...",
+      "roleBasedUserCount": "🎯 Contagem de usuários filtrados por função: {{count}}",
+      "settingProfiles": "📝 Definindo perfis: {{count}} perfis",
+      "superLikeSent": "⭐ Super like enviado - {{profileId}}",
+      "swipeError": "❌ Erro ao deslizar:",
+      "totalUsers": "📊 Contagem total de usuários: {{count}}"
     },
     "subscription": {
-      "loadingSubscription": "📋 Carregando informações da assinatura...",
-      "subscriptionLoaded": "✅ Assinatura carregada:",
-      "loadError": "❌ Erro ao carregar assinatura:",
       "checkingTier": "🔍 Verificando nível da assinatura:",
-      "tierCheckResult": "📊 Resultado da verificação de nível:",
-      "startingStatusCheck": "🚀 Iniciando verificação de status da assinatura...",
-      "loadingUserProfile": "👤 Carregando perfil do usuário:",
-      "profileLoaded": "✅ Perfil carregado:",
       "fetchingSubscription": "📥 Buscando informações da assinatura:",
-      "subscriptionData": "📋 Dados da assinatura:",
-      "subscriptionActive": "✅ Assinatura ativa encontrada:",
+      "loadError": "❌ Erro ao carregar assinatura:",
+      "loadingSubscription": "📋 Carregando informações da assinatura...",
+      "loadingUserProfile": "👤 Carregando perfil do usuário:",
       "noActiveSubscription": "❌ Nenhuma assinatura ativa encontrada",
-      "updatingSubscription": "💾 Atualizando assinatura:",
-      "subscriptionUpdated": "✅ Assinatura atualizada:",
-      "updateError": "❌ Erro ao atualizar assinatura:",
-      "premiumUserCheck": "👑 Verificação de usuário premium:",
-      "premiumUserStatus": "📊 Status de usuário premium:",
+      "premiumAccessResult": "📊 Resultado do acesso premium:",
       "premiumCheckComplete": "✅ Verificação premium concluída:",
       "premiumFeatureAccess": "🔓 Acesso a recursos premium:",
-      "premiumAccessResult": "📊 Resultado do acesso premium:"
-    },
-    "network": {
-      "connectionRestored": "🌐 Conexão restaurada",
-      "syncingWithServer": "🔄 Sincronizando com o servidor...",
-      "connectionLost": "📶 Conexão perdida",
-      "featuresUnavailable": "⚠️ Alguns recursos podem estar indisponíveis"
-    },
-    "app": {
-      "appStateInitializing": "🚀 Inicializando estado do aplicativo...",
-      "appStateReady": "✅ Estado do aplicativo pronto",
-      "appStateError": "❌ Erro no estado do aplicativo:"
+      "premiumUserCheck": "👑 Verificação de usuário premium:",
+      "premiumUserStatus": "📊 Status de usuário premium:",
+      "profileLoaded": "✅ Perfil carregado:",
+      "startingStatusCheck": "🚀 Iniciando verificação de status da assinatura...",
+      "subscriptionActive": "✅ Assinatura ativa encontrada:",
+      "subscriptionData": "📋 Dados da assinatura:",
+      "subscriptionLoaded": "✅ Assinatura carregada:",
+      "subscriptionUpdated": "✅ Assinatura atualizada:",
+      "tierCheckResult": "📊 Resultado da verificação de nível:",
+      "updateError": "❌ Erro ao atualizar assinatura:",
+      "updatingSubscription": "💾 Atualizando assinatura:"
     }
   },
   "debugCheckAgain": "Verificar novamente",
@@ -772,7 +749,7 @@
   "description": "Descrição",
   "deselectAll": "Desmarcar Todos",
   "developmentMode": "⚠️ MODO DE DESENVOLVIMENTO",
-  "developmentModeAccess": "Acesso ao modo de desenvolvimento concedido. Função: {role}}",
+  "developmentModeAccess": "Acesso ao modo de desenvolvimento concedido. Função: {{role}}",
   "developmentModeNote": "Acesso ao modo de desenvolvimento",
   "disableMaintenanceMode": "Desativar Modo de Manutenção",
   "discount": "Desconto",
@@ -792,7 +769,7 @@
   "dismiss": "Dispensar",
   "dismissed": "Dispensado",
   "distance": "Distância",
-  "distanceKm": "{{distance}} km",
+  "distanceKm": "{{{distance}}} km",
   "dragDropPhotos": "Arraste e solte fotos ou clique para selecionar",
   "dragToReorder": "Arraste as fotos para reordená-las",
   "drinking": "Bebida",
@@ -806,6 +783,7 @@
   "editProfile": "Editar Perfil",
   "editProfileDescription": "Edite seu perfil e consiga mais combinações",
   "editText": "Editar",
+  "editToChangeInterests": "Click edit to change interests",
   "editUser": "Editar Usuário",
   "editingPlan": "Editando plano",
   "education": "Educação",
@@ -832,10 +810,23 @@
   "enterName": "Digite seu nome",
   "enterYourName": "Digite seu nome",
   "enterYourNamePlaceholder": "Digite seu nome",
-  "error": "Erro",
+  "error": {
+    "details": "Error details",
+    "general": {
+      "occurred": "An error occurred"
+    },
+    "goHome": "Go to home",
+    "refresh": "Refresh page"
+  },
   "error.404.message": "Oops! Página não encontrada",
   "error.404.returnHome": "Voltar para a página inicial",
   "errorBanningUser": "Ocorreu um erro ao banir o usuário.",
+  "errorBoundary": {
+    "errorDetails": "Error details",
+    "goToHomePage": "Go to home page",
+    "refreshPage": "Refresh page",
+    "title": "An error occurred"
+  },
   "errorDeletingUser": "Ocorreu um erro ao excluir o usuário.",
   "errorLoadingUsers": "Ocorreu um erro ao carregar os usuários.",
   "errorLogs": "Logs de Erro",
@@ -845,8 +836,6 @@
   "errorToastTitle": "Erro",
   "errorUnbanningUser": "Ocorreu um erro ao desbanir o usuário.",
   "errorUpdatingRole": "Ocorreu um erro ao atualizar a função.",
-  "eslesmeKaldir": "Desfazer combinação",
-  "eslestiniz": "Vocês combinaram!",
   "everyone": "Todos",
   "exclusiveEvents": "Eventos Exclusivos",
   "exclusiveFilters": "Filtros de busca exclusivos",
@@ -878,28 +867,17 @@
   "faqPlanChangeQ": "Posso mudar meu plano?",
   "faqTitle": "Perguntas Frequentes",
   "feature": {
-    "basicMatching": "Combinação básica",
     "advancedFilters": "Filtros avançados",
-    "seeWhoLikesYou": "Veja quem curtiu você",
+    "basicMatching": "Combinação básica",
+    "hdVideoCalls": "HD Video Calls",
+    "invisibleBrowsing": "Invisible Browsing",
+    "passport": "Passport",
+    "profileAnalytics": "Profile Analytics",
     "rewind": "Voltar",
-    "voiceCalls": "Chamadas de voz",
-    "videoCalls": "Chamadas de vídeo",
-    "unlimitedLikes": "Likes ilimitados",
-    "prioritySupport": "Suporte prioritário",
-    "adFree": "Sem anúncios",
-    "premiumBadge": "Selo Premium",
-    "invisibleMode": "Modo invisível",
-    "readReceipts": "Recibos de leitura",
-    "superLikes": "Super Likes",
-    "boosts": "Boosts",
-    "dailyLikes": "Likes diários",
-    "requires": {
-      "silver": "Requer assinatura Prata",
-      "gold": "Requer assinatura Ouro",
-      "platinum": "Requer assinatura Platina",
-      "admin": "Requer acesso de administrador",
-      "premium": "Requer assinatura Premium"
-    }
+    "seeWhoLikesYou": "Veja quem curtiu você",
+    "translation": "Translation",
+    "vipMatching": "VIP Matching",
+    "voiceCalls": "Chamadas de voz"
   },
   "feature.advancedFilters": "Filtros avançados",
   "feature.allFilters": "Todos os filtros",
@@ -938,7 +916,36 @@
   "feature.voiceCalls": "Chamadas de voz",
   "featureFlags": "Sinalizadores de Recurso",
   "featureInDevelopment": "Este recurso está atualmente em desenvolvimento. Mais detalhes com a assinatura Premium!",
-  "features": "Recursos",
+  "features": {
+    "advancedFilters": {
+      "description": "Filter by education, job, height, lifestyle and more"
+    },
+    "dailyLikes": {
+      "count": "{{count}} Daily Likes",
+      "description50": "Boost your chances with 50 daily likes instead of 10"
+    },
+    "disableAds": {
+      "description": "Tired of seeing advertisements? Disable them from showing!",
+      "tier": "Silver+",
+      "title": "Disable Ads"
+    },
+    "monthlyBoosts": {
+      "count": "{{count}} Boost per Month",
+      "description1": "Get 10x more visibility with monthly profile boost"
+    },
+    "seeWhoLikesYou": {
+      "description": "Discover who already liked your profile and start matching instantly"
+    },
+    "superLikes": {
+      "count": "{{count}} Super Likes",
+      "description5": "Stand out with 5 super likes per day"
+    },
+    "verifiedBadge": {
+      "description": "Show others that you are a legitimate user with this awesome badge",
+      "free": "Free with verification",
+      "title": "Verified Badge"
+    }
+  },
   "features.dailyLikes": "{{count}} likes diários",
   "features.dailySuperlikes": "{{count}} super likes diários",
   "features.monthlyBoosts": "{{count}} boosts mensais",
@@ -998,14 +1005,37 @@
   "googlePayFailed": "Pagamento com Google Pay falhou",
   "googlePaySuccess": "✅ Pagamento com Google Pay bem-sucedido",
   "googleSignInError": "Login com o Google falhou",
-  "gotItText": "Entendi",
+  "gotIt": "Got it",
   "grantFailed": "Concessão falhou",
   "grantSubscription": "Conceder Assinatura",
   "grantTierForDays": "Conceder {{tier}} por {{duration}} dias",
   "granting": "Concedendo...",
   "growthRate": "Taxa de Crescimento",
   "guestNamePlaceholder": "Ana",
-  "guests": "Visitantes",
+  "guestService": {
+    "accessControlError": "Error during access control",
+    "accessDenied": "Access denied",
+    "anonymous": "Anonymous",
+    "errorRetrievingStats": "Error while retrieving statistics",
+    "errorRetrievingVisitors": "Error occurred while retrieving visitors",
+    "noProfileVisitorsYet": "No profile visitors yet",
+    "profileVisitorsFound": "{{count}} profile visitors found",
+    "silverMembershipRequired": "Silver membership or higher required to view profile visitors",
+    "unableToHideVisitor": "Unable to hide visitor",
+    "unableToRetrieveVisitors": "Unable to retrieve visitors",
+    "visitorHidden": "Visitor hidden"
+  },
+  "guests": {
+    "distanceUnit": "km",
+    "goldPlus": "Gold+",
+    "tiers": {
+      "gold": "Gold",
+      "platinum": "Platinum",
+      "silver": "Silver"
+    },
+    "title": "Visitors",
+    "yearsOld": "years old"
+  },
   "happyCouples": "Casais Felizes",
   "harassment": "Assédio",
   "hasAccountSignIn": "Já tem uma conta? Faça login",
@@ -1013,6 +1043,63 @@
   "heightLabel": "Altura (cm)",
   "heightPlaceholder": "Sua altura (cm)",
   "help": "Ajuda",
+  "helpCenter": {
+    "accountDeleteAnswer": "Go to Settings > Account > Delete Account. This action is permanent and cannot be undone.",
+    "accountDeleteQuestion": "How do I delete my account?",
+    "additionalResourcesTitle": "Additional Resources",
+    "appNotWorkingAnswer": "Try restarting the app, check your internet connection, update to the latest version, or contact support.",
+    "appNotWorkingQuestion": "The app is not working properly, what should I do?",
+    "communityForumButton": "Community Forum",
+    "contactFormMissingInfoToastDescription": "Please fill in all required fields",
+    "contactFormMissingInfoToastTitle": "Missing Information",
+    "contactFormSuccessToastDescription": "We'll get back to you as soon as possible",
+    "contactFormSuccessToastTitle": "Message Sent",
+    "contactFormTitle": "Contact Support",
+    "emailPlaceholder": "your.email@example.com",
+    "gettingStartedFaq": "Getting Started",
+    "helpCenterDescription": "Find answers to common questions or contact our support team",
+    "howMatchingWorksAnswer": "Our algorithm considers your preferences, location, interests, and activity to show you compatible profiles.",
+    "howMatchingWorksQuestion": "How does the matching system work?",
+    "howToAddPhotosAnswer": "Go to your profile settings, tap 'Add Photos', select from your gallery or take new photos. You can add up to 6 photos.",
+    "howToAddPhotosQuestion": "How do I add photos to my profile?",
+    "howToBlockUserAnswer": "Go to their profile, tap the three dots menu, and select 'Block'. They won't be able to see or contact you.",
+    "howToBlockUserQuestion": "How do I block someone?",
+    "howToCancelSubscriptionAnswer": "Go to Settings > Subscription to cancel. You can also cancel through your app store subscription settings.",
+    "howToCancelSubscriptionQuestion": "How can I cancel my subscription?",
+    "howToCreateProfileAnswer": "To create a profile, sign up with your email, add photos, write a bio, and verify your account for better matches.",
+    "howToCreateProfileQuestion": "How do I create a profile?",
+    "howToReportUserAnswer": "On their profile, tap the three dots menu and select 'Report'. Choose the reason and provide details.",
+    "howToReportUserQuestion": "How do I report a user?",
+    "howToVerifyProfileAnswer": "Go to profile settings and follow the verification process. Take a selfie matching the pose shown to get verified.",
+    "howToVerifyProfileQuestion": "How do I verify my profile?",
+    "liveChatButton": "Live Chat",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Describe your issue or question in detail...",
+    "namePlaceholder": "Your full name",
+    "notReceivingNotificationsAnswer": "Check your device settings, ensure notifications are enabled for the app, and verify your notification preferences.",
+    "notReceivingNotificationsQuestion": "I'm not receiving notifications, how to fix this?",
+    "quickAccessChatAction": "Start Chat",
+    "quickAccessChatDescription": "Chat with our support team in real-time",
+    "quickAccessEmailAction": "Send Email",
+    "quickAccessEmailDescription": "Send us an email for detailed support",
+    "quickAccessPhoneAction": "Call Now",
+    "quickAccessPhoneDescription": "Call our support hotline",
+    "quickAccessPhoneTitle": "Phone Support",
+    "refundPolicyAnswer": "Refunds are handled according to app store policies. Contact support for assistance with refund requests.",
+    "refundPolicyQuestion": "What is the refund policy?",
+    "safetyFaq": "Safety & Security",
+    "safetyGuideButton": "Safety Guide",
+    "safetyTipsAnswer": "Always meet in public places, tell friends your plans, trust your instincts, and never share personal information early.",
+    "safetyTipsQuestion": "What are the safety tips for dating?",
+    "sendMessageButton": "Send Message",
+    "subjectLabel": "Subject",
+    "subjectPlaceholder": "What can we help you with?",
+    "subscriptionFaq": "Subscription & Billing",
+    "technicalFaq": "Technical Support",
+    "userGuideButton": "User Guide",
+    "whatIsPremiumAnswer": "Premium includes unlimited likes, super likes, profile boosts, advanced filters, read receipts, and ad-free browsing.",
+    "whatIsPremiumQuestion": "What features are included in Premium?"
+  },
   "helpCenterDescription": "Como podemos ajudar?",
   "helpCenterTitle": "Central de Ajuda",
   "helpDesc": "FAQ e suporte",
@@ -1132,6 +1219,7 @@
   "interest.cooking": "Culinária",
   "interest.cycling": "Ciclismo",
   "interest.dance": "Dança",
+  "interest.design": "Design",
   "interest.fashion": "Moda",
   "interest.fitness": "Fitness",
   "interest.food": "Comida",
@@ -1145,6 +1233,7 @@
   "interest.nature": "Natureza",
   "interest.photography": "Fotografia",
   "interest.piano": "Piano",
+  "interest.poetry": "Poetry",
   "interest.reading": "Leitura",
   "interest.running": "Corrida",
   "interest.sports": "Esportes",
@@ -1195,9 +1284,9 @@
   "interestsTitle": "Interesses",
   "interface": {
     "moreProfiles": "+{{count}} mais perfis",
-    "syncing": "Sincronizando...",
+    "syncData": "Sincronizar Dados",
     "syncSuccess": "Dados sincronizados com sucesso",
-    "syncData": "Sincronizar Dados"
+    "syncing": "Sincronizando..."
   },
   "introduceYourself": "Apresente-se... (Pelo menos 20 caracteres)",
   "invalidEmail": "Endereço de e-mail inválido",
@@ -1217,9 +1306,9 @@
   "languageUpdateError": "Erro ao atualizar idioma",
   "languageUpdated": "Idioma atualizado",
   "languages": {
-    "turkish": "Turco",
     "english": "Inglês",
-    "swedish": "Sueco"
+    "swedish": "Sueco",
+    "turkish": "Turco"
   },
   "languagesSelected": "{{count}}/5 selecionados",
   "languagesTitle": "Idiomas (Máx. 5)",
@@ -1249,29 +1338,21 @@
   "likes.viewProfiles": "Ver perfis que você curtiu",
   "likesStats": "Likes",
   "limit": {
-    "daily": {
-      "likes": "Limite diário de likes atingido",
-      "superLikes": "Limite diário de super likes atingido"
-    },
     "description": {
       "dailyLikes": "Atualize para likes ilimitados",
       "dailySuperLikes": "Atualize para mais super likes",
       "monthlyBoosts": "Você atingiu seu limite mensal de boost"
     },
-    "monthly": {
-      "boosts": "Limite mensal de boost atingido"
-    },
-    "remaining": "restante",
+    "exceeded": "Limit Exceeded",
     "title": {
-      "dailyLikes": "Limite Diário de Likes",
       "dailySuperLikes": "Limite de Super Likes"
     }
   },
   "limited": "Limitado",
   "limits": {
     "reached": "Limite Atingido",
-    "systemReady": "Sistema pronto",
     "systemNotReady": "Sistema não pronto",
+    "systemReady": "Sistema pronto",
     "upgrade": "Atualizar"
   },
   "loadFailed": "Falha no Carregamento",
@@ -1288,7 +1369,13 @@
   "loadingUsers": "Carregando Usuários",
   "loadingUsersDescription": "Aguarde enquanto buscamos os dados do usuário...",
   "loadingUsersTitle": "Carregando Usuários",
-  "location": "Localização",
+  "location": {
+    "notSupported": "Geolocation is not supported by this browser.",
+    "permissionDenied": "Location access denied by user",
+    "positionUnavailable": "Location information unavailable",
+    "timeout": "Location request timed out",
+    "unknownError": "An unknown error occurred while getting your location."
+  },
   "location1": "Nova Iorque",
   "location2": "Los Angeles",
   "location3": "Chicago",
@@ -1314,7 +1401,7 @@
   "makeAdmin": "Tornar Admin",
   "makeModerator": "Tornar Moderador",
   "makeProfileMoreActive": "Torne seu perfil mais ativo, deixe mais pessoas notarem você!",
-  "makeRole": "Tornar {{{role}}}",
+  "makeRole": "Tornar {{role}}",
   "male": "Homem",
   "manageContent": "Gerenciar Conteúdo",
   "managePlans": "Gerenciar Planos",
@@ -1334,7 +1421,6 @@
   "maximumDistance": "Distância máxima",
   "men": "Homens",
   "menu": "Menu",
-  "mesajAt": "Enviar Mensagem",
   "messageBeforeMatch": "Mensagem Antes da Combinação",
   "messageModeration": "Moderação de Mensagens",
   "messageRequired": "Mensagem obrigatória",
@@ -1345,7 +1431,7 @@
   "metaTitle": "Meta Título",
   "metaTitlePlaceholder": "Título da página (60 caracteres)",
   "minAgeLabel": "{{age}} anos",
-  "minCharsRemaining": "Pelo menos mais {{{count}}} caracteres",
+  "minCharsRemaining": "Pelo menos mais {{count}} caracteres",
   "minTwoPhotos": "Você precisa adicionar pelo menos 2 fotos",
   "minimumAge": "Idade mínima",
   "minutesAgo": "minutos atrás",
@@ -1353,57 +1439,58 @@
   "missionDescription": "Descrição da Missão",
   "missionTitle": "Título da Missão",
   "moderation": {
-    "title": "Moderação de Conteúdo",
     "actions": {
       "approve": "Aprovar",
-      "reject": "Rejeitar",
-      "flag": "Sinalizar"
+      "flag": "Sinalizar",
+      "reject": "Rejeitar"
     },
     "dialogs": {
       "approve": {
-        "title": "Aprovar Conteúdo",
-        "description": "Este conteúdo será aprovado e ficará visível para os usuários."
-      },
-      "reject": {
-        "title": "Rejeitar Conteúdo",
-        "description": "Este conteúdo será rejeitado e removido do sistema."
+        "description": "Este conteúdo será aprovado e ficará visível para os usuários.",
+        "title": "Aprovar Conteúdo"
       },
       "flag": {
-        "title": "Sinalizar Conteúdo",
-        "description": "Este conteúdo será sinalizado para revisão posterior."
+        "description": "Este conteúdo será sinalizado para revisão posterior.",
+        "title": "Sinalizar Conteúdo"
+      },
+      "reject": {
+        "description": "Este conteúdo será rejeitado e removido do sistema.",
+        "title": "Rejeitar Conteúdo"
       }
     },
-    "success": "Conteúdo {{action}} concluído com sucesso",
-    "failed": "Falha ao {{action}} conteúdo",
     "error": "Ocorreu um erro durante a moderação",
-    "unknownUser": "Usuário Desconhecido",
-    "profilePhoto": "Foto de Perfil",
-    "reason": "Motivo",
-    "notes": "Notas",
-    "notesPlaceholder": "Digite suas notas de moderação...",
-    "reasonPlaceholder": "Selecione o motivo da rejeição ou sinalização...",
-    "pending": {
-      "title": "Revisão Pendente",
-      "description": "Conteúdo aguardando aprovação de moderação",
-      "noPending": "Nenhum Conteúdo Pendente",
-      "allReviewed": "Todo o conteúdo enviado foi revisado"
-    },
-    "stats": {
-      "totalFiles": "Total de Arquivos",
-      "originalSize": "Tamanho Original",
-      "compressedSize": "Tamanho Comprimido",
-      "avgCompression": "Compressão Média",
-      "spaceSaved": "Espaço Economizado"
-    },
+    "failed": "Falha ao {{action}} conteúdo",
     "fileInfo": {
+      "compressed": "Comprimido:",
       "file": "Arquivo:",
       "size": "Tamanho:",
-      "compressed": "Comprimido:",
       "uploaded": "Enviado:"
-    }
+    },
+    "notes": "Notas",
+    "notesPlaceholder": "Digite suas notas de moderação...",
+    "pending": {
+      "allReviewed": "Todo o conteúdo enviado foi revisado",
+      "description": "Conteúdo aguardando aprovação de moderação",
+      "noPending": "Nenhum Conteúdo Pendente",
+      "title": "Revisão Pendente"
+    },
+    "profilePhoto": "Foto de Perfil",
+    "reason": "Motivo",
+    "reasonPlaceholder": "Selecione o motivo da rejeição ou sinalização...",
+    "stats": {
+      "avgCompression": "Compressão Média",
+      "compressedSize": "Tamanho Comprimido",
+      "originalSize": "Tamanho Original",
+      "spaceSaved": "Espaço Economizado",
+      "totalFiles": "Total de Arquivos"
+    },
+    "success": "Conteúdo {{action}} concluído com sucesso",
+    "title": "Moderação de Conteúdo",
+    "unknownUser": "Usuário Desconhecido"
   },
   "moderationQueue": "Fila de Moderação",
   "moderator": "Moderador",
+  "moderatorAccess": "🛡️ Moderator Access - All Premium Features Included",
   "moderatorPanel": "Painel do Moderador",
   "moderatorPermissions": {
     "description": "Quais permissões de moderador você gostaria de ativar para este usuário?",
@@ -1439,6 +1526,12 @@
   },
   "needHelp": "Precisa de ajuda?",
   "networkError": "Erro de Rede",
+  "networkStatus": {
+    "connectionLost": "Connection lost",
+    "connectionRestored": "Connection restored",
+    "featuresUnavailable": "Some features may be unavailable",
+    "syncingWithServer": "Syncing with server..."
+  },
   "new": "novo",
   "newLike": "Novo Like",
   "newMatch": "Nova Combinação!",
@@ -1516,7 +1609,7 @@
   "occupationLabel": "Ocupação",
   "occupationPlaceholder": "Sua ocupação",
   "offline": "Offline",
-  "okText": "OK",
+  "ok": "OK",
   "onboarding.birthDate.question": "Digite sua data de nascimento",
   "onboarding.birthDate.tooYoung": "Você deve ter pelo menos 18 anos",
   "onboarding.birthDate.warning": "⚠️ Esta informação não pode ser alterada posteriormente",
@@ -1743,7 +1836,26 @@
   "portalError": "Erro no Portal",
   "portalUrlError": "Não foi possível obter a URL do portal",
   "postDuringPeakHours": "Postar durante os horários de pico",
-  "preferences": "Preferências",
+  "preferences": {
+    "createError": "Error creating default preferences:",
+    "created": "Default preferences created:",
+    "creating": "Creating default preferences for user:",
+    "fetchError": "Error fetching preferences:",
+    "generalError": "Error in fetchPreferences:",
+    "loaded": "Preferences loaded:",
+    "saveError": {
+      "description": "Settings could not be saved, please try again",
+      "title": "Error"
+    },
+    "saved": {
+      "description": "Your preferences have been updated and saved permanently",
+      "title": "Settings saved"
+    },
+    "updateError": "Error updating preferences:",
+    "updateNoUser": "Cannot update preferences: no user or preferences",
+    "updateSuccess": "Preferences updated successfully:",
+    "updating": "Updating preferences with:"
+  },
   "preferencesSavedToastDesc": "Os perfis serão atualizados de acordo com suas novas preferências.",
   "preferencesSavedToastTitle": "Preferências salvas",
   "premium": "Premium",
@@ -1778,9 +1890,9 @@
   "processing": "Processando...",
   "processingText": "Processando...",
   "profile": "Perfil",
-  "profile.about.remainingChars": "{{{count}}} caracteres restantes",
+  "profile.about.remainingChars": "{{count}} caracteres restantes",
   "profile.bio.about": "Sobre",
-  "profile.bio.minCharsRemaining": "Pelo menos mais {{{count}}} caracteres",
+  "profile.bio.minCharsRemaining": "Pelo menos mais {{count}} caracteres",
   "profile.bio.placeholder": "Apresente-se... (Pelo menos 20 caracteres)",
   "profile.bio.placeholderEnd": " (Mínimo de 20 caracteres)",
   "profile.bio.placeholderStart": "Apresente-se... ",
@@ -1791,20 +1903,24 @@
   "profile.gender.other": "Outro",
   "profile.interests.choose": "Escolha seus interesses",
   "profile.interests.maxReached": "Você pode selecionar no máximo {{max}} interesses",
-  "profile.interests.selected": "{{{count}}} selecionados",
+  "profile.interests.selected": "{{count}} selecionados",
   "profile.location.label": "Localização",
   "profile.location.placeholder": "Cidade, Distrito",
   "profile.occupation.label": "Ocupação",
   "profile.occupation.placeholder": "Sua ocupação",
   "profileAnalytics": "Análise de Perfil",
   "profileBoost": "Destaque de Perfil",
+  "profileCompletionCardDescription": "Complete your profile to increase your match potential",
+  "profileCompletionCardTitle": "Profile Completion",
+  "profileCompletionCompletedLabel": "Complete",
+  "profileCompletionTip": "Add more details to increase your visibility and get better matches",
   "profileDataNotFound": "Dados do perfil não encontrados",
   "profileError": "Erro de Perfil",
   "profileExample1Name": "Emma, 24",
   "profileExample2Name": "James, 27",
   "profileHighlight": "Destaque de Perfil",
   "profileImageAlt": "Perfil",
-  "profileLoadError": "O perfil não pôde ser carregado: {message}}",
+  "profileLoadError": "O perfil não pôde ser carregado: {{message}}",
   "profileModeration": "Moderação de Perfil",
   "profileNotFound": "Perfil não encontrado",
   "profileNotFoundError": "Perfil Não Encontrado",
@@ -1876,6 +1992,7 @@
   "religionLabel": "Religião",
   "religionPlaceholder": "Sua crença religiosa (opcional)",
   "removeFeature": "Remover Recurso",
+  "removeMatch": "Remove Match",
   "report": "Relatar",
   "reportDate": "Data do Relatório",
   "reportDetails": "Detalhes do Relatório",
@@ -1894,13 +2011,16 @@
   "resolvedToday": "Resolvido Hoje",
   "restoreDatabase": "Restaurar Banco de Dados",
   "retentionRates": "Taxas de Retenção",
-  "retryText": "Tentar novamente",
+  "retry": "Retry",
   "revenueAnalytics": "Análise de Receita",
   "reviewReport": "Revisar Relatório",
   "rewind": {
+    "error": {
+      "description": "Failed to rewind swipe",
+      "title": "Rewind Error"
+    },
     "failed": {
       "description": "Não foi possível desfazer o deslize",
-      "error": "Desfazer falhou",
       "title": "Desfazer Falhou"
     },
     "success": {
@@ -1930,12 +2050,14 @@
   "roleUpdatedMessage": "O plano {{role}} foi atualizado com sucesso",
   "roleWillBeAssigned": "função",
   "roles": {
+    "admin": "Admin",
     "makeAdmin": "Tornar Admin",
+    "makeGold": "Tornar Ouro",
     "makeModerator": "Tornar Moderador",
+    "makePlatinum": "Tornar Platina",
     "makeRegistered": "Tornar Registrado",
     "makeSilver": "Tornar Prata",
-    "makeGold": "Tornar Ouro",
-    "makePlatinum": "Tornar Platina"
+    "moderator": "Moderator"
   },
   "safeEnvironment": "Ambiente Seguro",
   "safeEnvironmentDesc": "Sua privacidade e segurança são nossas principais prioridades com perfis verificados",
@@ -2036,6 +2158,80 @@
   "signUp": "Cadastrar",
   "signUpSubtitle": "Junte-se a milhões que encontram o amor",
   "silver": "Prata",
+  "silverFeatureTest": {
+    "additionalTestsTitle": "Additional Tests",
+    "buttons": {
+      "runAll": "Run All Tests",
+      "testAdvancedFilters": "Test Advanced Filters",
+      "testBoost": "Test Boost",
+      "testCalls": "Test Voice/Video Calls",
+      "testLike": "Test Like",
+      "testRewind": "Test Rewind Feature",
+      "testSeeLikes": "Test \"See Who Likes You\"",
+      "testSuperLike": "Test Super Like",
+      "testing": "Testing..."
+    },
+    "currentRole": "Current Role",
+    "description": "Testing all Silver tier features for user: {{email}}",
+    "featureTestsTitle": "Feature Tests",
+    "features": {
+      "advancedFilters": {
+        "description": "Silver users can use advanced filters",
+        "name": "Advanced Filters"
+      },
+      "dailyLikes": {
+        "description": "Silver users get {{count}} daily likes",
+        "name": "{{count}} Daily Likes"
+      },
+      "dailySuperlikes": {
+        "description": "Silver users get {{count}} daily super likes",
+        "name": "{{count}} Daily Super Likes"
+      },
+      "maxPhotos": {
+        "description": "Silver users can upload up to {{count}} photos",
+        "name": "{{count}} Photos Max"
+      },
+      "monthlyBoosts": {
+        "description": "Silver users get {{count}} boost per month",
+        "name": "{{count}} Monthly Boost"
+      },
+      "readReceipts": {
+        "description": "Silver users can see read receipts",
+        "name": "Read Receipts"
+      },
+      "rewindFeature": {
+        "description": "Silver users can rewind their last swipe",
+        "name": "Rewind Feature"
+      },
+      "seeWhoLikesYou": {
+        "description": "Silver users can see who liked them",
+        "name": "See Who Likes You"
+      },
+      "unlimitedMessages": {
+        "description": "Silver users can send unlimited messages",
+        "name": "Unlimited Messages"
+      },
+      "videoCalls": {
+        "description": "Silver users can make video calls",
+        "name": "Video Calls"
+      },
+      "voiceCalls": {
+        "description": "Silver users can make voice calls",
+        "name": "Voice Calls"
+      }
+    },
+    "stats": {
+      "dailyLikes": "Daily Likes",
+      "monthlyBoosts": "Monthly Boosts",
+      "superLikes": "Super Likes"
+    },
+    "status": {
+      "failed": "Failed",
+      "notTested": "Not tested",
+      "passed": "Passed"
+    },
+    "title": "Silver Feature Test"
+  },
   "siteSettings": "Configurações do Site",
   "sixMonthPlan": "Plano de 6 Meses",
   "sixMonthPlanDesc": "20% de desconto + 1 mês grátis",
@@ -2074,77 +2270,78 @@
   "step3Button": "Começar a Conversar",
   "step3Description": "Inicie conversas significativas após a combinação. Planeje seu primeiro encontro!",
   "step3Title": "Converse e Encontre",
-  "submitText": "Enviar",
+  "submit": "Submit",
   "subscription": {
-    "management": {
-      "grant": "Conceder Assinatura",
-      "granted": "Assinatura concedida",
-      "failed": "Concessão falhou",
-      "updating": "Atualizando...",
-      "activate": "Ativar",
-      "deactivate": "Desativar"
-    },
-    "types": {
-      "silver": "Prata (Premium Básico)",
-      "gold": "Ouro (Premium Plus)",
-      "platinum": "Platina (Ultimate)"
-    },
     "durations": {
-      "7days": "7 dias",
       "14days": "14 dias",
       "30days": "30 dias",
       "60days": "60 dias",
+      "7days": "7 dias",
       "90days": "90 dias"
     },
     "features": {
       "dailyLikes": "{{count}} likes diários",
-      "superLikes": "{{count}} super likes",
-      "monthlyBoosts": "{{count}} boosts mensais"
+      "monthlyBoosts": "{{count}} boosts mensais",
+      "superLikes": "{{count}} super likes"
+    },
+    "limits": {
+      "dailyBoosts": "Boosts Diários",
+      "dailyLikes": "Likes Diários",
+      "dailyUsage": "Uso Diário",
+      "more": "mais",
+      "plan": "Plano",
+      "remaining": "restante",
+      "superLikes": "Super Likes"
+    },
+    "manageSubscription": "Gerenciar Assinatura",
+    "management": {
+      "activate": "Ativar",
+      "deactivate": "Desativar",
+      "failed": "Concessão falhou",
+      "grant": "Conceder Assinatura",
+      "granted": "Assinatura concedida",
+      "updating": "Atualizando..."
     },
     "status": {
       "currentPlan": "Plano Atual",
-      "validUntil": "Válido até",
-      "timeRemaining": "Tempo Restante",
       "daysRemaining": "Dias Restantes",
-      "features": "Recursos"
+      "features": "Recursos",
+      "timeRemaining": "Tempo Restante",
+      "validUntil": "Válido até"
     },
-    "limits": {
-      "dailyUsage": "Uso Diário",
-      "dailyLikes": "Likes Diários",
-      "superLikes": "Super Likes",
-      "dailyBoosts": "Boosts Diários",
-      "remaining": "restante",
-      "plan": "Plano",
-      "more": "mais"
-    },
-    "tiers": {
-      "registered": "Grátis",
-      "silver": "Prata",
-      "gold": "Ouro",
-      "platinum": "Platina"
-    },
-    "upgrade": "Atualizar",
     "subscribenow": "Assine Agora",
-    "manageSubscription": "Gerenciar Assinatura"
+    "tiers": {
+      "gold": "Ouro",
+      "platinum": "Platina",
+      "registered": "Grátis",
+      "silver": "Prata"
+    },
+    "types": {
+      "gold": "Ouro (Premium Plus)",
+      "platinum": "Platina (Ultimate)",
+      "silver": "Prata (Premium Básico)"
+    },
+    "upgrade": "Atualizar"
   },
   "subscription.description": "Gerencie sua assinatura e monitore seus limites de uso diário",
   "subscription.error.description": "Ocorreu um erro durante o processo de assinatura",
   "subscription.error.portalError": "O portal de assinatura não pôde ser aberto",
   "subscription.error.title": "Erro de Assinatura",
   "subscription.limits": {
-    "dailyLikes": "Likes Diários",
-    "superLikes": "Super Likes",
-    "dailyBoosts": "Boosts Diários",
-    "dailyUsage": "Uso Diário",
-    "remaining": "restante",
-    "unlimited": "Ilimitado",
-    "dailyLikeLimitReached": "Limite diário de likes atingido",
-    "dailySuperLikeLimitReached": "Limite diário de super likes atingido",
-    "upgradeMessage": "Limite diário atingido? Atualize para mais likes e recursos!",
-    "upgradeTo": "Atualize para:",
     "currentFeatures": "Recursos atuais:",
+    "dailyBoosts": "Boosts Diários",
+    "dailyLikeLimitReached": "Limite diário de likes atingido",
+    "dailyLikes": "Likes Diários",
+    "dailySuperLikeLimitReached": "Limite diário de super likes atingido",
+    "dailyUsage": "Uso Diário",
+    "monthlyBoosts": "Monthly Boosts",
     "more": "mais",
-    "plan": "Plano"
+    "plan": "Plano",
+    "remaining": "restante",
+    "superLikes": "Super Likes",
+    "unlimited": "Ilimitado",
+    "upgradeMessage": "Limite diário atingido? Atualize para mais likes e recursos!",
+    "upgradeTo": "Atualize para:"
   },
   "subscription.manage": "Gerenciar Assinatura",
   "subscription.management.description": "Visite nossa página de atualizações para ver todos os planos disponíveis ou gerencie sua assinatura existente através do portal seguro do Stripe.",
@@ -2152,39 +2349,39 @@
   "subscription.management.title": "Gerenciamento de Assinatura",
   "subscription.management.viewPlans": "Ver Todos os Planos",
   "subscription.status": {
-    "title": "Status da Assinatura",
     "currentPlan": "Plano Atual",
-    "validUntil": "Válido até",
-    "timeRemaining": "Tempo Restante",
     "daysRemaining": "{{days}} dias restantes",
     "expired": "Expirado",
-    "features": "Recursos"
+    "features": "Recursos",
+    "timeRemaining": "Tempo Restante",
+    "title": "Status da Assinatura",
+    "validUntil": "Válido até"
   },
   "subscription.subscribenow": "Assine Agora",
   "subscription.tiers": {
     "free": "Grátis",
-    "registered": "Grátis",
-    "silver": "Prata",
     "gold": "Ouro",
-    "platinum": "Platina"
+    "platinum": "Platina",
+    "registered": "Grátis",
+    "silver": "Prata"
   },
   "subscription.title": "Assinatura e Uso",
   "subscription.upgrade": "Atualizar",
-  "subscriptionActivated": "Assinatura {{{tier}}} ativada!",
+  "subscriptionActivated": "Assinatura {{tier}} ativada!",
   "subscriptionCongratulations": "Parabéns!",
-  "subscriptionEnds": "Termina em: {date}}",
+  "subscriptionEnds": "Termina em: {{date}}",
   "subscriptionExpiresIn": "Sua assinatura expira em",
   "subscriptionExpiringNotification": "Assinatura Expirando",
   "subscriptionExpiringNotificationMessage": "Sua assinatura expira em breve",
   "subscriptionExpiry": "Expiração da Assinatura",
   "subscriptionGranted": "Assinatura Concedida",
-  "subscriptionGrantedDesc": "Assinatura {{{tier}}} concedida por {{{days}}} dias",
+  "subscriptionGrantedDesc": "Assinatura {{tier}} concedida por {{days}} dias",
   "subscriptionHasBeenRenewed": "a assinatura foi renovada",
   "subscriptionManagement": "Gerenciamento de Assinatura",
   "subscriptionRenewedNotification": "Assinatura Renovada",
   "subscriptionRenewedNotificationMessage": "Sua assinatura foi renovada",
   "subscriptionRole": {
-    "description": "Este usuário receberá o pacote de assinatura {{{role}}} e acesso a recursos premium.",
+    "description": "Este usuário receberá o pacote de assinatura {{role}} e acesso a recursos premium.",
     "title": "Autoridade de Assinatura"
   },
   "subscriptionSettingsDesc": "Gerencie sua assinatura e veja os limites de uso",
@@ -2202,6 +2399,8 @@
   "sunday": "Domingo",
   "superLike": "Super Like",
   "superLikeDesc": "Destaque-se com 5 super likes por dia",
+  "superLikeErrorDescription": "Unable to send super like. Please try again.",
+  "superLikeFailed": "Super Like Failed",
   "superLikeFeatureDescription": "Mostre seu interesse especial e receba mais atenção",
   "superLikeFeatureDetail": "Super likes ilimitados",
   "superLikeFeatureTitle": "Super Like",
@@ -2217,17 +2416,19 @@
   "superLikesPerDay": "5 Super Likes/dia",
   "support": "Suporte",
   "support247": "Suporte 24/7",
+  "swipeErrorDescription": "Failed to save your action. Please check your internet connection and try again.",
+  "swipeFailed": "Swipe Failed",
   "swipesReset": "Todos os swipes foram redefinidos com sucesso",
   "swipesResetError": "Falha ao redefinir swipes",
   "system": {
-    "ready": "Sistema pronto",
-    "notReady": "Sistema não pronto",
-    "refresh": "Atualizar",
-    "export": "Exportar",
     "clear": "Limpar",
+    "export": "Exportar",
+    "notReady": "Sistema não pronto",
+    "ready": "Sistema pronto",
+    "refresh": "Atualizar",
     "status": {
-      "on": "LIGADO",
-      "off": "DESLIGADO"
+      "off": "DESLIGADO",
+      "on": "LIGADO"
     }
   },
   "systemBackup": "Backup do Sistema",
@@ -2238,6 +2439,11 @@
   "takeAction": "Tomar Medida",
   "terms": "Termos",
   "termsOfService": "Termos de Serviço",
+  "testServiceRole": {
+    "button": "Test Service Role",
+    "testing": "Testing...",
+    "title": "Test Service Role Key"
+  },
   "testimonial1": "Nós nos conhecemos no 2Sweety e foi amor à primeira conversa! Agora estamos planejando nosso casamento.",
   "testimonial2": "O melhor aplicativo de namoro que já usei. Encontrei meu par perfeito em apenas duas semanas!",
   "testimonial3": "Algoritmo incrível que realmente entende a compatibilidade. Recomendo muito!",
@@ -2254,9 +2460,9 @@
   "thursday": "Quinta-feira",
   "tiers": {
     "basic": "Básico",
-    "silver": "Prata",
     "gold": "Ouro",
-    "platinum": "Platina"
+    "platinum": "Platina",
+    "silver": "Prata"
   },
   "timeoutError": "Tempo limite da solicitação",
   "title": "Título",
@@ -2296,12 +2502,12 @@
   "typeYourMessage": "Digite sua mensagem...",
   "typing": "digitando",
   "unauthorizedAccess": "Acesso Não Autorizado",
-  "unauthorizedAccessDesc": "Você não tem permissão para acessar esta página. Sua função: {role}}",
+  "unauthorizedAccessDesc": "Você não tem permissão para acessar esta página. Sua função: {{role}}",
   "unban": "Remover Banimento",
   "unbanError": "Ocorreu um erro ao desbanir o usuário.",
   "unbanUser": "Desbanir Usuário",
   "unbanningUser": "Desbanindo usuário...",
-  "understoodText": "Entendido",
+  "understood": "Understood",
   "unknown": "Desconhecido",
   "unknownError": "Ocorreu um erro desconhecido",
   "unknownUser": "Usuário Desconhecido",
@@ -2333,9 +2539,9 @@
   "upgradeToViewAnalytics": "Atualize para premium para ver as análises",
   "upload": {
     "noAuthToken": "Nenhum token de autenticação",
-    "uploadFailed": "Falha no envio",
+    "photoDeleteError": "Erro ao excluir foto:",
     "photoUploadError": "Erro ao enviar foto:",
-    "photoDeleteError": "Erro ao excluir foto:"
+    "uploadFailed": "Falha no envio"
   },
   "uploadPhoto": "Enviar foto",
   "uploadPhotos": "Envie suas fotos",
@@ -2381,32 +2587,32 @@
   },
   "value": "Valor",
   "verification": {
-    "title": "Seja Verificado",
+    "comingSoon": "Em breve",
     "description": "Mostre aos outros que você é um usuário legítimo com o selo de verificado",
+    "emailInstructions": "Enviaremos um link de verificação para o seu endereço de e-mail registrado.",
+    "error": "Falha na verificação",
+    "getVerified": "Seja Verificado",
     "methods": {
       "email": {
-        "title": "Verificação de E-mail",
-        "description": "Verificação rápida e fácil através do seu endereço de e-mail"
-      },
-      "phone": {
-        "title": "Verificação por Telefone",
-        "description": "Verifique sua identidade com verificação por SMS"
+        "description": "Verificação rápida e fácil através do seu endereço de e-mail",
+        "title": "Verificação de E-mail"
       },
       "idDocument": {
-        "title": "Verificação de Documento de ID",
-        "description": "Verificação mais segura com documento de identidade emitido pelo governo"
+        "description": "Verificação mais segura com documento de identidade emitido pelo governo",
+        "title": "Verificação de Documento de ID"
+      },
+      "phone": {
+        "description": "Verifique sua identidade com verificação por SMS",
+        "title": "Verificação por Telefone"
       }
     },
-    "verify": "Verificar Agora",
-    "verifying": "Verificando...",
+    "phoneInstructions": "Enviaremos um código de verificação para o seu número de telefone registrado.",
     "submitted": "Solicitação de verificação enviada",
     "success": "Verificação bem-sucedida!",
-    "error": "Falha na verificação",
-    "emailInstructions": "Enviaremos um link de verificação para o seu endereço de e-mail registrado.",
-    "phoneInstructions": "Enviaremos um código de verificação para o seu número de telefone registrado.",
-    "comingSoon": "Em breve",
+    "title": "Seja Verificado",
     "verifiedBadge": "Selo de Verificado",
-    "getVerified": "Seja Verificado"
+    "verify": "Verificar Agora",
+    "verifying": "Verificando..."
   },
   "verified": "Verificado",
   "verifiedProfiles": "Perfis Verificados",

@@ -12,7 +12,7 @@
   "activating": "Activeren...",
   "active": "Actief",
   "activeChats": "Actieve chats",
-  "activeSubscription": "🎉 Je hebt een actief abonnement: {tier}}",
+  "activeSubscription": "🎉 Je hebt een actief abonnement: {{tier}}",
   "activeSubscriptions": "Actieve Abonnementen",
   "activeUsers": "Actieve gebruikers",
   "activity": "Activiteit",
@@ -29,234 +29,231 @@
   "admin.subscription.manual.subscriptionType": "Abonnementstype",
   "admin.subscription.manual.title": "Handmatig abonnementbeheer",
   "adminAccess": {
-    "loginRequired": {
-      "title": "Inloggen vereist",
-      "description": "Log in om toegang te krijgen tot het beheerderspaneel.",
-      "button": "Ga naar Inloggen"
-    },
     "accessDenied": {
-      "title": "Toegang geweigerd",
-      "description": "U heeft geen toestemming om het beheerderspaneel te openen.",
-      "yourRole": "Jouw rol",
-      "noRole": "Geen rol toegewezen",
       "adminPermission": "Beheerdersrechten",
-      "yes": "Ja",
+      "button": "Terug naar Start",
+      "description": "U heeft geen toestemming om het beheerderspaneel te openen.",
       "no": "Nee",
-      "button": "Terug naar Start"
+      "noRole": "Geen rol toegewezen",
+      "title": "Toegang geweigerd",
+      "yes": "Ja",
+      "yourRole": "Jouw rol"
     },
-    "debugMode": "DEBUG MODUS"
+    "debugMode": "DEBUG MODUS",
+    "loginRequired": {
+      "button": "Ga naar Inloggen",
+      "description": "Log in om toegang te krijgen tot het beheerderspaneel.",
+      "title": "Inloggen vereist"
+    }
   },
   "adminActions": "Beheerdersacties",
   "adminContent": {
-    "title": "Contentbeheer",
-    "preview": "Voorbeeld",
-    "save": "Opslaan",
-    "saving": "Opslaan...",
-    "updateSuccess": "Content succesvol bijgewerkt",
-    "updateError": "Content bijwerken mislukt",
-    "heroSection": "Heldensectie",
     "badgeText": "Badgetekst",
-    "subtitle": "Ondertitel",
-    "mission": "Missie",
-    "missionTitle": "Missietitel",
-    "missionDescription": "Missiebeschrijving",
-    "statistics": "Statistieken",
-    "value": "Waarde",
+    "common": {
+      "noData": "Geen gegevens"
+    },
+    "heroSection": "Heldensectie",
     "label": "Label",
     "lastUpdated": "Laatst bijgewerkt",
-    "seoSettings": "SEO-instellingen",
-    "metaTitle": "Metatitel",
-    "metaTitlePlaceholder": "Paginatitel voor zoekmachines",
     "metaDescription": "Metadescriptie",
     "metaDescriptionPlaceholder": "Korte beschrijving voor zoekmachines (150-160 tekens)",
     "metaKeywords": "Metatrefwoorden",
+    "metaTitle": "Metatitel",
+    "metaTitlePlaceholder": "Paginatitel voor zoekmachines",
+    "mission": "Missie",
+    "missionDescription": "Missiebeschrijving",
+    "missionTitle": "Missietitel",
     "pages": {
       "about": {
-        "title": "Over ons",
         "description": "Harten wereldwijd verbinden met slimme matchingtechnologie en oprechte relaties sinds 2020.",
         "mission": "Onze missie",
         "missionText": "Bij 2Sweety geloven we dat iedereen het verdient om betekenisvolle liefde te vinden...",
         "stats": {
-          "totalMatches": "Totaal aantal matches",
           "activeUsers": "Actieve gebruikers",
           "happyCouples": "Gelukkige stellen",
-          "satisfactionRate": "Tevredenheidspercentage"
-        }
-      },
-      "privacy": {
-        "title": "Privacy",
-        "description": "Uw privacy is onze prioriteit. Lees hoe wij uw persoonlijke informatie verzamelen, gebruiken en beschermen.",
-        "lastUpdated": "December 2024"
-      },
-      "terms": {
-        "title": "Juridisch",
-        "description": "Lees deze voorwaarden zorgvuldig door voordat u 2Sweety gebruikt.",
-        "lastUpdated": "December 2024"
+          "satisfactionRate": "Tevredenheidspercentage",
+          "totalMatches": "Totaal aantal matches"
+        },
+        "title": "Over ons"
       },
       "gdpr": {
-        "title": "EU",
         "description": "2Sweety voldoet volledig aan de Algemene Verordening Gegevensbescherming van de Europese Unie.",
-        "effectiveDate": "25 mei 2018"
+        "effectiveDate": "25 mei 2018",
+        "title": "EU"
+      },
+      "privacy": {
+        "description": "Uw privacy is onze prioriteit. Lees hoe wij uw persoonlijke informatie verzamelen, gebruiken en beschermen.",
+        "lastUpdated": "December 2024",
+        "title": "Privacy"
+      },
+      "terms": {
+        "description": "Lees deze voorwaarden zorgvuldig door voordat u 2Sweety gebruikt.",
+        "lastUpdated": "December 2024",
+        "title": "Juridisch"
       }
     },
+    "preview": "Voorbeeld",
+    "save": "Opslaan",
+    "saving": "Opslaan...",
     "seo": {
       "defaultKeywords": "daten, liefde, relaties, nederland",
       "keywordsPlaceholder": "daten, liefde, relaties, nederland"
     },
-    "common": {
-      "noData": "Geen gegevens"
-    }
+    "seoSettings": "SEO-instellingen",
+    "statistics": "Statistieken",
+    "subtitle": "Ondertitel",
+    "title": "Contentbeheer",
+    "updateError": "Content bijwerken mislukt",
+    "updateSuccess": "Content succesvol bijgewerkt",
+    "value": "Waarde"
   },
   "adminDashboard": "Beheerdersdashboard",
   "adminLogs": {
     "enhanced": {
-      "title": "Verbeterd logsysteem",
+      "activeCategories": "Actieve categorieën",
+      "autoRefresh": "Automatisch vernieuwen",
+      "categories": {
+        "admin": "Beheerder",
+        "auth": "Authenticatie",
+        "database": "Database",
+        "error": "Fout",
+        "network": "Netwerk",
+        "payment": "Betaling",
+        "performance": "Prestaties",
+        "system": "Systeem",
+        "userAction": "Gebruikersactie"
+      },
+      "clear": "Wissen",
+      "details": {
+        "category": "Categorie",
+        "details": "Details",
+        "level": "Niveau",
+        "message": "Bericht",
+        "network": "Netwerk",
+        "performance": "Prestaties",
+        "sessionId": "Sessie-ID",
+        "stackTrace": "Stacktrace",
+        "timestamp": "Tijdstempel",
+        "title": "Logdetails",
+        "url": "URL",
+        "user": "Gebruiker",
+        "userId": "Gebruikers-ID"
+      },
       "disable": "Uitschakelen",
       "enable": "Inschakelen",
-      "logging": "Loggen",
-      "refresh": "Vernieuwen",
-      "export": "Exporteren",
-      "clear": "Wissen",
-      "totalLogs": "Totaal aantal logs",
-      "session": "Sessie",
       "errorRate": "Foutpercentage",
       "errors": "fouten",
-      "categories": {
-        "auth": "Authenticatie",
-        "userAction": "Gebruikersactie",
-        "network": "Netwerk",
-        "database": "Database",
-        "payment": "Betaling",
-        "admin": "Beheerder",
-        "error": "Fout",
-        "performance": "Prestaties",
-        "system": "Systeem"
-      },
-      "activeCategories": "Actieve categorieën",
-      "status": "Status",
-      "on": "AAN",
-      "off": "UIT",
-      "autoRefresh": "Automatisch vernieuwen",
+      "export": "Exporteren",
       "filters": {
-        "title": "Filters & Zoeken",
+        "allCategories": "Alle categorieën",
+        "allLevels": "Alle niveaus",
+        "autoRefreshLabel": "Automatisch vernieuwen",
+        "category": "Categorie",
+        "level": "Niveau",
         "search": "Zoeken",
         "searchPlaceholder": "Zoek in logs...",
-        "level": "Niveau",
-        "allLevels": "Alle niveaus",
-        "category": "Categorie",
-        "allCategories": "Alle categorieën",
-        "autoRefreshLabel": "Automatisch vernieuwen"
+        "title": "Filters & Zoeken"
       },
       "levels": {
+        "critical": "Kritiek",
         "debug": "Debug",
-        "info": "Info",
-        "warning": "Waarschuwing",
         "error": "Fout",
-        "critical": "Kritiek"
+        "info": "Info",
+        "warning": "Waarschuwing"
       },
+      "logging": "Loggen",
       "noLogs": {
         "disabled": "Loggen is momenteel uitgeschakeld. Schakel het in om logs te verzamelen.",
         "notFound": "Geen logs gevonden die overeenkomen met de huidige filters."
       },
-      "details": {
-        "title": "Logdetails",
-        "level": "Niveau",
-        "category": "Categorie",
-        "timestamp": "Tijdstempel",
-        "sessionId": "Sessie-ID",
-        "message": "Bericht",
-        "url": "URL",
-        "userId": "Gebruikers-ID",
-        "details": "Details",
-        "performance": "Prestaties",
-        "network": "Netwerk",
-        "stackTrace": "Stacktrace",
-        "user": "Gebruiker"
-      }
+      "off": "UIT",
+      "on": "AAN",
+      "refresh": "Vernieuwen",
+      "session": "Sessie",
+      "status": "Status",
+      "title": "Verbeterd logsysteem",
+      "totalLogs": "Totaal aantal logs"
     },
     "system": {
-      "title": "Systeemlogs",
-      "session": "Sessie",
-      "total": "Totaal",
-      "errors": "Fouten",
-      "filters": {
-        "level": "Niveau",
-        "category": "Categorie",
-        "autoRefresh": "Automatisch vernieuwen"
-      },
-      "levels": {
-        "all": "Alle",
-        "error": "Fout",
-        "warning": "Waarschuwing",
-        "info": "Info",
-        "debug": "Debug",
-        "critical": "Kritiek"
+      "buttons": {
+        "clear": "Wissen",
+        "disable": "Uitschakelen",
+        "enable": "Inschakelen",
+        "export": "Exporteren",
+        "logging": "Loggen",
+        "refresh": "Vernieuwen"
       },
       "categories": {
+        "admin": "Beheerder",
         "all": "Alle",
-        "roleManagement": "Rollenbeheer",
-        "userBan": "Gebruikersban",
-        "permissionCheck": "Toestemmingscontrole",
-        "database": "Database",
         "auth": "Authenticatie",
-        "system": "Systeem",
-        "userAction": "Gebruikersactie",
+        "database": "Database",
+        "error": "Fout",
         "network": "Netwerk",
         "payment": "Betaling",
-        "admin": "Beheerder",
-        "error": "Fout",
-        "performance": "Prestaties"
-      },
-      "table": {
-        "time": "Tijd",
-        "level": "Niveau",
-        "category": "Categorie",
-        "action": "Actie",
-        "user": "Gebruiker",
-        "admin": "Beheerder",
-        "details": "Details"
-      },
-      "noLogs": "Geen logs gevonden",
-      "loggingDisabled": "Loggen is momenteel uitgeschakeld. Schakel het in om logs te verzamelen.",
-      "filtersAndSearch": "Filters & Zoeken",
-      "search": "Zoeken",
-      "searchPlaceholder": "Zoek in logs...",
-      "stats": {
-        "totalLogs": "Totaal aantal logs",
-        "errorRate": "Foutpercentage",
-        "errors": "fouten",
-        "categories": "Categorieën",
-        "activeCategories": "Actieve categorieën",
-        "status": "Status",
-        "on": "AAN",
-        "off": "UIT"
-      },
-      "buttons": {
-        "enable": "Inschakelen",
-        "disable": "Uitschakelen",
-        "logging": "Loggen",
-        "refresh": "Vernieuwen",
-        "export": "Exporteren",
-        "clear": "Wissen"
+        "performance": "Prestaties",
+        "system": "Systeem",
+        "userAction": "Gebruikersactie"
       },
       "details": {
-        "title": "Logdetails",
-        "time": "Tijd",
         "action": "Actie",
-        "userId": "Gebruikers-ID",
         "adminId": "Beheerders-ID",
-        "error": "Fout",
         "details": "Details",
-        "stackTrace": "Stacktrace",
+        "error": "Fout",
         "message": "Bericht",
-        "fields": {
-          "user": "Gebruiker",
-          "url": "URL",
-          "performance": "Prestaties",
-          "network": "Netwerk",
-          "stackTrace": "Stacktrace"
-        }
-      }
+        "stackTrace": "Stacktrace",
+        "time": "Tijd",
+        "title": "Logdetails",
+        "userId": "Gebruikers-ID"
+      },
+      "errors": "Fouten",
+      "fields": {
+        "network": "Network",
+        "performance": "Performance",
+        "stackTrace": "Stack Trace",
+        "url": "URL",
+        "user": "User"
+      },
+      "filters": {
+        "autoRefresh": "Automatisch vernieuwen",
+        "category": "Categorie",
+        "level": "Niveau"
+      },
+      "filtersAndSearch": "Filters & Zoeken",
+      "levels": {
+        "all": "Alle",
+        "critical": "Kritiek",
+        "debug": "Debug",
+        "error": "Fout",
+        "info": "Info",
+        "warning": "Waarschuwing"
+      },
+      "loggingDisabled": "Loggen is momenteel uitgeschakeld. Schakel het in om logs te verzamelen.",
+      "noLogs": "Geen logs gevonden",
+      "search": "Zoeken",
+      "searchPlaceholder": "Zoek in logs...",
+      "session": "Sessie",
+      "stats": {
+        "activeCategories": "Actieve categorieën",
+        "categories": "Categorieën",
+        "errorRate": "Foutpercentage",
+        "errors": "fouten",
+        "off": "UIT",
+        "on": "AAN",
+        "status": "Status",
+        "totalLogs": "Totaal aantal logs"
+      },
+      "table": {
+        "action": "Actie",
+        "admin": "Beheerder",
+        "category": "Categorie",
+        "details": "Details",
+        "level": "Niveau",
+        "time": "Tijd",
+        "user": "Gebruiker"
+      },
+      "title": "Systeemlogs",
+      "total": "Totaal"
     }
   },
   "adminPanel": "Beheerderspaneel",
@@ -264,88 +261,108 @@
   "adminPanelAccessGranted": "Toegang tot beheerderspaneel TOEGESTAAN",
   "adminPayments": {
     "conversionRate": "Conversieratio",
-    "mrr": "MRR (Maandelijks Terugkerende Omzet)",
     "estimatedMonthly": "Geschatte maandelijkse",
     "manualSubscription": {
-      "title": "Handmatige abonnementstoewijzing",
-      "userEmail": "E-mail gebruiker",
+      "duration": "Duration (Days)",
+      "durationPlaceholder": "30",
       "emailPlaceholder": "gebruiker@voorbeeld.com",
+      "grantButton": "Grant Subscription",
+      "reason": "Reason",
+      "reasons": {
+        "compensation": "Compensation",
+        "promotional": "Promotional Grant",
+        "support": "Customer Support",
+        "testing": "Testing Purpose"
+      },
       "subscriptionTier": "Abonnementsniveau",
       "tiers": {
-        "silver": "Zilver ($9.99/maand)",
         "gold": "Goud ($19.99/maand)",
-        "platinum": "Platina ($29.99/maand)"
+        "platinum": "Platina ($29.99/maand)",
+        "silver": "Zilver ($9.99/maand)"
       },
-      "assignButton": "Abonnement toewijzen",
-      "assignSuccess": "Abonnement succesvol toegewezen",
-      "assignError": "Abonnement toewijzen mislukt"
+      "title": "Handmatige abonnementstoewijzing",
+      "userEmail": "E-mail gebruiker"
     },
-    "recentTransactions": "Recente transacties",
-    "monthlyRevenue": "Maandelijkse omzet",
-    "activeSubscriptions": "Actieve abonnementen",
-    "churnRate": "Churnpercentage",
-    "noTransactions": "Geen transacties gevonden",
-    "manageSubscriptions": "Abonnementen beheren",
-    "stripeStatus": "Stripe-status",
-    "stripeConnected": "Verbonden",
-    "stripeNotConnected": "Niet verbonden",
-    "webhookStatus": "Webhook-status",
-    "testMode": "Testmodus"
+    "mrr": "MRR (Maandelijks Terugkerende Omzet)",
+    "paymentStatus": {
+      "stripeConnection": "Stripe Connection",
+      "testMode": "Test Mode",
+      "title": "Payment System Status",
+      "webhookStatus": "Webhook Status"
+    },
+    "recentTransactions": {
+      "noTransactions": "No transactions available",
+      "noTransactionsDesc": "Transactions will appear here once users subscribe",
+      "plans": {
+        "gold": "Gold Plan",
+        "platinum": "Platinum Plan",
+        "silver": "Silver Plan"
+      },
+      "title": "Recent Transactions"
+    },
+    "stripe": {
+      "note": "These links open in the Stripe Dashboard. Ensure you have proper access permissions.",
+      "openDashboard": "Open Stripe Dashboard",
+      "title": "Stripe Dashboard Links",
+      "viewCustomers": "View Customers",
+      "viewPayments": "View Payments",
+      "viewSubscriptions": "View Subscriptions"
+    }
   },
   "adminRole": "Beheerdersrol",
   "adminSecurityMessage": "Toegang tot het beheerderspaneel is IP-beperkt. We raden aan om 2FA in te schakelen.",
   "adminSite": {
-    "configuration": {
-      "title": "Siteconfiguratie",
-      "siteName": "Sitenaam",
-      "defaultLanguage": "Standaardtaal",
-      "siteDescription": "Sitebeschrijving",
-      "descriptionPlaceholder": "Waar harten samenkomen en liefdesverhalen beginnen"
-    },
     "appSettings": {
-      "title": "App-instellingen",
-      "registration": {
-        "label": "Registratie open",
-        "description": "Nieuwe gebruikersregistraties toestaan"
+      "aiTranslation": {
+        "description": "Automatische berichtvertaling",
+        "label": "AI-vertaling"
       },
       "emailVerification": {
-        "label": "E-mailverificatie",
-        "description": "E-mailverificatie vereisen voor nieuwe gebruikers"
+        "description": "E-mailverificatie vereisen voor nieuwe gebruikers",
+        "label": "E-mailverificatie"
       },
       "photoModeration": {
-        "label": "Fotomoderatie",
         "description": "Handmatige beoordeling van profielfoto's",
+        "label": "Fotomoderatie",
         "manual": "Handmatig"
       },
-      "aiTranslation": {
-        "label": "AI-vertaling",
-        "description": "Automatische berichtvertaling"
-      }
+      "registration": {
+        "description": "Nieuwe gebruikersregistraties toestaan",
+        "label": "Registratie open"
+      },
+      "title": "App-instellingen"
     },
-    "security": {
-      "title": "Beveiligingsinstellingen",
-      "twoFactor": {
-        "label": "Twee-factor-authenticatie",
-        "description": "2FA-vereiste voor beheerderspaneel"
-      },
-      "sessionTimeout": {
-        "label": "Sessietime-out",
-        "description": "Duur van beheerderssessie",
-        "hours": "8 uur"
-      },
-      "ipRestriction": {
-        "label": "IP-beperking",
-        "description": "Beperk beheerderstoegang per IP"
-      }
+    "configuration": {
+      "defaultLanguage": "Standaardtaal",
+      "descriptionPlaceholder": "Waar harten samenkomen en liefdesverhalen beginnen",
+      "siteDescription": "Sitebeschrijving",
+      "siteName": "Sitenaam",
+      "title": "Siteconfiguratie"
     },
     "integrations": {
-      "title": "Integratiestatus",
+      "connected": "Verbonden",
+      "emailService": "E-mailservice (SMTP)",
+      "googleTranslate": "Google Translate API",
+      "needsSetup": "Setup nodig",
       "stripe": "Stripe-betaling",
       "supabase": "Supabase-database",
-      "googleTranslate": "Google Translate API",
-      "emailService": "E-mailservice (SMTP)",
-      "connected": "Verbonden",
-      "needsSetup": "Setup nodig"
+      "title": "Integratiestatus"
+    },
+    "security": {
+      "ipRestriction": {
+        "description": "Beperk beheerderstoegang per IP",
+        "label": "IP-beperking"
+      },
+      "sessionTimeout": {
+        "description": "Duur van beheerderssessie",
+        "hours": "8 uur",
+        "label": "Sessietime-out"
+      },
+      "title": "Beveiligingsinstellingen",
+      "twoFactor": {
+        "description": "2FA-vereiste voor beheerderspaneel",
+        "label": "Twee-factor-authenticatie"
+      }
     }
   },
   "adminUser": {
@@ -371,91 +388,52 @@
     "title": "Waarschuwing: Beheerdersautoriteit"
   },
   "ads": {
-    "title": "Advertentiebeheer",
-    "stats": {
-      "impressions": "Impressies",
-      "clicks": "Klikken",
-      "ctr": "CTR",
-      "revenue": "Inkomsten",
-      "activePlacements": "Actieve plaatsingen",
-      "totalImpressions": "Totaal aantal impressies",
-      "todayClicks": "Klikken vandaag",
-      "averageCtr": "Gemiddelde CTR",
-      "monthlyRevenue": "Maandelijkse inkomsten"
-    },
-    "placements": {
-      "title": "Advertentieplaatsingen",
-      "header": "Header",
-      "sidebar": "Zijbalk",
-      "feed": "Feed",
-      "footer": "Footer",
-      "enabled": "Ingeschakeld",
-      "disabled": "Uitgeschakeld",
-      "size": "Grootte",
-      "position": "Positie",
-      "visibility": "Zichtbaarheid"
-    },
-    "providers": {
-      "title": "Advertentieproviders",
-      "googleAdsense": "Google AdSense",
-      "customAds": "Aangepaste advertenties",
-      "status": "Status",
-      "earnings": "Inkomsten",
-      "configure": "Configureren"
-    },
-    "settings": {
-      "title": "Advertentie-instellingen",
-      "frequency": "Weergavefrequentie",
-      "targeting": "Doelgroep targeting",
-      "excludedPages": "Uitgesloten pagina's",
-      "mobileAds": "Mobiele advertenties",
-      "desktopAds": "Desktopadvertenties",
-      "refreshRate": "Vernieuwingsfrequentie",
-      "maxAdsPerPage": "Max. advertenties per pagina"
-    },
-    "performance": {
-      "title": "Prestatieanalyse",
-      "topPerforming": "Best presterend",
-      "worstPerforming": "Slechtst presterend",
-      "recommendations": "Aanbevelingen",
-      "optimize": "Optimaliseren"
+    "banner": {
+      "title": "Advertisement"
     },
     "configuration": {
-      "title": "Siteconfiguratie",
-      "description": "Beheer uw advertentie- en analyseconfiguraties voor uw site",
-      "tabs": {
-        "advertising": "Adverteren",
-        "analytics": "Analyse"
-      },
-      "sections": {
-        "googleAdsense": "Google AdSense-configuratie",
-        "adPlacement": "Advertentieplaatsingsinstellingen",
-        "googleAnalytics": "Google Analytics",
-        "facebookPixel": "Facebook Pixel",
-        "trackingSettings": "Trackinginstellingen"
-      },
       "buttons": {
         "refresh": "Vernieuwen",
         "save": "Opslaan",
         "saving": "Opslaan..."
       },
-      "status": {
-        "enabled": "Ingeschakeld",
-        "disabled": "Uitgeschakeld"
-      },
+      "description": "Beheer uw advertentie- en analyseconfiguraties voor uw site",
       "errors": {
         "loadFailed": "Configuraties laden mislukt",
         "saveFailed": "Configuraties opslaan mislukt"
       },
+      "sections": {
+        "adPlacement": "Advertentieplaatsingsinstellingen",
+        "facebookPixel": "Facebook Pixel",
+        "googleAdsense": "Google AdSense-configuratie",
+        "googleAnalytics": "Google Analytics",
+        "trackingSettings": "Trackinginstellingen"
+      },
+      "status": {
+        "disabled": "Uitgeschakeld",
+        "enabled": "Ingeschakeld"
+      },
       "success": {
         "saved": "Configuratie succesvol opgeslagen"
-      }
+      },
+      "tabs": {
+        "advertising": "Adverteren",
+        "analytics": "Analyse"
+      },
+      "title": "Siteconfiguratie"
     },
     "disabledFeature": {
-      "title": "Advertenties uitschakelen",
       "description": "Moe van het zien van advertenties? Schakel ze uit!",
-      "status": "Advertenties zijn uitgeschakeld voor Silver+ leden"
-    }
+      "status": "Advertenties zijn uitgeschakeld voor Silver+ leden",
+      "title": "Advertenties uitschakelen"
+    },
+    "native": {
+      "description": "Upgrade to remove ads",
+      "title": "Sponsored Content"
+    },
+    "placeholder": "Ad Space",
+    "removeAds": "Remove Ads - Upgrade to Silver",
+    "upgrade": "Upgrade"
   },
   "advanced": "Geavanceerd",
   "advancedAnalytics": "Geavanceerde analyse",
@@ -497,35 +475,35 @@
   "approveReport": "Rapport goedkeuren",
   "auditTrail": "Auditspoor",
   "auth": {
-    "signingInGoogle": "🔐 Aanmelden met Google",
-    "oauthRedirectUrl": "🔐 OAuth-omleidings-URL:",
-    "googleSignInError": "🔐 Google-aanmeldingsfout:",
-    "googleSignInInitiated": "🔐 Google-aanmelding gestart",
-    "googleSignInFailed": "🔐 Google-aanmelding mislukt:",
-    "signingInApple": "🔐 Aanmelden met Apple",
     "appleSignInError": "🔐 Apple-aanmeldingsfout:",
-    "appleSignInInitiated": "🔐 Apple-aanmelding gestart",
     "appleSignInFailed": "🔐 Apple-aanmelding mislukt:",
-    "signingInFacebook": "🔐 Aanmelden met Facebook",
-    "facebookSignInError": "🔐 Facebook-aanmeldingsfout:",
-    "facebookSignInInitiated": "🔐 Facebook-aanmelding gestart",
-    "facebookSignInFailed": "🔐 Facebook-aanmelding mislukt:",
-    "signOutError": "🔧 [useAuth] Afmeldfout:",
-    "settingUpSubscriptions": "🔧 [useAuth] Realtime abonnementen instellen voor gebruiker:",
-    "profileUpdateReceived": "🔧 [useAuth] Profielupdate ontvangen, rol opnieuw laden.",
-    "subscribedToUserChannel": "🔧 [useAuth] Geabonneerd op gebruikerskanaal:",
-    "userChannelError": "[useAuth] Fout bij abonneren op gebruikerskanaal:",
-    "roleChangeDetected": "🔧 [useAuth] Rolwijziging gedetecteerd, rol opnieuw laden.",
-    "subscribedToRolesChannel": "🔧 [useAuth] Geabonneerd op roles_permissions-kanaal.",
-    "rolesChannelError": "[useAuth] Fout bij abonneren op rollenkanaal:",
-    "subscriptionSetupError": "🔧 [useAuth] Fout bij instellen van abonnementen:",
-    "removingSubscriptions": "🔧 [useAuth] Realtime abonnementen verwijderen.",
-    "subscriptionRemoveError": "🔧 [useAuth] Fout bij verwijderen van abonnementen:",
+    "appleSignInInitiated": "🔐 Apple-aanmelding gestart",
+    "authInitError": "🔧 [useAuth] Fout bij initialiseren van auth:",
     "authStateChange": "🔧 [useAuth] Auth-statuswijzigingsevenement:",
     "authStateChangeError": "Fout bij afhandelen van auth-statuswijziging:",
-    "authInitError": "🔧 [useAuth] Fout bij initialiseren van auth:",
     "cleaningUp": "🔧 [useAuth] Auth-provider opschonen.",
-    "noRoleFoundWarning": "Geen rol gevonden in database, standaard ingesteld op geregistreerd"
+    "facebookSignInError": "🔐 Facebook-aanmeldingsfout:",
+    "facebookSignInFailed": "🔐 Facebook-aanmelding mislukt:",
+    "facebookSignInInitiated": "🔐 Facebook-aanmelding gestart",
+    "googleSignInError": "🔐 Google-aanmeldingsfout:",
+    "googleSignInFailed": "🔐 Google-aanmelding mislukt:",
+    "googleSignInInitiated": "🔐 Google-aanmelding gestart",
+    "noRoleFoundWarning": "Geen rol gevonden in database, standaard ingesteld op geregistreerd",
+    "oauthRedirectUrl": "🔐 OAuth-omleidings-URL:",
+    "profileUpdateReceived": "🔧 [useAuth] Profielupdate ontvangen, rol opnieuw laden.",
+    "removingSubscriptions": "🔧 [useAuth] Realtime abonnementen verwijderen.",
+    "roleChangeDetected": "🔧 [useAuth] Rolwijziging gedetecteerd, rol opnieuw laden.",
+    "rolesChannelError": "[useAuth] Fout bij abonneren op rollenkanaal:",
+    "settingUpSubscriptions": "🔧 [useAuth] Realtime abonnementen instellen voor gebruiker:",
+    "signOutError": "🔧 [useAuth] Afmeldfout:",
+    "signingInApple": "🔐 Aanmelden met Apple",
+    "signingInFacebook": "🔐 Aanmelden met Facebook",
+    "signingInGoogle": "🔐 Aanmelden met Google",
+    "subscribedToRolesChannel": "🔧 [useAuth] Geabonneerd op roles_permissions-kanaal.",
+    "subscribedToUserChannel": "🔧 [useAuth] Geabonneerd op gebruikerskanaal:",
+    "subscriptionRemoveError": "🔧 [useAuth] Fout bij verwijderen van abonnementen:",
+    "subscriptionSetupError": "🔧 [useAuth] Fout bij instellen van abonnementen:",
+    "userChannelError": "[useAuth] Fout bij abonneren op gebruikerskanaal:"
   },
   "authStateLoading": "Auth-status wordt geladen, wachten...",
   "authStateNotLoaded": "Auth-status nog niet geladen, wachten...",
@@ -536,7 +514,6 @@
   "autoTranslationDescription": "Inkomende berichten automatisch vertalen",
   "averageSessionTime": "Gemiddelde sessietijd",
   "back": "Terug",
-  "backText": "Terug",
   "backToAdmin": "Terug naar beheer",
   "backToSwiping": "Terug naar swipen",
   "backupDatabase": "Database back-uppen",
@@ -549,14 +526,14 @@
   "banReasonLabel": "Reden voor ban",
   "banReasonPlaceholder": "Leg de reden voor het verbannen uit...",
   "banReasons": {
-    "inappropriateContent": "Ongepaste inhoud",
-    "spamFakeProfile": "Spam of nep profiel",
-    "harassment": "Intimidatie",
-    "violatingTerms": "Schending van de servicevoorwaarden",
+    "accountDeleted": "Account verwijderd door beheerder",
+    "bannedByAdmin": "Verbannen door beheerder",
     "custom": "Aangepaste reden",
     "customReason": "Aangepaste reden",
-    "bannedByAdmin": "Verbannen door beheerder",
-    "accountDeleted": "Account verwijderd door beheerder"
+    "harassment": "Intimidatie",
+    "inappropriateContent": "Ongepaste inhoud",
+    "spamFakeProfile": "Spam of nep profiel",
+    "violatingTerms": "Schending van de servicevoorwaarden"
   },
   "banStatusUpdated": "Banstatus bijgewerkt",
   "banText": "Verbannen",
@@ -634,8 +611,8 @@
   "completeProfileToBeDiscovered": "Voltooi uw profiel en word door meer mensen ontdekt!",
   "completeProfileToGetLikes": "Voltooi uw profiel en voeg foto's toe!",
   "completeProfileToStart": "Voltooi uw profiel om geweldige mensen te ontdekken",
+  "confirm": "Confirm",
   "confirmDeleteUser": "Weet u zeker dat u deze gebruiker wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt.",
-  "confirmText": "Bevestigen",
   "connectionError": "Verbindingsfout",
   "contactSales": "Neem contact op met ons verkoopteam",
   "contactSupport": "Neem contact op met ondersteuning",
@@ -649,7 +626,7 @@
   "contentUpdateSuccess": "Content is succesvol bijgewerkt",
   "contentUpdated": "Content bijgewerkt",
   "contentUpdatedSuccessfully": "Content succesvol bijgewerkt",
-  "continueText": "Doorgaan",
+  "continue": "Continue",
   "continueWithApple": "Doorgaan met Apple",
   "continueWithFacebook": "Doorgaan met Facebook",
   "continueWithGoogle": "Doorgaan met Google",
@@ -680,73 +657,73 @@
   "days90": "90 dagen",
   "daysAgo": "dagen geleden",
   "debug": {
+    "app": {
+      "appStateError": "❌ App-statusfout:",
+      "appStateInitializing": "🚀 App-status initialiseren...",
+      "appStateReady": "✅ App-status gereed"
+    },
     "matches": {
-      "fetching": "🚀 Matches ophalen met directe Supabase-query",
       "fetchError": "Fout bij ophalen van matches:",
       "fetchSuccess": "✅ {{count}} matches opgehaald",
+      "fetching": "🚀 Matches ophalen met directe Supabase-query",
       "newMatchDetected": "Nieuwe match gedetecteerd, opnieuw ophalen..."
     },
+    "network": {
+      "connectionLost": "📶 Verbinding verbroken",
+      "connectionRestored": "🌐 Verbinding hersteld",
+      "featuresUnavailable": "⚠️ Sommige functies zijn mogelijk niet beschikbaar",
+      "syncingWithServer": "🔄 Synchroniseren met server..."
+    },
     "profiles": {
-      "queryingUserCount": "👤 Aantal gebruikers opvragen...",
-      "totalUsers": "📊 Totaal aantal gebruikers: {count}}",
-      "queryingRoleBasedUsers": "🎭 Op rol gebaseerde gebruikers opvragen...",
-      "roleBasedUserCount": "🎯 Op rol gefilterd aantal gebruikers: {count}}",
-      "queryingActiveUsers": "🟢 Gebruikers actief in de laatste 30 dagen opvragen...",
-      "filteringViewedProfiles": "👁️ Bekeken profielen filteren...",
-      "excludingViewedProfiles": "🚫 {{count}} bekeken profielen uitsluiten",
-      "finalProfileCount": "✅ Eindtotaal profielen: {count}}",
-      "fetchingRandomProfiles": "🎲 {{count}} willekeurige profielen ophalen...",
-      "settingProfiles": "📝 Profielen instellen: {count}} profielen",
-      "profilesSet": "✅ Profielen succesvol ingesteld",
-      "loadingProfiles": "⏳ Profielen laden...",
-      "profilesLoaded": "✅ Profielen geladen: {count}} profielen",
-      "fetchError": "❌ Profiel ophalen fout:",
-      "swipeError": "❌ Swipefout:",
-      "noMoreProfiles": "📭 Geen profielen meer",
-      "likeSent": "💖 Like verzonden - {{profileId}}",
-      "superLikeSent": "⭐ Superlike verzonden - {{profileId}}",
-      "profilePassed": "⏭️ Profiel overgeslagen - {{profileId}}",
       "actionError": "❌ Actiefout:",
-      "initiatingLike": "🚀 Like initiëren",
-      "likeAction": "💝 Like-actie: {userId}} -> {{profileId}}",
       "checkingMutualLike": "🔄 Wederzijdse like controleren...",
-      "mutualLikeCheck": "💕 Wederzijdse like-status: {isMutual}}",
-      "processingMatch": "⚡ Match verwerken...",
+      "excludingViewedProfiles": "🚫 {{count}} bekeken profielen uitsluiten",
+      "fetchError": "❌ Profiel ophalen fout:",
+      "fetchingRandomProfiles": "🎲 {{count}} willekeurige profielen ophalen...",
+      "filteringViewedProfiles": "👁️ Bekeken profielen filteren...",
+      "finalProfileCount": "✅ Eindtotaal profielen: {{count}}",
+      "initiatingLike": "🚀 Like initiëren",
+      "likeAction": "💝 Like-actie: {{userId}} -> {{profileId}}",
+      "likeSent": "💖 Like verzonden - {{profileId}}",
+      "loadingProfiles": "⏳ Profielen laden...",
       "matchCreated": "🎉 NIEUWE MATCH! {{userId}} ↔ {{profileId}}",
-      "refreshingProfiles": "🔄 Profielen vernieuwen..."
+      "mutualLikeCheck": "💕 Wederzijdse like-status: {{isMutual}}",
+      "noMoreProfiles": "📭 Geen profielen meer",
+      "processingMatch": "⚡ Match verwerken...",
+      "profilePassed": "⏭️ Profiel overgeslagen - {{profileId}}",
+      "profilesLoaded": "✅ Profielen geladen: {{count}} profielen",
+      "profilesSet": "✅ Profielen succesvol ingesteld",
+      "queryingActiveUsers": "🟢 Gebruikers actief in de laatste 30 dagen opvragen...",
+      "queryingRoleBasedUsers": "🎭 Op rol gebaseerde gebruikers opvragen...",
+      "queryingUserCount": "👤 Aantal gebruikers opvragen...",
+      "refreshingProfiles": "🔄 Profielen vernieuwen...",
+      "roleBasedUserCount": "🎯 Op rol gefilterd aantal gebruikers: {{count}}",
+      "settingProfiles": "📝 Profielen instellen: {{count}} profielen",
+      "superLikeSent": "⭐ Superlike verzonden - {{profileId}}",
+      "swipeError": "❌ Swipefout:",
+      "totalUsers": "📊 Totaal aantal gebruikers: {{count}}"
     },
     "subscription": {
-      "loadingSubscription": "📋 Abonnementsinfo laden...",
-      "subscriptionLoaded": "✅ Abonnement geladen:",
-      "loadError": "❌ Abonnementslaadfout:",
       "checkingTier": "🔍 Abonnementsniveau controleren:",
-      "tierCheckResult": "📊 Niveaucontroleresultaat:",
-      "startingStatusCheck": "🚀 Abonnementsstatuscontrole starten...",
-      "loadingUserProfile": "👤 Gebruikersprofiel laden:",
-      "profileLoaded": "✅ Profiel geladen:",
       "fetchingSubscription": "📥 Abonnementsinfo ophalen:",
-      "subscriptionData": "📋 Abonnementsgegevens:",
-      "subscriptionActive": "✅ Actief abonnement gevonden:",
+      "loadError": "❌ Abonnementslaadfout:",
+      "loadingSubscription": "📋 Abonnementsinfo laden...",
+      "loadingUserProfile": "👤 Gebruikersprofiel laden:",
       "noActiveSubscription": "❌ Geen actief abonnement gevonden",
-      "updatingSubscription": "💾 Abonnement bijwerken:",
-      "subscriptionUpdated": "✅ Abonnement bijgewerkt:",
-      "updateError": "❌ Abonnementsupdatefout:",
-      "premiumUserCheck": "👑 Premium gebruiker controle:",
-      "premiumUserStatus": "📊 Premium gebruiker status:",
+      "premiumAccessResult": "📊 Premium toegangsresultaat:",
       "premiumCheckComplete": "✅ Premium controle voltooid:",
       "premiumFeatureAccess": "🔓 Toegang tot premium functie:",
-      "premiumAccessResult": "📊 Premium toegangsresultaat:"
-    },
-    "network": {
-      "connectionRestored": "🌐 Verbinding hersteld",
-      "syncingWithServer": "🔄 Synchroniseren met server...",
-      "connectionLost": "📶 Verbinding verbroken",
-      "featuresUnavailable": "⚠️ Sommige functies zijn mogelijk niet beschikbaar"
-    },
-    "app": {
-      "appStateInitializing": "🚀 App-status initialiseren...",
-      "appStateReady": "✅ App-status gereed",
-      "appStateError": "❌ App-statusfout:"
+      "premiumUserCheck": "👑 Premium gebruiker controle:",
+      "premiumUserStatus": "📊 Premium gebruiker status:",
+      "profileLoaded": "✅ Profiel geladen:",
+      "startingStatusCheck": "🚀 Abonnementsstatuscontrole starten...",
+      "subscriptionActive": "✅ Actief abonnement gevonden:",
+      "subscriptionData": "📋 Abonnementsgegevens:",
+      "subscriptionLoaded": "✅ Abonnement geladen:",
+      "subscriptionUpdated": "✅ Abonnement bijgewerkt:",
+      "tierCheckResult": "📊 Niveaucontroleresultaat:",
+      "updateError": "❌ Abonnementsupdatefout:",
+      "updatingSubscription": "💾 Abonnement bijwerken:"
     }
   },
   "debugCheckAgain": "Controleer opnieuw",
@@ -772,7 +749,7 @@
   "description": "Beschrijving",
   "deselectAll": "Alles deselecteren",
   "developmentMode": "⚠️ ONTWIKKELMODUS",
-  "developmentModeAccess": "Toegang tot ontwikkelmodus verleend. Rol: {role}}",
+  "developmentModeAccess": "Toegang tot ontwikkelmodus verleend. Rol: {{role}}",
   "developmentModeNote": "Toegang tot ontwikkelmodus",
   "disableMaintenanceMode": "Onderhoudsmodus uitschakelen",
   "discount": "Korting",
@@ -792,7 +769,7 @@
   "dismiss": "Negeren",
   "dismissed": "Genegeerd",
   "distance": "Afstand",
-  "distanceKm": "{{distance}} km",
+  "distanceKm": "{{{distance}}} km",
   "dragDropPhotos": "Sleep foto's of klik om te selecteren",
   "dragToReorder": "Sleep foto's om de volgorde te wijzigen",
   "drinking": "Drinken",
@@ -806,6 +783,7 @@
   "editProfile": "Profiel bewerken",
   "editProfileDescription": "Bewerk uw profiel en krijg meer matches",
   "editText": "Bewerken",
+  "editToChangeInterests": "Click edit to change interests",
   "editUser": "Gebruiker bewerken",
   "editingPlan": "Plan bewerken",
   "education": "Opleiding",
@@ -832,10 +810,23 @@
   "enterName": "Voer je naam in",
   "enterYourName": "Voer uw naam in",
   "enterYourNamePlaceholder": "Voer uw naam in",
-  "error": "Fout",
+  "error": {
+    "details": "Error details",
+    "general": {
+      "occurred": "An error occurred"
+    },
+    "goHome": "Go to home",
+    "refresh": "Refresh page"
+  },
   "error.404.message": "Oeps! Pagina niet gevonden",
   "error.404.returnHome": "Terug naar de startpagina",
   "errorBanningUser": "Er is een fout opgetreden bij het verbannen van de gebruiker.",
+  "errorBoundary": {
+    "errorDetails": "Error details",
+    "goToHomePage": "Go to home page",
+    "refreshPage": "Refresh page",
+    "title": "An error occurred"
+  },
   "errorDeletingUser": "Er is een fout opgetreden bij het verwijderen van de gebruiker.",
   "errorLoadingUsers": "Er is een fout opgetreden bij het laden van gebruikers.",
   "errorLogs": "Foutlogboeken",
@@ -845,8 +836,6 @@
   "errorToastTitle": "Fout",
   "errorUnbanningUser": "Er is een fout opgetreden bij het opheffen van de ban.",
   "errorUpdatingRole": "Er is een fout opgetreden bij het bijwerken van de rol.",
-  "eslesmeKaldir": "Match verwijderen",
-  "eslestiniz": "Jullie zijn een match!",
   "everyone": "Iedereen",
   "exclusiveEvents": "Exclusieve evenementen",
   "exclusiveFilters": "Exclusieve zoekfilters",
@@ -878,28 +867,17 @@
   "faqPlanChangeQ": "Kan ik mijn plan wijzigen?",
   "faqTitle": "Veelgestelde vragen",
   "feature": {
-    "basicMatching": "Basis matching",
     "advancedFilters": "Geavanceerde filters",
-    "seeWhoLikesYou": "Zie wie je leuk vindt",
+    "basicMatching": "Basis matching",
+    "hdVideoCalls": "HD Video Calls",
+    "invisibleBrowsing": "Invisible Browsing",
+    "passport": "Passport",
+    "profileAnalytics": "Profile Analytics",
     "rewind": "Terugspoelen",
-    "voiceCalls": "Spraakoproepen",
-    "videoCalls": "Video-oproepen",
-    "unlimitedLikes": "Onbeperkte likes",
-    "prioritySupport": "Prioritaire ondersteuning",
-    "adFree": "Advertentievrij",
-    "premiumBadge": "Premium badge",
-    "invisibleMode": "Onzichtbare modus",
-    "readReceipts": "Leesbevestigingen",
-    "superLikes": "Super Likes",
-    "boosts": "Boosts",
-    "dailyLikes": "Dagelijkse likes",
-    "requires": {
-      "silver": "Zilver lidmaatschap vereist",
-      "gold": "Goud lidmaatschap vereist",
-      "platinum": "Platina lidmaatschap vereist",
-      "admin": "Beheerder toegang vereist",
-      "premium": "Premium abonnement vereist"
-    }
+    "seeWhoLikesYou": "Zie wie je leuk vindt",
+    "translation": "Translation",
+    "vipMatching": "VIP Matching",
+    "voiceCalls": "Spraakoproepen"
   },
   "feature.advancedFilters": "Geavanceerde filters",
   "feature.allFilters": "Alle filters",
@@ -938,7 +916,36 @@
   "feature.voiceCalls": "Spraakoproepen",
   "featureFlags": "Functievlaggen",
   "featureInDevelopment": "Deze functie is momenteel in ontwikkeling. Meer details met een Premium-lidmaatschap!",
-  "features": "Functies",
+  "features": {
+    "advancedFilters": {
+      "description": "Filter by education, job, height, lifestyle and more"
+    },
+    "dailyLikes": {
+      "count": "{{count}} Daily Likes",
+      "description50": "Boost your chances with 50 daily likes instead of 10"
+    },
+    "disableAds": {
+      "description": "Tired of seeing advertisements? Disable them from showing!",
+      "tier": "Silver+",
+      "title": "Disable Ads"
+    },
+    "monthlyBoosts": {
+      "count": "{{count}} Boost per Month",
+      "description1": "Get 10x more visibility with monthly profile boost"
+    },
+    "seeWhoLikesYou": {
+      "description": "Discover who already liked your profile and start matching instantly"
+    },
+    "superLikes": {
+      "count": "{{count}} Super Likes",
+      "description5": "Stand out with 5 super likes per day"
+    },
+    "verifiedBadge": {
+      "description": "Show others that you are a legitimate user with this awesome badge",
+      "free": "Free with verification",
+      "title": "Verified Badge"
+    }
+  },
   "features.dailyLikes": "{{count}} dagelijkse likes",
   "features.dailySuperlikes": "{{count}} dagelijkse superlikes",
   "features.monthlyBoosts": "{{count}} maandelijkse boosts",
@@ -998,14 +1005,37 @@
   "googlePayFailed": "Google Pay-betaling mislukt",
   "googlePaySuccess": "✅ Google Pay-betaling geslaagd",
   "googleSignInError": "Google-aanmelding mislukt",
-  "gotItText": "Begrepen",
+  "gotIt": "Got it",
   "grantFailed": "Toekennen mislukt",
   "grantSubscription": "Abonnement toekennen",
   "grantTierForDays": "Geef {{tier}} voor {{duration}} dagen",
   "granting": "Toekennen...",
   "growthRate": "Groeisnelheid",
   "guestNamePlaceholder": "Anna",
-  "guests": "Bezoekers",
+  "guestService": {
+    "accessControlError": "Error during access control",
+    "accessDenied": "Access denied",
+    "anonymous": "Anonymous",
+    "errorRetrievingStats": "Error while retrieving statistics",
+    "errorRetrievingVisitors": "Error occurred while retrieving visitors",
+    "noProfileVisitorsYet": "No profile visitors yet",
+    "profileVisitorsFound": "{{count}} profile visitors found",
+    "silverMembershipRequired": "Silver membership or higher required to view profile visitors",
+    "unableToHideVisitor": "Unable to hide visitor",
+    "unableToRetrieveVisitors": "Unable to retrieve visitors",
+    "visitorHidden": "Visitor hidden"
+  },
+  "guests": {
+    "distanceUnit": "km",
+    "goldPlus": "Gold+",
+    "tiers": {
+      "gold": "Gold",
+      "platinum": "Platinum",
+      "silver": "Silver"
+    },
+    "title": "Visitors",
+    "yearsOld": "years old"
+  },
   "happyCouples": "Gelukkige stellen",
   "harassment": "Intimidatie",
   "hasAccountSignIn": "Heeft u al een account? Inloggen",
@@ -1013,6 +1043,63 @@
   "heightLabel": "Lengte (cm)",
   "heightPlaceholder": "Uw lengte (cm)",
   "help": "Help",
+  "helpCenter": {
+    "accountDeleteAnswer": "Go to Settings > Account > Delete Account. This action is permanent and cannot be undone.",
+    "accountDeleteQuestion": "How do I delete my account?",
+    "additionalResourcesTitle": "Additional Resources",
+    "appNotWorkingAnswer": "Try restarting the app, check your internet connection, update to the latest version, or contact support.",
+    "appNotWorkingQuestion": "The app is not working properly, what should I do?",
+    "communityForumButton": "Community Forum",
+    "contactFormMissingInfoToastDescription": "Please fill in all required fields",
+    "contactFormMissingInfoToastTitle": "Missing Information",
+    "contactFormSuccessToastDescription": "We'll get back to you as soon as possible",
+    "contactFormSuccessToastTitle": "Message Sent",
+    "contactFormTitle": "Contact Support",
+    "emailPlaceholder": "your.email@example.com",
+    "gettingStartedFaq": "Getting Started",
+    "helpCenterDescription": "Find answers to common questions or contact our support team",
+    "howMatchingWorksAnswer": "Our algorithm considers your preferences, location, interests, and activity to show you compatible profiles.",
+    "howMatchingWorksQuestion": "How does the matching system work?",
+    "howToAddPhotosAnswer": "Go to your profile settings, tap 'Add Photos', select from your gallery or take new photos. You can add up to 6 photos.",
+    "howToAddPhotosQuestion": "How do I add photos to my profile?",
+    "howToBlockUserAnswer": "Go to their profile, tap the three dots menu, and select 'Block'. They won't be able to see or contact you.",
+    "howToBlockUserQuestion": "How do I block someone?",
+    "howToCancelSubscriptionAnswer": "Go to Settings > Subscription to cancel. You can also cancel through your app store subscription settings.",
+    "howToCancelSubscriptionQuestion": "How can I cancel my subscription?",
+    "howToCreateProfileAnswer": "To create a profile, sign up with your email, add photos, write a bio, and verify your account for better matches.",
+    "howToCreateProfileQuestion": "How do I create a profile?",
+    "howToReportUserAnswer": "On their profile, tap the three dots menu and select 'Report'. Choose the reason and provide details.",
+    "howToReportUserQuestion": "How do I report a user?",
+    "howToVerifyProfileAnswer": "Go to profile settings and follow the verification process. Take a selfie matching the pose shown to get verified.",
+    "howToVerifyProfileQuestion": "How do I verify my profile?",
+    "liveChatButton": "Live Chat",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Describe your issue or question in detail...",
+    "namePlaceholder": "Your full name",
+    "notReceivingNotificationsAnswer": "Check your device settings, ensure notifications are enabled for the app, and verify your notification preferences.",
+    "notReceivingNotificationsQuestion": "I'm not receiving notifications, how to fix this?",
+    "quickAccessChatAction": "Start Chat",
+    "quickAccessChatDescription": "Chat with our support team in real-time",
+    "quickAccessEmailAction": "Send Email",
+    "quickAccessEmailDescription": "Send us an email for detailed support",
+    "quickAccessPhoneAction": "Call Now",
+    "quickAccessPhoneDescription": "Call our support hotline",
+    "quickAccessPhoneTitle": "Phone Support",
+    "refundPolicyAnswer": "Refunds are handled according to app store policies. Contact support for assistance with refund requests.",
+    "refundPolicyQuestion": "What is the refund policy?",
+    "safetyFaq": "Safety & Security",
+    "safetyGuideButton": "Safety Guide",
+    "safetyTipsAnswer": "Always meet in public places, tell friends your plans, trust your instincts, and never share personal information early.",
+    "safetyTipsQuestion": "What are the safety tips for dating?",
+    "sendMessageButton": "Send Message",
+    "subjectLabel": "Subject",
+    "subjectPlaceholder": "What can we help you with?",
+    "subscriptionFaq": "Subscription & Billing",
+    "technicalFaq": "Technical Support",
+    "userGuideButton": "User Guide",
+    "whatIsPremiumAnswer": "Premium includes unlimited likes, super likes, profile boosts, advanced filters, read receipts, and ad-free browsing.",
+    "whatIsPremiumQuestion": "What features are included in Premium?"
+  },
   "helpCenterDescription": "Hoe kunnen we u helpen?",
   "helpCenterTitle": "Helpcentrum",
   "helpDesc": "FAQ en ondersteuning",
@@ -1132,6 +1219,7 @@
   "interest.cooking": "Koken",
   "interest.cycling": "Fietsen",
   "interest.dance": "Dansen",
+  "interest.design": "Design",
   "interest.fashion": "Mode",
   "interest.fitness": "Fitness",
   "interest.food": "Eten",
@@ -1145,6 +1233,7 @@
   "interest.nature": "Natuur",
   "interest.photography": "Fotografie",
   "interest.piano": "Piano",
+  "interest.poetry": "Poetry",
   "interest.reading": "Lezen",
   "interest.running": "Hardlopen",
   "interest.sports": "Sport",
@@ -1195,9 +1284,9 @@
   "interestsTitle": "Interesses",
   "interface": {
     "moreProfiles": "+{{count}} meer profielen",
-    "syncing": "Synchroniseren...",
+    "syncData": "Gegevens synchroniseren",
     "syncSuccess": "Gegevens succesvol gesynchroniseerd",
-    "syncData": "Gegevens synchroniseren"
+    "syncing": "Synchroniseren..."
   },
   "introduceYourself": "Stel jezelf voor... (minimaal 20 tekens)",
   "invalidEmail": "Ongeldig e-mailadres",
@@ -1217,9 +1306,9 @@
   "languageUpdateError": "Fout bij bijwerken van taal",
   "languageUpdated": "Taal bijgewerkt",
   "languages": {
-    "turkish": "Turks",
     "english": "Engels",
-    "swedish": "Zweeds"
+    "swedish": "Zweeds",
+    "turkish": "Turks"
   },
   "languagesSelected": "{{count}}/5 geselecteerd",
   "languagesTitle": "Talen (max. 5)",
@@ -1249,29 +1338,21 @@
   "likes.viewProfiles": "Bekijk profielen die je hebt geliket",
   "likesStats": "Likes",
   "limit": {
-    "daily": {
-      "likes": "Dagelijkse like-limiet bereikt",
-      "superLikes": "Dagelijkse super-like-limiet bereikt"
-    },
     "description": {
       "dailyLikes": "Upgrade voor onbeperkte likes",
       "dailySuperLikes": "Upgrade voor meer super-likes",
       "monthlyBoosts": "Je hebt je maandelijkse boost-limiet bereikt"
     },
-    "monthly": {
-      "boosts": "Maandelijkse boost-limiet bereikt"
-    },
-    "remaining": "over",
+    "exceeded": "Limit Exceeded",
     "title": {
-      "dailyLikes": "Dagelijkse Like-Limiet",
       "dailySuperLikes": "Super-Like-Limiet"
     }
   },
   "limited": "Beperkt",
   "limits": {
     "reached": "Limiet bereikt",
-    "systemReady": "Systeem gereed",
     "systemNotReady": "Systeem niet gereed",
+    "systemReady": "Systeem gereed",
     "upgrade": "Upgraden"
   },
   "loadFailed": "Laden mislukt",
@@ -1288,7 +1369,13 @@
   "loadingUsers": "Gebruikers laden",
   "loadingUsersDescription": "Wacht alstublieft terwijl we gebruikersgegevens ophalen...",
   "loadingUsersTitle": "Gebruikers laden",
-  "location": "Locatie",
+  "location": {
+    "notSupported": "Geolocation is not supported by this browser.",
+    "permissionDenied": "Location access denied by user",
+    "positionUnavailable": "Location information unavailable",
+    "timeout": "Location request timed out",
+    "unknownError": "An unknown error occurred while getting your location."
+  },
   "location1": "Amsterdam",
   "location2": "Rotterdam",
   "location3": "Den Haag",
@@ -1314,7 +1401,7 @@
   "makeAdmin": "Beheerder maken",
   "makeModerator": "Moderator maken",
   "makeProfileMoreActive": "Maak uw profiel actiever, laat meer mensen u opmerken!",
-  "makeRole": "{{{role}}} maken",
+  "makeRole": "{{role}} maken",
   "male": "Man",
   "manageContent": "Content beheren",
   "managePlans": "Plannen beheren",
@@ -1334,7 +1421,6 @@
   "maximumDistance": "Maximale afstand",
   "men": "Mannen",
   "menu": "Menu",
-  "mesajAt": "Bericht sturen",
   "messageBeforeMatch": "Bericht voor match",
   "messageModeration": "Berichtmoderatie",
   "messageRequired": "Bericht is verplicht",
@@ -1345,7 +1431,7 @@
   "metaTitle": "Metatitel",
   "metaTitlePlaceholder": "Paginatitel (60 tekens)",
   "minAgeLabel": "{{age}} jaar",
-  "minCharsRemaining": "Nog minimaal {{{count}}} tekens",
+  "minCharsRemaining": "Nog minimaal {{count}} tekens",
   "minTwoPhotos": "U moet minimaal 2 foto's toevoegen",
   "minimumAge": "Minimale leeftijd",
   "minutesAgo": "minuten geleden",
@@ -1353,57 +1439,58 @@
   "missionDescription": "Missiebeschrijving",
   "missionTitle": "Missietitel",
   "moderation": {
-    "title": "Contentmoderatie",
     "actions": {
       "approve": "Goedkeuren",
-      "reject": "Afwijzen",
-      "flag": "Markeren"
+      "flag": "Markeren",
+      "reject": "Afwijzen"
     },
     "dialogs": {
       "approve": {
-        "title": "Content goedkeuren",
-        "description": "Deze content wordt goedgekeurd en zichtbaar gemaakt voor gebruikers."
-      },
-      "reject": {
-        "title": "Content afwijzen",
-        "description": "Deze content wordt afgewezen en uit het systeem verwijderd."
+        "description": "Deze content wordt goedgekeurd en zichtbaar gemaakt voor gebruikers.",
+        "title": "Content goedkeuren"
       },
       "flag": {
-        "title": "Content markeren",
-        "description": "Deze content wordt gemarkeerd voor verdere beoordeling."
+        "description": "Deze content wordt gemarkeerd voor verdere beoordeling.",
+        "title": "Content markeren"
+      },
+      "reject": {
+        "description": "Deze content wordt afgewezen en uit het systeem verwijderd.",
+        "title": "Content afwijzen"
       }
     },
-    "success": "Content {{action}} succesvol voltooid",
-    "failed": "Content {{action}} mislukt",
     "error": "Er is een fout opgetreden tijdens de moderatie",
-    "unknownUser": "Onbekende gebruiker",
-    "profilePhoto": "Profielfoto",
-    "reason": "Reden",
-    "notes": "Notities",
-    "notesPlaceholder": "Voer uw moderatienotities in...",
-    "reasonPlaceholder": "Selecteer reden voor afwijzing of markering...",
-    "pending": {
-      "title": "In afwachting van beoordeling",
-      "description": "Content die wacht op moderatiegoedkeuring",
-      "noPending": "Geen content in afwachting",
-      "allReviewed": "Alle geüploade content is beoordeeld"
-    },
-    "stats": {
-      "totalFiles": "Totaal aantal bestanden",
-      "originalSize": "Oorspronkelijke grootte",
-      "compressedSize": "Gecomprimeerde grootte",
-      "avgCompression": "Gem. compressie",
-      "spaceSaved": "Bespaarde ruimte"
-    },
+    "failed": "Content {{action}} mislukt",
     "fileInfo": {
+      "compressed": "Gecomprimeerd:",
       "file": "Bestand:",
       "size": "Grootte:",
-      "compressed": "Gecomprimeerd:",
       "uploaded": "Geüpload:"
-    }
+    },
+    "notes": "Notities",
+    "notesPlaceholder": "Voer uw moderatienotities in...",
+    "pending": {
+      "allReviewed": "Alle geüploade content is beoordeeld",
+      "description": "Content die wacht op moderatiegoedkeuring",
+      "noPending": "Geen content in afwachting",
+      "title": "In afwachting van beoordeling"
+    },
+    "profilePhoto": "Profielfoto",
+    "reason": "Reden",
+    "reasonPlaceholder": "Selecteer reden voor afwijzing of markering...",
+    "stats": {
+      "avgCompression": "Gem. compressie",
+      "compressedSize": "Gecomprimeerde grootte",
+      "originalSize": "Oorspronkelijke grootte",
+      "spaceSaved": "Bespaarde ruimte",
+      "totalFiles": "Totaal aantal bestanden"
+    },
+    "success": "Content {{action}} succesvol voltooid",
+    "title": "Contentmoderatie",
+    "unknownUser": "Onbekende gebruiker"
   },
   "moderationQueue": "Moderatie wachtrij",
   "moderator": "Moderator",
+  "moderatorAccess": "🛡️ Moderator Access - All Premium Features Included",
   "moderatorPanel": "Moderatorpaneel",
   "moderatorPermissions": {
     "description": "Welke moderatorrechten wilt u voor deze gebruiker activeren?",
@@ -1439,6 +1526,12 @@
   },
   "needHelp": "Hulp nodig?",
   "networkError": "Netwerkfout",
+  "networkStatus": {
+    "connectionLost": "Connection lost",
+    "connectionRestored": "Connection restored",
+    "featuresUnavailable": "Some features may be unavailable",
+    "syncingWithServer": "Syncing with server..."
+  },
   "new": "nieuw",
   "newLike": "Nieuwe like",
   "newMatch": "Nieuwe match!",
@@ -1447,7 +1540,9 @@
   "newMatchNotificationMessage": "U heeft een nieuwe match!",
   "newMatches": "Nieuwe matches",
   "newMatchesDescription": "Ontvang een melding wanneer u een match heeft met iemand",
-  "newMessages": "Nieuwe berichten",
+  "newMatchesLabel": "New Matches",
+  "newMessageNotification": "New Message",
+  "newMessageNotificationMessage": "You have a new message",
   "newMessagesDescription": "Ontvang een melding wanneer u een nieuw bericht ontvangt",
   "newMessagesLabel": "Nieuwe berichten",
   "newRole": "Nieuwe rol",
@@ -1514,7 +1609,7 @@
   "occupationLabel": "Beroep",
   "occupationPlaceholder": "Uw beroep",
   "offline": "Offline",
-  "okText": "OK",
+  "ok": "OK",
   "onboarding.birthDate.question": "Voer uw geboortedatum in",
   "onboarding.birthDate.tooYoung": "U moet minimaal 18 jaar oud zijn",
   "onboarding.birthDate.warning": "⚠️ Deze informatie kan later niet worden gewijzigd",
@@ -1741,7 +1836,26 @@
   "portalError": "Portaalfout",
   "portalUrlError": "Kon portaal-URL niet ophalen",
   "postDuringPeakHours": "Post tijdens piekuren",
-  "preferences": "Voorkeuren",
+  "preferences": {
+    "createError": "Error creating default preferences:",
+    "created": "Default preferences created:",
+    "creating": "Creating default preferences for user:",
+    "fetchError": "Error fetching preferences:",
+    "generalError": "Error in fetchPreferences:",
+    "loaded": "Preferences loaded:",
+    "saveError": {
+      "description": "Settings could not be saved, please try again",
+      "title": "Error"
+    },
+    "saved": {
+      "description": "Your preferences have been updated and saved permanently",
+      "title": "Settings saved"
+    },
+    "updateError": "Error updating preferences:",
+    "updateNoUser": "Cannot update preferences: no user or preferences",
+    "updateSuccess": "Preferences updated successfully:",
+    "updating": "Updating preferences with:"
+  },
   "preferencesSavedToastDesc": "Profielen worden bijgewerkt volgens uw nieuwe voorkeuren.",
   "preferencesSavedToastTitle": "Voorkeuren opgeslagen",
   "premium": "Premium",
@@ -1776,9 +1890,9 @@
   "processing": "Verwerken...",
   "processingText": "Verwerken...",
   "profile": "Profiel",
-  "profile.about.remainingChars": "{{{count}}} tekens over",
+  "profile.about.remainingChars": "{{count}} tekens over",
   "profile.bio.about": "Over",
-  "profile.bio.minCharsRemaining": "Nog minimaal {{{count}}} tekens",
+  "profile.bio.minCharsRemaining": "Nog minimaal {{count}} tekens",
   "profile.bio.placeholder": "Stel jezelf voor... (minimaal 20 tekens)",
   "profile.bio.placeholderEnd": " (minimaal 20 tekens)",
   "profile.bio.placeholderStart": "Stel jezelf voor... ",
@@ -1789,20 +1903,24 @@
   "profile.gender.other": "Anders",
   "profile.interests.choose": "Kies uw interesses",
   "profile.interests.maxReached": "U kunt maximaal {{max}} interesses selecteren",
-  "profile.interests.selected": "{{{count}}} geselecteerd",
+  "profile.interests.selected": "{{count}} geselecteerd",
   "profile.location.label": "Locatie",
   "profile.location.placeholder": "Stad, wijk",
   "profile.occupation.label": "Beroep",
   "profile.occupation.placeholder": "Uw beroep",
   "profileAnalytics": "Profielanalyse",
   "profileBoost": "Profielboost",
+  "profileCompletionCardDescription": "Complete your profile to increase your match potential",
+  "profileCompletionCardTitle": "Profile Completion",
+  "profileCompletionCompletedLabel": "Complete",
+  "profileCompletionTip": "Add more details to increase your visibility and get better matches",
   "profileDataNotFound": "Profielgegevens niet gevonden",
   "profileError": "Profielfout",
   "profileExample1Name": "Emma, 24",
   "profileExample2Name": "James, 27",
   "profileHighlight": "Profielhighlight",
   "profileImageAlt": "Profiel",
-  "profileLoadError": "Profiel kon niet worden geladen: {message}}",
+  "profileLoadError": "Profiel kon niet worden geladen: {{message}}",
   "profileModeration": "Profielmoderatie",
   "profileNotFound": "Profiel niet gevonden",
   "profileNotFoundError": "Profiel niet gevonden",
@@ -1874,6 +1992,7 @@
   "religionLabel": "Religie",
   "religionPlaceholder": "Uw religieuze overtuiging (optioneel)",
   "removeFeature": "Functie verwijderen",
+  "removeMatch": "Remove Match",
   "report": "Rapporteren",
   "reportDate": "Rapportdatum",
   "reportDetails": "Rapportdetails",
@@ -1892,13 +2011,16 @@
   "resolvedToday": "Vandaag opgelost",
   "restoreDatabase": "Database herstellen",
   "retentionRates": "Retentiepercentages",
-  "retryText": "Opnieuw proberen",
+  "retry": "Retry",
   "revenueAnalytics": "Inkomstenanalyse",
   "reviewReport": "Rapport beoordelen",
   "rewind": {
+    "error": {
+      "description": "Failed to rewind swipe",
+      "title": "Rewind Error"
+    },
     "failed": {
       "description": "Kon swipe niet ongedaan maken",
-      "error": "Ongedaan maken mislukt",
       "title": "Ongedaan Maken Mislukt"
     },
     "success": {
@@ -1928,12 +2050,14 @@
   "roleUpdatedMessage": "Plan {{role}} is succesvol bijgewerkt",
   "roleWillBeAssigned": "rol",
   "roles": {
+    "admin": "Admin",
     "makeAdmin": "Beheerder maken",
+    "makeGold": "Goud maken",
     "makeModerator": "Moderator maken",
+    "makePlatinum": "Platina maken",
     "makeRegistered": "Geregistreerd maken",
     "makeSilver": "Zilver maken",
-    "makeGold": "Goud maken",
-    "makePlatinum": "Platina maken"
+    "moderator": "Moderator"
   },
   "safeEnvironment": "Veilige omgeving",
   "safeEnvironmentDesc": "Uw privacy en veiligheid zijn onze topprioriteiten met geverifieerde profielen",
@@ -2034,6 +2158,80 @@
   "signUp": "Registreren",
   "signUpSubtitle": "Sluit je aan bij miljoenen die liefde vinden",
   "silver": "Zilver",
+  "silverFeatureTest": {
+    "additionalTestsTitle": "Additional Tests",
+    "buttons": {
+      "runAll": "Run All Tests",
+      "testAdvancedFilters": "Test Advanced Filters",
+      "testBoost": "Test Boost",
+      "testCalls": "Test Voice/Video Calls",
+      "testLike": "Test Like",
+      "testRewind": "Test Rewind Feature",
+      "testSeeLikes": "Test \"See Who Likes You\"",
+      "testSuperLike": "Test Super Like",
+      "testing": "Testing..."
+    },
+    "currentRole": "Current Role",
+    "description": "Testing all Silver tier features for user: {{email}}",
+    "featureTestsTitle": "Feature Tests",
+    "features": {
+      "advancedFilters": {
+        "description": "Silver users can use advanced filters",
+        "name": "Advanced Filters"
+      },
+      "dailyLikes": {
+        "description": "Silver users get {{count}} daily likes",
+        "name": "{{count}} Daily Likes"
+      },
+      "dailySuperlikes": {
+        "description": "Silver users get {{count}} daily super likes",
+        "name": "{{count}} Daily Super Likes"
+      },
+      "maxPhotos": {
+        "description": "Silver users can upload up to {{count}} photos",
+        "name": "{{count}} Photos Max"
+      },
+      "monthlyBoosts": {
+        "description": "Silver users get {{count}} boost per month",
+        "name": "{{count}} Monthly Boost"
+      },
+      "readReceipts": {
+        "description": "Silver users can see read receipts",
+        "name": "Read Receipts"
+      },
+      "rewindFeature": {
+        "description": "Silver users can rewind their last swipe",
+        "name": "Rewind Feature"
+      },
+      "seeWhoLikesYou": {
+        "description": "Silver users can see who liked them",
+        "name": "See Who Likes You"
+      },
+      "unlimitedMessages": {
+        "description": "Silver users can send unlimited messages",
+        "name": "Unlimited Messages"
+      },
+      "videoCalls": {
+        "description": "Silver users can make video calls",
+        "name": "Video Calls"
+      },
+      "voiceCalls": {
+        "description": "Silver users can make voice calls",
+        "name": "Voice Calls"
+      }
+    },
+    "stats": {
+      "dailyLikes": "Daily Likes",
+      "monthlyBoosts": "Monthly Boosts",
+      "superLikes": "Super Likes"
+    },
+    "status": {
+      "failed": "Failed",
+      "notTested": "Not tested",
+      "passed": "Passed"
+    },
+    "title": "Silver Feature Test"
+  },
   "siteSettings": "Site-instellingen",
   "sixMonthPlan": "6 maanden plan",
   "sixMonthPlanDesc": "20% korting + 1 maand gratis",
@@ -2072,77 +2270,78 @@
   "step3Button": "Begin met berichten sturen",
   "step3Description": "Begin betekenisvolle gesprekken na het matchen. Plan uw eerste date!",
   "step3Title": "Chatten & Ontmoeten",
-  "submitText": "Verzenden",
+  "submit": "Submit",
   "subscription": {
-    "management": {
-      "grant": "Abonnement toekennen",
-      "granted": "Abonnement toegekend",
-      "failed": "Toekennen mislukt",
-      "updating": "Bijwerken...",
-      "activate": "Activeren",
-      "deactivate": "Deactiveren"
-    },
-    "types": {
-      "silver": "Zilver (Basis Premium)",
-      "gold": "Goud (Premium Plus)",
-      "platinum": "Platina (Ultimate)"
-    },
     "durations": {
-      "7days": "7 dagen",
       "14days": "14 dagen",
       "30days": "30 dagen",
       "60days": "60 dagen",
+      "7days": "7 dagen",
       "90days": "90 dagen"
     },
     "features": {
       "dailyLikes": "{{count}} dagelijkse likes",
-      "superLikes": "{{count}} super likes",
-      "monthlyBoosts": "{{count}} maandelijkse boosts"
+      "monthlyBoosts": "{{count}} maandelijkse boosts",
+      "superLikes": "{{count}} super likes"
+    },
+    "limits": {
+      "dailyBoosts": "Dagelijkse boosts",
+      "dailyLikes": "Dagelijkse likes",
+      "dailyUsage": "Dagelijks gebruik",
+      "more": "meer",
+      "plan": "Plan",
+      "remaining": "resterend",
+      "superLikes": "Super Likes"
+    },
+    "manageSubscription": "Abonnement beheren",
+    "management": {
+      "activate": "Activeren",
+      "deactivate": "Deactiveren",
+      "failed": "Toekennen mislukt",
+      "grant": "Abonnement toekennen",
+      "granted": "Abonnement toegekend",
+      "updating": "Bijwerken..."
     },
     "status": {
       "currentPlan": "Huidige plan",
-      "validUntil": "Geldig tot",
-      "timeRemaining": "Resterende tijd",
       "daysRemaining": "Resterende dagen",
-      "features": "Functies"
+      "features": "Functies",
+      "timeRemaining": "Resterende tijd",
+      "validUntil": "Geldig tot"
     },
-    "limits": {
-      "dailyUsage": "Dagelijks gebruik",
-      "dailyLikes": "Dagelijkse likes",
-      "superLikes": "Super Likes",
-      "dailyBoosts": "Dagelijkse boosts",
-      "remaining": "resterend",
-      "plan": "Plan",
-      "more": "meer"
-    },
-    "tiers": {
-      "registered": "Gratis",
-      "silver": "Zilver",
-      "gold": "Goud",
-      "platinum": "Platina"
-    },
-    "upgrade": "Upgraden",
     "subscribenow": "Nu abonneren",
-    "manageSubscription": "Abonnement beheren"
+    "tiers": {
+      "gold": "Goud",
+      "platinum": "Platina",
+      "registered": "Gratis",
+      "silver": "Zilver"
+    },
+    "types": {
+      "gold": "Goud (Premium Plus)",
+      "platinum": "Platina (Ultimate)",
+      "silver": "Zilver (Basis Premium)"
+    },
+    "upgrade": "Upgraden"
   },
   "subscription.description": "Beheer uw abonnement en controleer uw dagelijkse gebruikslimieten",
   "subscription.error.description": "Er is een fout opgetreden tijdens het abonnementsproces",
   "subscription.error.portalError": "Abonnementsportaal kon niet worden geopend",
   "subscription.error.title": "Abonnementsfout",
   "subscription.limits": {
-    "dailyLikes": "Dagelijkse likes",
-    "superLikes": "Super Likes",
-    "dailyBoosts": "Dagelijkse boosts",
-    "dailyUsage": "Dagelijks gebruik",
-    "remaining": "resterend",
-    "unlimited": "Onbeperkt",
-    "dailyLikeLimitReached": "Dagelijkse like-limiet bereikt",
-    "dailySuperLikeLimitReached": "Dagelijkse super-like-limiet bereikt",
-    "upgradeMessage": "Dagelijkse limiet bereikt? Upgrade voor meer likes en functies!",
-    "upgradeTo": "Upgraden naar:",
     "currentFeatures": "Huidige functies:",
+    "dailyBoosts": "Dagelijkse boosts",
+    "dailyLikeLimitReached": "Dagelijkse like-limiet bereikt",
+    "dailyLikes": "Dagelijkse likes",
+    "dailySuperLikeLimitReached": "Dagelijkse super-like-limiet bereikt",
+    "dailyUsage": "Dagelijks gebruik",
+    "monthlyBoosts": "Monthly Boosts",
     "more": "meer",
-    "plan": "Plan"
+    "plan": "Plan",
+    "remaining": "resterend",
+    "superLikes": "Super Likes",
+    "unlimited": "Onbeperkt",
+    "upgradeMessage": "Dagelijkse limiet bereikt? Upgrade voor meer likes en functies!",
+    "upgradeTo": "Upgraden naar:"
   },
   "subscription.manage": "Abonnement beheren",
   "subscription.management.description": "Bezoek onze upgradepagina om alle beschikbare plannen te zien of beheer uw bestaande abonnement via het beveiligde portaal van Stripe.",
@@ -2150,39 +2349,39 @@
   "subscription.management.title": "Abonnementbeheer",
   "subscription.management.viewPlans": "Alle plannen bekijken",
   "subscription.status": {
-    "title": "Abonnementsstatus",
     "currentPlan": "Huidige plan",
-    "validUntil": "Geldig tot",
-    "timeRemaining": "Resterende tijd",
     "daysRemaining": "{{days}} dagen resterend",
     "expired": "Verlopen",
-    "features": "Functies"
+    "features": "Functies",
+    "timeRemaining": "Resterende tijd",
+    "title": "Abonnementsstatus",
+    "validUntil": "Geldig tot"
   },
   "subscription.subscribenow": "Nu abonneren",
   "subscription.tiers": {
     "free": "Gratis",
-    "registered": "Gratis",
-    "silver": "Zilver",
     "gold": "Goud",
-    "platinum": "Platina"
+    "platinum": "Platina",
+    "registered": "Gratis",
+    "silver": "Zilver"
   },
   "subscription.title": "Abonnement & Gebruik",
   "subscription.upgrade": "Upgraden",
-  "subscriptionActivated": "{{{tier}}} abonnement geactiveerd!",
+  "subscriptionActivated": "{{tier}} abonnement geactiveerd!",
   "subscriptionCongratulations": "Gefeliciteerd!",
-  "subscriptionEnds": "Eindigt op: {date}}",
+  "subscriptionEnds": "Eindigt op: {{date}}",
   "subscriptionExpiresIn": "Uw abonnement verloopt over",
   "subscriptionExpiringNotification": "Abonnement verloopt",
   "subscriptionExpiringNotificationMessage": "Uw abonnement verloopt binnenkort",
   "subscriptionExpiry": "Abonnementvervaldatum",
   "subscriptionGranted": "Abonnement toegekend",
-  "subscriptionGrantedDesc": "{{{tier}}} abonnement toegekend voor {{{days}}} dagen",
+  "subscriptionGrantedDesc": "{{tier}} abonnement toegekend voor {{days}} dagen",
   "subscriptionHasBeenRenewed": "abonnement is verlengd",
   "subscriptionManagement": "Abonnementbeheer",
   "subscriptionRenewedNotification": "Abonnement verlengd",
   "subscriptionRenewedNotificationMessage": "Uw abonnement is verlengd",
   "subscriptionRole": {
-    "description": "Deze gebruiker krijgt het {{{role}}} abonnementspakket en toegang tot premium functies.",
+    "description": "Deze gebruiker krijgt het {{role}} abonnementspakket en toegang tot premium functies.",
     "title": "Abonnementsautoriteit"
   },
   "subscriptionSettingsDesc": "Beheer uw abonnement en bekijk gebruikslimieten",
@@ -2200,6 +2399,8 @@
   "sunday": "Zondag",
   "superLike": "Super Like",
   "superLikeDesc": "Val op met 5 superlikes per dag",
+  "superLikeErrorDescription": "Unable to send super like. Please try again.",
+  "superLikeFailed": "Super Like Failed",
   "superLikeFeatureDescription": "Toon uw speciale interesse en krijg meer aandacht",
   "superLikeFeatureDetail": "Onbeperkte superlikes",
   "superLikeFeatureTitle": "Super Like",
@@ -2215,17 +2416,19 @@
   "superLikesPerDay": "5 Super Likes/dag",
   "support": "Ondersteuning",
   "support247": "24/7 ondersteuning",
+  "swipeErrorDescription": "Failed to save your action. Please check your internet connection and try again.",
+  "swipeFailed": "Swipe Failed",
   "swipesReset": "Alle swipes zijn succesvol gereset",
   "swipesResetError": "Swipes resetten mislukt",
   "system": {
-    "ready": "Systeem gereed",
-    "notReady": "Systeem niet gereed",
-    "refresh": "Vernieuwen",
-    "export": "Exporteren",
     "clear": "Wissen",
+    "export": "Exporteren",
+    "notReady": "Systeem niet gereed",
+    "ready": "Systeem gereed",
+    "refresh": "Vernieuwen",
     "status": {
-      "on": "AAN",
-      "off": "UIT"
+      "off": "UIT",
+      "on": "AAN"
     }
   },
   "systemBackup": "Systeemback-up",
@@ -2236,6 +2439,11 @@
   "takeAction": "Actie ondernemen",
   "terms": "Voorwaarden",
   "termsOfService": "Servicevoorwaarden",
+  "testServiceRole": {
+    "button": "Test Service Role",
+    "testing": "Testing...",
+    "title": "Test Service Role Key"
+  },
   "testimonial1": "We ontmoetten elkaar op 2Sweety en het was liefde op het eerste gezicht! Nu plannen we onze bruiloft.",
   "testimonial2": "De beste dating-app die ik ooit heb gebruikt. Vond mijn perfecte match in slechts twee weken!",
   "testimonial3": "Geweldig algoritme dat compatibiliteit echt begrijpt. Zeer aan te bevelen!",
@@ -2252,9 +2460,9 @@
   "thursday": "Donderdag",
   "tiers": {
     "basic": "Basis",
-    "silver": "Zilver",
     "gold": "Goud",
-    "platinum": "Platina"
+    "platinum": "Platina",
+    "silver": "Zilver"
   },
   "timeoutError": "Verzoek time-out",
   "title": "Titel",
@@ -2294,12 +2502,12 @@
   "typeYourMessage": "Typ uw bericht...",
   "typing": "typt",
   "unauthorizedAccess": "Ongeautoriseerde toegang",
-  "unauthorizedAccessDesc": "U heeft geen toestemming om deze pagina te openen. Uw rol: {role}}",
+  "unauthorizedAccessDesc": "U heeft geen toestemming om deze pagina te openen. Uw rol: {{role}}",
   "unban": "Ban opheffen",
   "unbanError": "Er is een fout opgetreden bij het opheffen van de ban.",
   "unbanUser": "Gebruiker de-bannen",
   "unbanningUser": "Gebruiker de-bannen...",
-  "understoodText": "Begrepen",
+  "understood": "Understood",
   "unknown": "Onbekend",
   "unknownError": "Onbekende fout opgetreden",
   "unknownUser": "Onbekende gebruiker",
@@ -2331,9 +2539,9 @@
   "upgradeToViewAnalytics": "Upgrade om analyses te bekijken",
   "upload": {
     "noAuthToken": "Geen authenticatietoken",
-    "uploadFailed": "Uploaden mislukt",
+    "photoDeleteError": "Fout bij verwijderen van foto:",
     "photoUploadError": "Fout bij uploaden van foto:",
-    "photoDeleteError": "Fout bij verwijderen van foto:"
+    "uploadFailed": "Uploaden mislukt"
   },
   "uploadPhoto": "Foto uploaden",
   "uploadPhotos": "Upload uw foto's",
@@ -2379,32 +2587,32 @@
   },
   "value": "Waarde",
   "verification": {
-    "title": "Laat je verifiëren",
+    "comingSoon": "Binnenkort beschikbaar",
     "description": "Toon anderen dat u een legitieme gebruiker bent met de geverifieerde badge",
+    "emailInstructions": "We sturen een verificatielink naar uw geregistreerde e-mailadres.",
+    "error": "Verificatie mislukt",
+    "getVerified": "Laat je verifiëren",
     "methods": {
       "email": {
-        "title": "E-mailverificatie",
-        "description": "Snelle en eenvoudige verificatie via uw e-mailadres"
-      },
-      "phone": {
-        "title": "Telefoonverificatie",
-        "description": "Verifieer uw identiteit met sms-verificatie"
+        "description": "Snelle en eenvoudige verificatie via uw e-mailadres",
+        "title": "E-mailverificatie"
       },
       "idDocument": {
-        "title": "ID-documentverificatie",
-        "description": "Meest veilige verificatie met door de overheid uitgegeven ID"
+        "description": "Meest veilige verificatie met door de overheid uitgegeven ID",
+        "title": "ID-documentverificatie"
+      },
+      "phone": {
+        "description": "Verifieer uw identiteit met sms-verificatie",
+        "title": "Telefoonverificatie"
       }
     },
-    "verify": "Nu verifiëren",
-    "verifying": "Verifiëren...",
+    "phoneInstructions": "We sturen een verificatiecode naar uw geregistreerde telefoonnummer.",
     "submitted": "Verificatieverzoek ingediend",
     "success": "Verificatie geslaagd!",
-    "error": "Verificatie mislukt",
-    "emailInstructions": "We sturen een verificatielink naar uw geregistreerde e-mailadres.",
-    "phoneInstructions": "We sturen een verificatiecode naar uw geregistreerde telefoonnummer.",
-    "comingSoon": "Binnenkort beschikbaar",
+    "title": "Laat je verifiëren",
     "verifiedBadge": "Geverifieerde badge",
-    "getVerified": "Laat je verifiëren"
+    "verify": "Nu verifiëren",
+    "verifying": "Verifiëren..."
   },
   "verified": "Geverifieerd",
   "verifiedProfiles": "Geverifieerde profielen",

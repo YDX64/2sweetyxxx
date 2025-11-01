@@ -12,7 +12,7 @@
   "activating": "활성화 중...",
   "active": "온라인",
   "activeChats": "활성 채팅",
-  "activeSubscription": "🎉 활성 구독이 있습니다: {tier}}",
+  "activeSubscription": "🎉 활성 구독이 있습니다: {{tier}}",
   "activeSubscriptions": "활성 구독",
   "activeUsers": "활성 사용자",
   "activity": "활동",
@@ -29,234 +29,231 @@
   "admin.subscription.manual.subscriptionType": "구독 유형",
   "admin.subscription.manual.title": "수동 구독 관리",
   "adminAccess": {
-    "loginRequired": {
-      "title": "로그인 필요",
-      "description": "관리자 패널에 액세스하려면 로그인하세요.",
-      "button": "로그인으로 이동"
-    },
     "accessDenied": {
-      "title": "접근 거부됨",
-      "description": "관리자 패널에 접근할 권한이 없습니다.",
-      "yourRole": "내 역할",
-      "noRole": "할당된 역할 없음",
       "adminPermission": "관리자 권한",
-      "yes": "예",
+      "button": "홈으로 돌아가기",
+      "description": "관리자 패널에 접근할 권한이 없습니다.",
       "no": "아니요",
-      "button": "홈으로 돌아가기"
+      "noRole": "할당된 역할 없음",
+      "title": "접근 거부됨",
+      "yes": "예",
+      "yourRole": "내 역할"
     },
-    "debugMode": "디버그 모드"
+    "debugMode": "디버그 모드",
+    "loginRequired": {
+      "button": "로그인으로 이동",
+      "description": "관리자 패널에 액세스하려면 로그인하세요.",
+      "title": "로그인 필요"
+    }
   },
   "adminActions": "관리자 작업",
   "adminContent": {
-    "title": "콘텐츠 관리",
-    "preview": "미리보기",
-    "save": "저장",
-    "saving": "저장 중...",
-    "updateSuccess": "콘텐츠가 성공적으로 업데이트되었습니다",
-    "updateError": "콘텐츠 업데이트 실패",
-    "heroSection": "히어로 섹션",
     "badgeText": "배지 텍스트",
-    "subtitle": "부제목",
-    "mission": "미션",
-    "missionTitle": "미션 제목",
-    "missionDescription": "미션 설명",
-    "statistics": "통계",
-    "value": "값",
+    "common": {
+      "noData": "데이터 없음"
+    },
+    "heroSection": "히어로 섹션",
     "label": "라벨",
     "lastUpdated": "마지막 업데이트",
-    "seoSettings": "SEO 설정",
-    "metaTitle": "메타 제목",
-    "metaTitlePlaceholder": "검색 엔진용 페이지 제목",
     "metaDescription": "메타 설명",
     "metaDescriptionPlaceholder": "검색 엔진용 간단한 설명 (150-160자)",
     "metaKeywords": "메타 키워드",
+    "metaTitle": "메타 제목",
+    "metaTitlePlaceholder": "검색 엔진용 페이지 제목",
+    "mission": "미션",
+    "missionDescription": "미션 설명",
+    "missionTitle": "미션 제목",
     "pages": {
       "about": {
-        "title": "회사 소개",
         "description": "2020년부터 스마트 매칭 기술과 진정한 관계로 전 세계의 마음을 연결합니다.",
         "mission": "우리의 미션",
         "missionText": "2Sweety에서는 모든 사람이 의미 있는 사랑을 찾을 자격이 있다고 믿습니다...",
         "stats": {
-          "totalMatches": "총 매치 수",
           "activeUsers": "활성 사용자",
           "happyCouples": "행복한 커플",
-          "satisfactionRate": "만족도"
-        }
-      },
-      "privacy": {
-        "title": "개인정보 보호",
-        "description": "귀하의 개인정보는 우리의 최우선 과제입니다. 우리가 귀하의 개인정보를 어떻게 수집, 사용, 보호하는지 알아보세요.",
-        "lastUpdated": "2024년 12월"
-      },
-      "terms": {
-        "title": "법률 정보",
-        "description": "2Sweety를 사용하기 전에 이 약관을 주의 깊게 읽어주세요.",
-        "lastUpdated": "2024년 12월"
+          "satisfactionRate": "만족도",
+          "totalMatches": "총 매치 수"
+        },
+        "title": "회사 소개"
       },
       "gdpr": {
-        "title": "EU",
         "description": "2Sweety는 유럽 연합 일반 데이터 보호 규정을 완전히 준수합니다.",
-        "effectiveDate": "2018년 5월 25일"
+        "effectiveDate": "2018년 5월 25일",
+        "title": "EU"
+      },
+      "privacy": {
+        "description": "귀하의 개인정보는 우리의 최우선 과제입니다. 우리가 귀하의 개인정보를 어떻게 수집, 사용, 보호하는지 알아보세요.",
+        "lastUpdated": "2024년 12월",
+        "title": "개인정보 보호"
+      },
+      "terms": {
+        "description": "2Sweety를 사용하기 전에 이 약관을 주의 깊게 읽어주세요.",
+        "lastUpdated": "2024년 12월",
+        "title": "법률 정보"
       }
     },
+    "preview": "미리보기",
+    "save": "저장",
+    "saving": "저장 중...",
     "seo": {
       "defaultKeywords": "데이트, 사랑, 관계, 한국",
       "keywordsPlaceholder": "데이트, 사랑, 관계, 한국"
     },
-    "common": {
-      "noData": "데이터 없음"
-    }
+    "seoSettings": "SEO 설정",
+    "statistics": "통계",
+    "subtitle": "부제목",
+    "title": "콘텐츠 관리",
+    "updateError": "콘텐츠 업데이트 실패",
+    "updateSuccess": "콘텐츠가 성공적으로 업데이트되었습니다",
+    "value": "값"
   },
   "adminDashboard": "관리자 대시보드",
   "adminLogs": {
     "enhanced": {
-      "title": "향상된 로그 시스템",
+      "activeCategories": "활성 카테고리",
+      "autoRefresh": "자동 새로고침",
+      "categories": {
+        "admin": "관리자",
+        "auth": "인증",
+        "database": "데이터베이스",
+        "error": "오류",
+        "network": "네트워크",
+        "payment": "결제",
+        "performance": "성능",
+        "system": "시스템",
+        "userAction": "사용자 작업"
+      },
+      "clear": "지우기",
+      "details": {
+        "category": "카테고리",
+        "details": "상세 정보",
+        "level": "레벨",
+        "message": "메시지",
+        "network": "네트워크",
+        "performance": "성능",
+        "sessionId": "세션 ID",
+        "stackTrace": "스택 추적",
+        "timestamp": "타임스탬프",
+        "title": "로그 상세 정보",
+        "url": "URL",
+        "user": "사용자",
+        "userId": "사용자 ID"
+      },
       "disable": "비활성화",
       "enable": "활성화",
-      "logging": "로깅",
-      "refresh": "새로고침",
-      "export": "내보내기",
-      "clear": "지우기",
-      "totalLogs": "총 로그 수",
-      "session": "세션",
       "errorRate": "오류율",
       "errors": "오류",
-      "categories": {
-        "auth": "인증",
-        "userAction": "사용자 작업",
-        "network": "네트워크",
-        "database": "데이터베이스",
-        "payment": "결제",
-        "admin": "관리자",
-        "error": "오류",
-        "performance": "성능",
-        "system": "시스템"
-      },
-      "activeCategories": "활성 카테고리",
-      "status": "상태",
-      "on": "켜짐",
-      "off": "꺼짐",
-      "autoRefresh": "자동 새로고침",
+      "export": "내보내기",
       "filters": {
-        "title": "필터 및 검색",
+        "allCategories": "모든 카테고리",
+        "allLevels": "모든 레벨",
+        "autoRefreshLabel": "자동 새로고침",
+        "category": "카테고리",
+        "level": "레벨",
         "search": "검색",
         "searchPlaceholder": "로그 검색...",
-        "level": "레벨",
-        "allLevels": "모든 레벨",
-        "category": "카테고리",
-        "allCategories": "모든 카테고리",
-        "autoRefreshLabel": "자동 새로고침"
+        "title": "필터 및 검색"
       },
       "levels": {
+        "critical": "치명적",
         "debug": "디버그",
-        "info": "정보",
-        "warning": "경고",
         "error": "오류",
-        "critical": "치명적"
+        "info": "정보",
+        "warning": "경고"
       },
+      "logging": "로깅",
       "noLogs": {
         "disabled": "로깅이 현재 비활성화되어 있습니다. 로그 수집을 시작하려면 활성화하세요.",
         "notFound": "현재 필터와 일치하는 로그를 찾을 수 없습니다."
       },
-      "details": {
-        "title": "로그 상세 정보",
-        "level": "레벨",
-        "category": "카테고리",
-        "timestamp": "타임스탬프",
-        "sessionId": "세션 ID",
-        "message": "메시지",
-        "url": "URL",
-        "userId": "사용자 ID",
-        "details": "상세 정보",
-        "performance": "성능",
-        "network": "네트워크",
-        "stackTrace": "스택 추적",
-        "user": "사용자"
-      }
+      "off": "꺼짐",
+      "on": "켜짐",
+      "refresh": "새로고침",
+      "session": "세션",
+      "status": "상태",
+      "title": "향상된 로그 시스템",
+      "totalLogs": "총 로그 수"
     },
     "system": {
-      "title": "시스템 로그",
-      "session": "세션",
-      "total": "총계",
-      "errors": "오류",
-      "filters": {
-        "level": "레벨",
-        "category": "카테고리",
-        "autoRefresh": "자동 새로고침"
-      },
-      "levels": {
-        "all": "모두",
-        "error": "오류",
-        "warning": "경고",
-        "info": "정보",
-        "debug": "디버그",
-        "critical": "치명적"
+      "buttons": {
+        "clear": "지우기",
+        "disable": "비활성화",
+        "enable": "활성화",
+        "export": "내보내기",
+        "logging": "로깅",
+        "refresh": "새로고침"
       },
       "categories": {
+        "admin": "관리자",
         "all": "모두",
-        "roleManagement": "역할 관리",
-        "userBan": "사용자 차단",
-        "permissionCheck": "권한 확인",
-        "database": "데이터베이스",
         "auth": "인증",
-        "system": "시스템",
-        "userAction": "사용자 작업",
+        "database": "데이터베이스",
+        "error": "오류",
         "network": "네트워크",
         "payment": "결제",
-        "admin": "관리자",
-        "error": "오류",
-        "performance": "성능"
-      },
-      "table": {
-        "time": "시간",
-        "level": "레벨",
-        "category": "카테고리",
-        "action": "작업",
-        "user": "사용자",
-        "admin": "관리자",
-        "details": "상세 정보"
-      },
-      "noLogs": "로그를 찾을 수 없음",
-      "loggingDisabled": "로깅이 현재 비활성화되어 있습니다. 로그 수집을 시작하려면 활성화하세요.",
-      "filtersAndSearch": "필터 및 검색",
-      "search": "검색",
-      "searchPlaceholder": "로그 검색...",
-      "stats": {
-        "totalLogs": "총 로그 수",
-        "errorRate": "오류율",
-        "errors": "오류",
-        "categories": "카테고리",
-        "activeCategories": "활성 카테고리",
-        "status": "상태",
-        "on": "켜짐",
-        "off": "꺼짐"
-      },
-      "buttons": {
-        "enable": "활성화",
-        "disable": "비활성화",
-        "logging": "로깅",
-        "refresh": "새로고침",
-        "export": "내보내기",
-        "clear": "지우기"
+        "performance": "성능",
+        "system": "시스템",
+        "userAction": "사용자 작업"
       },
       "details": {
-        "title": "로그 상세 정보",
-        "time": "시간",
         "action": "작업",
-        "userId": "사용자 ID",
         "adminId": "관리자 ID",
-        "error": "오류",
         "details": "상세 정보",
-        "stackTrace": "스택 추적",
+        "error": "오류",
         "message": "메시지",
-        "fields": {
-          "user": "사용자",
-          "url": "URL",
-          "performance": "성능",
-          "network": "네트워크",
-          "stackTrace": "스택 추적"
-        }
-      }
+        "stackTrace": "스택 추적",
+        "time": "시간",
+        "title": "로그 상세 정보",
+        "userId": "사용자 ID"
+      },
+      "errors": "오류",
+      "fields": {
+        "network": "Network",
+        "performance": "Performance",
+        "stackTrace": "Stack Trace",
+        "url": "URL",
+        "user": "User"
+      },
+      "filters": {
+        "autoRefresh": "자동 새로고침",
+        "category": "카테고리",
+        "level": "레벨"
+      },
+      "filtersAndSearch": "필터 및 검색",
+      "levels": {
+        "all": "모두",
+        "critical": "치명적",
+        "debug": "디버그",
+        "error": "오류",
+        "info": "정보",
+        "warning": "경고"
+      },
+      "loggingDisabled": "로깅이 현재 비활성화되어 있습니다. 로그 수집을 시작하려면 활성화하세요.",
+      "noLogs": "로그를 찾을 수 없음",
+      "search": "검색",
+      "searchPlaceholder": "로그 검색...",
+      "session": "세션",
+      "stats": {
+        "activeCategories": "활성 카테고리",
+        "categories": "카테고리",
+        "errorRate": "오류율",
+        "errors": "오류",
+        "off": "꺼짐",
+        "on": "켜짐",
+        "status": "상태",
+        "totalLogs": "총 로그 수"
+      },
+      "table": {
+        "action": "작업",
+        "admin": "관리자",
+        "category": "카테고리",
+        "details": "상세 정보",
+        "level": "레벨",
+        "time": "시간",
+        "user": "사용자"
+      },
+      "title": "시스템 로그",
+      "total": "총계"
     }
   },
   "adminPanel": "관리자 패널",
@@ -264,88 +261,108 @@
   "adminPanelAccessGranted": "관리자 패널 접근 허용됨",
   "adminPayments": {
     "conversionRate": "전환율",
-    "mrr": "MRR (월간 반복 수익)",
     "estimatedMonthly": "예상 월간",
     "manualSubscription": {
-      "title": "수동 구독 할당",
-      "userEmail": "사용자 이메일",
+      "duration": "Duration (Days)",
+      "durationPlaceholder": "30",
       "emailPlaceholder": "user@example.com",
+      "grantButton": "Grant Subscription",
+      "reason": "Reason",
+      "reasons": {
+        "compensation": "Compensation",
+        "promotional": "Promotional Grant",
+        "support": "Customer Support",
+        "testing": "Testing Purpose"
+      },
       "subscriptionTier": "구독 등급",
       "tiers": {
-        "silver": "실버 ($9.99/월)",
         "gold": "골드 ($19.99/월)",
-        "platinum": "플래티넘 ($29.99/월)"
+        "platinum": "플래티넘 ($29.99/월)",
+        "silver": "실버 ($9.99/월)"
       },
-      "assignButton": "구독 할당",
-      "assignSuccess": "구독이 성공적으로 할당되었습니다",
-      "assignError": "구독 할당 실패"
+      "title": "수동 구독 할당",
+      "userEmail": "사용자 이메일"
     },
-    "recentTransactions": "최근 거래",
-    "monthlyRevenue": "월간 수익",
-    "activeSubscriptions": "활성 구독",
-    "churnRate": "이탈률",
-    "noTransactions": "거래 내역 없음",
-    "manageSubscriptions": "구독 관리",
-    "stripeStatus": "Stripe 상태",
-    "stripeConnected": "연결됨",
-    "stripeNotConnected": "연결되지 않음",
-    "webhookStatus": "웹훅 상태",
-    "testMode": "테스트 모드"
+    "mrr": "MRR (월간 반복 수익)",
+    "paymentStatus": {
+      "stripeConnection": "Stripe Connection",
+      "testMode": "Test Mode",
+      "title": "Payment System Status",
+      "webhookStatus": "Webhook Status"
+    },
+    "recentTransactions": {
+      "noTransactions": "No transactions available",
+      "noTransactionsDesc": "Transactions will appear here once users subscribe",
+      "plans": {
+        "gold": "Gold Plan",
+        "platinum": "Platinum Plan",
+        "silver": "Silver Plan"
+      },
+      "title": "Recent Transactions"
+    },
+    "stripe": {
+      "note": "These links open in the Stripe Dashboard. Ensure you have proper access permissions.",
+      "openDashboard": "Open Stripe Dashboard",
+      "title": "Stripe Dashboard Links",
+      "viewCustomers": "View Customers",
+      "viewPayments": "View Payments",
+      "viewSubscriptions": "View Subscriptions"
+    }
   },
   "adminRole": "관리자 역할",
   "adminSecurityMessage": "관리자 패널 접근은 IP 제한됩니다. 2단계 인증을 활성화하는 것이 좋습니다.",
   "adminSite": {
-    "configuration": {
-      "title": "사이트 구성",
-      "siteName": "사이트 이름",
-      "defaultLanguage": "기본 언어",
-      "siteDescription": "사이트 설명",
-      "descriptionPlaceholder": "마음이 연결되고 사랑 이야기가 시작되는 곳"
-    },
     "appSettings": {
-      "title": "앱 설정",
-      "registration": {
-        "label": "등록 열림",
-        "description": "새 사용자 등록 허용"
+      "aiTranslation": {
+        "description": "자동 메시지 번역",
+        "label": "AI 번역"
       },
       "emailVerification": {
-        "label": "이메일 인증",
-        "description": "새 사용자에게 이메일 인증 요구"
+        "description": "새 사용자에게 이메일 인증 요구",
+        "label": "이메일 인증"
       },
       "photoModeration": {
-        "label": "사진 관리",
         "description": "프로필 사진 수동 검토",
+        "label": "사진 관리",
         "manual": "수동"
       },
-      "aiTranslation": {
-        "label": "AI 번역",
-        "description": "자동 메시지 번역"
-      }
+      "registration": {
+        "description": "새 사용자 등록 허용",
+        "label": "등록 열림"
+      },
+      "title": "앱 설정"
     },
-    "security": {
-      "title": "보안 설정",
-      "twoFactor": {
-        "label": "2단계 인증",
-        "description": "관리자 패널 2단계 인증 요구"
-      },
-      "sessionTimeout": {
-        "label": "세션 시간 초과",
-        "description": "관리자 세션 지속 시간",
-        "hours": "8시간"
-      },
-      "ipRestriction": {
-        "label": "IP 제한",
-        "description": "IP별 관리자 접근 제한"
-      }
+    "configuration": {
+      "defaultLanguage": "기본 언어",
+      "descriptionPlaceholder": "마음이 연결되고 사랑 이야기가 시작되는 곳",
+      "siteDescription": "사이트 설명",
+      "siteName": "사이트 이름",
+      "title": "사이트 구성"
     },
     "integrations": {
-      "title": "통합 상태",
+      "connected": "연결됨",
+      "emailService": "이메일 서비스 (SMTP)",
+      "googleTranslate": "Google 번역 API",
+      "needsSetup": "설정 필요",
       "stripe": "Stripe 결제",
       "supabase": "Supabase 데이터베이스",
-      "googleTranslate": "Google 번역 API",
-      "emailService": "이메일 서비스 (SMTP)",
-      "connected": "연결됨",
-      "needsSetup": "설정 필요"
+      "title": "통합 상태"
+    },
+    "security": {
+      "ipRestriction": {
+        "description": "IP별 관리자 접근 제한",
+        "label": "IP 제한"
+      },
+      "sessionTimeout": {
+        "description": "관리자 세션 지속 시간",
+        "hours": "8시간",
+        "label": "세션 시간 초과"
+      },
+      "title": "보안 설정",
+      "twoFactor": {
+        "description": "관리자 패널 2단계 인증 요구",
+        "label": "2단계 인증"
+      }
     }
   },
   "adminUser": {
@@ -371,91 +388,52 @@
     "title": "경고: 관리자 권한"
   },
   "ads": {
-    "title": "광고 관리",
-    "stats": {
-      "impressions": "노출수",
-      "clicks": "클릭수",
-      "ctr": "클릭률",
-      "revenue": "수익",
-      "activePlacements": "활성 광고 위치",
-      "totalImpressions": "총 노출수",
-      "todayClicks": "오늘의 클릭수",
-      "averageCtr": "평균 클릭률",
-      "monthlyRevenue": "월간 수익"
-    },
-    "placements": {
-      "title": "광고 위치",
-      "header": "헤더",
-      "sidebar": "사이드바",
-      "feed": "피드",
-      "footer": "푸터",
-      "enabled": "활성화됨",
-      "disabled": "비활성화됨",
-      "size": "크기",
-      "position": "위치",
-      "visibility": "가시성"
-    },
-    "providers": {
-      "title": "광고 제공업체",
-      "googleAdsense": "Google AdSense",
-      "customAds": "맞춤 광고",
-      "status": "상태",
-      "earnings": "수익",
-      "configure": "구성"
-    },
-    "settings": {
-      "title": "광고 설정",
-      "frequency": "표시 빈도",
-      "targeting": "타겟팅",
-      "excludedPages": "제외된 페이지",
-      "mobileAds": "모바일 광고",
-      "desktopAds": "데스크톱 광고",
-      "refreshRate": "새로고침 빈도",
-      "maxAdsPerPage": "페이지당 최대 광고 수"
-    },
-    "performance": {
-      "title": "성능 분석",
-      "topPerforming": "최고 성과",
-      "worstPerforming": "최저 성과",
-      "recommendations": "권장 사항",
-      "optimize": "최적화"
+    "banner": {
+      "title": "Advertisement"
     },
     "configuration": {
-      "title": "사이트 구성",
-      "description": "사이트의 광고 및 분석 통합을 구성합니다",
-      "tabs": {
-        "advertising": "광고",
-        "analytics": "분석"
-      },
-      "sections": {
-        "googleAdsense": "Google AdSense 구성",
-        "adPlacement": "광고 배치 설정",
-        "googleAnalytics": "Google Analytics",
-        "facebookPixel": "Facebook Pixel",
-        "trackingSettings": "추적 설정"
-      },
       "buttons": {
         "refresh": "새로고침",
         "save": "저장",
         "saving": "저장 중..."
       },
-      "status": {
-        "enabled": "활성화됨",
-        "disabled": "비활성화됨"
-      },
+      "description": "사이트의 광고 및 분석 통합을 구성합니다",
       "errors": {
         "loadFailed": "구성 로드 실패",
         "saveFailed": "구성 저장 실패"
       },
+      "sections": {
+        "adPlacement": "광고 배치 설정",
+        "facebookPixel": "Facebook Pixel",
+        "googleAdsense": "Google AdSense 구성",
+        "googleAnalytics": "Google Analytics",
+        "trackingSettings": "추적 설정"
+      },
+      "status": {
+        "disabled": "비활성화됨",
+        "enabled": "활성화됨"
+      },
       "success": {
         "saved": "구성이 성공적으로 저장되었습니다"
-      }
+      },
+      "tabs": {
+        "advertising": "광고",
+        "analytics": "분석"
+      },
+      "title": "사이트 구성"
     },
     "disabledFeature": {
-      "title": "광고 비활성화",
       "description": "광고 보기가 지겨우신가요? 표시되지 않도록 비활성화하세요!",
-      "status": "실버+ 회원은 광고가 비활성화됩니다"
-    }
+      "status": "실버+ 회원은 광고가 비활성화됩니다",
+      "title": "광고 비활성화"
+    },
+    "native": {
+      "description": "Upgrade to remove ads",
+      "title": "Sponsored Content"
+    },
+    "placeholder": "Ad Space",
+    "removeAds": "Remove Ads - Upgrade to Silver",
+    "upgrade": "Upgrade"
   },
   "advanced": "고급",
   "advancedAnalytics": "고급 분석",
@@ -497,35 +475,35 @@
   "approveReport": "보고서 승인",
   "auditTrail": "감사 추적",
   "auth": {
-    "signingInGoogle": "🔐 Google로 로그인 중",
-    "oauthRedirectUrl": "🔐 OAuth 리디렉션 URL:",
-    "googleSignInError": "🔐 Google 로그인 오류:",
-    "googleSignInInitiated": "🔐 Google 로그인 시작됨",
-    "googleSignInFailed": "🔐 Google 로그인 실패:",
-    "signingInApple": "🔐 Apple로 로그인 중",
     "appleSignInError": "🔐 Apple 로그인 오류:",
-    "appleSignInInitiated": "🔐 Apple 로그인 시작됨",
     "appleSignInFailed": "🔐 Apple 로그인 실패:",
-    "signingInFacebook": "🔐 Facebook으로 로그인 중",
-    "facebookSignInError": "🔐 Facebook 로그인 오류:",
-    "facebookSignInInitiated": "🔐 Facebook 로그인 시작됨",
-    "facebookSignInFailed": "🔐 Facebook 로그인 실패:",
-    "signOutError": "🔧 [useAuth] 로그아웃 오류:",
-    "settingUpSubscriptions": "🔧 [useAuth] 사용자를 위한 실시간 구독 설정 중:",
-    "profileUpdateReceived": "🔧 [useAuth] 프로필 업데이트 수신, 역할 다시 로드 중.",
-    "subscribedToUserChannel": "🔧 [useAuth] 사용자 채널 구독:",
-    "userChannelError": "[useAuth] 사용자 채널 구독 오류:",
-    "roleChangeDetected": "🔧 [useAuth] 역할 변경 감지, 역할 다시 로드 중.",
-    "subscribedToRolesChannel": "🔧 [useAuth] roles_permissions 채널 구독.",
-    "rolesChannelError": "[useAuth] 역할 채널 구독 오류:",
-    "subscriptionSetupError": "🔧 [useAuth] 구독 설정 오류:",
-    "removingSubscriptions": "🔧 [useAuth] 실시간 구독 제거 중.",
-    "subscriptionRemoveError": "🔧 [useAuth] 구독 제거 오류:",
+    "appleSignInInitiated": "🔐 Apple 로그인 시작됨",
+    "authInitError": "🔧 [useAuth] 인증 초기화 오류:",
     "authStateChange": "🔧 [useAuth] 인증 상태 변경 이벤트:",
     "authStateChangeError": "인증 상태 변경 처리 오류:",
-    "authInitError": "🔧 [useAuth] 인증 초기화 오류:",
     "cleaningUp": "🔧 [useAuth] 인증 공급자 정리 중.",
-    "noRoleFoundWarning": "데이터베이스에서 역할을 찾을 수 없음, 등록됨으로 기본 설정"
+    "facebookSignInError": "🔐 Facebook 로그인 오류:",
+    "facebookSignInFailed": "🔐 Facebook 로그인 실패:",
+    "facebookSignInInitiated": "🔐 Facebook 로그인 시작됨",
+    "googleSignInError": "🔐 Google 로그인 오류:",
+    "googleSignInFailed": "🔐 Google 로그인 실패:",
+    "googleSignInInitiated": "🔐 Google 로그인 시작됨",
+    "noRoleFoundWarning": "데이터베이스에서 역할을 찾을 수 없음, 등록됨으로 기본 설정",
+    "oauthRedirectUrl": "🔐 OAuth 리디렉션 URL:",
+    "profileUpdateReceived": "🔧 [useAuth] 프로필 업데이트 수신, 역할 다시 로드 중.",
+    "removingSubscriptions": "🔧 [useAuth] 실시간 구독 제거 중.",
+    "roleChangeDetected": "🔧 [useAuth] 역할 변경 감지, 역할 다시 로드 중.",
+    "rolesChannelError": "[useAuth] 역할 채널 구독 오류:",
+    "settingUpSubscriptions": "🔧 [useAuth] 사용자를 위한 실시간 구독 설정 중:",
+    "signOutError": "🔧 [useAuth] 로그아웃 오류:",
+    "signingInApple": "🔐 Apple로 로그인 중",
+    "signingInFacebook": "🔐 Facebook으로 로그인 중",
+    "signingInGoogle": "🔐 Google로 로그인 중",
+    "subscribedToRolesChannel": "🔧 [useAuth] roles_permissions 채널 구독.",
+    "subscribedToUserChannel": "🔧 [useAuth] 사용자 채널 구독:",
+    "subscriptionRemoveError": "🔧 [useAuth] 구독 제거 오류:",
+    "subscriptionSetupError": "🔧 [useAuth] 구독 설정 오류:",
+    "userChannelError": "[useAuth] 사용자 채널 구독 오류:"
   },
   "authStateLoading": "인증 상태 로딩 중, 대기 중...",
   "authStateNotLoaded": "인증 상태가 아직 로드되지 않음, 대기 중...",
@@ -536,7 +514,6 @@
   "autoTranslationDescription": "수신 메시지를 자동으로 번역",
   "averageSessionTime": "평균 세션 시간",
   "back": "뒤로",
-  "backText": "뒤로",
   "backToAdmin": "관리자로 돌아가기",
   "backToSwiping": "스와이프로 돌아가기",
   "backupDatabase": "데이터베이스 백업",
@@ -549,14 +526,14 @@
   "banReasonLabel": "차단 사유",
   "banReasonPlaceholder": "차단 사유를 설명하세요...",
   "banReasons": {
-    "inappropriateContent": "부적절한 콘텐츠",
-    "spamFakeProfile": "스팸 또는 가짜 프로필",
-    "harassment": "괴롭힘",
-    "violatingTerms": "서비스 약관 위반",
+    "accountDeleted": "관리자에 의해 계정 삭제됨",
+    "bannedByAdmin": "관리자에 의해 차단됨",
     "custom": "사용자 지정 사유",
     "customReason": "사용자 지정 사유",
-    "bannedByAdmin": "관리자에 의해 차단됨",
-    "accountDeleted": "관리자에 의해 계정 삭제됨"
+    "harassment": "괴롭힘",
+    "inappropriateContent": "부적절한 콘텐츠",
+    "spamFakeProfile": "스팸 또는 가짜 프로필",
+    "violatingTerms": "서비스 약관 위반"
   },
   "banStatusUpdated": "차단 상태 업데이트됨",
   "banText": "차단",
@@ -634,8 +611,8 @@
   "completeProfileToBeDiscovered": "프로필을 완성하고 더 많은 사람들에게 발견되세요!",
   "completeProfileToGetLikes": "프로필을 완성하고 사진을 추가하세요!",
   "completeProfileToStart": "프로필을 완성하고 멋진 사람들을 만나보세요",
+  "confirm": "Confirm",
   "confirmDeleteUser": "이 사용자를 삭제하시겠습니까? 이 작업은 되돌릴 수 없습니다.",
-  "confirmText": "확인",
   "connectionError": "연결 오류",
   "contactSales": "영업팀에 문의",
   "contactSupport": "고객 지원팀 문의",
@@ -649,7 +626,7 @@
   "contentUpdateSuccess": "콘텐츠가 성공적으로 업데이트되었습니다",
   "contentUpdated": "콘텐츠 업데이트됨",
   "contentUpdatedSuccessfully": "콘텐츠가 성공적으로 업데이트되었습니다",
-  "continueText": "계속",
+  "continue": "Continue",
   "continueWithApple": "Apple로 계속",
   "continueWithFacebook": "Facebook으로 계속",
   "continueWithGoogle": "Google로 계속",
@@ -680,73 +657,73 @@
   "days90": "90일",
   "daysAgo": "일 전",
   "debug": {
+    "app": {
+      "appStateError": "❌ 앱 상태 오류:",
+      "appStateInitializing": "🚀 앱 상태 초기화 중...",
+      "appStateReady": "✅ 앱 상태 준비 완료"
+    },
     "matches": {
-      "fetching": "🚀 Supabase 직접 쿼리로 매치 가져오는 중",
       "fetchError": "매치 가져오기 오류:",
       "fetchSuccess": "✅ {{count}}개 매치 가져옴",
+      "fetching": "🚀 Supabase 직접 쿼리로 매치 가져오는 중",
       "newMatchDetected": "새로운 매치 감지, 다시 가져오는 중..."
     },
+    "network": {
+      "connectionLost": "📶 연결 끊김",
+      "connectionRestored": "🌐 연결 복원됨",
+      "featuresUnavailable": "⚠️ 일부 기능을 사용할 수 없습니다",
+      "syncingWithServer": "🔄 서버와 동기화 중..."
+    },
     "profiles": {
-      "queryingUserCount": "👤 사용자 수 쿼리 중...",
-      "totalUsers": "📊 총 사용자 수: {count}}",
-      "queryingRoleBasedUsers": "🎭 역할 기반 사용자 쿼리 중...",
-      "roleBasedUserCount": "🎯 역할 기반 필터링된 사용자 수: {count}}",
-      "queryingActiveUsers": "🟢 지난 30일간 활성 사용자 쿼리 중...",
-      "filteringViewedProfiles": "👁️ 본 프로필 필터링 중...",
-      "excludingViewedProfiles": "🚫 {{count}}개 본 프로필 제외 중",
-      "finalProfileCount": "✅ 최종 프로필 수: {count}}",
-      "fetchingRandomProfiles": "🎲 {{count}}개 랜덤 프로필 가져오는 중...",
-      "settingProfiles": "📝 프로필 설정 중: {count}}개 프로필",
-      "profilesSet": "✅ 프로필 설정 성공",
-      "loadingProfiles": "⏳ 프로필 로딩 중...",
-      "profilesLoaded": "✅ 프로필 로드됨: {count}}개 프로필",
-      "fetchError": "❌ 프로필 가져오기 오류:",
-      "swipeError": "❌ 스와이프 오류:",
-      "noMoreProfiles": "📭 더 이상 프로필 없음",
-      "likeSent": "💖 좋아요 보냄 - {{profileId}}",
-      "superLikeSent": "⭐ 슈퍼 좋아요 보냄 - {{profileId}}",
-      "profilePassed": "⏭️ 프로필 넘김 - {{profileId}}",
       "actionError": "❌ 작업 오류:",
-      "initiatingLike": "🚀 좋아요 시작 중",
-      "likeAction": "💝 좋아요 작업: {userId}} -> {{profileId}}",
       "checkingMutualLike": "🔄 상호 좋아요 확인 중...",
-      "mutualLikeCheck": "💕 상호 좋아요 상태: {isMutual}}",
-      "processingMatch": "⚡ 매치 처리 중...",
+      "excludingViewedProfiles": "🚫 {{count}}개 본 프로필 제외 중",
+      "fetchError": "❌ 프로필 가져오기 오류:",
+      "fetchingRandomProfiles": "🎲 {{count}}개 랜덤 프로필 가져오는 중...",
+      "filteringViewedProfiles": "👁️ 본 프로필 필터링 중...",
+      "finalProfileCount": "✅ 최종 프로필 수: {{count}}",
+      "initiatingLike": "🚀 좋아요 시작 중",
+      "likeAction": "💝 좋아요 작업: {{userId}} -> {{profileId}}",
+      "likeSent": "💖 좋아요 보냄 - {{profileId}}",
+      "loadingProfiles": "⏳ 프로필 로딩 중...",
       "matchCreated": "🎉 새로운 매치! {{userId}} ↔ {{profileId}}",
-      "refreshingProfiles": "🔄 프로필 새로고침 중..."
+      "mutualLikeCheck": "💕 상호 좋아요 상태: {{isMutual}}",
+      "noMoreProfiles": "📭 더 이상 프로필 없음",
+      "processingMatch": "⚡ 매치 처리 중...",
+      "profilePassed": "⏭️ 프로필 넘김 - {{profileId}}",
+      "profilesLoaded": "✅ 프로필 로드됨: {{count}}개 프로필",
+      "profilesSet": "✅ 프로필 설정 성공",
+      "queryingActiveUsers": "🟢 지난 30일간 활성 사용자 쿼리 중...",
+      "queryingRoleBasedUsers": "🎭 역할 기반 사용자 쿼리 중...",
+      "queryingUserCount": "👤 사용자 수 쿼리 중...",
+      "refreshingProfiles": "🔄 프로필 새로고침 중...",
+      "roleBasedUserCount": "🎯 역할 기반 필터링된 사용자 수: {{count}}",
+      "settingProfiles": "📝 프로필 설정 중: {{count}}개 프로필",
+      "superLikeSent": "⭐ 슈퍼 좋아요 보냄 - {{profileId}}",
+      "swipeError": "❌ 스와이프 오류:",
+      "totalUsers": "📊 총 사용자 수: {{count}}"
     },
     "subscription": {
-      "loadingSubscription": "📋 구독 정보 로딩 중...",
-      "subscriptionLoaded": "✅ 구독 로드됨:",
-      "loadError": "❌ 구독 로드 오류:",
       "checkingTier": "🔍 구독 등급 확인 중:",
-      "tierCheckResult": "📊 등급 확인 결과:",
-      "startingStatusCheck": "🚀 구독 상태 확인 시작 중...",
-      "loadingUserProfile": "👤 사용자 프로필 로딩 중:",
-      "profileLoaded": "✅ 프로필 로드됨:",
       "fetchingSubscription": "📥 구독 정보 가져오는 중:",
-      "subscriptionData": "📋 구독 데이터:",
-      "subscriptionActive": "✅ 활성 구독 찾음:",
+      "loadError": "❌ 구독 로드 오류:",
+      "loadingSubscription": "📋 구독 정보 로딩 중...",
+      "loadingUserProfile": "👤 사용자 프로필 로딩 중:",
       "noActiveSubscription": "❌ 활성 구독 없음",
-      "updatingSubscription": "💾 구독 업데이트 중:",
-      "subscriptionUpdated": "✅ 구독 업데이트됨:",
-      "updateError": "❌ 구독 업데이트 오류:",
-      "premiumUserCheck": "👑 프리미엄 사용자 확인:",
-      "premiumUserStatus": "📊 프리미엄 사용자 상태:",
+      "premiumAccessResult": "📊 프리미엄 접근 결과:",
       "premiumCheckComplete": "✅ 프리미엄 확인 완료:",
       "premiumFeatureAccess": "🔓 프리미엄 기능 접근:",
-      "premiumAccessResult": "📊 프리미엄 접근 결과:"
-    },
-    "network": {
-      "connectionRestored": "🌐 연결 복원됨",
-      "syncingWithServer": "🔄 서버와 동기화 중...",
-      "connectionLost": "📶 연결 끊김",
-      "featuresUnavailable": "⚠️ 일부 기능을 사용할 수 없습니다"
-    },
-    "app": {
-      "appStateInitializing": "🚀 앱 상태 초기화 중...",
-      "appStateReady": "✅ 앱 상태 준비 완료",
-      "appStateError": "❌ 앱 상태 오류:"
+      "premiumUserCheck": "👑 프리미엄 사용자 확인:",
+      "premiumUserStatus": "📊 프리미엄 사용자 상태:",
+      "profileLoaded": "✅ 프로필 로드됨:",
+      "startingStatusCheck": "🚀 구독 상태 확인 시작 중...",
+      "subscriptionActive": "✅ 활성 구독 찾음:",
+      "subscriptionData": "📋 구독 데이터:",
+      "subscriptionLoaded": "✅ 구독 로드됨:",
+      "subscriptionUpdated": "✅ 구독 업데이트됨:",
+      "tierCheckResult": "📊 등급 확인 결과:",
+      "updateError": "❌ 구독 업데이트 오류:",
+      "updatingSubscription": "💾 구독 업데이트 중:"
     }
   },
   "debugCheckAgain": "다시 확인",
@@ -772,7 +749,7 @@
   "description": "설명",
   "deselectAll": "모두 선택 해제",
   "developmentMode": "⚠️ 개발 모드",
-  "developmentModeAccess": "개발 모드 접근 허용됨. 역할: {role}}",
+  "developmentModeAccess": "개발 모드 접근 허용됨. 역할: {{role}}",
   "developmentModeNote": "개발 모드 접근",
   "disableMaintenanceMode": "유지보수 모드 비활성화",
   "discount": "할인",
@@ -806,6 +783,7 @@
   "editProfile": "프로필 편집",
   "editProfileDescription": "프로필을 편집하고 더 많은 매치를 받으세요",
   "editText": "편집",
+  "editToChangeInterests": "Click edit to change interests",
   "editUser": "사용자 편집",
   "editingPlan": "플랜 편집 중",
   "education": "교육",
@@ -832,10 +810,23 @@
   "enterName": "이름을 입력하세요",
   "enterYourName": "이름을 입력하세요",
   "enterYourNamePlaceholder": "이름을 입력하세요",
-  "error": "오류",
+  "error": {
+    "details": "Error details",
+    "general": {
+      "occurred": "An error occurred"
+    },
+    "goHome": "Go to home",
+    "refresh": "Refresh page"
+  },
   "error.404.message": "앗! 페이지를 찾을 수 없습니다",
   "error.404.returnHome": "홈으로 돌아가기",
   "errorBanningUser": "사용자 차단 중 오류 발생.",
+  "errorBoundary": {
+    "errorDetails": "Error details",
+    "goToHomePage": "Go to home page",
+    "refreshPage": "Refresh page",
+    "title": "An error occurred"
+  },
   "errorDeletingUser": "사용자 삭제 중 오류 발생.",
   "errorLoadingUsers": "사용자 로딩 중 오류 발생.",
   "errorLogs": "오류 로그",
@@ -845,8 +836,6 @@
   "errorToastTitle": "오류",
   "errorUnbanningUser": "차단 해제 중 오류 발생.",
   "errorUpdatingRole": "역할 업데이트 중 오류 발생.",
-  "eslesmeKaldir": "매치 해제",
-  "eslestiniz": "매치되었습니다!",
   "everyone": "모두",
   "exclusiveEvents": "독점 이벤트",
   "exclusiveFilters": "독점 검색 필터",
@@ -878,28 +867,17 @@
   "faqPlanChangeQ": "플랜을 변경할 수 있나요?",
   "faqTitle": "자주 묻는 질문",
   "feature": {
-    "basicMatching": "기본 매칭",
     "advancedFilters": "고급 필터",
-    "seeWhoLikesYou": "나를 좋아하는 사람 보기",
+    "basicMatching": "기본 매칭",
+    "hdVideoCalls": "HD Video Calls",
+    "invisibleBrowsing": "Invisible Browsing",
+    "passport": "Passport",
+    "profileAnalytics": "Profile Analytics",
     "rewind": "되감기",
-    "voiceCalls": "음성 통화",
-    "videoCalls": "화상 통화",
-    "unlimitedLikes": "무제한 좋아요",
-    "prioritySupport": "우선 지원",
-    "adFree": "광고 없음",
-    "premiumBadge": "프리미엄 배지",
-    "invisibleMode": "은신 모드",
-    "readReceipts": "읽음 확인",
-    "superLikes": "슈퍼 좋아요",
-    "boosts": "부스트",
-    "dailyLikes": "일일 좋아요",
-    "requires": {
-      "silver": "실버 멤버십 필요",
-      "gold": "골드 멤버십 필요",
-      "platinum": "플래티넘 멤버십 필요",
-      "admin": "관리자 액세스 필요",
-      "premium": "프리미엄 구독 필요"
-    }
+    "seeWhoLikesYou": "나를 좋아하는 사람 보기",
+    "translation": "Translation",
+    "vipMatching": "VIP Matching",
+    "voiceCalls": "음성 통화"
   },
   "feature.advancedFilters": "고급 필터",
   "feature.allFilters": "모든 필터",
@@ -938,7 +916,36 @@
   "feature.voiceCalls": "음성 통화",
   "featureFlags": "기능 플래그",
   "featureInDevelopment": "이 기능은 현재 개발 중입니다. 프리미엄 멤버십으로 더 많은 정보를 확인하세요!",
-  "features": "기능",
+  "features": {
+    "advancedFilters": {
+      "description": "Filter by education, job, height, lifestyle and more"
+    },
+    "dailyLikes": {
+      "count": "{{count}} Daily Likes",
+      "description50": "Boost your chances with 50 daily likes instead of 10"
+    },
+    "disableAds": {
+      "description": "Tired of seeing advertisements? Disable them from showing!",
+      "tier": "Silver+",
+      "title": "Disable Ads"
+    },
+    "monthlyBoosts": {
+      "count": "{{count}} Boost per Month",
+      "description1": "Get 10x more visibility with monthly profile boost"
+    },
+    "seeWhoLikesYou": {
+      "description": "Discover who already liked your profile and start matching instantly"
+    },
+    "superLikes": {
+      "count": "{{count}} Super Likes",
+      "description5": "Stand out with 5 super likes per day"
+    },
+    "verifiedBadge": {
+      "description": "Show others that you are a legitimate user with this awesome badge",
+      "free": "Free with verification",
+      "title": "Verified Badge"
+    }
+  },
   "features.dailyLikes": "일일 {{count}}개 좋아요",
   "features.dailySuperlikes": "일일 {{count}}개 슈퍼 좋아요",
   "features.monthlyBoosts": "월간 {{count}}개 부스트",
@@ -998,14 +1005,37 @@
   "googlePayFailed": "Google Pay 결제 실패",
   "googlePaySuccess": "✅ Google Pay 결제 성공",
   "googleSignInError": "Google 로그인 실패",
-  "gotItText": "알겠습니다",
+  "gotIt": "Got it",
   "grantFailed": "부여 실패",
   "grantSubscription": "구독 부여",
   "grantTierForDays": "{{tier}}를 {{duration}}일 동안 부여",
   "granting": "부여 중...",
   "growthRate": "성장률",
   "guestNamePlaceholder": "수지",
-  "guests": "방문자",
+  "guestService": {
+    "accessControlError": "Error during access control",
+    "accessDenied": "Access denied",
+    "anonymous": "Anonymous",
+    "errorRetrievingStats": "Error while retrieving statistics",
+    "errorRetrievingVisitors": "Error occurred while retrieving visitors",
+    "noProfileVisitorsYet": "No profile visitors yet",
+    "profileVisitorsFound": "{{count}} profile visitors found",
+    "silverMembershipRequired": "Silver membership or higher required to view profile visitors",
+    "unableToHideVisitor": "Unable to hide visitor",
+    "unableToRetrieveVisitors": "Unable to retrieve visitors",
+    "visitorHidden": "Visitor hidden"
+  },
+  "guests": {
+    "distanceUnit": "km",
+    "goldPlus": "Gold+",
+    "tiers": {
+      "gold": "Gold",
+      "platinum": "Platinum",
+      "silver": "Silver"
+    },
+    "title": "Visitors",
+    "yearsOld": "years old"
+  },
   "happyCouples": "행복한 커플",
   "harassment": "괴롭힘",
   "hasAccountSignIn": "이미 계정이 있으신가요? 로그인",
@@ -1013,6 +1043,63 @@
   "heightLabel": "키 (cm)",
   "heightPlaceholder": "키 (cm)",
   "help": "도움말",
+  "helpCenter": {
+    "accountDeleteAnswer": "Go to Settings > Account > Delete Account. This action is permanent and cannot be undone.",
+    "accountDeleteQuestion": "How do I delete my account?",
+    "additionalResourcesTitle": "Additional Resources",
+    "appNotWorkingAnswer": "Try restarting the app, check your internet connection, update to the latest version, or contact support.",
+    "appNotWorkingQuestion": "The app is not working properly, what should I do?",
+    "communityForumButton": "Community Forum",
+    "contactFormMissingInfoToastDescription": "Please fill in all required fields",
+    "contactFormMissingInfoToastTitle": "Missing Information",
+    "contactFormSuccessToastDescription": "We'll get back to you as soon as possible",
+    "contactFormSuccessToastTitle": "Message Sent",
+    "contactFormTitle": "Contact Support",
+    "emailPlaceholder": "your.email@example.com",
+    "gettingStartedFaq": "Getting Started",
+    "helpCenterDescription": "Find answers to common questions or contact our support team",
+    "howMatchingWorksAnswer": "Our algorithm considers your preferences, location, interests, and activity to show you compatible profiles.",
+    "howMatchingWorksQuestion": "How does the matching system work?",
+    "howToAddPhotosAnswer": "Go to your profile settings, tap 'Add Photos', select from your gallery or take new photos. You can add up to 6 photos.",
+    "howToAddPhotosQuestion": "How do I add photos to my profile?",
+    "howToBlockUserAnswer": "Go to their profile, tap the three dots menu, and select 'Block'. They won't be able to see or contact you.",
+    "howToBlockUserQuestion": "How do I block someone?",
+    "howToCancelSubscriptionAnswer": "Go to Settings > Subscription to cancel. You can also cancel through your app store subscription settings.",
+    "howToCancelSubscriptionQuestion": "How can I cancel my subscription?",
+    "howToCreateProfileAnswer": "To create a profile, sign up with your email, add photos, write a bio, and verify your account for better matches.",
+    "howToCreateProfileQuestion": "How do I create a profile?",
+    "howToReportUserAnswer": "On their profile, tap the three dots menu and select 'Report'. Choose the reason and provide details.",
+    "howToReportUserQuestion": "How do I report a user?",
+    "howToVerifyProfileAnswer": "Go to profile settings and follow the verification process. Take a selfie matching the pose shown to get verified.",
+    "howToVerifyProfileQuestion": "How do I verify my profile?",
+    "liveChatButton": "Live Chat",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Describe your issue or question in detail...",
+    "namePlaceholder": "Your full name",
+    "notReceivingNotificationsAnswer": "Check your device settings, ensure notifications are enabled for the app, and verify your notification preferences.",
+    "notReceivingNotificationsQuestion": "I'm not receiving notifications, how to fix this?",
+    "quickAccessChatAction": "Start Chat",
+    "quickAccessChatDescription": "Chat with our support team in real-time",
+    "quickAccessEmailAction": "Send Email",
+    "quickAccessEmailDescription": "Send us an email for detailed support",
+    "quickAccessPhoneAction": "Call Now",
+    "quickAccessPhoneDescription": "Call our support hotline",
+    "quickAccessPhoneTitle": "Phone Support",
+    "refundPolicyAnswer": "Refunds are handled according to app store policies. Contact support for assistance with refund requests.",
+    "refundPolicyQuestion": "What is the refund policy?",
+    "safetyFaq": "Safety & Security",
+    "safetyGuideButton": "Safety Guide",
+    "safetyTipsAnswer": "Always meet in public places, tell friends your plans, trust your instincts, and never share personal information early.",
+    "safetyTipsQuestion": "What are the safety tips for dating?",
+    "sendMessageButton": "Send Message",
+    "subjectLabel": "Subject",
+    "subjectPlaceholder": "What can we help you with?",
+    "subscriptionFaq": "Subscription & Billing",
+    "technicalFaq": "Technical Support",
+    "userGuideButton": "User Guide",
+    "whatIsPremiumAnswer": "Premium includes unlimited likes, super likes, profile boosts, advanced filters, read receipts, and ad-free browsing.",
+    "whatIsPremiumQuestion": "What features are included in Premium?"
+  },
   "helpCenterDescription": "무엇을 도와드릴까요?",
   "helpCenterTitle": "고객 센터",
   "helpDesc": "FAQ 및 지원",
@@ -1132,6 +1219,7 @@
   "interest.cooking": "요리",
   "interest.cycling": "자전거 타기",
   "interest.dance": "댄스",
+  "interest.design": "Design",
   "interest.fashion": "패션",
   "interest.fitness": "피트니스",
   "interest.food": "음식",
@@ -1145,6 +1233,7 @@
   "interest.nature": "자연",
   "interest.photography": "사진",
   "interest.piano": "피아노",
+  "interest.poetry": "Poetry",
   "interest.reading": "독서",
   "interest.running": "달리기",
   "interest.sports": "스포츠",
@@ -1195,9 +1284,9 @@
   "interestsTitle": "관심사",
   "interface": {
     "moreProfiles": "+{{count}}개 더 많은 프로필",
-    "syncing": "동기화 중...",
+    "syncData": "데이터 동기화",
     "syncSuccess": "데이터가 성공적으로 동기화되었습니다",
-    "syncData": "데이터 동기화"
+    "syncing": "동기화 중..."
   },
   "introduceYourself": "자기소개를 입력하세요... (최소 20자)",
   "invalidEmail": "잘못된 이메일 주소",
@@ -1217,9 +1306,9 @@
   "languageUpdateError": "언어 업데이트 오류",
   "languageUpdated": "언어가 업데이트되었습니다",
   "languages": {
-    "turkish": "터키어",
     "english": "영어",
-    "swedish": "스웨덴어"
+    "swedish": "스웨덴어",
+    "turkish": "터키어"
   },
   "languagesSelected": "{{count}}/5 선택됨",
   "languagesTitle": "언어 (최대 5개)",
@@ -1249,29 +1338,21 @@
   "likes.viewProfiles": "내가 '좋아요'한 프로필 보기",
   "likesStats": "'좋아요' 수",
   "limit": {
-    "daily": {
-      "likes": "일일 좋아요 한도에 도달했습니다",
-      "superLikes": "일일 슈퍼 좋아요 한도에 도달했습니다"
-    },
     "description": {
       "dailyLikes": "무제한 좋아요를 위해 업그레이드하세요",
       "dailySuperLikes": "더 많은 슈퍼 좋아요를 위해 업그레이드하세요",
       "monthlyBoosts": "월간 부스트 한도에 도달했습니다"
     },
-    "monthly": {
-      "boosts": "월간 부스트 한도에 도달했습니다"
-    },
-    "remaining": "남음",
+    "exceeded": "Limit Exceeded",
     "title": {
-      "dailyLikes": "일일 좋아요 한도",
       "dailySuperLikes": "슈퍼 좋아요 한도"
     }
   },
   "limited": "제한됨",
   "limits": {
     "reached": "한도 도달",
-    "systemReady": "시스템 준비 완료",
     "systemNotReady": "시스템 준비 안 됨",
+    "systemReady": "시스템 준비 완료",
     "upgrade": "업그레이드"
   },
   "loadFailed": "로드 실패",
@@ -1288,7 +1369,13 @@
   "loadingUsers": "사용자 로딩 중",
   "loadingUsersDescription": "사용자 데이터를 가져오는 중입니다. 잠시만 기다려주세요...",
   "loadingUsersTitle": "사용자 로딩 중",
-  "location": "위치",
+  "location": {
+    "notSupported": "Geolocation is not supported by this browser.",
+    "permissionDenied": "Location access denied by user",
+    "positionUnavailable": "Location information unavailable",
+    "timeout": "Location request timed out",
+    "unknownError": "An unknown error occurred while getting your location."
+  },
   "location1": "서울",
   "location2": "부산",
   "location3": "대구",
@@ -1314,7 +1401,7 @@
   "makeAdmin": "관리자로 만들기",
   "makeModerator": "운영자로 만들기",
   "makeProfileMoreActive": "프로필을 더 활발하게 만들어 더 많은 사람들에게 당신을 알리세요!",
-  "makeRole": "{{{role}}}로 만들기",
+  "makeRole": "{{role}}로 만들기",
   "male": "남성",
   "manageContent": "콘텐츠 관리",
   "managePlans": "플랜 관리",
@@ -1334,7 +1421,6 @@
   "maximumDistance": "최대 거리",
   "men": "남성",
   "menu": "메뉴",
-  "mesajAt": "메시지 보내기",
   "messageBeforeMatch": "매칭 전 메시지",
   "messageModeration": "메시지 관리",
   "messageRequired": "메시지는 필수입니다",
@@ -1345,7 +1431,7 @@
   "metaTitle": "메타 제목",
   "metaTitlePlaceholder": "페이지 제목 (60자)",
   "minAgeLabel": "{{age}}세",
-  "minCharsRemaining": "최소 {{{count}}}자 더 필요",
+  "minCharsRemaining": "최소 {{count}}자 더 필요",
   "minTwoPhotos": "최소 2장의 사진을 추가해야 합니다",
   "minimumAge": "최소 연령",
   "minutesAgo": "분 전",
@@ -1353,57 +1439,58 @@
   "missionDescription": "미션 설명",
   "missionTitle": "미션 제목",
   "moderation": {
-    "title": "콘텐츠 관리",
     "actions": {
       "approve": "승인",
-      "reject": "거부",
-      "flag": "신고"
+      "flag": "신고",
+      "reject": "거부"
     },
     "dialogs": {
       "approve": {
-        "title": "콘텐츠 승인",
-        "description": "이 콘텐츠는 승인되어 사용자에게 표시됩니다."
-      },
-      "reject": {
-        "title": "콘텐츠 거부",
-        "description": "이 콘텐츠는 거부되고 시스템에서 제거됩니다."
+        "description": "이 콘텐츠는 승인되어 사용자에게 표시됩니다.",
+        "title": "콘텐츠 승인"
       },
       "flag": {
-        "title": "콘텐츠 신고",
-        "description": "이 콘텐츠는 추가 검토를 위해 신고됩니다."
+        "description": "이 콘텐츠는 추가 검토를 위해 신고됩니다.",
+        "title": "콘텐츠 신고"
+      },
+      "reject": {
+        "description": "이 콘텐츠는 거부되고 시스템에서 제거됩니다.",
+        "title": "콘텐츠 거부"
       }
     },
-    "success": "콘텐츠 {{action}}이(가) 성공적으로 완료되었습니다",
-    "failed": "콘텐츠 {{action}} 실패",
     "error": "관리 중 오류 발생",
-    "unknownUser": "알 수 없는 사용자",
-    "profilePhoto": "프로필 사진",
-    "reason": "사유",
-    "notes": "메모",
-    "notesPlaceholder": "관리 메모를 입력하세요...",
-    "reasonPlaceholder": "거부 또는 신고 사유를 선택하세요...",
-    "pending": {
-      "title": "검토 대기 중",
-      "description": "관리 승인 대기 중인 콘텐츠",
-      "noPending": "대기 중인 콘텐츠 없음",
-      "allReviewed": "업로드된 모든 콘텐츠가 검토되었습니다"
-    },
-    "stats": {
-      "totalFiles": "총 파일 수",
-      "originalSize": "원본 크기",
-      "compressedSize": "압축된 크기",
-      "avgCompression": "평균 압축률",
-      "spaceSaved": "절약된 공간"
-    },
+    "failed": "콘텐츠 {{action}} 실패",
     "fileInfo": {
+      "compressed": "압축됨:",
       "file": "파일:",
       "size": "크기:",
-      "compressed": "압축됨:",
       "uploaded": "업로드됨:"
-    }
+    },
+    "notes": "메모",
+    "notesPlaceholder": "관리 메모를 입력하세요...",
+    "pending": {
+      "allReviewed": "업로드된 모든 콘텐츠가 검토되었습니다",
+      "description": "관리 승인 대기 중인 콘텐츠",
+      "noPending": "대기 중인 콘텐츠 없음",
+      "title": "검토 대기 중"
+    },
+    "profilePhoto": "프로필 사진",
+    "reason": "사유",
+    "reasonPlaceholder": "거부 또는 신고 사유를 선택하세요...",
+    "stats": {
+      "avgCompression": "평균 압축률",
+      "compressedSize": "압축된 크기",
+      "originalSize": "원본 크기",
+      "spaceSaved": "절약된 공간",
+      "totalFiles": "총 파일 수"
+    },
+    "success": "콘텐츠 {{action}}이(가) 성공적으로 완료되었습니다",
+    "title": "콘텐츠 관리",
+    "unknownUser": "알 수 없는 사용자"
   },
   "moderationQueue": "관리 대기열",
   "moderator": "운영자",
+  "moderatorAccess": "🛡️ Moderator Access - All Premium Features Included",
   "moderatorPanel": "운영자 패널",
   "moderatorPermissions": {
     "description": "이 사용자에게 어떤 운영자 권한을 활성화하시겠습니까?",
@@ -1439,6 +1526,12 @@
   },
   "needHelp": "도움이 필요하신가요?",
   "networkError": "네트워크 오류",
+  "networkStatus": {
+    "connectionLost": "Connection lost",
+    "connectionRestored": "Connection restored",
+    "featuresUnavailable": "Some features may be unavailable",
+    "syncingWithServer": "Syncing with server..."
+  },
   "new": "새로운",
   "newLike": "새로운 좋아요",
   "newMatch": "새로운 매치!",
@@ -1447,7 +1540,9 @@
   "newMatchNotificationMessage": "새로운 매칭이 있습니다!",
   "newMatches": "새로운 매치",
   "newMatchesDescription": "누군가와 매치되면 알림 받기",
-  "newMessages": "새 메시지",
+  "newMatchesLabel": "New Matches",
+  "newMessageNotification": "New Message",
+  "newMessageNotificationMessage": "You have a new message",
   "newMessagesDescription": "새 메시지를 받으면 알림 받기",
   "newMessagesLabel": "새 메시지",
   "newRole": "새 역할",
@@ -1514,7 +1609,7 @@
   "occupationLabel": "직업",
   "occupationPlaceholder": "직업",
   "offline": "오프라인",
-  "okText": "확인",
+  "ok": "OK",
   "onboarding.birthDate.question": "생년월일을 입력하세요",
   "onboarding.birthDate.tooYoung": "만 18세 이상이어야 합니다",
   "onboarding.birthDate.warning": "⚠️ 이 정보는 나중에 변경할 수 없습니다",
@@ -1741,7 +1836,26 @@
   "portalError": "포털 오류",
   "portalUrlError": "포털 URL을 가져올 수 없습니다",
   "postDuringPeakHours": "피크 시간에 게시",
-  "preferences": "설정",
+  "preferences": {
+    "createError": "Error creating default preferences:",
+    "created": "Default preferences created:",
+    "creating": "Creating default preferences for user:",
+    "fetchError": "Error fetching preferences:",
+    "generalError": "Error in fetchPreferences:",
+    "loaded": "Preferences loaded:",
+    "saveError": {
+      "description": "Settings could not be saved, please try again",
+      "title": "Error"
+    },
+    "saved": {
+      "description": "Your preferences have been updated and saved permanently",
+      "title": "Settings saved"
+    },
+    "updateError": "Error updating preferences:",
+    "updateNoUser": "Cannot update preferences: no user or preferences",
+    "updateSuccess": "Preferences updated successfully:",
+    "updating": "Updating preferences with:"
+  },
   "preferencesSavedToastDesc": "새로운 설정에 따라 프로필이 업데이트됩니다.",
   "preferencesSavedToastTitle": "설정 저장됨",
   "premium": "프리미엄",
@@ -1776,9 +1890,9 @@
   "processing": "처리 중...",
   "processingText": "처리 중...",
   "profile": "프로필",
-  "profile.about.remainingChars": "{{{count}}}자 남음",
+  "profile.about.remainingChars": "{{count}}자 남음",
   "profile.bio.about": "소개",
-  "profile.bio.minCharsRemaining": "최소 {{{count}}}자 더 필요합니다",
+  "profile.bio.minCharsRemaining": "최소 {{count}}자 더 필요합니다",
   "profile.bio.placeholder": "자신을 소개해주세요... (최소 20자)",
   "profile.bio.placeholderEnd": " (최소 20자)",
   "profile.bio.placeholderStart": "자기소개를 입력하세요... ",
@@ -1789,20 +1903,24 @@
   "profile.gender.other": "기타",
   "profile.interests.choose": "관심사를 선택하세요",
   "profile.interests.maxReached": "최대 {{max}}개의 관심사를 선택할 수 있습니다",
-  "profile.interests.selected": "{{{count}}}개 선택됨",
+  "profile.interests.selected": "{{count}}개 선택됨",
   "profile.location.label": "위치",
   "profile.location.placeholder": "도시, 지역",
   "profile.occupation.label": "직업",
   "profile.occupation.placeholder": "당신의 직업",
   "profileAnalytics": "프로필 분석",
   "profileBoost": "프로필 부스트",
+  "profileCompletionCardDescription": "Complete your profile to increase your match potential",
+  "profileCompletionCardTitle": "Profile Completion",
+  "profileCompletionCompletedLabel": "Complete",
+  "profileCompletionTip": "Add more details to increase your visibility and get better matches",
   "profileDataNotFound": "프로필 데이터를 찾을 수 없음",
   "profileError": "프로필 오류",
   "profileExample1Name": "수지, 24",
   "profileExample2Name": "민준, 27",
   "profileHighlight": "프로필 강조",
   "profileImageAlt": "프로필 사진",
-  "profileLoadError": "프로필을 로드할 수 없습니다: {message}}",
+  "profileLoadError": "프로필을 로드할 수 없습니다: {{message}}",
   "profileModeration": "프로필 관리",
   "profileNotFound": "프로필을 찾을 수 없습니다",
   "profileNotFoundError": "프로필을 찾을 수 없음",
@@ -1874,6 +1992,7 @@
   "religionLabel": "종교",
   "religionPlaceholder": "종교 (선택 사항)",
   "removeFeature": "기능 제거",
+  "removeMatch": "Remove Match",
   "report": "신고하기",
   "reportDate": "신고일",
   "reportDetails": "신고 상세 정보",
@@ -1892,13 +2011,16 @@
   "resolvedToday": "오늘 해결됨",
   "restoreDatabase": "데이터베이스 복원",
   "retentionRates": "유지율",
-  "retryText": "재시도",
+  "retry": "Retry",
   "revenueAnalytics": "수익 분석",
   "reviewReport": "신고 검토",
   "rewind": {
+    "error": {
+      "description": "Failed to rewind swipe",
+      "title": "Rewind Error"
+    },
     "failed": {
       "description": "스와이프를 되돌릴 수 없습니다",
-      "error": "되돌리기에 실패했습니다",
       "title": "되돌리기 실패"
     },
     "success": {
@@ -1928,12 +2050,14 @@
   "roleUpdatedMessage": "플랜 {{role}}이(가) 성공적으로 업데이트되었습니다",
   "roleWillBeAssigned": "역할",
   "roles": {
+    "admin": "Admin",
     "makeAdmin": "관리자로 만들기",
+    "makeGold": "골드로 만들기",
     "makeModerator": "운영자로 만들기",
+    "makePlatinum": "플래티넘으로 만들기",
     "makeRegistered": "등록됨으로 만들기",
     "makeSilver": "실버로 만들기",
-    "makeGold": "골드로 만들기",
-    "makePlatinum": "플래티넘으로 만들기"
+    "moderator": "Moderator"
   },
   "safeEnvironment": "안전한 환경",
   "safeEnvironmentDesc": "검증된 프로필을 통해 당신의 프라이버시와 안전을 최우선으로 생각합니다",
@@ -2034,6 +2158,80 @@
   "signUp": "가입하기",
   "signUpSubtitle": "사랑을 찾는 수백만 명과 함께하세요",
   "silver": "실버",
+  "silverFeatureTest": {
+    "additionalTestsTitle": "Additional Tests",
+    "buttons": {
+      "runAll": "Run All Tests",
+      "testAdvancedFilters": "Test Advanced Filters",
+      "testBoost": "Test Boost",
+      "testCalls": "Test Voice/Video Calls",
+      "testLike": "Test Like",
+      "testRewind": "Test Rewind Feature",
+      "testSeeLikes": "Test \"See Who Likes You\"",
+      "testSuperLike": "Test Super Like",
+      "testing": "Testing..."
+    },
+    "currentRole": "Current Role",
+    "description": "Testing all Silver tier features for user: {{email}}",
+    "featureTestsTitle": "Feature Tests",
+    "features": {
+      "advancedFilters": {
+        "description": "Silver users can use advanced filters",
+        "name": "Advanced Filters"
+      },
+      "dailyLikes": {
+        "description": "Silver users get {{count}} daily likes",
+        "name": "{{count}} Daily Likes"
+      },
+      "dailySuperlikes": {
+        "description": "Silver users get {{count}} daily super likes",
+        "name": "{{count}} Daily Super Likes"
+      },
+      "maxPhotos": {
+        "description": "Silver users can upload up to {{count}} photos",
+        "name": "{{count}} Photos Max"
+      },
+      "monthlyBoosts": {
+        "description": "Silver users get {{count}} boost per month",
+        "name": "{{count}} Monthly Boost"
+      },
+      "readReceipts": {
+        "description": "Silver users can see read receipts",
+        "name": "Read Receipts"
+      },
+      "rewindFeature": {
+        "description": "Silver users can rewind their last swipe",
+        "name": "Rewind Feature"
+      },
+      "seeWhoLikesYou": {
+        "description": "Silver users can see who liked them",
+        "name": "See Who Likes You"
+      },
+      "unlimitedMessages": {
+        "description": "Silver users can send unlimited messages",
+        "name": "Unlimited Messages"
+      },
+      "videoCalls": {
+        "description": "Silver users can make video calls",
+        "name": "Video Calls"
+      },
+      "voiceCalls": {
+        "description": "Silver users can make voice calls",
+        "name": "Voice Calls"
+      }
+    },
+    "stats": {
+      "dailyLikes": "Daily Likes",
+      "monthlyBoosts": "Monthly Boosts",
+      "superLikes": "Super Likes"
+    },
+    "status": {
+      "failed": "Failed",
+      "notTested": "Not tested",
+      "passed": "Passed"
+    },
+    "title": "Silver Feature Test"
+  },
   "siteSettings": "사이트 설정",
   "sixMonthPlan": "6개월 플랜",
   "sixMonthPlanDesc": "20% 할인 + 1개월 무료",
@@ -2072,77 +2270,78 @@
   "step3Button": "메시지 시작하기",
   "step3Description": "매칭 후 의미 있는 대화를 시작하세요. 첫 데이트를 계획하세요!",
   "step3Title": "채팅하고 만나기",
-  "submitText": "제출",
+  "submit": "Submit",
   "subscription": {
-    "management": {
-      "grant": "구독 부여",
-      "granted": "구독 부여됨",
-      "failed": "부여 실패",
-      "updating": "업데이트 중...",
-      "activate": "활성화",
-      "deactivate": "비활성화"
-    },
-    "types": {
-      "silver": "실버 (기본 프리미엄)",
-      "gold": "골드 (프리미엄 플러스)",
-      "platinum": "플래티넘 (얼티메이트)"
-    },
     "durations": {
-      "7days": "7일",
       "14days": "14일",
       "30days": "30일",
       "60days": "60일",
+      "7days": "7일",
       "90days": "90일"
     },
     "features": {
       "dailyLikes": "일일 {{count}}개 좋아요",
-      "superLikes": "일일 {{count}}개 슈퍼 좋아요",
-      "monthlyBoosts": "월간 {{count}}개 부스트"
+      "monthlyBoosts": "월간 {{count}}개 부스트",
+      "superLikes": "일일 {{count}}개 슈퍼 좋아요"
+    },
+    "limits": {
+      "dailyBoosts": "일일 부스트",
+      "dailyLikes": "일일 좋아요",
+      "dailyUsage": "일일 사용량",
+      "more": "더",
+      "plan": "플랜",
+      "remaining": "남음",
+      "superLikes": "슈퍼 좋아요"
+    },
+    "manageSubscription": "구독 관리",
+    "management": {
+      "activate": "활성화",
+      "deactivate": "비활성화",
+      "failed": "부여 실패",
+      "grant": "구독 부여",
+      "granted": "구독 부여됨",
+      "updating": "업데이트 중..."
     },
     "status": {
       "currentPlan": "현재 플랜",
-      "validUntil": "유효 기간",
-      "timeRemaining": "남은 시간",
       "daysRemaining": "남은 일수",
-      "features": "기능"
+      "features": "기능",
+      "timeRemaining": "남은 시간",
+      "validUntil": "유효 기간"
     },
-    "limits": {
-      "dailyUsage": "일일 사용량",
-      "dailyLikes": "일일 좋아요",
-      "superLikes": "슈퍼 좋아요",
-      "dailyBoosts": "일일 부스트",
-      "remaining": "남음",
-      "plan": "플랜",
-      "more": "더"
-    },
-    "tiers": {
-      "registered": "무료",
-      "silver": "실버",
-      "gold": "골드",
-      "platinum": "플래티넘"
-    },
-    "upgrade": "업그레이드",
     "subscribenow": "지금 구독",
-    "manageSubscription": "구독 관리"
+    "tiers": {
+      "gold": "골드",
+      "platinum": "플래티넘",
+      "registered": "무료",
+      "silver": "실버"
+    },
+    "types": {
+      "gold": "골드 (프리미엄 플러스)",
+      "platinum": "플래티넘 (얼티메이트)",
+      "silver": "실버 (기본 프리미엄)"
+    },
+    "upgrade": "업그레이드"
   },
   "subscription.description": "구독을 관리하고 일일 사용 제한을 모니터링하세요",
   "subscription.error.description": "구독 처리 중 오류가 발생했습니다",
   "subscription.error.portalError": "구독 포털을 열 수 없습니다",
   "subscription.error.title": "구독 오류",
   "subscription.limits": {
-    "dailyLikes": "일일 '좋아요'",
-    "superLikes": "슈퍼 라이크",
-    "dailyBoosts": "일일 부스트",
-    "dailyUsage": "일일 사용량",
-    "remaining": "남음",
-    "unlimited": "무제한",
-    "dailyLikeLimitReached": "일일 '좋아요' 한도 도달",
-    "dailySuperLikeLimitReached": "일일 슈퍼 라이크 한도 도달",
-    "upgradeMessage": "일일 한도에 도달했나요? 더 많은 '좋아요'와 기능을 위해 업그레이드하세요!",
-    "upgradeTo": "업그레이드:",
     "currentFeatures": "현재 기능:",
+    "dailyBoosts": "일일 부스트",
+    "dailyLikeLimitReached": "일일 '좋아요' 한도 도달",
+    "dailyLikes": "일일 '좋아요'",
+    "dailySuperLikeLimitReached": "일일 슈퍼 라이크 한도 도달",
+    "dailyUsage": "일일 사용량",
+    "monthlyBoosts": "Monthly Boosts",
     "more": "더",
-    "plan": "플랜"
+    "plan": "플랜",
+    "remaining": "남음",
+    "superLikes": "슈퍼 라이크",
+    "unlimited": "무제한",
+    "upgradeMessage": "일일 한도에 도달했나요? 더 많은 '좋아요'와 기능을 위해 업그레이드하세요!",
+    "upgradeTo": "업그레이드:"
   },
   "subscription.manage": "구독 관리",
   "subscription.management.description": "업그레이드 페이지를 방문하여 사용 가능한 모든 플랜을 보거나 Stripe의 안전한 포털을 통해 기존 구독을 관리하세요.",
@@ -2150,39 +2349,39 @@
   "subscription.management.title": "구독 관리",
   "subscription.management.viewPlans": "모든 플랜 보기",
   "subscription.status": {
-    "title": "구독 상태",
     "currentPlan": "현재 플랜",
-    "validUntil": "유효 기간",
-    "timeRemaining": "남은 시간",
     "daysRemaining": "{{days}}일 남음",
     "expired": "만료됨",
-    "features": "기능"
+    "features": "기능",
+    "timeRemaining": "남은 시간",
+    "title": "구독 상태",
+    "validUntil": "유효 기간"
   },
   "subscription.subscribenow": "지금 구독",
   "subscription.tiers": {
     "free": "무료",
-    "registered": "무료",
-    "silver": "실버",
     "gold": "골드",
-    "platinum": "플래티넘"
+    "platinum": "플래티넘",
+    "registered": "무료",
+    "silver": "실버"
   },
   "subscription.title": "구독 및 사용",
   "subscription.upgrade": "업그레이드",
-  "subscriptionActivated": "{{{tier}}} 구독이 활성화되었습니다!",
+  "subscriptionActivated": "{{tier}} 구독이 활성화되었습니다!",
   "subscriptionCongratulations": "축하합니다!",
-  "subscriptionEnds": "종료일: {date}}",
+  "subscriptionEnds": "종료일: {{date}}",
   "subscriptionExpiresIn": "구독이 만료됩니다",
   "subscriptionExpiringNotification": "구독 만료 예정",
   "subscriptionExpiringNotificationMessage": "구독이 곧 만료됩니다",
   "subscriptionExpiry": "구독 만료",
   "subscriptionGranted": "구독 부여됨",
-  "subscriptionGrantedDesc": "{{{tier}}} 구독이 {{{days}}}일 동안 부여되었습니다",
+  "subscriptionGrantedDesc": "{{tier}} 구독이 {{days}}일 동안 부여되었습니다",
   "subscriptionHasBeenRenewed": "구독이 갱신되었습니다",
   "subscriptionManagement": "구독 관리",
   "subscriptionRenewedNotification": "구독 갱신됨",
   "subscriptionRenewedNotificationMessage": "구독이 갱신되었습니다",
   "subscriptionRole": {
-    "description": "이 사용자에게는 {{{role}}} 구독 패키지와 프리미엄 기능에 대한 액세스 권한이 부여됩니다.",
+    "description": "이 사용자에게는 {{role}} 구독 패키지와 프리미엄 기능에 대한 액세스 권한이 부여됩니다.",
     "title": "구독 권한"
   },
   "subscriptionSettingsDesc": "구독을 관리하고 사용 제한을 확인하세요",
@@ -2200,6 +2399,8 @@
   "sunday": "일요일",
   "superLike": "슈퍼 좋아요",
   "superLikeDesc": "하루 5개의 슈퍼 좋아요로 돋보이세요",
+  "superLikeErrorDescription": "Unable to send super like. Please try again.",
+  "superLikeFailed": "Super Like Failed",
   "superLikeFeatureDescription": "특별한 관심을 표현하고 더 많은 주목을 받으세요",
   "superLikeFeatureDetail": "슈퍼 좋아요 무제한",
   "superLikeFeatureTitle": "슈퍼 좋아요",
@@ -2215,17 +2416,19 @@
   "superLikesPerDay": "하루 5개 슈퍼 좋아요",
   "support": "지원",
   "support247": "연중무휴 지원",
+  "swipeErrorDescription": "Failed to save your action. Please check your internet connection and try again.",
+  "swipeFailed": "Swipe Failed",
   "swipesReset": "모든 스와이프가 성공적으로 초기화되었습니다",
   "swipesResetError": "스와이프 초기화 실패",
   "system": {
-    "ready": "시스템 준비 완료",
-    "notReady": "시스템 준비 안 됨",
-    "refresh": "새로고침",
-    "export": "내보내기",
     "clear": "지우기",
+    "export": "내보내기",
+    "notReady": "시스템 준비 안 됨",
+    "ready": "시스템 준비 완료",
+    "refresh": "새로고침",
     "status": {
-      "on": "켜짐",
-      "off": "꺼짐"
+      "off": "꺼짐",
+      "on": "켜짐"
     }
   },
   "systemBackup": "시스템 백업",
@@ -2236,6 +2439,11 @@
   "takeAction": "조치 취하기",
   "terms": "약관",
   "termsOfService": "서비스 약관",
+  "testServiceRole": {
+    "button": "Test Service Role",
+    "testing": "Testing...",
+    "title": "Test Service Role Key"
+  },
   "testimonial1": "2Sweety에서 만나 첫 채팅에서 사랑에 빠졌어요! 지금 결혼을 계획 중입니다.",
   "testimonial2": "제가 사용해 본 최고의 데이팅 앱이에요. 단 2주 만에 완벽한 짝을 찾았답니다!",
   "testimonial3": "궁합을 정말 잘 이해하는 놀라운 알고리즘이에요. 강력 추천합니다!",
@@ -2252,9 +2460,9 @@
   "thursday": "목요일",
   "tiers": {
     "basic": "기본",
-    "silver": "실버",
     "gold": "골드",
-    "platinum": "플래티넘"
+    "platinum": "플래티넘",
+    "silver": "실버"
   },
   "timeoutError": "요청 시간 초과",
   "title": "제목",
@@ -2294,12 +2502,12 @@
   "typeYourMessage": "메시지를 입력하세요...",
   "typing": "입력 중",
   "unauthorizedAccess": "승인되지 않은 접근",
-  "unauthorizedAccessDesc": "이 페이지에 접근할 권한이 없습니다. 당신의 역할: {role}}",
+  "unauthorizedAccessDesc": "이 페이지에 접근할 권한이 없습니다. 당신의 역할: {{role}}",
   "unban": "차단 해제",
   "unbanError": "차단 해제 중 오류 발생.",
   "unbanUser": "사용자 차단 해제",
   "unbanningUser": "사용자 차단 해제 중...",
-  "understoodText": "이해했습니다",
+  "understood": "Understood",
   "unknown": "알 수 없음",
   "unknownError": "알 수 없는 오류가 발생했습니다",
   "unknownUser": "알 수 없는 사용자",
@@ -2331,9 +2539,9 @@
   "upgradeToViewAnalytics": "분석을 보려면 프리미엄으로 업그레이드하세요",
   "upload": {
     "noAuthToken": "인증 토큰 없음",
-    "uploadFailed": "업로드 실패",
+    "photoDeleteError": "사진 삭제 오류:",
     "photoUploadError": "사진 업로드 오류:",
-    "photoDeleteError": "사진 삭제 오류:"
+    "uploadFailed": "업로드 실패"
   },
   "uploadPhoto": "사진 업로드",
   "uploadPhotos": "사진 업로드",
@@ -2379,32 +2587,32 @@
   },
   "value": "값",
   "verification": {
-    "title": "인증 받기",
+    "comingSoon": "곧 제공 예정",
     "description": "인증 배지로 다른 사람들에게 합법적인 사용자임을 보여주세요",
+    "emailInstructions": "등록된 이메일 주소로 인증 링크를 보내드립니다.",
+    "error": "인증 실패",
+    "getVerified": "인증 받기",
     "methods": {
       "email": {
-        "title": "이메일 인증",
-        "description": "이메일 주소를 통한 빠르고 쉬운 인증"
-      },
-      "phone": {
-        "title": "전화 인증",
-        "description": "SMS 인증으로 신원 확인"
+        "description": "이메일 주소를 통한 빠르고 쉬운 인증",
+        "title": "이메일 인증"
       },
       "idDocument": {
-        "title": "신분증 인증",
-        "description": "정부 발급 신분증으로 가장 안전한 인증"
+        "description": "정부 발급 신분증으로 가장 안전한 인증",
+        "title": "신분증 인증"
+      },
+      "phone": {
+        "description": "SMS 인증으로 신원 확인",
+        "title": "전화 인증"
       }
     },
-    "verify": "지금 인증",
-    "verifying": "인증 중...",
+    "phoneInstructions": "등록된 전화번호로 인증 코드를 보내드립니다.",
     "submitted": "인증 요청이 제출되었습니다",
     "success": "인증 성공!",
-    "error": "인증 실패",
-    "emailInstructions": "등록된 이메일 주소로 인증 링크를 보내드립니다.",
-    "phoneInstructions": "등록된 전화번호로 인증 코드를 보내드립니다.",
-    "comingSoon": "곧 제공 예정",
+    "title": "인증 받기",
     "verifiedBadge": "인증 배지",
-    "getVerified": "인증 받기"
+    "verify": "지금 인증",
+    "verifying": "인증 중..."
   },
   "verified": "인증됨",
   "verifiedProfiles": "검증된 프로필",
