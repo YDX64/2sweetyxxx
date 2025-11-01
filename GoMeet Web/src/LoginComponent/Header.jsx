@@ -102,7 +102,7 @@ const Header = () => {
 
   const changeLanguage = (lang) => {
     i18n.changeLanguage(lang);
-    sessionStorage.setItem("I18", lang);
+    localStorage.setItem("i18nextLng", lang);
   };
 
   const SelectLanuguageHandler = (img, name) => {
@@ -190,7 +190,7 @@ const Header = () => {
       setLanguage(Json.Name);
     }
 
-    const Lan = sessionStorage.getItem("I18");
+    const Lan = localStorage.getItem("i18nextLng");
     if (Lan) {
       i18n.changeLanguage(Lan);
     }

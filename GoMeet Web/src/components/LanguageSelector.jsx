@@ -12,13 +12,16 @@ const LanguageSelector = () => {
 
   const languages = [
     { code: 'en', name: 'English', flag: '🇬🇧' },
-    { code: 'se', name: 'Svenska', flag: '🇸🇪' },
-    { code: 'ar', name: 'العربية', flag: '🇸🇦' },
-    { code: 'tr', name: 'Türkçe', flag: '🇹🇷' },
-    { code: 'da', name: 'Dansk', flag: '🇩🇰' },
+    { code: 'sv', name: 'Svenska', flag: '🇸🇪' },
     { code: 'no', name: 'Norsk', flag: '🇳🇴' },
     { code: 'fi', name: 'Suomi', flag: '🇫🇮' },
-    { code: 'sp', name: 'Español', flag: '🇪🇸' }
+    { code: 'da', name: 'Dansk', flag: '🇩🇰' },
+    { code: 'tr', name: 'Türkçe', flag: '🇹🇷' },
+    { code: 'ar', name: 'العربية', flag: '🇸🇦' },
+    { code: 'zh', name: '中文', flag: '🇨🇳' },
+    { code: 'fr', name: 'Français', flag: '🇫🇷' },
+    { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
+    { code: 'ru', name: 'Русский', flag: '🇷🇺' }
   ];
 
   const currentLanguage = languages.find(lang => lang.code === i18n.language) || languages[0];
