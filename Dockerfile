@@ -29,9 +29,9 @@ RUN npm ci && \
 COPY ["GoMeet Web/", "./"]
 
 # Build arguments for environment variables
-ARG REACT_APP_API_BASE_URL=https://gomeet.cscodetech.cloud/api/
-ARG REACT_APP_IMAGE_BASE_URL=https://gomeet.cscodetech.cloud/
-ARG REACT_APP_PAYMENT_BASE_URL=https://gomeet.cscodetech.cloud/
+ARG REACT_APP_API_BASE_URL=https://api.2sweety.com/api/
+ARG REACT_APP_IMAGE_BASE_URL=https://api.2sweety.com/
+ARG REACT_APP_PAYMENT_BASE_URL=https://api.2sweety.com/
 ARG REACT_APP_FIREBASE_API_KEY
 ARG REACT_APP_FIREBASE_AUTH_DOMAIN=sweet-a6718.firebaseapp.com
 ARG REACT_APP_FIREBASE_PROJECT_ID=sweet-a6718

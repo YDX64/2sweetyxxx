@@ -329,7 +329,7 @@ const Header = () => {
       const UserId = JSON.parse(UserData);
 
       OneSignal.init({
-        appId: "94b2b6c5-fabb-4454-a2b7-75cf75b84789",
+        appId: process.env.REACT_APP_ONESIGNAL_APP_ID || "94b2b6c5-fabb-4454-a2b7-75cf75b84789",
         notifyButton: {
           enable: true,
         },

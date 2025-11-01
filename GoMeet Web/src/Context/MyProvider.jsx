@@ -7,11 +7,11 @@ const MyContext = createContext();
 
 const MyProvider = ({ children }) => {
 
-    const basUrl = "https://gomeet.cscodetech.cloud/api/";
+    const basUrl = process.env.REACT_APP_API_BASE_URL || "https://api.2sweety.com/api/";
 
-    const imageBaseURL = "https://gomeet.cscodetech.cloud/";
+    const imageBaseURL = process.env.REACT_APP_IMAGE_BASE_URL || "https://api.2sweety.com/";
 
-    const paymentBaseURL = "https://gomeet.cscodetech.cloud/";
+    const paymentBaseURL = process.env.REACT_APP_PAYMENT_BASE_URL || "https://api.2sweety.com/";
 
     const [updateId, setUpdateId] = useState(0);
 
