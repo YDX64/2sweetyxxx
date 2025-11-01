@@ -7,14 +7,13 @@
   "account": "Hesap",
   "accountCreated": "Hesap başarıyla oluşturuldu!",
   "accountInfo": "Hesap Bilgileri",
+  "accountUpdated": "Hesap Güncellendi",
   "actions": "İşlemler",
   "activating": "Aktifleştiriliyor...",
   "active": "Aktif",
   "activeChats": "Aktif Sohbetler",
-  "activeSubscription": "🎉 Aktif aboneliğiniz var: {tier}}",
+  "activeSubscription": "🎉 Aktif aboneliğiniz var: {{tier}}",
   "activeSubscriptions": "Aktif Abonelikler",
-  "adminAccess": "🛡️ Yönetici Erişimi - Tüm Premium Özellikler Dahil",
-  "moderatorAccess": "🛡️ Moderatör Erişimi - Tüm Premium Özellikler Dahil",
   "activeUsers": "Aktif Kullanıcılar",
   "activity": "Etkinlik",
   "activityLogs": "Aktivite Günlükleri",
@@ -30,231 +29,231 @@
   "admin.subscription.manual.subscriptionType": "Abonelik Tipi",
   "admin.subscription.manual.title": "Manuel Abonelik Yönetimi",
   "adminAccess": {
-    "loginRequired": {
-      "title": "Giriş Gerekli",
-      "description": "Admin paneline erişmek için lütfen giriş yapın.",
-      "button": "Giriş Yap"
-    },
     "accessDenied": {
-      "title": "Erişim Engellendi",
-      "description": "Admin paneline erişim yetkiniz yok.",
-      "yourRole": "Rolünüz",
-      "noRole": "Rol atanmamış",
       "adminPermission": "Admin yetkisi",
-      "yes": "Evet",
+      "button": "Ana Sayfaya Dön",
+      "description": "Admin paneline erişim yetkiniz yok.",
       "no": "Hayır",
-      "button": "Ana Sayfaya Dön"
+      "noRole": "Rol atanmamış",
+      "title": "Erişim Engellendi",
+      "yes": "Evet",
+      "yourRole": "Rolünüz"
     },
-    "debugMode": "DEBUG MODU"
+    "debugMode": "DEBUG MODU",
+    "loginRequired": {
+      "button": "Giriş Yap",
+      "description": "Admin paneline erişmek için lütfen giriş yapın.",
+      "title": "Giriş Gerekli"
+    }
   },
   "adminActions": "Yönetici Eylemleri",
   "adminContent": {
-    "title": "İçerik Yönetimi",
-    "preview": "Önizle",
-    "save": "Kaydet",
-    "saving": "Kaydediliyor...",
-    "updateSuccess": "İçerik başarıyla güncellendi",
-    "updateError": "İçerik güncellenemedi",
-    "heroSection": "Hero Bölümü",
     "badgeText": "Rozet Metni",
-    "subtitle": "Alt Başlık",
-    "mission": "Misyon",
-    "missionTitle": "Misyon Başlığı",
-    "missionDescription": "Misyon Açıklaması",
-    "statistics": "İstatistikler",
-    "value": "Değer",
+    "common": {
+      "noData": "Veri yok"
+    },
+    "heroSection": "Hero Bölümü",
     "label": "Etiket",
     "lastUpdated": "Son Güncelleme",
-    "seoSettings": "SEO Ayarları",
-    "metaTitle": "Meta Başlık",
-    "metaTitlePlaceholder": "Arama motorları için sayfa başlığı",
     "metaDescription": "Meta Açıklama",
     "metaDescriptionPlaceholder": "Arama motorları için kısa açıklama (150-160 karakter)",
     "metaKeywords": "Meta Anahtar Kelimeler",
+    "metaTitle": "Meta Başlık",
+    "metaTitlePlaceholder": "Arama motorları için sayfa başlığı",
+    "mission": "Misyon",
+    "missionDescription": "Misyon Açıklaması",
+    "missionTitle": "Misyon Başlığı",
     "pages": {
       "about": {
-        "title": "Hakkımızda",
         "description": "2020'den beri akıllı eşleştirme teknolojisi ve gerçek ilişkilerle dünya çapında kalpleri birleştiriyoruz.",
         "mission": "Misyonumuz",
         "missionText": "2Sweety'de herkesin anlamlı bir aşkı bulmayı hak ettiğine inanıyoruz...",
         "stats": {
-          "totalMatches": "Toplam Eşleşme",
           "activeUsers": "Aktif Kullanıcı",
           "happyCouples": "Mutlu Çift",
-          "satisfactionRate": "Memnuniyet Oranı"
-        }
-      },
-      "privacy": {
-        "title": "Gizlilik",
-        "description": "Gizliliğiniz önceliğimizdir. Kişisel bilgilerinizi nasıl topladığımızı, kullandığımızı ve koruduğumuzu öğrenin.",
-        "lastUpdated": "Aralık 2024"
-      },
-      "terms": {
-        "title": "Yasal",
-        "description": "2Sweety'yi kullanmadan önce lütfen bu şartları dikkatlice okuyun.",
-        "lastUpdated": "Aralık 2024"
+          "satisfactionRate": "Memnuniyet Oranı",
+          "totalMatches": "Toplam Eşleşme"
+        },
+        "title": "Hakkımızda"
       },
       "gdpr": {
-        "title": "AB",
         "description": "2Sweety, Avrupa Birliği Genel Veri Koruma Yönetmeliği ile tamamen uyumludur.",
-        "effectiveDate": "25 Mayıs 2018"
+        "effectiveDate": "25 Mayıs 2018",
+        "title": "AB"
+      },
+      "privacy": {
+        "description": "Gizliliğiniz önceliğimizdir. Kişisel bilgilerinizi nasıl topladığımızı, kullandığımızı ve koruduğumuzu öğrenin.",
+        "lastUpdated": "Aralık 2024",
+        "title": "Gizlilik"
+      },
+      "terms": {
+        "description": "2Sweety'yi kullanmadan önce lütfen bu şartları dikkatlice okuyun.",
+        "lastUpdated": "Aralık 2024",
+        "title": "Yasal"
       }
     },
+    "preview": "Önizle",
+    "save": "Kaydet",
+    "saving": "Kaydediliyor...",
     "seo": {
       "defaultKeywords": "arkadaşlık, aşk, ilişkiler, türkiye",
       "keywordsPlaceholder": "arkadaşlık, aşk, ilişkiler, türkiye"
     },
-    "common": {
-      "noData": "Veri yok"
-    }
+    "seoSettings": "SEO Ayarları",
+    "statistics": "İstatistikler",
+    "subtitle": "Alt Başlık",
+    "title": "İçerik Yönetimi",
+    "updateError": "İçerik güncellenemedi",
+    "updateSuccess": "İçerik başarıyla güncellendi",
+    "value": "Değer"
   },
   "adminDashboard": "Yönetici Paneli",
   "adminLogs": {
     "enhanced": {
-      "title": "Gelişmiş Log Sistemi",
+      "activeCategories": "Aktif kategoriler",
+      "autoRefresh": "Otomatik yenileme",
+      "categories": {
+        "admin": "Admin",
+        "auth": "Kimlik Doğrulama",
+        "database": "Veritabanı",
+        "error": "Hata",
+        "network": "Ağ",
+        "payment": "Ödeme",
+        "performance": "Performans",
+        "system": "Sistem",
+        "userAction": "Kullanıcı İşlemi"
+      },
+      "clear": "Temizle",
+      "details": {
+        "category": "Kategori",
+        "details": "Detaylar",
+        "level": "Seviye",
+        "message": "Mesaj",
+        "network": "Ağ",
+        "performance": "Performans",
+        "sessionId": "Oturum ID",
+        "stackTrace": "Yığın İzleme",
+        "timestamp": "Zaman Damgası",
+        "title": "Log Detayları",
+        "url": "URL",
+        "user": "Kullanıcı",
+        "userId": "Kullanıcı ID"
+      },
       "disable": "Devre Dışı Bırak",
       "enable": "Etkinleştir",
-      "logging": "Loglama",
-      "refresh": "Yenile",
-      "export": "Dışa Aktar",
-      "clear": "Temizle",
-      "totalLogs": "Toplam Loglar",
-      "session": "Oturum",
       "errorRate": "Hata Oranı",
       "errors": "hata",
-      "categories": {
-        "auth": "Kimlik Doğrulama",
-        "userAction": "Kullanıcı İşlemi",
-        "network": "Ağ",
-        "database": "Veritabanı",
-        "payment": "Ödeme",
-        "admin": "Admin",
-        "error": "Hata",
-        "performance": "Performans",
-        "system": "Sistem"
-      },
-      "activeCategories": "Aktif kategoriler",
-      "status": "Durum",
-      "on": "AÇIK",
-      "off": "KAPALI",
-      "autoRefresh": "Otomatik yenileme",
+      "export": "Dışa Aktar",
       "filters": {
-        "title": "Filtreler ve Arama",
+        "allCategories": "Tüm Kategoriler",
+        "allLevels": "Tüm Seviyeler",
+        "autoRefreshLabel": "Otomatik Yenile",
+        "category": "Kategori",
+        "level": "Seviye",
         "search": "Ara",
         "searchPlaceholder": "Loglarda ara...",
-        "level": "Seviye",
-        "allLevels": "Tüm Seviyeler",
-        "category": "Kategori",
-        "allCategories": "Tüm Kategoriler",
-        "autoRefreshLabel": "Otomatik Yenile"
+        "title": "Filtreler ve Arama"
       },
       "levels": {
+        "critical": "Kritik",
         "debug": "Hata Ayıklama",
-        "info": "Bilgi",
-        "warning": "Uyarı",
         "error": "Hata",
-        "critical": "Kritik"
+        "info": "Bilgi",
+        "warning": "Uyarı"
       },
+      "logging": "Loglama",
       "noLogs": {
         "disabled": "Loglama şu anda devre dışı. Log toplamaya başlamak için etkinleştirin.",
         "notFound": "Mevcut filtrelere uyan log bulunamadı."
       },
-      "details": {
-        "title": "Log Detayları",
-        "level": "Seviye",
-        "category": "Kategori",
-        "timestamp": "Zaman Damgası",
-        "sessionId": "Oturum ID",
-        "message": "Mesaj",
-        "url": "URL",
-        "userId": "Kullanıcı ID",
-        "details": "Detaylar",
-        "performance": "Performans",
-        "network": "Ağ",
-        "stackTrace": "Yığın İzleme",
-        "user": "Kullanıcı"
-      }
+      "off": "KAPALI",
+      "on": "AÇIK",
+      "refresh": "Yenile",
+      "session": "Oturum",
+      "status": "Durum",
+      "title": "Gelişmiş Log Sistemi",
+      "totalLogs": "Toplam Loglar"
     },
     "system": {
-      "title": "Sistem Logları",
-      "session": "Oturum",
-      "total": "Toplam",
-      "errors": "Hatalar",
-      "filters": {
-        "level": "Seviye",
-        "category": "Kategori",
-        "autoRefresh": "Otomatik Yenile"
-      },
-      "levels": {
-        "all": "Tüm Seviyeler",
-        "debug": "Hata Ayıklama",
-        "info": "Bilgi",
-        "warning": "Uyarı",
-        "error": "Hata",
-        "critical": "Kritik"
+      "buttons": {
+        "clear": "Temizle",
+        "disable": "Devre Dışı Bırak",
+        "enable": "Etkinleştir",
+        "export": "Dışa Aktar",
+        "logging": "Günlükleme",
+        "refresh": "Yenile"
       },
       "categories": {
+        "admin": "Yönetici",
         "all": "Tüm Kategoriler",
         "auth": "Kimlik Doğrulama",
-        "userAction": "Kullanıcı İşlemi",
-        "network": "Ağ",
         "database": "Veritabanı",
-        "payment": "Ödeme",
-        "admin": "Yönetici",
         "error": "Hata",
+        "network": "Ağ",
+        "payment": "Ödeme",
         "performance": "Performans",
-        "system": "Sistem"
-      },
-      "table": {
-        "time": "Zaman",
-        "level": "Seviye",
-        "category": "Kategori",
-        "action": "İşlem",
-        "user": "Kullanıcı",
-        "admin": "Admin",
-        "details": "Detaylar"
-      },
-      "noLogs": "Log bulunamadı",
-      "loggingDisabled": "Günlükleme şu anda devre dışı. Logları toplamaya başlamak için etkinleştirin.",
-      "filtersAndSearch": "Filtreler ve Arama",
-      "search": "Ara",
-      "searchPlaceholder": "Loglarda ara...",
-      "stats": {
-        "totalLogs": "Toplam Log",
-        "errorRate": "Hata Oranı",
-        "errors": "hata",
-        "categories": "Kategoriler",
-        "activeCategories": "Aktif kategoriler",
-        "status": "Durum",
-        "on": "AÇIK",
-        "off": "KAPALI"
-      },
-      "buttons": {
-        "enable": "Etkinleştir",
-        "disable": "Devre Dışı Bırak",
-        "logging": "Günlükleme",
-        "refresh": "Yenile",
-        "export": "Dışa Aktar",
-        "clear": "Temizle"
+        "system": "Sistem",
+        "userAction": "Kullanıcı İşlemi"
       },
       "details": {
-        "title": "Log Detayları",
-        "time": "Zaman",
         "action": "İşlem",
-        "userId": "Kullanıcı ID",
         "adminId": "Admin ID",
-        "error": "Hata",
         "details": "Detaylar",
+        "error": "Hata",
+        "message": "Mesaj",
         "stackTrace": "Yığın İzleme",
-        "message": "Mesaj"
+        "time": "Zaman",
+        "title": "Log Detayları",
+        "userId": "Kullanıcı ID"
       },
+      "errors": "Hatalar",
       "fields": {
-        "user": "Kullanıcı",
-        "url": "URL",
-        "performance": "Performans",
         "network": "Ağ",
-        "stackTrace": "Yığın İzleme"
-      }
+        "performance": "Performans",
+        "stackTrace": "Yığın İzleme",
+        "url": "URL",
+        "user": "Kullanıcı"
+      },
+      "filters": {
+        "autoRefresh": "Otomatik Yenile",
+        "category": "Kategori",
+        "level": "Seviye"
+      },
+      "filtersAndSearch": "Filtreler ve Arama",
+      "levels": {
+        "all": "Tüm Seviyeler",
+        "critical": "Kritik",
+        "debug": "Hata Ayıklama",
+        "error": "Hata",
+        "info": "Bilgi",
+        "warning": "Uyarı"
+      },
+      "loggingDisabled": "Günlükleme şu anda devre dışı. Logları toplamaya başlamak için etkinleştirin.",
+      "noLogs": "Log bulunamadı",
+      "search": "Ara",
+      "searchPlaceholder": "Loglarda ara...",
+      "session": "Oturum",
+      "stats": {
+        "activeCategories": "Aktif kategoriler",
+        "categories": "Kategoriler",
+        "errorRate": "Hata Oranı",
+        "errors": "hata",
+        "off": "KAPALI",
+        "on": "AÇIK",
+        "status": "Durum",
+        "totalLogs": "Toplam Log"
+      },
+      "table": {
+        "action": "İşlem",
+        "admin": "Admin",
+        "category": "Kategori",
+        "details": "Detaylar",
+        "level": "Seviye",
+        "time": "Zaman",
+        "user": "Kullanıcı"
+      },
+      "title": "Sistem Logları",
+      "total": "Toplam"
     }
   },
   "adminPanel": "Yönetici Paneli",
@@ -262,108 +261,108 @@
   "adminPanelAccessGranted": "Yönetici paneli erişimi ONAYLANDI",
   "adminPayments": {
     "conversionRate": "Dönüşüm Oranı",
-    "mrr": "MRR (Aylık Yinelenen Gelir)",
     "estimatedMonthly": "Tahmini aylık",
     "manualSubscription": {
-      "title": "Manuel Abonelik Ataması",
-      "userEmail": "Kullanıcı E-postası",
-      "emailPlaceholder": "kullanici@ornek.com",
-      "subscriptionTier": "Abonelik Seviyesi",
-      "tiers": {
-        "silver": "Silver (9.99$/ay)",
-        "gold": "Gold (19.99$/ay)",
-        "platinum": "Platinum (39.99$/ay)"
-      },
       "duration": "Süre (Gün)",
       "durationPlaceholder": "30",
+      "emailPlaceholder": "kullanici@ornek.com",
+      "grantButton": "Abonelik Ver",
       "reason": "Sebep",
       "reasons": {
+        "compensation": "Tazminat",
         "promotional": "Promosyon Hibesi",
         "support": "Müşteri Desteği",
-        "testing": "Test Amaçlı",
-        "compensation": "Tazminat"
+        "testing": "Test Amaçlı"
       },
-      "grantButton": "Abonelik Ver"
+      "subscriptionTier": "Abonelik Seviyesi",
+      "tiers": {
+        "gold": "Gold (19.99$/ay)",
+        "platinum": "Platinum (39.99$/ay)",
+        "silver": "Silver (9.99$/ay)"
+      },
+      "title": "Manuel Abonelik Ataması",
+      "userEmail": "Kullanıcı E-postası"
     },
-    "stripe": {
-      "title": "Stripe Kontrol Paneli Bağlantıları",
-      "openDashboard": "Stripe Kontrol Panelini Aç",
-      "viewCustomers": "Müşterileri Görüntüle",
-      "viewSubscriptions": "Abonelikleri Görüntüle",
-      "viewPayments": "Ödemeleri Görüntüle",
-      "note": "Bu bağlantılar Stripe Kontrol Panelinde açılır. Uygun erişim izinlerinizin olduğundan emin olun."
+    "mrr": "MRR (Aylık Yinelenen Gelir)",
+    "paymentStatus": {
+      "stripeConnection": "Stripe Bağlantısı",
+      "testMode": "Test Modu",
+      "title": "Ödeme Sistemi Durumu",
+      "webhookStatus": "Webhook Durumu"
     },
     "recentTransactions": {
-      "title": "Son İşlemler",
-      "plans": {
-        "silver": "Silver Plan",
-        "gold": "Gold Plan",
-        "platinum": "Platinum Plan"
-      },
       "noTransactions": "İşlem bulunmuyor",
-      "noTransactionsDesc": "Kullanıcılar abone olduğunda işlemler burada görünecek"
+      "noTransactionsDesc": "Kullanıcılar abone olduğunda işlemler burada görünecek",
+      "plans": {
+        "gold": "Gold Plan",
+        "platinum": "Platinum Plan",
+        "silver": "Silver Plan"
+      },
+      "title": "Son İşlemler"
     },
-    "paymentStatus": {
-      "title": "Ödeme Sistemi Durumu",
-      "stripeConnection": "Stripe Bağlantısı",
-      "webhookStatus": "Webhook Durumu",
-      "testMode": "Test Modu"
+    "stripe": {
+      "note": "Bu bağlantılar Stripe Kontrol Panelinde açılır. Uygun erişim izinlerinizin olduğundan emin olun.",
+      "openDashboard": "Stripe Kontrol Panelini Aç",
+      "title": "Stripe Kontrol Paneli Bağlantıları",
+      "viewCustomers": "Müşterileri Görüntüle",
+      "viewPayments": "Ödemeleri Görüntüle",
+      "viewSubscriptions": "Abonelikleri Görüntüle"
     }
   },
   "adminRole": "Yönetici Rolü",
   "adminSecurityMessage": "Admin panel erişimi IP kısıtlamalı. 2FA etkinleştirmenizi öneririz.",
   "adminSite": {
-    "configuration": {
-      "title": "Site Yapılandırması",
-      "siteName": "Site Adı",
-      "defaultLanguage": "Varsayılan Dil",
-      "siteDescription": "Site Açıklaması",
-      "descriptionPlaceholder": "Kalplerin buluştuğu ve aşk hikayelerinin başladığı yer"
-    },
     "appSettings": {
-      "title": "Uygulama Ayarları",
-      "registration": {
-        "label": "Kayıt Açık",
-        "description": "Yeni kullanıcı kayıtlarına izin ver"
+      "aiTranslation": {
+        "description": "Otomatik mesaj çevirisi",
+        "label": "AI Çeviri"
       },
       "emailVerification": {
-        "label": "E-posta Doğrulama",
-        "description": "Yeni kullanıcılar için e-posta doğrulaması iste"
+        "description": "Yeni kullanıcılar için e-posta doğrulaması iste",
+        "label": "E-posta Doğrulama"
       },
       "photoModeration": {
-        "label": "Fotoğraf Moderasyonu",
         "description": "Profil fotoğraflarının manuel incelemesi",
+        "label": "Fotoğraf Moderasyonu",
         "manual": "Manuel"
       },
-      "aiTranslation": {
-        "label": "AI Çeviri",
-        "description": "Otomatik mesaj çevirisi"
-      }
+      "registration": {
+        "description": "Yeni kullanıcı kayıtlarına izin ver",
+        "label": "Kayıt Açık"
+      },
+      "title": "Uygulama Ayarları"
     },
-    "security": {
-      "title": "Güvenlik Ayarları",
-      "twoFactor": {
-        "label": "İki Faktörlü Kimlik Doğrulama",
-        "description": "Admin paneli 2FA gereksinimi"
-      },
-      "sessionTimeout": {
-        "label": "Oturum Zaman Aşımı",
-        "description": "Admin oturum süresi",
-        "hours": "8 saat"
-      },
-      "ipRestriction": {
-        "label": "IP Kısıtlaması",
-        "description": "Admin erişimini IP ile sınırla"
-      }
+    "configuration": {
+      "defaultLanguage": "Varsayılan Dil",
+      "descriptionPlaceholder": "Kalplerin buluştuğu ve aşk hikayelerinin başladığı yer",
+      "siteDescription": "Site Açıklaması",
+      "siteName": "Site Adı",
+      "title": "Site Yapılandırması"
     },
     "integrations": {
-      "title": "Entegrasyon Durumu",
+      "connected": "Bağlı",
+      "emailService": "E-posta Servisi (SMTP)",
+      "googleTranslate": "Google Translate API",
+      "needsSetup": "Kurulum Gerekli",
       "stripe": "Stripe Ödeme",
       "supabase": "Supabase Veritabanı",
-      "googleTranslate": "Google Translate API",
-      "emailService": "E-posta Servisi (SMTP)",
-      "connected": "Bağlı",
-      "needsSetup": "Kurulum Gerekli"
+      "title": "Entegrasyon Durumu"
+    },
+    "security": {
+      "ipRestriction": {
+        "description": "Admin erişimini IP ile sınırla",
+        "label": "IP Kısıtlaması"
+      },
+      "sessionTimeout": {
+        "description": "Admin oturum süresi",
+        "hours": "8 saat",
+        "label": "Oturum Zaman Aşımı"
+      },
+      "title": "Güvenlik Ayarları",
+      "twoFactor": {
+        "description": "Admin paneli 2FA gereksinimi",
+        "label": "İki Faktörlü Kimlik Doğrulama"
+      }
     }
   },
   "adminUser": {
@@ -377,64 +376,64 @@
     }
   },
   "adminWarning": {
-    "title": "Dikkat: Admin Yetkisi",
     "description": "Admin rolü verilen kullanıcı platformda tüm yetkilere sahip olacaktır",
+    "irreversible": "Bu işlem geri alınamaz. Emin misiniz?",
     "permissions": {
-      "manageAllUsers": "Tüm kullanıcıları yönetme",
+      "accessAllData": "Tüm verilere erişim",
       "assignRoles": "Diğer adminleri ve moderatörleri atama/silme",
       "changePlatformSettings": "Platform ayarlarını değiştirme",
-      "accessAllData": "Tüm verilere erişim",
+      "manageAllUsers": "Tüm kullanıcıları yönetme",
       "systemChanges": "Sistem düzeyinde değişiklikler yapma"
     },
-    "irreversible": "Bu işlem geri alınamaz. Emin misiniz?"
+    "title": "Dikkat: Admin Yetkisi"
   },
   "ads": {
     "banner": {
       "title": "Reklam"
     },
-    "placeholder": "Reklam Alanı",
-    "removeAds": "Reklamları Kaldır - Silver'a Yükselt",
-    "upgrade": "Yükselt",
-    "native": {
-      "title": "Sponsorlu İçerik",
-      "description": "Reklamları kaldırmak için yükselt"
-    },
     "configuration": {
-      "title": "Reklam ve Analitik Yapılandırması",
-      "description": "Reklam ve analitik entegrasyonlarınızı aşağıdan yapılandırın. Değişiklikler kaydedildikten sonra hemen yürürlüğe girecektir.",
-      "tabs": {
-        "advertising": "Reklamcılık",
-        "analytics": "Analitik"
-      },
-      "sections": {
-        "googleAdsense": "Google AdSense Yapılandırması",
-        "adPlacement": "Reklam Yerleşim Ayarları",
-        "googleAnalytics": "Google Analytics",
-        "facebookPixel": "Facebook Pixel",
-        "trackingSettings": "İzleme Ayarları"
-      },
       "buttons": {
         "refresh": "Yenile",
         "save": "Değişiklikleri Kaydet",
         "saving": "Kaydediliyor..."
       },
-      "status": {
-        "enabled": "Etkin",
-        "disabled": "Devre Dışı"
-      },
+      "description": "Reklam ve analitik entegrasyonlarınızı aşağıdan yapılandırın. Değişiklikler kaydedildikten sonra hemen yürürlüğe girecektir.",
       "errors": {
         "loadFailed": "Yapılandırmalar yüklenemedi",
         "saveFailed": "Yapılandırmalar kaydedilemedi"
       },
+      "sections": {
+        "adPlacement": "Reklam Yerleşim Ayarları",
+        "facebookPixel": "Facebook Pixel",
+        "googleAdsense": "Google AdSense Yapılandırması",
+        "googleAnalytics": "Google Analytics",
+        "trackingSettings": "İzleme Ayarları"
+      },
+      "status": {
+        "disabled": "Devre Dışı",
+        "enabled": "Etkin"
+      },
       "success": {
         "saved": "Yapılandırma başarıyla kaydedildi"
-      }
+      },
+      "tabs": {
+        "advertising": "Reklamcılık",
+        "analytics": "Analitik"
+      },
+      "title": "Reklam ve Analitik Yapılandırması"
     },
     "disabledFeature": {
-      "title": "Reklamları Devre Dışı Bırak",
       "description": "Reklamlardan sıkıldınız mı? Gösterilmelerini engelleyin!",
-      "status": "Reklamlar Silver+ üyeler için devre dışı"
-    }
+      "status": "Reklamlar Silver+ üyeler için devre dışı",
+      "title": "Reklamları Devre Dışı Bırak"
+    },
+    "native": {
+      "description": "Reklamları kaldırmak için yükselt",
+      "title": "Sponsorlu İçerik"
+    },
+    "placeholder": "Reklam Alanı",
+    "removeAds": "Reklamları Kaldır - Silver'a Yükselt",
+    "upgrade": "Yükselt"
   },
   "advanced": "Gelişmiş",
   "advancedAnalytics": "Gelişmiş Analitik",
@@ -476,35 +475,35 @@
   "approveReport": "Raporu Onayla",
   "auditTrail": "Denetim İzi",
   "auth": {
-    "signingInGoogle": "🔐 Google ile giriş yapılıyor",
-    "oauthRedirectUrl": "🔐 OAuth yönlendirme URL'si:",
-    "googleSignInError": "🔐 Google ile giriş hatası:",
-    "googleSignInInitiated": "🔐 Google ile giriş başlatıldı",
-    "googleSignInFailed": "🔐 Google ile giriş başarısız oldu:",
-    "signingInApple": "🔐 Apple ile giriş yapılıyor",
     "appleSignInError": "🔐 Apple ile giriş hatası:",
-    "appleSignInInitiated": "🔐 Apple ile giriş başlatıldı",
     "appleSignInFailed": "🔐 Apple ile giriş başarısız oldu:",
-    "signingInFacebook": "🔐 Facebook ile giriş yapılıyor",
-    "facebookSignInError": "🔐 Facebook ile giriş hatası:",
-    "facebookSignInInitiated": "🔐 Facebook ile giriş başlatıldı",
-    "facebookSignInFailed": "🔐 Facebook ile giriş başarısız oldu:",
-    "signOutError": "🔧 [useAuth] Oturumu kapatma hatası:",
-    "settingUpSubscriptions": "🔧 [useAuth] Kullanıcı için gerçek zamanlı abonelikler ayarlanıyor:",
-    "profileUpdateReceived": "🔧 [useAuth] Profil güncellemesi alındı, rol yeniden yükleniyor.",
-    "subscribedToUserChannel": "🔧 [useAuth] Kullanıcı kanalına abone olundu:",
-    "userChannelError": "[useAuth] Kullanıcı kanalına abone olurken hata:",
-    "roleChangeDetected": "🔧 [useAuth] Rol değişikliği algılandı, rol yeniden yükleniyor.",
-    "subscribedToRolesChannel": "🔧 [useAuth] roles_permissions kanalına abone olundu.",
-    "rolesChannelError": "[useAuth] Roller kanalına abone olurken hata:",
-    "subscriptionSetupError": "🔧 [useAuth] Abonelikleri ayarlarken hata:",
-    "removingSubscriptions": "🔧 [useAuth] Gerçek zamanlı abonelikler kaldırılıyor.",
-    "subscriptionRemoveError": "🔧 [useAuth] Abonelikleri kaldırırken hata:",
+    "appleSignInInitiated": "🔐 Apple ile giriş başlatıldı",
+    "authInitError": "🔧 [useAuth] Kimlik doğrulama başlatılırken hata:",
     "authStateChange": "🔧 [useAuth] Kimlik doğrulama durumu değişikliği olayı:",
     "authStateChangeError": "Kimlik doğrulama durumu değişikliğini işlerken hata:",
-    "authInitError": "🔧 [useAuth] Kimlik doğrulama başlatılırken hata:",
     "cleaningUp": "🔧 [useAuth] Kimlik doğrulama sağlayıcısı temizleniyor.",
-    "noRoleFoundWarning": "Veritabanında rol bulunamadı, varsayılan olarak 'registered' atanıyor"
+    "facebookSignInError": "🔐 Facebook ile giriş hatası:",
+    "facebookSignInFailed": "🔐 Facebook ile giriş başarısız oldu:",
+    "facebookSignInInitiated": "🔐 Facebook ile giriş başlatıldı",
+    "googleSignInError": "🔐 Google ile giriş hatası:",
+    "googleSignInFailed": "🔐 Google ile giriş başarısız oldu:",
+    "googleSignInInitiated": "🔐 Google ile giriş başlatıldı",
+    "noRoleFoundWarning": "Veritabanında rol bulunamadı, varsayılan olarak 'registered' atanıyor",
+    "oauthRedirectUrl": "🔐 OAuth yönlendirme URL'si:",
+    "profileUpdateReceived": "🔧 [useAuth] Profil güncellemesi alındı, rol yeniden yükleniyor.",
+    "removingSubscriptions": "🔧 [useAuth] Gerçek zamanlı abonelikler kaldırılıyor.",
+    "roleChangeDetected": "🔧 [useAuth] Rol değişikliği algılandı, rol yeniden yükleniyor.",
+    "rolesChannelError": "[useAuth] Roller kanalına abone olurken hata:",
+    "settingUpSubscriptions": "🔧 [useAuth] Kullanıcı için gerçek zamanlı abonelikler ayarlanıyor:",
+    "signOutError": "🔧 [useAuth] Oturumu kapatma hatası:",
+    "signingInApple": "🔐 Apple ile giriş yapılıyor",
+    "signingInFacebook": "🔐 Facebook ile giriş yapılıyor",
+    "signingInGoogle": "🔐 Google ile giriş yapılıyor",
+    "subscribedToRolesChannel": "🔧 [useAuth] roles_permissions kanalına abone olundu.",
+    "subscribedToUserChannel": "🔧 [useAuth] Kullanıcı kanalına abone olundu:",
+    "subscriptionRemoveError": "🔧 [useAuth] Abonelikleri kaldırırken hata:",
+    "subscriptionSetupError": "🔧 [useAuth] Abonelikleri ayarlarken hata:",
+    "userChannelError": "[useAuth] Kullanıcı kanalına abone olurken hata:"
   },
   "authStateLoading": "Kimlik doğrulama durumu yükleniyor, bekleniyor...",
   "authStateNotLoaded": "Kimlik doğrulama durumu henüz yüklenmedi, bekleniyor...",
@@ -527,14 +526,14 @@
   "banReasonLabel": "Yasaklama Nedeni",
   "banReasonPlaceholder": "Yasaklama nedenini açıklayın...",
   "banReasons": {
-    "inappropriateContent": "Uygunsuz içerik",
-    "spamFakeProfile": "Spam veya sahte profil",
-    "harassment": "Taciz",
-    "violatingTerms": "Hizmet şartlarını ihlal etme",
+    "accountDeleted": "Hesap yönetici tarafından silindi",
+    "bannedByAdmin": "Yönetici tarafından yasaklandı",
     "custom": "Özel neden",
     "customReason": "Özel neden",
-    "bannedByAdmin": "Yönetici tarafından yasaklandı",
-    "accountDeleted": "Hesap yönetici tarafından silindi"
+    "harassment": "Taciz",
+    "inappropriateContent": "Uygunsuz içerik",
+    "spamFakeProfile": "Spam veya sahte profil",
+    "violatingTerms": "Hizmet şartlarını ihlal etme"
   },
   "banStatusUpdated": "Yasaklama durumu güncellendi",
   "banText": "Yasakla",
@@ -602,8 +601,8 @@
   "completeProfileToBeDiscovered": "Profilini tamamla ve daha fazla kişi tarafından keşfedil!",
   "completeProfileToGetLikes": "Profilinizi tamamlayın ve fotoğraf ekleyin!",
   "completeProfileToStart": "Harika insanları keşfetmeye başlamak için profilinizi tamamlayın",
-  "confirmDeleteUser": "Bu kullanıcıyı silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.",
   "confirm": "Onayla",
+  "confirmDeleteUser": "Bu kullanıcıyı silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.",
   "connectionError": "Bağlantı Hatası",
   "contactSales": "Satış ekibimizle iletişime geçin",
   "contactSupport": "Destek ile İletişime Geç",
@@ -648,73 +647,73 @@
   "days90": "90 Gün",
   "daysAgo": "gün önce",
   "debug": {
+    "app": {
+      "appStateError": "❌ Uygulama durumu hatası:",
+      "appStateInitializing": "🚀 Uygulama durumu başlatılıyor...",
+      "appStateReady": "✅ Uygulama durumu hazır"
+    },
     "matches": {
-      "fetching": "🚀 Eşleşmeler Supabase sorgusu ile alınıyor",
       "fetchError": "Eşleşmeler alınırken hata oluştu:",
       "fetchSuccess": "✅ {{count}} adet eşleşme alındı",
+      "fetching": "🚀 Eşleşmeler Supabase sorgusu ile alınıyor",
       "newMatchDetected": "Yeni eşleşme tespit edildi, yeniden alınıyor..."
     },
+    "network": {
+      "connectionLost": "📶 Bağlantı kayboldu",
+      "connectionRestored": "🌐 Bağlantı geri yüklendi",
+      "featuresUnavailable": "⚠️ Bazı özellikler kullanılamayabilir",
+      "syncingWithServer": "🔄 Sunucu ile senkronize ediliyor..."
+    },
     "profiles": {
-      "queryingUserCount": "👤 Kullanıcı sayısını sorguluyor...",
-      "totalUsers": "📊 Toplam kullanıcı sayısı: {count}}",
-      "queryingRoleBasedUsers": "🎭 Role tabanlı kullanıcılar sorguluyor...",
-      "roleBasedUserCount": "🎯 Role tabanlı filtrelenmiş kullanıcı sayısı: {count}}",
-      "queryingActiveUsers": "🟢 Son 30 gün içinde aktif kullanıcılar sorguluyor...",
-      "filteringViewedProfiles": "👁️ Görüntülenen profiller filtreleniyor...",
-      "excludingViewedProfiles": "🚫 {{count}} görüntülenen profil hariç tutuluyor",
-      "finalProfileCount": "✅ Nihai profil sayısı: {count}}",
-      "fetchingRandomProfiles": "🎲 {{count}} adet rastgele profil alınıyor...",
-      "settingProfiles": "📝 Profiller ayarlanıyor: {count}} adet",
-      "profilesSet": "✅ Profiller başarıyla ayarlandı",
-      "loadingProfiles": "⏳ Profiller yükleniyor...",
-      "profilesLoaded": "✅ Profiller yüklendi: {count}} adet",
-      "fetchError": "❌ Profil çekme hatası:",
-      "swipeError": "❌ Swipe hatası:",
-      "noMoreProfiles": "📭 Daha fazla profil yok",
-      "likeSent": "💖 Beğeni gönderildi - {{profileId}}",
-      "superLikeSent": "⭐ Süper beğeni gönderildi - {{profileId}}",
-      "profilePassed": "⏭️ Profil geçildi - {{profileId}}",
       "actionError": "❌ İşlem hatası:",
-      "initiatingLike": "🚀 Beğeni başlatılıyor",
-      "likeAction": "💝 Beğeni işlemi: {userId}} -> {{profileId}}",
       "checkingMutualLike": "🔄 Karşılıklı beğeni kontrol ediliyor...",
-      "mutualLikeCheck": "💕 Karşılıklı beğeni durumu: {isMutual}}",
-      "processingMatch": "⚡ Eşleşme işleniyor...",
+      "excludingViewedProfiles": "🚫 {{count}} görüntülenen profil hariç tutuluyor",
+      "fetchError": "❌ Profil çekme hatası:",
+      "fetchingRandomProfiles": "🎲 {{count}} adet rastgele profil alınıyor...",
+      "filteringViewedProfiles": "👁️ Görüntülenen profiller filtreleniyor...",
+      "finalProfileCount": "✅ Nihai profil sayısı: {{count}}",
+      "initiatingLike": "🚀 Beğeni başlatılıyor",
+      "likeAction": "💝 Beğeni işlemi: {{userId}} -> {{profileId}}",
+      "likeSent": "💖 Beğeni gönderildi - {{profileId}}",
+      "loadingProfiles": "⏳ Profiller yükleniyor...",
       "matchCreated": "🎉 YENİ EŞLEŞME! {{userId}} ↔ {{profileId}}",
-      "refreshingProfiles": "🔄 Profiller yenileniyor..."
+      "mutualLikeCheck": "💕 Karşılıklı beğeni durumu: {{isMutual}}",
+      "noMoreProfiles": "📭 Daha fazla profil yok",
+      "processingMatch": "⚡ Eşleşme işleniyor...",
+      "profilePassed": "⏭️ Profil geçildi - {{profileId}}",
+      "profilesLoaded": "✅ Profiller yüklendi: {{count}} adet",
+      "profilesSet": "✅ Profiller başarıyla ayarlandı",
+      "queryingActiveUsers": "🟢 Son 30 gün içinde aktif kullanıcılar sorguluyor...",
+      "queryingRoleBasedUsers": "🎭 Role tabanlı kullanıcılar sorguluyor...",
+      "queryingUserCount": "👤 Kullanıcı sayısını sorguluyor...",
+      "refreshingProfiles": "🔄 Profiller yenileniyor...",
+      "roleBasedUserCount": "🎯 Role tabanlı filtrelenmiş kullanıcı sayısı: {{count}}",
+      "settingProfiles": "📝 Profiller ayarlanıyor: {{count}} adet",
+      "superLikeSent": "⭐ Süper beğeni gönderildi - {{profileId}}",
+      "swipeError": "❌ Swipe hatası:",
+      "totalUsers": "📊 Toplam kullanıcı sayısı: {{count}}"
     },
     "subscription": {
-      "loadingSubscription": "📋 Abonelik bilgileri yükleniyor...",
-      "subscriptionLoaded": "✅ Abonelik yüklendi:",
-      "loadError": "❌ Abonelik yükleme hatası:",
       "checkingTier": "🔍 Abonelik seviyesi kontrol ediliyor:",
-      "tierCheckResult": "📊 Seviye kontrol sonucu:",
-      "startingStatusCheck": "🚀 Abonelik durumu kontrolü başlatılıyor...",
-      "loadingUserProfile": "👤 Kullanıcı profili yükleniyor:",
-      "profileLoaded": "✅ Profil yüklendi:",
       "fetchingSubscription": "📥 Abonelik bilgileri alınıyor:",
-      "subscriptionData": "📋 Abonelik verisi:",
-      "subscriptionActive": "✅ Aktif abonelik bulundu:",
+      "loadError": "❌ Abonelik yükleme hatası:",
+      "loadingSubscription": "📋 Abonelik bilgileri yükleniyor...",
+      "loadingUserProfile": "👤 Kullanıcı profili yükleniyor:",
       "noActiveSubscription": "❌ Aktif abonelik bulunamadı",
-      "updatingSubscription": "💾 Abonelik güncelleniyor:",
-      "subscriptionUpdated": "✅ Abonelik güncellendi:",
-      "updateError": "❌ Abonelik güncelleme hatası:",
-      "premiumUserCheck": "👑 Premium kullanıcı kontrolü:",
-      "premiumUserStatus": "📊 Premium kullanıcı durumu:",
+      "premiumAccessResult": "📊 Premium erişim sonucu:",
       "premiumCheckComplete": "✅ Premium kontrol tamamlandı:",
       "premiumFeatureAccess": "🔓 Premium özellik erişimi:",
-      "premiumAccessResult": "📊 Premium erişim sonucu:"
-    },
-    "network": {
-      "connectionRestored": "🌐 Bağlantı geri yüklendi",
-      "syncingWithServer": "🔄 Sunucu ile senkronize ediliyor...",
-      "connectionLost": "📶 Bağlantı kayboldu",
-      "featuresUnavailable": "⚠️ Bazı özellikler kullanılamayabilir"
-    },
-    "app": {
-      "appStateInitializing": "🚀 Uygulama durumu başlatılıyor...",
-      "appStateReady": "✅ Uygulama durumu hazır",
-      "appStateError": "❌ Uygulama durumu hatası:"
+      "premiumUserCheck": "👑 Premium kullanıcı kontrolü:",
+      "premiumUserStatus": "📊 Premium kullanıcı durumu:",
+      "profileLoaded": "✅ Profil yüklendi:",
+      "startingStatusCheck": "🚀 Abonelik durumu kontrolü başlatılıyor...",
+      "subscriptionActive": "✅ Aktif abonelik bulundu:",
+      "subscriptionData": "📋 Abonelik verisi:",
+      "subscriptionLoaded": "✅ Abonelik yüklendi:",
+      "subscriptionUpdated": "✅ Abonelik güncellendi:",
+      "tierCheckResult": "📊 Seviye kontrol sonucu:",
+      "updateError": "❌ Abonelik güncelleme hatası:",
+      "updatingSubscription": "💾 Abonelik güncelleniyor:"
     }
   },
   "debugCheckAgain": "Tekrar Kontrol Et",
@@ -740,7 +739,7 @@
   "description": "Açıklama",
   "deselectAll": "Tüm Seçimleri Kaldır",
   "developmentMode": "⚠️ GELİŞTİRME MODU",
-  "developmentModeAccess": "Geliştirme modu erişimi verildi. Rol: {role}}",
+  "developmentModeAccess": "Geliştirme modu erişimi verildi. Rol: {{role}}",
   "developmentModeNote": "Geliştirme modu erişimi",
   "disableMaintenanceMode": "Bakım Modunu Devre Dışı Bırak",
   "discount": "İndirim",
@@ -760,7 +759,7 @@
   "dismiss": "Kapat",
   "dismissed": "Kapatıldı",
   "distance": "Mesafe",
-  "distanceKm": "{{distance}} km",
+  "distanceKm": "{{{distance}}} km",
   "dragDropPhotos": "Fotoğrafları sürükleyip bırakın veya seçmek için tıklayın",
   "dragToReorder": "Yeniden sıralamak için fotoğrafları sürükleyin",
   "drinking": "Alkol",
@@ -774,6 +773,7 @@
   "editProfile": "Profili Düzenle",
   "editProfileDescription": "Profilini düzenle ve daha fazla eşleşme al",
   "editText": "Düzenle",
+  "editToChangeInterests": "Click edit to change interests",
   "editUser": "Kullanıcıyı Düzenle",
   "editingPlan": "Plan Düzenleniyor",
   "education": "Eğitim",
@@ -796,20 +796,27 @@
   "enableMaintenanceMode": "Bakım Modunu Etkinleştir",
   "endCallError": "Arama sonlandırma hatası",
   "engageWithOthers": "Diğerleriyle Etkileşime Geç",
+  "enjoyPremiumFeatures": "Premium özelliklerinizin tadını çıkarın!",
   "enterName": "Adınızı girin",
   "enterYourName": "Adınızı girin",
   "enterYourNamePlaceholder": "Adınızı girin",
   "error": {
+    "details": "Hata detayları",
     "general": {
       "occurred": "Bir hata oluştu"
     },
-    "details": "Hata detayları",
-    "refresh": "Sayfayı yenile",
-    "goHome": "Ana sayfaya git"
+    "goHome": "Ana sayfaya git",
+    "refresh": "Sayfayı yenile"
   },
   "error.404.message": "Hay aksi! Sayfa bulunamadı",
   "error.404.returnHome": "Ana Sayfaya Dön",
   "errorBanningUser": "Kullanıcı yasaklanırken bir hata oluştu.",
+  "errorBoundary": {
+    "errorDetails": "Hata detayları",
+    "goToHomePage": "Ana sayfaya git",
+    "refreshPage": "Sayfayı yenile",
+    "title": "Bir hata oluştu"
+  },
   "errorDeletingUser": "Kullanıcı silinirken bir hata oluştu.",
   "errorLoadingUsers": "Kullanıcılar yüklenirken bir hata oluştu.",
   "errorLogs": "Hata Kayıtları",
@@ -819,8 +826,6 @@
   "errorToastTitle": "Hata",
   "errorUnbanningUser": "Yasak kaldırılırken bir hata oluştu.",
   "errorUpdatingRole": "Rol güncellenirken bir hata oluştu.",
-  "removeMatch": "Eşleşmeyi Kaldır",
-  "youMatched": "Eşleştiniz!",
   "everyone": "Herkes",
   "exclusiveEvents": "Özel Etkinlikler",
   "exclusiveFilters": "Özel arama filtreleri",
@@ -852,17 +857,17 @@
   "faqPlanChangeQ": "Planımı değiştirebilir miyim?",
   "faqTitle": "Sık Sorulan Sorular",
   "feature": {
-    "basicMatching": "Temel Eşleştirme",
     "advancedFilters": "Gelişmiş Filtreler",
-    "seeWhoLikesYou": "Seni Beğenenleri Gör",
-    "rewind": "Geri Al",
-    "voiceCalls": "Sesli Aramalar",
+    "basicMatching": "Temel Eşleştirme",
+    "hdVideoCalls": "HD Görüntülü Aramalar",
     "invisibleBrowsing": "Görünmez Tarama",
     "passport": "Pasaport",
-    "hdVideoCalls": "HD Görüntülü Aramalar",
     "profileAnalytics": "Profil Analizleri",
+    "rewind": "Geri Al",
+    "seeWhoLikesYou": "Seni Beğenenleri Gör",
+    "translation": "Çeviri",
     "vipMatching": "VIP Eşleştirme",
-    "translation": "Çeviri"
+    "voiceCalls": "Sesli Aramalar"
   },
   "feature.advancedFilters": "Gelişmiş filtreler",
   "feature.allFilters": "Tüm filtreler",
@@ -902,33 +907,33 @@
   "featureFlags": "Özellik Bayrakları",
   "featureInDevelopment": "Bu özellik şu anda geliştirilme aşamasındadır. Premium üyelik ile daha fazla detay!",
   "features": {
-    "verifiedBadge": {
-      "title": "Onaylı Rozet",
-      "description": "Bu harika rozetle diğerlerine meşru bir kullanıcı olduğunuzu gösterin",
-      "free": "Doğrulama ile ücretsiz"
-    },
-    "disableAds": {
-      "title": "Reklamları Devre Dışı Bırak",
-      "description": "Reklamlardan sıkıldınız mı? Gösterilmelerini engelleyin!",
-      "tier": "Silver+"
+    "advancedFilters": {
+      "description": "Eğitim, meslek, boy, yaşam tarzı ve daha fazlasına göre filtreleyin"
     },
     "dailyLikes": {
       "count": "{{count}} Günlük Beğeni",
       "description50": "10 yerine günde 50 beğeni ile şansınızı artırın"
     },
-    "superLikes": {
-      "count": "{{count}} Süper Beğeni",
-      "description5": "Günde 5 süper beğeni ile öne çıkın"
-    },
-    "advancedFilters": {
-      "description": "Eğitim, meslek, boy, yaşam tarzı ve daha fazlasına göre filtreleyin"
-    },
-    "seeWhoLikesYou": {
-      "description": "Profilinizi beğenenleri keşfedin ve anında eşleşmeye başlayın"
+    "disableAds": {
+      "description": "Reklamlardan sıkıldınız mı? Gösterilmelerini engelleyin!",
+      "tier": "Silver+",
+      "title": "Reklamları Devre Dışı Bırak"
     },
     "monthlyBoosts": {
       "count": "Ayda {{count}} Öne Çıkarma",
       "description1": "Aylık profil öne çıkarma ile 10 kat daha fazla görünürlük elde edin"
+    },
+    "seeWhoLikesYou": {
+      "description": "Profilinizi beğenenleri keşfedin ve anında eşleşmeye başlayın"
+    },
+    "superLikes": {
+      "count": "{{count}} Süper Beğeni",
+      "description5": "Günde 5 süper beğeni ile öne çıkın"
+    },
+    "verifiedBadge": {
+      "description": "Bu harika rozetle diğerlerine meşru bir kullanıcı olduğunuzu gösterin",
+      "free": "Doğrulama ile ücretsiz",
+      "title": "Onaylı Rozet"
     }
   },
   "features.dailyLikes": "Günde {{count}} beğeni",
@@ -997,16 +1002,29 @@
   "granting": "Veriliyor...",
   "growthRate": "Büyüme Oranı",
   "guestNamePlaceholder": "Zeynep",
+  "guestService": {
+    "accessControlError": "Erişim kontrolü sırasında hata",
+    "accessDenied": "Erişim reddedildi",
+    "anonymous": "Anonim",
+    "errorRetrievingStats": "İstatistikler alınırken hata oluştu",
+    "errorRetrievingVisitors": "Ziyaretçiler alınırken hata oluştu",
+    "noProfileVisitorsYet": "Henüz profil ziyaretçisi yok",
+    "profileVisitorsFound": "{{count}} profil ziyaretçisi bulundu",
+    "silverMembershipRequired": "Profil ziyaretçilerini görmek için Silver veya daha üstü üyelik gereklidir",
+    "unableToHideVisitor": "Ziyaretçi gizlenemedi",
+    "unableToRetrieveVisitors": "Ziyaretçiler alınamadı",
+    "visitorHidden": "Ziyaretçi gizlendi"
+  },
   "guests": {
-    "title": "Ziyaretçiler",
+    "distanceUnit": "km",
+    "goldPlus": "Gold+",
     "tiers": {
       "gold": "Gold",
       "platinum": "Platinum",
       "silver": "Silver"
     },
-    "distanceUnit": "km",
-    "yearsOld": "yaşında",
-    "goldPlus": "Gold+"
+    "title": "Ziyaretçiler",
+    "yearsOld": "yaşında"
   },
   "happyCouples": "Mutlu Çiftler",
   "harassment": "Taciz",
@@ -1015,6 +1033,63 @@
   "heightLabel": "Boy (cm)",
   "heightPlaceholder": "Boyunuz (cm)",
   "help": "Yardım",
+  "helpCenter": {
+    "accountDeleteAnswer": "Ayarlar > Hesap > Hesabı Sil'e gidin. Bu işlem kalıcıdır ve geri alınamaz.",
+    "accountDeleteQuestion": "Hesabımı nasıl silerim?",
+    "additionalResourcesTitle": "Ek Kaynaklar",
+    "appNotWorkingAnswer": "Uygulamayı yeniden başlatmayı deneyin, internet bağlantınızı kontrol edin, son sürüme güncelleyin veya desteğe başvurun.",
+    "appNotWorkingQuestion": "Uygulama düzgün çalışmıyor, ne yapmalıyım?",
+    "communityForumButton": "Topluluk Forumu",
+    "contactFormMissingInfoToastDescription": "Lütfen tüm gerekli alanları doldurun",
+    "contactFormMissingInfoToastTitle": "Eksik Bilgi",
+    "contactFormSuccessToastDescription": "En kısa sürede size geri döneceğiz",
+    "contactFormSuccessToastTitle": "Mesaj Gönderildi",
+    "contactFormTitle": "Destek İletişim",
+    "emailPlaceholder": "your.email@example.com",
+    "gettingStartedFaq": "Başlangıç",
+    "helpCenterDescription": "Sık sorulan soruların yanıtlarını bulun veya destek ekibimizle iletişime geçin",
+    "howMatchingWorksAnswer": "Algoritmamız tercihlerinizi, konumunuzu, ilgi alanlarınızı ve aktivitenizi göz önünde bulundurarak uyumlu profilleri gösterir.",
+    "howMatchingWorksQuestion": "Eşleşme sistemi nasıl çalışır?",
+    "howToAddPhotosAnswer": "Profil ayarlarına gidin, 'Fotoğraf Ekle'ye dokunun, galerinizden seçin veya yeni fotoğraf çekin. En fazla 6 fotoğraf ekleyebilirsiniz.",
+    "howToAddPhotosQuestion": "Profile nasıl fotoğraf eklenir?",
+    "howToBlockUserAnswer": "Profiline gidin, üç nokta menüsüne dokunup 'Engelle'yi seçin. Sizi göremez ve iletişim kuramaz.",
+    "howToBlockUserQuestion": "Birini nasıl engellerim?",
+    "howToCancelSubscriptionAnswer": "Ayarlar > Abonelik'e gidip iptal edebilirsiniz. Ayrıca uygulama mağazası abonelik ayarlarından da iptal edebilirsiniz.",
+    "howToCancelSubscriptionQuestion": "Aboneliği nasıl iptal edebilirim?",
+    "howToCreateProfileAnswer": "Profil oluşturmak için e-postanızla kayıt olun, fotoğraf ekleyin, biyografi yazın ve daha iyi eşleşmeler için hesabınızı doğrulayın.",
+    "howToCreateProfileQuestion": "Profil nasıl oluşturulur?",
+    "howToReportUserAnswer": "Profilinde üç nokta menüsüne dokunup 'Şikayet Et'i seçin. Sebebi seçin ve detay verin.",
+    "howToReportUserQuestion": "Kullanıcı nasıl şikayet edilir?",
+    "howToVerifyProfileAnswer": "Profil ayarlarına gidin ve doğrulama sürecini takip edin. Gösterilen pozla eşleşen bir selfie çekerek doğrulanın.",
+    "howToVerifyProfileQuestion": "Profil nasıl doğrulanır?",
+    "liveChatButton": "Canlı Sohbet",
+    "messageLabel": "Mesaj",
+    "messagePlaceholder": "Sorununuzu veya sorunuzu detaylı olarak açıklayın...",
+    "namePlaceholder": "Tam adınız",
+    "notReceivingNotificationsAnswer": "Cihaz ayarlarınızı kontrol edin, uygulama için bildirimlerin açık olduğundan emin olun ve bildirim tercihlerinizi doğrulayın.",
+    "notReceivingNotificationsQuestion": "Bildirim almıyorum, nasıl düzeltebilirim?",
+    "quickAccessChatAction": "Sohbeti Başlat",
+    "quickAccessChatDescription": "Destek ekibimizle gerçek zamanlı sohbet edin",
+    "quickAccessEmailAction": "E-posta Gönder",
+    "quickAccessEmailDescription": "Detaylı destek için bize e-posta gönderin",
+    "quickAccessPhoneAction": "Şimdi Ara",
+    "quickAccessPhoneDescription": "Destek hattımızı arayın",
+    "quickAccessPhoneTitle": "Telefon Desteği",
+    "refundPolicyAnswer": "İadeler uygulama mağazası politikalarına göre işlenir. İade talepleri için desteğe başvurun.",
+    "refundPolicyQuestion": "Para iade politikası nedir?",
+    "safetyFaq": "Güvenlik ve Koruma",
+    "safetyGuideButton": "Güvenlik Rehberi",
+    "safetyTipsAnswer": "Daima kalabalık yerlerde buluşun, planlarınızı arkadaşlarınıza söyleyin, içgüdülerinize güvenin ve kişisel bilgileri erken paylaşmayın.",
+    "safetyTipsQuestion": "Flört için güvenlik ipuçları nelerdir?",
+    "sendMessageButton": "Mesaj Gönder",
+    "subjectLabel": "Konu",
+    "subjectPlaceholder": "Size nasıl yardımcı olabiliriz?",
+    "subscriptionFaq": "Abonelik ve Faturalama",
+    "technicalFaq": "Teknik Destek",
+    "userGuideButton": "Kullanıcı Rehberi",
+    "whatIsPremiumAnswer": "Premium sınırsız beğeni, süper beğeni, profil boost, gelişmiş filtreler, okundu bilgisi ve reklamsız gezinme içerir.",
+    "whatIsPremiumQuestion": "Premium'da hangi özellikler bulunur?"
+  },
   "helpCenterDescription": "Size nasıl yardımcı olabiliriz?",
   "helpCenterTitle": "Yardım Merkezi",
   "helpDesc": "SSS ve destek",
@@ -1134,6 +1209,7 @@
   "interest.cooking": "Yemek Pişirme",
   "interest.cycling": "Bisiklet",
   "interest.dance": "Dans",
+  "interest.design": "Design",
   "interest.fashion": "Moda",
   "interest.fitness": "Fitness",
   "interest.food": "Yemek",
@@ -1147,6 +1223,7 @@
   "interest.nature": "Doğa",
   "interest.photography": "Fotoğrafçılık",
   "interest.piano": "Piyano",
+  "interest.poetry": "Poetry",
   "interest.reading": "Okuma",
   "interest.running": "Koşu",
   "interest.sports": "Spor",
@@ -1197,9 +1274,9 @@
   "interestsTitle": "İlgi Alanları",
   "interface": {
     "moreProfiles": "+{{count}} daha fazla profil",
-    "syncing": "Senkronize ediliyor...",
+    "syncData": "Veriyi Senkronize Et",
     "syncSuccess": "Veri başarıyla senkronize edildi",
-    "syncData": "Veriyi Senkronize Et"
+    "syncing": "Senkronize ediliyor..."
   },
   "introduceYourself": "Kendinizi tanıtın... (En az 20 karakter)",
   "invalidEmail": "Geçersiz e-posta adresi",
@@ -1219,9 +1296,9 @@
   "languageUpdateError": "Dil güncellenirken hata oluştu",
   "languageUpdated": "Dil güncellendi",
   "languages": {
-    "turkish": "Türkçe",
     "english": "İngilizce",
-    "swedish": "İsveççe"
+    "swedish": "İsveççe",
+    "turkish": "Türkçe"
   },
   "languagesSelected": "{{count}}/5 seçildi",
   "languagesTitle": "Diller (En fazla 5)",
@@ -1249,20 +1326,19 @@
   "likes.noLikesYet": "Henüz kimseyi beğenmedin",
   "likes.startLiking": "Keşfet sayfasında profilleri beğenmeye başla!",
   "likes.viewProfiles": "Beğendiğin profilleri görüntüle",
+  "likesStats": "Beğeniler",
   "limit": {
-    "remaining": "kaldı",
-    "exceeded": "Limit Aşıldı",
     "description": "Günlük {{action}} limitinize ulaştınız. Limitlerinizi artırmak için Premium'a yükseltin.",
+    "exceeded": "Limit Aşıldı",
     "title": {
       "dailySuperLikes": "Süper Beğeni Limiti Doldu"
     }
   },
-  "likesStats": "Beğeniler",
   "limited": "Sınırlı",
   "limits": {
     "reached": "Limite Ulaşıldı",
-    "systemReady": "Sistem hazır",
     "systemNotReady": "Sistem hazır değil",
+    "systemReady": "Sistem hazır",
     "upgrade": "Yükselt"
   },
   "loadFailed": "Yükleme Başarısız Oldu",
@@ -1281,10 +1357,10 @@
   "loadingUsersTitle": "Kullanıcılar Yükleniyor",
   "location": {
     "notSupported": "Bu tarayıcı coğrafi konumu desteklemiyor.",
-    "unknownError": "Konumunuz alınırken bilinmeyen bir hata oluştu.",
     "permissionDenied": "Konum erişimi kullanıcı tarafından reddedildi. Lütfen tarayıcı ayarlarınızdan konumu etkinleştirin.",
     "positionUnavailable": "Konum bilgisi mevcut değil.",
-    "timeout": "Konum isteği zaman aşımına uğradı."
+    "timeout": "Konum isteği zaman aşımına uğradı.",
+    "unknownError": "Konumunuz alınırken bilinmeyen bir hata oluştu."
   },
   "location1": "İstanbul",
   "location2": "Ankara",
@@ -1305,6 +1381,7 @@
   "logout": "Çıkış Yap",
   "logs": "Kayıtlar",
   "love": "Aşk",
+  "loveIsCloser": "Aşk artık daha yakın!",
   "mainPhoto": "Ana",
   "maintenanceMode": "Bakım Modu",
   "makeAdmin": "Yönetici Yap",
@@ -1330,7 +1407,6 @@
   "maximumDistance": "Maksimum mesafe",
   "men": "Erkekler",
   "menu": "Menü",
-  "sendMessage": "Mesaj Gönder",
   "messageBeforeMatch": "Eşleşmeden Önce Mesaj",
   "messageModeration": "Mesaj Moderasyonu",
   "messageRequired": "Mesaj gereklidir",
@@ -1349,62 +1425,63 @@
   "missionDescription": "Misyon Açıklaması",
   "missionTitle": "Misyon Başlığı",
   "moderation": {
-    "title": "İçerik Moderasyonu",
     "actions": {
       "approve": "Onayla",
-      "reject": "Reddet",
-      "flag": "İşaretle"
+      "flag": "İşaretle",
+      "reject": "Reddet"
     },
     "dialogs": {
       "approve": {
-        "title": "İçeriği Onayla",
-        "description": "Bu içerik onaylanacak ve kullanıcılara görünür hale gelecek."
-      },
-      "reject": {
-        "title": "İçeriği Reddet",
-        "description": "Bu içerik reddedilecek ve sistemden kaldırılacak."
+        "description": "Bu içerik onaylanacak ve kullanıcılara görünür hale gelecek.",
+        "title": "İçeriği Onayla"
       },
       "flag": {
-        "title": "İçeriği İşaretle",
-        "description": "Bu içerik daha fazla inceleme için işaretlenecek."
+        "description": "Bu içerik daha fazla inceleme için işaretlenecek.",
+        "title": "İçeriği İşaretle"
+      },
+      "reject": {
+        "description": "Bu içerik reddedilecek ve sistemden kaldırılacak.",
+        "title": "İçeriği Reddet"
       }
     },
-    "success": "İçerik {{action}} işlemi başarıyla tamamlandı",
-    "failed": "İçerik {{action}} işlemi başarısız oldu",
     "error": "Moderasyon sırasında bir hata oluştu",
-    "unknownUser": "Bilinmeyen Kullanıcı",
-    "profilePhoto": "Profil Fotoğrafı",
-    "reason": "Neden",
-    "notes": "Notlar",
-    "notesPlaceholder": "Moderasyon notlarınızı girin...",
-    "reasonPlaceholder": "Reddetme veya işaretleme nedenini seçin...",
-    "pending": {
-      "title": "İnceleme Bekliyor",
-      "description": "Moderasyon onayı bekleyen içerik",
-      "noPending": "Bekleyen İçerik Yok",
-      "allReviewed": "Tüm yüklenen içerik incelendi"
-    },
-    "stats": {
-      "totalFiles": "Toplam Dosya",
-      "originalSize": "Orijinal Boyut",
-      "compressedSize": "Sıkıştırılmış Boyut",
-      "avgCompression": "Ort. Sıkıştırma",
-      "spaceSaved": "Kazanılan Alan"
-    },
+    "failed": "İçerik {{action}} işlemi başarısız oldu",
     "fileInfo": {
+      "compressed": "Sıkıştırılmış:",
       "file": "Dosya:",
       "size": "Boyut:",
-      "compressed": "Sıkıştırılmış:",
       "uploaded": "Yüklendi:"
-    }
+    },
+    "notes": "Notlar",
+    "notesPlaceholder": "Moderasyon notlarınızı girin...",
+    "pending": {
+      "allReviewed": "Tüm yüklenen içerik incelendi",
+      "description": "Moderasyon onayı bekleyen içerik",
+      "noPending": "Bekleyen İçerik Yok",
+      "title": "İnceleme Bekliyor"
+    },
+    "profilePhoto": "Profil Fotoğrafı",
+    "reason": "Neden",
+    "reasonPlaceholder": "Reddetme veya işaretleme nedenini seçin...",
+    "stats": {
+      "avgCompression": "Ort. Sıkıştırma",
+      "compressedSize": "Sıkıştırılmış Boyut",
+      "originalSize": "Orijinal Boyut",
+      "spaceSaved": "Kazanılan Alan",
+      "totalFiles": "Toplam Dosya"
+    },
+    "success": "İçerik {{action}} işlemi başarıyla tamamlandı",
+    "title": "İçerik Moderasyonu",
+    "unknownUser": "Bilinmeyen Kullanıcı"
   },
   "moderationQueue": "Moderasyon Sırası",
   "moderator": "Moderatör",
+  "moderatorAccess": "🛡️ Moderatör Erişimi - Tüm Premium Özellikler Dahil",
   "moderatorPanel": "Moderatör Paneli",
   "moderatorPermissions": {
-    "title": "Moderatör Yetkileri",
     "description": "Bu kullanıcı için hangi moderatör yetkilerini etkinleştirmek istiyorsunuz?",
-    "selectAtLeastOne": "En az bir yetki seçmelisiniz."
+    "selectAtLeastOne": "En az bir yetki seçmelisiniz.",
+    "title": "Moderatör Yetkileri"
   },
   "moderatorRole": "Moderatör Rolü",
   "moderators": "Moderatörler",
@@ -1435,6 +1512,12 @@
   },
   "needHelp": "Yardıma mı ihtiyacınız var?",
   "networkError": "Ağ Hatası",
+  "networkStatus": {
+    "connectionLost": "Bağlantı koptu",
+    "connectionRestored": "Bağlantı yeniden kuruldu",
+    "featuresUnavailable": "Bazı özellikler kullanılamayabilir",
+    "syncingWithServer": "Sunucu ile senkronize ediliyor..."
+  },
   "new": "yeni",
   "newLike": "Yeni Beğeni",
   "newMatch": "Yeni Eşleşme!",
@@ -1442,9 +1525,10 @@
   "newMatchNotification": "Yeni Eşleşme!",
   "newMatchNotificationMessage": "Yeni bir eşleşmeniz var!",
   "newMatches": "Yeni Eşleşmeler",
-  "swipeFailed": "Beğeni Başarısız",
-  "swipeErrorDescription": "Beğeni kaydedilemedi. Lütfen internet bağlantınızı kontrol edin ve tekrar deneyin.",
   "newMatchesDescription": "Biriyle eşleştiğinizde bildirim alın",
+  "newMatchesLabel": "New Matches",
+  "newMessageNotification": "New Message",
+  "newMessageNotificationMessage": "You have a new message",
   "newMessagesDescription": "Yeni bir mesaj aldığınızda bildirim alın",
   "newMessagesLabel": "Yeni Mesajlar",
   "newRole": "Yeni Rol",
@@ -1474,7 +1558,7 @@
   "noMoreProfiles": "Başka profil kalmadı",
   "noName": "İsim Yok",
   "noNotifications": "Henüz bildirim yok",
-  "noOneLikedYou": "Henüz kimse sizi beğenmedi",
+  "noOneLikedYet": "No one has liked you yet",
   "noPermissionToBanUsers": "Kullanıcıları yasaklama/yasak kaldırma yetkiniz yok",
   "noPermissionToChangeRoles": "Kullanıcı rollerini değiştirme yetkiniz yok",
   "noPermissionToDeleteUsers": "Kullanıcıları silme yetkiniz yok",
@@ -1663,12 +1747,6 @@
   "paymentMethods": "Kabul Edilen Ödeme Yöntemleri",
   "paymentSessionError": "Ödeme oturumu oluşturulamadı. Lütfen tekrar deneyin.",
   "paymentSuccessful": "Ödeme Başarılı!",
-  "subscriptionActivated": "Aboneliğiniz etkinleştirildi. Hesabınızı güncellerken lütfen bekleyin...",
-  "accountUpdated": "Hesap Güncellendi",
-  "enjoyPremiumFeatures": "Premium özelliklerinizin tadını çıkarın!",
-  "subscriptionCongratulations": "Tebrikler!",
-  "loveIsCloser": "Aşk artık daha yakın!",
-  "subscriptionUpdateError": "Aboneliğiniz güncellenirken bir hata oluştu. Lütfen sayfayı yenileyin.",
   "paymentSystem": "Ödeme Sistemi",
   "payments": "Ödemeler",
   "peakActivityTime": "Yoğun Aktivite Zamanı",
@@ -1685,33 +1763,33 @@
   "performanceMetrics": "Performans Metrikleri",
   "permissionError": "Bu işlem için yetkiniz yok",
   "permissions": {
-    "manage_users": {
-      "label": "Kullanıcı Yönetimi",
-      "description": "Kullanıcı profillerini görüntüle ve düzenle"
-    },
     "ban_users": {
-      "label": "Kullanıcı Yasaklama",
-      "description": "Kullanıcıları yasakla ve yasakları kaldır"
+      "description": "Kullanıcıları yasakla ve yasakları kaldır",
+      "label": "Kullanıcı Yasaklama"
     },
     "delete_users": {
-      "label": "Kullanıcı Silme",
-      "description": "Kullanıcı hesaplarını kalıcı olarak sil"
-    },
-    "manage_subscriptions": {
-      "label": "Abonelik Yönetimi",
-      "description": "Kullanıcı aboneliklerini düzenle"
-    },
-    "view_reports": {
-      "label": "Raporları Görüntüle",
-      "description": "Kullanıcı şikayetlerini ve raporlarını görüntüle"
+      "description": "Kullanıcı hesaplarını kalıcı olarak sil",
+      "label": "Kullanıcı Silme"
     },
     "manage_content": {
-      "label": "İçerik Yönetimi",
-      "description": "Platform içeriğini denetle"
+      "description": "Platform içeriğini denetle",
+      "label": "İçerik Yönetimi"
+    },
+    "manage_subscriptions": {
+      "description": "Kullanıcı aboneliklerini düzenle",
+      "label": "Abonelik Yönetimi"
+    },
+    "manage_users": {
+      "description": "Kullanıcı profillerini görüntüle ve düzenle",
+      "label": "Kullanıcı Yönetimi"
     },
     "view_analytics": {
-      "label": "Analitikleri Görüntüle",
-      "description": "Platform analitiklerini ve istatistiklerini görüntüle"
+      "description": "Platform analitiklerini ve istatistiklerini görüntüle",
+      "label": "Analitikleri Görüntüle"
+    },
+    "view_reports": {
+      "description": "Kullanıcı şikayetlerini ve raporlarını görüntüle",
+      "label": "Raporları Görüntüle"
     }
   },
   "personalDetailsTitle": "Kişisel Detaylar",
@@ -1745,24 +1823,24 @@
   "portalUrlError": "Portal URL'si alınamadı",
   "postDuringPeakHours": "Yoğun saatlerde paylaşım yap",
   "preferences": {
-    "loaded": "Tercihler yüklendi:",
-    "creating": "Kullanıcı için varsayılan tercihler oluşturuluyor:",
-    "created": "Varsayılan tercihler oluşturuldu:",
     "createError": "Varsayılan tercihler oluşturulurken hata:",
+    "created": "Varsayılan tercihler oluşturuldu:",
+    "creating": "Kullanıcı için varsayılan tercihler oluşturuluyor:",
     "fetchError": "Tercihler alınırken hata:",
     "generalError": "fetchPreferences içinde hata:",
-    "updateNoUser": "Tercihler güncellenemiyor: kullanıcı veya tercihler yok",
-    "updating": "Tercihler şununla güncelleniyor:",
-    "updateSuccess": "Tercihler başarıyla güncellendi:",
-    "updateError": "Tercihler güncellenirken hata:",
-    "saved": {
-      "title": "Ayarlar kaydedildi",
-      "description": "Tercihleriniz güncellendi ve kalıcı olarak kaydedildi"
-    },
+    "loaded": "Tercihler yüklendi:",
     "saveError": {
-      "title": "Hata",
-      "description": "Ayarlar kaydedilemedi, lütfen tekrar deneyin"
-    }
+      "description": "Ayarlar kaydedilemedi, lütfen tekrar deneyin",
+      "title": "Hata"
+    },
+    "saved": {
+      "description": "Tercihleriniz güncellendi ve kalıcı olarak kaydedildi",
+      "title": "Ayarlar kaydedildi"
+    },
+    "updateError": "Tercihler güncellenirken hata:",
+    "updateNoUser": "Tercihler güncellenemiyor: kullanıcı veya tercihler yok",
+    "updateSuccess": "Tercihler başarıyla güncellendi:",
+    "updating": "Tercihler şununla güncelleniyor:"
   },
   "preferencesSavedToastDesc": "Profiller yeni tercihlerinize göre güncellenecektir.",
   "preferencesSavedToastTitle": "Tercihler kaydedildi",
@@ -1818,13 +1896,17 @@
   "profile.occupation.placeholder": "Mesleğiniz",
   "profileAnalytics": "Profil Analitikleri",
   "profileBoost": "Profil Öne Çıkarma",
+  "profileCompletionCardDescription": "Complete your profile to increase your match potential",
+  "profileCompletionCardTitle": "Profile Completion",
+  "profileCompletionCompletedLabel": "Complete",
+  "profileCompletionTip": "Add more details to increase your visibility and get better matches",
   "profileDataNotFound": "Profil verisi bulunamadı",
   "profileError": "Profil Hatası",
   "profileExample1Name": "Emma, 24",
   "profileExample2Name": "James, 27",
   "profileHighlight": "Profili Vurgula",
   "profileImageAlt": "Profil",
-  "profileLoadError": "Profil yüklenemedi: {message}}",
+  "profileLoadError": "Profil yüklenemedi: {{message}}",
   "profileModeration": "Profil Moderasyonu",
   "profileNotFound": "Profil bulunamadı",
   "profileNotFoundError": "Profil Bulunamadı Hatası",
@@ -1896,6 +1978,7 @@
   "religionLabel": "Dini İnanç",
   "religionPlaceholder": "Dini inancınız (isteğe bağlı)",
   "removeFeature": "Özelliği Kaldır",
+  "removeMatch": "Eşleşmeyi Kaldır",
   "report": "Şikayet Et",
   "reportDate": "Rapor Tarihi",
   "reportDetails": "Rapor Detayları",
@@ -1918,17 +2001,17 @@
   "revenueAnalytics": "Gelir Analizi",
   "reviewReport": "Raporu İncele",
   "rewind": {
-    "success": {
-      "title": "⏮️ Kaydırma Geri Alındı!",
-      "description": "Son kaydırmanız geri alındı"
+    "error": {
+      "description": "Kaydırma geri alınamadı",
+      "title": "Geri Alma Hatası"
     },
     "failed": {
-      "title": "Geri Alma Başarısız",
-      "description": "Kaydırma geri alınamadı"
+      "description": "Kaydırma geri alınamadı",
+      "title": "Geri Alma Başarısız"
     },
-    "error": {
-      "title": "Geri Alma Hatası",
-      "description": "Kaydırma geri alınamadı"
+    "success": {
+      "description": "Son kaydırmanız geri alındı",
+      "title": "⏮️ Kaydırma Geri Alındı!"
     }
   },
   "rewindFeature": "Geri alma özelliği",
@@ -1954,13 +2037,13 @@
   "roleWillBeAssigned": "rolü atanacak",
   "roles": {
     "admin": "Admin",
-    "moderator": "Moderatör",
     "makeAdmin": "Admin Yap",
+    "makeGold": "Gold Yap",
     "makeModerator": "Moderatör Yap",
+    "makePlatinum": "Platinum Yap",
     "makeRegistered": "Kayıtlı Yap",
     "makeSilver": "Silver Yap",
-    "makeGold": "Gold Yap",
-    "makePlatinum": "Platinum Yap"
+    "moderator": "Moderatör"
   },
   "safeEnvironment": "Güvenli Ortam",
   "safeEnvironmentDesc": "Doğrulanmış profiller ile gizliliğiniz ve güvenliğiniz birinci önceliğimizdir",
@@ -2007,6 +2090,7 @@
   "selected": "seçildi",
   "sendFirstMessage": "Henüz mesaj yok. İlk mesajı gönder!",
   "sendGift": "Hediye Gönder",
+  "sendMessage": "Mesaj Gönder",
   "sendNotification": "Bildirim Gönder",
   "sender": "Gönderen",
   "sent": "Gönderildi",
@@ -2060,6 +2144,80 @@
   "signUp": "Kayıt Ol",
   "signUpSubtitle": "Aşkı bulan milyonlara katıl",
   "silver": "Silver",
+  "silverFeatureTest": {
+    "additionalTestsTitle": "Additional Tests",
+    "buttons": {
+      "runAll": "Run All Tests",
+      "testAdvancedFilters": "Test Advanced Filters",
+      "testBoost": "Test Boost",
+      "testCalls": "Test Voice/Video Calls",
+      "testLike": "Test Like",
+      "testRewind": "Test Rewind Feature",
+      "testSeeLikes": "Test \"See Who Likes You\"",
+      "testSuperLike": "Test Super Like",
+      "testing": "Testing..."
+    },
+    "currentRole": "Current Role",
+    "description": "Testing all Silver tier features for user: {{email}}",
+    "featureTestsTitle": "Feature Tests",
+    "features": {
+      "advancedFilters": {
+        "description": "Silver users can use advanced filters",
+        "name": "Advanced Filters"
+      },
+      "dailyLikes": {
+        "description": "Silver users get {{count}} daily likes",
+        "name": "{{count}} Daily Likes"
+      },
+      "dailySuperlikes": {
+        "description": "Silver users get {{count}} daily super likes",
+        "name": "{{count}} Daily Super Likes"
+      },
+      "maxPhotos": {
+        "description": "Silver users can upload up to {{count}} photos",
+        "name": "{{count}} Photos Max"
+      },
+      "monthlyBoosts": {
+        "description": "Silver users get {{count}} boost per month",
+        "name": "{{count}} Monthly Boost"
+      },
+      "readReceipts": {
+        "description": "Silver users can see read receipts",
+        "name": "Read Receipts"
+      },
+      "rewindFeature": {
+        "description": "Silver users can rewind their last swipe",
+        "name": "Rewind Feature"
+      },
+      "seeWhoLikesYou": {
+        "description": "Silver users can see who liked them",
+        "name": "See Who Likes You"
+      },
+      "unlimitedMessages": {
+        "description": "Silver users can send unlimited messages",
+        "name": "Unlimited Messages"
+      },
+      "videoCalls": {
+        "description": "Silver users can make video calls",
+        "name": "Video Calls"
+      },
+      "voiceCalls": {
+        "description": "Silver users can make voice calls",
+        "name": "Voice Calls"
+      }
+    },
+    "stats": {
+      "dailyLikes": "Daily Likes",
+      "monthlyBoosts": "Monthly Boosts",
+      "superLikes": "Super Likes"
+    },
+    "status": {
+      "failed": "Failed",
+      "notTested": "Not tested",
+      "passed": "Passed"
+    },
+    "title": "Silver Feature Test"
+  },
   "siteSettings": "Site Ayarları",
   "sixMonthPlan": "6 Aylık Plan",
   "sixMonthPlanDesc": "%20 indirim + 1 ay ücretsiz",
@@ -2100,86 +2258,76 @@
   "step3Title": "Sohbet Et ve Buluş",
   "submit": "Gönder",
   "subscription": {
-    "management": {
-      "grant": "Abonelik Ver",
-      "granted": "Abonelik Verildi",
-      "failed": "Verme Başarısız",
-      "updating": "Güncelleniyor...",
-      "activate": "Aktifleştir",
-      "deactivate": "Devre Dışı Bırak"
-    },
-    "types": {
-      "silver": "Silver (Temel Premium)",
-      "gold": "Gold (Premium Plus)",
-      "platinum": "Platinum (Ultimate)"
-    },
     "durations": {
-      "7days": "7 gün",
       "14days": "14 gün",
       "30days": "30 gün",
       "60days": "60 gün",
+      "7days": "7 gün",
       "90days": "90 gün"
     },
     "features": {
       "dailyLikes": "Günde {{count}} beğeni",
-      "superLikes": "Günde {{count}} süper beğeni",
-      "monthlyBoosts": "Ayda {{count}} öne çıkarma"
-    },
-    "tiers": {
-      "free": "Ücretsiz",
-      "registered": "Ücretsiz",
-      "silver": "Silver",
-      "gold": "Gold",
-      "platinum": "Platinum"
-    },
-    "status": {
-      "title": "Abonelik Durumu",
-      "currentPlan": "Mevcut Plan",
-      "validUntil": "Geçerlilik Tarihi",
-      "timeRemaining": "Kalan Süre",
-      "daysRemaining": "{{days}} gün kaldı",
-      "expired": "Süresi Doldu",
-      "features": "Özellikler"
+      "monthlyBoosts": "Ayda {{count}} öne çıkarma",
+      "superLikes": "Günde {{count}} süper beğeni"
     },
     "limits": {
-      "dailyLikes": "Günlük Beğeniler",
-      "superLikes": "Süper Beğeniler",
       "dailyBoosts": "Günlük Öne Çıkarmalar",
-      "monthlyBoosts": "Aylık Öne Çıkarmalar",
+      "dailyLikes": "Günlük Beğeniler",
       "dailyUsage": "Günlük Kullanım",
-      "remaining": "kaldı",
-      "unlimited": "Sınırsız",
-      "dailyLikeLimitReached": "Günlük beğeni limitine ulaşıldı",
-      "dailySuperLikeLimitReached": "Günlük süper beğeni limitine ulaşıldı",
-      "upgradeMessage": "Günlük limitiniz doldu mu? Daha fazla beğeni ve özellik için yükseltin!",
-      "upgradeTo": "Yükselt:",
-      "currentFeatures": "Mevcut özellikler:",
       "more": "daha fazla",
-      "plan": "Plan"
+      "plan": "Plan",
+      "remaining": "kaldı",
+      "superLikes": "Süper Beğeniler"
     },
-    "manage": "Aboneliği Yönet",
-    "upgrade": "Yükselt",
-    "subscribenow": "Şimdi Abone Ol"
+    "manageSubscription": "Manage Subscription",
+    "management": {
+      "activate": "Aktifleştir",
+      "deactivate": "Devre Dışı Bırak",
+      "failed": "Verme Başarısız",
+      "grant": "Abonelik Ver",
+      "granted": "Abonelik Verildi",
+      "updating": "Güncelleniyor..."
+    },
+    "status": {
+      "currentPlan": "Mevcut Plan",
+      "daysRemaining": "{{days}} gün kaldı",
+      "features": "Özellikler",
+      "timeRemaining": "Kalan Süre",
+      "validUntil": "Geçerlilik Tarihi"
+    },
+    "subscribenow": "Şimdi Abone Ol",
+    "tiers": {
+      "gold": "Gold",
+      "platinum": "Platinum",
+      "registered": "Ücretsiz",
+      "silver": "Silver"
+    },
+    "types": {
+      "gold": "Gold (Premium Plus)",
+      "platinum": "Platinum (Ultimate)",
+      "silver": "Silver (Temel Premium)"
+    },
+    "upgrade": "Yükselt"
   },
   "subscription.description": "Aboneliğinizi yönetin ve günlük kullanım limitlerinizi izleyin",
   "subscription.error.description": "Abonelik işlemi sırasında bir hata oluştu",
   "subscription.error.portalError": "Abonelik portalı açılamadı",
   "subscription.error.title": "Abonelik Hatası",
   "subscription.limits": {
-    "dailyLikes": "Günlük Beğeniler",
-    "superLikes": "Süper Beğeniler",
-    "dailyBoosts": "Günlük Öne Çıkarmalar",
-    "monthlyBoosts": "Aylık Boostlar",
-    "dailyUsage": "Günlük Kullanım",
-    "remaining": "kaldı",
-    "unlimited": "Sınırsız",
-    "dailyLikeLimitReached": "Günlük beğeni limitine ulaşıldı",
-    "dailySuperLikeLimitReached": "Günlük süper beğeni limitine ulaşıldı",
-    "upgradeMessage": "Günlük limitiniz doldu mu? Daha fazla beğeni ve özellik için yükseltin!",
-    "upgradeTo": "Yükselt:",
     "currentFeatures": "Mevcut özellikler:",
+    "dailyBoosts": "Günlük Öne Çıkarmalar",
+    "dailyLikeLimitReached": "Günlük beğeni limitine ulaşıldı",
+    "dailyLikes": "Günlük Beğeniler",
+    "dailySuperLikeLimitReached": "Günlük süper beğeni limitine ulaşıldı",
+    "dailyUsage": "Günlük Kullanım",
+    "monthlyBoosts": "Aylık Boostlar",
     "more": "daha fazla",
-    "plan": "Plan"
+    "plan": "Plan",
+    "remaining": "kaldı",
+    "superLikes": "Süper Beğeniler",
+    "unlimited": "Sınırsız",
+    "upgradeMessage": "Günlük limitiniz doldu mu? Daha fazla beğeni ve özellik için yükseltin!",
+    "upgradeTo": "Yükselt:"
   },
   "subscription.manage": "Aboneliği Yönet",
   "subscription.management.description": "Mevcut tüm planları görmek için yükseltme sayfamızı ziyaret edin veya mevcut aboneliğinizi Stripe'ın güvenli portalı üzerinden yönetin.",
@@ -2187,26 +2335,27 @@
   "subscription.management.title": "Abonelik Yönetimi",
   "subscription.management.viewPlans": "Tüm Planları Görüntüle",
   "subscription.status": {
-    "title": "Abonelik Durumu",
     "currentPlan": "Mevcut Plan",
-    "validUntil": "Geçerlilik Tarihi",
-    "timeRemaining": "Kalan Süre",
     "daysRemaining": "{{days}} gün kaldı",
     "expired": "Süresi Doldu",
-    "features": "Özellikler"
+    "features": "Özellikler",
+    "timeRemaining": "Kalan Süre",
+    "title": "Abonelik Durumu",
+    "validUntil": "Geçerlilik Tarihi"
   },
   "subscription.subscribenow": "Şimdi Abone Ol",
   "subscription.tiers": {
     "free": "Ücretsiz",
-    "registered": "Kayıtlı",
-    "silver": "Silver",
     "gold": "Gold",
-    "platinum": "Platinum"
+    "platinum": "Platinum",
+    "registered": "Kayıtlı",
+    "silver": "Silver"
   },
   "subscription.title": "Abonelik & Kullanım",
   "subscription.upgrade": "Yükselt",
   "subscriptionActivated": "{{tier}} aboneliği etkinleştirildi!",
-  "subscriptionEnds": "Bitiş tarihi: {date}}",
+  "subscriptionCongratulations": "Tebrikler!",
+  "subscriptionEnds": "Bitiş tarihi: {{date}}",
   "subscriptionExpiresIn": "Aboneliğinizin süresi doluyor",
   "subscriptionExpiringNotification": "Abonelik Sona Eriyor",
   "subscriptionExpiringNotificationMessage": "Aboneliğinizin süresi yakında doluyor",
@@ -2218,13 +2367,14 @@
   "subscriptionRenewedNotification": "Abonelik Yenilendi",
   "subscriptionRenewedNotificationMessage": "Aboneliğiniz yenilendi",
   "subscriptionRole": {
-    "title": "Abonelik Yetkisi",
-    "description": "Bu kullanıcıya {{role}} abonelik paketi verilecek ve premium özelliklere erişim sağlanacaktır."
+    "description": "Bu kullanıcıya {{role}} abonelik paketi verilecek ve premium özelliklere erişim sağlanacaktır.",
+    "title": "Abonelik Yetkisi"
   },
   "subscriptionSettingsDesc": "Aboneliğinizi yönetin ve kullanım limitlerini görüntüleyin",
   "subscriptionSettingsTitle": "Abonelik",
   "subscriptionStatus": "Abonelik Durumu",
   "subscriptionTier": "Abonelik Seviyesi",
+  "subscriptionUpdateError": "Aboneliğiniz güncellenirken bir hata oluştu. Lütfen sayfayı yenileyin.",
   "subtitle": "Alt Başlık",
   "success": "Başarılı",
   "successStories": "Başarı Hikayeleri",
@@ -2235,6 +2385,8 @@
   "sunday": "Pazar",
   "superLike": "Süper Beğeni",
   "superLikeDesc": "Günde 5 süper beğeni ile öne çıkın",
+  "superLikeErrorDescription": "Süper beğeni gönderilemedi. Lütfen tekrar deneyin.",
+  "superLikeFailed": "Süper Beğeni Başarısız",
   "superLikeFeatureDescription": "Özel ilginizi gösterin ve daha fazla dikkat çekin",
   "superLikeFeatureDetail": "Sınırsız süper beğeni",
   "superLikeFeatureTitle": "Süper Beğeni",
@@ -2248,21 +2400,21 @@
   "superLikesDescription": "Süper beğeni aldığınızda bildirim alın",
   "superLikesLabel": "Süper Beğeniler",
   "superLikesPerDay": "Günde 5 Süper Beğeni",
-  "superLikeFailed": "Süper Beğeni Başarısız",
-  "superLikeErrorDescription": "Süper beğeni gönderilemedi. Lütfen tekrar deneyin.",
   "support": "Destek",
   "support247": "7/24 Destek",
+  "swipeErrorDescription": "Beğeni kaydedilemedi. Lütfen internet bağlantınızı kontrol edin ve tekrar deneyin.",
+  "swipeFailed": "Beğeni Başarısız",
   "swipesReset": "Tüm kaydırmalar başarıyla sıfırlandı",
   "swipesResetError": "Kaydırmalar sıfırlanırken hata oluştu",
   "system": {
-    "ready": "Sistem hazır",
-    "notReady": "Sistem hazır değil",
-    "refresh": "Yenile",
-    "export": "Dışa Aktar",
     "clear": "Temizle",
+    "export": "Dışa Aktar",
+    "notReady": "Sistem hazır değil",
+    "ready": "Sistem hazır",
+    "refresh": "Yenile",
     "status": {
-      "on": "AÇIK",
-      "off": "KAPALI"
+      "off": "KAPALI",
+      "on": "AÇIK"
     }
   },
   "systemBackup": "Sistem Yedeği",
@@ -2274,9 +2426,9 @@
   "terms": "Şartlar",
   "termsOfService": "Hizmet Şartları",
   "testServiceRole": {
-    "title": "Servis Rolü Anahtarını Test Et",
     "button": "Servis Rolünü Test Et",
-    "testing": "Test ediliyor..."
+    "testing": "Test ediliyor...",
+    "title": "Servis Rolü Anahtarını Test Et"
   },
   "testimonial1": "2Sweety'de tanıştık ve ilk sohbette aşık olduk! Şimdi düğünümüzü planlıyoruz.",
   "testimonial2": "Şimdiye kadar kullandığım en iyi flört uygulaması. Sadece iki haftada mükemmel eşimi buldum!",
@@ -2294,9 +2446,9 @@
   "thursday": "Perşembe",
   "tiers": {
     "basic": "Temel",
-    "silver": "Gümüş",
     "gold": "Altın",
-    "platinum": "Platin"
+    "platinum": "Platin",
+    "silver": "Gümüş"
   },
   "timeoutError": "İstek zaman aşımına uğradı",
   "title": "Başlık",
@@ -2336,7 +2488,7 @@
   "typeYourMessage": "Mesajınızı yazın...",
   "typing": "yazıyor",
   "unauthorizedAccess": "Yetkisiz Erişim",
-  "unauthorizedAccessDesc": "Bu sayfaya erişim izniniz yok. Rolünüz: {role}}",
+  "unauthorizedAccessDesc": "Bu sayfaya erişim izniniz yok. Rolünüz: {{role}}",
   "unban": "Yasağı Kaldır",
   "unbanError": "Yasak kaldırılırken bir hata oluştu.",
   "unbanUser": "Kullanıcının Yasağını Kaldır",
@@ -2373,9 +2525,9 @@
   "upgradeToViewAnalytics": "Analitikleri görüntülemek için yükseltin",
   "upload": {
     "noAuthToken": "Kimlik doğrulama anahtarı yok",
-    "uploadFailed": "Yükleme başarısız oldu",
+    "photoDeleteError": "Fotoğraf silinirken hata:",
     "photoUploadError": "Fotoğraf yüklenirken hata:",
-    "photoDeleteError": "Fotoğraf silinirken hata:"
+    "uploadFailed": "Yükleme başarısız oldu"
   },
   "uploadPhoto": "Fotoğraf Yükle",
   "uploadPhotos": "Fotoğraflarınızı yükleyin",
@@ -2410,43 +2562,43 @@
   "users": "kullanıcılar",
   "usersToPremium": "Premium'a Geçen Kullanıcılar",
   "validation": {
-    "userSessionNotFound": "Kullanıcı oturumu bulunamadı",
-    "profileUpdateError": "Profil güncellenirken bir hata oluştu",
-    "loginRequired": "Giriş yapmanız gerekiyor",
+    "accessDenied": "Erişim Reddedildi",
     "conversationStartError": "Sohbet başlatılamadı, lütfen tekrar deneyin",
+    "loginRequired": "Giriş yapmanız gerekiyor",
+    "matchRemoveError": "Eşleşme kaldırılırken bir hata oluştu",
     "matchRemoved": "Eşleşme Kaldırıldı",
     "matchRemovedSuccess": "Eşleşmeniz başarıyla kaldırıldı",
-    "matchRemoveError": "Eşleşme kaldırılırken bir hata oluştu",
-    "accessDenied": "Erişim Reddedildi"
+    "profileUpdateError": "Profil güncellenirken bir hata oluştu",
+    "userSessionNotFound": "Kullanıcı oturumu bulunamadı"
   },
   "value": "Değer",
   "verification": {
-    "title": "Doğrulan",
+    "comingSoon": "Yakında",
     "description": "Doğrulanmış rozet ile diğer kullanıcılara gerçek bir kullanıcı olduğunuzu gösterin",
+    "emailInstructions": "Kayıtlı e-posta adresinize bir doğrulama bağlantısı göndereceğiz.",
+    "error": "Doğrulama başarısız",
+    "getVerified": "Doğrulan",
     "methods": {
       "email": {
-        "title": "E-posta Doğrulaması",
-        "description": "E-posta adresiniz üzerinden hızlı ve kolay doğrulama"
-      },
-      "phone": {
-        "title": "Telefon Doğrulaması",
-        "description": "SMS doğrulaması ile kimliğinizi doğrulayın"
+        "description": "E-posta adresiniz üzerinden hızlı ve kolay doğrulama",
+        "title": "E-posta Doğrulaması"
       },
       "idDocument": {
-        "title": "Kimlik Belgesi Doğrulaması",
-        "description": "Devlet tarafından verilen kimlik ile en güvenli doğrulama"
+        "description": "Devlet tarafından verilen kimlik ile en güvenli doğrulama",
+        "title": "Kimlik Belgesi Doğrulaması"
+      },
+      "phone": {
+        "description": "SMS doğrulaması ile kimliğinizi doğrulayın",
+        "title": "Telefon Doğrulaması"
       }
     },
-    "verify": "Şimdi Doğrula",
-    "verifying": "Doğrulanıyor...",
+    "phoneInstructions": "Kayıtlı telefon numaranıza bir doğrulama kodu göndereceğiz.",
     "submitted": "Doğrulama talebi gönderildi",
     "success": "Doğrulama başarılı!",
-    "error": "Doğrulama başarısız",
-    "emailInstructions": "Kayıtlı e-posta adresinize bir doğrulama bağlantısı göndereceğiz.",
-    "phoneInstructions": "Kayıtlı telefon numaranıza bir doğrulama kodu göndereceğiz.",
-    "comingSoon": "Yakında",
+    "title": "Doğrulan",
     "verifiedBadge": "Doğrulanmış Rozet",
-    "getVerified": "Doğrulan"
+    "verify": "Şimdi Doğrula",
+    "verifying": "Doğrulanıyor..."
   },
   "verified": "Doğrulanmış",
   "verifiedProfiles": "Doğrulanmış Profiller",
@@ -2521,87 +2673,5 @@
   "yourSubscriptionRenewed": "Aboneliğiniz",
   "zodiacSign": "Burç",
   "zodiacSignLabel": "Burcunuz",
-  "zodiacSignPlaceholder": "Burcunuz",
-  "guestService": {
-    "silverMembershipRequired": "Profil ziyaretçilerini görmek için Silver veya daha üstü üyelik gereklidir",
-    "accessControlError": "Erişim kontrolü sırasında hata",
-    "accessDenied": "Erişim reddedildi",
-    "unableToRetrieveVisitors": "Ziyaretçiler alınamadı",
-    "noProfileVisitorsYet": "Henüz profil ziyaretçisi yok",
-    "anonymous": "Anonim",
-    "profileVisitorsFound": "{{count}} profil ziyaretçisi bulundu",
-    "errorRetrievingVisitors": "Ziyaretçiler alınırken hata oluştu",
-    "errorRetrievingStats": "İstatistikler alınırken hata oluştu",
-    "visitorHidden": "Ziyaretçi gizlendi",
-    "unableToHideVisitor": "Ziyaretçi gizlenemedi"
-  },
-  "errorBoundary": {
-    "title": "Bir hata oluştu",
-    "errorDetails": "Hata detayları",
-    "refreshPage": "Sayfayı yenile",
-    "goToHomePage": "Ana sayfaya git"
-  },
-  "networkStatus": {
-    "connectionRestored": "Bağlantı yeniden kuruldu",
-    "syncingWithServer": "Sunucu ile senkronize ediliyor...",
-    "connectionLost": "Bağlantı koptu",
-    "featuresUnavailable": "Bazı özellikler kullanılamayabilir"
-  },
-  "helpCenter": {
-    "helpCenterDescription": "Sık sorulan soruların yanıtlarını bulun veya destek ekibimizle iletişime geçin",
-    "gettingStartedFaq": "Başlangıç",
-    "subscriptionFaq": "Abonelik ve Faturalama",
-    "safetyFaq": "Güvenlik ve Koruma",
-    "technicalFaq": "Teknik Destek",
-    "contactFormTitle": "Destek İletişim",
-    "additionalResourcesTitle": "Ek Kaynaklar",
-    "howToCreateProfileQuestion": "Profil nasıl oluşturulur?",
-    "howToCreateProfileAnswer": "Profil oluşturmak için e-postanızla kayıt olun, fotoğraf ekleyin, biyografi yazın ve daha iyi eşleşmeler için hesabınızı doğrulayın.",
-    "howToAddPhotosQuestion": "Profile nasıl fotoğraf eklenir?",
-    "howToAddPhotosAnswer": "Profil ayarlarına gidin, 'Fotoğraf Ekle'ye dokunun, galerinizden seçin veya yeni fotoğraf çekin. En fazla 6 fotoğraf ekleyebilirsiniz.",
-    "howToVerifyProfileQuestion": "Profil nasıl doğrulanır?",
-    "howToVerifyProfileAnswer": "Profil ayarlarına gidin ve doğrulama sürecini takip edin. Gösterilen pozla eşleşen bir selfie çekerek doğrulanın.",
-    "howMatchingWorksQuestion": "Eşleşme sistemi nasıl çalışır?",
-    "howMatchingWorksAnswer": "Algoritmamız tercihlerinizi, konumunuzu, ilgi alanlarınızı ve aktivitenizi göz önünde bulundurarak uyumlu profilleri gösterir.",
-    "whatIsPremiumQuestion": "Premium'da hangi özellikler bulunur?",
-    "whatIsPremiumAnswer": "Premium sınırsız beğeni, süper beğeni, profil boost, gelişmiş filtreler, okundu bilgisi ve reklamsız gezinme içerir.",
-    "howToCancelSubscriptionQuestion": "Aboneliği nasıl iptal edebilirim?",
-    "howToCancelSubscriptionAnswer": "Ayarlar > Abonelik'e gidip iptal edebilirsiniz. Ayrıca uygulama mağazası abonelik ayarlarından da iptal edebilirsiniz.",
-    "refundPolicyQuestion": "Para iade politikası nedir?",
-    "refundPolicyAnswer": "İadeler uygulama mağazası politikalarına göre işlenir. İade talepleri için desteğe başvurun.",
-    "howToReportUserQuestion": "Kullanıcı nasıl şikayet edilir?",
-    "howToReportUserAnswer": "Profilinde üç nokta menüsüne dokunup 'Şikayet Et'i seçin. Sebebi seçin ve detay verin.",
-    "howToBlockUserQuestion": "Birini nasıl engellerim?",
-    "howToBlockUserAnswer": "Profiline gidin, üç nokta menüsüne dokunup 'Engelle'yi seçin. Sizi göremez ve iletişim kuramaz.",
-    "safetyTipsQuestion": "Flört için güvenlik ipuçları nelerdir?",
-    "safetyTipsAnswer": "Daima kalabalık yerlerde buluşun, planlarınızı arkadaşlarınıza söyleyin, içgüdülerinize güvenin ve kişisel bilgileri erken paylaşmayın.",
-    "appNotWorkingQuestion": "Uygulama düzgün çalışmıyor, ne yapmalıyım?",
-    "appNotWorkingAnswer": "Uygulamayı yeniden başlatmayı deneyin, internet bağlantınızı kontrol edin, son sürüme güncelleyin veya desteğe başvurun.",
-    "notReceivingNotificationsQuestion": "Bildirim almıyorum, nasıl düzeltebilirim?",
-    "notReceivingNotificationsAnswer": "Cihaz ayarlarınızı kontrol edin, uygulama için bildirimlerin açık olduğundan emin olun ve bildirim tercihlerinizi doğrulayın.",
-    "accountDeleteQuestion": "Hesabımı nasıl silerim?",
-    "accountDeleteAnswer": "Ayarlar > Hesap > Hesabı Sil'e gidin. Bu işlem kalıcıdır ve geri alınamaz.",
-    "quickAccessEmailDescription": "Detaylı destek için bize e-posta gönderin",
-    "quickAccessEmailAction": "E-posta Gönder",
-    "quickAccessChatDescription": "Destek ekibimizle gerçek zamanlı sohbet edin",
-    "quickAccessChatAction": "Sohbeti Başlat",
-    "quickAccessPhoneTitle": "Telefon Desteği",
-    "quickAccessPhoneDescription": "Destek hattımızı arayın",
-    "quickAccessPhoneAction": "Şimdi Ara",
-    "subjectLabel": "Konu",
-    "subjectPlaceholder": "Size nasıl yardımcı olabiliriz?",
-    "messageLabel": "Mesaj",
-    "messagePlaceholder": "Sorununuzu veya sorunuzu detaylı olarak açıklayın...",
-    "namePlaceholder": "Tam adınız",
-    "emailPlaceholder": "your.email@example.com",
-    "sendMessageButton": "Mesaj Gönder",
-    "contactFormMissingInfoToastTitle": "Eksik Bilgi",
-    "contactFormMissingInfoToastDescription": "Lütfen tüm gerekli alanları doldurun",
-    "contactFormSuccessToastTitle": "Mesaj Gönderildi",
-    "contactFormSuccessToastDescription": "En kısa sürede size geri döneceğiz",
-    "userGuideButton": "Kullanıcı Rehberi",
-    "safetyGuideButton": "Güvenlik Rehberi",
-    "communityForumButton": "Topluluk Forumu",
-    "liveChatButton": "Canlı Sohbet"
-  }
+  "zodiacSignPlaceholder": "Burcunuz"
 }

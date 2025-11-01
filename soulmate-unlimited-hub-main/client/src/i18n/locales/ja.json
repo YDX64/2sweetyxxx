@@ -29,234 +29,231 @@
   "admin.subscription.manual.subscriptionType": "サブスクリプションタイプ",
   "admin.subscription.manual.title": "手動サブスクリプション管理",
   "adminAccess": {
-    "loginRequired": {
-      "title": "ログインが必要です",
-      "description": "管理者パネルにアクセスするにはログインしてください。",
-      "button": "ログイン画面へ"
-    },
     "accessDenied": {
-      "title": "アクセスが拒否されました",
-      "description": "管理者パネルにアクセスする権限がありません。",
-      "yourRole": "あなたの役割",
-      "noRole": "役割が割り当てられていません",
       "adminPermission": "管理者権限",
-      "yes": "はい",
+      "button": "ホームに戻る",
+      "description": "管理者パネルにアクセスする権限がありません。",
       "no": "いいえ",
-      "button": "ホームに戻る"
+      "noRole": "役割が割り当てられていません",
+      "title": "アクセスが拒否されました",
+      "yes": "はい",
+      "yourRole": "あなたの役割"
     },
-    "debugMode": "デバッグモード"
+    "debugMode": "デバッグモード",
+    "loginRequired": {
+      "button": "ログイン画面へ",
+      "description": "管理者パネルにアクセスするにはログインしてください。",
+      "title": "ログインが必要です"
+    }
   },
   "adminActions": "管理者操作",
   "adminContent": {
-    "title": "コンテンツ管理",
-    "preview": "プレビュー",
-    "save": "保存",
-    "saving": "保存中...",
-    "updateSuccess": "コンテンツが正常に更新されました",
-    "updateError": "コンテンツの更新に失敗しました",
-    "heroSection": "ヒーローセクション",
     "badgeText": "バッジテキスト",
-    "subtitle": "サブタイトル",
-    "mission": "ミッション",
-    "missionTitle": "ミッションタイトル",
-    "missionDescription": "ミッション説明",
-    "statistics": "統計",
-    "value": "値",
+    "common": {
+      "noData": "データなし"
+    },
+    "heroSection": "ヒーローセクション",
     "label": "ラベル",
     "lastUpdated": "最終更新日",
-    "seoSettings": "SEO設定",
-    "metaTitle": "メタタイトル",
-    "metaTitlePlaceholder": "検索エンジン用のページタイトル",
     "metaDescription": "メタ説明",
     "metaDescriptionPlaceholder": "検索エンジン用の簡単な説明（150〜160文字）",
     "metaKeywords": "メタキーワード",
+    "metaTitle": "メタタイトル",
+    "metaTitlePlaceholder": "検索エンジン用のページタイトル",
+    "mission": "ミッション",
+    "missionDescription": "ミッション説明",
+    "missionTitle": "ミッションタイトル",
     "pages": {
       "about": {
-        "title": "私たちについて",
         "description": "2020年以来、スマートなマッチング技術と本物の関係で世界中の心をつないでいます。",
         "mission": "私たちの使命",
         "missionText": "2Sweetyでは、誰もが意味のある愛を見つける価値があると信じています...",
         "stats": {
-          "totalMatches": "総マッチ数",
           "activeUsers": "アクティブユーザー",
           "happyCouples": "幸せなカップル",
-          "satisfactionRate": "満足度"
-        }
-      },
-      "privacy": {
-        "title": "プライバシー",
-        "description": "あなたのプライバシーは私たちの最優先事項です。私たちがあなたの個人情報をどのように収集、使用、保護するかをご覧ください。",
-        "lastUpdated": "2024年12月"
-      },
-      "terms": {
-        "title": "法的情報",
-        "description": "2Sweetyをご利用になる前に、これらの利用規約をよくお読みください。",
-        "lastUpdated": "2024年12月"
+          "satisfactionRate": "満足度",
+          "totalMatches": "総マッチ数"
+        },
+        "title": "私たちについて"
       },
       "gdpr": {
-        "title": "EU",
         "description": "2Sweetyは、欧州連合の一般データ保護規則に完全に準拠しています。",
-        "effectiveDate": "2018年5月25日"
+        "effectiveDate": "2018年5月25日",
+        "title": "EU"
+      },
+      "privacy": {
+        "description": "あなたのプライバシーは私たちの最優先事項です。私たちがあなたの個人情報をどのように収集、使用、保護するかをご覧ください。",
+        "lastUpdated": "2024年12月",
+        "title": "プライバシー"
+      },
+      "terms": {
+        "description": "2Sweetyをご利用になる前に、これらの利用規約をよくお読みください。",
+        "lastUpdated": "2024年12月",
+        "title": "法的情報"
       }
     },
+    "preview": "プレビュー",
+    "save": "保存",
+    "saving": "保存中...",
     "seo": {
       "defaultKeywords": "デート, 恋愛, 関係, 日本",
       "keywordsPlaceholder": "デート, 恋愛, 関係, 日本"
     },
-    "common": {
-      "noData": "データなし"
-    }
+    "seoSettings": "SEO設定",
+    "statistics": "統計",
+    "subtitle": "サブタイトル",
+    "title": "コンテンツ管理",
+    "updateError": "コンテンツの更新に失敗しました",
+    "updateSuccess": "コンテンツが正常に更新されました",
+    "value": "値"
   },
   "adminDashboard": "管理者ダッシュボード",
   "adminLogs": {
     "enhanced": {
-      "title": "拡張ログシステム",
+      "activeCategories": "アクティブなカテゴリ",
+      "autoRefresh": "自動更新",
+      "categories": {
+        "admin": "管理者",
+        "auth": "認証",
+        "database": "データベース",
+        "error": "エラー",
+        "network": "ネットワーク",
+        "payment": "支払い",
+        "performance": "パフォーマンス",
+        "system": "システム",
+        "userAction": "ユーザー操作"
+      },
+      "clear": "クリア",
+      "details": {
+        "category": "カテゴリ",
+        "details": "詳細",
+        "level": "レベル",
+        "message": "メッセージ",
+        "network": "ネットワーク",
+        "performance": "パフォーマンス",
+        "sessionId": "セッションID",
+        "stackTrace": "スタックトレース",
+        "timestamp": "タイムスタンプ",
+        "title": "ログの詳細",
+        "url": "URL",
+        "user": "ユーザー",
+        "userId": "ユーザーID"
+      },
       "disable": "無効にする",
       "enable": "有効にする",
-      "logging": "ロギング",
-      "refresh": "更新",
-      "export": "エクスポート",
-      "clear": "クリア",
-      "totalLogs": "総ログ数",
-      "session": "セッション",
       "errorRate": "エラー率",
       "errors": "エラー",
-      "categories": {
-        "auth": "認証",
-        "userAction": "ユーザー操作",
-        "network": "ネットワーク",
-        "database": "データベース",
-        "payment": "支払い",
-        "admin": "管理者",
-        "error": "エラー",
-        "performance": "パフォーマンス",
-        "system": "システム"
-      },
-      "activeCategories": "アクティブなカテゴリ",
-      "status": "ステータス",
-      "on": "オン",
-      "off": "オフ",
-      "autoRefresh": "自動更新",
+      "export": "エクスポート",
       "filters": {
-        "title": "フィルターと検索",
+        "allCategories": "すべてのカテゴリ",
+        "allLevels": "すべてのレベル",
+        "autoRefreshLabel": "自動更新",
+        "category": "カテゴリ",
+        "level": "レベル",
         "search": "検索",
         "searchPlaceholder": "ログを検索...",
-        "level": "レベル",
-        "allLevels": "すべてのレベル",
-        "category": "カテゴリ",
-        "allCategories": "すべてのカテゴリ",
-        "autoRefreshLabel": "自動更新"
+        "title": "フィルターと検索"
       },
       "levels": {
+        "critical": "重大",
         "debug": "デバッグ",
-        "info": "情報",
-        "warning": "警告",
         "error": "エラー",
-        "critical": "重大"
+        "info": "情報",
+        "warning": "警告"
       },
+      "logging": "ロギング",
       "noLogs": {
         "disabled": "ロギングは現在無効です。ログの収集を開始するには有効にしてください。",
         "notFound": "現在のフィルターに一致するログは見つかりませんでした。"
       },
-      "details": {
-        "title": "ログの詳細",
-        "level": "レベル",
-        "category": "カテゴリ",
-        "timestamp": "タイムスタンプ",
-        "sessionId": "セッションID",
-        "message": "メッセージ",
-        "url": "URL",
-        "userId": "ユーザーID",
-        "details": "詳細",
-        "performance": "パフォーマンス",
-        "network": "ネットワーク",
-        "stackTrace": "スタックトレース",
-        "user": "ユーザー"
-      }
+      "off": "オフ",
+      "on": "オン",
+      "refresh": "更新",
+      "session": "セッション",
+      "status": "ステータス",
+      "title": "拡張ログシステム",
+      "totalLogs": "総ログ数"
     },
     "system": {
-      "title": "システムログ",
-      "session": "セッション",
-      "total": "合計",
-      "errors": "エラー",
-      "filters": {
-        "level": "レベル",
-        "category": "カテゴリ",
-        "autoRefresh": "自動更新"
-      },
-      "levels": {
-        "all": "すべて",
-        "error": "エラー",
-        "warning": "警告",
-        "info": "情報",
-        "debug": "デバッグ",
-        "critical": "重大"
+      "buttons": {
+        "clear": "クリア",
+        "disable": "無効にする",
+        "enable": "有効にする",
+        "export": "エクスポート",
+        "logging": "ロギング",
+        "refresh": "更新"
       },
       "categories": {
+        "admin": "管理者",
         "all": "すべて",
-        "roleManagement": "役割管理",
-        "userBan": "ユーザー禁止",
-        "permissionCheck": "権限チェック",
-        "database": "データベース",
         "auth": "認証",
-        "system": "システム",
-        "userAction": "ユーザー操作",
+        "database": "データベース",
+        "error": "エラー",
         "network": "ネットワーク",
         "payment": "支払い",
-        "admin": "管理者",
-        "error": "エラー",
-        "performance": "パフォーマンス"
-      },
-      "table": {
-        "time": "時間",
-        "level": "レベル",
-        "category": "カテゴリ",
-        "action": "操作",
-        "user": "ユーザー",
-        "admin": "管理者",
-        "details": "詳細"
-      },
-      "noLogs": "ログが見つかりません",
-      "loggingDisabled": "ロギングは現在無効です。ログの収集を開始するには有効にしてください。",
-      "filtersAndSearch": "フィルターと検索",
-      "search": "検索",
-      "searchPlaceholder": "ログを検索...",
-      "stats": {
-        "totalLogs": "総ログ数",
-        "errorRate": "エラー率",
-        "errors": "エラー",
-        "categories": "カテゴリ",
-        "activeCategories": "アクティブなカテゴリ",
-        "status": "ステータス",
-        "on": "オン",
-        "off": "オフ"
-      },
-      "buttons": {
-        "enable": "有効にする",
-        "disable": "無効にする",
-        "logging": "ロギング",
-        "refresh": "更新",
-        "export": "エクスポート",
-        "clear": "クリア"
+        "performance": "パフォーマンス",
+        "system": "システム",
+        "userAction": "ユーザー操作"
       },
       "details": {
-        "title": "ログの詳細",
-        "time": "時間",
         "action": "操作",
-        "userId": "ユーザーID",
         "adminId": "管理者ID",
-        "error": "エラー",
         "details": "詳細",
-        "stackTrace": "スタックトレース",
+        "error": "エラー",
         "message": "メッセージ",
-        "fields": {
-          "user": "ユーザー",
-          "url": "URL",
-          "performance": "パフォーマンス",
-          "network": "ネットワーク",
-          "stackTrace": "スタックトレース"
-        }
-      }
+        "stackTrace": "スタックトレース",
+        "time": "時間",
+        "title": "ログの詳細",
+        "userId": "ユーザーID"
+      },
+      "errors": "エラー",
+      "fields": {
+        "network": "Network",
+        "performance": "Performance",
+        "stackTrace": "Stack Trace",
+        "url": "URL",
+        "user": "User"
+      },
+      "filters": {
+        "autoRefresh": "自動更新",
+        "category": "カテゴリ",
+        "level": "レベル"
+      },
+      "filtersAndSearch": "フィルターと検索",
+      "levels": {
+        "all": "すべて",
+        "critical": "重大",
+        "debug": "デバッグ",
+        "error": "エラー",
+        "info": "情報",
+        "warning": "警告"
+      },
+      "loggingDisabled": "ロギングは現在無効です。ログの収集を開始するには有効にしてください。",
+      "noLogs": "ログが見つかりません",
+      "search": "検索",
+      "searchPlaceholder": "ログを検索...",
+      "session": "セッション",
+      "stats": {
+        "activeCategories": "アクティブなカテゴリ",
+        "categories": "カテゴリ",
+        "errorRate": "エラー率",
+        "errors": "エラー",
+        "off": "オフ",
+        "on": "オン",
+        "status": "ステータス",
+        "totalLogs": "総ログ数"
+      },
+      "table": {
+        "action": "操作",
+        "admin": "管理者",
+        "category": "カテゴリ",
+        "details": "詳細",
+        "level": "レベル",
+        "time": "時間",
+        "user": "ユーザー"
+      },
+      "title": "システムログ",
+      "total": "合計"
     }
   },
   "adminPanel": "管理者パネル",
@@ -264,88 +261,108 @@
   "adminPanelAccessGranted": "管理者パネルへのアクセスが許可されました",
   "adminPayments": {
     "conversionRate": "コンバージョン率",
-    "mrr": "MRR（月間経常収益）",
     "estimatedMonthly": "推定月間",
     "manualSubscription": {
-      "title": "手動サブスクリプション割り当て",
-      "userEmail": "ユーザーのメールアドレス",
+      "duration": "Duration (Days)",
+      "durationPlaceholder": "30",
       "emailPlaceholder": "user@example.com",
+      "grantButton": "Grant Subscription",
+      "reason": "Reason",
+      "reasons": {
+        "compensation": "Compensation",
+        "promotional": "Promotional Grant",
+        "support": "Customer Support",
+        "testing": "Testing Purpose"
+      },
       "subscriptionTier": "サブスクリプションレベル",
       "tiers": {
-        "silver": "シルバー（$9.99/月）",
         "gold": "ゴールド（$19.99/月）",
-        "platinum": "プラチナ（$29.99/月）"
+        "platinum": "プラチナ（$29.99/月）",
+        "silver": "シルバー（$9.99/月）"
       },
-      "assignButton": "サブスクリプションを割り当て",
-      "assignSuccess": "サブスクリプションが正常に割り当てられました",
-      "assignError": "サブスクリプションの割り当てに失敗しました"
+      "title": "手動サブスクリプション割り当て",
+      "userEmail": "ユーザーのメールアドレス"
     },
-    "recentTransactions": "最近の取引",
-    "monthlyRevenue": "月間収益",
-    "activeSubscriptions": "アクティブなサブスクリプション",
-    "churnRate": "解約率",
-    "noTransactions": "取引が見つかりません",
-    "manageSubscriptions": "サブスクリプションを管理",
-    "stripeStatus": "Stripeステータス",
-    "stripeConnected": "接続済み",
-    "stripeNotConnected": "未接続",
-    "webhookStatus": "Webhookステータス",
-    "testMode": "テストモード"
+    "mrr": "MRR（月間経常収益）",
+    "paymentStatus": {
+      "stripeConnection": "Stripe Connection",
+      "testMode": "Test Mode",
+      "title": "Payment System Status",
+      "webhookStatus": "Webhook Status"
+    },
+    "recentTransactions": {
+      "noTransactions": "No transactions available",
+      "noTransactionsDesc": "Transactions will appear here once users subscribe",
+      "plans": {
+        "gold": "Gold Plan",
+        "platinum": "Platinum Plan",
+        "silver": "Silver Plan"
+      },
+      "title": "Recent Transactions"
+    },
+    "stripe": {
+      "note": "These links open in the Stripe Dashboard. Ensure you have proper access permissions.",
+      "openDashboard": "Open Stripe Dashboard",
+      "title": "Stripe Dashboard Links",
+      "viewCustomers": "View Customers",
+      "viewPayments": "View Payments",
+      "viewSubscriptions": "View Subscriptions"
+    }
   },
   "adminRole": "管理者役割",
   "adminSecurityMessage": "管理者パネルへのアクセスはIP制限されています。2段階認証の有効化をお勧めします。",
   "adminSite": {
-    "configuration": {
-      "title": "サイト設定",
-      "siteName": "サイト名",
-      "defaultLanguage": "デフォルト言語",
-      "siteDescription": "サイト説明",
-      "descriptionPlaceholder": "心がつながり、愛の物語が始まる場所"
-    },
     "appSettings": {
-      "title": "アプリ設定",
-      "registration": {
-        "label": "登録受付中",
-        "description": "新規ユーザー登録を許可する"
+      "aiTranslation": {
+        "description": "自動メッセージ翻訳",
+        "label": "AI翻訳"
       },
       "emailVerification": {
-        "label": "メール認証",
-        "description": "新規ユーザーにメール認証を要求する"
+        "description": "新規ユーザーにメール認証を要求する",
+        "label": "メール認証"
       },
       "photoModeration": {
-        "label": "写真モデレーション",
         "description": "プロフィール写真の手動レビュー",
+        "label": "写真モデレーション",
         "manual": "手動"
       },
-      "aiTranslation": {
-        "label": "AI翻訳",
-        "description": "自動メッセージ翻訳"
-      }
+      "registration": {
+        "description": "新規ユーザー登録を許可する",
+        "label": "登録受付中"
+      },
+      "title": "アプリ設定"
     },
-    "security": {
-      "title": "セキュリティ設定",
-      "twoFactor": {
-        "label": "2段階認証",
-        "description": "管理者パネルの2段階認証要件"
-      },
-      "sessionTimeout": {
-        "label": "セッションタイムアウト",
-        "description": "管理者セッションの期間",
-        "hours": "8時間"
-      },
-      "ipRestriction": {
-        "label": "IP制限",
-        "description": "IPによる管理者アクセスの制限"
-      }
+    "configuration": {
+      "defaultLanguage": "デフォルト言語",
+      "descriptionPlaceholder": "心がつながり、愛の物語が始まる場所",
+      "siteDescription": "サイト説明",
+      "siteName": "サイト名",
+      "title": "サイト設定"
     },
     "integrations": {
-      "title": "統合ステータス",
+      "connected": "接続済み",
+      "emailService": "メールサービス（SMTP）",
+      "googleTranslate": "Google翻訳API",
+      "needsSetup": "設定が必要",
       "stripe": "Stripe決済",
       "supabase": "Supabaseデータベース",
-      "googleTranslate": "Google翻訳API",
-      "emailService": "メールサービス（SMTP）",
-      "connected": "接続済み",
-      "needsSetup": "設定が必要"
+      "title": "統合ステータス"
+    },
+    "security": {
+      "ipRestriction": {
+        "description": "IPによる管理者アクセスの制限",
+        "label": "IP制限"
+      },
+      "sessionTimeout": {
+        "description": "管理者セッションの期間",
+        "hours": "8時間",
+        "label": "セッションタイムアウト"
+      },
+      "title": "セキュリティ設定",
+      "twoFactor": {
+        "description": "管理者パネルの2段階認証要件",
+        "label": "2段階認証"
+      }
     }
   },
   "adminUser": {
@@ -371,91 +388,52 @@
     "title": "警告：管理者権限"
   },
   "ads": {
-    "title": "広告管理",
-    "stats": {
-      "impressions": "表示回数",
-      "clicks": "クリック数",
-      "ctr": "クリック率",
-      "revenue": "収益",
-      "activePlacements": "アクティブな広告枠",
-      "totalImpressions": "総表示回数",
-      "todayClicks": "今日のクリック数",
-      "averageCtr": "平均クリック率",
-      "monthlyRevenue": "月間収益"
-    },
-    "placements": {
-      "title": "広告枠",
-      "header": "ヘッダー",
-      "sidebar": "サイドバー",
-      "feed": "フィード",
-      "footer": "フッター",
-      "enabled": "有効",
-      "disabled": "無効",
-      "size": "サイズ",
-      "position": "位置",
-      "visibility": "可視性"
-    },
-    "providers": {
-      "title": "広告プロバイダー",
-      "googleAdsense": "Google AdSense",
-      "customAds": "カスタム広告",
-      "status": "ステータス",
-      "earnings": "収益",
-      "configure": "設定"
-    },
-    "settings": {
-      "title": "広告設定",
-      "frequency": "表示頻度",
-      "targeting": "オーディエンスターゲティング",
-      "excludedPages": "除外ページ",
-      "mobileAds": "モバイル広告",
-      "desktopAds": "デスクトップ広告",
-      "refreshRate": "更新頻度",
-      "maxAdsPerPage": "ページあたりの最大広告数"
-    },
-    "performance": {
-      "title": "パフォーマンス分析",
-      "topPerforming": "最もパフォーマンスの高い広告",
-      "worstPerforming": "最もパフォーマンスの低い広告",
-      "recommendations": "推奨事項",
-      "optimize": "最適化"
+    "banner": {
+      "title": "Advertisement"
     },
     "configuration": {
-      "title": "サイト設定",
-      "description": "サイトの広告設定と分析設定を管理します",
-      "tabs": {
-        "advertising": "広告",
-        "analytics": "分析"
-      },
-      "sections": {
-        "googleAdsense": "Google AdSense設定",
-        "adPlacement": "広告配置設定",
-        "googleAnalytics": "Google Analytics",
-        "facebookPixel": "Facebookピクセル",
-        "trackingSettings": "追跡設定"
-      },
       "buttons": {
         "refresh": "更新",
         "save": "保存",
         "saving": "保存中..."
       },
-      "status": {
-        "enabled": "有効",
-        "disabled": "無効"
-      },
+      "description": "サイトの広告設定と分析設定を管理します",
       "errors": {
         "loadFailed": "設定の読み込みに失敗しました",
         "saveFailed": "設定の保存に失敗しました"
       },
+      "sections": {
+        "adPlacement": "広告配置設定",
+        "facebookPixel": "Facebookピクセル",
+        "googleAdsense": "Google AdSense設定",
+        "googleAnalytics": "Google Analytics",
+        "trackingSettings": "追跡設定"
+      },
+      "status": {
+        "disabled": "無効",
+        "enabled": "有効"
+      },
       "success": {
         "saved": "設定が正常に保存されました"
-      }
+      },
+      "tabs": {
+        "advertising": "広告",
+        "analytics": "分析"
+      },
+      "title": "サイト設定"
     },
     "disabledFeature": {
-      "title": "広告を無効にする",
       "description": "広告を見るのにうんざりしていませんか？表示を無効にしましょう！",
-      "status": "シルバー以上のメンバーは広告が無効になっています"
-    }
+      "status": "シルバー以上のメンバーは広告が無効になっています",
+      "title": "広告を無効にする"
+    },
+    "native": {
+      "description": "Upgrade to remove ads",
+      "title": "Sponsored Content"
+    },
+    "placeholder": "Ad Space",
+    "removeAds": "Remove Ads - Upgrade to Silver",
+    "upgrade": "Upgrade"
   },
   "advanced": "高度な設定",
   "advancedAnalytics": "高度な分析",
@@ -497,35 +475,35 @@
   "approveReport": "レポートを承認",
   "auditTrail": "監査証跡",
   "auth": {
-    "signingInGoogle": "🔐 Googleでサインイン中",
-    "oauthRedirectUrl": "🔐 OAuthリダイレクトURL：",
-    "googleSignInError": "🔐 Googleサインインエラー：",
-    "googleSignInInitiated": "🔐 Googleサインイン開始",
-    "googleSignInFailed": "🔐 Googleサインイン失敗：",
-    "signingInApple": "🔐 Appleでサインイン中",
     "appleSignInError": "🔐 Appleサインインエラー：",
-    "appleSignInInitiated": "🔐 Appleサインイン開始",
     "appleSignInFailed": "🔐 Appleサインイン失敗：",
-    "signingInFacebook": "🔐 Facebookでサインイン中",
-    "facebookSignInError": "🔐 Facebookサインインエラー：",
-    "facebookSignInInitiated": "🔐 Facebookサインイン開始",
-    "facebookSignInFailed": "🔐 Facebookサインイン失敗：",
-    "signOutError": "🔧 [useAuth] サインアウトエラー：",
-    "settingUpSubscriptions": "🔧 [useAuth] ユーザーのリアルタイムサブスクリプションを設定中：",
-    "profileUpdateReceived": "🔧 [useAuth] プロフィール更新を受信、役割を再読み込み中。",
-    "subscribedToUserChannel": "🔧 [useAuth] ユーザーチャンネルに登録しました：",
-    "userChannelError": "[useAuth] ユーザーチャンネルへの登録エラー：",
-    "roleChangeDetected": "🔧 [useAuth] 役割の変更を検出、役割を再読み込み中。",
-    "subscribedToRolesChannel": "🔧 [useAuth] roles_permissionsチャンネルに登録しました。",
-    "rolesChannelError": "[useAuth] 役割チャンネルへの登録エラー：",
-    "subscriptionSetupError": "🔧 [useAuth] サブスクリプション設定エラー：",
-    "removingSubscriptions": "🔧 [useAuth] リアルタイムサブスクリプションを削除中。",
-    "subscriptionRemoveError": "🔧 [useAuth] サブスクリプション削除エラー：",
+    "appleSignInInitiated": "🔐 Appleサインイン開始",
+    "authInitError": "🔧 [useAuth] 認証初期化エラー：",
     "authStateChange": "🔧 [useAuth] 認証状態変更イベント：",
     "authStateChangeError": "認証状態変更の処理エラー：",
-    "authInitError": "🔧 [useAuth] 認証初期化エラー：",
     "cleaningUp": "🔧 [useAuth] 認証プロバイダーをクリーンアップ中。",
-    "noRoleFoundWarning": "データベースに役割が見つかりません。登録済みにデフォルト設定します"
+    "facebookSignInError": "🔐 Facebookサインインエラー：",
+    "facebookSignInFailed": "🔐 Facebookサインイン失敗：",
+    "facebookSignInInitiated": "🔐 Facebookサインイン開始",
+    "googleSignInError": "🔐 Googleサインインエラー：",
+    "googleSignInFailed": "🔐 Googleサインイン失敗：",
+    "googleSignInInitiated": "🔐 Googleサインイン開始",
+    "noRoleFoundWarning": "データベースに役割が見つかりません。登録済みにデフォルト設定します",
+    "oauthRedirectUrl": "🔐 OAuthリダイレクトURL：",
+    "profileUpdateReceived": "🔧 [useAuth] プロフィール更新を受信、役割を再読み込み中。",
+    "removingSubscriptions": "🔧 [useAuth] リアルタイムサブスクリプションを削除中。",
+    "roleChangeDetected": "🔧 [useAuth] 役割の変更を検出、役割を再読み込み中。",
+    "rolesChannelError": "[useAuth] 役割チャンネルへの登録エラー：",
+    "settingUpSubscriptions": "🔧 [useAuth] ユーザーのリアルタイムサブスクリプションを設定中：",
+    "signOutError": "🔧 [useAuth] サインアウトエラー：",
+    "signingInApple": "🔐 Appleでサインイン中",
+    "signingInFacebook": "🔐 Facebookでサインイン中",
+    "signingInGoogle": "🔐 Googleでサインイン中",
+    "subscribedToRolesChannel": "🔧 [useAuth] roles_permissionsチャンネルに登録しました。",
+    "subscribedToUserChannel": "🔧 [useAuth] ユーザーチャンネルに登録しました：",
+    "subscriptionRemoveError": "🔧 [useAuth] サブスクリプション削除エラー：",
+    "subscriptionSetupError": "🔧 [useAuth] サブスクリプション設定エラー：",
+    "userChannelError": "[useAuth] ユーザーチャンネルへの登録エラー："
   },
   "authStateLoading": "認証状態を読み込み中、お待ちください...",
   "authStateNotLoaded": "認証状態がまだ読み込まれていません、お待ちください...",
@@ -536,7 +514,6 @@
   "autoTranslationDescription": "受信メッセージを自動的に翻訳",
   "averageSessionTime": "平均セッション時間",
   "back": "戻る",
-  "backText": "戻る",
   "backToAdmin": "管理画面に戻る",
   "backToSwiping": "スワイプに戻る",
   "backupDatabase": "データベースのバックアップ",
@@ -549,14 +526,14 @@
   "banReasonLabel": "禁止理由",
   "banReasonPlaceholder": "禁止理由を説明してください...",
   "banReasons": {
-    "inappropriateContent": "不適切なコンテンツ",
-    "spamFakeProfile": "スパムまたは偽のプロフィール",
-    "harassment": "嫌がらせ",
-    "violatingTerms": "利用規約違反",
+    "accountDeleted": "管理者によるアカウント削除",
+    "bannedByAdmin": "管理者による禁止",
     "custom": "カスタム理由",
     "customReason": "カスタム理由",
-    "bannedByAdmin": "管理者による禁止",
-    "accountDeleted": "管理者によるアカウント削除"
+    "harassment": "嫌がらせ",
+    "inappropriateContent": "不適切なコンテンツ",
+    "spamFakeProfile": "スパムまたは偽のプロフィール",
+    "violatingTerms": "利用規約違反"
   },
   "banStatusUpdated": "禁止ステータスが更新されました",
   "banText": "禁止する",
@@ -634,8 +611,8 @@
   "completeProfileToBeDiscovered": "プロフィールを完成させて、より多くの人に見つけてもらいましょう！",
   "completeProfileToGetLikes": "プロフィールを完成させて写真を追加しましょう！",
   "completeProfileToStart": "プロフィールを完成させて、素晴らしい人々との出会いを始めましょう",
+  "confirm": "Confirm",
   "confirmDeleteUser": "このユーザーを削除してもよろしいですか？この操作は元に戻せません。",
-  "confirmText": "確認",
   "connectionError": "接続エラー",
   "contactSales": "営業チームに連絡",
   "contactSupport": "サポートに連絡",
@@ -649,7 +626,7 @@
   "contentUpdateSuccess": "コンテンツは正常に更新されました",
   "contentUpdated": "コンテンツを更新しました",
   "contentUpdatedSuccessfully": "コンテンツが正常に更新されました",
-  "continueText": "続ける",
+  "continue": "Continue",
   "continueWithApple": "Appleで続ける",
   "continueWithFacebook": "Facebookで続ける",
   "continueWithGoogle": "Googleで続ける",
@@ -680,73 +657,73 @@
   "days90": "90日",
   "daysAgo": "日前",
   "debug": {
+    "app": {
+      "appStateError": "❌ アプリの状態エラー：",
+      "appStateInitializing": "🚀 アプリの状態を初期化中...",
+      "appStateReady": "✅ アプリの状態が準備完了しました"
+    },
     "matches": {
-      "fetching": "🚀 Supabaseへの直接クエリでマッチを取得中",
       "fetchError": "マッチの取得エラー：",
       "fetchSuccess": "✅ {{count}}件のマッチを取得しました",
+      "fetching": "🚀 Supabaseへの直接クエリでマッチを取得中",
       "newMatchDetected": "新しいマッチを検出、再取得中..."
     },
+    "network": {
+      "connectionLost": "📶 接続が失われました",
+      "connectionRestored": "🌐 接続が復元されました",
+      "featuresUnavailable": "⚠️ 一部の機能が利用できない場合があります",
+      "syncingWithServer": "🔄 サーバーと同期中..."
+    },
     "profiles": {
-      "queryingUserCount": "👤 ユーザー数をクエリ中...",
-      "totalUsers": "📊 総ユーザー数：{{count}}",
-      "queryingRoleBasedUsers": "🎭 役割ベースのユーザーをクエリ中...",
-      "roleBasedUserCount": "🎯 役割ベースでフィルタリングされたユーザー数：{{count}}",
-      "queryingActiveUsers": "🟢 過去30日間にアクティブだったユーザーをクエリ中...",
-      "filteringViewedProfiles": "👁️ 閲覧済みプロフィールをフィルタリング中...",
-      "excludingViewedProfiles": "🚫 {{count}}件の閲覧済みプロフィールを除外中",
-      "finalProfileCount": "✅ 最終プロフィール数：{{count}}",
-      "fetchingRandomProfiles": "🎲 {{count}}件のランダムなプロフィールを取得中...",
-      "settingProfiles": "📝 プロフィールを設定中：{{count}}件のプロフィール",
-      "profilesSet": "✅ プロフィールが正常に設定されました",
-      "loadingProfiles": "⏳ プロフィールを読み込み中...",
-      "profilesLoaded": "✅ プロフィールが���み込まれました：{{count}}件のプロフィール",
-      "fetchError": "❌ プロフィール取得エラー：",
-      "swipeError": "❌ スワイプエラー：",
-      "noMoreProfiles": "📭 これ以上プロフィールはありません",
-      "likeSent": "💖 いいねを送信しました - {{profileId}}",
-      "superLikeSent": "⭐ スーパーいいねを送信しました - {{profileId}}",
-      "profilePassed": "⏭️ プロフィールをスキップしました - {{profileId}}",
       "actionError": "❌ アクションエラー：",
+      "checkingMutualLike": "🔄 相互いいねを確認中...",
+      "excludingViewedProfiles": "🚫 {{count}}件の閲覧済みプロフィールを除外中",
+      "fetchError": "❌ プロフィール取得エラー：",
+      "fetchingRandomProfiles": "🎲 {{count}}件のランダムなプロフィールを取得中...",
+      "filteringViewedProfiles": "👁️ 閲覧済みプロフィールをフィルタリング中...",
+      "finalProfileCount": "✅ 最終プロフィール数：{{count}}",
       "initiatingLike": "🚀 いいねを開始中",
       "likeAction": "💝 いいねアクション：{{userId}} -> {{profileId}}",
-      "checkingMutualLike": "🔄 相互いいねを確認中...",
-      "mutualLikeCheck": "💕 相互いいねステータス：{{isMutual}}",
-      "processingMatch": "⚡ マッチを処理中...",
+      "likeSent": "💖 いいねを送信しました - {{profileId}}",
+      "loadingProfiles": "⏳ プロフィールを読み込み中...",
       "matchCreated": "🎉 新しいマッチ！{{userId}} ↔ {{profileId}}",
-      "refreshingProfiles": "🔄 プロフィールを更新中..."
+      "mutualLikeCheck": "💕 相互いいねステータス：{{isMutual}}",
+      "noMoreProfiles": "📭 これ以上プロフィールはありません",
+      "processingMatch": "⚡ マッチを処理中...",
+      "profilePassed": "⏭️ プロフィールをスキップしました - {{profileId}}",
+      "profilesLoaded": "✅ プロフィールが���み込まれました：{{count}}件のプロフィール",
+      "profilesSet": "✅ プロフィールが正常に設定されました",
+      "queryingActiveUsers": "🟢 過去30日間にアクティブだったユーザーをクエリ中...",
+      "queryingRoleBasedUsers": "🎭 役割ベースのユーザーをクエリ中...",
+      "queryingUserCount": "👤 ユーザー数をクエリ中...",
+      "refreshingProfiles": "🔄 プロフィールを更新中...",
+      "roleBasedUserCount": "🎯 役割ベースでフィルタリングされたユーザー数：{{count}}",
+      "settingProfiles": "📝 プロフィールを設定中：{{count}}件のプロフィール",
+      "superLikeSent": "⭐ スーパーいいねを送信しました - {{profileId}}",
+      "swipeError": "❌ スワイプエラー：",
+      "totalUsers": "📊 総ユーザー数：{{count}}"
     },
     "subscription": {
-      "loadingSubscription": "📋 サブスクリプション情報を読み込み中...",
-      "subscriptionLoaded": "✅ サブスクリプションが読み込まれました：",
-      "loadError": "❌ サブスクリプション読み込みエラー：",
       "checkingTier": "🔍 サブスクリプションレベルを確認中：",
-      "tierCheckResult": "📊 レベル確認結果：",
-      "startingStatusCheck": "🚀 サブスクリプションステータス確認を開始中...",
-      "loadingUserProfile": "👤 ユーザープロフィールを読み込み中：",
-      "profileLoaded": "✅ プロフィールが読み込まれました：",
       "fetchingSubscription": "📥 サブスクリプション情報を取得中：",
-      "subscriptionData": "📋 サブスクリプションデータ：",
-      "subscriptionActive": "✅ アクティブなサブスクリプションが見つかりました：",
+      "loadError": "❌ サブスクリプション読み込みエラー：",
+      "loadingSubscription": "📋 サブスクリプション情報を読み込み中...",
+      "loadingUserProfile": "👤 ユーザープロフィールを読み込み中：",
       "noActiveSubscription": "❌ アクティブなサブスクリプションが見つかりません",
-      "updatingSubscription": "💾 サブスクリプションを更新中：",
-      "subscriptionUpdated": "✅ サブスクリプションが更新されました：",
-      "updateError": "❌ サブスクリプション更新エラー：",
-      "premiumUserCheck": "👑 プレミアムユーザー確認：",
-      "premiumUserStatus": "📊 プレミアムユーザーステータス：",
+      "premiumAccessResult": "📊 プレミアムアクセス結果：",
       "premiumCheckComplete": "✅ プレミアム確認完了：",
       "premiumFeatureAccess": "🔓 プレミアム機能アクセス：",
-      "premiumAccessResult": "📊 プレミアムアクセス結果："
-    },
-    "network": {
-      "connectionRestored": "🌐 接続が復元されました",
-      "syncingWithServer": "🔄 サーバーと同期中...",
-      "connectionLost": "📶 接続が失われました",
-      "featuresUnavailable": "⚠️ 一部の機能が利用できない場合があります"
-    },
-    "app": {
-      "appStateInitializing": "🚀 アプリの状態を初期化中...",
-      "appStateReady": "✅ アプリの状態が準備完了しました",
-      "appStateError": "❌ アプリの状態エラー："
+      "premiumUserCheck": "👑 プレミアムユーザー確認：",
+      "premiumUserStatus": "📊 プレミアムユーザーステータス：",
+      "profileLoaded": "✅ プロフィールが読み込まれました：",
+      "startingStatusCheck": "🚀 サブスクリプションステータス確認を開始中...",
+      "subscriptionActive": "✅ アクティブなサブスクリプションが見つかりました：",
+      "subscriptionData": "📋 サブスクリプションデータ：",
+      "subscriptionLoaded": "✅ サブスクリプションが読み込まれました：",
+      "subscriptionUpdated": "✅ サブスクリプションが更新されました：",
+      "tierCheckResult": "📊 レベル確認結果：",
+      "updateError": "❌ サブスクリプション更新エラー：",
+      "updatingSubscription": "💾 サブスクリプションを更新中："
     }
   },
   "debugCheckAgain": "再確認",
@@ -806,6 +783,7 @@
   "editProfile": "プロフィールを編集",
   "editProfileDescription": "プロフィールを編集して、より多くのマッチを獲得しましょう",
   "editText": "編集",
+  "editToChangeInterests": "Click edit to change interests",
   "editUser": "ユーザーを編集",
   "editingPlan": "プランを編集中",
   "education": "教育",
@@ -832,10 +810,23 @@
   "enterName": "お名前を入力",
   "enterYourName": "名前を入力",
   "enterYourNamePlaceholder": "名前を入力してください",
-  "error": "エラー",
+  "error": {
+    "details": "Error details",
+    "general": {
+      "occurred": "An error occurred"
+    },
+    "goHome": "Go to home",
+    "refresh": "Refresh page"
+  },
   "error.404.message": "おっと！ページが見つかりません",
   "error.404.returnHome": "ホームに戻る",
   "errorBanningUser": "ユーザーの禁止中にエラーが発生しました。",
+  "errorBoundary": {
+    "errorDetails": "Error details",
+    "goToHomePage": "Go to home page",
+    "refreshPage": "Refresh page",
+    "title": "An error occurred"
+  },
   "errorDeletingUser": "ユーザーの削除中にエラーが発生しました。",
   "errorLoadingUsers": "ユーザーの読み込み中にエラーが発生しました。",
   "errorLogs": "エラーログ",
@@ -845,8 +836,6 @@
   "errorToastTitle": "エラー",
   "errorUnbanningUser": "禁止解除中にエラーが発生しました。",
   "errorUpdatingRole": "役割の更新中にエラーが発生しました。",
-  "eslesmeKaldir": "マッチを解除",
-  "eslestiniz": "マ��チしました！",
   "everyone": "すべての人",
   "exclusiveEvents": "限定イベント",
   "exclusiveFilters": "専用検索フィルター",
@@ -878,28 +867,17 @@
   "faqPlanChangeQ": "プランを変更できますか？",
   "faqTitle": "よくある質問",
   "feature": {
-    "basicMatching": "基本マッチング",
     "advancedFilters": "高度なフィルター",
-    "seeWhoLikesYou": "いいねした人を見る",
+    "basicMatching": "基本マッチング",
+    "hdVideoCalls": "HD Video Calls",
+    "invisibleBrowsing": "Invisible Browsing",
+    "passport": "Passport",
+    "profileAnalytics": "Profile Analytics",
     "rewind": "巻き戻し",
-    "voiceCalls": "音声通話",
-    "videoCalls": "ビデオ通話",
-    "unlimitedLikes": "無制限いいね",
-    "prioritySupport": "優先サポート",
-    "adFree": "広告なし",
-    "premiumBadge": "プレミアムバッジ",
-    "invisibleMode": "ステルスモード",
-    "readReceipts": "既読通知",
-    "superLikes": "スーパーいいね",
-    "boosts": "ブースト",
-    "dailyLikes": "1日のいいね",
-    "requires": {
-      "silver": "シルバーメンバーシップが必要",
-      "gold": "ゴールドメンバーシップが必要",
-      "platinum": "プラチナメンバーシップが必要",
-      "admin": "管理者アクセスが必要",
-      "premium": "プレミアムサブスクリプションが必要"
-    }
+    "seeWhoLikesYou": "いいねした人を見る",
+    "translation": "Translation",
+    "vipMatching": "VIP Matching",
+    "voiceCalls": "音声通話"
   },
   "feature.advancedFilters": "高度なフィルター",
   "feature.allFilters": "すべてのフィルター",
@@ -938,7 +916,36 @@
   "feature.voiceCalls": "音声通話",
   "featureFlags": "機能フラグ",
   "featureInDevelopment": "この機能は現在開発中です。詳細はプレミアム会員で！",
-  "features": "機能",
+  "features": {
+    "advancedFilters": {
+      "description": "Filter by education, job, height, lifestyle and more"
+    },
+    "dailyLikes": {
+      "count": "{{count}} Daily Likes",
+      "description50": "Boost your chances with 50 daily likes instead of 10"
+    },
+    "disableAds": {
+      "description": "Tired of seeing advertisements? Disable them from showing!",
+      "tier": "Silver+",
+      "title": "Disable Ads"
+    },
+    "monthlyBoosts": {
+      "count": "{{count}} Boost per Month",
+      "description1": "Get 10x more visibility with monthly profile boost"
+    },
+    "seeWhoLikesYou": {
+      "description": "Discover who already liked your profile and start matching instantly"
+    },
+    "superLikes": {
+      "count": "{{count}} Super Likes",
+      "description5": "Stand out with 5 super likes per day"
+    },
+    "verifiedBadge": {
+      "description": "Show others that you are a legitimate user with this awesome badge",
+      "free": "Free with verification",
+      "title": "Verified Badge"
+    }
+  },
   "features.dailyLikes": "毎日{{count}}いいね",
   "features.dailySuperlikes": "毎日{{count}}スーパーいいね",
   "features.monthlyBoosts": "毎月{{count}}ブースト",
@@ -998,14 +1005,37 @@
   "googlePayFailed": "Google Pay支払いに失敗しました",
   "googlePaySuccess": "✅ Google Pay支払い成功",
   "googleSignInError": "Googleでのログインに失敗しました",
-  "gotItText": "了解",
+  "gotIt": "Got it",
   "grantFailed": "付与失敗",
   "grantSubscription": "サブスクリプションを付与",
   "grantTierForDays": "{{tier}}を{{duration}}日間付与",
   "granting": "付与中...",
   "growthRate": "成長率",
   "guestNamePlaceholder": "さくら",
-  "guests": "訪問者",
+  "guestService": {
+    "accessControlError": "Error during access control",
+    "accessDenied": "Access denied",
+    "anonymous": "Anonymous",
+    "errorRetrievingStats": "Error while retrieving statistics",
+    "errorRetrievingVisitors": "Error occurred while retrieving visitors",
+    "noProfileVisitorsYet": "No profile visitors yet",
+    "profileVisitorsFound": "{{count}} profile visitors found",
+    "silverMembershipRequired": "Silver membership or higher required to view profile visitors",
+    "unableToHideVisitor": "Unable to hide visitor",
+    "unableToRetrieveVisitors": "Unable to retrieve visitors",
+    "visitorHidden": "Visitor hidden"
+  },
+  "guests": {
+    "distanceUnit": "km",
+    "goldPlus": "Gold+",
+    "tiers": {
+      "gold": "Gold",
+      "platinum": "Platinum",
+      "silver": "Silver"
+    },
+    "title": "Visitors",
+    "yearsOld": "years old"
+  },
   "happyCouples": "幸せなカップル",
   "harassment": "嫌がらせ",
   "hasAccountSignIn": "すでにアカウントをお持ちですか？ログイン",
@@ -1013,6 +1043,63 @@
   "heightLabel": "身長 (cm)",
   "heightPlaceholder": "あなたの身長 (cm)",
   "help": "ヘルプ",
+  "helpCenter": {
+    "accountDeleteAnswer": "Go to Settings > Account > Delete Account. This action is permanent and cannot be undone.",
+    "accountDeleteQuestion": "How do I delete my account?",
+    "additionalResourcesTitle": "Additional Resources",
+    "appNotWorkingAnswer": "Try restarting the app, check your internet connection, update to the latest version, or contact support.",
+    "appNotWorkingQuestion": "The app is not working properly, what should I do?",
+    "communityForumButton": "Community Forum",
+    "contactFormMissingInfoToastDescription": "Please fill in all required fields",
+    "contactFormMissingInfoToastTitle": "Missing Information",
+    "contactFormSuccessToastDescription": "We'll get back to you as soon as possible",
+    "contactFormSuccessToastTitle": "Message Sent",
+    "contactFormTitle": "Contact Support",
+    "emailPlaceholder": "your.email@example.com",
+    "gettingStartedFaq": "Getting Started",
+    "helpCenterDescription": "Find answers to common questions or contact our support team",
+    "howMatchingWorksAnswer": "Our algorithm considers your preferences, location, interests, and activity to show you compatible profiles.",
+    "howMatchingWorksQuestion": "How does the matching system work?",
+    "howToAddPhotosAnswer": "Go to your profile settings, tap 'Add Photos', select from your gallery or take new photos. You can add up to 6 photos.",
+    "howToAddPhotosQuestion": "How do I add photos to my profile?",
+    "howToBlockUserAnswer": "Go to their profile, tap the three dots menu, and select 'Block'. They won't be able to see or contact you.",
+    "howToBlockUserQuestion": "How do I block someone?",
+    "howToCancelSubscriptionAnswer": "Go to Settings > Subscription to cancel. You can also cancel through your app store subscription settings.",
+    "howToCancelSubscriptionQuestion": "How can I cancel my subscription?",
+    "howToCreateProfileAnswer": "To create a profile, sign up with your email, add photos, write a bio, and verify your account for better matches.",
+    "howToCreateProfileQuestion": "How do I create a profile?",
+    "howToReportUserAnswer": "On their profile, tap the three dots menu and select 'Report'. Choose the reason and provide details.",
+    "howToReportUserQuestion": "How do I report a user?",
+    "howToVerifyProfileAnswer": "Go to profile settings and follow the verification process. Take a selfie matching the pose shown to get verified.",
+    "howToVerifyProfileQuestion": "How do I verify my profile?",
+    "liveChatButton": "Live Chat",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Describe your issue or question in detail...",
+    "namePlaceholder": "Your full name",
+    "notReceivingNotificationsAnswer": "Check your device settings, ensure notifications are enabled for the app, and verify your notification preferences.",
+    "notReceivingNotificationsQuestion": "I'm not receiving notifications, how to fix this?",
+    "quickAccessChatAction": "Start Chat",
+    "quickAccessChatDescription": "Chat with our support team in real-time",
+    "quickAccessEmailAction": "Send Email",
+    "quickAccessEmailDescription": "Send us an email for detailed support",
+    "quickAccessPhoneAction": "Call Now",
+    "quickAccessPhoneDescription": "Call our support hotline",
+    "quickAccessPhoneTitle": "Phone Support",
+    "refundPolicyAnswer": "Refunds are handled according to app store policies. Contact support for assistance with refund requests.",
+    "refundPolicyQuestion": "What is the refund policy?",
+    "safetyFaq": "Safety & Security",
+    "safetyGuideButton": "Safety Guide",
+    "safetyTipsAnswer": "Always meet in public places, tell friends your plans, trust your instincts, and never share personal information early.",
+    "safetyTipsQuestion": "What are the safety tips for dating?",
+    "sendMessageButton": "Send Message",
+    "subjectLabel": "Subject",
+    "subjectPlaceholder": "What can we help you with?",
+    "subscriptionFaq": "Subscription & Billing",
+    "technicalFaq": "Technical Support",
+    "userGuideButton": "User Guide",
+    "whatIsPremiumAnswer": "Premium includes unlimited likes, super likes, profile boosts, advanced filters, read receipts, and ad-free browsing.",
+    "whatIsPremiumQuestion": "What features are included in Premium?"
+  },
   "helpCenterDescription": "何かお困りですか？",
   "helpCenterTitle": "ヘルプセンター",
   "helpDesc": "FAQとサポート",
@@ -1132,6 +1219,7 @@
   "interest.cooking": "料理",
   "interest.cycling": "サイクリング",
   "interest.dance": "ダンス",
+  "interest.design": "Design",
   "interest.fashion": "ファッション",
   "interest.fitness": "フィットネス",
   "interest.food": "食べ物",
@@ -1145,6 +1233,7 @@
   "interest.nature": "自然",
   "interest.photography": "写真",
   "interest.piano": "ピアノ",
+  "interest.poetry": "Poetry",
   "interest.reading": "読書",
   "interest.running": "ランニング",
   "interest.sports": "スポーツ",
@@ -1195,9 +1284,9 @@
   "interestsTitle": "興味",
   "interface": {
     "moreProfiles": "+{{count}}件のプロフィール",
-    "syncing": "同期中...",
+    "syncData": "データを同期",
     "syncSuccess": "データが正常に同期されました",
-    "syncData": "データを同期"
+    "syncing": "同期中..."
   },
   "introduceYourself": "自己紹介を入力... (最低20文字)",
   "invalidEmail": "無効なメールアドレス",
@@ -1217,9 +1306,9 @@
   "languageUpdateError": "言語の更新エラー",
   "languageUpdated": "言語が更新されました",
   "languages": {
-    "turkish": "トルコ語",
     "english": "英語",
-    "swedish": "スウェーデン語"
+    "swedish": "スウェーデン語",
+    "turkish": "トルコ語"
   },
   "languagesSelected": "{{count}}/5選択済み",
   "languagesTitle": "言語 (最大5つ)",
@@ -1249,29 +1338,21 @@
   "likes.viewProfiles": "「いいね！」したプロフィールを見る",
   "likesStats": "いいね！数",
   "limit": {
-    "daily": {
-      "likes": "1日のいいね上限に達しました",
-      "superLikes": "1日のスーパーいいね上限に達しました"
-    },
     "description": {
       "dailyLikes": "無制限のいいねにアップグレード",
       "dailySuperLikes": "より多くのスーパーいいねにアップグレード",
       "monthlyBoosts": "月間ブースト上限に達しました"
     },
-    "monthly": {
-      "boosts": "月間ブースト上限に達しました"
-    },
-    "remaining": "残り",
+    "exceeded": "Limit Exceeded",
     "title": {
-      "dailyLikes": "1日のいいね上限",
       "dailySuperLikes": "スーパーいいね上限"
     }
   },
   "limited": "制限あり",
   "limits": {
     "reached": "上限に達しました",
-    "systemReady": "システム準備完了",
     "systemNotReady": "システム準備未完了",
+    "systemReady": "システム準備完了",
     "upgrade": "アップグレード"
   },
   "loadFailed": "読み込み失敗",
@@ -1288,7 +1369,13 @@
   "loadingUsers": "ユーザーを読み込み中",
   "loadingUsersDescription": "ユーザーデータを取得しています。お待ちください...",
   "loadingUsersTitle": "ユーザーを読み込み中",
-  "location": "場所",
+  "location": {
+    "notSupported": "Geolocation is not supported by this browser.",
+    "permissionDenied": "Location access denied by user",
+    "positionUnavailable": "Location information unavailable",
+    "timeout": "Location request timed out",
+    "unknownError": "An unknown error occurred while getting your location."
+  },
   "location1": "東京",
   "location2": "大阪",
   "location3": "名古屋",
@@ -1314,7 +1401,7 @@
   "makeAdmin": "管理者に設定",
   "makeModerator": "モデレーターに設定",
   "makeProfileMoreActive": "プロフィールをよりアクティブにして、多くの人に気づいてもらいましょう！",
-  "makeRole": "{{{role}}}に設定",
+  "makeRole": "{{role}}に設定",
   "male": "男性",
   "manageContent": "コンテンツを管理",
   "managePlans": "プランを管理",
@@ -1334,7 +1421,6 @@
   "maximumDistance": "最大距離",
   "men": "男性",
   "menu": "メニュー",
-  "mesajAt": "メッセージを送信",
   "messageBeforeMatch": "マッチ前にメッセージ",
   "messageModeration": "メッセージモデレーション",
   "messageRequired": "メッセージは必須です",
@@ -1345,7 +1431,7 @@
   "metaTitle": "メタタイトル",
   "metaTitlePlaceholder": "ページタイトル（60文字）",
   "minAgeLabel": "{{age}}歳",
-  "minCharsRemaining": "あと最低{{{count}}}文字",
+  "minCharsRemaining": "あと最低{{count}}文字",
   "minTwoPhotos": "少なくとも2枚の写真を追加する必要があります",
   "minimumAge": "最小年齢",
   "minutesAgo": "分前",
@@ -1353,57 +1439,58 @@
   "missionDescription": "ミッション説明",
   "missionTitle": "ミッションタイトル",
   "moderation": {
-    "title": "コンテンツモデレーション",
     "actions": {
       "approve": "承認",
-      "reject": "拒否",
-      "flag": "フラグ"
+      "flag": "フラグ",
+      "reject": "拒否"
     },
     "dialogs": {
       "approve": {
-        "title": "コンテンツを承認",
-        "description": "このコンテンツは承認され、ユーザーに表示されます。"
-      },
-      "reject": {
-        "title": "コンテンツを拒否",
-        "description": "このコンテンツは拒否され、システムから削除されます。"
+        "description": "このコンテンツは承認され、ユーザーに表示されます。",
+        "title": "コンテンツを承認"
       },
       "flag": {
-        "title": "コンテンツをフラグ付け",
-        "description": "このコンテンツはさらなるレビューのためにフラグ付けされます。"
+        "description": "このコンテンツはさらなるレビューのためにフラグ付けされます。",
+        "title": "コンテンツをフラグ付け"
+      },
+      "reject": {
+        "description": "このコンテンツは拒否され、システムから削除されます。",
+        "title": "コンテンツを拒否"
       }
     },
-    "success": "コンテンツの{{action}}が正常に完了しました",
-    "failed": "コンテンツの{{action}}に失敗しました",
     "error": "モデレーション中にエラーが発生しました",
-    "unknownUser": "不明なユーザー",
-    "profilePhoto": "プロフィール写真",
-    "reason": "理由",
-    "notes": "メモ",
-    "notesPlaceholder": "モデレーションメモを入力...",
-    "reasonPlaceholder": "拒否またはフラグ付けの理由を選択...",
-    "pending": {
-      "title": "レビュー待ち",
-      "description": "モデレーション承認待ちのコンテンツ",
-      "noPending": "保留中のコンテンツはありません",
-      "allReviewed": "アップロードされたすべてのコンテンツがレビューされました"
-    },
-    "stats": {
-      "totalFiles": "総ファイル数",
-      "originalSize": "元のサイズ",
-      "compressedSize": "圧縮後のサイズ",
-      "avgCompression": "平均圧縮率",
-      "spaceSaved": "節約されたスペース"
-    },
+    "failed": "コンテンツの{{action}}に失敗しました",
     "fileInfo": {
+      "compressed": "圧縮後：",
       "file": "ファイル：",
       "size": "サイズ：",
-      "compressed": "圧縮後：",
       "uploaded": "アップロード日："
-    }
+    },
+    "notes": "メモ",
+    "notesPlaceholder": "モデレーションメモを入力...",
+    "pending": {
+      "allReviewed": "アップロードされたすべてのコンテンツがレビューされました",
+      "description": "モデレーション承認待ちのコンテンツ",
+      "noPending": "保留中のコンテンツはありません",
+      "title": "レビュー待ち"
+    },
+    "profilePhoto": "プロフィール写真",
+    "reason": "理由",
+    "reasonPlaceholder": "拒否またはフラグ付けの理由を選択...",
+    "stats": {
+      "avgCompression": "平均圧縮率",
+      "compressedSize": "圧縮後のサイズ",
+      "originalSize": "元のサイズ",
+      "spaceSaved": "節約されたスペース",
+      "totalFiles": "総ファイル数"
+    },
+    "success": "コンテンツの{{action}}が正常に完了しました",
+    "title": "コンテンツモデレーション",
+    "unknownUser": "不明なユーザー"
   },
   "moderationQueue": "モデレーションキュー",
   "moderator": "モデレーター",
+  "moderatorAccess": "🛡️ Moderator Access - All Premium Features Included",
   "moderatorPanel": "モデレーターパネル",
   "moderatorPermissions": {
     "description": "このユーザーにどのモデレーター権限を有効にしますか？",
@@ -1439,6 +1526,12 @@
   },
   "needHelp": "お困りですか？",
   "networkError": "ネットワークエラー",
+  "networkStatus": {
+    "connectionLost": "Connection lost",
+    "connectionRestored": "Connection restored",
+    "featuresUnavailable": "Some features may be unavailable",
+    "syncingWithServer": "Syncing with server..."
+  },
   "new": "新しい",
   "newLike": "新しいいいね",
   "newMatch": "新しいマッチ！",
@@ -1447,7 +1540,9 @@
   "newMatchNotificationMessage": "新しいマッチがあります！",
   "newMatches": "新しいマッチ",
   "newMatchesDescription": "誰かとマッチしたときに通知を受け取ります",
-  "newMessages": "新しいメッセージ",
+  "newMatchesLabel": "New Matches",
+  "newMessageNotification": "New Message",
+  "newMessageNotificationMessage": "You have a new message",
   "newMessagesDescription": "新しいメッセージを受信したときに通知を受け取ります",
   "newMessagesLabel": "新しいメッセージ",
   "newRole": "新しい役割",
@@ -1514,7 +1609,7 @@
   "occupationLabel": "職業",
   "occupationPlaceholder": "あなたの職業",
   "offline": "オフライン",
-  "okText": "OK",
+  "ok": "OK",
   "onboarding.birthDate.question": "生年月日を入力してください",
   "onboarding.birthDate.tooYoung": "18歳以上である必要があります",
   "onboarding.birthDate.warning": "⚠️ この情報は後で変更できません",
@@ -1741,7 +1836,26 @@
   "portalError": "ポータルエラー",
   "portalUrlError": "ポータルURLを取得できませんでした",
   "postDuringPeakHours": "ピーク時に投稿する",
-  "preferences": "設定",
+  "preferences": {
+    "createError": "Error creating default preferences:",
+    "created": "Default preferences created:",
+    "creating": "Creating default preferences for user:",
+    "fetchError": "Error fetching preferences:",
+    "generalError": "Error in fetchPreferences:",
+    "loaded": "Preferences loaded:",
+    "saveError": {
+      "description": "Settings could not be saved, please try again",
+      "title": "Error"
+    },
+    "saved": {
+      "description": "Your preferences have been updated and saved permanently",
+      "title": "Settings saved"
+    },
+    "updateError": "Error updating preferences:",
+    "updateNoUser": "Cannot update preferences: no user or preferences",
+    "updateSuccess": "Preferences updated successfully:",
+    "updating": "Updating preferences with:"
+  },
   "preferencesSavedToastDesc": "新しい設定に従ってプロフィールが更新されます。",
   "preferencesSavedToastTitle": "設定を保存しました",
   "premium": "プレミアム",
@@ -1776,9 +1890,9 @@
   "processing": "処理中...",
   "processingText": "処理中...",
   "profile": "プロフィール",
-  "profile.about.remainingChars": "残り{{{count}}}文字",
+  "profile.about.remainingChars": "残り{{count}}文字",
   "profile.bio.about": "自己紹介",
-  "profile.bio.minCharsRemaining": "あと{{{count}}}文字以上必要です",
+  "profile.bio.minCharsRemaining": "あと{{count}}文字以上必要です",
   "profile.bio.placeholder": "自己紹介を書いてください... (20文字以上)",
   "profile.bio.placeholderEnd": " (最低20文字)",
   "profile.bio.placeholderStart": "自己紹介を入力... ",
@@ -1789,13 +1903,17 @@
   "profile.gender.other": "その他",
   "profile.interests.choose": "興味を選択",
   "profile.interests.maxReached": "最大{{max}}個の興味を選択できます",
-  "profile.interests.selected": "{{{count}}}個選択済み",
+  "profile.interests.selected": "{{count}}個選択済み",
   "profile.location.label": "場所",
   "profile.location.placeholder": "市区町村",
   "profile.occupation.label": "職業",
   "profile.occupation.placeholder": "あなたの職業",
   "profileAnalytics": "プロフィール分析",
   "profileBoost": "プロフィールブースト",
+  "profileCompletionCardDescription": "Complete your profile to increase your match potential",
+  "profileCompletionCardTitle": "Profile Completion",
+  "profileCompletionCompletedLabel": "Complete",
+  "profileCompletionTip": "Add more details to increase your visibility and get better matches",
   "profileDataNotFound": "プロフィールデータが見つかりません",
   "profileError": "プロフィールエラー",
   "profileExample1Name": "さくら, 24",
@@ -1874,6 +1992,7 @@
   "religionLabel": "宗教",
   "religionPlaceholder": "あなたの宗教的信条 (任意)",
   "removeFeature": "機能を削除",
+  "removeMatch": "Remove Match",
   "report": "報告する",
   "reportDate": "報告日",
   "reportDetails": "報告詳細",
@@ -1892,13 +2011,16 @@
   "resolvedToday": "本日解決済み",
   "restoreDatabase": "データベースを復元",
   "retentionRates": "リテンション率",
-  "retryText": "再試行",
+  "retry": "Retry",
   "revenueAnalytics": "収益分析",
   "reviewReport": "レポートを確認",
   "rewind": {
+    "error": {
+      "description": "Failed to rewind swipe",
+      "title": "Rewind Error"
+    },
     "failed": {
       "description": "スワイプを取り消せませんでした",
-      "error": "取り消しに失敗しました",
       "title": "取り消し失敗"
     },
     "success": {
@@ -1928,12 +2050,14 @@
   "roleUpdatedMessage": "プラン{{role}}は正常に更新されました",
   "roleWillBeAssigned": "役割",
   "roles": {
+    "admin": "Admin",
     "makeAdmin": "管理者に設定",
+    "makeGold": "ゴールドに設定",
     "makeModerator": "モデレーターに設定",
+    "makePlatinum": "プラチナに設定",
     "makeRegistered": "登録済みに設定",
     "makeSilver": "シルバーに設定",
-    "makeGold": "ゴールドに設定",
-    "makePlatinum": "プラチナに設定"
+    "moderator": "Moderator"
   },
   "safeEnvironment": "安全な環境",
   "safeEnvironmentDesc": "認証済みプロフィールにより、あなたのプライバシーと安全が最優先されます",
@@ -2034,6 +2158,80 @@
   "signUp": "登録",
   "signUpSubtitle": "愛を見つける数百万人に参加",
   "silver": "シルバー",
+  "silverFeatureTest": {
+    "additionalTestsTitle": "Additional Tests",
+    "buttons": {
+      "runAll": "Run All Tests",
+      "testAdvancedFilters": "Test Advanced Filters",
+      "testBoost": "Test Boost",
+      "testCalls": "Test Voice/Video Calls",
+      "testLike": "Test Like",
+      "testRewind": "Test Rewind Feature",
+      "testSeeLikes": "Test \"See Who Likes You\"",
+      "testSuperLike": "Test Super Like",
+      "testing": "Testing..."
+    },
+    "currentRole": "Current Role",
+    "description": "Testing all Silver tier features for user: {{email}}",
+    "featureTestsTitle": "Feature Tests",
+    "features": {
+      "advancedFilters": {
+        "description": "Silver users can use advanced filters",
+        "name": "Advanced Filters"
+      },
+      "dailyLikes": {
+        "description": "Silver users get {{count}} daily likes",
+        "name": "{{count}} Daily Likes"
+      },
+      "dailySuperlikes": {
+        "description": "Silver users get {{count}} daily super likes",
+        "name": "{{count}} Daily Super Likes"
+      },
+      "maxPhotos": {
+        "description": "Silver users can upload up to {{count}} photos",
+        "name": "{{count}} Photos Max"
+      },
+      "monthlyBoosts": {
+        "description": "Silver users get {{count}} boost per month",
+        "name": "{{count}} Monthly Boost"
+      },
+      "readReceipts": {
+        "description": "Silver users can see read receipts",
+        "name": "Read Receipts"
+      },
+      "rewindFeature": {
+        "description": "Silver users can rewind their last swipe",
+        "name": "Rewind Feature"
+      },
+      "seeWhoLikesYou": {
+        "description": "Silver users can see who liked them",
+        "name": "See Who Likes You"
+      },
+      "unlimitedMessages": {
+        "description": "Silver users can send unlimited messages",
+        "name": "Unlimited Messages"
+      },
+      "videoCalls": {
+        "description": "Silver users can make video calls",
+        "name": "Video Calls"
+      },
+      "voiceCalls": {
+        "description": "Silver users can make voice calls",
+        "name": "Voice Calls"
+      }
+    },
+    "stats": {
+      "dailyLikes": "Daily Likes",
+      "monthlyBoosts": "Monthly Boosts",
+      "superLikes": "Super Likes"
+    },
+    "status": {
+      "failed": "Failed",
+      "notTested": "Not tested",
+      "passed": "Passed"
+    },
+    "title": "Silver Feature Test"
+  },
   "siteSettings": "サイト設定",
   "sixMonthPlan": "6ヶ月プラン",
   "sixMonthPlanDesc": "20%割引 + 1ヶ月無料",
@@ -2072,77 +2270,78 @@
   "step3Button": "メッセージを開始",
   "step3Description": "マッチング後は、意義のある会話を始めましょう。最初のデートの計画を立ててください！",
   "step3Title": "チャット＆出会い",
-  "submitText": "送信",
+  "submit": "Submit",
   "subscription": {
-    "management": {
-      "grant": "サブスクリプション付与",
-      "granted": "サブスクリプション付与完了",
-      "failed": "付与失敗",
-      "updating": "更新中...",
-      "activate": "有効化",
-      "deactivate": "無効化"
-    },
-    "types": {
-      "silver": "シルバー (ベーシックプレミアム)",
-      "gold": "ゴールド (プレミアムプラス)",
-      "platinum": "プラチナ (アルティメット)"
-    },
     "durations": {
-      "7days": "7日",
       "14days": "14日",
       "30days": "30日",
       "60days": "60日",
+      "7days": "7日",
       "90days": "90日"
     },
     "features": {
       "dailyLikes": "1日{{count}}いいね",
-      "superLikes": "{{count}}スーパーいいね",
-      "monthlyBoosts": "月間{{count}}ブースト"
+      "monthlyBoosts": "月間{{count}}ブースト",
+      "superLikes": "{{count}}スーパーいいね"
+    },
+    "limits": {
+      "dailyBoosts": "1日のブースト",
+      "dailyLikes": "1日のいいね",
+      "dailyUsage": "1日の使用量",
+      "more": "さらに",
+      "plan": "プラン",
+      "remaining": "残り",
+      "superLikes": "スーパーいいね"
+    },
+    "manageSubscription": "サブスクリプション管理",
+    "management": {
+      "activate": "有効化",
+      "deactivate": "無効化",
+      "failed": "付与失敗",
+      "grant": "サブスクリプション付与",
+      "granted": "サブスクリプション付与完了",
+      "updating": "更新中..."
     },
     "status": {
       "currentPlan": "現在のプラン",
-      "validUntil": "有効期限",
-      "timeRemaining": "残り時間",
       "daysRemaining": "残り日数",
-      "features": "機能"
+      "features": "機能",
+      "timeRemaining": "残り時間",
+      "validUntil": "有効期限"
     },
-    "limits": {
-      "dailyUsage": "1日の使用量",
-      "dailyLikes": "1日のいいね",
-      "superLikes": "スーパーいいね",
-      "dailyBoosts": "1日のブースト",
-      "remaining": "残り",
-      "plan": "プラン",
-      "more": "さらに"
-    },
-    "tiers": {
-      "registered": "無料",
-      "silver": "シルバー",
-      "gold": "ゴールド",
-      "platinum": "プラチナ"
-    },
-    "upgrade": "アップグレード",
     "subscribenow": "今すぐ登録",
-    "manageSubscription": "サブスクリプション管理"
+    "tiers": {
+      "gold": "ゴールド",
+      "platinum": "プラチナ",
+      "registered": "無料",
+      "silver": "シルバー"
+    },
+    "types": {
+      "gold": "ゴールド (プレミアムプラス)",
+      "platinum": "プラチナ (アルティメット)",
+      "silver": "シルバー (ベーシックプレミアム)"
+    },
+    "upgrade": "アップグレード"
   },
   "subscription.description": "サブスクリプションを管理し、1日の使用制限を監視",
   "subscription.error.description": "サブスクリプション処理中にエラーが発生しました",
   "subscription.error.portalError": "サブスクリプションポータルを開けませんでした",
   "subscription.error.title": "サブスクリプションエラー",
   "subscription.limits": {
-    "dailyLikes": "毎日の「いいね！」",
-    "superLikes": "スーパーライク",
-    "dailyBoosts": "毎日のブースト",
-    "dailyUsage": "毎日の使用量",
-    "remaining": "残り",
-    "unlimited": "無制限",
-    "dailyLikeLimitReached": "1日の「いいね！」上限に達しました",
-    "dailySuperLikeLimitReached": "1日のスーパーライク上限に達しました",
-    "upgradeMessage": "1日の上限に達しましたか？より多くの「いいね！」と機能を利用するにはアップグレードしてください！",
-    "upgradeTo": "アップグレード先：",
     "currentFeatures": "現在の機能：",
+    "dailyBoosts": "毎日のブースト",
+    "dailyLikeLimitReached": "1日の「いいね！」上限に達しました",
+    "dailyLikes": "毎日の「いいね！」",
+    "dailySuperLikeLimitReached": "1日のスーパーライク上限に達しました",
+    "dailyUsage": "毎日の使用量",
+    "monthlyBoosts": "Monthly Boosts",
     "more": "もっと",
-    "plan": "プラン"
+    "plan": "プラン",
+    "remaining": "残り",
+    "superLikes": "スーパーライク",
+    "unlimited": "無制限",
+    "upgradeMessage": "1日の上限に達しましたか？より多くの「いいね！」と機能を利用するにはアップグレードしてください！",
+    "upgradeTo": "アップグレード先："
   },
   "subscription.manage": "サブスクリプションを管理",
   "subscription.management.description": "アップグレードページにアクセスして利用可能なすべてのプランを表示するか、Stripeの��全なポータルで既存のサブスクリプションを管理してください。",
@@ -2150,25 +2349,25 @@
   "subscription.management.title": "サブスクリプション管理",
   "subscription.management.viewPlans": "すべてのプランを表示",
   "subscription.status": {
-    "title": "サブスクリプションステータス",
     "currentPlan": "現在のプラン",
-    "validUntil": "有効期限",
-    "timeRemaining": "残り時間",
     "daysRemaining": "{{days}}日残り",
     "expired": "期限切れ",
-    "features": "機能"
+    "features": "機能",
+    "timeRemaining": "残り時間",
+    "title": "サブスクリプションステータス",
+    "validUntil": "有効期限"
   },
   "subscription.subscribenow": "今すぐ登録",
   "subscription.tiers": {
     "free": "無料",
-    "registered": "無料",
-    "silver": "シルバー",
     "gold": "ゴールド",
-    "platinum": "プラチナ"
+    "platinum": "プラチナ",
+    "registered": "無料",
+    "silver": "シルバー"
   },
   "subscription.title": "サブスクリプションと使用状況",
   "subscription.upgrade": "アップグレード",
-  "subscriptionActivated": "{{{tier}}}サブスクリプションが有効になりました！",
+  "subscriptionActivated": "{{tier}}サブスクリプションが有効になりました！",
   "subscriptionCongratulations": "おめでとうございます！",
   "subscriptionEnds": "終了日：{{date}}",
   "subscriptionExpiresIn": "サブスクリプションの有効期限は",
@@ -2176,13 +2375,13 @@
   "subscriptionExpiringNotificationMessage": "サブスクリプションの期限が近づいています",
   "subscriptionExpiry": "サブスクリプションの有効期限",
   "subscriptionGranted": "サブスクリプション付与",
-  "subscriptionGrantedDesc": "{{{tier}}}サブスクリプションが{{{days}}}日間付与されました",
+  "subscriptionGrantedDesc": "{{tier}}サブスクリプションが{{days}}日間付与されました",
   "subscriptionHasBeenRenewed": "サブスクリプションが更新されました",
   "subscriptionManagement": "サブスクリプション管理",
   "subscriptionRenewedNotification": "サブスクリプション更新",
   "subscriptionRenewedNotificationMessage": "サブスクリプションが更新されました",
   "subscriptionRole": {
-    "description": "このユーザーには{{{role}}}サブスクリプションパッケージとプレミアム機能へのアクセス権が与えられます。",
+    "description": "このユーザーには{{role}}サブスクリプションパッケージとプレミアム機能へのアクセス権が与えられます。",
     "title": "サブスクリプション権限"
   },
   "subscriptionSettingsDesc": "サブスクリプションを管理し、使用制限を表示",
@@ -2200,6 +2399,8 @@
   "sunday": "日曜日",
   "superLike": "スーパーライク",
   "superLikeDesc": "1日5回のスーパーライクで目立ちましょう",
+  "superLikeErrorDescription": "Unable to send super like. Please try again.",
+  "superLikeFailed": "Super Like Failed",
   "superLikeFeatureDescription": "特別な興味を示して、より多くの注目を集めましょう",
   "superLikeFeatureDetail": "スーパーライク無制限",
   "superLikeFeatureTitle": "スーパーライク",
@@ -2215,17 +2416,19 @@
   "superLikesPerDay": "5スーパーライク/日",
   "support": "サポート",
   "support247": "24時間年中無休サポート",
+  "swipeErrorDescription": "Failed to save your action. Please check your internet connection and try again.",
+  "swipeFailed": "Swipe Failed",
   "swipesReset": "すべてのスワイプが正常にリセットされました",
   "swipesResetError": "スワイプのリセットに失敗しました",
   "system": {
-    "ready": "システム準備完了",
-    "notReady": "システム準備未完了",
-    "refresh": "更新",
-    "export": "エクスポート",
     "clear": "クリア",
+    "export": "エクスポート",
+    "notReady": "システム準備未完了",
+    "ready": "システム準備完了",
+    "refresh": "更新",
     "status": {
-      "on": "オン",
-      "off": "オフ"
+      "off": "オフ",
+      "on": "オン"
     }
   },
   "systemBackup": "システムバックアップ",
@@ -2236,6 +2439,11 @@
   "takeAction": "アクションを起こす",
   "terms": "規約",
   "termsOfService": "利用規約",
+  "testServiceRole": {
+    "button": "Test Service Role",
+    "testing": "Testing...",
+    "title": "Test Service Role Key"
+  },
   "testimonial1": "2Sweetyで出会い、最初のチャットで恋に落ちました！今、結婚の準備をしています。",
   "testimonial2": "今まで使った中で最高のデーティングアプリです。たった2週間で理想の相手を見つけました！",
   "testimonial3": "相性を本当に理解してくれる素晴らしいアルゴリズム。強くお勧めします！",
@@ -2252,9 +2460,9 @@
   "thursday": "木曜日",
   "tiers": {
     "basic": "基本",
-    "silver": "シルバー",
     "gold": "ゴールド",
-    "platinum": "プラチナ"
+    "platinum": "プラチナ",
+    "silver": "シルバー"
   },
   "timeoutError": "リクエストタイムアウト",
   "title": "タイトル",
@@ -2299,7 +2507,7 @@
   "unbanError": "禁止解除中にエラーが発生しました。",
   "unbanUser": "ユーザーの禁止を解除",
   "unbanningUser": "ユーザーの禁止を解除中...",
-  "understoodText": "理解しました",
+  "understood": "Understood",
   "unknown": "不明",
   "unknownError": "不明なエラーが発生しました",
   "unknownUser": "不明なユーザー",
@@ -2331,9 +2539,9 @@
   "upgradeToViewAnalytics": "分析を表示するにはプレミアムにアップグレードしてください",
   "upload": {
     "noAuthToken": "認証トークンがありません",
-    "uploadFailed": "アップロードに失敗しました",
+    "photoDeleteError": "写真の削除エラー：",
     "photoUploadError": "写真のアップロードエラー：",
-    "photoDeleteError": "写真の削除エラー："
+    "uploadFailed": "アップロードに失敗しました"
   },
   "uploadPhoto": "写真をアップロード",
   "uploadPhotos": "写真をアップロード",
@@ -2379,32 +2587,32 @@
   },
   "value": "値",
   "verification": {
-    "title": "認証を受ける",
+    "comingSoon": "近日公開",
     "description": "認証バッジであなたが正当なユーザーであることを他の人に示しましょう",
+    "emailInstructions": "登録されたメールアドレスに認証リンクを送信します。",
+    "error": "認証失敗",
+    "getVerified": "認証を受ける",
     "methods": {
       "email": {
-        "title": "メール認証",
-        "description": "メールアドレスによる迅速かつ簡単な認証"
-      },
-      "phone": {
-        "title": "電話認証",
-        "description": "SMS認証で本人確認"
+        "description": "メールアドレスによる迅速かつ簡単な認証",
+        "title": "メール認証"
       },
       "idDocument": {
-        "title": "身分証明書認証",
-        "description": "政府発行の身分証明書による最も安全な認証"
+        "description": "政府発行の身分証明書による最も安全な認証",
+        "title": "身分証明書認証"
+      },
+      "phone": {
+        "description": "SMS認証で本人確認",
+        "title": "電話認証"
       }
     },
-    "verify": "今すぐ認証",
-    "verifying": "認証中...",
+    "phoneInstructions": "登録された電話番号に認証コードを送信します。",
     "submitted": "認証リクエストが送信されました",
     "success": "認証成功！",
-    "error": "認証失敗",
-    "emailInstructions": "登録されたメールアドレスに認証リンクを送信します。",
-    "phoneInstructions": "登録された電話番号に認証コードを送信します。",
-    "comingSoon": "近日公開",
+    "title": "認証を受ける",
     "verifiedBadge": "認証バッジ",
-    "getVerified": "認証を受ける"
+    "verify": "今すぐ認証",
+    "verifying": "認証中..."
   },
   "verified": "認証済み",
   "verifiedProfiles": "認証済みプロフィール",

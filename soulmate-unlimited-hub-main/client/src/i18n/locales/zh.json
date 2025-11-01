@@ -29,234 +29,231 @@
   "admin.subscription.manual.subscriptionType": "订阅类型",
   "admin.subscription.manual.title": "手动订阅管理",
   "adminAccess": {
-    "loginRequired": {
-      "title": "需要登录",
-      "description": "请登录以访问管理面板。",
-      "button": "前往登录"
-    },
     "accessDenied": {
-      "title": "访问被拒绝",
-      "description": "您没有权限访问管理面板。",
-      "yourRole": "您的角色",
-      "noRole": "未分配角色",
       "adminPermission": "管理员权限",
-      "yes": "是",
+      "button": "返回首页",
+      "description": "您没有权限访问管理面板。",
       "no": "否",
-      "button": "返回首页"
+      "noRole": "未分配角色",
+      "title": "访问被拒绝",
+      "yes": "是",
+      "yourRole": "您的角色"
     },
-    "debugMode": "调试模式"
+    "debugMode": "调试模式",
+    "loginRequired": {
+      "button": "前往登录",
+      "description": "请登录以访问管理面板。",
+      "title": "需要登录"
+    }
   },
   "adminActions": "管理员操作",
   "adminContent": {
-    "title": "内容管理",
-    "preview": "预览",
-    "save": "保存",
-    "saving": "正在保存...",
-    "updateSuccess": "内容更新成功",
-    "updateError": "内容更新失败",
-    "heroSection": "英雄部分",
     "badgeText": "徽章文本",
-    "subtitle": "副标题",
-    "mission": "使命",
-    "missionTitle": "使命标题",
-    "missionDescription": "使命描述",
-    "statistics": "统计数据",
-    "value": "值",
+    "common": {
+      "noData": "无数据"
+    },
+    "heroSection": "英雄部分",
     "label": "标签",
     "lastUpdated": "最后更新",
-    "seoSettings": "SEO 设置",
-    "metaTitle": "元标题",
-    "metaTitlePlaceholder": "搜索引擎的页面标题",
     "metaDescription": "元描述",
     "metaDescriptionPlaceholder": "搜索引擎的简短描述（150-160个字符）",
     "metaKeywords": "元关键词",
+    "metaTitle": "元标题",
+    "metaTitlePlaceholder": "搜索引擎的页面标题",
+    "mission": "使命",
+    "missionDescription": "使命描述",
+    "missionTitle": "使命标题",
     "pages": {
       "about": {
-        "title": "关于我们",
         "description": "自2020年以来，通过智能匹配技术和真诚的关系连接世界各地的心。",
         "mission": "我们的使命",
         "missionText": "在2Sweety，我们相信每个人都应该找到有意义的爱...",
         "stats": {
-          "totalMatches": "总匹配数",
           "activeUsers": "活跃用户",
           "happyCouples": "幸福情侣",
-          "satisfactionRate": "满意度"
-        }
-      },
-      "privacy": {
-        "title": "隐私",
-        "description": "您的隐私是我们的首要任务。了解我们如何收集、使用和保护您的个人信息。",
-        "lastUpdated": "2024年12月"
-      },
-      "terms": {
-        "title": "法律信息",
-        "description": "在使用2Sweety之前，请仔细阅读这些条款。",
-        "lastUpdated": "2024年12月"
+          "satisfactionRate": "满意度",
+          "totalMatches": "总匹配数"
+        },
+        "title": "关于我们"
       },
       "gdpr": {
-        "title": "欧盟",
         "description": "2Sweety完全遵守欧盟的通用数据保护条例。",
-        "effectiveDate": "2018年5月25日"
+        "effectiveDate": "2018年5月25日",
+        "title": "欧盟"
+      },
+      "privacy": {
+        "description": "您的隐私是我们的首要任务。了解我们如何收集、使用和保护您的个人信息。",
+        "lastUpdated": "2024年12月",
+        "title": "隐私"
+      },
+      "terms": {
+        "description": "在使用2Sweety之前，请仔细阅读这些条款。",
+        "lastUpdated": "2024年12月",
+        "title": "法律信息"
       }
     },
+    "preview": "预览",
+    "save": "保存",
+    "saving": "正在保存...",
     "seo": {
       "defaultKeywords": "约会, 爱情, 关系, 中国",
       "keywordsPlaceholder": "约会, 爱情, 关系, 中国"
     },
-    "common": {
-      "noData": "无数据"
-    }
+    "seoSettings": "SEO 设置",
+    "statistics": "统计数据",
+    "subtitle": "副标题",
+    "title": "内容管理",
+    "updateError": "内容更新失败",
+    "updateSuccess": "内容更新成功",
+    "value": "值"
   },
   "adminDashboard": "管理员仪表板",
   "adminLogs": {
     "enhanced": {
-      "title": "增强型日志系统",
+      "activeCategories": "活动类别",
+      "autoRefresh": "自动刷新",
+      "categories": {
+        "admin": "管理员",
+        "auth": "认证",
+        "database": "数据库",
+        "error": "错误",
+        "network": "网络",
+        "payment": "支付",
+        "performance": "性能",
+        "system": "系统",
+        "userAction": "用户操作"
+      },
+      "clear": "清除",
+      "details": {
+        "category": "类别",
+        "details": "详情",
+        "level": "级别",
+        "message": "消息",
+        "network": "网络",
+        "performance": "性能",
+        "sessionId": "会话ID",
+        "stackTrace": "堆栈跟踪",
+        "timestamp": "时间戳",
+        "title": "日志详情",
+        "url": "URL",
+        "user": "用户",
+        "userId": "用户ID"
+      },
       "disable": "禁用",
       "enable": "启用",
-      "logging": "日志记录",
-      "refresh": "刷新",
-      "export": "导出",
-      "clear": "清除",
-      "totalLogs": "总日志数",
-      "session": "会话",
       "errorRate": "错误率",
       "errors": "错误",
-      "categories": {
-        "auth": "认证",
-        "userAction": "用户操作",
-        "network": "网络",
-        "database": "数据库",
-        "payment": "支付",
-        "admin": "管理员",
-        "error": "错误",
-        "performance": "性能",
-        "system": "系统"
-      },
-      "activeCategories": "活动类别",
-      "status": "状态",
-      "on": "开",
-      "off": "关",
-      "autoRefresh": "自动刷新",
+      "export": "导出",
       "filters": {
-        "title": "筛选和搜索",
+        "allCategories": "所有类别",
+        "allLevels": "所有级别",
+        "autoRefreshLabel": "自动刷新",
+        "category": "类别",
+        "level": "级别",
         "search": "搜索",
         "searchPlaceholder": "搜索日志...",
-        "level": "级别",
-        "allLevels": "所有级别",
-        "category": "类别",
-        "allCategories": "所有类别",
-        "autoRefreshLabel": "自动刷新"
+        "title": "筛选和搜索"
       },
       "levels": {
+        "critical": "严重",
         "debug": "调试",
-        "info": "信息",
-        "warning": "警告",
         "error": "错误",
-        "critical": "严重"
+        "info": "信息",
+        "warning": "警告"
       },
+      "logging": "日志记录",
       "noLogs": {
         "disabled": "日志记录当前已禁用。请启用以开始收集日志。",
         "notFound": "未找到与当前筛选条件匹配的日志。"
       },
-      "details": {
-        "title": "日志详情",
-        "level": "级别",
-        "category": "类别",
-        "timestamp": "时间戳",
-        "sessionId": "会话ID",
-        "message": "消息",
-        "url": "URL",
-        "userId": "用户ID",
-        "details": "详情",
-        "performance": "性能",
-        "network": "网络",
-        "stackTrace": "堆栈跟踪",
-        "user": "用户"
-      }
+      "off": "关",
+      "on": "开",
+      "refresh": "刷新",
+      "session": "会话",
+      "status": "状态",
+      "title": "增强型日志系统",
+      "totalLogs": "总日志数"
     },
     "system": {
-      "title": "系统日志",
-      "session": "会话",
-      "total": "总计",
-      "errors": "错误",
-      "filters": {
-        "level": "级别",
-        "category": "类别",
-        "autoRefresh": "自动刷新"
-      },
-      "levels": {
-        "all": "全部",
-        "error": "错误",
-        "warning": "警告",
-        "info": "信息",
-        "debug": "调试",
-        "critical": "严重"
+      "buttons": {
+        "clear": "清除",
+        "disable": "禁用",
+        "enable": "启用",
+        "export": "导出",
+        "logging": "日志记录",
+        "refresh": "刷新"
       },
       "categories": {
+        "admin": "管理员",
         "all": "全部",
-        "roleManagement": "角色管理",
-        "userBan": "用户封禁",
-        "permissionCheck": "权限检查",
-        "database": "数据库",
         "auth": "认证",
-        "system": "系统",
-        "userAction": "用户操作",
+        "database": "数据库",
+        "error": "错误",
         "network": "网络",
         "payment": "支付",
-        "admin": "管理员",
-        "error": "错误",
-        "performance": "性能"
-      },
-      "table": {
-        "time": "时间",
-        "level": "级别",
-        "category": "类别",
-        "action": "操作",
-        "user": "用户",
-        "admin": "管理员",
-        "details": "详情"
-      },
-      "noLogs": "未找到日志",
-      "loggingDisabled": "日志记录当前已禁用。请启用以开始收集日志。",
-      "filtersAndSearch": "筛选和搜索",
-      "search": "搜索",
-      "searchPlaceholder": "搜索日志...",
-      "stats": {
-        "totalLogs": "总日志数",
-        "errorRate": "错误率",
-        "errors": "错误",
-        "categories": "类别",
-        "activeCategories": "活动类别",
-        "status": "状态",
-        "on": "开",
-        "off": "关"
-      },
-      "buttons": {
-        "enable": "启用",
-        "disable": "禁用",
-        "logging": "日志记录",
-        "refresh": "刷新",
-        "export": "导出",
-        "clear": "清除"
+        "performance": "性能",
+        "system": "系统",
+        "userAction": "用户操作"
       },
       "details": {
-        "title": "日志详情",
-        "time": "时间",
         "action": "操作",
-        "userId": "用户ID",
         "adminId": "管理员ID",
-        "error": "错误",
         "details": "详情",
-        "stackTrace": "堆栈跟踪",
+        "error": "错误",
         "message": "消息",
-        "fields": {
-          "user": "用户",
-          "url": "URL",
-          "performance": "性能",
-          "network": "网络",
-          "stackTrace": "堆栈跟踪"
-        }
-      }
+        "stackTrace": "堆栈跟踪",
+        "time": "时间",
+        "title": "日志详情",
+        "userId": "用户ID"
+      },
+      "errors": "错误",
+      "fields": {
+        "network": "Network",
+        "performance": "Performance",
+        "stackTrace": "Stack Trace",
+        "url": "URL",
+        "user": "User"
+      },
+      "filters": {
+        "autoRefresh": "自动刷新",
+        "category": "类别",
+        "level": "级别"
+      },
+      "filtersAndSearch": "筛选和搜索",
+      "levels": {
+        "all": "全部",
+        "critical": "严重",
+        "debug": "调试",
+        "error": "错误",
+        "info": "信息",
+        "warning": "警告"
+      },
+      "loggingDisabled": "日志记录当前已禁用。请启用以开始收集日志。",
+      "noLogs": "未找到日志",
+      "search": "搜索",
+      "searchPlaceholder": "搜索日志...",
+      "session": "会话",
+      "stats": {
+        "activeCategories": "活动类别",
+        "categories": "类别",
+        "errorRate": "错误率",
+        "errors": "错误",
+        "off": "关",
+        "on": "开",
+        "status": "状态",
+        "totalLogs": "总日志数"
+      },
+      "table": {
+        "action": "操作",
+        "admin": "管理员",
+        "category": "类别",
+        "details": "详情",
+        "level": "级别",
+        "time": "时间",
+        "user": "用户"
+      },
+      "title": "系统日志",
+      "total": "总计"
     }
   },
   "adminPanel": "管理面板",
@@ -264,88 +261,108 @@
   "adminPanelAccessGranted": "管理面板访问已授予",
   "adminPayments": {
     "conversionRate": "转化率",
-    "mrr": "MRR（月度经常性收入）",
     "estimatedMonthly": "预计月度",
     "manualSubscription": {
-      "title": "手动分配订阅",
-      "userEmail": "用户电子邮件",
+      "duration": "Duration (Days)",
+      "durationPlaceholder": "30",
       "emailPlaceholder": "user@example.com",
+      "grantButton": "Grant Subscription",
+      "reason": "Reason",
+      "reasons": {
+        "compensation": "Compensation",
+        "promotional": "Promotional Grant",
+        "support": "Customer Support",
+        "testing": "Testing Purpose"
+      },
       "subscriptionTier": "订阅等级",
       "tiers": {
-        "silver": "白银（$9.99/月）",
         "gold": "黄金（$19.99/月）",
-        "platinum": "白金（$29.99/月）"
+        "platinum": "白金（$29.99/月）",
+        "silver": "白银（$9.99/月）"
       },
-      "assignButton": "分配订阅",
-      "assignSuccess": "订阅分配成功",
-      "assignError": "订阅分配失败"
+      "title": "手动分配订阅",
+      "userEmail": "用户电子邮件"
     },
-    "recentTransactions": "最近的交易",
-    "monthlyRevenue": "月度收入",
-    "activeSubscriptions": "有效订阅",
-    "churnRate": "流失率",
-    "noTransactions": "未找到交易",
-    "manageSubscriptions": "管理订阅",
-    "stripeStatus": "Stripe状态",
-    "stripeConnected": "已连接",
-    "stripeNotConnected": "未连接",
-    "webhookStatus": "Webhook状态",
-    "testMode": "测试模式"
+    "mrr": "MRR（月度经常性收入）",
+    "paymentStatus": {
+      "stripeConnection": "Stripe Connection",
+      "testMode": "Test Mode",
+      "title": "Payment System Status",
+      "webhookStatus": "Webhook Status"
+    },
+    "recentTransactions": {
+      "noTransactions": "No transactions available",
+      "noTransactionsDesc": "Transactions will appear here once users subscribe",
+      "plans": {
+        "gold": "Gold Plan",
+        "platinum": "Platinum Plan",
+        "silver": "Silver Plan"
+      },
+      "title": "Recent Transactions"
+    },
+    "stripe": {
+      "note": "These links open in the Stripe Dashboard. Ensure you have proper access permissions.",
+      "openDashboard": "Open Stripe Dashboard",
+      "title": "Stripe Dashboard Links",
+      "viewCustomers": "View Customers",
+      "viewPayments": "View Payments",
+      "viewSubscriptions": "View Subscriptions"
+    }
   },
   "adminRole": "管理员角色",
   "adminSecurityMessage": "管理面板访问受IP限制。我们建议启用2FA。",
   "adminSite": {
-    "configuration": {
-      "title": "网站配置",
-      "siteName": "网站名称",
-      "defaultLanguage": "默认语言",
-      "siteDescription": "网站描述",
-      "descriptionPlaceholder": "心之所向，爱之所始"
-    },
     "appSettings": {
-      "title": "应用设置",
-      "registration": {
-        "label": "开放注册",
-        "description": "允许新用户注册"
+      "aiTranslation": {
+        "description": "自动消息翻译",
+        "label": "AI翻译"
       },
       "emailVerification": {
-        "label": "电子邮件验证",
-        "description": "要求新用户进行电子邮件验证"
+        "description": "要求新用户进行电子邮件验证",
+        "label": "电子邮件验证"
       },
       "photoModeration": {
-        "label": "照片审核",
         "description": "手动审核个人资料照片",
+        "label": "照片审核",
         "manual": "手动"
       },
-      "aiTranslation": {
-        "label": "AI翻译",
-        "description": "自动消息翻译"
-      }
+      "registration": {
+        "description": "允许新用户注册",
+        "label": "开放注册"
+      },
+      "title": "应用设置"
     },
-    "security": {
-      "title": "安全设置",
-      "twoFactor": {
-        "label": "双因素认证",
-        "description": "要求管理面板使用2FA"
-      },
-      "sessionTimeout": {
-        "label": "会话超时",
-        "description": "管理员会话持续时间",
-        "hours": "8小时"
-      },
-      "ipRestriction": {
-        "label": "IP限制",
-        "description": "按IP限制管理员访问"
-      }
+    "configuration": {
+      "defaultLanguage": "默认语言",
+      "descriptionPlaceholder": "心之所向，爱之所始",
+      "siteDescription": "网站描述",
+      "siteName": "网站名称",
+      "title": "网站配置"
     },
     "integrations": {
-      "title": "集成状态",
+      "connected": "已连接",
+      "emailService": "电子邮件服务（SMTP）",
+      "googleTranslate": "谷歌翻译API",
+      "needsSetup": "需要设置",
       "stripe": "Stripe支付",
       "supabase": "Supabase数据库",
-      "googleTranslate": "谷歌翻译API",
-      "emailService": "电子邮件服务（SMTP）",
-      "connected": "已连接",
-      "needsSetup": "需要设置"
+      "title": "集成状态"
+    },
+    "security": {
+      "ipRestriction": {
+        "description": "按IP限制管理员访问",
+        "label": "IP限制"
+      },
+      "sessionTimeout": {
+        "description": "管理员会话持续时间",
+        "hours": "8小时",
+        "label": "会话超时"
+      },
+      "title": "安全设置",
+      "twoFactor": {
+        "description": "要求管理面板使用2FA",
+        "label": "双因素认证"
+      }
     }
   },
   "adminUser": {
@@ -371,91 +388,52 @@
     "title": "警告：管理员权限"
   },
   "ads": {
-    "title": "广告管理",
-    "stats": {
-      "impressions": "展示次数",
-      "clicks": "点击次数",
-      "ctr": "点击率",
-      "revenue": "收入",
-      "activePlacements": "活动广告位",
-      "totalImpressions": "总展示次数",
-      "todayClicks": "今日点击次数",
-      "averageCtr": "平均点击率",
-      "monthlyRevenue": "月度收入"
-    },
-    "placements": {
-      "title": "广告位",
-      "header": "页眉",
-      "sidebar": "侧边栏",
-      "feed": "信息流",
-      "footer": "页脚",
-      "enabled": "已启用",
-      "disabled": "已禁用",
-      "size": "尺寸",
-      "position": "位置",
-      "visibility": "可见性"
-    },
-    "providers": {
-      "title": "广告提供商",
-      "googleAdsense": "谷歌AdSense",
-      "customAds": "自定义广告",
-      "status": "状态",
-      "earnings": "收益",
-      "configure": "配置"
-    },
-    "settings": {
-      "title": "广告设置",
-      "frequency": "展示频率",
-      "targeting": "受众定位",
-      "excludedPages": "排除的页面",
-      "mobileAds": "移动广告",
-      "desktopAds": "桌面广告",
-      "refreshRate": "刷新率",
-      "maxAdsPerPage": "每页最大广告数"
-    },
-    "performance": {
-      "title": "性能分析",
-      "topPerforming": "表现最佳",
-      "worstPerforming": "表现最差",
-      "recommendations": "建议",
-      "optimize": "优化"
+    "banner": {
+      "title": "Advertisement"
     },
     "configuration": {
-      "title": "网站配置",
-      "description": "管理您网站的广告设置和分析配置",
-      "tabs": {
-        "advertising": "广告",
-        "analytics": "分析"
-      },
-      "sections": {
-        "googleAdsense": "谷歌AdSense",
-        "adPlacement": "广告位",
-        "googleAnalytics": "谷歌分析",
-        "facebookPixel": "Facebook像素",
-        "trackingSettings": "跟踪设置"
-      },
       "buttons": {
         "refresh": "刷新",
         "save": "保存",
         "saving": "正在保存..."
       },
-      "status": {
-        "enabled": "已启用",
-        "disabled": "已禁用"
-      },
+      "description": "管理您网站的广告设置和分析配置",
       "errors": {
         "loadFailed": "加载配置失败",
         "saveFailed": "保存配置失败"
       },
+      "sections": {
+        "adPlacement": "广告位",
+        "facebookPixel": "Facebook像素",
+        "googleAdsense": "谷歌AdSense",
+        "googleAnalytics": "谷歌分析",
+        "trackingSettings": "跟踪设置"
+      },
+      "status": {
+        "disabled": "已禁用",
+        "enabled": "已启用"
+      },
       "success": {
         "saved": "配置保存成功"
-      }
+      },
+      "tabs": {
+        "advertising": "广告",
+        "analytics": "分析"
+      },
+      "title": "网站配置"
     },
     "disabledFeature": {
-      "title": "禁用广告",
       "description": "厌倦了看广告？禁用它们！",
-      "status": "白银+会员已禁用广告"
-    }
+      "status": "白银+会员已禁用广告",
+      "title": "禁用广告"
+    },
+    "native": {
+      "description": "Upgrade to remove ads",
+      "title": "Sponsored Content"
+    },
+    "placeholder": "Ad Space",
+    "removeAds": "Remove Ads - Upgrade to Silver",
+    "upgrade": "Upgrade"
   },
   "advanced": "高级",
   "advancedAnalytics": "高级分析",
@@ -497,35 +475,35 @@
   "approveReport": "批准报告",
   "auditTrail": "审计追踪",
   "auth": {
-    "signingInGoogle": "🔐 使用谷歌登录",
-    "oauthRedirectUrl": "🔐 OAuth重定向URL：",
-    "googleSignInError": "🔐 谷歌登录错误：",
-    "googleSignInInitiated": "🔐 谷歌登录已启动",
-    "googleSignInFailed": "🔐 谷歌登录失败：",
-    "signingInApple": "🔐 使用Apple登录",
     "appleSignInError": "🔐 Apple登录错误：",
-    "appleSignInInitiated": "🔐 Apple登录已启动",
     "appleSignInFailed": "🔐 Apple登录失败：",
-    "signingInFacebook": "🔐 使用Facebook登录",
-    "facebookSignInError": "🔐 Facebook登录错误：",
-    "facebookSignInInitiated": "🔐 Facebook登录已启动",
-    "facebookSignInFailed": "🔐 Facebook登录失败：",
-    "signOutError": "🔧 [useAuth] 退出错误：",
-    "settingUpSubscriptions": "🔧 [useAuth] 为用户设置实时订阅：",
-    "profileUpdateReceived": "🔧 [useAuth] 收到个人资料更新，正在重新加载角色。",
-    "subscribedToUserChannel": "🔧 [useAuth] 已订阅用户频道：",
-    "userChannelError": "[useAuth] 订阅用户频道时出错：",
-    "roleChangeDetected": "🔧 [useAuth] 检测到角色更改，正在重新加载角色。",
-    "subscribedToRolesChannel": "🔧 [useAuth] 已订阅roles_permissions频道。",
-    "rolesChannelError": "[useAuth] 订阅角色频道时出错：",
-    "subscriptionSetupError": "🔧 [useAuth] 设置订阅时出错：",
-    "removingSubscriptions": "🔧 [useAuth] 正在删除实时订阅。",
-    "subscriptionRemoveError": "🔧 [useAuth] 删除订阅时出错：",
+    "appleSignInInitiated": "🔐 Apple登录已启动",
+    "authInitError": "🔧 [useAuth] 初始化认证时出错：",
     "authStateChange": "🔧 [useAuth] 认证状态更改事件：",
     "authStateChangeError": "处理认证状态更改时出错：",
-    "authInitError": "🔧 [useAuth] 初始化认证时出错：",
     "cleaningUp": "🔧 [useAuth] 正在清理认证提供程序。",
-    "noRoleFoundWarning": "在数据库中未找到角色，默认为注册用户"
+    "facebookSignInError": "🔐 Facebook登录错误：",
+    "facebookSignInFailed": "🔐 Facebook登录失败：",
+    "facebookSignInInitiated": "🔐 Facebook登录已启动",
+    "googleSignInError": "🔐 谷歌登录错误：",
+    "googleSignInFailed": "🔐 谷歌登录失败：",
+    "googleSignInInitiated": "🔐 谷歌登录已启动",
+    "noRoleFoundWarning": "在数据库中未找到角色，默认为注册用户",
+    "oauthRedirectUrl": "🔐 OAuth重定向URL：",
+    "profileUpdateReceived": "🔧 [useAuth] 收到个人资料更新，正在重新加载角色。",
+    "removingSubscriptions": "🔧 [useAuth] 正在删除实时订阅。",
+    "roleChangeDetected": "🔧 [useAuth] 检测到角色更改，正在重新加载角色。",
+    "rolesChannelError": "[useAuth] 订阅角色频道时出错：",
+    "settingUpSubscriptions": "🔧 [useAuth] 为用户设置实时订阅：",
+    "signOutError": "🔧 [useAuth] 退出错误：",
+    "signingInApple": "🔐 使用Apple登录",
+    "signingInFacebook": "🔐 使用Facebook登录",
+    "signingInGoogle": "🔐 使用谷歌登录",
+    "subscribedToRolesChannel": "🔧 [useAuth] 已订阅roles_permissions频道。",
+    "subscribedToUserChannel": "🔧 [useAuth] 已订阅用户频道：",
+    "subscriptionRemoveError": "🔧 [useAuth] 删除订阅时出错：",
+    "subscriptionSetupError": "🔧 [useAuth] 设置订阅时出错：",
+    "userChannelError": "[useAuth] 订阅用户频道时出错："
   },
   "authStateLoading": "认证状态加载中，请稍候...",
   "authStateNotLoaded": "认证状态尚未加载，请稍候...",
@@ -536,7 +514,6 @@
   "autoTranslationDescription": "自动翻译收到的消息",
   "averageSessionTime": "平均会话时间",
   "back": "返回",
-  "backText": "返回",
   "backToAdmin": "返回管理后台",
   "backToSwiping": "返回滑动",
   "backupDatabase": "备份数据库",
@@ -549,14 +526,14 @@
   "banReasonLabel": "封禁原因",
   "banReasonPlaceholder": "解释封禁原因...",
   "banReasons": {
-    "inappropriateContent": "不当内容",
-    "spamFakeProfile": "垃圾邮件或虚假个人资料",
-    "harassment": "骚扰",
-    "violatingTerms": "违反服务条款",
+    "accountDeleted": "账户被管理员删除",
+    "bannedByAdmin": "被管理员封禁",
     "custom": "自定义原因",
     "customReason": "自定义原因",
-    "bannedByAdmin": "被管理员封禁",
-    "accountDeleted": "账户被管理员删除"
+    "harassment": "骚扰",
+    "inappropriateContent": "不当内容",
+    "spamFakeProfile": "垃圾邮件或虚假个人资料",
+    "violatingTerms": "违反服务条款"
   },
   "banStatusUpdated": "封禁状态已更新",
   "banText": "封禁",
@@ -634,8 +611,8 @@
   "completeProfileToBeDiscovered": "完善您的个人资料，让更多人发现您！",
   "completeProfileToGetLikes": "完善您的个人资料并添加照片！",
   "completeProfileToStart": "完善您的个人资料，开始发现优秀的人",
+  "confirm": "Confirm",
   "confirmDeleteUser": "您确定要删除此用户吗？此操作无法撤销。",
-  "confirmText": "确认",
   "connectionError": "连接错误",
   "contactSales": "联系我们的销售团队",
   "contactSupport": "联系支持",
@@ -649,7 +626,7 @@
   "contentUpdateSuccess": "内容已成功更新",
   "contentUpdated": "内容已更新",
   "contentUpdatedSuccessfully": "内容更新成功",
-  "continueText": "继续",
+  "continue": "Continue",
   "continueWithApple": "使用Apple继续",
   "continueWithFacebook": "使用Facebook继续",
   "continueWithGoogle": "使用Google继续",
@@ -680,73 +657,73 @@
   "days90": "90天",
   "daysAgo": "天前",
   "debug": {
+    "app": {
+      "appStateError": "❌ 应用状态错误：",
+      "appStateInitializing": "🚀 应用状态正在初始化...",
+      "appStateReady": "✅ 应用状态已就绪"
+    },
     "matches": {
-      "fetching": "🚀 使用直接Supabase查询获取匹配",
       "fetchError": "获取匹配时出错：",
       "fetchSuccess": "✅ 已获取{{count}}个匹配",
+      "fetching": "🚀 使用直接Supabase查询获取匹配",
       "newMatchDetected": "检测到新匹配，正在重新获取..."
     },
+    "network": {
+      "connectionLost": "📶 连接已丢失",
+      "connectionRestored": "🌐 连接已恢复",
+      "featuresUnavailable": "⚠️ 某些功能可能不可用",
+      "syncingWithServer": "🔄 正在与服务器同步..."
+    },
     "profiles": {
-      "queryingUserCount": "👤 正在查询用户数...",
-      "totalUsers": "📊 总用户数：{{count}}",
-      "queryingRoleBasedUsers": "🎭 正在查询基于角色的用户...",
-      "roleBasedUserCount": "🎯 基于角色筛选的用户数：{{count}}",
-      "queryingActiveUsers": "🟢 正在查询过去30天内活跃的用户...",
-      "filteringViewedProfiles": "👁️ 正在筛选已查看的个人资料...",
-      "excludingViewedProfiles": "🚫 正在排除{{count}}个已查看的个人资料",
-      "finalProfileCount": "✅ 最终个人资料数：{{count}}",
-      "fetchingRandomProfiles": "🎲 正在获取{{count}}个随机个人资料...",
-      "settingProfiles": "📝 正在设置个人资料：{{count}}个个人资料",
-      "profilesSet": "✅ 个人资料设置成功",
-      "loadingProfiles": "⏳ 正在加载个人资料...",
-      "profilesLoaded": "✅ 个人资料已加载：{{count}}个个人资料",
-      "fetchError": "❌ 个人资料获取错误：",
-      "swipeError": "❌ 滑动错误：",
-      "noMoreProfiles": "📭 没有更多个人资料",
-      "likeSent": "💖 喜欢已发送 - {{profileId}}",
-      "superLikeSent": "⭐ 超级喜欢已发送 - {{profileId}}",
-      "profilePassed": "⏭️ 个人资料已跳过 - {{profileId}}",
       "actionError": "❌ 操作错误：",
+      "checkingMutualLike": "🔄 正在检查相互喜欢...",
+      "excludingViewedProfiles": "🚫 正在排除{{count}}个已查看的个人资料",
+      "fetchError": "❌ 个人资料获取错误：",
+      "fetchingRandomProfiles": "🎲 正在获取{{count}}个随机个人资料...",
+      "filteringViewedProfiles": "👁️ 正在筛选已查看的个人资料...",
+      "finalProfileCount": "✅ 最终个人资料数：{{count}}",
       "initiatingLike": "🚀 正在发起喜欢",
       "likeAction": "💝 喜欢操作：{{userId}} -> {{profileId}}",
-      "checkingMutualLike": "🔄 正在检查相互喜欢...",
-      "mutualLikeCheck": "💕 相互喜欢状态：{{isMutual}}",
-      "processingMatch": "⚡ 正在处理匹配...",
+      "likeSent": "💖 喜欢已发送 - {{profileId}}",
+      "loadingProfiles": "⏳ 正在加载个人资料...",
       "matchCreated": "🎉 新匹配！{{userId}} ↔ {{profileId}}",
-      "refreshingProfiles": "🔄 正在刷新个人资料..."
+      "mutualLikeCheck": "💕 相互喜欢状态：{{isMutual}}",
+      "noMoreProfiles": "📭 没有更多个人资料",
+      "processingMatch": "⚡ 正在处理匹配...",
+      "profilePassed": "⏭️ 个人资料已跳过 - {{profileId}}",
+      "profilesLoaded": "✅ 个人资料已加载：{{count}}个个人资料",
+      "profilesSet": "✅ 个人资料设置成功",
+      "queryingActiveUsers": "🟢 正在查询过去30天内活跃的用户...",
+      "queryingRoleBasedUsers": "🎭 正在查询基于角色的用户...",
+      "queryingUserCount": "👤 正在查询用户数...",
+      "refreshingProfiles": "🔄 正在刷新个人资料...",
+      "roleBasedUserCount": "🎯 基于角色筛选的用户数：{{count}}",
+      "settingProfiles": "📝 正在设置个人资料：{{count}}个个人资料",
+      "superLikeSent": "⭐ 超级喜欢已发送 - {{profileId}}",
+      "swipeError": "❌ 滑动错误：",
+      "totalUsers": "📊 总用户数：{{count}}"
     },
     "subscription": {
-      "loadingSubscription": "📋 正在加载订阅信息...",
-      "subscriptionLoaded": "✅ 订阅已加载：",
-      "loadError": "❌ 订阅加载错误：",
       "checkingTier": "🔍 正在检查订阅等级：",
-      "tierCheckResult": "📊 等级检查结果：",
-      "startingStatusCheck": "🚀 正在开始订阅状态检查...",
-      "loadingUserProfile": "👤 正在加载用户个人资料：",
-      "profileLoaded": "✅ 个人资料已加载：",
       "fetchingSubscription": "📥 正在获取订阅信息：",
-      "subscriptionData": "📋 订阅数据：",
-      "subscriptionActive": "✅ 找到有效订阅：",
+      "loadError": "❌ 订阅加载错误：",
+      "loadingSubscription": "📋 正在加载订阅信息...",
+      "loadingUserProfile": "👤 正在加载用户个人资料：",
       "noActiveSubscription": "❌ 未找到有效订阅",
-      "updatingSubscription": "💾 正在更新订阅：",
-      "subscriptionUpdated": "✅ 订阅已更新：",
-      "updateError": "❌ 订阅更新错误：",
-      "premiumUserCheck": "👑 高级用户检查：",
-      "premiumUserStatus": "📊 高级用户状态：",
+      "premiumAccessResult": "📊 高级访问结果：",
       "premiumCheckComplete": "✅ 高级检查完成：",
       "premiumFeatureAccess": "🔓 高级功能访问：",
-      "premiumAccessResult": "📊 高级访问结果："
-    },
-    "network": {
-      "connectionRestored": "🌐 连接已恢复",
-      "syncingWithServer": "🔄 正在与服务器同步...",
-      "connectionLost": "📶 连接已丢失",
-      "featuresUnavailable": "⚠️ 某些功能可能不可用"
-    },
-    "app": {
-      "appStateInitializing": "🚀 应用状态正在初始化...",
-      "appStateReady": "✅ 应用状态已就绪",
-      "appStateError": "❌ 应用状态错误："
+      "premiumUserCheck": "👑 高级用户检查：",
+      "premiumUserStatus": "📊 高级用户状态：",
+      "profileLoaded": "✅ 个人资料已加载：",
+      "startingStatusCheck": "🚀 正在开始订阅状态检查...",
+      "subscriptionActive": "✅ 找到有效订阅：",
+      "subscriptionData": "📋 订阅数据：",
+      "subscriptionLoaded": "✅ 订阅已加载：",
+      "subscriptionUpdated": "✅ 订阅已更新：",
+      "tierCheckResult": "📊 等级检查结果：",
+      "updateError": "❌ 订阅更新错误：",
+      "updatingSubscription": "💾 正在更新订阅："
     }
   },
   "debugCheckAgain": "再次检查",
@@ -806,6 +783,7 @@
   "editProfile": "编辑个人资料",
   "editProfileDescription": "编辑您的个人资料并获得更多匹配",
   "editText": "编辑",
+  "editToChangeInterests": "Click edit to change interests",
   "editUser": "编辑用户",
   "editingPlan": "正在编辑计划",
   "education": "教育",
@@ -832,10 +810,23 @@
   "enterName": "输入您的姓名",
   "enterYourName": "输入您的姓名",
   "enterYourNamePlaceholder": "输入您的姓名",
-  "error": "错误",
+  "error": {
+    "details": "Error details",
+    "general": {
+      "occurred": "An error occurred"
+    },
+    "goHome": "Go to home",
+    "refresh": "Refresh page"
+  },
   "error.404.message": "哎呀！找不到页面",
   "error.404.returnHome": "返回首页",
   "errorBanningUser": "封禁用户时发生错误。",
+  "errorBoundary": {
+    "errorDetails": "Error details",
+    "goToHomePage": "Go to home page",
+    "refreshPage": "Refresh page",
+    "title": "An error occurred"
+  },
   "errorDeletingUser": "删除用户时发生错误。",
   "errorLoadingUsers": "加载用户时发生错误。",
   "errorLogs": "错误日志",
@@ -845,8 +836,6 @@
   "errorToastTitle": "错误",
   "errorUnbanningUser": "解封用户时发生错误。",
   "errorUpdatingRole": "更新角色时发生错误。",
-  "eslesmeKaldir": "取消匹配",
-  "eslestiniz": "你们匹配了！",
   "everyone": "所有人",
   "exclusiveEvents": "独家活动",
   "exclusiveFilters": "独家搜索筛选",
@@ -878,28 +867,17 @@
   "faqPlanChangeQ": "我可以更改我的计划吗？",
   "faqTitle": "常见问题",
   "feature": {
-    "basicMatching": "基本匹配",
     "advancedFilters": "高级筛选",
-    "seeWhoLikesYou": "查看谁喜欢您",
+    "basicMatching": "基本匹配",
+    "hdVideoCalls": "HD Video Calls",
+    "invisibleBrowsing": "Invisible Browsing",
+    "passport": "Passport",
+    "profileAnalytics": "Profile Analytics",
     "rewind": "倒带",
-    "voiceCalls": "语音通话",
-    "videoCalls": "视频通话",
-    "unlimitedLikes": "无限喜欢",
-    "prioritySupport": "优先支持",
-    "adFree": "无广告",
-    "premiumBadge": "高级徽章",
-    "invisibleMode": "隐身模式",
-    "readReceipts": "已读回执",
-    "superLikes": "超级喜欢",
-    "boosts": "加速",
-    "dailyLikes": "每日喜欢",
-    "requires": {
-      "silver": "需要白银会员",
-      "gold": "需要黄金会员",
-      "platinum": "需要白金会员",
-      "admin": "需要管理员访问权限",
-      "premium": "需要高级订阅"
-    }
+    "seeWhoLikesYou": "查看谁喜欢您",
+    "translation": "Translation",
+    "vipMatching": "VIP Matching",
+    "voiceCalls": "语音通话"
   },
   "feature.advancedFilters": "高级筛选",
   "feature.allFilters": "所有筛选",
@@ -938,7 +916,36 @@
   "feature.voiceCalls": "语音通话",
   "featureFlags": "功能标志",
   "featureInDevelopment": "此功能目前正在开发中。更多详情请升级至高级会员！",
-  "features": "功能",
+  "features": {
+    "advancedFilters": {
+      "description": "Filter by education, job, height, lifestyle and more"
+    },
+    "dailyLikes": {
+      "count": "{{count}} Daily Likes",
+      "description50": "Boost your chances with 50 daily likes instead of 10"
+    },
+    "disableAds": {
+      "description": "Tired of seeing advertisements? Disable them from showing!",
+      "tier": "Silver+",
+      "title": "Disable Ads"
+    },
+    "monthlyBoosts": {
+      "count": "{{count}} Boost per Month",
+      "description1": "Get 10x more visibility with monthly profile boost"
+    },
+    "seeWhoLikesYou": {
+      "description": "Discover who already liked your profile and start matching instantly"
+    },
+    "superLikes": {
+      "count": "{{count}} Super Likes",
+      "description5": "Stand out with 5 super likes per day"
+    },
+    "verifiedBadge": {
+      "description": "Show others that you are a legitimate user with this awesome badge",
+      "free": "Free with verification",
+      "title": "Verified Badge"
+    }
+  },
   "features.dailyLikes": "每日{{count}}个喜欢",
   "features.dailySuperlikes": "每日{{count}}个超级喜欢",
   "features.monthlyBoosts": "每月{{count}}次加速",
@@ -998,14 +1005,37 @@
   "googlePayFailed": "Google Pay支付失败",
   "googlePaySuccess": "✅ Google Pay支付成功",
   "googleSignInError": "Google登录失败",
-  "gotItText": "知道了",
+  "gotIt": "Got it",
   "grantFailed": "授予失败",
   "grantSubscription": "授予订阅",
   "grantTierForDays": "授予{{tier}} {{duration}}天",
   "granting": "正在授予...",
   "growthRate": "增长率",
   "guestNamePlaceholder": "安娜",
-  "guests": "访客",
+  "guestService": {
+    "accessControlError": "Error during access control",
+    "accessDenied": "Access denied",
+    "anonymous": "Anonymous",
+    "errorRetrievingStats": "Error while retrieving statistics",
+    "errorRetrievingVisitors": "Error occurred while retrieving visitors",
+    "noProfileVisitorsYet": "No profile visitors yet",
+    "profileVisitorsFound": "{{count}} profile visitors found",
+    "silverMembershipRequired": "Silver membership or higher required to view profile visitors",
+    "unableToHideVisitor": "Unable to hide visitor",
+    "unableToRetrieveVisitors": "Unable to retrieve visitors",
+    "visitorHidden": "Visitor hidden"
+  },
+  "guests": {
+    "distanceUnit": "km",
+    "goldPlus": "Gold+",
+    "tiers": {
+      "gold": "Gold",
+      "platinum": "Platinum",
+      "silver": "Silver"
+    },
+    "title": "Visitors",
+    "yearsOld": "years old"
+  },
   "happyCouples": "幸福情侣",
   "harassment": "骚扰",
   "hasAccountSignIn": "已经有账户了？登录",
@@ -1013,6 +1043,63 @@
   "heightLabel": "身高（厘米）",
   "heightPlaceholder": "您的身高（厘米）",
   "help": "帮助",
+  "helpCenter": {
+    "accountDeleteAnswer": "Go to Settings > Account > Delete Account. This action is permanent and cannot be undone.",
+    "accountDeleteQuestion": "How do I delete my account?",
+    "additionalResourcesTitle": "Additional Resources",
+    "appNotWorkingAnswer": "Try restarting the app, check your internet connection, update to the latest version, or contact support.",
+    "appNotWorkingQuestion": "The app is not working properly, what should I do?",
+    "communityForumButton": "Community Forum",
+    "contactFormMissingInfoToastDescription": "Please fill in all required fields",
+    "contactFormMissingInfoToastTitle": "Missing Information",
+    "contactFormSuccessToastDescription": "We'll get back to you as soon as possible",
+    "contactFormSuccessToastTitle": "Message Sent",
+    "contactFormTitle": "Contact Support",
+    "emailPlaceholder": "your.email@example.com",
+    "gettingStartedFaq": "Getting Started",
+    "helpCenterDescription": "Find answers to common questions or contact our support team",
+    "howMatchingWorksAnswer": "Our algorithm considers your preferences, location, interests, and activity to show you compatible profiles.",
+    "howMatchingWorksQuestion": "How does the matching system work?",
+    "howToAddPhotosAnswer": "Go to your profile settings, tap 'Add Photos', select from your gallery or take new photos. You can add up to 6 photos.",
+    "howToAddPhotosQuestion": "How do I add photos to my profile?",
+    "howToBlockUserAnswer": "Go to their profile, tap the three dots menu, and select 'Block'. They won't be able to see or contact you.",
+    "howToBlockUserQuestion": "How do I block someone?",
+    "howToCancelSubscriptionAnswer": "Go to Settings > Subscription to cancel. You can also cancel through your app store subscription settings.",
+    "howToCancelSubscriptionQuestion": "How can I cancel my subscription?",
+    "howToCreateProfileAnswer": "To create a profile, sign up with your email, add photos, write a bio, and verify your account for better matches.",
+    "howToCreateProfileQuestion": "How do I create a profile?",
+    "howToReportUserAnswer": "On their profile, tap the three dots menu and select 'Report'. Choose the reason and provide details.",
+    "howToReportUserQuestion": "How do I report a user?",
+    "howToVerifyProfileAnswer": "Go to profile settings and follow the verification process. Take a selfie matching the pose shown to get verified.",
+    "howToVerifyProfileQuestion": "How do I verify my profile?",
+    "liveChatButton": "Live Chat",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Describe your issue or question in detail...",
+    "namePlaceholder": "Your full name",
+    "notReceivingNotificationsAnswer": "Check your device settings, ensure notifications are enabled for the app, and verify your notification preferences.",
+    "notReceivingNotificationsQuestion": "I'm not receiving notifications, how to fix this?",
+    "quickAccessChatAction": "Start Chat",
+    "quickAccessChatDescription": "Chat with our support team in real-time",
+    "quickAccessEmailAction": "Send Email",
+    "quickAccessEmailDescription": "Send us an email for detailed support",
+    "quickAccessPhoneAction": "Call Now",
+    "quickAccessPhoneDescription": "Call our support hotline",
+    "quickAccessPhoneTitle": "Phone Support",
+    "refundPolicyAnswer": "Refunds are handled according to app store policies. Contact support for assistance with refund requests.",
+    "refundPolicyQuestion": "What is the refund policy?",
+    "safetyFaq": "Safety & Security",
+    "safetyGuideButton": "Safety Guide",
+    "safetyTipsAnswer": "Always meet in public places, tell friends your plans, trust your instincts, and never share personal information early.",
+    "safetyTipsQuestion": "What are the safety tips for dating?",
+    "sendMessageButton": "Send Message",
+    "subjectLabel": "Subject",
+    "subjectPlaceholder": "What can we help you with?",
+    "subscriptionFaq": "Subscription & Billing",
+    "technicalFaq": "Technical Support",
+    "userGuideButton": "User Guide",
+    "whatIsPremiumAnswer": "Premium includes unlimited likes, super likes, profile boosts, advanced filters, read receipts, and ad-free browsing.",
+    "whatIsPremiumQuestion": "What features are included in Premium?"
+  },
   "helpCenterDescription": "我们能帮您什么？",
   "helpCenterTitle": "帮助中心",
   "helpDesc": "常见问题和支持",
@@ -1132,6 +1219,7 @@
   "interest.cooking": "烹饪",
   "interest.cycling": "骑行",
   "interest.dance": "舞蹈",
+  "interest.design": "Design",
   "interest.fashion": "时尚",
   "interest.fitness": "健身",
   "interest.food": "食物",
@@ -1145,6 +1233,7 @@
   "interest.nature": "自然",
   "interest.photography": "摄影",
   "interest.piano": "钢琴",
+  "interest.poetry": "Poetry",
   "interest.reading": "阅读",
   "interest.running": "跑步",
   "interest.sports": "运动",
@@ -1195,9 +1284,9 @@
   "interestsTitle": "兴趣",
   "interface": {
     "moreProfiles": "+{{count}}个更多个人资料",
-    "syncing": "正在同步...",
+    "syncData": "同步数据",
     "syncSuccess": "数据同步成功",
-    "syncData": "同步数据"
+    "syncing": "正在同步..."
   },
   "introduceYourself": "介绍一下自己...（至少20个字符）",
   "invalidEmail": "无效的电子邮件地址",
@@ -1217,9 +1306,9 @@
   "languageUpdateError": "更新语言时出错",
   "languageUpdated": "语言已更新",
   "languages": {
-    "turkish": "土耳其语",
     "english": "英语",
-    "swedish": "瑞典语"
+    "swedish": "瑞典语",
+    "turkish": "土耳其语"
   },
   "languagesSelected": "{{count}}/5已选择",
   "languagesTitle": "语言（最多5个）",
@@ -1249,29 +1338,21 @@
   "likes.viewProfiles": "查看您喜欢的个人资料",
   "likesStats": "喜欢",
   "limit": {
-    "daily": {
-      "likes": "已达到每日喜欢限制",
-      "superLikes": "已达到每日超级喜欢限制"
-    },
     "description": {
       "dailyLikes": "升级以获得无限喜欢",
       "dailySuperLikes": "升级以获得更多超级喜欢",
       "monthlyBoosts": "您已达到每月加速限制"
     },
-    "monthly": {
-      "boosts": "已达到每月加速限制"
-    },
-    "remaining": "剩余",
+    "exceeded": "Limit Exceeded",
     "title": {
-      "dailyLikes": "每日喜欢限制",
       "dailySuperLikes": "超级喜欢限制"
     }
   },
   "limited": "有限",
   "limits": {
     "reached": "已达到限制",
-    "systemReady": "系统就绪",
     "systemNotReady": "系统未就绪",
+    "systemReady": "系统就绪",
     "upgrade": "升级"
   },
   "loadFailed": "加载失败",
@@ -1288,7 +1369,13 @@
   "loadingUsers": "正在加载用户",
   "loadingUsersDescription": "请稍候，我们正在获取用户数据...",
   "loadingUsersTitle": "正在加载用户",
-  "location": "位置",
+  "location": {
+    "notSupported": "Geolocation is not supported by this browser.",
+    "permissionDenied": "Location access denied by user",
+    "positionUnavailable": "Location information unavailable",
+    "timeout": "Location request timed out",
+    "unknownError": "An unknown error occurred while getting your location."
+  },
   "location1": "纽约",
   "location2": "洛杉矶",
   "location3": "芝加哥",
@@ -1314,7 +1401,7 @@
   "makeAdmin": "设为管理员",
   "makeModerator": "设为版主",
   "makeProfileMoreActive": "让您的个人资料更活跃，让更多人注意到您！",
-  "makeRole": "设为{{{role}}}",
+  "makeRole": "设为{{role}}",
   "male": "男性",
   "manageContent": "管理内容",
   "managePlans": "管理计划",
@@ -1334,7 +1421,6 @@
   "maximumDistance": "最大距离",
   "men": "男性",
   "menu": "菜单",
-  "mesajAt": "发送消息",
   "messageBeforeMatch": "匹配前消息",
   "messageModeration": "消息审核",
   "messageRequired": "消息为必填项",
@@ -1345,7 +1431,7 @@
   "metaTitle": "元标题",
   "metaTitlePlaceholder": "页面标题（60个字符）",
   "minAgeLabel": "{{age}}岁",
-  "minCharsRemaining": "至少还需{{{count}}}个字符",
+  "minCharsRemaining": "至少还需{{count}}个字符",
   "minTwoPhotos": "您需要添加至少2张照片",
   "minimumAge": "最小年龄",
   "minutesAgo": "分钟前",
@@ -1353,57 +1439,58 @@
   "missionDescription": "使命描述",
   "missionTitle": "使命标题",
   "moderation": {
-    "title": "内容审核",
     "actions": {
       "approve": "批准",
-      "reject": "拒绝",
-      "flag": "标记"
+      "flag": "标记",
+      "reject": "拒绝"
     },
     "dialogs": {
       "approve": {
-        "title": "批准内容",
-        "description": "此内容将被批准并对用户可见。"
-      },
-      "reject": {
-        "title": "拒绝内容",
-        "description": "此内容将被拒绝并从系统中删除。"
+        "description": "此内容将被批准并对用户可见。",
+        "title": "批准内容"
       },
       "flag": {
-        "title": "标记内容",
-        "description": "此内容将被标记以供进一步审查。"
+        "description": "此内容将被标记以供进一步审查。",
+        "title": "标记内容"
+      },
+      "reject": {
+        "description": "此内容将被拒绝并从系统中删除。",
+        "title": "拒绝内容"
       }
     },
-    "success": "内容{{action}}成功完成",
-    "failed": "内容{{action}}失败",
     "error": "审核期间发生错误",
-    "unknownUser": "未知用户",
-    "profilePhoto": "个人资料照片",
-    "reason": "原因",
-    "notes": "备注",
-    "notesPlaceholder": "输入您的审核备注...",
-    "reasonPlaceholder": "选择拒绝或标记的原因...",
-    "pending": {
-      "title": "待审核",
-      "description": "等待审核批准的内容",
-      "noPending": "无待审核内容",
-      "allReviewed": "所有上传的内容都已审核"
-    },
-    "stats": {
-      "totalFiles": "总文件数",
-      "originalSize": "原始大小",
-      "compressedSize": "压缩后大小",
-      "avgCompression": "平均压缩率",
-      "spaceSaved": "节省空间"
-    },
+    "failed": "内容{{action}}失败",
     "fileInfo": {
+      "compressed": "压缩后：",
       "file": "文件：",
       "size": "大小：",
-      "compressed": "压缩后：",
       "uploaded": "上传于："
-    }
+    },
+    "notes": "备注",
+    "notesPlaceholder": "输入您的审核备注...",
+    "pending": {
+      "allReviewed": "所有上传的内容都已审核",
+      "description": "等待审核批准的内容",
+      "noPending": "无待审核内容",
+      "title": "待审核"
+    },
+    "profilePhoto": "个人资料照片",
+    "reason": "原因",
+    "reasonPlaceholder": "选择拒绝或标记的原因...",
+    "stats": {
+      "avgCompression": "平均压缩率",
+      "compressedSize": "压缩后大小",
+      "originalSize": "原始大小",
+      "spaceSaved": "节省空间",
+      "totalFiles": "总文件数"
+    },
+    "success": "内容{{action}}成功完成",
+    "title": "内容审核",
+    "unknownUser": "未知用户"
   },
   "moderationQueue": "审核队列",
   "moderator": "版主",
+  "moderatorAccess": "🛡️ Moderator Access - All Premium Features Included",
   "moderatorPanel": "版主面板",
   "moderatorPermissions": {
     "description": "您想为此用户激活哪些版主权限？",
@@ -1439,6 +1526,12 @@
   },
   "needHelp": "需要帮助？",
   "networkError": "网络错误",
+  "networkStatus": {
+    "connectionLost": "Connection lost",
+    "connectionRestored": "Connection restored",
+    "featuresUnavailable": "Some features may be unavailable",
+    "syncingWithServer": "Syncing with server..."
+  },
   "new": "新",
   "newLike": "新的喜欢",
   "newMatch": "新的匹配！",
@@ -1516,7 +1609,7 @@
   "occupationLabel": "职业",
   "occupationPlaceholder": "您的职业",
   "offline": "离线",
-  "okText": "确定",
+  "ok": "OK",
   "onboarding.birthDate.question": "输入您的出生日期",
   "onboarding.birthDate.tooYoung": "您必须年满18岁",
   "onboarding.birthDate.warning": "⚠️ 此信息以后无法更改",
@@ -1743,7 +1836,26 @@
   "portalError": "门户错误",
   "portalUrlError": "无法获取门户URL",
   "postDuringPeakHours": "在高峰时段发布",
-  "preferences": "偏好",
+  "preferences": {
+    "createError": "Error creating default preferences:",
+    "created": "Default preferences created:",
+    "creating": "Creating default preferences for user:",
+    "fetchError": "Error fetching preferences:",
+    "generalError": "Error in fetchPreferences:",
+    "loaded": "Preferences loaded:",
+    "saveError": {
+      "description": "Settings could not be saved, please try again",
+      "title": "Error"
+    },
+    "saved": {
+      "description": "Your preferences have been updated and saved permanently",
+      "title": "Settings saved"
+    },
+    "updateError": "Error updating preferences:",
+    "updateNoUser": "Cannot update preferences: no user or preferences",
+    "updateSuccess": "Preferences updated successfully:",
+    "updating": "Updating preferences with:"
+  },
   "preferencesSavedToastDesc": "个人资料将根据您的新偏好进行更新。",
   "preferencesSavedToastTitle": "偏好已保存",
   "premium": "高级",
@@ -1778,9 +1890,9 @@
   "processing": "处理中...",
   "processingText": "处理中...",
   "profile": "个人资料",
-  "profile.about.remainingChars": "剩余{{{count}}}个字符",
+  "profile.about.remainingChars": "剩余{{count}}个字符",
   "profile.bio.about": "关于",
-  "profile.bio.minCharsRemaining": "至少还需{{{count}}}个字符",
+  "profile.bio.minCharsRemaining": "至少还需{{count}}个字符",
   "profile.bio.placeholder": "介绍一下自己...（至少20个字符）",
   "profile.bio.placeholderEnd": "（至少20个字符）",
   "profile.bio.placeholderStart": "介绍一下自己...",
@@ -1791,13 +1903,17 @@
   "profile.gender.other": "其他",
   "profile.interests.choose": "选择您的兴趣",
   "profile.interests.maxReached": "您最多可以选择{{max}}个兴趣",
-  "profile.interests.selected": "已选择{{{count}}}个",
+  "profile.interests.selected": "已选择{{count}}个",
   "profile.location.label": "位置",
   "profile.location.placeholder": "城市，区",
   "profile.occupation.label": "职业",
   "profile.occupation.placeholder": "您的职业",
   "profileAnalytics": "个人资料分析",
   "profileBoost": "个人资料加速",
+  "profileCompletionCardDescription": "Complete your profile to increase your match potential",
+  "profileCompletionCardTitle": "Profile Completion",
+  "profileCompletionCompletedLabel": "Complete",
+  "profileCompletionTip": "Add more details to increase your visibility and get better matches",
   "profileDataNotFound": "未找到个人资料数据",
   "profileError": "个人资料错误",
   "profileExample1Name": "艾玛，24岁",
@@ -1876,6 +1992,7 @@
   "religionLabel": "宗教",
   "religionPlaceholder": "您的宗教信仰（可选）",
   "removeFeature": "移除功能",
+  "removeMatch": "Remove Match",
   "report": "报告",
   "reportDate": "报告日期",
   "reportDetails": "报告详情",
@@ -1894,13 +2011,16 @@
   "resolvedToday": "今日已解决",
   "restoreDatabase": "恢复数据库",
   "retentionRates": "留存率",
-  "retryText": "重试",
+  "retry": "Retry",
   "revenueAnalytics": "收入分���",
   "reviewReport": "审查报告",
   "rewind": {
+    "error": {
+      "description": "Failed to rewind swipe",
+      "title": "Rewind Error"
+    },
     "failed": {
       "description": "无法撤销滑动",
-      "error": "撤销失败",
       "title": "撤销失败"
     },
     "success": {
@@ -1930,12 +2050,14 @@
   "roleUpdatedMessage": "计划{{role}}已成功更新",
   "roleWillBeAssigned": "角色",
   "roles": {
+    "admin": "Admin",
     "makeAdmin": "设为管理员",
+    "makeGold": "设为黄金",
     "makeModerator": "设为版主",
+    "makePlatinum": "设为白金",
     "makeRegistered": "设为注册用户",
     "makeSilver": "设为白银",
-    "makeGold": "设为黄金",
-    "makePlatinum": "设为白金"
+    "moderator": "Moderator"
   },
   "safeEnvironment": "安全环境",
   "safeEnvironmentDesc": "您的隐私和安全是我们的首要任务，我们提供已验证的个人资料",
@@ -2036,6 +2158,80 @@
   "signUp": "注册",
   "signUpSubtitle": "加入数百万寻找爱情的人",
   "silver": "白银",
+  "silverFeatureTest": {
+    "additionalTestsTitle": "Additional Tests",
+    "buttons": {
+      "runAll": "Run All Tests",
+      "testAdvancedFilters": "Test Advanced Filters",
+      "testBoost": "Test Boost",
+      "testCalls": "Test Voice/Video Calls",
+      "testLike": "Test Like",
+      "testRewind": "Test Rewind Feature",
+      "testSeeLikes": "Test \"See Who Likes You\"",
+      "testSuperLike": "Test Super Like",
+      "testing": "Testing..."
+    },
+    "currentRole": "Current Role",
+    "description": "Testing all Silver tier features for user: {{email}}",
+    "featureTestsTitle": "Feature Tests",
+    "features": {
+      "advancedFilters": {
+        "description": "Silver users can use advanced filters",
+        "name": "Advanced Filters"
+      },
+      "dailyLikes": {
+        "description": "Silver users get {{count}} daily likes",
+        "name": "{{count}} Daily Likes"
+      },
+      "dailySuperlikes": {
+        "description": "Silver users get {{count}} daily super likes",
+        "name": "{{count}} Daily Super Likes"
+      },
+      "maxPhotos": {
+        "description": "Silver users can upload up to {{count}} photos",
+        "name": "{{count}} Photos Max"
+      },
+      "monthlyBoosts": {
+        "description": "Silver users get {{count}} boost per month",
+        "name": "{{count}} Monthly Boost"
+      },
+      "readReceipts": {
+        "description": "Silver users can see read receipts",
+        "name": "Read Receipts"
+      },
+      "rewindFeature": {
+        "description": "Silver users can rewind their last swipe",
+        "name": "Rewind Feature"
+      },
+      "seeWhoLikesYou": {
+        "description": "Silver users can see who liked them",
+        "name": "See Who Likes You"
+      },
+      "unlimitedMessages": {
+        "description": "Silver users can send unlimited messages",
+        "name": "Unlimited Messages"
+      },
+      "videoCalls": {
+        "description": "Silver users can make video calls",
+        "name": "Video Calls"
+      },
+      "voiceCalls": {
+        "description": "Silver users can make voice calls",
+        "name": "Voice Calls"
+      }
+    },
+    "stats": {
+      "dailyLikes": "Daily Likes",
+      "monthlyBoosts": "Monthly Boosts",
+      "superLikes": "Super Likes"
+    },
+    "status": {
+      "failed": "Failed",
+      "notTested": "Not tested",
+      "passed": "Passed"
+    },
+    "title": "Silver Feature Test"
+  },
   "siteSettings": "网站设置",
   "sixMonthPlan": "6个月计划",
   "sixMonthPlanDesc": "20%折扣+1个月免费",
@@ -2074,77 +2270,78 @@
   "step3Button": "开始发消息",
   "step3Description": "匹配后开始有意义的对话。计划您的第一次约会！",
   "step3Title": "聊天和见面",
-  "submitText": "提交",
+  "submit": "Submit",
   "subscription": {
-    "management": {
-      "grant": "授予订阅",
-      "granted": "订阅已授予",
-      "failed": "授予失败",
-      "updating": "正在��新...",
-      "activate": "激活",
-      "deactivate": "停用"
-    },
-    "types": {
-      "silver": "白银（基础高级版）",
-      "gold": "黄金（高级Plus）",
-      "platinum": "白金（终极版）"
-    },
     "durations": {
-      "7days": "7天",
       "14days": "14天",
       "30days": "30天",
       "60days": "60天",
+      "7days": "7天",
       "90days": "90天"
     },
     "features": {
       "dailyLikes": "每日{{count}}个喜欢",
-      "superLikes": "每日{{count}}个超级喜欢",
-      "monthlyBoosts": "每月{{count}}次加速"
+      "monthlyBoosts": "每月{{count}}次加速",
+      "superLikes": "每日{{count}}个超级喜欢"
+    },
+    "limits": {
+      "dailyBoosts": "每日加速",
+      "dailyLikes": "每日喜欢",
+      "dailyUsage": "每日使用量",
+      "more": "更多",
+      "plan": "计划",
+      "remaining": "剩余",
+      "superLikes": "超级喜欢"
+    },
+    "manageSubscription": "管理订阅",
+    "management": {
+      "activate": "激活",
+      "deactivate": "停用",
+      "failed": "授予失败",
+      "grant": "授予订阅",
+      "granted": "订阅已授予",
+      "updating": "正在��新..."
     },
     "status": {
       "currentPlan": "当前计划",
-      "validUntil": "有效期至",
-      "timeRemaining": "剩余时间",
       "daysRemaining": "剩余天数",
-      "features": "功能"
+      "features": "功能",
+      "timeRemaining": "剩余时间",
+      "validUntil": "有效期至"
     },
-    "limits": {
-      "dailyUsage": "每日使用量",
-      "dailyLikes": "每日喜欢",
-      "superLikes": "超级喜欢",
-      "dailyBoosts": "每日加速",
-      "remaining": "剩余",
-      "plan": "计划",
-      "more": "更多"
-    },
-    "tiers": {
-      "registered": "免费",
-      "silver": "白银",
-      "gold": "黄金",
-      "platinum": "白金"
-    },
-    "upgrade": "升级",
     "subscribenow": "立即订阅",
-    "manageSubscription": "管理订阅"
+    "tiers": {
+      "gold": "黄金",
+      "platinum": "白金",
+      "registered": "免费",
+      "silver": "白银"
+    },
+    "types": {
+      "gold": "黄金（高级Plus）",
+      "platinum": "白金（终极版）",
+      "silver": "白银（基础高级版）"
+    },
+    "upgrade": "升级"
   },
   "subscription.description": "管理您的订阅并监控您的每日使用限制",
   "subscription.error.description": "订阅过程中发生错误",
   "subscription.error.portalError": "无法打开订阅门户",
   "subscription.error.title": "订阅错误",
   "subscription.limits": {
-    "dailyLikes": "每日喜欢",
-    "superLikes": "超级喜欢",
-    "dailyBoosts": "每日加速",
-    "dailyUsage": "每日使用量",
-    "remaining": "剩余",
-    "unlimited": "无限",
-    "dailyLikeLimitReached": "已达到每日喜欢限制",
-    "dailySuperLikeLimitReached": "已达到每日超级喜欢限制",
-    "upgradeMessage": "达到每日限制？升级以获得更多喜欢和功能！",
-    "upgradeTo": "升级到：",
     "currentFeatures": "当前功能：",
+    "dailyBoosts": "每日加速",
+    "dailyLikeLimitReached": "已达到每日喜欢限制",
+    "dailyLikes": "每日喜欢",
+    "dailySuperLikeLimitReached": "已达到每日超级喜欢限制",
+    "dailyUsage": "每日使用量",
+    "monthlyBoosts": "Monthly Boosts",
     "more": "更多",
-    "plan": "计划"
+    "plan": "计划",
+    "remaining": "剩余",
+    "superLikes": "超级喜欢",
+    "unlimited": "无限",
+    "upgradeMessage": "达到每日限制？升级以获得更多喜欢和功能！",
+    "upgradeTo": "升级到："
   },
   "subscription.manage": "管理订阅",
   "subscription.management.description": "访问我们的升级页面查看所有可用计划，或通过Stripe的安全门户管理您现有的订阅。",
@@ -2152,25 +2349,25 @@
   "subscription.management.title": "订阅管理",
   "subscription.management.viewPlans": "查看所有计划",
   "subscription.status": {
-    "title": "订阅状态",
     "currentPlan": "当前计划",
-    "validUntil": "有效期至",
-    "timeRemaining": "剩余时间",
     "daysRemaining": "{{days}}天剩余",
     "expired": "已过期",
-    "features": "功能"
+    "features": "功能",
+    "timeRemaining": "剩余时间",
+    "title": "订阅状态",
+    "validUntil": "有效期至"
   },
   "subscription.subscribenow": "立即订阅",
   "subscription.tiers": {
     "free": "免费",
-    "registered": "免费",
-    "silver": "白银",
     "gold": "黄金",
-    "platinum": "白金"
+    "platinum": "白金",
+    "registered": "免费",
+    "silver": "白银"
   },
   "subscription.title": "订阅和使用",
   "subscription.upgrade": "升级",
-  "subscriptionActivated": "{{{tier}}}订阅已激活！",
+  "subscriptionActivated": "{{tier}}订阅已激活！",
   "subscriptionCongratulations": "恭喜！",
   "subscriptionEnds": "结束于：{{date}}",
   "subscriptionExpiresIn": "您的订阅将在",
@@ -2178,13 +2375,13 @@
   "subscriptionExpiringNotificationMessage": "您的订阅即将到期",
   "subscriptionExpiry": "订阅到期",
   "subscriptionGranted": "订阅已授予",
-  "subscriptionGrantedDesc": "{{{tier}}}订阅已授予{{{days}}}天",
+  "subscriptionGrantedDesc": "{{tier}}订阅已授予{{days}}天",
   "subscriptionHasBeenRenewed": "订阅已续订",
   "subscriptionManagement": "订阅管理",
   "subscriptionRenewedNotification": "订阅已续订",
   "subscriptionRenewedNotificationMessage": "您的订阅已续订",
   "subscriptionRole": {
-    "description": "此用户将被授予{{{role}}}订阅套餐并访问高级功能。",
+    "description": "此用户将被授予{{role}}订阅套餐并访问高级功能。",
     "title": "订阅权限"
   },
   "subscriptionSettingsDesc": "管理您的订阅并查看使用限制",
@@ -2202,6 +2399,8 @@
   "sunday": "星期日",
   "superLike": "超级喜欢",
   "superLikeDesc": "每天5个超级喜欢，脱颖而出",
+  "superLikeErrorDescription": "Unable to send super like. Please try again.",
+  "superLikeFailed": "Super Like Failed",
   "superLikeFeatureDescription": "显示您的特别兴趣并获得更多关注",
   "superLikeFeatureDetail": "无限超级喜欢",
   "superLikeFeatureTitle": "超级喜欢",
@@ -2217,17 +2416,19 @@
   "superLikesPerDay": "每天5个超级喜欢",
   "support": "支持",
   "support247": "24/7支持",
+  "swipeErrorDescription": "Failed to save your action. Please check your internet connection and try again.",
+  "swipeFailed": "Swipe Failed",
   "swipesReset": "所有滑动已成功重置",
   "swipesResetError": "重置滑动失败",
   "system": {
-    "ready": "系统就绪",
-    "notReady": "系统未就绪",
-    "refresh": "刷新",
-    "export": "导出",
     "clear": "清除",
+    "export": "导出",
+    "notReady": "系统未就绪",
+    "ready": "系统就绪",
+    "refresh": "刷新",
     "status": {
-      "on": "开",
-      "off": "关"
+      "off": "关",
+      "on": "开"
     }
   },
   "systemBackup": "系统备份",
@@ -2238,6 +2439,11 @@
   "takeAction": "采取行动",
   "terms": "条款",
   "termsOfService": "服务条款",
+  "testServiceRole": {
+    "button": "Test Service Role",
+    "testing": "Testing...",
+    "title": "Test Service Role Key"
+  },
   "testimonial1": "我们在2Sweety上相遇，一见钟情！现在我们正在计划我们的婚礼。",
   "testimonial2": "我用过的最好的约会应用。仅两周就找到了我的完美匹配！",
   "testimonial3": "真正了解兼容性的惊人算法。强烈推荐！",
@@ -2254,9 +2460,9 @@
   "thursday": "星期四",
   "tiers": {
     "basic": "基础",
-    "silver": "白银",
     "gold": "黄金",
-    "platinum": "白金"
+    "platinum": "白金",
+    "silver": "白银"
   },
   "timeoutError": "请求超时",
   "title": "标题",
@@ -2301,7 +2507,7 @@
   "unbanError": "解封用户时发生错误。",
   "unbanUser": "解封用户",
   "unbanningUser": "正在解封用户...",
-  "understoodText": "明白了",
+  "understood": "Understood",
   "unknown": "未知",
   "unknownError": "发生未知错误",
   "unknownUser": "未知用户",
@@ -2333,9 +2539,9 @@
   "upgradeToViewAnalytics": "升级到高级版以查看分析",
   "upload": {
     "noAuthToken": "无认证令牌",
-    "uploadFailed": "上传失败",
+    "photoDeleteError": "删除照片时出错：",
     "photoUploadError": "上传照片时出错：",
-    "photoDeleteError": "删除照片时出错："
+    "uploadFailed": "上传失败"
   },
   "uploadPhoto": "上传照片",
   "uploadPhotos": "上传您的照片",
@@ -2381,32 +2587,32 @@
   },
   "value": "值",
   "verification": {
-    "title": "获取验证",
+    "comingSoon": "即将推出",
     "description": "通过验证徽章向他人展示您是合法用户",
+    "emailInstructions": "我们将向您注册的电子邮件地址发送验证链接。",
+    "error": "验证失败",
+    "getVerified": "获取验证",
     "methods": {
       "email": {
-        "title": "电子邮件验证",
-        "description": "通过您的电子邮件地址进行快速简便的验证"
-      },
-      "phone": {
-        "title": "电话验证",
-        "description": "通过短信验证您的身份"
+        "description": "通过您的电子邮件地址进行快速简便的验证",
+        "title": "电子邮件验证"
       },
       "idDocument": {
-        "title": "身份证件验证",
-        "description": "使用政府颁发的身份证件进行最安全的验证"
+        "description": "使用政府颁发的身份证件进行最安全的验证",
+        "title": "身份证件验证"
+      },
+      "phone": {
+        "description": "通过短信验证您的身份",
+        "title": "电话验证"
       }
     },
-    "verify": "立即验证",
-    "verifying": "正在验证...",
+    "phoneInstructions": "我们将向您注册的电话号码发送验证码。",
     "submitted": "验证请求已提交",
     "success": "验证成功！",
-    "error": "验证失败",
-    "emailInstructions": "我们将向您注册的电子邮件地址发送验证链接。",
-    "phoneInstructions": "我们将向您注册的电话号码发送验证码。",
-    "comingSoon": "即将推出",
+    "title": "获取验证",
     "verifiedBadge": "已验证徽章",
-    "getVerified": "获取验证"
+    "verify": "立即验证",
+    "verifying": "正在验证..."
   },
   "verified": "已验证",
   "verifiedProfiles": "已验证的个人资料",
