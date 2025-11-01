@@ -114,7 +114,7 @@ RUN echo 'server { \
     \
     # API proxy (if needed) \
     location /api { \
-        proxy_pass https://gomeet.cscodetech.cloud; \
+        proxy_pass https://api.2sweety.com; \
         proxy_http_version 1.1; \
         proxy_set_header Upgrade $http_upgrade; \
         proxy_set_header Connection "upgrade"; \
@@ -128,8 +128,9 @@ RUN echo 'server { \
 # Copy built application from builder stage
 COPY --from=builder /app/build /usr/share/nginx/html
 
-# Copy service workers from builder if they exist (ignore if missing)
-COPY --from=builder /app/public/*.js /usr/share/nginx/html/ 2>/dev/null || true
+# Copy service workers from builder (Firebase messaging and OneSignal)
+COPY --from=builder /app/public/firebase-messaging-sw.js /usr/share/nginx/html/
+COPY --from=builder /app/public/OneSignalSDKWorker.js /usr/share/nginx/html/
 
 # Set permissions
 RUN chmod -R 755 /usr/share/nginx/html
