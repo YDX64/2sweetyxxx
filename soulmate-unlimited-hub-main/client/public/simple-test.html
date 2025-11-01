@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Photo Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>Simple Photo Test</h1>
+    <p>Testing if photos load correctly:</p>
+    
+    <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+        <div>
+            <h3>Efe 1</h3>
+            <img src="/media/images/efe_1.jpg" alt="Efe 1" style="width: 200px; height: 200px; object-fit: cover; border: 2px solid #ccc;">
+        </div>
+        
+        <div>
+            <h3>Isabella 1</h3>
+            <img src="/media/images/isabella_1.jpg" alt="Isabella 1" style="width: 200px; height: 200px; object-fit: cover; border: 2px solid #ccc;">
+        </div>
+        
+        <div>
+            <h3>Lina 1</h3>
+            <img src="/media/images/lina_1.jpg" alt="Lina 1" style="width: 200px; height: 200px; object-fit: cover; border: 2px solid #ccc;">
+        </div>
+        
+        <div>
+            <h3>Emma 1</h3>
+            <img src="/media/images/emma_1.jpg" alt="Emma 1" style="width: 200px; height: 200px; object-fit: cover; border: 2px solid #ccc;">
+        </div>
+    </div>
+    
+    <script>
+        // Test if images load
+        document.querySelectorAll('img').forEach((img, index) => {
+            img.onload = () => console.log(`Image ${index + 1} loaded successfully: ${img.src}`);
+            img.onerror = () => console.error(`Image ${index + 1} failed to load: ${img.src}`);
+        });
+    </script>
+</body>
+</html> 

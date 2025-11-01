@@ -1,0 +1,32 @@
+{
+    "mcpServers": {
+      "supabase": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@supabase/mcp-server-supabase@latest",
+          "--project-ref=kvrlzpdyeezmhjiiwfnp"
+        ],
+        "env": {
+          "SUPABASE_ACCESS_TOKEN": "sbp_e9d20ee2871bcc9f6434167a8ccfeef6c6ce5d67"
+        }
+      },
+      "puppeteer": {
+        "command": "npx",
+        "args": ["-y", "@modelcontextprotocol/server-puppeteer"]
+      },
+      "filesystem": {
+        "command": "npx",
+        "args": [
+          "-y",
+            "@modelcontextprotocol/server-filesystem",
+            "/Users/max/Desktop",
+            "/Users/max/Downloads"
+          ]
+      },
+      "Context7": {
+        "command": "npx",
+        "args": ["-y", "@upstash/context7-mcp"]
+      }
+    }
+}

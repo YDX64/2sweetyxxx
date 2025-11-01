@@ -21,8 +21,8 @@ RUN apk add --no-cache \
 # Copy package files from GoMeet Web directory
 COPY ["GoMeet Web/package.json", "GoMeet Web/package-lock.json*", "./"]
 
-# Install dependencies
-RUN npm ci --only=production --ignore-scripts && \
+# Install ALL dependencies (including devDependencies for build)
+RUN npm ci && \
     npm cache clean --force
 
 # Copy all source code from GoMeet Web

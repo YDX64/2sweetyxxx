@@ -1,0 +1,1156 @@
+# Translation Analysis Report
+================================================================================
+## Summary
+- Total unique keys across all files: 1538
+- Number of language files analyzed: 17
+
+### Key Count by Language:
+  - ar: 1402 keys
+  - da: 1402 keys
+  - de: 1452 keys
+  - en: 1403 keys
+  - es: 1433 keys
+  - fi: 1402 keys
+  - fr: 1433 keys
+  - it: 1433 keys
+  - ja: 1433 keys
+  - ko: 1433 keys
+  - nl: 1402 keys
+  - no: 1402 keys
+  - pt: 1433 keys
+  - ru: 1433 keys
+  - sv: 1402 keys
+  - tr: 1532 keys
+  - zh: 1433 keys
+
+
+## Missing Keys by Language
+--------------------------------------------------------------------------------
+
+### AR - Missing 136 keys:
+  - activeSubscriptions
+  - addMorePhotos
+  - admin.subscription.manual.grant
+  - admin.subscription.manual.setDate
+  - admin.subscription.manual.subscriptionType
+  - admin.subscription.manual.title
+  - analyticsNotAvailable
+  - banError
+  - banReasonLabel
+  - bestTimeToPost
+  ... and 126 more
+
+### DA - Missing 136 keys:
+  - activeSubscriptions
+  - addMorePhotos
+  - admin.subscription.manual.grant
+  - admin.subscription.manual.setDate
+  - admin.subscription.manual.subscriptionType
+  - admin.subscription.manual.title
+  - analyticsNotAvailable
+  - banError
+  - banReasonLabel
+  - bestTimeToPost
+  ... and 126 more
+
+### DE - Missing 86 keys:
+  - activeSubscriptions
+  - addMorePhotos
+  - analyticsNotAvailable
+  - bestTimeToPost
+  - boost.error.description
+  - boost.error.title
+  - dismissed
+  - engageWithOthers
+  - failedToDismiss
+  - failedToLikeBack
+  ... and 76 more
+
+### EN - Missing 135 keys:
+  - activeSubscriptions
+  - addMorePhotos
+  - admin.subscription.manual.grant
+  - admin.subscription.manual.setDate
+  - admin.subscription.manual.subscriptionType
+  - admin.subscription.manual.title
+  - analyticsNotAvailable
+  - banError
+  - banReasonLabel
+  - bestTimeToPost
+  ... and 125 more
+
+### ES - Missing 105 keys:
+  - activeSubscriptions
+  - addMorePhotos
+  - analyticsNotAvailable
+  - banError
+  - banReasonLabel
+  - bestTimeToPost
+  - boost.error.description
+  - boost.error.title
+  - close
+  - deleteError
+  ... and 95 more
+
+### FI - Missing 136 keys:
+  - activeSubscriptions
+  - addMorePhotos
+  - admin.subscription.manual.grant
+  - admin.subscription.manual.setDate
+  - admin.subscription.manual.subscriptionType
+  - admin.subscription.manual.title
+  - analyticsNotAvailable
+  - banError
+  - banReasonLabel
+  - bestTimeToPost
+  ... and 126 more
+
+### FR - Missing 105 keys:
+  - activeSubscriptions
+  - addMorePhotos
+  - analyticsNotAvailable
+  - banError
+  - banReasonLabel
+  - bestTimeToPost
+  - boost.error.description
+  - boost.error.title
+  - close
+  - deleteError
+  ... and 95 more
+
+### IT - Missing 105 keys:
+  - activeSubscriptions
+  - addMorePhotos
+  - analyticsNotAvailable
+  - banError
+  - banReasonLabel
+  - bestTimeToPost
+  - boost.error.description
+  - boost.error.title
+  - close
+  - deleteError
+  ... and 95 more
+
+### JA - Missing 105 keys:
+  - activeSubscriptions
+  - addMorePhotos
+  - analyticsNotAvailable
+  - banError
+  - banReasonLabel
+  - bestTimeToPost
+  - boost.error.description
+  - boost.error.title
+  - close
+  - deleteError
+  ... and 95 more
+
+### KO - Missing 105 keys:
+  - activeSubscriptions
+  - addMorePhotos
+  - analyticsNotAvailable
+  - banError
+  - banReasonLabel
+  - bestTimeToPost
+  - boost.error.description
+  - boost.error.title
+  - close
+  - deleteError
+  ... and 95 more
+
+### NL - Missing 136 keys:
+  - activeSubscriptions
+  - addMorePhotos
+  - admin.subscription.manual.grant
+  - admin.subscription.manual.setDate
+  - admin.subscription.manual.subscriptionType
+  - admin.subscription.manual.title
+  - analyticsNotAvailable
+  - banError
+  - banReasonLabel
+  - bestTimeToPost
+  ... and 126 more
+
+### NO - Missing 136 keys:
+  - activeSubscriptions
+  - addMorePhotos
+  - admin.subscription.manual.grant
+  - admin.subscription.manual.setDate
+  - admin.subscription.manual.subscriptionType
+  - admin.subscription.manual.title
+  - analyticsNotAvailable
+  - banError
+  - banReasonLabel
+  - bestTimeToPost
+  ... and 126 more
+
+### PT - Missing 105 keys:
+  - activeSubscriptions
+  - addMorePhotos
+  - analyticsNotAvailable
+  - banError
+  - banReasonLabel
+  - bestTimeToPost
+  - boost.error.description
+  - boost.error.title
+  - close
+  - deleteError
+  ... and 95 more
+
+### RU - Missing 105 keys:
+  - activeSubscriptions
+  - addMorePhotos
+  - analyticsNotAvailable
+  - banError
+  - banReasonLabel
+  - bestTimeToPost
+  - boost.error.description
+  - boost.error.title
+  - close
+  - deleteError
+  ... and 95 more
+
+### SV - Missing 136 keys:
+  - activeSubscriptions
+  - addMorePhotos
+  - admin.subscription.manual.grant
+  - admin.subscription.manual.setDate
+  - admin.subscription.manual.subscriptionType
+  - admin.subscription.manual.title
+  - analyticsNotAvailable
+  - banError
+  - banReasonLabel
+  - bestTimeToPost
+  ... and 126 more
+
+### TR - Missing 6 keys:
+  - boost.error.description
+  - boost.error.title
+  - limit.description.upgradeLikes
+  - limit.description.upgradeSuperLikes
+  - rewind.error.description
+  - rewind.error.title
+
+### ZH - Missing 105 keys:
+  - activeSubscriptions
+  - addMorePhotos
+  - analyticsNotAvailable
+  - banError
+  - banReasonLabel
+  - bestTimeToPost
+  - boost.error.description
+  - boost.error.title
+  - close
+  - deleteError
+  ... and 95 more
+
+
+## Keys Not Present in All Files
+--------------------------------------------------------------------------------
+
+- Key: activeSubscriptions
+  Present in: tr
+  Missing from: ar, da, de, en, es, fi, fr, it, ja, ko, nl, no, pt, ru, sv, zh
+
+- Key: addMorePhotos
+  Present in: tr
+  Missing from: ar, da, de, en, es, fi, fr, it, ja, ko, nl, no, pt, ru, sv, zh
+
+- Key: admin.subscription.manual.grant
+  Present in: de, es, fr, it, ja, ko, pt, ru, tr, zh
+  Missing from: ar, da, en, fi, nl, no, sv
+
+- Key: admin.subscription.manual.setDate
+  Present in: de, es, fr, it, ja, ko, pt, ru, tr, zh
+  Missing from: ar, da, en, fi, nl, no, sv
+
+- Key: admin.subscription.manual.subscriptionType
+  Present in: de, es, fr, it, ja, ko, pt, ru, tr, zh
+  Missing from: ar, da, en, fi, nl, no, sv
+
+- Key: admin.subscription.manual.title
+  Present in: de, es, fr, it, ja, ko, pt, ru, tr, zh
+  Missing from: ar, da, en, fi, nl, no, sv
+
+- Key: analyticsNotAvailable
+  Present in: tr
+  Missing from: ar, da, de, en, es, fi, fr, it, ja, ko, nl, no, pt, ru, sv, zh
+
+- Key: banError
+  Present in: de, tr
+  Missing from: ar, da, en, es, fi, fr, it, ja, ko, nl, no, pt, ru, sv, zh
+
+- Key: banReasonLabel
+  Present in: de, tr
+  Missing from: ar, da, en, es, fi, fr, it, ja, ko, nl, no, pt, ru, sv, zh
+
+- Key: bestTimeToPost
+  Present in: tr
+  Missing from: ar, da, de, en, es, fi, fr, it, ja, ko, nl, no, pt, ru, sv, zh
+
+- Key: boost.error.description
+  Present in: en
+  Missing from: ar, da, de, es, fi, fr, it, ja, ko, nl, no, pt, ru, sv, tr, zh
+
+- Key: boost.error.title
+  Present in: en
+  Missing from: ar, da, de, es, fi, fr, it, ja, ko, nl, no, pt, ru, sv, tr, zh
+
+- Key: boost.failed.error
+  Present in: ar, da, de, es, fi, fr, it, ja, ko, nl, no, pt, ru, sv, tr, zh
+  Missing from: en
+
+- Key: close
+  Present in: de, tr
+  Missing from: ar, da, en, es, fi, fr, it, ja, ko, nl, no, pt, ru, sv, zh
+
+- Key: deleteError
+  Present in: de, tr
+  Missing from: ar, da, en, es, fi, fr, it, ja, ko, nl, no, pt, ru, sv, zh
+
+- Key: dismissed
+  Present in: tr
+  Missing from: ar, da, de, en, es, fi, fr, it, ja, ko, nl, no, pt, ru, sv, zh
+
+- Key: engageWithOthers
+  Present in: tr
+  Missing from: ar, da, de, en, es, fi, fr, it, ja, ko, nl, no, pt, ru, sv, zh
+
+- Key: failedToDismiss
+  Present in: tr
+  Missing from: ar, da, de, en, es, fi, fr, it, ja, ko, nl, no, pt, ru, sv, zh
+
+- Key: failedToLikeBack
+  Present in: tr
+  Missing from: ar, da, de, en, es, fi, fr, it, ja, ko, nl, no, pt, ru, sv, zh
+
+- Key: failedToLoadGuests
+  Present in: tr
+  Missing from: ar, da, de, en, es, fi, fr, it, ja, ko, nl, no, pt, ru, sv, zh
+
+... and 121 more partial keys
+
+
+## Untranslated Content (Identical to English)
+--------------------------------------------------------------------------------
+
+### AR - 1343 untranslated entries:
+  - ORCONTINUEWITHMAIL: "OR CONTINUE WITH EMAIL"
+  - about: "About"
+  - aboutUs: "About Us"
+  - aboutYou: "About You"
+  - accessLogs: "Access Logs"
+  ... and 1338 more
+
+### DA - 1344 untranslated entries:
+  - ORCONTINUEWITHMAIL: "OR CONTINUE WITH EMAIL"
+  - about: "About"
+  - aboutUs: "About Us"
+  - aboutYou: "About You"
+  - accessLogs: "Access Logs"
+  ... and 1339 more
+
+### DE - 362 untranslated entries:
+  - ORCONTINUEWITHMAIL: "OR CONTINUE WITH EMAIL"
+  - accessLogs: "Access Logs"
+  - accountInfo: "Account Info"
+  - activity: "Activity"
+  - admin: "Admin"
+  ... and 357 more
+
+### ES - 363 untranslated entries:
+  - ORCONTINUEWITHMAIL: "OR CONTINUE WITH EMAIL"
+  - accessLogs: "Access Logs"
+  - accountInfo: "Account Info"
+  - activity: "Activity"
+  - adminActions: "Admin Actions"
+  ... and 358 more
+
+### FI - 1343 untranslated entries:
+  - ORCONTINUEWITHMAIL: "OR CONTINUE WITH EMAIL"
+  - about: "About"
+  - aboutUs: "About Us"
+  - aboutYou: "About You"
+  - accessLogs: "Access Logs"
+  ... and 1338 more
+
+### FR - 388 untranslated entries:
+  - accessLogs: "Access Logs"
+  - accountInfo: "Account Info"
+  - actions: "Actions"
+  - activity: "Activity"
+  - adminActions: "Admin Actions"
+  ... and 383 more
+
+### IT - 367 untranslated entries:
+  - ORCONTINUEWITHMAIL: "OR CONTINUE WITH EMAIL"
+  - accessLogs: "Access Logs"
+  - account: "Account"
+  - accountInfo: "Account Info"
+  - activity: "Activity"
+  ... and 362 more
+
+### JA - 348 untranslated entries:
+  - ORCONTINUEWITHMAIL: "OR CONTINUE WITH EMAIL"
+  - accessLogs: "Access Logs"
+  - accountInfo: "Account Info"
+  - activity: "Activity"
+  - adminActions: "Admin Actions"
+  ... and 343 more
+
+### KO - 349 untranslated entries:
+  - ORCONTINUEWITHMAIL: "OR CONTINUE WITH EMAIL"
+  - accessLogs: "Access Logs"
+  - accountInfo: "Account Info"
+  - activity: "Activity"
+  - adminActions: "Admin Actions"
+  ... and 344 more
+
+### NL - 1344 untranslated entries:
+  - ORCONTINUEWITHMAIL: "OR CONTINUE WITH EMAIL"
+  - about: "About"
+  - aboutUs: "About Us"
+  - aboutYou: "About You"
+  - accessLogs: "Access Logs"
+  ... and 1339 more
+
+### NO - 1343 untranslated entries:
+  - ORCONTINUEWITHMAIL: "OR CONTINUE WITH EMAIL"
+  - about: "About"
+  - aboutUs: "About Us"
+  - aboutYou: "About You"
+  - accessLogs: "Access Logs"
+  ... and 1338 more
+
+### PT - 359 untranslated entries:
+  - ORCONTINUEWITHMAIL: "OR CONTINUE WITH EMAIL"
+  - accessLogs: "Access Logs"
+  - accountInfo: "Account Info"
+  - activity: "Activity"
+  - adminActions: "Admin Actions"
+  ... and 354 more
+
+### RU - 345 untranslated entries:
+  - ORCONTINUEWITHMAIL: "OR CONTINUE WITH EMAIL"
+  - accessLogs: "Access Logs"
+  - accountInfo: "Account Info"
+  - activity: "Activity"
+  - adminActions: "Admin Actions"
+  ... and 340 more
+
+### SV - 1343 untranslated entries:
+  - ORCONTINUEWITHMAIL: "OR CONTINUE WITH EMAIL"
+  - about: "About"
+  - aboutUs: "About Us"
+  - aboutYou: "About You"
+  - accessLogs: "Access Logs"
+  ... and 1338 more
+
+### TR - 166 untranslated entries:
+  - accountInfo: "Account Info"
+  - activity: "Activity"
+  - admin: "Admin"
+  - adminPanelAccessDenied: "Admin panel access DENIED"
+  - adminPanelAccessGranted: "Admin panel access GRANTED"
+  ... and 161 more
+
+### ZH - 348 untranslated entries:
+  - ORCONTINUEWITHMAIL: "OR CONTINUE WITH EMAIL"
+  - accessLogs: "Access Logs"
+  - accountInfo: "Account Info"
+  - activity: "Activity"
+  - adminActions: "Admin Actions"
+  ... and 343 more
+
+
+## Suspicious Translations (Wrong Language Detected)
+--------------------------------------------------------------------------------
+
+### AR - 159 suspicious entries:
+
+  - Key: ORCONTINUEWITHMAIL
+    Value: "OR CONTINUE WITH EMAIL"
+    Issue: English text in ar file
+
+  - Key: adminWarning.description
+    Value: "User with admin role will have all permissions on the platform"
+    Issue: English text in ar file
+
+  - Key: adminWarning.permissions.assignRoles
+    Value: "Assign/remove other admins and moderators"
+    Issue: English text in ar file
+
+  - Key: adminWarning.irreversible
+    Value: "This action cannot be undone. Are you sure?"
+    Issue: English text in ar file
+
+  - Key: ageRangeDescription
+    Value: "You will see people between {min_age}-{max_age} years old"
+    Issue: English text in ar file
+
+  - Key: allowSuperLikesDescription
+    Value: "Receive super likes from other users"
+    Issue: English text in ar file
+
+  - Key: alreadyHaveAccount
+    Value: "Already have an account?"
+    Issue: English text in ar file
+
+  - Key: authStateNotLoaded
+    Value: "Auth state not loaded yet, waiting..."
+    Issue: English text in ar file
+
+  - Key: banReasonPlaceholder
+    Value: "Explain the reason for banning..."
+    Issue: English text in ar file
+
+  - Key: banUserDescription
+    Value: "{user} will be banned and access to the application will be blocked."
+    Issue: English text in ar file
+
+  ... and 149 more
+
+### DA - 160 suspicious entries:
+
+  - Key: ORCONTINUEWITHMAIL
+    Value: "OR CONTINUE WITH EMAIL"
+    Issue: English text in da file
+
+  - Key: adminWarning.description
+    Value: "User with admin role will have all permissions on the platform"
+    Issue: English text in da file
+
+  - Key: adminWarning.permissions.assignRoles
+    Value: "Assign/remove other admins and moderators"
+    Issue: English text in da file
+
+  - Key: adminWarning.irreversible
+    Value: "This action cannot be undone. Are you sure?"
+    Issue: English text in da file
+
+  - Key: ageRangeDescription
+    Value: "You will see people between {min_age}-{max_age} years old"
+    Issue: English text in da file
+
+  - Key: allowSuperLikesDescription
+    Value: "Receive super likes from other users"
+    Issue: English text in da file
+
+  - Key: alreadyHaveAccount
+    Value: "Already have an account?"
+    Issue: English text in da file
+
+  - Key: authStateNotLoaded
+    Value: "Auth state not loaded yet, waiting..."
+    Issue: English text in da file
+
+  - Key: banReasonPlaceholder
+    Value: "Explain the reason for banning..."
+    Issue: English text in da file
+
+  - Key: banUserDescription
+    Value: "{user} will be banned and access to the application will be blocked."
+    Issue: English text in da file
+
+  ... and 150 more
+
+### DE - 177 suspicious entries:
+
+  - Key: ORCONTINUEWITHMAIL
+    Value: "OR CONTINUE WITH EMAIL"
+    Issue: English text in de file
+
+  - Key: about
+    Value: "Über"
+    Issue: Turkish text in de file
+
+  - Key: aboutUs
+    Value: "Über Uns"
+    Issue: Turkish text in de file
+
+  - Key: aboutYou
+    Value: "Über Sie"
+    Issue: Turkish text in de file
+
+  - Key: addFeature
+    Value: "Funktion hinzufügen"
+    Issue: Turkish text in de file
+
+  - Key: addPhoto
+    Value: "Foto hinzufügen"
+    Issue: Turkish text in de file
+
+  - Key: adminWarning.description
+    Value: "User with admin role will have all permissions on the platform"
+    Issue: English text in de file
+
+  - Key: adminWarning.permissions.assignRoles
+    Value: "Assign/remove other admins and moderators"
+    Issue: English text in de file
+
+  - Key: adminWarning.irreversible
+    Value: "This action cannot be undone. Are you sure?"
+    Issue: English text in de file
+
+  - Key: aiTranslate
+    Value: "KI-Übersetzung"
+    Issue: Turkish text in de file
+
+  ... and 167 more
+
+### ES - 31 suspicious entries:
+
+  - Key: ORCONTINUEWITHMAIL
+    Value: "OR CONTINUE WITH EMAIL"
+    Issue: English text in es file
+
+  - Key: adminWarning.description
+    Value: "User with admin role will have all permissions on the platform"
+    Issue: English text in es file
+
+  - Key: adminWarning.permissions.assignRoles
+    Value: "Assign/remove other admins and moderators"
+    Issue: English text in es file
+
+  - Key: adminWarning.irreversible
+    Value: "This action cannot be undone. Are you sure?"
+    Issue: English text in es file
+
+  - Key: authStateNotLoaded
+    Value: "Auth state not loaded yet, waiting..."
+    Issue: English text in es file
+
+  - Key: banReasonPlaceholder
+    Value: "Explain the reason for banning..."
+    Issue: English text in es file
+
+  - Key: banUserDescription
+    Value: "{user} will be banned and access to the application will be blocked."
+    Issue: English text in es file
+
+  - Key: confirmDeleteUser
+    Value: "Are you sure you want to delete this user? This action cannot be undone."
+    Issue: English text in es file
+
+  - Key: insufficientPermissions
+    Value: "You don't have permission for this operation"
+    Issue: English text in es file
+
+  - Key: loginRequiredDesc
+    Value: "Please log in to access the admin panel."
+    Issue: English text in es file
+
+  ... and 21 more
+
+### FI - 168 suspicious entries:
+
+  - Key: ORCONTINUEWITHMAIL
+    Value: "OR CONTINUE WITH EMAIL"
+    Issue: English text in fi file
+
+  - Key: adminWarning.description
+    Value: "User with admin role will have all permissions on the platform"
+    Issue: English text in fi file
+
+  - Key: adminWarning.permissions.assignRoles
+    Value: "Assign/remove other admins and moderators"
+    Issue: English text in fi file
+
+  - Key: adminWarning.irreversible
+    Value: "This action cannot be undone. Are you sure?"
+    Issue: English text in fi file
+
+  - Key: ageRangeDescription
+    Value: "You will see people between {min_age}-{max_age} years old"
+    Issue: English text in fi file
+
+  - Key: allowSuperLikesDescription
+    Value: "Receive super likes from other users"
+    Issue: English text in fi file
+
+  - Key: alreadyHaveAccount
+    Value: "Already have an account?"
+    Issue: English text in fi file
+
+  - Key: authStateNotLoaded
+    Value: "Auth state not loaded yet, waiting..."
+    Issue: English text in fi file
+
+  - Key: banReasonPlaceholder
+    Value: "Explain the reason for banning..."
+    Issue: English text in fi file
+
+  - Key: banUserDescription
+    Value: "{user} will be banned and access to the application will be blocked."
+    Issue: English text in fi file
+
+  ... and 158 more
+
+### FR - 33 suspicious entries:
+
+  - Key: adminWarning.description
+    Value: "User with admin role will have all permissions on the platform"
+    Issue: English text in fr file
+
+  - Key: adminWarning.permissions.assignRoles
+    Value: "Assign/remove other admins and moderators"
+    Issue: English text in fr file
+
+  - Key: adminWarning.irreversible
+    Value: "This action cannot be undone. Are you sure?"
+    Issue: English text in fr file
+
+  - Key: authStateNotLoaded
+    Value: "Auth state not loaded yet, waiting..."
+    Issue: English text in fr file
+
+  - Key: banReasonPlaceholder
+    Value: "Explain the reason for banning..."
+    Issue: English text in fr file
+
+  - Key: banUserDescription
+    Value: "{user} will be banned and access to the application will be blocked."
+    Issue: English text in fr file
+
+  - Key: confirmDeleteUser
+    Value: "Are you sure you want to delete this user? This action cannot be undone."
+    Issue: English text in fr file
+
+  - Key: howItWorks
+    Value: "Comment Ça Marche"
+    Issue: Turkish text in fr file
+
+  - Key: insufficientPermissions
+    Value: "You don't have permission for this operation"
+    Issue: English text in fr file
+
+  - Key: interest.Svenska artister
+    Value: "Artistes français"
+    Issue: Turkish text in fr file
+
+  ... and 23 more
+
+### IT - 31 suspicious entries:
+
+  - Key: ORCONTINUEWITHMAIL
+    Value: "OR CONTINUE WITH EMAIL"
+    Issue: English text in it file
+
+  - Key: adminWarning.description
+    Value: "User with admin role will have all permissions on the platform"
+    Issue: English text in it file
+
+  - Key: adminWarning.permissions.assignRoles
+    Value: "Assign/remove other admins and moderators"
+    Issue: English text in it file
+
+  - Key: adminWarning.irreversible
+    Value: "This action cannot be undone. Are you sure?"
+    Issue: English text in it file
+
+  - Key: authStateNotLoaded
+    Value: "Auth state not loaded yet, waiting..."
+    Issue: English text in it file
+
+  - Key: banReasonPlaceholder
+    Value: "Explain the reason for banning..."
+    Issue: English text in it file
+
+  - Key: banUserDescription
+    Value: "{user} will be banned and access to the application will be blocked."
+    Issue: English text in it file
+
+  - Key: confirmDeleteUser
+    Value: "Are you sure you want to delete this user? This action cannot be undone."
+    Issue: English text in it file
+
+  - Key: insufficientPermissions
+    Value: "You don't have permission for this operation"
+    Issue: English text in it file
+
+  - Key: loginRequiredDesc
+    Value: "Please log in to access the admin panel."
+    Issue: English text in it file
+
+  ... and 21 more
+
+### JA - 34 suspicious entries:
+
+  - Key: ORCONTINUEWITHMAIL
+    Value: "OR CONTINUE WITH EMAIL"
+    Issue: English text in ja file
+
+  - Key: adminWarning.description
+    Value: "User with admin role will have all permissions on the platform"
+    Issue: English text in ja file
+
+  - Key: adminWarning.permissions.assignRoles
+    Value: "Assign/remove other admins and moderators"
+    Issue: English text in ja file
+
+  - Key: adminWarning.irreversible
+    Value: "This action cannot be undone. Are you sure?"
+    Issue: English text in ja file
+
+  - Key: authStateNotLoaded
+    Value: "Auth state not loaded yet, waiting..."
+    Issue: English text in ja file
+
+  - Key: banReasonPlaceholder
+    Value: "Explain the reason for banning..."
+    Issue: English text in ja file
+
+  - Key: banUserDescription
+    Value: "{user} will be banned and access to the application will be blocked."
+    Issue: English text in ja file
+
+  - Key: confirmDeleteUser
+    Value: "Are you sure you want to delete this user? This action cannot be undone."
+    Issue: English text in ja file
+
+  - Key: findPeopleNearby
+    Value: "Find people nearby and increase your match potential"
+    Issue: English text in ja file
+
+  - Key: insufficientPermissions
+    Value: "You don't have permission for this operation"
+    Issue: English text in ja file
+
+  ... and 24 more
+
+### KO - 34 suspicious entries:
+
+  - Key: ORCONTINUEWITHMAIL
+    Value: "OR CONTINUE WITH EMAIL"
+    Issue: English text in ko file
+
+  - Key: adminWarning.description
+    Value: "User with admin role will have all permissions on the platform"
+    Issue: English text in ko file
+
+  - Key: adminWarning.permissions.assignRoles
+    Value: "Assign/remove other admins and moderators"
+    Issue: English text in ko file
+
+  - Key: adminWarning.irreversible
+    Value: "This action cannot be undone. Are you sure?"
+    Issue: English text in ko file
+
+  - Key: authStateNotLoaded
+    Value: "Auth state not loaded yet, waiting..."
+    Issue: English text in ko file
+
+  - Key: banReasonPlaceholder
+    Value: "Explain the reason for banning..."
+    Issue: English text in ko file
+
+  - Key: banUserDescription
+    Value: "{user} will be banned and access to the application will be blocked."
+    Issue: English text in ko file
+
+  - Key: confirmDeleteUser
+    Value: "Are you sure you want to delete this user? This action cannot be undone."
+    Issue: English text in ko file
+
+  - Key: findPeopleNearby
+    Value: "Find people nearby and increase your match potential"
+    Issue: English text in ko file
+
+  - Key: insufficientPermissions
+    Value: "You don't have permission for this operation"
+    Issue: English text in ko file
+
+  ... and 24 more
+
+### NL - 159 suspicious entries:
+
+  - Key: ORCONTINUEWITHMAIL
+    Value: "OR CONTINUE WITH EMAIL"
+    Issue: English text in nl file
+
+  - Key: adminWarning.description
+    Value: "User with admin role will have all permissions on the platform"
+    Issue: English text in nl file
+
+  - Key: adminWarning.permissions.assignRoles
+    Value: "Assign/remove other admins and moderators"
+    Issue: English text in nl file
+
+  - Key: adminWarning.irreversible
+    Value: "This action cannot be undone. Are you sure?"
+    Issue: English text in nl file
+
+  - Key: ageRangeDescription
+    Value: "You will see people between {min_age}-{max_age} years old"
+    Issue: English text in nl file
+
+  - Key: allowSuperLikesDescription
+    Value: "Receive super likes from other users"
+    Issue: English text in nl file
+
+  - Key: alreadyHaveAccount
+    Value: "Already have an account?"
+    Issue: English text in nl file
+
+  - Key: authStateNotLoaded
+    Value: "Auth state not loaded yet, waiting..."
+    Issue: English text in nl file
+
+  - Key: banReasonPlaceholder
+    Value: "Explain the reason for banning..."
+    Issue: English text in nl file
+
+  - Key: banUserDescription
+    Value: "{user} will be banned and access to the application will be blocked."
+    Issue: English text in nl file
+
+  ... and 149 more
+
+### NO - 161 suspicious entries:
+
+  - Key: ORCONTINUEWITHMAIL
+    Value: "OR CONTINUE WITH EMAIL"
+    Issue: English text in no file
+
+  - Key: adminWarning.description
+    Value: "User with admin role will have all permissions on the platform"
+    Issue: English text in no file
+
+  - Key: adminWarning.permissions.assignRoles
+    Value: "Assign/remove other admins and moderators"
+    Issue: English text in no file
+
+  - Key: adminWarning.irreversible
+    Value: "This action cannot be undone. Are you sure?"
+    Issue: English text in no file
+
+  - Key: ageRangeDescription
+    Value: "You will see people between {min_age}-{max_age} years old"
+    Issue: English text in no file
+
+  - Key: allowSuperLikesDescription
+    Value: "Receive super likes from other users"
+    Issue: English text in no file
+
+  - Key: alreadyHaveAccount
+    Value: "Already have an account?"
+    Issue: English text in no file
+
+  - Key: authStateNotLoaded
+    Value: "Auth state not loaded yet, waiting..."
+    Issue: English text in no file
+
+  - Key: banReasonPlaceholder
+    Value: "Explain the reason for banning..."
+    Issue: English text in no file
+
+  - Key: banUserDescription
+    Value: "{user} will be banned and access to the application will be blocked."
+    Issue: English text in no file
+
+  ... and 151 more
+
+### PT - 217 suspicious entries:
+
+  - Key: ORCONTINUEWITHMAIL
+    Value: "OR CONTINUE WITH EMAIL"
+    Issue: English text in pt file
+
+  - Key: actions
+    Value: "Ações"
+    Issue: Turkish text in pt file
+
+  - Key: admin.subscription.manual.setDate
+    Value: "Definir Data de Expiração"
+    Issue: Turkish text in pt file
+
+  - Key: adminWarning.description
+    Value: "User with admin role will have all permissions on the platform"
+    Issue: English text in pt file
+
+  - Key: adminWarning.permissions.assignRoles
+    Value: "Assign/remove other admins and moderators"
+    Issue: English text in pt file
+
+  - Key: adminWarning.irreversible
+    Value: "This action cannot be undone. Are you sure?"
+    Issue: English text in pt file
+
+  - Key: advanced
+    Value: "Avançado"
+    Issue: Turkish text in pt file
+
+  - Key: advancedAnalytics
+    Value: "Análises Avançadas"
+    Issue: Turkish text in pt file
+
+  - Key: advancedFiltering
+    Value: "Filtragem Avançada"
+    Issue: Turkish text in pt file
+
+  - Key: advancedFilters
+    Value: "Filtros avançados"
+    Issue: Turkish text in pt file
+
+  ... and 207 more
+
+### RU - 31 suspicious entries:
+
+  - Key: ORCONTINUEWITHMAIL
+    Value: "OR CONTINUE WITH EMAIL"
+    Issue: English text in ru file
+
+  - Key: adminWarning.description
+    Value: "User with admin role will have all permissions on the platform"
+    Issue: English text in ru file
+
+  - Key: adminWarning.permissions.assignRoles
+    Value: "Assign/remove other admins and moderators"
+    Issue: English text in ru file
+
+  - Key: adminWarning.irreversible
+    Value: "This action cannot be undone. Are you sure?"
+    Issue: English text in ru file
+
+  - Key: authStateNotLoaded
+    Value: "Auth state not loaded yet, waiting..."
+    Issue: English text in ru file
+
+  - Key: banReasonPlaceholder
+    Value: "Explain the reason for banning..."
+    Issue: English text in ru file
+
+  - Key: banUserDescription
+    Value: "{user} will be banned and access to the application will be blocked."
+    Issue: English text in ru file
+
+  - Key: confirmDeleteUser
+    Value: "Are you sure you want to delete this user? This action cannot be undone."
+    Issue: English text in ru file
+
+  - Key: insufficientPermissions
+    Value: "You don't have permission for this operation"
+    Issue: English text in ru file
+
+  - Key: loginRequiredDesc
+    Value: "Please log in to access the admin panel."
+    Issue: English text in ru file
+
+  ... and 21 more
+
+### SV - 166 suspicious entries:
+
+  - Key: ORCONTINUEWITHMAIL
+    Value: "OR CONTINUE WITH EMAIL"
+    Issue: English text in sv file
+
+  - Key: adminWarning.description
+    Value: "User with admin role will have all permissions on the platform"
+    Issue: English text in sv file
+
+  - Key: adminWarning.permissions.assignRoles
+    Value: "Assign/remove other admins and moderators"
+    Issue: English text in sv file
+
+  - Key: adminWarning.irreversible
+    Value: "This action cannot be undone. Are you sure?"
+    Issue: English text in sv file
+
+  - Key: ageRangeDescription
+    Value: "You will see people between {min_age}-{max_age} years old"
+    Issue: English text in sv file
+
+  - Key: allowSuperLikesDescription
+    Value: "Receive super likes from other users"
+    Issue: English text in sv file
+
+  - Key: alreadyHaveAccount
+    Value: "Already have an account?"
+    Issue: English text in sv file
+
+  - Key: authStateNotLoaded
+    Value: "Auth state not loaded yet, waiting..."
+    Issue: English text in sv file
+
+  - Key: banReasonPlaceholder
+    Value: "Explain the reason for banning..."
+    Issue: English text in sv file
+
+  - Key: banUserDescription
+    Value: "{user} will be banned and access to the application will be blocked."
+    Issue: English text in sv file
+
+  ... and 156 more
+
+### TR - 3 suspicious entries:
+
+  - Key: insufficientPermissions
+    Value: "You don't have permission for this operation"
+    Issue: English text in tr file
+
+  - Key: profileDataNotFound
+    Value: "Profile data not found"
+    Issue: English text in tr file
+
+  - Key: selectNewRoleFor
+    Value: "Select new role for {user}"
+    Issue: English text in tr file
+
+### ZH - 34 suspicious entries:
+
+  - Key: ORCONTINUEWITHMAIL
+    Value: "OR CONTINUE WITH EMAIL"
+    Issue: English text in zh file
+
+  - Key: adminWarning.description
+    Value: "User with admin role will have all permissions on the platform"
+    Issue: English text in zh file
+
+  - Key: adminWarning.permissions.assignRoles
+    Value: "Assign/remove other admins and moderators"
+    Issue: English text in zh file
+
+  - Key: adminWarning.irreversible
+    Value: "This action cannot be undone. Are you sure?"
+    Issue: English text in zh file
+
+  - Key: authStateNotLoaded
+    Value: "Auth state not loaded yet, waiting..."
+    Issue: English text in zh file
+
+  - Key: banReasonPlaceholder
+    Value: "Explain the reason for banning..."
+    Issue: English text in zh file
+
+  - Key: banUserDescription
+    Value: "{user} will be banned and access to the application will be blocked."
+    Issue: English text in zh file
+
+  - Key: confirmDeleteUser
+    Value: "Are you sure you want to delete this user? This action cannot be undone."
+    Issue: English text in zh file
+
+  - Key: findPeopleNearby
+    Value: "Find people nearby and increase your match potential"
+    Issue: English text in zh file
+
+  - Key: insufficientPermissions
+    Value: "You don't have permission for this operation"
+    Issue: English text in zh file
+
+  ... and 24 more
+
+
+## Special Focus: Swedish (sv.json) Turkish Text Issues
+--------------------------------------------------------------------------------
+Found 10 entries with Turkish text in Swedish file:
+
+- errorOccurred: "Ett fel uppstod. Försök igen."
+- feature.requires.admin: "Administratörsåtkomst krävs"
+- heroProfileCity2: "Göteborg"
+- limit.description.dailyLikes: "Uppgradera för obegränsade gilla-markeringar"
+- limit.description.dailySuperLikes: "Uppgradera för fler supergilla-markeringar"
+- password: "Lösenord"
+- passwordPlaceholder: "Ange ditt lösenord"
+- testimonialCity2: "Göteborg"
+- testimonialCity3: "Malmö"
+- validation.conversationStartError: "Kunde inte starta konversation, försök igen"

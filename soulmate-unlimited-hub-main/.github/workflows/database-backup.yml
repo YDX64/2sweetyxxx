@@ -1,0 +1,252 @@
+name: Database Backup
+
+on:
+  schedule:
+    # Run daily at 3 AM UTC
+    - cron: '0 3 * * *'
+  workflow_dispatch:
+    inputs:
+      backup_type:
+        description: 'Type of database backup'
+        required: false
+        default: 'schema'
+        type: choice
+        options:
+          - schema
+          - full
+          - migrations-only
+
+env:
+  DB_BACKUP_RETENTION_DAYS: 30
+
+jobs:
+  backup-database:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Get timestamp
+        id: timestamp
+        run: |
+          echo "timestamp=$(date +'%Y%m%d-%H%M%S')" >> $GITHUB_OUTPUT
+          echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+          
+      - name: Create database backup directory
+        run: mkdir -p database-backups
+        
+      - name: Export database schema
+        run: |
+          echo "Exporting database schema..."
+          
+          # Create schema backup
+          cat > "database-backups/schema-${{ steps.timestamp.outputs.timestamp }}.sql" << 'EOF'
+          -- Database Schema Backup
+          -- Generated: ${{ steps.timestamp.outputs.timestamp }}
+          -- Type: ${{ github.event.inputs.backup_type || 'schema' }}
+          
+          EOF
+          
+          # Append all migration files in order
+          if [ -d "supabase/migrations" ]; then
+            echo "-- Migrations" >> "database-backups/schema-${{ steps.timestamp.outputs.timestamp }}.sql"
+            for migration in supabase/migrations/*.sql; do
+              if [ -f "$migration" ]; then
+                echo "" >> "database-backups/schema-${{ steps.timestamp.outputs.timestamp }}.sql"
+                echo "-- Migration: $(basename $migration)" >> "database-backups/schema-${{ steps.timestamp.outputs.timestamp }}.sql"
+                echo "-- ============================================" >> "database-backups/schema-${{ steps.timestamp.outputs.timestamp }}.sql"
+                cat "$migration" >> "database-backups/schema-${{ steps.timestamp.outputs.timestamp }}.sql"
+              fi
+            done
+          fi
+          
+      - name: Export TypeScript schema
+        run: |
+          # Copy TypeScript schema definitions
+          if [ -f "shared/schema.ts" ]; then
+            cp "shared/schema.ts" "database-backups/schema-${{ steps.timestamp.outputs.timestamp }}.ts"
+          fi
+          
+          # Copy Drizzle config
+          if [ -f "drizzle.config.ts" ]; then
+            cp "drizzle.config.ts" "database-backups/drizzle-config-${{ steps.timestamp.outputs.timestamp }}.ts"
+          fi
+          
+      - name: Create RLS policies backup
+        run: |
+          # Extract RLS policies from migrations
+          echo "-- RLS Policies Backup" > "database-backups/rls-policies-${{ steps.timestamp.outputs.timestamp }}.sql"
+          echo "-- Generated: ${{ steps.timestamp.outputs.timestamp }}" >> "database-backups/rls-policies-${{ steps.timestamp.outputs.timestamp }}.sql"
+          echo "" >> "database-backups/rls-policies-${{ steps.timestamp.outputs.timestamp }}.sql"
+          
+          # Extract all CREATE POLICY statements
+          if [ -d "supabase/migrations" ]; then
+            grep -h "CREATE POLICY\|DROP POLICY\|ALTER POLICY" supabase/migrations/*.sql >> "database-backups/rls-policies-${{ steps.timestamp.outputs.timestamp }}.sql" || true
+          fi
+          
+      - name: Create backup metadata
+        run: |
+          cat > "database-backups/backup-metadata-${{ steps.timestamp.outputs.timestamp }}.json" << EOF
+          {
+            "timestamp": "${{ steps.timestamp.outputs.timestamp }}",
+            "date": "${{ steps.timestamp.outputs.date }}",
+            "type": "${{ github.event.inputs.backup_type || 'schema' }}",
+            "commit_sha": "${{ github.sha }}",
+            "triggered_by": "${{ github.event_name }}",
+            "files": {
+              "schema_sql": "schema-${{ steps.timestamp.outputs.timestamp }}.sql",
+              "schema_ts": "schema-${{ steps.timestamp.outputs.timestamp }}.ts",
+              "rls_policies": "rls-policies-${{ steps.timestamp.outputs.timestamp }}.sql",
+              "drizzle_config": "drizzle-config-${{ steps.timestamp.outputs.timestamp }}.ts"
+            },
+            "tables_count": $(grep -c "CREATE TABLE" database-backups/schema-${{ steps.timestamp.outputs.timestamp }}.sql || echo 0),
+            "migrations_count": $(ls -1 supabase/migrations/*.sql 2>/dev/null | wc -l || echo 0)
+          }
+          EOF
+          
+      - name: Create restoration script
+        run: |
+          cat > "database-backups/restore-${{ steps.timestamp.outputs.timestamp }}.sh" << 'EOF'
+          #!/bin/bash
+          # Database Restoration Script
+          # Backup: ${{ steps.timestamp.outputs.timestamp }}
+          
+          set -e
+          
+          echo "Database Restoration Script"
+          echo "=========================="
+          echo "Backup Date: ${{ steps.timestamp.outputs.date }}"
+          echo ""
+          
+          # Check if required environment variables are set
+          if [ -z "$DATABASE_URL" ]; then
+            echo "ERROR: DATABASE_URL environment variable is not set"
+            exit 1
+          fi
+          
+          echo "WARNING: This will restore the database schema from backup."
+          echo "Current data may be lost. Please ensure you have a current backup."
+          echo ""
+          read -p "Continue? (yes/no): " confirm
+          
+          if [ "$confirm" != "yes" ]; then
+            echo "Restoration cancelled."
+            exit 0
+          fi
+          
+          # Apply schema
+          echo "Applying schema from backup..."
+          psql "$DATABASE_URL" < "schema-${{ steps.timestamp.outputs.timestamp }}.sql"
+          
+          echo "Restoration completed!"
+          echo ""
+          echo "Next steps:"
+          echo "1. Run 'npm run db:push' to ensure Drizzle is in sync"
+          echo "2. Verify all tables and policies are correctly restored"
+          echo "3. Test application functionality"
+          EOF
+          
+          chmod +x "database-backups/restore-${{ steps.timestamp.outputs.timestamp }}.sh"
+          
+      - name: Create backup archive
+        run: |
+          cd database-backups
+          tar -czf "db-backup-${{ steps.timestamp.outputs.timestamp }}.tar.gz" \
+            "schema-${{ steps.timestamp.outputs.timestamp }}.sql" \
+            "schema-${{ steps.timestamp.outputs.timestamp }}.ts" \
+            "rls-policies-${{ steps.timestamp.outputs.timestamp }}.sql" \
+            "drizzle-config-${{ steps.timestamp.outputs.timestamp }}.ts" \
+            "backup-metadata-${{ steps.timestamp.outputs.timestamp }}.json" \
+            "restore-${{ steps.timestamp.outputs.timestamp }}.sh"
+          cd ..
+          
+      - name: Commit to backup branch
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          
+          # Create or checkout backup branch
+          git checkout -B database-backups || git checkout database-backups
+          
+          # Ensure directory exists
+          mkdir -p database-backups
+          
+          # Move files
+          mv database-backups/* ./ 2>/dev/null || true
+          
+          # Add and commit
+          git add *.sql *.ts *.json *.sh *.tar.gz
+          git commit -m "Database backup: ${{ steps.timestamp.outputs.date }}" || echo "No changes to commit"
+          
+          # Push to backup branch
+          git push origin database-backups --force
+          
+      - name: Cleanup old backups
+        run: |
+          # Remove backups older than retention period
+          git checkout database-backups
+          
+          # List files older than retention days
+          CUTOFF_DATE=$(date -d "${{ env.DB_BACKUP_RETENTION_DAYS }} days ago" +%Y%m%d)
+          
+          for file in db-backup-*.tar.gz; do
+            if [ -f "$file" ]; then
+              FILE_DATE=$(echo $file | grep -oE '[0-9]{8}' | head -1)
+              if [ "$FILE_DATE" -lt "$CUTOFF_DATE" ]; then
+                echo "Removing old backup: $file"
+                git rm "$file" || true
+                # Remove associated files
+                BASE_NAME=$(echo $file | sed 's/db-backup-//' | sed 's/.tar.gz//')
+                git rm "schema-${BASE_NAME}.sql" || true
+                git rm "schema-${BASE_NAME}.ts" || true
+                git rm "rls-policies-${BASE_NAME}.sql" || true
+                git rm "drizzle-config-${BASE_NAME}.ts" || true
+                git rm "backup-metadata-${BASE_NAME}.json" || true
+                git rm "restore-${BASE_NAME}.sh" || true
+              fi
+            fi
+          done
+          
+          # Commit cleanup if any files were removed
+          git commit -m "Cleanup: Remove backups older than ${{ env.DB_BACKUP_RETENTION_DAYS }} days" || echo "No old backups to remove"
+          git push origin database-backups
+          
+      - name: Create backup summary
+        run: |
+          echo "## Database Backup Summary" > backup-summary.md
+          echo "" >> backup-summary.md
+          echo "**Date**: ${{ steps.timestamp.outputs.date }}" >> backup-summary.md
+          echo "**Time**: ${{ steps.timestamp.outputs.timestamp }}" >> backup-summary.md
+          echo "**Type**: ${{ github.event.inputs.backup_type || 'schema' }}" >> backup-summary.md
+          echo "" >> backup-summary.md
+          echo "### Backup Contents" >> backup-summary.md
+          echo "- Database schema (SQL)" >> backup-summary.md
+          echo "- TypeScript schema definitions" >> backup-summary.md
+          echo "- RLS policies" >> backup-summary.md
+          echo "- Drizzle configuration" >> backup-summary.md
+          echo "- Restoration script" >> backup-summary.md
+          echo "" >> backup-summary.md
+          echo "### Storage Location" >> backup-summary.md
+          echo "Branch: \`database-backups\`" >> backup-summary.md
+          echo "Archive: \`db-backup-${{ steps.timestamp.outputs.timestamp }}.tar.gz\`" >> backup-summary.md
+          
+      - name: Upload summary
+        uses: actions/upload-artifact@v4
+        with:
+          name: database-backup-summary-${{ steps.timestamp.outputs.timestamp }}
+          path: backup-summary.md
+          retention-days: 7

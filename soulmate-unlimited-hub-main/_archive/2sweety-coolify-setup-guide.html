@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2sweety.com Coolify Domain & SSL Kurulum Rehberi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .step {
+            background: white;
+            margin: 20px 0;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .step:hover {
+            transform: translateY(-5px);
+        }
+
+        .step-number {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+            margin-right: 15px;
+            font-size: 18px;
+        }
+
+        .step-title {
+            display: inline-block;
+            font-size: 1.5em;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .code-block {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 10px;
+            font-family: 'Courier New', monospace;
+            margin: 15px 0;
+            overflow-x: auto;
+            border-left: 4px solid #4299e1;
+        }
+
+        .dns-record {
+            background: linear-gradient(45deg, #74b9ff, #0984e3);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        .warning {
+            background: linear-gradient(45deg, #fdcb6e, #e17055);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 4px solid #e17055;
+        }
+
+        .success {
+            background: linear-gradient(45deg, #00b894, #00cec9);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 4px solid #00b894;
+        }
+
+        .info {
+            background: linear-gradient(45deg, #74b9ff, #0984e3);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 4px solid #0984e3;
+        }
+
+        .screenshot-placeholder {
+            background: #f8f9fa;
+            border: 2px dashed #dee2e6;
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            margin: 15px 0;
+            color: #6c757d;
+        }
+
+        .ip-highlight {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .domain-highlight {
+            background: linear-gradient(45deg, #a29bfe, #6c5ce7);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .ssl-status {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin: 5px;
+        }
+
+        .ssl-active {
+            background: #00b894;
+            color: white;
+        }
+
+        .ssl-pending {
+            background: #fdcb6e;
+            color: white;
+        }
+
+        .ssl-error {
+            background: #e17055;
+            color: white;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #74b9ff, #0984e3);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -22px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #74b9ff;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #74b9ff;
+        }
+
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 50px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .step {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 2sweety.com Coolify Kurulum Rehberi</h1>
+            <p>Domain ve SSL sertifikası kurulumu için adım adım rehber</p>
+            <p><strong>VPS IP:</strong> <span class="ip-highlight">45.9.190.79</span></p>
+        </div>
+
+        <!-- ADIM 1: DNS AYARLARI -->
+        <div class="step">
+            <span class="step-number">1</span>
+            <span class="step-title">🌐 Hostinger DNS Ayarları</span>
+            
+            <div class="info">
+                <strong>📍 Nerede:</strong> Hostinger Control Panel → Domains → 2sweety.com → DNS Zone
+            </div>
+
+            <p><strong>Şu anda yanlış:</strong></p>
+            <div class="warning">
+                A record: 2sweety.com → 84.32.84.32 ❌ (Yanlış IP)
+            </div>
+
+            <p><strong>Düzeltilmesi gereken:</strong></p>
+            <div class="dns-record">
+                📌 A record: 2sweety.com → 45.9.190.79
+            </div>
+            <div class="dns-record">
+                📌 A record: *.2sweety.com → 45.9.190.79 (Wildcard)
+            </div>
+
+            <div class="code-block">
+# Hostinger DNS Zone ayarları:
+Type: A
+Name: @ (veya 2sweety.com)
+Points to: 45.9.190.79
+TTL: 300
+
+Type: A  
+Name: *
+Points to: 45.9.190.79
+TTL: 300
+            </div>
+
+            <div class="screenshot-placeholder">
+                📸 Hostinger DNS ekranının ekran görüntüsü buraya gelecek
+            </div>
+        </div>
+
+        <!-- ADIM 2: DNS PROPAGATION -->
+        <div class="step">
+            <span class="step-number">2</span>
+            <span class="step-title">⏱️ DNS Propagation Kontrolü</span>
+            
+            <p>DNS değişikliklerinin yayılması için <strong>5-15 dakika</strong> bekleyin.</p>
+
+            <div class="code-block">
+# Terminal'de kontrol edin:
+nslookup 2sweety.com
+
+# Çıktı şu şekilde olmalı:
+Server: 8.8.8.8
+Address: 8.8.8.8#53
+
+Name: 2sweety.com
+Address: 45.9.190.79
+            </div>
+
+            <div class="info">
+                🔍 Online kontrol: <a href="https://dnschecker.org" target="_blank" rel="noopener" style="color: white; text-decoration: underline;">dnschecker.org</a>
+            </div>
+        </div>
+
+        <!-- ADIM 3: COOLIFY DOMAIN EKLEME -->
+        <div class="step">
+            <span class="step-number">3</span>
+            <span class="step-title">🎯 Coolify'da Domain Ekleme</span>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <strong>Coolify'a giriş yapın:</strong><br>
+                    <span class="domain-highlight">http://45.9.190.79:8000</span>
+                </div>
+                
+                <div class="timeline-item">
+                    <strong>Uygulamanızı seçin:</strong><br>
+                    Projects → 2SWEETY → Production → cheerful-crayfish...
+                </div>
+                
+                <div class="timeline-item">
+                    <strong>Configuration sayfasına gidin</strong>
+                </div>
+                
+                <div class="timeline-item">
+                    <strong>Domains alanını bulun</strong>
+                </div>
+            </div>
+
+            <div class="code-block">
+# Domains alanına şunu yazın:
+https://2sweety.com
+
+# Veya birden fazla domain için:
+https://2sweety.com,https://www.2sweety.com
+            </div>
+
+            <div class="warning">
+                ⚠️ <strong>DİKKAT:</strong> Mutlaka <code>https://</code> ile başlayın!
+            </div>
+
+            <div class="screenshot-placeholder">
+                📸 Coolify Configuration ekranının görüntüsü
+            </div>
+        </div>
+
+        <!-- ADIM 4: SSL OTOMATIK KURULUM -->
+        <div class="step">
+            <span class="step-number">4</span>
+            <span class="step-title">🔒 SSL Sertifikası Otomatik Kurulumu</span>
+            
+            <p>Domain'i kaydettikten sonra Coolify otomatik olarak SSL sertifikası oluşturacak:</p>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <strong>Save butonuna tıklayın</strong>
+                </div>
+                
+                <div class="timeline-item">
+                    <strong>Uygulamayı yeniden başlatın:</strong><br>
+                    <div class="code-block">Restart butonu</div>
+                </div>
+                
+                <div class="timeline-item">
+                    <strong>4-5 dakika bekleyin</strong><br>
+                    Let's Encrypt otomatik sertifika oluşturuyor...
+                </div>
+            </div>
+
+            <div class="info">
+                🔍 <strong>SSL Durumu Kontrolü:</strong><br>
+                Logs → Proxy logs içinde "certificate" aramalarını takip edin
+            </div>
+        </div>
+
+        <!-- ADIM 5: SSL DURUM KONTROLLERI -->
+        <div class="step">
+            <span class="step-number">5</span>
+            <span class="step-title">✅ SSL Durum Kontrolleri</span>
+            
+            <p><strong>SSL Durumları:</strong></p>
+            
+            <div class="ssl-status ssl-pending">🟡 SSL Pending (Bekliyor)</div>
+            <div class="ssl-status ssl-active">🟢 SSL Active (Aktif)</div>
+            <div class="ssl-status ssl-error">🔴 SSL Error (Hata)</div>
+
+            <div class="success">
+                <strong>✅ Başarılı kurulum belirtileri:</strong><br>
+                • Browser'da yeşil kilit simgesi<br>
+                • https://2sweety.com erişilebilir<br>
+                • "Secure" yazısı adres çubuğunda
+            </div>
+
+            <div class="code-block">
+# Browser'da test edin:
+https://2sweety.com
+
+# Terminal'de test:
+curl -I https://2sweety.com
+            </div>
+        </div>
+
+        <!-- ADIM 6: HATA GİDERME -->
+        <div class="step">
+            <span class="step-number">6</span>
+            <span class="step-title">🛠️ Yaygın Sorunlar ve Çözümleri</span>
+            
+            <div class="warning">
+                <strong>❌ Sorun 1: "ERR_CERT_AUTHORITY_INVALID"</strong><br>
+                <strong>Çözüm:</strong> Servers → Proxy → Advanced → CA SSL Certificate → Regenerate Certificate
+            </div>
+
+            <div class="warning">
+                <strong>❌ Sorun 2: "SSL alınamıyor"</strong><br>
+                <strong>Çözüm:</strong> DNS kayıtlarını tekrar kontrol edin, 15 dakika daha bekleyin
+            </div>
+
+            <div class="warning">
+                <strong>❌ Sorun 3: "Domain erişilemiyor"</strong><br>
+                <strong>Çözüm:</strong> VPS'de port 80 ve 443'ün açık olduğunu kontrol edin
+            </div>
+
+            <div class="code-block">
+# Port kontrolü:
+sudo ufw status
+sudo ufw allow 80
+sudo ufw allow 443
+
+# DNS kontrolü:
+dig 2sweety.com
+            </div>
+        </div>
+
+        <!-- ADIM 7: WILDCARD SSL -->
+        <div class="step">
+            <span class="step-number">7</span>
+            <span class="step-title">🌟 Wildcard SSL (İsteğe Bağlı)</span>
+            
+            <p>Tüm subdomain'ler için otomatik SSL:</p>
+
+            <div class="info">
+                <strong>Wildcard SSL faydaları:</strong><br>
+                • api.2sweety.com<br>
+                • admin.2sweety.com<br>
+                • app.2sweety.com<br>
+                Hepsi otomatik SSL alır!
+            </div>
+
+            <p><strong>Kurulum için:</strong></p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <strong>Servers → Configuration</strong>
+                </div>
+                
+                <div class="timeline-item">
+                    <strong>Wildcard Domain:</strong><br>
+                    <div class="code-block">https://2sweety.com</div>
+                </div>
+                
+                <div class="timeline-item">
+                    <strong>Save → Restart Proxy</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- ADIM 8: DOĞRULAMA -->
+        <div class="step">
+            <span class="step-number">8</span>
+            <span class="step-title">🎉 Final Doğrulama</span>
+            
+            <div class="success">
+                <strong>✅ Kontrol Listesi:</strong><br>
+                □ DNS kayıtları doğru (45.9.190.79)<br>
+                □ https://2sweety.com açılıyor<br>
+                □ SSL sertifikası aktif (yeşil kilit)<br>
+                □ HTTP otomatik HTTPS'e yönlendiriliyor<br>
+                □ Coolify uygulaması çalışıyor
+            </div>
+
+            <div class="code-block">
+# Son test komutları:
+curl -I https://2sweety.com
+curl -I http://2sweety.com (otomatik yönlendirme olmalı)
+
+# SSL sertifika detayları:
+openssl s_client -connect 2sweety.com:443 -servername 2sweety.com
+            </div>
+
+            <div class="info">
+                🎯 <strong>Başarı!</strong> 2sweety.com artık SSL ile güvenli şekilde çalışıyor!
+            </div>
+        </div>
+
+        <!-- ÖNEMLİ NOTLAR -->
+        <div class="step">
+            <span class="step-number">💡</span>
+            <span class="step-title">📌 Önemli Notlar</span>
+            
+            <div class="warning">
+                <strong>⚠️ Dikkat Edilmesi Gerekenler:</strong><br>
+                • Domain değişikliği sonrası uygulamayı mutlaka restart edin<br>
+                • SSL kurulumu 4-5 dakika sürer, sabırla bekleyin<br>
+                • DNS değişiklikleri 24 saate kadar sürebilir<br>
+                • Cache temizlemek için browser'ı hard refresh yapın (Ctrl+F5)
+            </div>
+
+            <div class="success">
+                <strong>✅ Pro İpuçları:</strong><br>
+                • SSL sertifikaları 90 günde bir otomatik yenilenir<br>
+                • Backup'larınızı düzenli alın<br>
+                • Health check'lerinizi aktif tutun<br>
+                • Log'ları düzenli kontrol edin
+            </div>
+        </div>
+
+        <div class="footer">
+            <h3>🎊 Tebrikler!</h3>
+            <p>2sweety.com artık SSL ile güvenli şekilde çalışıyor!</p>
+            <p><strong>Support:</strong> Sorun yaşarsanız Coolify loglarını kontrol edin</p>
+            <p><em>Hazırlayan: AI Assistant | Coolify v4.x için optimize edilmiştir</em></p>
+        </div>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2sweety.com - Ana Domain Yönlendirme Rehberi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            position: relative;
+            z-index: 1;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .problem-section {
+            background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            border-left: 5px solid #e17055;
+        }
+
+        .solution-section {
+            background: linear-gradient(135deg, #55efc4 0%, #00b894 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        .domain-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid;
+            transition: transform 0.3s ease;
+        }
+
+        .domain-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .domain-card.primary { border-left-color: #00b894; }
+        .domain-card.redirect { border-left-color: #fdcb6e; }
+
+        .step {
+            background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .step-number {
+            background: rgba(255, 255, 255, 0.2);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .code-block {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            margin: 15px 0;
+            overflow-x: auto;
+            border: 1px solid #4a5568;
+        }
+
+        .warning {
+            background: linear-gradient(135deg, #ff7675 0%, #d63031 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #e84393;
+        }
+
+        .success {
+            background: linear-gradient(135deg, #00b894 0%, #00a085 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .service-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card.google { border-top: 4px solid #4285f4; }
+        .service-card.stripe { border-top: 4px solid #635bff; }
+        .service-card.facebook { border-top: 4px solid #1877f2; }
+
+        .icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+
+        .google .icon { color: #4285f4; }
+        .stripe .icon { color: #635bff; }
+        .facebook .icon { color: #1877f2; }
+
+        .redirect-flow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .redirect-arrow {
+            font-size: 2em;
+            color: #00b894;
+        }
+
+        .domain-box {
+            background: linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            font-weight: bold;
+            text-align: center;
+            min-width: 120px;
+        }
+
+        .domain-box.primary {
+            background: linear-gradient(135deg, #00b894 0%, #00a085 100%);
+            transform: scale(1.1);
+        }
+
+        .checklist {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        .checklist li {
+            margin: 10px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .checklist li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #00b894;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 { font-size: 2em; }
+            .content { padding: 20px; }
+            .redirect-flow { flex-direction: column; }
+            .redirect-arrow { transform: rotate(90deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 2sweety.com Ana Domain Yönlendirmesi</h1>
+            <p>Google Auth, Stripe ve diğer servislerde sorunsuz çalışma rehberi</p>
+        </div>
+
+        <div class="content">
+            <div class="problem-section">
+                <h2>⚠️ Problem: Çoklu Domain Sorunu</h2>
+                <p><strong>Birden fazla domain kullanırken karşılaşılan sorunlar:</strong></p>
+                <ul style="margin: 15px 0; padding-left: 20px;">
+                    <li>Google OAuth sadece belirtilen domain'de çalışır</li>
+                    <li>Stripe webhook'ları domain başına ayrı yapılandırma gerektirir</li>
+                    <li>SSL sertifikaları domain başına oluşturulur</li>
+                    <li>SEO açısından içerik duplikasyonu sorunu</li>
+                    <li>Analytics ve tracking kodları karışabilir</li>
+                </ul>
+            </div>
+
+            <div class="solution-section">
+                <h2>✅ Çözüm: Ana Domain Yönlendirmesi</h2>
+                <p><strong>En iyi pratik:</strong> Tüm alternatif domainleri ana domain'e (2sweety.com) yönlendirmek!</p>
+                
+                <div class="redirect-flow">
+                    <div class="domain-box">2sweety.me</div>
+                    <div class="redirect-arrow">→</div>
+                    <div class="domain-box">2sweety.net</div>
+                    <div class="redirect-arrow">→</div>
+                    <div class="domain-box primary">2sweety.com</div>
+                    <div class="redirect-arrow">←</div>
+                    <div class="domain-box">2sweety.org</div>
+                    <div class="redirect-arrow">←</div>
+                    <div class="domain-box">2sweety.io</div>
+                </div>
+            </div>
+
+            <h2 style="color: #2d3748; margin: 30px 0 20px 0;">🔧 Coolify'da Yönlendirme Kurulumu</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Ana Domain Kurulumu</h3>
+                <p>Coolify'da sadece ana domain'i aplikasyona bağlayın:</p>
+                <div class="code-block">
+                    Domain: https://2sweety.com
+                    Port: (boş bırakın - otomatik)
+                    SSL: Enabled (Let's Encrypt)
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Yönlendirme Domainleri için Ayrı Servis</h3>
+                <p>Coolify'da yeni bir "Static Site" veya "Redirect Service" oluşturun:</p>
+                <div class="code-block">
+                    Service Type: Static Site
+                    Domains: https://2sweety.me,https://2sweety.net,https://2sweety.org,https://2sweety.io
+                    Redirect to: https://2sweety.com
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>DNS Ayarları</h3>
+                <p>Tüm domainler için A record'ları VPS IP'nize yönlendirin:</p>
+                <div class="code-block">
+                    2sweety.com     A    45.9.190.79
+                    2sweety.me      A    45.9.190.79
+                    2sweety.net     A    45.9.190.79
+                    2sweety.org     A    45.9.190.79
+                    2sweety.io      A    45.9.190.79
+                    
+                    www.2sweety.com A    45.9.190.79
+                    www.2sweety.me  A    45.9.190.79
+                    www.2sweety.net A    45.9.190.79
+                </div>
+            </div>
+
+            <h2 style="color: #2d3748; margin: 30px 0 20px 0;">🛠️ Servis Konfigürasyonları</h2>
+
+            <div class="service-grid">
+                <div class="service-card google">
+                    <div class="icon">🔐</div>
+                    <h3>Google OAuth</h3>
+                    <p><strong>Authorized redirect URIs:</strong></p>
+                    <div class="code-block" style="text-align: left; font-size: 0.9em;">
+                        https://2sweety.com/auth/callback
+                        https://2sweety.com/auth/google/callback
+                    </div>
+                    <p style="margin-top: 10px; font-size: 0.9em;">Sadece ana domain kullanın!</p>
+                </div>
+
+                <div class="service-card stripe">
+                    <div class="icon">💳</div>
+                    <h3>Stripe Webhooks</h3>
+                    <p><strong>Webhook endpoint:</strong></p>
+                    <div class="code-block" style="text-align: left; font-size: 0.9em;">
+                        https://2sweety.com/api/stripe/webhook
+                    </div>
+                    <p style="margin-top: 10px; font-size: 0.9em;">Tek endpoint yeterli!</p>
+                </div>
+
+                <div class="service-card facebook">
+                    <div class="icon">📘</div>
+                    <h3>Facebook Login</h3>
+                    <p><strong>Valid OAuth redirect URIs:</strong></p>
+                    <div class="code-block" style="text-align: left; font-size: 0.9em;">
+                        https://2sweety.com/auth/facebook/callback
+                    </div>
+                    <p style="margin-top: 10px; font-size: 0.9em;">Ana domain'de merkezi yönetim!</p>
+                </div>
+            </div>
+
+            <div class="warning">
+                <h3>⚠️ Önemli Notlar</h3>
+                <ul style="margin: 10px 0; padding-left: 20px;">
+                    <li>Yönlendirme 301 (kalıcı) olarak yapılmalı</li>
+                    <li>HTTPS'den HTTPS'ye yönlendirin</li>
+                    <li>Subdomain'leri de ana domain'e yönlendirin</li>
+                    <li>API endpoint'leri için ayrı subdomain kullanabilirsiniz (api.2sweety.com)</li>
+                </ul>
+            </div>
+
+            <h2 style="color: #2d3748; margin: 30px 0 20px 0;">📋 Kurulum Kontrol Listesi</h2>
+
+            <div class="checklist">
+                <ul style="list-style: none;">
+                    <li>Ana domain (2sweety.com) Coolify'da ana uygulamaya bağlandı</li>
+                    <li>Alternatif domainler için redirect servisi oluşturuldu</li>
+                    <li>Tüm domainlerin DNS'leri 45.9.190.79'a yönlendiriliyor</li>
+                    <li>SSL sertifikaları tüm domainler için aktif</li>
+                    <li>Google OAuth sadece ana domain'de yapılandırıldı</li>
+                    <li>Stripe webhook'ları ana domain'de ayarlandı</li>
+                    <li>Yönlendirmeler 301 status code ile çalışıyor</li>
+                    <li>www versiyonları da dahil edildi</li>
+                </ul>
+            </div>
+
+            <div class="success">
+                <h3>🎉 Sonuç</h3>
+                <p>Bu kurulumla:</p>
+                <ul style="margin: 10px 0; padding-left: 20px;">
+                    <li>✅ Tüm servislerin tek domain'de sorunsuz çalışması</li>
+                    <li>✅ SEO açısından tek canonical domain</li>
+                    <li>✅ SSL yönetiminin basitleşmesi</li>
+                    <li>✅ Analytics'te temiz veri toplama</li>
+                    <li>✅ Marka koruması (typo domain'ler yönlendiriliyor)</li>
+                </ul>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px; padding: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; color: white;">
+                <h3>🚀 Test Etme</h3>
+                <p>Kurulumdan sonra tüm domainleri test edin:</p>
+                <div style="margin: 15px 0;">
+                    <strong>2sweety.me → 2sweety.com ✓</strong><br>
+                    <strong>2sweety.net → 2sweety.com ✓</strong><br>
+                    <strong>Google Auth çalışıyor ✓</strong><br>
+                    <strong>Stripe ödeme çalışıyor ✓</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

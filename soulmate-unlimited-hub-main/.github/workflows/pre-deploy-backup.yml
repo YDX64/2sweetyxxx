@@ -1,0 +1,213 @@
+name: Pre-Deployment Backup
+
+on:
+  workflow_dispatch:
+  workflow_call:
+    inputs:
+      environment:
+        description: 'Deployment environment'
+        required: true
+        type: string
+  pull_request:
+    types: [opened, synchronize]
+    branches: [main, staging]
+
+jobs:
+  create-deployment-snapshot:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          
+      - name: Get deployment info
+        id: deploy-info
+        run: |
+          TIMESTAMP=$(date +'%Y%m%d-%H%M%S')
+          ENVIRONMENT="${{ inputs.environment || 'development' }}"
+          PR_NUMBER="${{ github.event.pull_request.number || 'direct' }}"
+          
+          echo "timestamp=${TIMESTAMP}" >> $GITHUB_OUTPUT
+          echo "environment=${ENVIRONMENT}" >> $GITHUB_OUTPUT
+          echo "pr_number=${PR_NUMBER}" >> $GITHUB_OUTPUT
+          echo "snapshot_name=pre-deploy-${ENVIRONMENT}-${PR_NUMBER}-${TIMESTAMP}" >> $GITHUB_OUTPUT
+          
+      - name: Run pre-deployment checks
+        id: health-check
+        run: |
+          echo "Running pre-deployment health checks..."
+          
+          # Check if all required files exist
+          REQUIRED_FILES=(
+            "package.json"
+            "env.example"
+            "server/index.ts"
+            "client/src/main.tsx"
+            "supabase/migrations"
+          )
+          
+          MISSING_FILES=()
+          for file in "${REQUIRED_FILES[@]}"; do
+            if [ ! -e "$file" ]; then
+              MISSING_FILES+=("$file")
+            fi
+          done
+          
+          if [ ${#MISSING_FILES[@]} -gt 0 ]; then
+            echo "❌ Missing required files: ${MISSING_FILES[*]}"
+            echo "health_status=failed" >> $GITHUB_OUTPUT
+            exit 1
+          else
+            echo "✓ All required files present"
+            echo "health_status=passed" >> $GITHUB_OUTPUT
+          fi
+          
+          # Check for TypeScript errors
+          if npm run check; then
+            echo "✓ TypeScript check passed"
+          else
+            echo "❌ TypeScript errors found"
+            echo "health_status=failed" >> $GITHUB_OUTPUT
+            exit 1
+          fi
+          
+      - name: Create deployment snapshot
+        if: steps.health-check.outputs.health_status == 'passed'
+        run: |
+          mkdir -p deployment-snapshots
+          
+          # Create comprehensive snapshot
+          SNAPSHOT_FILE="deployment-snapshots/${{ steps.deploy-info.outputs.snapshot_name }}.tar.gz"
+          
+          tar -czf "${SNAPSHOT_FILE}" \
+            --exclude=node_modules \
+            --exclude=.git \
+            --exclude=dist \
+            --exclude=build \
+            --exclude=.env \
+            --exclude=uploads \
+            --exclude=deployment-snapshots \
+            .
+            
+          # Create deployment metadata
+          cat > "deployment-snapshots/${{ steps.deploy-info.outputs.snapshot_name }}-metadata.json" << EOF
+          {
+            "snapshot_name": "${{ steps.deploy-info.outputs.snapshot_name }}",
+            "timestamp": "${{ steps.deploy-info.outputs.timestamp }}",
+            "environment": "${{ steps.deploy-info.outputs.environment }}",
+            "pr_number": "${{ steps.deploy-info.outputs.pr_number }}",
+            "commit_sha": "${{ github.sha }}",
+            "branch": "${{ github.ref_name }}",
+            "triggered_by": "${{ github.actor }}",
+            "event_name": "${{ github.event_name }}",
+            "health_check": "passed",
+            "snapshot_size": "$(du -h ${SNAPSHOT_FILE} | cut -f1)"
+          }
+          EOF
+          
+          # Create rollback script
+          cat > "deployment-snapshots/${{ steps.deploy-info.outputs.snapshot_name }}-rollback.sh" << 'EOF'
+          #!/bin/bash
+          # Rollback script for ${{ steps.deploy-info.outputs.snapshot_name }}
+          
+          set -e
+          
+          echo "Starting rollback to snapshot: ${{ steps.deploy-info.outputs.snapshot_name }}"
+          
+          # Backup current state before rollback
+          BACKUP_DIR="rollback-backup-$(date +'%Y%m%d-%H%M%S')"
+          mkdir -p "$BACKUP_DIR"
+          
+          # Exclude heavy directories from backup
+          rsync -av --exclude=node_modules --exclude=.git --exclude=dist --exclude=build --exclude=uploads . "$BACKUP_DIR/"
+          
+          # Extract snapshot
+          echo "Extracting snapshot..."
+          tar -xzf "${{ steps.deploy-info.outputs.snapshot_name }}.tar.gz"
+          
+          # Restore dependencies
+          echo "Restoring dependencies..."
+          npm ci
+          
+          # Rebuild
+          echo "Rebuilding application..."
+          npm run build
+          
+          echo "Rollback completed successfully!"
+          echo "Previous state backed up to: $BACKUP_DIR"
+          EOF
+          
+          chmod +x "deployment-snapshots/${{ steps.deploy-info.outputs.snapshot_name }}-rollback.sh"
+          
+      - name: Upload snapshot to artifacts
+        if: steps.health-check.outputs.health_status == 'passed'
+        uses: actions/upload-artifact@v4
+        with:
+          name: deployment-snapshot-${{ steps.deploy-info.outputs.snapshot_name }}
+          path: deployment-snapshots/
+          retention-days: 14
+          
+      - name: Create snapshot tag
+        if: steps.health-check.outputs.health_status == 'passed' && github.event_name != 'pull_request'
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          
+          TAG_NAME="snapshot/${{ steps.deploy-info.outputs.snapshot_name }}"
+          git tag -a "$TAG_NAME" -m "Pre-deployment snapshot for ${{ steps.deploy-info.outputs.environment }}"
+          git push origin "$TAG_NAME"
+          
+      - name: Comment on PR
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const snapshotInfo = {
+              name: '${{ steps.deploy-info.outputs.snapshot_name }}',
+              status: '${{ steps.health-check.outputs.health_status }}',
+              timestamp: '${{ steps.deploy-info.outputs.timestamp }}',
+              commit: '${{ github.sha }}'.substring(0, 7)
+            };
+            
+            const comment = `## 📸 Pre-Deployment Snapshot Created
+            
+            ${snapshotInfo.status === 'passed' ? '✅' : '❌'} **Health Check**: ${snapshotInfo.status}
+            
+            **Snapshot Details:**
+            - 📦 Name: \`${snapshotInfo.name}\`
+            - 🕐 Created: ${snapshotInfo.timestamp}
+            - 🔖 Commit: \`${snapshotInfo.commit}\`
+            
+            ${snapshotInfo.status === 'passed' ? 
+              'This snapshot can be used for rollback if needed. Download from workflow artifacts.' :
+              '⚠️ Deployment blocked due to health check failure. Please fix the issues and try again.'
+            }`;
+            
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: comment
+            });
+            
+      - name: Set deployment status
+        if: always()
+        run: |
+          if [ "${{ steps.health-check.outputs.health_status }}" == "passed" ]; then
+            echo "✅ Ready for deployment"
+            exit 0
+          else
+            echo "❌ Not ready for deployment"
+            exit 1
+          fi

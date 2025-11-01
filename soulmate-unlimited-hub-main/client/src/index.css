@@ -1,0 +1,453 @@
+/* Import mobile-specific fixes */
+@import "./styles/mobile-fixes.css";
+/* Import swipe performance optimizations */
+@import "./styles/swipe-optimizations.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Scrollbar hide utility */
+@layer utilities {
+    .scrollbar-hide {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none; /* Chrome, Safari and Opera */
+    }
+}
+
+/* Minimal Radix UI fixes */
+[data-radix-portal]:empty {
+    display: none;
+}
+
+/* Mobile viewport and keyboard fixes */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+    .safe-bottom {
+        padding-bottom: calc(1rem + env(safe-area-inset-bottom));
+    }
+    .safe-area-pb {
+        padding-bottom: calc(0.5rem + env(safe-area-inset-bottom));
+    }
+}
+
+/* Fix for mobile keyboard issues */
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    overflow: auto;
+}
+
+#root {
+    height: 100%;
+    overflow: auto;
+}
+
+/* Prevent keyboard from pushing content */
+@media (max-width: 768px) {
+    html {
+        height: -webkit-fill-available;
+    }
+
+    body {
+        min-height: 100vh;
+        min-height: -webkit-fill-available;
+    }
+
+    /* Fix for iOS Safari viewport issues */
+    .h-screen {
+        height: 100vh;
+        height: -webkit-fill-available;
+    }
+
+    /* Ensure fixed elements stay in place */
+    .fixed {
+        position: fixed !important;
+    }
+}
+
+@layer base {
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 0 0% 3.9%;
+
+        --card: 0 0% 100%;
+        --card-foreground: 0 0% 3.9%;
+
+        --popover: 0 0% 100%;
+        --popover-foreground: 0 0% 3.9%;
+
+        --primary: 0 0% 9%;
+        --primary-foreground: 0 0% 100%;
+
+        --secondary: 0 0% 96.1%;
+        --secondary-foreground: 0 0% 9%;
+
+        --muted: 0 0% 96.1%;
+        --muted-foreground: 0 0% 45.1%;
+
+        --accent: 346 77% 49%;
+        --accent-foreground: 0 0% 100%;
+
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+
+        --border: 0 0% 89.8%;
+        --input: 0 0% 89.8%;
+        --ring: 340 82% 52%;
+
+        --radius: 0.5rem;
+
+        --sidebar-background: 0 0% 98%;
+        --sidebar-foreground: 240 5.3% 26.1%;
+        --sidebar-primary: 340 82% 52%;
+        --sidebar-primary-foreground: 0 0% 100%;
+        --sidebar-accent: 340 82% 96%;
+        --sidebar-accent-foreground: 340 82% 52%;
+        --sidebar-border: 0 0% 89.8%;
+        --sidebar-ring: 340 82% 52%;
+    }
+
+    .dark {
+        --background: 220 20% 13%;
+        --foreground: 0 0% 98%;
+        --card: 220 15% 20%;
+        --card-foreground: 0 0% 98%;
+        --popover: 217 19% 11%;
+        --popover-foreground: 0 0% 98%;
+        --primary: 0 0% 98%;
+        --primary-foreground: 220 20% 13%;
+        --secondary: 220 12% 25%;
+        --secondary-foreground: 0 0% 98%;
+        --muted: 220 12% 25%;
+        --muted-foreground: 0 0% 63.9%;
+        --accent: 346 77% 49%;
+        --accent-foreground: 0 0% 100%;
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 220 12% 25%;
+        --input: 220 12% 25%;
+        --ring: 340 82% 52%;
+        --sidebar-background: 217 19% 11%;
+        --sidebar-foreground: 0 0% 98%;
+        --sidebar-primary: 340 82% 52%;
+        --sidebar-primary-foreground: 0 0% 100%;
+        --sidebar-accent: 220 12% 25%;
+        --sidebar-accent-foreground: 340 82% 52%;
+        --sidebar-border: 220 12% 25%;
+        --sidebar-ring: 340 82% 52%;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-0;
+    }
+
+    body {
+        @apply bg-background text-foreground font-sans;
+        font-size: 16px;
+        line-height: 1.5;
+        transition:
+            background-color 0.2s ease-in-out,
+            color 0.2s ease-in-out;
+    }
+
+    /* Typography System */
+    h1 {
+        @apply text-2xl md:text-3xl lg:text-4xl font-bold leading-tight;
+    }
+
+    h2 {
+        @apply text-xl md:text-2xl lg:text-3xl font-semibold leading-tight;
+    }
+
+    h3 {
+        @apply text-lg md:text-xl font-semibold leading-snug;
+    }
+
+    h4 {
+        @apply text-base md:text-lg font-medium leading-snug;
+    }
+
+    p {
+        @apply text-sm md:text-base leading-relaxed;
+    }
+
+    .text-small {
+        @apply text-xs md:text-sm;
+    }
+
+    .text-caption {
+        @apply text-xs;
+    }
+
+    /* Dark mode responsive text colors */
+    .dark h1,
+    .dark h2,
+    .dark h3,
+    .dark h4 {
+        @apply text-foreground;
+    }
+
+    .dark p {
+        @apply text-foreground/80;
+    }
+
+    .dark .text-small,
+    .dark .text-caption {
+        @apply text-muted-foreground;
+    }
+}
+
+/* Custom Animations for Hero Section */
+@keyframes blob {
+    0% {
+        transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+        transform: translate(30px, -50px) scale(1.1);
+    }
+    66% {
+        transform: translate(-20px, 20px) scale(0.9);
+    }
+    100% {
+        transform: translate(0px, 0px) scale(1);
+    }
+}
+
+.animate-blob {
+    animation: blob 7s infinite;
+}
+
+.animation-delay-1000 {
+    animation-delay: 1s;
+}
+
+.animation-delay-2000 {
+    animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+    animation-delay: 4s;
+}
+
+@layer components {
+    /* Tier-specific gradients with dark mode support */
+    .tier-gradient-silver {
+        @apply bg-gradient-to-r from-gray-400 to-gray-500;
+    }
+    .dark .tier-gradient-silver {
+        @apply from-gray-500 to-gray-600;
+    }
+
+    .tier-gradient-gold {
+        @apply bg-gradient-to-r from-yellow-400 to-amber-500;
+    }
+    .dark .tier-gradient-gold {
+        @apply from-yellow-500 to-amber-600;
+    }
+
+    .tier-gradient-platinum {
+        @apply bg-gradient-to-r from-purple-500 to-pink-500;
+    }
+    .dark .tier-gradient-platinum {
+        @apply from-purple-600 to-pink-600;
+    }
+
+    .tier-gradient-moderator {
+        @apply bg-gradient-to-r from-blue-500 to-blue-600;
+    }
+    .dark .tier-gradient-moderator {
+        @apply from-blue-600 to-blue-700;
+    }
+
+    .tier-gradient-admin {
+        @apply bg-gradient-to-r from-red-500 to-red-600;
+    }
+    .dark .tier-gradient-admin {
+        @apply from-red-600 to-red-700;
+    }
+
+    /* Button System */
+    .btn-primary {
+        @apply bg-gradient-to-r from-pink-500 to-red-500 text-white px-4 md:px-6 py-2 md:py-3 rounded-full hover:from-pink-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105 shadow-lg text-sm md:text-base font-medium;
+    }
+
+    .dark .btn-primary {
+        @apply from-pink-600 to-red-600 hover:from-pink-700 hover:to-red-700;
+    }
+
+    .btn-secondary {
+        @apply bg-white text-gray-700 border border-gray-300 px-4 md:px-6 py-2 md:py-3 rounded-full hover:bg-gray-50 transition-all duration-300 text-sm md:text-base font-medium;
+    }
+
+    .dark .btn-secondary {
+        @apply bg-secondary text-secondary-foreground border-border hover:bg-secondary/80;
+    }
+
+    .btn-ghost {
+        @apply text-gray-600 hover:text-gray-800 hover:bg-gray-100 px-3 md:px-4 py-2 rounded-lg transition-all duration-200 text-sm md:text-base;
+    }
+
+    .dark .btn-ghost {
+        @apply text-muted-foreground hover:text-foreground hover:bg-secondary;
+    }
+
+    /* Card System */
+    .card-base {
+        @apply bg-white rounded-2xl md:rounded-3xl shadow-lg md:shadow-xl border border-gray-100 overflow-hidden;
+    }
+
+    .dark .card-base {
+        @apply bg-card border-border shadow-2xl;
+    }
+
+    .card-content {
+        @apply p-4 md:p-6;
+    }
+
+    /* Layout System */
+    .container-app {
+        @apply container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl;
+    }
+
+    .section-spacing {
+        @apply py-8 md:py-12 lg:py-16;
+    }
+
+    .element-spacing {
+        @apply mb-4 md:mb-6;
+    }
+
+    /* Responsive Text */
+    .text-responsive-lg {
+        @apply text-lg md:text-xl lg:text-2xl;
+    }
+
+    .text-responsive-base {
+        @apply text-sm md:text-base lg:text-lg;
+    }
+
+    .text-responsive-sm {
+        @apply text-xs md:text-sm;
+    }
+
+    /* Interactive Elements */
+    .interactive-element {
+        @apply transition-all duration-200 ease-in-out;
+    }
+
+    .hover-lift {
+        @apply hover:transform hover:-translate-y-1 hover:shadow-lg;
+    }
+
+    /* Progress & Status */
+    .progress-bar {
+        @apply h-2 md:h-3 bg-gray-200 rounded-full overflow-hidden;
+    }
+
+    .dark .progress-bar {
+        @apply bg-secondary;
+    }
+
+    /* Progress Bar Global Color Fix */
+    .progress-bar-light {
+        @apply bg-gray-200 dark:bg-gray-700;
+    }
+
+    .progress-indicator-light {
+        @apply bg-gray-900 dark:bg-white;
+    }
+
+    /* Override Progress component default colors */
+    [data-radix-progress-indicator] {
+        @apply bg-gray-900 dark:bg-white !important;
+    }
+
+    .dark [data-radix-progress-indicator] {
+        @apply bg-white !important;
+    }
+
+    /* Badge System */
+    .badge-primary {
+        @apply bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded-full;
+    }
+
+    .dark .badge-primary {
+        @apply bg-red-600;
+    }
+
+    .badge-secondary {
+        @apply bg-gray-100 text-gray-700 text-xs font-medium px-2 py-1 rounded-full;
+    }
+
+    .dark .badge-secondary {
+        @apply bg-secondary text-secondary-foreground;
+    }
+
+    /* Notification System */
+    .notification-dot {
+        @apply w-2 h-2 rounded-full flex-shrink-0 mt-2;
+    }
+
+    .notification-content {
+        @apply flex-1 min-w-0;
+    }
+
+    .notification-title {
+        @apply text-sm font-medium text-gray-900 leading-tight;
+    }
+
+    .notification-subtitle {
+        @apply text-xs text-gray-500 mt-1 leading-tight;
+    }
+
+    .notification-time {
+        @apply text-xs text-gray-400 mt-1;
+    }
+}
+
+/* Mobile-first responsive utilities */
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+
+    /* Safe area utilities for mobile */
+    .safe-top {
+        padding-top: env(safe-area-inset-top);
+    }
+
+    .safe-bottom {
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    .pb-safe {
+        padding-bottom: calc(0.75rem + env(safe-area-inset-bottom));
+    }
+
+    .pt-safe {
+        padding-top: calc(0.75rem + env(safe-area-inset-top));
+    }
+
+    /* Custom scrollbar */
+    .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Focus states */
+    .focus-ring {
+        @apply focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2;
+    }
+}
