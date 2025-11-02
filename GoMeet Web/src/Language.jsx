@@ -1567,7 +1567,6 @@ const resources = {
   },
 };
 
-// Get saved language preference or default to 'en'
 const savedLanguage = localStorage.getItem('i18nextLng') ||
                       sessionStorage.getItem('I18') ||
                       'en';
@@ -1588,6 +1587,9 @@ i18n
       caches: ['localStorage', 'sessionStorage']
     }
   });
+
+document.documentElement.lang = savedLanguage;
+document.documentElement.dir = savedLanguage === 'ar' ? 'rtl' : 'ltr';
 
 i18n.on('languageChanged', (lng) => {
   localStorage.setItem('i18nextLng', lng);
