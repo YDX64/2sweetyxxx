@@ -37,7 +37,7 @@ import PayPal from "./PaymentMethod/PayPal";
 import Payment from "./PaymentMethod/Payment";
 import Payfast from "./PaymentMethod/Payfast";
 import Success, { Cancel } from "./PaymentMethod/Success";
-import i18n from "./Language";
+// i18n is now initialized in index.js with I18nextProvider
 import { TodoContext } from "./Context";
 import UserChat from "./LoginComponent/UserChat";
 import NotificationShow from "./LoginComponent/NotificationShow";
