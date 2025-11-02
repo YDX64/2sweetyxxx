@@ -11,14 +11,14 @@ FROM node:18-alpine AS builder
 # Set working directory
 WORKDIR /app
 
-# Copy package files from GoMeet Web directory
-COPY ["GoMeet Web/package.json", "GoMeet Web/package-lock.json*", "./"]
+# Copy package files
+COPY ["package.json", "package-lock.json*", "./"]
 
 # Install ALL dependencies (including devDependencies for build)
 RUN npm ci
 
-# Copy all source code from GoMeet Web
-COPY ["GoMeet Web/", "./"]
+# Copy all source code
+COPY [".", "./"]
 
 # Build arguments for environment variables
 ARG REACT_APP_API_BASE_URL=https://api.2sweety.com/api/
