@@ -3,6 +3,8 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { I18nextProvider } from "react-i18next";
+import i18n from "@/i18n";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import { AuthProvider } from "@/hooks/useAuth";
@@ -43,26 +45,28 @@ const App = () => {
   }, []);
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <ThemeProvider>
-        <AuthProvider>
-          <LanguageProvider>
-            <TooltipProvider>
-              <Toaster />
-              <Sonner />
-              <ConnectionStatus />
-              <BrowserRouter>
-                <AnalyticsProvider>
-                  <Suspense fallback={<div className="flex items-center justify-center min-h-screen">Loading...</div>}>
-                    <AppRoutes />
-                  </Suspense>
-                </AnalyticsProvider>
-              </BrowserRouter>
-            </TooltipProvider>
-          </LanguageProvider>
-        </AuthProvider>
-      </ThemeProvider>
-    </QueryClientProvider>
+    <I18nextProvider i18n={i18n}>
+      <QueryClientProvider client={queryClient}>
+        <ThemeProvider>
+          <AuthProvider>
+            <LanguageProvider>
+              <TooltipProvider>
+                <Toaster />
+                <Sonner />
+                <ConnectionStatus />
+                <BrowserRouter>
+                  <AnalyticsProvider>
+                    <Suspense fallback={<div className="flex items-center justify-center min-h-screen">Loading...</div>}>
+                      <AppRoutes />
+                    </Suspense>
+                  </AnalyticsProvider>
+                </BrowserRouter>
+              </TooltipProvider>
+            </LanguageProvider>
+          </AuthProvider>
+        </ThemeProvider>
+      </QueryClientProvider>
+    </I18nextProvider>
   );
 };
 
