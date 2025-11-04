@@ -12,7 +12,7 @@ FROM node:18-alpine AS builder
 WORKDIR /app
 
 # Copy package files from root directory (restructured)
-COPY ["package.json", "package-lock.json*", "./"]
+COPY package.json package-lock.json ./
 
 # Install ALL dependencies (including devDependencies for build)
 RUN npm ci
