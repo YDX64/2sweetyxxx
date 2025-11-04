@@ -49,7 +49,7 @@ firebase-debug.log
 /mobile-app/
 *.zip
 /documentation/
-index.html
+# index.html - needed for React build
 
 # Environment files
 .env.coolify*
