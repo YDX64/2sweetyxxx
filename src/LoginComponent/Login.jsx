@@ -13,8 +13,10 @@ import { doc, getDoc, setDoc, updateDoc } from "firebase/firestore";
 import { db } from "../Users_Chats/Firebase";
 import { showTost } from "../showTost";
 import { uid } from "uid";
+import { useTranslation } from 'react-i18next';
 
 const Login = () => {
+  const { t } = useTranslation();
   const Data = useContext(TodoContext);
   const { basUrl, setToastShow } = useContext(MyContext);
 
@@ -68,20 +70,20 @@ const Login = () => {
 
     // Validation
     if (!Email) {
-      setEmailError("Email is required");
-      showTost({ title: "Please Enter Email" });
+      setEmailError(t("Email is required"));
+      showTost({ title: t("Email is required") });
       return;
     }
 
     if (!validateEmail(Email)) {
-      setEmailError("Please enter a valid email");
-      showTost({ title: "Please Enter Valid Email" });
+      setEmailError(t("Please enter a valid email"));
+      showTost({ title: t("Please enter a valid email") });
       return;
     }
 
     if (!Password) {
-      setPasswordError("Password is required");
-      showTost({ title: "Please Enter Password" });
+      setPasswordError(t("Password is required"));
+      showTost({ title: t("Password is required") });
       return;
     }
 
@@ -252,12 +254,12 @@ const Login = () => {
           {/* Header */}
           <div className="text-center mb-8">
             <h1 className="text-3xl font-bold mb-2 dark:text-white">
-              Sign in to{" "}
+              {t("Sign in to")}{" "}
               <span className="bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 bg-clip-text text-transparent">
                 2Sweety
               </span>
             </h1>
-            <p className="text-gray-600 dark:text-gray-300 text-sm">Find your perfect match today</p>
+            <p className="text-gray-600 dark:text-gray-300 text-sm">{t("Find your perfect match today")}</p>
           </div>
 
           {/* Social Login Buttons - FIRST */}
@@ -267,7 +269,7 @@ const Login = () => {
               className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-white dark:bg-gray-700 border-2 border-gray-200 dark:border-gray-600 rounded-xl font-semibold text-gray-700 dark:text-gray-200 hover:border-pink-500 dark:hover:border-pink-500 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02]"
             >
               <FaGoogle className="text-xl text-red-500" />
-              <span>Continue with Google</span>
+              <span>{t("Continue with Google")}</span>
             </button>
 
             <button
@@ -275,7 +277,7 @@ const Login = () => {
               className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-black dark:bg-gray-900 border-2 border-black dark:border-gray-800 rounded-xl font-semibold text-white hover:bg-gray-900 dark:hover:bg-gray-800 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02]"
             >
               <FaApple className="text-xl" />
-              <span>Continue with Apple</span>
+              <span>{t("Continue with Apple")}</span>
             </button>
 
             <button
@@ -283,7 +285,7 @@ const Login = () => {
               className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-[#1877f2] dark:bg-[#166fe5] border-2 border-[#1877f2] dark:border-[#166fe5] rounded-xl font-semibold text-white hover:bg-[#166fe5] dark:hover:bg-[#1559c7] hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02]"
             >
               <FaFacebook className="text-xl" />
-              <span>Continue with Facebook</span>
+              <span>{t("Continue with Facebook")}</span>
             </button>
           </div>
 
@@ -291,7 +293,7 @@ const Login = () => {
           <div className="relative flex items-center my-8">
             <div className="flex-grow border-t border-gray-300 dark:border-gray-600"></div>
             <span className="flex-shrink mx-4 text-gray-500 dark:text-gray-400 text-sm font-medium">
-              or continue with email
+              {t("or")}
             </span>
             <div className="flex-grow border-t border-gray-300 dark:border-gray-600"></div>
           </div>
@@ -306,7 +308,7 @@ const Login = () => {
                 </div>
                 <input
                   type="email"
-                  placeholder="Email"
+                  placeholder={t("Email")}
                   value={Email}
                   onChange={(e) => {
                     setemail(e.target.value);
@@ -333,7 +335,7 @@ const Login = () => {
                 </div>
                 <input
                   type={showPassword ? "text" : "password"}
-                  placeholder="Password"
+                  placeholder={t("Password")}
                   value={Password}
                   onChange={(e) => {
                     setpassword(e.target.value);
@@ -364,7 +366,7 @@ const Login = () => {
                 onClick={toggleBottomSheet}
                 className="text-sm font-semibold text-pink-500 hover:text-pink-600 transition-colors"
               >
-                Forgot password?
+                {t("Forgot password?")}
               </button>
             </div>
 
@@ -377,10 +379,10 @@ const Login = () => {
               {isLoading ? (
                 <div className="flex items-center justify-center gap-2">
                   <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                  <span>Signing in...</span>
+                  <span>{t("Sign In")}...</span>
                 </div>
               ) : (
-                "Sign In"
+                t("Sign In")
               )}
             </button>
           </div>
@@ -388,12 +390,12 @@ const Login = () => {
           {/* Sign Up Link */}
           <div className="mt-8 text-center">
             <p className="text-gray-600 dark:text-gray-300">
-              Don't have an account?{" "}
+              {t("Don't have an account?")}{" "}
               <Link
                 to="/register"
                 className="font-semibold text-pink-500 hover:text-pink-600 dark:hover:text-pink-400 transition-colors"
               >
-                Sign Up
+                {t("Sign up")}
               </Link>
             </p>
           </div>
