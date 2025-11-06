@@ -3,6 +3,7 @@
 import React, { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { MyContext } from '../Context/MyProvider';
+import { useTranslation } from 'react-i18next';
 import {
     FaHeart,
     FaStar,
@@ -16,6 +17,7 @@ import {
 
 const Home = () => {
     const { setValidateId } = useContext(MyContext);
+    const { t } = useTranslation();
 
     useEffect(() => {
         setValidateId(false);
@@ -32,15 +34,15 @@ const Home = () => {
                         {/* Left Content */}
                         <div className="text-left">
                             <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                                <span className="text-gray-800 dark:text-white">Find Your</span>
+                                <span className="text-gray-800 dark:text-white">{t('Find Your')}</span>
                                 <br />
                                 <span className="bg-gradient-to-r from-primary-500 via-secondary-500 to-accent-500 bg-clip-text text-transparent">
-                                    Perfect Match
+                                    {t('Perfect Match')}
                                 </span>
                             </h1>
 
                             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-                                Join millions on 2Sweety, the leading dating app. Meet singles, find love, and build meaningful relationships.
+                                {t('Join millions on 2Sweety')}
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -49,13 +51,13 @@ const Home = () => {
                                     className="bg-gradient-to-r from-primary-500 to-secondary-500 hover:from-primary-600 hover:to-secondary-600 text-white px-8 py-4 text-lg rounded-full shadow-xl hover:shadow-primary-500/25 transition-all duration-300 transform hover:scale-105 flex items-center justify-center no-underline"
                                 >
                                     <FaHeart className="w-5 h-5 mr-2" />
-                                    Join Free Now
+                                    {t('Join Free Now')}
                                 </Link>
                                 <Link
                                     to="/login"
                                     className="border-2 border-primary-200 dark:border-primary-800 text-primary-600 dark:text-primary-400 hover:bg-primary-50 dark:hover:bg-primary-900/20 px-8 py-4 text-lg rounded-full transition-all duration-300 flex items-center justify-center no-underline"
                                 >
-                                    I have an account
+                                    {t('I have an account')}
                                 </Link>
                             </div>
 
@@ -63,11 +65,11 @@ const Home = () => {
                             <div className="flex items-center gap-6 text-sm text-gray-500 dark:text-gray-400">
                                 <div className="flex items-center">
                                     <FaShieldAlt className="w-4 h-4 mr-1 text-green-500" />
-                                    <span>Safe & Verified</span>
+                                    <span>{t('Safe & Verified')}</span>
                                 </div>
                                 <div className="flex items-center">
                                     <FaStar className="w-4 h-4 mr-1 text-yellow-500" />
-                                    <span>4.8★ Rating</span>
+                                    <span>4.8★ {t('Rating')}</span>
                                 </div>
                             </div>
                         </div>
@@ -121,10 +123,10 @@ const Home = () => {
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl font-bold text-gray-800 dark:text-white mb-4">
-                            Why Choose <span className="text-primary-500">2Sweety</span>?
+                            {t('Why Choose')} <span className="text-primary-500">2Sweety</span>?
                         </h2>
                         <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                            Experience the most advanced matching algorithm and connect with like-minded singles
+                            {t('Experience the most advanced')}
                         </p>
                     </div>
 
@@ -134,9 +136,9 @@ const Home = () => {
                             <div className="w-16 h-16 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                                 <FaStar className="w-8 h-8 text-white" />
                             </div>
-                            <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">Smart Matching</h3>
+                            <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">{t('Smart Matching')}</h3>
                             <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                                Our AI-powered algorithm finds your perfect match based on interests, values, and compatibility
+                                {t('Smart Matching Description')}
                             </p>
                         </div>
 
@@ -145,9 +147,9 @@ const Home = () => {
                             <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-primary-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                                 <FaShieldAlt className="w-8 h-8 text-white" />
                             </div>
-                            <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">Safe Environment</h3>
+                            <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">{t('Safe Environment')}</h3>
                             <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                                Verified profiles, photo verification, and 24/7 moderation keep our community safe and authentic
+                                {t('Safe Environment Description')}
                             </p>
                         </div>
 
@@ -156,9 +158,9 @@ const Home = () => {
                             <div className="w-16 h-16 bg-gradient-to-r from-secondary-500 to-accent-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                                 <FaComments className="w-8 h-8 text-white" />
                             </div>
-                            <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">Instant Connection</h3>
+                            <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">{t('Instant Connection')}</h3>
                             <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                                Chat, video call, and send voice messages instantly when you match with someone special
+                                {t('Instant Connection Description')}
                             </p>
                         </div>
                     </div>
@@ -170,10 +172,10 @@ const Home = () => {
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl font-bold text-gray-800 dark:text-white mb-4">
-                            Success Stories
+                            {t('Success Stories')}
                         </h2>
                         <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                            Real stories from couples who found love on 2Sweety
+                            {t('Real stories from couples')}
                         </p>
                     </div>
 
@@ -200,7 +202,7 @@ const Home = () => {
                                     <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
                                 </div>
                                 <p className="text-gray-600 dark:text-gray-300 italic leading-relaxed">
-                                    "We met on 2Sweety and it was love at first chat! Now we're planning our wedding. Thank you for bringing us together!"
+                                    "{t('Testimonial 1')}"
                                 </p>
                             </div>
                         </div>
@@ -227,7 +229,7 @@ const Home = () => {
                                     <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
                                 </div>
                                 <p className="text-gray-600 dark:text-gray-300 italic leading-relaxed">
-                                    "The best dating app I've ever used. Found my perfect match in just two weeks! Couldn't be happier with 2Sweety."
+                                    "{t('Testimonial 2')}"
                                 </p>
                             </div>
                         </div>
@@ -254,7 +256,7 @@ const Home = () => {
                                     <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
                                 </div>
                                 <p className="text-gray-600 dark:text-gray-300 italic leading-relaxed">
-                                    "Amazing algorithm that really understands compatibility. We connected instantly and haven't looked back since. Highly recommend!"
+                                    "{t('Testimonial 3')}"
                                 </p>
                             </div>
                         </div>
@@ -267,10 +269,10 @@ const Home = () => {
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl font-bold text-gray-800 dark:text-white mb-4">
-                            How It Works
+                            {t('How It Works')}
                         </h2>
                         <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                            3 simple steps to find love on 2Sweety
+                            {t('3 simple steps')}
                         </p>
                     </div>
 
@@ -284,15 +286,15 @@ const Home = () => {
                                 <div className="w-16 h-16 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-2xl flex items-center justify-center mb-6">
                                     <FaUserPlus className="w-8 h-8 text-white" />
                                 </div>
-                                <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">Create Profile</h3>
+                                <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">{t('Create Profile')}</h3>
                                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
-                                    Create an amazing profile in just a few minutes. Add your photos, introduce yourself, and share what makes you unique.
+                                    {t('Create Profile Description')}
                                 </p>
                                 <Link
                                     to="/register"
                                     className="inline-flex items-center text-primary-500 hover:text-primary-600 dark:text-primary-400 dark:hover:text-primary-300 font-semibold transition-colors no-underline"
                                 >
-                                    Get Started
+                                    {t('Get Started')}
                                     <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                     </svg>
@@ -309,15 +311,15 @@ const Home = () => {
                                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-primary-500 rounded-2xl flex items-center justify-center mb-6">
                                     <FaHeart className="w-8 h-8 text-white" />
                                 </div>
-                                <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">Discover & Match</h3>
+                                <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">{t('Discover & Match')}</h3>
                                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
-                                    Discover compatible people with our smart algorithm. Swipe, like, and when you both match, it's time to connect!
+                                    {t('Discover & Match Description')}
                                 </p>
                                 <Link
                                     to="/register"
                                     className="inline-flex items-center text-primary-500 hover:text-primary-600 dark:text-primary-400 dark:hover:text-primary-300 font-semibold transition-colors no-underline"
                                 >
-                                    See Matches
+                                    {t('See Matches')}
                                     <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                     </svg>
@@ -334,15 +336,15 @@ const Home = () => {
                                 <div className="w-16 h-16 bg-gradient-to-r from-secondary-500 to-accent-500 rounded-2xl flex items-center justify-center mb-6">
                                     <FaComments className="w-8 h-8 text-white" />
                                 </div>
-                                <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">Chat & Meet</h3>
+                                <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">{t('Chat & Meet')}</h3>
                                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
-                                    Start meaningful conversations after matching. Share your interests, plan your first date, and build a real connection!
+                                    {t('Chat & Meet Description')}
                                 </p>
                                 <Link
                                     to="/register"
                                     className="inline-flex items-center text-primary-500 hover:text-primary-600 dark:text-primary-400 dark:hover:text-primary-300 font-semibold transition-colors no-underline"
                                 >
-                                    Start Messaging
+                                    {t('Start Messaging')}
                                     <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                     </svg>
@@ -359,15 +361,15 @@ const Home = () => {
                     <div className="grid md:grid-cols-3 gap-8 text-center">
                         <div className="transform hover:scale-110 transition-transform duration-300">
                             <div className="text-5xl font-bold mb-2">10M+</div>
-                            <div className="text-lg opacity-90">Active Users</div>
+                            <div className="text-lg opacity-90">{t('Active Users')}</div>
                         </div>
                         <div className="transform hover:scale-110 transition-transform duration-300">
                             <div className="text-5xl font-bold mb-2">2M+</div>
-                            <div className="text-lg opacity-90">Matches Made</div>
+                            <div className="text-lg opacity-90">{t('Matches Made')}</div>
                         </div>
                         <div className="transform hover:scale-110 transition-transform duration-300">
                             <div className="text-5xl font-bold mb-2">4.8★</div>
-                            <div className="text-lg opacity-90">Average Rating</div>
+                            <div className="text-lg opacity-90">{t('Average Rating')}</div>
                         </div>
                     </div>
                 </div>
@@ -387,12 +389,12 @@ const Home = () => {
                             <FaStar className="w-4 h-4 mr-2" />
                             <span className="font-semibold">Premium</span>
                         </div>
-                        <h2 className="text-4xl font-bold mb-4">Premiumfunktioner</h2>
+                        <h2 className="text-4xl font-bold mb-4">{t('Premium Features')}</h2>
                         <p className="text-xl text-white/90 max-w-2xl mx-auto mb-2">
-                            Uppgradera till Premium för fler matchningar och specialfunktioner
+                            {t('Upgrade to Premium')}
                         </p>
                         <p className="text-lg text-yellow-300 font-semibold">
-                            Välj din plan
+                            {t('Choose your plan')}
                         </p>
                     </div>
 
@@ -402,13 +404,13 @@ const Home = () => {
                             <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
                                 <FaHeart className="w-8 h-8 text-white" />
                             </div>
-                            <h3 className="text-2xl font-bold mb-3">Obegränsade Likes</h3>
+                            <h3 className="text-2xl font-bold mb-3">{t('Unlimited Likes')}</h3>
                             <p className="text-white/80 mb-4 leading-relaxed">
-                                Like as many profiles as you want without limits
+                                {t('Unlimited Likes Description')}
                             </p>
                             <div className="flex items-center text-pink-300">
                                 <span className="text-2xl mr-2">∞</span>
-                                <span className="font-semibold">Unlimited</span>
+                                <span className="font-semibold">{t('Unlimited')}</span>
                             </div>
                         </div>
 
@@ -417,13 +419,13 @@ const Home = () => {
                             <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
                                 <FaEye className="w-8 h-8 text-white" />
                             </div>
-                            <h3 className="text-2xl font-bold mb-3">Se Vem Som Gillar Dig</h3>
+                            <h3 className="text-2xl font-bold mb-3">{t('See Who Likes You')}</h3>
                             <p className="text-white/80 mb-4 leading-relaxed">
-                                See everyone who has liked your profile and match instantly
+                                {t('See Who Likes You Description')}
                             </p>
                             <div className="flex items-center text-purple-300">
                                 <span className="text-2xl mr-2">👀</span>
-                                <span className="font-semibold">Full Visibility</span>
+                                <span className="font-semibold">{t('Full Visibility')}</span>
                             </div>
                         </div>
 
@@ -432,13 +434,13 @@ const Home = () => {
                             <div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
                                 <FaStar className="w-8 h-8 text-white" />
                             </div>
-                            <h3 className="text-2xl font-bold mb-3">Super Likes</h3>
+                            <h3 className="text-2xl font-bold mb-3">{t('Super Likes')}</h3>
                             <p className="text-white/80 mb-4 leading-relaxed">
-                                Stand out with 5 Super Likes per day to get noticed
+                                {t('Super Likes Description')}
                             </p>
                             <div className="flex items-center text-yellow-300">
                                 <span className="text-2xl mr-2">⭐</span>
-                                <span className="font-semibold">5/day</span>
+                                <span className="font-semibold">5/{t('per day')}</span>
                             </div>
                         </div>
 
@@ -447,13 +449,13 @@ const Home = () => {
                             <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
                                 <FaUndo className="w-8 h-8 text-white" />
                             </div>
-                            <h3 className="text-2xl font-bold mb-3">Ångra</h3>
+                            <h3 className="text-2xl font-bold mb-3">{t('Rewind')}</h3>
                             <p className="text-white/80 mb-4 leading-relaxed">
-                                Go back and give profiles a second chance
+                                {t('Rewind Description')}
                             </p>
                             <div className="flex items-center text-cyan-300">
                                 <span className="text-2xl mr-2">↩️</span>
-                                <span className="font-semibold">Unlimited Rewind</span>
+                                <span className="font-semibold">{t('Unlimited Rewind')}</span>
                             </div>
                         </div>
 
@@ -462,13 +464,13 @@ const Home = () => {
                             <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
                                 <FaBolt className="w-8 h-8 text-white" />
                             </div>
-                            <h3 className="text-2xl font-bold mb-3">Boost</h3>
+                            <h3 className="text-2xl font-bold mb-3">{t('Boost')}</h3>
                             <p className="text-white/80 mb-4 leading-relaxed">
-                                Be the top profile in your area for 30 minutes
+                                {t('Boost Description')}
                             </p>
                             <div className="flex items-center text-purple-300">
                                 <span className="text-2xl mr-2">⚡</span>
-                                <span className="font-semibold">1 per month</span>
+                                <span className="font-semibold">1 {t('per month')}</span>
                             </div>
                         </div>
 
@@ -477,13 +479,13 @@ const Home = () => {
                             <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
                                 <FaShieldAlt className="w-8 h-8 text-white" />
                             </div>
-                            <h3 className="text-2xl font-bold mb-3">Reklamfritt</h3>
+                            <h3 className="text-2xl font-bold mb-3">{t('Ad-Free')}</h3>
                             <p className="text-white/80 mb-4 leading-relaxed">
-                                Enjoy an ad-free experience while using the app
+                                {t('Ad-Free Description')}
                             </p>
                             <div className="flex items-center text-green-300">
                                 <span className="text-2xl mr-2">🚫</span>
-                                <span className="font-semibold">Ad-Free</span>
+                                <span className="font-semibold">{t('Ad-Free')}</span>
                             </div>
                         </div>
                     </div>
@@ -495,9 +497,9 @@ const Home = () => {
                             className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-gray-900 font-bold px-12 py-5 text-xl rounded-full shadow-2xl hover:shadow-yellow-500/50 transition-all duration-300 transform hover:scale-105 no-underline"
                         >
                             <FaStar className="w-6 h-6 mr-3" />
-                            Uppgradera från $9.99/månad
+                            {t('Upgrade from')}
                         </Link>
-                        <p className="mt-4 text-white/70 text-sm">Choose your plan and start getting more matches today</p>
+                        <p className="mt-4 text-white/70 text-sm">{t('Choose plan and start')}</p>
                     </div>
                 </div>
             </section>
@@ -506,17 +508,17 @@ const Home = () => {
             <section className="py-20 bg-gray-50 dark:bg-gray-800">
                 <div className="container mx-auto px-4 text-center">
                     <h2 className="text-4xl font-bold text-gray-800 dark:text-white mb-6">
-                        Ready to Find Your <span className="text-primary-500">Perfect Match</span>?
+                        {t('Ready to Find')} <span className="text-primary-500">{t('Perfect Match')}</span>?
                     </h2>
                     <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-                        Join 2Sweety today and start your journey to finding love. It's free to sign up!
+                        {t('Join 2Sweety today')}
                     </p>
                     <Link
                         to="/register"
                         className="inline-flex items-center bg-gradient-to-r from-primary-500 to-secondary-500 hover:from-primary-600 hover:to-secondary-600 text-white px-10 py-5 text-xl rounded-full shadow-2xl hover:shadow-primary-500/50 transition-all duration-300 transform hover:scale-105 no-underline"
                     >
                         <FaHeart className="w-6 h-6 mr-2" />
-                        Join 2Sweety Now
+                        {t('Join 2Sweety Now')}
                     </Link>
                 </div>
             </section>
@@ -527,29 +529,29 @@ const Home = () => {
                     <div className="grid md:grid-cols-4 gap-8 mb-8">
                         <div>
                             <img src="/logo.png" alt="2Sweety" className="h-10 mb-4" />
-                            <p className="text-gray-400">Find your perfect match with 2Sweety</p>
+                            <p className="text-gray-400">{t('Find your perfect match')}</p>
                         </div>
                         <div>
-                            <h4 className="font-bold mb-4">Company</h4>
+                            <h4 className="font-bold mb-4">{t('Company')}</h4>
                             <ul className="space-y-2 text-gray-400">
-                                <li><Link to="/page/about" className="hover:text-white no-underline">About Us</Link></li>
-                                <li><Link to="/page/contact" className="hover:text-white no-underline">Contact</Link></li>
+                                <li><Link to="/page/about" className="hover:text-white no-underline">{t('About Us')}</Link></li>
+                                <li><Link to="/page/contact" className="hover:text-white no-underline">{t('Contact')}</Link></li>
                             </ul>
                         </div>
                         <div>
-                            <h4 className="font-bold mb-4">Legal</h4>
+                            <h4 className="font-bold mb-4">{t('Legal')}</h4>
                             <ul className="space-y-2 text-gray-400">
-                                <li><Link to="/page/privacy" className="hover:text-white no-underline">Privacy Policy</Link></li>
-                                <li><Link to="/page/terms" className="hover:text-white no-underline">Terms of Service</Link></li>
+                                <li><Link to="/page/privacy" className="hover:text-white no-underline">{t('Privacy Policy')}</Link></li>
+                                <li><Link to="/page/terms" className="hover:text-white no-underline">{t('Terms of Service')}</Link></li>
                             </ul>
                         </div>
                         <div>
-                            <h4 className="font-bold mb-4">Follow Us</h4>
-                            <p className="text-gray-400">Stay connected with 2Sweety</p>
+                            <h4 className="font-bold mb-4">{t('Follow Us')}</h4>
+                            <p className="text-gray-400">{t('Stay connected')}</p>
                         </div>
                     </div>
                     <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-                        <p>&copy; 2024 2Sweety. All rights reserved.</p>
+                        <p>&copy; 2024 2Sweety. {t('All rights reserved')}.</p>
                     </div>
                 </div>
             </footer>
