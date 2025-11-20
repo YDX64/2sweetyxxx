@@ -8,6 +8,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { MyContext } from "../Context/MyProvider";
 import axios from "axios";
 import { showTost } from "../showTost";
+import { useTranslation } from "react-i18next";
 
 const Register = () => {
   const [Bio, setbio] = useState("");
@@ -33,6 +34,7 @@ const Register = () => {
 
   const { setName, setEmail, setPassword, setBio, basUrl } = useContext(MyContext);
   const navigation = useNavigate();
+  const { t } = useTranslation();
 
   // Social Registration Handlers - Placeholder for future OAuth integration
   const handleGoogleSignup = () => {
@@ -405,14 +407,14 @@ const Register = () => {
                   )}
                 </div>
                 <span className="text-sm text-gray-600 dark:text-gray-300 leading-tight">
-                  I agree to the{" "}
-                  <a href="#" className="text-pink-500 font-semibold hover:text-pink-600 dark:hover:text-pink-400">
-                    Terms of Service
-                  </a>{" "}
-                  and{" "}
-                  <a href="#" className="text-pink-500 font-semibold hover:text-pink-600 dark:hover:text-pink-400">
-                    Privacy Policy
-                  </a>
+                  {t('I agree to the')}{" "}
+                  <Link to="/terms" className="text-pink-500 font-semibold hover:text-pink-600 dark:hover:text-pink-400">
+                    {t('Terms of Service')}
+                  </Link>{" "}
+                  {t('and')}{" "}
+                  <Link to="/privacy" className="text-pink-500 font-semibold hover:text-pink-600 dark:hover:text-pink-400">
+                    {t('Privacy Policy')}
+                  </Link>
                 </span>
               </label>
               {errors.terms && (
@@ -455,13 +457,13 @@ const Register = () => {
 
           {/* Footer Links */}
           <div className="mt-6 flex items-center justify-center gap-4 text-xs text-gray-500 dark:text-gray-400">
-            <a href="#" className="hover:text-pink-500 dark:hover:text-pink-400 transition-colors">
-              Privacy Policy
-            </a>
+            <Link to="/privacy" className="hover:text-pink-500 dark:hover:text-pink-400 transition-colors">
+              {t('Privacy Policy')}
+            </Link>
             <span>•</span>
-            <a href="#" className="hover:text-pink-500 dark:hover:text-pink-400 transition-colors">
-              Terms of Service
-            </a>
+            <Link to="/terms" className="hover:text-pink-500 dark:hover:text-pink-400 transition-colors">
+              {t('Terms of Service')}
+            </Link>
           </div>
         </div>
       </div>

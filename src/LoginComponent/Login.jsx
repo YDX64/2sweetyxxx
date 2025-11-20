@@ -13,10 +13,12 @@ import { doc, getDoc, setDoc, updateDoc } from "firebase/firestore";
 import { db } from "../Users_Chats/Firebase";
 import { showTost } from "../showTost";
 import { uid } from "uid";
+import { useTranslation } from "react-i18next";
 
 const Login = () => {
   const Data = useContext(TodoContext);
   const { basUrl, setToastShow } = useContext(MyContext);
+  const { t } = useTranslation();
 
   const [Email, setemail] = useState("");
   const [Password, setpassword] = useState("");
@@ -400,13 +402,13 @@ const Login = () => {
 
           {/* Footer Links */}
           <div className="mt-6 flex items-center justify-center gap-4 text-xs text-gray-500 dark:text-gray-400">
-            <a href="#" className="hover:text-pink-500 dark:hover:text-pink-400 transition-colors">
-              Privacy Policy
-            </a>
+            <Link to="/privacy" className="hover:text-pink-500 dark:hover:text-pink-400 transition-colors">
+              {t('Privacy Policy')}
+            </Link>
             <span>•</span>
-            <a href="#" className="hover:text-pink-500 dark:hover:text-pink-400 transition-colors">
-              Terms of Service
-            </a>
+            <Link to="/terms" className="hover:text-pink-500 dark:hover:text-pink-400 transition-colors">
+              {t('Terms of Service')}
+            </Link>
           </div>
         </div>
 
