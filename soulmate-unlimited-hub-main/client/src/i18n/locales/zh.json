@@ -2687,5 +2687,280 @@
   "yourSubscriptionRenewed": "您的",
   "zodiacSign": "星座",
   "zodiacSignLabel": "星座",
-  "zodiacSignPlaceholder": "您的星座"
+  "zodiacSignPlaceholder": "您的星座",
+  "legalPages": {
+    "terms": {
+      "title": "服务条款",
+      "subtitle": "在使用2Sweety之前，请仔细阅读这些条款。使用我们的服务，即表示您同意这些条款。",
+      "lastUpdated": "最后更新：2024年12月",
+      "quickOverview": {
+        "title": "快速概览",
+        "description": "这些服务条款规范您对2Sweety的使用，这是一个连接全球人们的约会平台。通过创建账户，您同意遵守我们的社区准则并负责任地使用我们的服务。",
+        "ageOnly": "仅限18+",
+        "ageVerification": "需要年龄验证",
+        "safeEnvironment": "安全环境",
+        "verifiedProfiles": "已验证的个人资料",
+        "respectfulCommunity": "尊重的社区",
+        "zeroTolerance": "零容忍政策"
+      },
+      "section1": {
+        "title": "1. 接受条款",
+        "paragraph1": "通过访问或使用2Sweety，您确认已阅读、理解并同意受这些服务条款和我们的隐私政策的约束。如果您不同意这些条款，请不要使用我们的服务。",
+        "paragraph2": "我们可能会不时更新这些条款。在更改后继续使用我们的服务即构成对更新条款的接受。"
+      },
+      "section2": {
+        "title": "2. 资格要求",
+        "intro": "要使用2Sweety，您必须：",
+        "items": [
+          "年满18岁",
+          "提供准确和完整的信息",
+          "具有签订这些条款的法律能力",
+          "根据适用法律不被禁止使用我们的服务",
+          "之前未被我们的平台封禁"
+        ],
+        "ageVerificationTitle": "年龄验证",
+        "ageVerificationDesc": "我们可能会要求年龄验证文件以确保符合此要求。"
+      },
+      "section3": {
+        "title": "3. 账户责任",
+        "intro": "在创建和维护您的账户时，您同意：",
+        "allowedTitle": "✓ 允许：",
+        "allowedItems": [
+          "使用您本人近期准确的照片",
+          "提供真实的个人资料信息",
+          "尊重地与他人互动",
+          "报告不当行为",
+          "维护账户安全"
+        ],
+        "prohibitedTitle": "✗ 禁止：",
+        "prohibitedItems": [
+          "创建虚假或多个账户",
+          "未经许可使用他人的照片",
+          "骚扰或不当内容",
+          "商业推销",
+          "分享个人联系信息"
+        ]
+      },
+      "section4": {
+        "title": "4. 隐私和数据保护",
+        "paragraph1": "您的隐私对我们很重要。我们根据我们的隐私政策和适用的数据保护法收集和处理您的数据。",
+        "dataSecurityTitle": "数据安全",
+        "dataSecurityDesc": "我们使用行业标准的加密和安全措施来保护您的信息。",
+        "yourRightsTitle": "您的权利",
+        "yourRightsDesc": "您有权随时访问、修改或删除您的个人数据。"
+      },
+      "section5": {
+        "title": "5. 高级服务和付款",
+        "intro": "2Sweety通过订阅计划提供高级功能。购买高级订阅时：",
+        "items": [
+          "您同意支付指定的费用",
+          "除非取消，订阅将自动续订",
+          "退款受我们的退款政策约束",
+          "高级功能的可用性取决于实际情况"
+        ],
+        "cancellationTitle": "取消政策",
+        "cancellationDesc": "您可以随时取消订阅。取消将在当前计费周期结束时生效。"
+      },
+      "section6": {
+        "title": "6. 账户终止",
+        "intro": "任何一方都可以终止您的账户：",
+        "byYouTitle": "由您：",
+        "byYouItems": [
+          "随时删除您的账户",
+          "联系支持寻求帮助",
+          "30天内删除数据"
+        ],
+        "byUsTitle": "由我们：",
+        "byUsItems": [
+          "违反条款",
+          "不当行为",
+          "可疑活动"
+        ]
+      },
+      "section7": {
+        "title": "7. 责任限制",
+        "intro": "2Sweety按\"原样\"提供服务，不对以下方面做出保证：",
+        "items": [
+          "匹配的兼容性或成功",
+          "用户提供信息的准确性",
+          "服务的不间断可用性",
+          "针对所有可能威胁的安全性"
+        ],
+        "userSafetyTitle": "用户安全",
+        "userSafetyDesc": "尽管我们努力提供安全的环境，但用户在见面时对自己的安全负责。"
+      },
+      "section8": {
+        "title": "8. 适用法律和争议",
+        "paragraph1": "这些条款受瑞典法律管辖。任何争议将在瑞典斯德哥尔摩法院解决。",
+        "disputeResolutionTitle": "争议解决",
+        "disputeResolutionDesc": "我们鼓励在法律程序之前通过我们的客户支持解决争议。"
+      },
+      "section9": {
+        "title": "9. 这些条款的更改",
+        "paragraph1": "我们可能会更新这些服务条款以反映我们服务的变化或法律要求。我们将通过应用或电子邮件通知用户重大更改。",
+        "paragraph2": "在更改后继续使用2Sweety即构成对更新条款的接受。"
+      },
+      "contact": {
+        "title": "关于这些条款有疑问？",
+        "description": "如果您对这些服务条款有任何疑问，请联系我们",
+        "legalInquiries": "📧 法律咨询：",
+        "legalEmail": "legal@2sweety.com",
+        "generalSupport": "💬 一般支持：",
+        "supportEmail": "support@2sweety.com",
+        "availability": "全天候提供 • 24小时内回复"
+      }
+    },
+    "privacy": {
+      "title": "隐私政策",
+      "subtitle": "您的隐私是我们的首要任务。了解我们如何收集、使用和保护您的个人信息。",
+      "lastUpdated": "最后更新：2024年12月",
+      "overview": {
+        "title": "隐私概览",
+        "description": "在2Sweety，我们致力于保护您的隐私并确保您个人数据的安全。本政策符合GDPR和其他国际隐私法规。",
+        "sslTitle": "256位SSL",
+        "sslDesc": "加密",
+        "storageTitle": "安全存储",
+        "storageDesc": "加密数据库",
+        "controlTitle": "您的控制",
+        "controlDesc": "隐私设置",
+        "gdprTitle": "GDPR",
+        "gdprDesc": "合规"
+      },
+      "section1": {
+        "title": "1. 我们收集的信息",
+        "intro": "我们收集信息以为您提供最佳的约会体验，同时维护您的隐私和安全。",
+        "mandatoryTitle": "您提供的信息（必需）",
+        "mandatoryItems": [
+          "姓名、年龄和性别",
+          "电子邮件地址和电话号码",
+          "个人资料照片和简介",
+          "位置（用于匹配目的）",
+          "兴趣和偏好"
+        ],
+        "optionalTitle": "可选信息",
+        "optionalItems": [
+          "教育和职业详情",
+          "社交媒体连接",
+          "附加个人资料信息",
+          "高级功能偏好"
+        ],
+        "automaticTitle": "自动收集",
+        "automaticItems": [
+          "设备信息和IP地址",
+          "应用使用分析",
+          "位置数据（需获得许可）",
+          "日志文件和崩溃报告"
+        ]
+      },
+      "section2": {
+        "title": "2. 我们如何使用您的信息",
+        "intro": "我们将您的信息用于以下目的：",
+        "serviceTitle": "服务提供",
+        "serviceDesc": "创建匹配、实现通信并个性化您的体验",
+        "securityTitle": "安全和验证",
+        "securityDesc": "防止欺诈、确保安全并维护社区标准",
+        "improvementTitle": "服务改进",
+        "improvementDesc": "分析、研究和开发新功能",
+        "communicationTitle": "通信",
+        "communicationDesc": "发送通知、更新和客户支持"
+      },
+      "section3": {
+        "title": "3. 信息共享和披露",
+        "intro": "我们绝不出售您的个人信息。我们只会在以下有限情况下共享您的信息：",
+        "items": [
+          "与其他用户：您选择公开显示的个人资料信息",
+          "服务提供商：帮助我们运营服务的可信合作伙伴",
+          "法律要求：法律要求或为保护我们的权利时",
+          "业务转让：在合并或收购的情况下（将予以通知）"
+        ],
+        "neverShareTitle": "我们绝不共享：",
+        "neverShareDesc": "您的私人消息、财务信息或精确位置数据，用于营销目的给第三方。"
+      },
+      "section4": {
+        "title": "4. 数据安全措施",
+        "intro": "我们实施全面的安全措施来保护您的数据：",
+        "technicalTitle": "技术保障措施：",
+        "technicalItems": [
+          "256位SSL加密",
+          "加密数据库存储",
+          "定期安全审计",
+          "安全数据中心"
+        ],
+        "operationalTitle": "运营保障措施：",
+        "operationalItems": [
+          "员工培训计划",
+          "访问控制和监控",
+          "事件响应程序",
+          "ISO 27001合规"
+        ]
+      },
+      "section5": {
+        "title": "5. 您的隐私权",
+        "intro": "根据GDPR，您对个人数据拥有以下权利：",
+        "accessTitle": "访问权",
+        "accessDesc": "请求您的个人数据副本",
+        "correctionTitle": "更正权",
+        "correctionDesc": "更新或更正不准确的信息",
+        "deletionTitle": "删除权",
+        "deletionDesc": "请求删除您的数据",
+        "portabilityTitle": "数据可携权",
+        "portabilityDesc": "以可读格式导出您的数据",
+        "exerciseTitle": "行使您的权利",
+        "exerciseDesc": "联系privacy@2sweety.com或使用应用中的设置来行使这些权利。"
+      },
+      "section6": {
+        "title": "6. 数据保留",
+        "intro": "我们仅在本政策所述目的所需的时间内保留您的数据：",
+        "tableHeaders": {
+          "dataType": "数据类型",
+          "retention": "保留期限",
+          "reason": "原因"
+        },
+        "tableRows": {
+          "profile": {
+            "type": "个人资料信息",
+            "period": "直到删除账户",
+            "reason": "服务提供"
+          },
+          "messages": {
+            "type": "消息",
+            "period": "删除后1年",
+            "reason": "安全调查"
+          },
+          "analytics": {
+            "type": "使用分析",
+            "period": "2年",
+            "reason": "服务改进"
+          },
+          "support": {
+            "type": "支持记录",
+            "period": "3年",
+            "reason": "法律合规"
+          }
+        }
+      },
+      "section7": {
+        "title": "7. Cookie和跟踪",
+        "intro": "我们使用Cookie和类似技术来改善您的体验：",
+        "essentialTitle": "必需Cookie",
+        "essentialDesc": "应用基本功能和安全所需",
+        "analyticsTitle": "分析Cookie",
+        "analyticsDesc": "帮助我们了解您如何使用我们的服务（需征得同意）",
+        "preferenceTitle": "偏好Cookie",
+        "preferenceDesc": "记住您的设置和偏好",
+        "manageDesc": "您可以在浏览器设置或通过我们的隐私设置管理Cookie偏好。"
+      },
+      "contact": {
+        "title": "数据保护官",
+        "description": "我们的数据保护官可帮助解答与隐私相关的问题",
+        "dpoTitle": "🛡️ 数据保护：",
+        "dpoEmail": "dpo@2sweety.com",
+        "dpoRole": "隐私官",
+        "privacyTitle": "📧 一般隐私：",
+        "privacyEmail": "privacy@2sweety.com",
+        "privacyRole": "隐私团队",
+        "availability": "72小时内回复 • GDPR合规 • 多语言支持"
+      }
+    }
+  }
 }

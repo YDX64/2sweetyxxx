@@ -24,14 +24,14 @@ const PrivacyPolicy = () => {
             </div>
           </div>
           <h1 className="text-5xl font-bold text-gray-800 dark:text-gray-100 mb-6">
-            {t("privacyPolicy")}
+            {t("legalPages.privacy.title")}
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Your privacy is our priority. Learn how we collect, use, and protect your personal information.
+            {t("legalPages.privacy.subtitle")}
           </p>
           <div className="mt-6 inline-flex items-center text-sm text-gray-500 dark:text-gray-400">
             <Clock className="w-4 h-4 mr-2" />
-            Last updated: December 2024
+            {t("legalPages.privacy.lastUpdated")}
           </div>
         </div>
 
@@ -41,34 +41,33 @@ const PrivacyPolicy = () => {
             <CardHeader>
               <CardTitle className="flex items-center space-x-2">
                 <Shield className="w-6 h-6 text-green-600 dark:text-green-400" />
-                <span>Privacy at a Glance</span>
+                <span>{t("legalPages.privacy.overview.title")}</span>
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-gray-700 dark:text-gray-300">
-                At 2Sweety, we are committed to protecting your privacy and ensuring the security of your personal data. 
-                This policy complies with GDPR and other international privacy regulations.
+                {t("legalPages.privacy.overview.description")}
               </p>
               <div className="grid md:grid-cols-4 gap-4">
                 <div className="text-center p-4 bg-white dark:bg-gray-700/50 rounded-lg">
                   <Lock className="w-8 h-8 text-blue-500 dark:text-blue-400 mx-auto mb-2" />
-                  <div className="font-semibold text-sm dark:text-gray-200">256-bit SSL</div>
-                  <div className="text-xs text-gray-500 dark:text-gray-400">Encryption</div>
+                  <div className="font-semibold text-sm dark:text-gray-200">{t("legalPages.privacy.overview.sslTitle")}</div>
+                  <div className="text-xs text-gray-500 dark:text-gray-400">{t("legalPages.privacy.overview.sslDesc")}</div>
                 </div>
                 <div className="text-center p-4 bg-white dark:bg-gray-700/50 rounded-lg">
                   <Database className="w-8 h-8 text-purple-500 dark:text-purple-400 mx-auto mb-2" />
-                  <div className="font-semibold text-sm dark:text-gray-200">Secure Storage</div>
-                  <div className="text-xs text-gray-500 dark:text-gray-400">Encrypted Databases</div>
+                  <div className="font-semibold text-sm dark:text-gray-200">{t("legalPages.privacy.overview.storageTitle")}</div>
+                  <div className="text-xs text-gray-500 dark:text-gray-400">{t("legalPages.privacy.overview.storageDesc")}</div>
                 </div>
                 <div className="text-center p-4 bg-white dark:bg-gray-700/50 rounded-lg">
                   <Eye className="w-8 h-8 text-green-500 dark:text-green-400 mx-auto mb-2" />
-                  <div className="font-semibold text-sm dark:text-gray-200">Your Control</div>
-                  <div className="text-xs text-gray-500 dark:text-gray-400">Privacy Settings</div>
+                  <div className="font-semibold text-sm dark:text-gray-200">{t("legalPages.privacy.overview.controlTitle")}</div>
+                  <div className="text-xs text-gray-500 dark:text-gray-400">{t("legalPages.privacy.overview.controlDesc")}</div>
                 </div>
                 <div className="text-center p-4 bg-white dark:bg-gray-700/50 rounded-lg">
                   <Globe className="w-8 h-8 text-orange-500 dark:text-orange-400 mx-auto mb-2" />
-                  <div className="font-semibold text-sm dark:text-gray-200">GDPR</div>
-                  <div className="text-xs text-gray-500 dark:text-gray-400">Compliant</div>
+                  <div className="font-semibold text-sm dark:text-gray-200">{t("legalPages.privacy.overview.gdprTitle")}</div>
+                  <div className="text-xs text-gray-500 dark:text-gray-400">{t("legalPages.privacy.overview.gdprDesc")}</div>
                 </div>
               </div>
             </CardContent>
@@ -77,42 +76,42 @@ const PrivacyPolicy = () => {
           {/* Information We Collect */}
           <Card className="dark:bg-gray-800/80 dark:border-gray-600/50">
             <CardHeader>
-              <CardTitle>1. Information We Collect</CardTitle>
+              <CardTitle>{t("legalPages.privacy.section1.title")}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
               <p className="text-gray-700 dark:text-gray-300">
-                We collect information to provide you with the best dating experience while maintaining your privacy and security.
+                {t("legalPages.privacy.section1.intro")}
               </p>
-              
+
               <div className="space-y-4">
                 <div className="border border-blue-200 dark:border-blue-800 rounded-lg p-4 bg-blue-50/50 dark:bg-blue-900/10">
-                  <h4 className="font-semibold text-blue-800 dark:text-blue-300 mb-3">Information You Provide (Mandatory)</h4>
+                  <h4 className="font-semibold text-blue-800 dark:text-blue-300 mb-3">{t("legalPages.privacy.section1.mandatoryTitle")}</h4>
                   <ul className="list-disc pl-6 space-y-1 text-sm text-gray-700 dark:text-gray-300">
-                    <li>Name, age, and gender</li>
-                    <li>Email address and phone number</li>
-                    <li>Profile photos and bio</li>
-                    <li>Location (for matching purposes)</li>
-                    <li>Interests and preferences</li>
+                    <li>{t("legalPages.privacy.section1.mandatoryItems.0")}</li>
+                    <li>{t("legalPages.privacy.section1.mandatoryItems.1")}</li>
+                    <li>{t("legalPages.privacy.section1.mandatoryItems.2")}</li>
+                    <li>{t("legalPages.privacy.section1.mandatoryItems.3")}</li>
+                    <li>{t("legalPages.privacy.section1.mandatoryItems.4")}</li>
                   </ul>
                 </div>
-                
+
                 <div className="border border-green-200 dark:border-green-800 rounded-lg p-4 bg-green-50/50 dark:bg-green-900/10">
-                  <h4 className="font-semibold text-green-800 dark:text-green-300 mb-3">Optional Information</h4>
+                  <h4 className="font-semibold text-green-800 dark:text-green-300 mb-3">{t("legalPages.privacy.section1.optionalTitle")}</h4>
                   <ul className="list-disc pl-6 space-y-1 text-sm text-gray-700 dark:text-gray-300">
-                    <li>Education and occupation details</li>
-                    <li>Social media connections</li>
-                    <li>Additional profile information</li>
-                    <li>Premium feature preferences</li>
+                    <li>{t("legalPages.privacy.section1.optionalItems.0")}</li>
+                    <li>{t("legalPages.privacy.section1.optionalItems.1")}</li>
+                    <li>{t("legalPages.privacy.section1.optionalItems.2")}</li>
+                    <li>{t("legalPages.privacy.section1.optionalItems.3")}</li>
                   </ul>
                 </div>
-                
+
                 <div className="border border-purple-200 dark:border-purple-800 rounded-lg p-4 bg-purple-50/50 dark:bg-purple-900/10">
-                  <h4 className="font-semibold text-purple-800 dark:text-purple-300 mb-3">Automatically Collected</h4>
+                  <h4 className="font-semibold text-purple-800 dark:text-purple-300 mb-3">{t("legalPages.privacy.section1.automaticTitle")}</h4>
                   <ul className="list-disc pl-6 space-y-1 text-sm text-gray-700 dark:text-gray-300">
-                    <li>Device information and IP address</li>
-                    <li>App usage analytics</li>
-                    <li>Location data (with permission)</li>
-                    <li>Log files and crash reports</li>
+                    <li>{t("legalPages.privacy.section1.automaticItems.0")}</li>
+                    <li>{t("legalPages.privacy.section1.automaticItems.1")}</li>
+                    <li>{t("legalPages.privacy.section1.automaticItems.2")}</li>
+                    <li>{t("legalPages.privacy.section1.automaticItems.3")}</li>
                   </ul>
                 </div>
               </div>
@@ -122,46 +121,46 @@ const PrivacyPolicy = () => {
           {/* How We Use Your Information */}
           <Card className="dark:bg-gray-800/80 dark:border-gray-600/50">
             <CardHeader>
-              <CardTitle>2. How We Use Your Information</CardTitle>
+              <CardTitle>{t("legalPages.privacy.section2.title")}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-gray-700 dark:text-gray-300">
-                We use your information for the following purposes:
+                {t("legalPages.privacy.section2.intro")}
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-3">
                   <div className="flex items-start space-x-3">
                     <Users className="w-5 h-5 text-pink-500 dark:text-pink-400 mt-1" />
                     <div>
-                      <p className="font-semibold dark:text-gray-200">Service Delivery</p>
-                      <p className="text-sm text-gray-600 dark:text-gray-400">Creating matches, enabling communication, and personalizing your experience</p>
+                      <p className="font-semibold dark:text-gray-200">{t("legalPages.privacy.section2.serviceTitle")}</p>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">{t("legalPages.privacy.section2.serviceDesc")}</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start space-x-3">
                     <Shield className="w-5 h-5 text-blue-500 dark:text-blue-400 mt-1" />
                     <div>
-                      <p className="font-semibold dark:text-gray-200">Security & Verification</p>
-                      <p className="text-sm text-gray-600 dark:text-gray-400">Preventing fraud, ensuring safety, and maintaining community standards</p>
+                      <p className="font-semibold dark:text-gray-200">{t("legalPages.privacy.section2.securityTitle")}</p>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">{t("legalPages.privacy.section2.securityDesc")}</p>
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="space-y-3">
                   <div className="flex items-start space-x-3">
                     <Database className="w-5 h-5 text-green-500 dark:text-green-400 mt-1" />
                     <div>
-                      <p className="font-semibold dark:text-gray-200">Service Improvement</p>
-                      <p className="text-sm text-gray-600 dark:text-gray-400">Analytics, research, and developing new features</p>
+                      <p className="font-semibold dark:text-gray-200">{t("legalPages.privacy.section2.improvementTitle")}</p>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">{t("legalPages.privacy.section2.improvementDesc")}</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start space-x-3">
                     <Mail className="w-5 h-5 text-purple-500 dark:text-purple-400 mt-1" />
                     <div>
-                      <p className="font-semibold dark:text-gray-200">Communication</p>
-                      <p className="text-sm text-gray-600 dark:text-gray-400">Sending notifications, updates, and customer support</p>
+                      <p className="font-semibold dark:text-gray-200">{t("legalPages.privacy.section2.communicationTitle")}</p>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">{t("legalPages.privacy.section2.communicationDesc")}</p>
                     </div>
                   </div>
                 </div>
@@ -172,23 +171,23 @@ const PrivacyPolicy = () => {
           {/* Information Sharing */}
           <Card className="dark:bg-gray-800/80 dark:border-gray-600/50">
             <CardHeader>
-              <CardTitle>3. Information Sharing and Disclosure</CardTitle>
+              <CardTitle>{t("legalPages.privacy.section3.title")}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-gray-700 dark:text-gray-300">
-                We never sell your personal information. We may share your information only in the following limited circumstances:
+                {t("legalPages.privacy.section3.intro")}
               </p>
-              
+
               <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
-                <li><strong className="dark:text-gray-200">With Other Users:</strong> Profile information you choose to display publicly</li>
-                <li><strong className="dark:text-gray-200">Service Providers:</strong> Trusted partners who help us operate our service</li>
-                <li><strong className="dark:text-gray-200">Legal Requirements:</strong> When required by law or to protect our rights</li>
-                <li><strong className="dark:text-gray-200">Business Transfers:</strong> In case of merger or acquisition (with notice)</li>
+                <li>{t("legalPages.privacy.section3.items.0")}</li>
+                <li>{t("legalPages.privacy.section3.items.1")}</li>
+                <li>{t("legalPages.privacy.section3.items.2")}</li>
+                <li>{t("legalPages.privacy.section3.items.3")}</li>
               </ul>
-              
+
               <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4">
-                <p className="text-red-800 dark:text-red-300 font-semibold">We Never Share:</p>
-                <p className="text-red-700 dark:text-red-400 text-sm">Your private messages, financial information, or precise location data with third parties for marketing purposes.</p>
+                <p className="text-red-800 dark:text-red-300 font-semibold">{t("legalPages.privacy.section3.neverShareTitle")}</p>
+                <p className="text-red-700 dark:text-red-400 text-sm">{t("legalPages.privacy.section3.neverShareDesc")}</p>
               </div>
             </CardContent>
           </Card>
@@ -196,30 +195,30 @@ const PrivacyPolicy = () => {
           {/* Data Security */}
           <Card className="dark:bg-gray-800/80 dark:border-gray-600/50">
             <CardHeader>
-              <CardTitle>4. Data Security Measures</CardTitle>
+              <CardTitle>{t("legalPages.privacy.section4.title")}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-gray-700 dark:text-gray-300">
-                We implement comprehensive security measures to protect your data:
+                {t("legalPages.privacy.section4.intro")}
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <h4 className="font-semibold mb-3 dark:text-gray-200">Technical Safeguards:</h4>
+                  <h4 className="font-semibold mb-3 dark:text-gray-200">{t("legalPages.privacy.section4.technicalTitle")}</h4>
                   <ul className="list-disc pl-4 space-y-1 text-sm text-gray-700 dark:text-gray-300">
-                    <li>256-bit SSL encryption</li>
-                    <li>Encrypted database storage</li>
-                    <li>Regular security audits</li>
-                    <li>Secure data centers</li>
+                    <li>{t("legalPages.privacy.section4.technicalItems.0")}</li>
+                    <li>{t("legalPages.privacy.section4.technicalItems.1")}</li>
+                    <li>{t("legalPages.privacy.section4.technicalItems.2")}</li>
+                    <li>{t("legalPages.privacy.section4.technicalItems.3")}</li>
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-3 dark:text-gray-200">Operational Safeguards:</h4>
+                  <h4 className="font-semibold mb-3 dark:text-gray-200">{t("legalPages.privacy.section4.operationalTitle")}</h4>
                   <ul className="list-disc pl-4 space-y-1 text-sm text-gray-700 dark:text-gray-300">
-                    <li>Employee training programs</li>
-                    <li>Access controls and monitoring</li>
-                    <li>Incident response procedures</li>
-                    <li>ISO 27001 compliance</li>
+                    <li>{t("legalPages.privacy.section4.operationalItems.0")}</li>
+                    <li>{t("legalPages.privacy.section4.operationalItems.1")}</li>
+                    <li>{t("legalPages.privacy.section4.operationalItems.2")}</li>
+                    <li>{t("legalPages.privacy.section4.operationalItems.3")}</li>
                   </ul>
                 </div>
               </div>
@@ -229,50 +228,50 @@ const PrivacyPolicy = () => {
           {/* Your Rights */}
           <Card className="dark:bg-gray-800/80 dark:border-gray-600/50">
             <CardHeader>
-              <CardTitle>5. Your Privacy Rights</CardTitle>
+              <CardTitle>{t("legalPages.privacy.section5.title")}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-gray-700 dark:text-gray-300">
-                Under GDPR, you have the following rights regarding your personal data:
+                {t("legalPages.privacy.section5.intro")}
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <div className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                    <span className="font-semibold text-sm dark:text-gray-200">Right to Access</span>
+                    <span className="font-semibold text-sm dark:text-gray-200">{t("legalPages.privacy.section5.accessTitle")}</span>
                   </div>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 pl-4">Request copies of your personal data</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 pl-4">{t("legalPages.privacy.section5.accessDesc")}</p>
                 </div>
-                
+
                 <div className="space-y-2">
                   <div className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                    <span className="font-semibold text-sm dark:text-gray-200">Right to Correction</span>
+                    <span className="font-semibold text-sm dark:text-gray-200">{t("legalPages.privacy.section5.correctionTitle")}</span>
                   </div>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 pl-4">Update or correct inaccurate information</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 pl-4">{t("legalPages.privacy.section5.correctionDesc")}</p>
                 </div>
-                
+
                 <div className="space-y-2">
                   <div className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                    <span className="font-semibold text-sm dark:text-gray-200">Right to Deletion</span>
+                    <span className="font-semibold text-sm dark:text-gray-200">{t("legalPages.privacy.section5.deletionTitle")}</span>
                   </div>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 pl-4">Request deletion of your data</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 pl-4">{t("legalPages.privacy.section5.deletionDesc")}</p>
                 </div>
-                
+
                 <div className="space-y-2">
                   <div className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                    <span className="font-semibold text-sm dark:text-gray-200">Right to Portability</span>
+                    <span className="font-semibold text-sm dark:text-gray-200">{t("legalPages.privacy.section5.portabilityTitle")}</span>
                   </div>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 pl-4">Export your data in readable format</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 pl-4">{t("legalPages.privacy.section5.portabilityDesc")}</p>
                 </div>
               </div>
-              
+
               <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
-                <p className="text-blue-800 dark:text-blue-300 font-semibold">Exercise Your Rights</p>
-                <p className="text-blue-700 dark:text-blue-400 text-sm">Contact privacy@2sweety.com or use the settings in your app to exercise these rights.</p>
+                <p className="text-blue-800 dark:text-blue-300 font-semibold">{t("legalPages.privacy.section5.exerciseTitle")}</p>
+                <p className="text-blue-700 dark:text-blue-400 text-sm">{t("legalPages.privacy.section5.exerciseDesc")}</p>
               </div>
             </CardContent>
           </Card>
@@ -280,42 +279,42 @@ const PrivacyPolicy = () => {
           {/* Data Retention */}
           <Card className="dark:bg-gray-800/80 dark:border-gray-600/50">
             <CardHeader>
-              <CardTitle>6. Data Retention</CardTitle>
+              <CardTitle>{t("legalPages.privacy.section6.title")}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-gray-700 dark:text-gray-300">
-                We retain your data only as long as necessary for the purposes outlined in this policy:
+                {t("legalPages.privacy.section6.intro")}
               </p>
-              
+
               <div className="overflow-x-auto">
                 <table className="w-full border-collapse border border-gray-300 dark:border-gray-600 text-sm">
                   <thead>
                     <tr className="bg-gray-50 dark:bg-gray-700">
-                      <th className="border border-gray-300 dark:border-gray-600 px-4 py-2 text-left dark:text-gray-200">Data Type</th>
-                      <th className="border border-gray-300 dark:border-gray-600 px-4 py-2 text-left dark:text-gray-200">Retention Period</th>
-                      <th className="border border-gray-300 dark:border-gray-600 px-4 py-2 text-left dark:text-gray-200">Reason</th>
+                      <th className="border border-gray-300 dark:border-gray-600 px-4 py-2 text-left dark:text-gray-200">{t("legalPages.privacy.section6.tableHeaders.dataType")}</th>
+                      <th className="border border-gray-300 dark:border-gray-600 px-4 py-2 text-left dark:text-gray-200">{t("legalPages.privacy.section6.tableHeaders.retention")}</th>
+                      <th className="border border-gray-300 dark:border-gray-600 px-4 py-2 text-left dark:text-gray-200">{t("legalPages.privacy.section6.tableHeaders.reason")}</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr className="dark:bg-gray-800/50">
-                      <td className="border border-gray-300 dark:border-gray-600 px-4 py-2 dark:text-gray-300">Profile Information</td>
-                      <td className="border border-gray-300 dark:border-gray-600 px-4 py-2 dark:text-gray-300">Until account deletion</td>
-                      <td className="border border-gray-300 dark:border-gray-600 px-4 py-2 dark:text-gray-300">Service provision</td>
+                      <td className="border border-gray-300 dark:border-gray-600 px-4 py-2 dark:text-gray-300">{t("legalPages.privacy.section6.tableRows.profile.type")}</td>
+                      <td className="border border-gray-300 dark:border-gray-600 px-4 py-2 dark:text-gray-300">{t("legalPages.privacy.section6.tableRows.profile.period")}</td>
+                      <td className="border border-gray-300 dark:border-gray-600 px-4 py-2 dark:text-gray-300">{t("legalPages.privacy.section6.tableRows.profile.reason")}</td>
                     </tr>
                     <tr className="dark:bg-gray-800/50">
-                      <td className="border border-gray-300 dark:border-gray-600 px-4 py-2 dark:text-gray-300">Messages</td>
-                      <td className="border border-gray-300 dark:border-gray-600 px-4 py-2 dark:text-gray-300">1 year after deletion</td>
-                      <td className="border border-gray-300 dark:border-gray-600 px-4 py-2 dark:text-gray-300">Safety investigation</td>
+                      <td className="border border-gray-300 dark:border-gray-600 px-4 py-2 dark:text-gray-300">{t("legalPages.privacy.section6.tableRows.messages.type")}</td>
+                      <td className="border border-gray-300 dark:border-gray-600 px-4 py-2 dark:text-gray-300">{t("legalPages.privacy.section6.tableRows.messages.period")}</td>
+                      <td className="border border-gray-300 dark:border-gray-600 px-4 py-2 dark:text-gray-300">{t("legalPages.privacy.section6.tableRows.messages.reason")}</td>
                     </tr>
                     <tr className="dark:bg-gray-800/50">
-                      <td className="border border-gray-300 dark:border-gray-600 px-4 py-2 dark:text-gray-300">Usage Analytics</td>
-                      <td className="border border-gray-300 dark:border-gray-600 px-4 py-2 dark:text-gray-300">2 years</td>
-                      <td className="border border-gray-300 dark:border-gray-600 px-4 py-2 dark:text-gray-300">Service improvement</td>
+                      <td className="border border-gray-300 dark:border-gray-600 px-4 py-2 dark:text-gray-300">{t("legalPages.privacy.section6.tableRows.analytics.type")}</td>
+                      <td className="border border-gray-300 dark:border-gray-600 px-4 py-2 dark:text-gray-300">{t("legalPages.privacy.section6.tableRows.analytics.period")}</td>
+                      <td className="border border-gray-300 dark:border-gray-600 px-4 py-2 dark:text-gray-300">{t("legalPages.privacy.section6.tableRows.analytics.reason")}</td>
                     </tr>
                     <tr className="dark:bg-gray-800/50">
-                      <td className="border border-gray-300 dark:border-gray-600 px-4 py-2 dark:text-gray-300">Support Records</td>
-                      <td className="border border-gray-300 dark:border-gray-600 px-4 py-2 dark:text-gray-300">3 years</td>
-                      <td className="border border-gray-300 dark:border-gray-600 px-4 py-2 dark:text-gray-300">Legal compliance</td>
+                      <td className="border border-gray-300 dark:border-gray-600 px-4 py-2 dark:text-gray-300">{t("legalPages.privacy.section6.tableRows.support.type")}</td>
+                      <td className="border border-gray-300 dark:border-gray-600 px-4 py-2 dark:text-gray-300">{t("legalPages.privacy.section6.tableRows.support.period")}</td>
+                      <td className="border border-gray-300 dark:border-gray-600 px-4 py-2 dark:text-gray-300">{t("legalPages.privacy.section6.tableRows.support.reason")}</td>
                     </tr>
                   </tbody>
                 </table>
@@ -326,30 +325,30 @@ const PrivacyPolicy = () => {
           {/* Cookies */}
           <Card className="dark:bg-gray-800/80 dark:border-gray-600/50">
             <CardHeader>
-              <CardTitle>7. Cookies and Tracking</CardTitle>
+              <CardTitle>{t("legalPages.privacy.section7.title")}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-gray-700 dark:text-gray-300">
-                We use cookies and similar technologies to improve your experience:
+                {t("legalPages.privacy.section7.intro")}
               </p>
-              
+
               <div className="space-y-3">
                 <div className="border-l-4 border-blue-500 pl-4">
-                  <p className="font-semibold dark:text-gray-200">Essential Cookies</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Required for basic app functionality and security</p>
+                  <p className="font-semibold dark:text-gray-200">{t("legalPages.privacy.section7.essentialTitle")}</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">{t("legalPages.privacy.section7.essentialDesc")}</p>
                 </div>
                 <div className="border-l-4 border-green-500 pl-4">
-                  <p className="font-semibold dark:text-gray-200">Analytics Cookies</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Help us understand how you use our service (with consent)</p>
+                  <p className="font-semibold dark:text-gray-200">{t("legalPages.privacy.section7.analyticsTitle")}</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">{t("legalPages.privacy.section7.analyticsDesc")}</p>
                 </div>
                 <div className="border-l-4 border-purple-500 pl-4">
-                  <p className="font-semibold dark:text-gray-200">Preference Cookies</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Remember your settings and preferences</p>
+                  <p className="font-semibold dark:text-gray-200">{t("legalPages.privacy.section7.preferenceTitle")}</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">{t("legalPages.privacy.section7.preferenceDesc")}</p>
                 </div>
               </div>
-              
+
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                You can manage cookie preferences in your browser settings or through our privacy settings.
+                {t("legalPages.privacy.section7.manageDesc")}
               </p>
             </CardContent>
           </Card>
@@ -358,24 +357,24 @@ const PrivacyPolicy = () => {
           <Card className="bg-gradient-to-br from-green-600 via-green-700 to-blue-700 dark:from-gray-700 dark:via-gray-800 dark:to-gray-800 text-white shadow-xl border-0">
             <CardContent className="text-center py-8">
               <Shield className="w-12 h-12 mx-auto mb-4 text-white drop-shadow-lg" />
-              <h3 className="text-2xl font-bold mb-4 text-white">Data Protection Officer</h3>
+              <h3 className="text-2xl font-bold mb-4 text-white">{t("legalPages.privacy.contact.title")}</h3>
               <p className="mb-6 text-green-100 dark:text-gray-300">
-                Our Data Protection Officer is available to help with privacy-related questions
+                {t("legalPages.privacy.contact.description")}
               </p>
               <div className="grid md:grid-cols-2 gap-6 text-left">
                 <div className="bg-white/10 dark:bg-white/5 backdrop-blur-sm rounded-lg p-4">
-                  <h4 className="font-semibold mb-3 text-white">🛡️ Data Protection:</h4>
-                  <p className="text-sm text-green-100 dark:text-gray-300 mb-2">dpo@2sweety.com</p>
-                  <p className="text-sm text-green-100 dark:text-gray-300">Privacy Officer</p>
+                  <h4 className="font-semibold mb-3 text-white">{t("legalPages.privacy.contact.dpoTitle")}</h4>
+                  <p className="text-sm text-green-100 dark:text-gray-300 mb-2">{t("legalPages.privacy.contact.dpoEmail")}</p>
+                  <p className="text-sm text-green-100 dark:text-gray-300">{t("legalPages.privacy.contact.dpoRole")}</p>
                 </div>
                 <div className="bg-white/10 dark:bg-white/5 backdrop-blur-sm rounded-lg p-4">
-                  <h4 className="font-semibold mb-3 text-white">📧 General Privacy:</h4>
-                  <p className="text-sm text-green-100 dark:text-gray-300 mb-1">privacy@2sweety.com</p>
-                  <p className="text-sm text-green-100 dark:text-gray-300">Privacy Team</p>
+                  <h4 className="font-semibold mb-3 text-white">{t("legalPages.privacy.contact.privacyTitle")}</h4>
+                  <p className="text-sm text-green-100 dark:text-gray-300 mb-1">{t("legalPages.privacy.contact.privacyEmail")}</p>
+                  <p className="text-sm text-green-100 dark:text-gray-300">{t("legalPages.privacy.contact.privacyRole")}</p>
                 </div>
               </div>
               <div className="mt-6 text-sm text-green-200 dark:text-gray-300">
-                <p>Response within 72 hours • GDPR Compliant • Multi-language support</p>
+                <p>{t("legalPages.privacy.contact.availability")}</p>
               </div>
             </CardContent>
           </Card>

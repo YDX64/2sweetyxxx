@@ -2687,5 +2687,280 @@
   "yourSubscriptionRenewed": "Your",
   "zodiacSign": "Zodiac Sign",
   "zodiacSignLabel": "Zodiac Sign",
-  "zodiacSignPlaceholder": "Your zodiac sign"
+  "zodiacSignPlaceholder": "Your zodiac sign",
+  "legalPages": {
+    "terms": {
+      "title": "Käyttöehdot",
+      "subtitle": "Lue nämä ehdot huolellisesti ennen kuin käytät 2Sweetyä. Käyttämällä palveluamme hyväksyt nämä ehdot.",
+      "lastUpdated": "Viimeksi päivitetty: joulukuu 2024",
+      "quickOverview": {
+        "title": "Pikakatsaus",
+        "description": "Nämä käyttöehdot säätelevät 2Sweetyn käyttöä, joka on ihmisiä maailmanlaajuisesti yhdistävä deittisovellus. Luomalla tilin sitoudut noudattamaan yhteisön ohjeita ja käyttämään palveluamme vastuullisesti.",
+        "ageOnly": "Vain 18+",
+        "ageVerification": "Ikävarmistus vaaditaan",
+        "safeEnvironment": "Turvallinen ympäristö",
+        "verifiedProfiles": "Vahvistetut profiilit",
+        "respectfulCommunity": "Kunnioittava yhteisö",
+        "zeroTolerance": "Nollatoleranssi"
+      },
+      "section1": {
+        "title": "1. Ehtojen hyväksyminen",
+        "paragraph1": "Käyttämällä 2Sweetyä vahvistat, että olet lukenut, ymmärtänyt ja hyväksyt nämä käyttöehdot ja tietosuojakäytäntömme. Jos et hyväksy näitä ehtoja, älä käytä palveluamme.",
+        "paragraph2": "Voimme päivittää näitä ehtoja ajoittain. Palvelun jatkuva käyttö päivitysten jälkeen merkitsee päivitettyjen ehtojen hyväksymistä."
+      },
+      "section2": {
+        "title": "2. Kelpoisuusvaatimukset",
+        "intro": "Käyttääksesi 2Sweetyä sinun on:",
+        "items": [
+          "Oltava vähintään 18-vuotias",
+          "Annettava tarkkoja ja täydellisiä tietoja",
+          "Oltava oikeudellisesti kykenevä hyväksymään nämä ehdot",
+          "Ei kiellettynä käyttämästä palveluamme sovellettavien lakien mukaan",
+          "Ei aiemmin estetty alustaltamme"
+        ],
+        "ageVerificationTitle": "Ikävarmistus",
+        "ageVerificationDesc": "Voimme pyytää ikävarmistusasiakirjoja varmistaaksemme tämän vaatimuksen noudattamisen."
+      },
+      "section3": {
+        "title": "3. Tilivastuut",
+        "intro": "Luodessasi ja ylläpitäessäsi tiliäsi sitoudut:",
+        "allowedTitle": "✓ Sallittu:",
+        "allowedItems": [
+          "Käyttää tuoreita, oikeita kuvia itsestäsi",
+          "Antaa totuudenmukaisia profiilitietoja",
+          "Olla kunnioittava muita kohtaan",
+          "Raportoida sopimaton käytös",
+          "Ylläpitää tilin turvallisuutta"
+        ],
+        "prohibitedTitle": "✗ Kielletty:",
+        "prohibitedItems": [
+          "Väärien tai useiden tilien luominen",
+          "Muiden kuvien käyttö ilman lupaa",
+          "Häirintä tai sopimaton sisältö",
+          "Kaupallinen mainonta",
+          "Henkilökohtaisten yhteystietojen jakaminen"
+        ]
+      },
+      "section4": {
+        "title": "4. Yksityisyys ja tietosuoja",
+        "paragraph1": "Yksityisyytesi on meille tärkeää. Keräämme ja käsittelemme tietojasi tietosuojakäytäntömme ja sovellettavien tietosuojalakien mukaisesti.",
+        "dataSecurityTitle": "Tietoturva",
+        "dataSecurityDesc": "Käytämme alan standardin mukaista salausta ja turvatoimia tietojesi suojaamiseen.",
+        "yourRightsTitle": "Oikeutesi",
+        "yourRightsDesc": "Sinulla on oikeus käyttää, muokata tai poistaa henkilötietojasi milloin tahansa."
+      },
+      "section5": {
+        "title": "5. Premium-palvelut ja maksut",
+        "intro": "2Sweety tarjoaa premium-ominaisuuksia tilaussuunnitelmien kautta. Ostamalla premium-tilauksen:",
+        "items": [
+          "Sitoudut maksamaan määritetyt maksut",
+          "Tilaukset uusiutuvat automaattisesti, ellei peruuteta",
+          "Palautukset ovat palautuskäytäntömme alaisia",
+          "Premium-ominaisuudet ovat saatavuuden mukaan"
+        ],
+        "cancellationTitle": "Peruutuskäytäntö",
+        "cancellationDesc": "Voit peruuttaa tilauksesi milloin tahansa. Peruutus tulee voimaan nykyisen laskutuskauden lopussa."
+      },
+      "section6": {
+        "title": "6. Tilin lopettaminen",
+        "intro": "Kumpi tahansa osapuoli voi lopettaa tilisi:",
+        "byYouTitle": "Sinä:",
+        "byYouItems": [
+          "Poista tilisi milloin tahansa",
+          "Ota yhteyttä tukeen saadaksesi apua",
+          "Tietojen poistaminen 30 päivässä"
+        ],
+        "byUsTitle": "Me:",
+        "byUsItems": [
+          "Ehtojen rikkominen",
+          "Sopimaton käytös",
+          "Epäilyttävä toiminta"
+        ]
+      },
+      "section7": {
+        "title": "7. Vastuunrajoitus",
+        "intro": "2Sweety tarjoaa palvelun \"sellaisenaan\" eikä anna takuita seuraavista:",
+        "items": [
+          "Yhteensopivuus tai menestys kumppanien löytämisessä",
+          "Käyttäjien antamien tietojen tarkkuus",
+          "Keskeytymätön palvelun saatavuus",
+          "Turvallisuus kaikkia mahdollisia uhkia vastaan"
+        ],
+        "userSafetyTitle": "Käyttäjien turvallisuus",
+        "userSafetyDesc": "Vaikka pyrimme tarjoamaan turvallisen ympäristön, käyttäjät ovat vastuussa omasta turvallisuudestaan tavatessaan muita."
+      },
+      "section8": {
+        "title": "8. Sovellettava laki ja riidat",
+        "paragraph1": "Näitä ehtoja säätelee Ruotsin laki. Kaikki riidat ratkaistaan Tukholman, Ruotsi tuomioistuimissa.",
+        "disputeResolutionTitle": "Riitojen ratkaisu",
+        "disputeResolutionDesc": "Kannustamme ratkaisemaan riidat asiakastukemme kautta ennen oikeustoimia."
+      },
+      "section9": {
+        "title": "9. Muutokset näihin ehtoihin",
+        "paragraph1": "Voimme päivittää näitä käyttöehtoja palvelussamme tai lakisääteisissä vaatimuksissa tapahtuvien muutosten mukaisesti. Ilmoitamme käyttäjille merkittävistä muutoksista sovelluksen tai sähköpostin kautta.",
+        "paragraph2": "2Sweetyn jatkuva käytös muutosten jälkeen merkitsee päivitettyjen ehtojen hyväksymistä."
+      },
+      "contact": {
+        "title": "Kysymyksiä näistä ehdoista?",
+        "description": "Jos sinulla on kysymyksiä näistä käyttöehdoista, ota meihin yhteyttä",
+        "legalInquiries": "📧 Oikeudelliset tiedustelut:",
+        "legalEmail": "legal@2sweety.com",
+        "generalSupport": "💬 Yleinen tuki:",
+        "supportEmail": "support@2sweety.com",
+        "availability": "Saatavilla 24/7 • Vastaus 24 tunnin kuluessa"
+      }
+    },
+    "privacy": {
+      "title": "Tietosuojakäytäntö",
+      "subtitle": "Yksityisyytesi on etusijalla. Opi, miten keräämme, käytämme ja suojaamme henkilökohtaisia tietojasi.",
+      "lastUpdated": "Viimeksi päivitetty: joulukuu 2024",
+      "overview": {
+        "title": "Tietosuoja yhdellä silmäyksellä",
+        "description": "2Sweetyssä olemme sitoutuneet suojaamaan yksityisyyttäsi ja varmistamaan henkilötietojesi turvallisuuden. Tämä käytäntö on GDPR:n ja muiden kansainvälisten tietosuojasäännösten mukainen.",
+        "sslTitle": "256-bittinen SSL",
+        "sslDesc": "Salaus",
+        "storageTitle": "Turvallinen tallennus",
+        "storageDesc": "Salatut tietokannat",
+        "controlTitle": "Sinun hallintasi",
+        "controlDesc": "Tietosuoja-asetukset",
+        "gdprTitle": "GDPR",
+        "gdprDesc": "Yhteensopiva"
+      },
+      "section1": {
+        "title": "1. Keräämämme tiedot",
+        "intro": "Keräämme tietoja tarjotaksemme sinulle parhaan deittikokemuksen säilyttäen samalla yksityisyytesi ja turvallisuutesi.",
+        "mandatoryTitle": "Antamasi tiedot (pakolliset)",
+        "mandatoryItems": [
+          "Nimi, ikä ja sukupuoli",
+          "Sähköpostiosoite ja puhelinnumero",
+          "Profiilikuvat ja esittely",
+          "Sijainti (yhteensovitusta varten)",
+          "Kiinnostuksen kohteet ja mieltymykset"
+        ],
+        "optionalTitle": "Vapaaehtoiset tiedot",
+        "optionalItems": [
+          "Koulutus- ja ammattitiedot",
+          "Sosiaalisen median yhteydet",
+          "Lisäprofiilitiedot",
+          "Premium-ominaisuuksien mieltymykset"
+        ],
+        "automaticTitle": "Automaattisesti kerätyt",
+        "automaticItems": [
+          "Laitetiedot ja IP-osoite",
+          "Sovelluksen käyttöanalytiikka",
+          "Sijaintitiedot (luvalla)",
+          "Lokitiedostot ja kaatumisraportit"
+        ]
+      },
+      "section2": {
+        "title": "2. Miten käytämme tietojasi",
+        "intro": "Käytämme tietojasi seuraaviin tarkoituksiin:",
+        "serviceTitle": "Palvelun toimitus",
+        "serviceDesc": "Yhteyksien luominen, viestinnän mahdollistaminen ja kokemuksesi personointi",
+        "securityTitle": "Turvallisuus ja varmistus",
+        "securityDesc": "Petosten estäminen, turvallisuuden varmistaminen ja yhteisön standardien ylläpito",
+        "improvementTitle": "Palvelun parantaminen",
+        "improvementDesc": "Analytiikka, tutkimus ja uusien ominaisuuksien kehittäminen",
+        "communicationTitle": "Viestintä",
+        "communicationDesc": "Ilmoitusten, päivitysten lähettäminen ja asiakastuki"
+      },
+      "section3": {
+        "title": "3. Tietojen jakaminen ja paljastaminen",
+        "intro": "Emme koskaan myy henkilökohtaisia tietojasi. Voimme jakaa tietojasi vain seuraavissa rajoitetuissa olosuhteissa:",
+        "items": [
+          "Muiden käyttäjien kanssa: Profiilitiedot, jotka valitset näyttää julkisesti",
+          "Palveluntarjoajat: Luotetut kumppanit, jotka auttavat meitä käyttämään palveluamme",
+          "Lakisääteiset vaatimukset: Kun laki vaatii tai oikeuksiemme suojaamiseksi",
+          "Liiketoiminnan siirrot: Sulautumisen tai yrityskaupan tapauksessa (ilmoituksella)"
+        ],
+        "neverShareTitle": "Emme koskaan jaa:",
+        "neverShareDesc": "Yksityisiä viestejäsi, taloudellisia tietojasi tai tarkkoja sijaintitietojasi kolmansille osapuolille markkinointitarkoituksiin."
+      },
+      "section4": {
+        "title": "4. Tietoturvatoimenpiteet",
+        "intro": "Toteutamme kattavia turvatoimia tietojesi suojaamiseksi:",
+        "technicalTitle": "Tekniset suojatoimet:",
+        "technicalItems": [
+          "256-bittinen SSL-salaus",
+          "Salattu tietokantatallennus",
+          "Säännölliset turvallisuustarkastukset",
+          "Turvalliset datakeskukset"
+        ],
+        "operationalTitle": "Operatiiviset suojatoimet:",
+        "operationalItems": [
+          "Työntekijöiden koulutusohjelmat",
+          "Pääsynvalvonta ja seuranta",
+          "Poikkeamatilanteen käsittelymenettelyt",
+          "ISO 27001 -yhteensopivuus"
+        ]
+      },
+      "section5": {
+        "title": "5. Tietosuojaoikeutesi",
+        "intro": "GDPR:n mukaan sinulla on seuraavat oikeudet henkilötietoihisi:",
+        "accessTitle": "Oikeus käyttöön",
+        "accessDesc": "Pyydä kopioita henkilötiedoistasi",
+        "correctionTitle": "Oikeus korjaukseen",
+        "correctionDesc": "Päivitä tai korjaa virheelliset tiedot",
+        "deletionTitle": "Oikeus poistoon",
+        "deletionDesc": "Pyydä tietojesi poistamista",
+        "portabilityTitle": "Oikeus siirrettävyyteen",
+        "portabilityDesc": "Vie tietosi luettavassa muodossa",
+        "exerciseTitle": "Käytä oikeuksiasi",
+        "exerciseDesc": "Ota yhteyttä osoitteeseen privacy@2sweety.com tai käytä sovelluksen asetuksia käyttääksesi näitä oikeuksia."
+      },
+      "section6": {
+        "title": "6. Tietojen säilyttäminen",
+        "intro": "Säilytämme tietojasi vain niin kauan kuin on tarpeen tässä käytännössä kuvatuille tarkoituksille:",
+        "tableHeaders": {
+          "dataType": "Tietotyyppi",
+          "retention": "Säilytysaika",
+          "reason": "Syy"
+        },
+        "tableRows": {
+          "profile": {
+            "type": "Profiilitiedot",
+            "period": "Tilin poistamiseen asti",
+            "reason": "Palvelun tarjoaminen"
+          },
+          "messages": {
+            "type": "Viestit",
+            "period": "1 vuosi poistamisen jälkeen",
+            "reason": "Turvallisuustutkimus"
+          },
+          "analytics": {
+            "type": "Käyttöanalytiikka",
+            "period": "2 vuotta",
+            "reason": "Palvelun parantaminen"
+          },
+          "support": {
+            "type": "Tukitietueet",
+            "period": "3 vuotta",
+            "reason": "Lakien noudattaminen"
+          }
+        }
+      },
+      "section7": {
+        "title": "7. Evästeet ja seuranta",
+        "intro": "Käytämme evästeitä ja vastaavia teknologioita parantaaksemme kokemustasi:",
+        "essentialTitle": "Välttämättömät evästeet",
+        "essentialDesc": "Vaaditaan sovelluksen perustoimintoihin ja turvallisuuteen",
+        "analyticsTitle": "Analytiikkaevästeet",
+        "analyticsDesc": "Auttavat meitä ymmärtämään, miten käytät palveluamme (luvalla)",
+        "preferenceTitle": "Mieltymysevästeet",
+        "preferenceDesc": "Muistavat asetuksesi ja mieltymyksesi",
+        "manageDesc": "Voit hallita evästeasetuksia selaimesi asetuksissa tai tietosuoja-asetuksissamme."
+      },
+      "contact": {
+        "title": "Tietosuojavastaava",
+        "description": "Tietosuojavastaavamme on käytettävissä auttamaan tietosuojaan liittyvissä kysymyksissä",
+        "dpoTitle": "🛡️ Tietosuoja:",
+        "dpoEmail": "dpo@2sweety.com",
+        "dpoRole": "Tietosuojavastaava",
+        "privacyTitle": "📧 Yleinen tietosuoja:",
+        "privacyEmail": "privacy@2sweety.com",
+        "privacyRole": "Tietosuojatiimi",
+        "availability": "Vastaus 72 tunnin kuluessa • GDPR-yhteensopiva • Monikielinen tuki"
+      }
+    }
+  }
 }
