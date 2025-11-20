@@ -8,9 +8,10 @@ import { useNavigate, Link } from "react-router-dom";
 import { MyContext } from "../Context/MyProvider";
 import axios from "axios";
 import { showTost } from "../showTost";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'react-i18next';
 
 const Register = () => {
+  const { t } = useTranslation();
   const [Bio, setbio] = useState("");
   const [Name, setname] = useState("");
   const [Email, setemail] = useState("");
@@ -83,10 +84,10 @@ const Register = () => {
   };
 
   const getPasswordStrengthText = () => {
-    if (passwordStrength <= 25) return "Weak";
-    if (passwordStrength <= 50) return "Fair";
-    if (passwordStrength <= 75) return "Good";
-    return "Strong";
+    if (passwordStrength <= 25) return t("Weak");
+    if (passwordStrength <= 50) return t("Fair");
+    if (passwordStrength <= 75) return t("Good");
+    return t("Strong");
   };
 
   const validateForm = () => {
@@ -101,31 +102,31 @@ const Register = () => {
     let isValid = true;
 
     if (!Name.trim()) {
-      newErrors.name = "Name is required";
+      newErrors.name = t("Name is required");
       isValid = false;
     }
 
     if (!Email.trim()) {
-      newErrors.email = "Email is required";
+      newErrors.email = t("Email is required");
       isValid = false;
     } else if (!validateEmail(Email)) {
-      newErrors.email = "Please enter a valid email";
+      newErrors.email = t("Please enter a valid email");
       isValid = false;
     }
 
     if (!Password) {
-      newErrors.password = "Password is required";
+      newErrors.password = t("Password is required");
       isValid = false;
     } else if (Password.length < 8) {
-      newErrors.password = "Password must be at least 8 characters";
+      newErrors.password = t("Password must be at least 6 characters");
       isValid = false;
     }
 
     if (!ConfirmPassword) {
-      newErrors.confirmPassword = "Please confirm your password";
+      newErrors.confirmPassword = t("Please confirm your password");
       isValid = false;
     } else if (Password !== ConfirmPassword) {
-      newErrors.confirmPassword = "Passwords do not match";
+      newErrors.confirmPassword = t("Passwords do not match");
       isValid = false;
     }
 
@@ -177,18 +178,18 @@ const Register = () => {
             <div className="w-full bg-gray-200 dark:bg-gray-700 h-2 rounded-full overflow-hidden">
               <div className="bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 h-2 rounded-full transition-all duration-500" style={{ width: '15%' }}></div>
             </div>
-            <p className="text-xs text-gray-500 dark:text-gray-400 mt-2 text-center">Step 1 of 5</p>
+            <p className="text-xs text-gray-500 dark:text-gray-400 mt-2 text-center">{t("Step 1 of 5")}</p>
           </div>
 
           {/* Header */}
           <div className="text-center mb-8">
             <h1 className="text-3xl font-bold mb-2 dark:text-white">
-              Join{" "}
+              {t("Join")}{" "}
               <span className="bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 bg-clip-text text-transparent">
                 2Sweety
               </span>
             </h1>
-            <p className="text-gray-600 dark:text-gray-300 text-sm">Start your journey to finding love</p>
+            <p className="text-gray-600 dark:text-gray-300 text-sm">{t("Start your journey to finding love")}</p>
           </div>
 
           {/* Social Registration Buttons - FIRST */}
@@ -198,7 +199,7 @@ const Register = () => {
               className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-white dark:bg-gray-700 border-2 border-gray-200 dark:border-gray-600 rounded-xl font-semibold text-gray-700 dark:text-gray-200 hover:border-pink-500 dark:hover:border-pink-500 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02]"
             >
               <FaGoogle className="text-xl text-red-500" />
-              <span>Sign up with Google</span>
+              <span>{t("Sign up with Google")}</span>
             </button>
 
             <button
@@ -206,7 +207,7 @@ const Register = () => {
               className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-black dark:bg-gray-900 border-2 border-black dark:border-gray-800 rounded-xl font-semibold text-white hover:bg-gray-900 dark:hover:bg-gray-800 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02]"
             >
               <FaApple className="text-xl" />
-              <span>Sign up with Apple</span>
+              <span>{t("Continue with Apple")}</span>
             </button>
 
             <button
@@ -214,7 +215,7 @@ const Register = () => {
               className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-[#1877f2] dark:bg-[#166fe5] border-2 border-[#1877f2] dark:border-[#166fe5] rounded-xl font-semibold text-white hover:bg-[#166fe5] dark:hover:bg-[#1559c7] hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02]"
             >
               <FaFacebook className="text-xl" />
-              <span>Sign up with Facebook</span>
+              <span>{t("Continue with Facebook")}</span>
             </button>
           </div>
 
@@ -222,7 +223,7 @@ const Register = () => {
           <div className="relative flex items-center my-8">
             <div className="flex-grow border-t border-gray-300 dark:border-gray-600"></div>
             <span className="flex-shrink mx-4 text-gray-500 dark:text-gray-400 text-sm font-medium">
-              or sign up with email
+              {t("or")}
             </span>
             <div className="flex-grow border-t border-gray-300 dark:border-gray-600"></div>
           </div>
@@ -237,7 +238,7 @@ const Register = () => {
                 </div>
                 <input
                   type="text"
-                  placeholder="First Name"
+                  placeholder={t("First Name")}
                   value={Name}
                   onChange={(e) => {
                     setname(e.target.value);
@@ -264,7 +265,7 @@ const Register = () => {
                 </div>
                 <input
                   type="email"
-                  placeholder="Email"
+                  placeholder={t("Email")}
                   value={Email}
                   onChange={(e) => {
                     setemail(e.target.value);
@@ -291,7 +292,7 @@ const Register = () => {
                 </div>
                 <input
                   type={showPassword ? "text" : "password"}
-                  placeholder="Password"
+                  placeholder={t("Password")}
                   value={Password}
                   onChange={(e) => handlePasswordChange(e.target.value)}
                   className="w-full px-2 py-4 outline-none text-gray-800 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 bg-transparent"
@@ -311,7 +312,7 @@ const Register = () => {
               {Password && (
                 <div className="mt-2">
                   <div className="flex items-center justify-between mb-1">
-                    <span className="text-xs text-gray-600 dark:text-gray-400">Password Strength:</span>
+                    <span className="text-xs text-gray-600 dark:text-gray-400">{t("Password Strength:")}</span>
                     <span className={`text-xs font-semibold ${passwordStrength >= 75 ? 'text-green-600 dark:text-green-400' : passwordStrength >= 50 ? 'text-yellow-600 dark:text-yellow-400' : 'text-red-600 dark:text-red-400'}`}>
                       {getPasswordStrengthText()}
                     </span>
@@ -337,7 +338,7 @@ const Register = () => {
                 </div>
                 <input
                   type={showConfirmPassword ? "text" : "password"}
-                  placeholder="Confirm Password"
+                  placeholder={t("Confirm Password")}
                   value={ConfirmPassword}
                   onChange={(e) => {
                     setConfirmPassword(e.target.value);
@@ -431,11 +432,11 @@ const Register = () => {
               {isLoading ? (
                 <div className="flex items-center justify-center gap-2">
                   <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                  <span>Creating Account...</span>
+                  <span>{t("Create Account")}...</span>
                 </div>
               ) : (
                 <>
-                  <span>Create Account</span>
+                  <span>{t("Create Account")}</span>
                   <FaArrowRight className="text-lg" />
                 </>
               )}
@@ -445,12 +446,12 @@ const Register = () => {
           {/* Sign In Link */}
           <div className="mt-8 text-center">
             <p className="text-gray-600 dark:text-gray-300">
-              Already have an account?{" "}
+              {t("Already have an account?")}{" "}
               <Link
                 to="/"
                 className="font-semibold text-pink-500 hover:text-pink-600 dark:hover:text-pink-400 transition-colors"
               >
-                Sign In
+                {t("Sign In")}
               </Link>
             </p>
           </div>
