@@ -11,7 +11,6 @@ import { showTost } from "../showTost";
 import { useTranslation } from 'react-i18next';
 
 const Register = () => {
-  const { t } = useTranslation();
   const [Bio, setbio] = useState("");
   const [Name, setname] = useState("");
   const [Email, setemail] = useState("");

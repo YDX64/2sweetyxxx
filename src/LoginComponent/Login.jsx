@@ -16,7 +16,6 @@ import { uid } from "uid";
 import { useTranslation } from 'react-i18next';
 
 const Login = () => {
-  const { t } = useTranslation();
   const Data = useContext(TodoContext);
   const { basUrl, setToastShow } = useContext(MyContext);
   const { t } = useTranslation();
