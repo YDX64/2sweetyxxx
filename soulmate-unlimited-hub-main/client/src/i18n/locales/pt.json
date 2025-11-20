@@ -2687,5 +2687,280 @@
   "yourSubscriptionRenewed": "Sua",
   "zodiacSign": "Signo do Zodíaco",
   "zodiacSignLabel": "Signo do Zodíaco",
-  "zodiacSignPlaceholder": "Seu signo do zodíaco"
+  "zodiacSignPlaceholder": "Seu signo do zodíaco",
+  "legalPages": {
+    "terms": {
+      "title": "Termos de Serviço",
+      "subtitle": "Por favor, leia estes termos cuidadosamente antes de usar o 2Sweety. Ao usar nosso serviço, você concorda com estes termos.",
+      "lastUpdated": "Última atualização: Dezembro de 2024",
+      "quickOverview": {
+        "title": "Visão Geral Rápida",
+        "description": "Estes Termos de Serviço regem o uso do 2Sweety, uma plataforma de relacionamento que conecta pessoas em todo o mundo. Ao criar uma conta, você concorda em seguir nossas diretrizes da comunidade e usar nosso serviço de forma responsável.",
+        "ageOnly": "Apenas 18+",
+        "ageVerification": "Verificação de Idade Necessária",
+        "safeEnvironment": "Ambiente Seguro",
+        "verifiedProfiles": "Perfis Verificados",
+        "respectfulCommunity": "Comunidade Respeitosa",
+        "zeroTolerance": "Política de Tolerância Zero"
+      },
+      "section1": {
+        "title": "1. Aceitação dos Termos",
+        "paragraph1": "Ao acessar ou usar o 2Sweety, você reconhece que leu, compreendeu e concorda em estar vinculado a estes Termos de Serviço e nossa Política de Privacidade. Se você não concordar com estes termos, por favor, não use nosso serviço.",
+        "paragraph2": "Podemos atualizar estes termos de tempos em tempos. O uso contínuo de nosso serviço após as alterações constitui aceitação dos termos atualizados."
+      },
+      "section2": {
+        "title": "2. Requisitos de Elegibilidade",
+        "intro": "Para usar o 2Sweety, você deve:",
+        "items": [
+          "Ter pelo menos 18 anos de idade",
+          "Fornecer informações precisas e completas",
+          "Ter capacidade legal para aceitar estes termos",
+          "Não estar proibido de usar nosso serviço sob leis aplicáveis",
+          "Não ter sido banido anteriormente de nossa plataforma"
+        ],
+        "ageVerificationTitle": "Verificação de Idade",
+        "ageVerificationDesc": "Podemos solicitar documentação de verificação de idade para garantir a conformidade com este requisito."
+      },
+      "section3": {
+        "title": "3. Responsabilidades da Conta",
+        "intro": "Ao criar e manter sua conta, você concorda em:",
+        "allowedTitle": "✓ Permitido:",
+        "allowedItems": [
+          "Usar fotos recentes e precisas de si mesmo",
+          "Fornecer informações verdadeiras no perfil",
+          "Interagir respeitosamente com outros",
+          "Relatar comportamento inadequado",
+          "Manter a segurança da conta"
+        ],
+        "prohibitedTitle": "✗ Proibido:",
+        "prohibitedItems": [
+          "Criar contas falsas ou múltiplas",
+          "Usar fotos de outros sem permissão",
+          "Assédio ou conteúdo inadequado",
+          "Solicitação comercial",
+          "Compartilhar informações de contato pessoal"
+        ]
+      },
+      "section4": {
+        "title": "4. Privacidade e Proteção de Dados",
+        "paragraph1": "Sua privacidade é importante para nós. Coletamos e processamos seus dados de acordo com nossa Política de Privacidade e leis de proteção de dados aplicáveis.",
+        "dataSecurityTitle": "Segurança de Dados",
+        "dataSecurityDesc": "Usamos criptografia e medidas de segurança padrão do setor para proteger suas informações.",
+        "yourRightsTitle": "Seus Direitos",
+        "yourRightsDesc": "Você tem o direito de acessar, modificar ou excluir seus dados pessoais a qualquer momento."
+      },
+      "section5": {
+        "title": "5. Serviços Premium e Pagamentos",
+        "intro": "O 2Sweety oferece recursos premium através de planos de assinatura. Ao adquirir uma assinatura premium:",
+        "items": [
+          "Você concorda em pagar as taxas especificadas",
+          "As assinaturas renovam automaticamente, a menos que canceladas",
+          "Os reembolsos estão sujeitos à nossa política de reembolso",
+          "Os recursos premium estão sujeitos à disponibilidade"
+        ],
+        "cancellationTitle": "Política de Cancelamento",
+        "cancellationDesc": "Você pode cancelar sua assinatura a qualquer momento. O cancelamento entrará em vigor no final do seu período de cobrança atual."
+      },
+      "section6": {
+        "title": "6. Encerramento da Conta",
+        "intro": "Qualquer uma das partes pode encerrar sua conta:",
+        "byYouTitle": "Por Você:",
+        "byYouItems": [
+          "Excluir sua conta a qualquer momento",
+          "Entrar em contato com o suporte para assistência",
+          "Exclusão de dados em 30 dias"
+        ],
+        "byUsTitle": "Por Nós:",
+        "byUsItems": [
+          "Violação dos termos",
+          "Comportamento inadequado",
+          "Atividade suspeita"
+        ]
+      },
+      "section7": {
+        "title": "7. Limitação de Responsabilidade",
+        "intro": "O 2Sweety fornece o serviço \"como está\" e não oferece garantias quanto a:",
+        "items": [
+          "Compatibilidade ou sucesso em encontrar correspondências",
+          "Precisão das informações fornecidas pelos usuários",
+          "Disponibilidade ininterrupta do serviço",
+          "Segurança contra todas as ameaças possíveis"
+        ],
+        "userSafetyTitle": "Segurança do Usuário",
+        "userSafetyDesc": "Embora nos esforcemos para fornecer um ambiente seguro, os usuários são responsáveis por sua própria segurança ao conhecer outras pessoas."
+      },
+      "section8": {
+        "title": "8. Lei Aplicável e Disputas",
+        "paragraph1": "Estes termos são regidos pelas leis da Suécia. Quaisquer disputas serão resolvidas nos tribunais de Estocolmo, Suécia.",
+        "disputeResolutionTitle": "Resolução de Disputas",
+        "disputeResolutionDesc": "Incentivamos a resolução de disputas através de nosso suporte ao cliente antes de procedimentos legais."
+      },
+      "section9": {
+        "title": "9. Alterações a Estes Termos",
+        "paragraph1": "Podemos atualizar estes Termos de Serviço para refletir mudanças em nosso serviço ou requisitos legais. Notificaremos os usuários sobre alterações significativas através do aplicativo ou e-mail.",
+        "paragraph2": "Seu uso contínuo do 2Sweety após as alterações constitui aceitação dos termos atualizados."
+      },
+      "contact": {
+        "title": "Dúvidas Sobre Estes Termos?",
+        "description": "Se você tiver alguma dúvida sobre estes Termos de Serviço, entre em contato conosco",
+        "legalInquiries": "📧 Consultas Jurídicas:",
+        "legalEmail": "legal@2sweety.com",
+        "generalSupport": "💬 Suporte Geral:",
+        "supportEmail": "support@2sweety.com",
+        "availability": "Disponível 24/7 • Resposta em 24 horas"
+      }
+    },
+    "privacy": {
+      "title": "Política de Privacidade",
+      "subtitle": "Sua privacidade é nossa prioridade. Saiba como coletamos, usamos e protegemos suas informações pessoais.",
+      "lastUpdated": "Última atualização: Dezembro de 2024",
+      "overview": {
+        "title": "Privacidade em Resumo",
+        "description": "No 2Sweety, estamos comprometidos em proteger sua privacidade e garantir a segurança de seus dados pessoais. Esta política está em conformidade com o GDPR e outras regulamentações internacionais de privacidade.",
+        "sslTitle": "SSL de 256 bits",
+        "sslDesc": "Criptografia",
+        "storageTitle": "Armazenamento Seguro",
+        "storageDesc": "Bancos de Dados Criptografados",
+        "controlTitle": "Seu Controle",
+        "controlDesc": "Configurações de Privacidade",
+        "gdprTitle": "GDPR",
+        "gdprDesc": "Compatível"
+      },
+      "section1": {
+        "title": "1. Informações que Coletamos",
+        "intro": "Coletamos informações para fornecer a melhor experiência de relacionamento, mantendo sua privacidade e segurança.",
+        "mandatoryTitle": "Informações que Você Fornece (Obrigatórias)",
+        "mandatoryItems": [
+          "Nome, idade e gênero",
+          "Endereço de e-mail e número de telefone",
+          "Fotos e biografia do perfil",
+          "Localização (para fins de correspondência)",
+          "Interesses e preferências"
+        ],
+        "optionalTitle": "Informações Opcionais",
+        "optionalItems": [
+          "Detalhes de educação e ocupação",
+          "Conexões de mídia social",
+          "Informações adicionais do perfil",
+          "Preferências de recursos premium"
+        ],
+        "automaticTitle": "Coletadas Automaticamente",
+        "automaticItems": [
+          "Informações do dispositivo e endereço IP",
+          "Análises de uso do aplicativo",
+          "Dados de localização (com permissão)",
+          "Arquivos de log e relatórios de falhas"
+        ]
+      },
+      "section2": {
+        "title": "2. Como Usamos Suas Informações",
+        "intro": "Usamos suas informações para os seguintes propósitos:",
+        "serviceTitle": "Entrega do Serviço",
+        "serviceDesc": "Criar correspondências, permitir comunicação e personalizar sua experiência",
+        "securityTitle": "Segurança e Verificação",
+        "securityDesc": "Prevenir fraudes, garantir segurança e manter padrões da comunidade",
+        "improvementTitle": "Melhoria do Serviço",
+        "improvementDesc": "Análises, pesquisas e desenvolvimento de novos recursos",
+        "communicationTitle": "Comunicação",
+        "communicationDesc": "Enviar notificações, atualizações e suporte ao cliente"
+      },
+      "section3": {
+        "title": "3. Compartilhamento e Divulgação de Informações",
+        "intro": "Nunca vendemos suas informações pessoais. Podemos compartilhar suas informações apenas nas seguintes circunstâncias limitadas:",
+        "items": [
+          "Com Outros Usuários: Informações de perfil que você escolhe exibir publicamente",
+          "Provedores de Serviços: Parceiros confiáveis que nos ajudam a operar nosso serviço",
+          "Requisitos Legais: Quando exigido por lei ou para proteger nossos direitos",
+          "Transferências de Negócios: Em caso de fusão ou aquisição (com aviso)"
+        ],
+        "neverShareTitle": "Nunca Compartilhamos:",
+        "neverShareDesc": "Suas mensagens privadas, informações financeiras ou dados de localização precisa com terceiros para fins de marketing."
+      },
+      "section4": {
+        "title": "4. Medidas de Segurança de Dados",
+        "intro": "Implementamos medidas de segurança abrangentes para proteger seus dados:",
+        "technicalTitle": "Salvaguardas Técnicas:",
+        "technicalItems": [
+          "Criptografia SSL de 256 bits",
+          "Armazenamento de banco de dados criptografado",
+          "Auditorias de segurança regulares",
+          "Centros de dados seguros"
+        ],
+        "operationalTitle": "Salvaguardas Operacionais:",
+        "operationalItems": [
+          "Programas de treinamento de funcionários",
+          "Controles de acesso e monitoramento",
+          "Procedimentos de resposta a incidentes",
+          "Conformidade ISO 27001"
+        ]
+      },
+      "section5": {
+        "title": "5. Seus Direitos de Privacidade",
+        "intro": "Sob o GDPR, você tem os seguintes direitos em relação aos seus dados pessoais:",
+        "accessTitle": "Direito de Acesso",
+        "accessDesc": "Solicitar cópias de seus dados pessoais",
+        "correctionTitle": "Direito de Correção",
+        "correctionDesc": "Atualizar ou corrigir informações imprecisas",
+        "deletionTitle": "Direito de Exclusão",
+        "deletionDesc": "Solicitar a exclusão de seus dados",
+        "portabilityTitle": "Direito à Portabilidade",
+        "portabilityDesc": "Exportar seus dados em formato legível",
+        "exerciseTitle": "Exercer Seus Direitos",
+        "exerciseDesc": "Entre em contato com privacy@2sweety.com ou use as configurações em seu aplicativo para exercer esses direitos."
+      },
+      "section6": {
+        "title": "6. Retenção de Dados",
+        "intro": "Retemos seus dados apenas pelo tempo necessário para os propósitos descritos nesta política:",
+        "tableHeaders": {
+          "dataType": "Tipo de Dados",
+          "retention": "Período de Retenção",
+          "reason": "Motivo"
+        },
+        "tableRows": {
+          "profile": {
+            "type": "Informações do Perfil",
+            "period": "Até exclusão da conta",
+            "reason": "Prestação do serviço"
+          },
+          "messages": {
+            "type": "Mensagens",
+            "period": "1 ano após exclusão",
+            "reason": "Investigação de segurança"
+          },
+          "analytics": {
+            "type": "Análises de Uso",
+            "period": "2 anos",
+            "reason": "Melhoria do serviço"
+          },
+          "support": {
+            "type": "Registros de Suporte",
+            "period": "3 anos",
+            "reason": "Conformidade legal"
+          }
+        }
+      },
+      "section7": {
+        "title": "7. Cookies e Rastreamento",
+        "intro": "Usamos cookies e tecnologias semelhantes para melhorar sua experiência:",
+        "essentialTitle": "Cookies Essenciais",
+        "essentialDesc": "Necessários para funcionalidade básica e segurança do aplicativo",
+        "analyticsTitle": "Cookies de Análise",
+        "analyticsDesc": "Nos ajudam a entender como você usa nosso serviço (com consentimento)",
+        "preferenceTitle": "Cookies de Preferência",
+        "preferenceDesc": "Lembram suas configurações e preferências",
+        "manageDesc": "Você pode gerenciar as preferências de cookies nas configurações do seu navegador ou através de nossas configurações de privacidade."
+      },
+      "contact": {
+        "title": "Encarregado de Proteção de Dados",
+        "description": "Nosso Encarregado de Proteção de Dados está disponível para ajudar com questões relacionadas à privacidade",
+        "dpoTitle": "🛡️ Proteção de Dados:",
+        "dpoEmail": "dpo@2sweety.com",
+        "dpoRole": "Encarregado de Privacidade",
+        "privacyTitle": "📧 Privacidade Geral:",
+        "privacyEmail": "privacy@2sweety.com",
+        "privacyRole": "Equipe de Privacidade",
+        "availability": "Resposta em 72 horas • Compatível com GDPR • Suporte multilíngue"
+      }
+    }
+  }
 }

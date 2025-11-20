@@ -2673,5 +2673,280 @@
   "yourSubscriptionRenewed": "Your",
   "zodiacSign": "Zodiac Sign",
   "zodiacSignLabel": "Zodiac Sign",
-  "zodiacSignPlaceholder": "Your zodiac sign"
+  "zodiacSignPlaceholder": "Your zodiac sign",
+  "legalPages": {
+    "terms": {
+      "title": "Điều khoản dịch vụ",
+      "subtitle": "Vui lòng đọc kỹ các điều khoản này trước khi sử dụng 2Sweety. Bằng việc sử dụng dịch vụ của chúng tôi, bạn đồng ý với các điều khoản này.",
+      "lastUpdated": "Cập nhật lần cuối: Tháng 12 năm 2024",
+      "quickOverview": {
+        "title": "Tổng quan nhanh",
+        "description": "Các Điều khoản dịch vụ này điều chỉnh việc bạn sử dụng 2Sweety, một nền tảng hẹn hò kết nối mọi người trên toàn thế giới. Bằng việc tạo tài khoản, bạn đồng ý tuân theo hướng dẫn cộng đồng của chúng tôi và sử dụng dịch vụ của chúng tôi một cách có trách nhiệm.",
+        "ageOnly": "Chỉ 18+",
+        "ageVerification": "Yêu cầu xác minh tuổi",
+        "safeEnvironment": "Môi trường an toàn",
+        "verifiedProfiles": "Hồ sơ đã xác minh",
+        "respectfulCommunity": "Cộng đồng tôn trọng",
+        "zeroTolerance": "Chính sách không khoan nhượng"
+      },
+      "section1": {
+        "title": "1. Chấp nhận điều khoản",
+        "paragraph1": "Bằng việc truy cập hoặc sử dụng 2Sweety, bạn xác nhận rằng bạn đã đọc, hiểu và đồng ý bị ràng buộc bởi các Điều khoản dịch vụ này và Chính sách bảo mật của chúng tôi. Nếu bạn không đồng ý với các điều khoản này, vui lòng không sử dụng dịch vụ của chúng tôi.",
+        "paragraph2": "Chúng tôi có thể cập nhật các điều khoản này theo thời gian. Việc tiếp tục sử dụng dịch vụ của chúng tôi sau các thay đổi cấu thành sự chấp nhận các điều khoản đã cập nhật."
+      },
+      "section2": {
+        "title": "2. Yêu cầu đủ điều kiện",
+        "intro": "Để sử dụng 2Sweety, bạn phải:",
+        "items": [
+          "Ít nhất 18 tuổi",
+          "Cung cấp thông tin chính xác và đầy đủ",
+          "Có năng lực pháp lý để ký kết các điều khoản này",
+          "Không bị cấm sử dụng dịch vụ của chúng tôi theo luật hiện hành",
+          "Không bị cấm trước đó khỏi nền tảng của chúng tôi"
+        ],
+        "ageVerificationTitle": "Xác minh tuổi",
+        "ageVerificationDesc": "Chúng tôi có thể yêu cầu tài liệu xác minh tuổi để đảm bảo tuân thủ yêu cầu này."
+      },
+      "section3": {
+        "title": "3. Trách nhiệm tài khoản",
+        "intro": "Khi tạo và duy trì tài khoản của bạn, bạn đồng ý:",
+        "allowedTitle": "✓ Được phép:",
+        "allowedItems": [
+          "Sử dụng ảnh gần đây, chính xác của bạn",
+          "Cung cấp thông tin hồ sơ trung thực",
+          "Tương tác tôn trọng với người khác",
+          "Báo cáo hành vi không phù hợp",
+          "Duy trì bảo mật tài khoản"
+        ],
+        "prohibitedTitle": "✗ Bị cấm:",
+        "prohibitedItems": [
+          "Tạo tài khoản giả hoặc nhiều tài khoản",
+          "Sử dụng ảnh của người khác mà không có sự cho phép",
+          "Quấy rối hoặc nội dung không phù hợp",
+          "Quảng cáo thương mại",
+          "Chia sẻ thông tin liên hệ cá nhân"
+        ]
+      },
+      "section4": {
+        "title": "4. Quyền riêng tư và bảo vệ dữ liệu",
+        "paragraph1": "Quyền riêng tư của bạn rất quan trọng đối với chúng tôi. Chúng tôi thu thập và xử lý dữ liệu của bạn phù hợp với Chính sách bảo mật của chúng tôi và các luật bảo vệ dữ liệu hiện hành.",
+        "dataSecurityTitle": "Bảo mật dữ liệu",
+        "dataSecurityDesc": "Chúng tôi sử dụng mã hóa tiêu chuẩn ngành và các biện pháp bảo mật để bảo vệ thông tin của bạn.",
+        "yourRightsTitle": "Quyền của bạn",
+        "yourRightsDesc": "Bạn có quyền truy cập, sửa đổi hoặc xóa dữ liệu cá nhân của mình bất cứ lúc nào."
+      },
+      "section5": {
+        "title": "5. Dịch vụ cao cấp và thanh toán",
+        "intro": "2Sweety cung cấp các tính năng cao cấp thông qua các gói đăng ký. Bằng việc mua đăng ký cao cấp:",
+        "items": [
+          "Bạn đồng ý thanh toán các khoản phí đã quy định",
+          "Đăng ký tự động gia hạn trừ khi bị hủy",
+          "Hoàn tiền tuân theo chính sách hoàn tiền của chúng tôi",
+          "Các tính năng cao cấp tùy thuộc vào tình trạng sẵn có"
+        ],
+        "cancellationTitle": "Chính sách hủy",
+        "cancellationDesc": "Bạn có thể hủy đăng ký của mình bất cứ lúc nào. Việc hủy sẽ có hiệu lực vào cuối kỳ thanh toán hiện tại của bạn."
+      },
+      "section6": {
+        "title": "6. Chấm dứt tài khoản",
+        "intro": "Một trong hai bên có thể chấm dứt tài khoản của bạn:",
+        "byYouTitle": "Bởi bạn:",
+        "byYouItems": [
+          "Xóa tài khoản của bạn bất cứ lúc nào",
+          "Liên hệ hỗ trợ để được trợ giúp",
+          "Xóa dữ liệu trong vòng 30 ngày"
+        ],
+        "byUsTitle": "Bởi chúng tôi:",
+        "byUsItems": [
+          "Vi phạm điều khoản",
+          "Hành vi không phù hợp",
+          "Hoạt động đáng ngờ"
+        ]
+      },
+      "section7": {
+        "title": "7. Giới hạn trách nhiệm",
+        "intro": "2Sweety cung cấp dịch vụ \"nguyên trạng\" và không đưa ra bảo đảm về:",
+        "items": [
+          "Khả năng tương thích hoặc thành công trong việc tìm kiếm kết nối",
+          "Độ chính xác của thông tin do người dùng cung cấp",
+          "Tính khả dụng dịch vụ không bị gián đoạn",
+          "Bảo mật chống lại tất cả các mối đe dọa có thể"
+        ],
+        "userSafetyTitle": "An toàn người dùng",
+        "userSafetyDesc": "Mặc dù chúng tôi cố gắng cung cấp một môi trường an toàn, người dùng chịu trách nhiệm về sự an toàn của chính họ khi gặp gỡ người khác."
+      },
+      "section8": {
+        "title": "8. Luật điều chỉnh và tranh chấp",
+        "paragraph1": "Các điều khoản này được điều chỉnh bởi luật pháp Thụy Điển. Mọi tranh chấp sẽ được giải quyết tại tòa án Stockholm, Thụy Điển.",
+        "disputeResolutionTitle": "Giải quyết tranh chấp",
+        "disputeResolutionDesc": "Chúng tôi khuyến khích giải quyết tranh chấp thông qua hỗ trợ khách hàng của chúng tôi trước các thủ tục pháp lý."
+      },
+      "section9": {
+        "title": "9. Thay đổi các điều khoản này",
+        "paragraph1": "Chúng tôi có thể cập nhật các Điều khoản dịch vụ này để phản ánh các thay đổi trong dịch vụ của chúng tôi hoặc các yêu cầu pháp lý. Chúng tôi sẽ thông báo cho người dùng về các thay đổi quan trọng thông qua ứng dụng hoặc email.",
+        "paragraph2": "Việc tiếp tục sử dụng 2Sweety sau các thay đổi cấu thành sự chấp nhận các điều khoản đã cập nhật."
+      },
+      "contact": {
+        "title": "Câu hỏi về các điều khoản này?",
+        "description": "Nếu bạn có bất kỳ câu hỏi nào về các Điều khoản dịch vụ này, vui lòng liên hệ với chúng tôi",
+        "legalInquiries": "📧 Yêu cầu pháp lý:",
+        "legalEmail": "legal@2sweety.com",
+        "generalSupport": "💬 Hỗ trợ chung:",
+        "supportEmail": "support@2sweety.com",
+        "availability": "Có sẵn 24/7 • Phản hồi trong vòng 24 giờ"
+      }
+    },
+    "privacy": {
+      "title": "Chính sách bảo mật",
+      "subtitle": "Quyền riêng tư của bạn là ưu tiên của chúng tôi. Tìm hiểu cách chúng tôi thu thập, sử dụng và bảo vệ thông tin cá nhân của bạn.",
+      "lastUpdated": "Cập nhật lần cuối: Tháng 12 năm 2024",
+      "overview": {
+        "title": "Quyền riêng tư nhìn thoáng qua",
+        "description": "Tại 2Sweety, chúng tôi cam kết bảo vệ quyền riêng tư của bạn và đảm bảo an toàn cho dữ liệu cá nhân của bạn. Chính sách này tuân thủ GDPR và các quy định bảo mật quốc tế khác.",
+        "sslTitle": "SSL 256-bit",
+        "sslDesc": "Mã hóa",
+        "storageTitle": "Lưu trữ an toàn",
+        "storageDesc": "Cơ sở dữ liệu được mã hóa",
+        "controlTitle": "Quyền kiểm soát của bạn",
+        "controlDesc": "Cài đặt quyền riêng tư",
+        "gdprTitle": "GDPR",
+        "gdprDesc": "Tuân thủ"
+      },
+      "section1": {
+        "title": "1. Thông tin chúng tôi thu thập",
+        "intro": "Chúng tôi thu thập thông tin để cung cấp cho bạn trải nghiệm hẹn hò tốt nhất trong khi duy trì quyền riêng tư và bảo mật của bạn.",
+        "mandatoryTitle": "Thông tin bạn cung cấp (Bắt buộc)",
+        "mandatoryItems": [
+          "Tên, tuổi và giới tính",
+          "Địa chỉ email và số điện thoại",
+          "Ảnh hồ sơ và tiểu sử",
+          "Vị trí (cho mục đích kết nối)",
+          "Sở thích và tùy chọn"
+        ],
+        "optionalTitle": "Thông tin tùy chọn",
+        "optionalItems": [
+          "Chi tiết về giáo dục và nghề nghiệp",
+          "Kết nối mạng xã hội",
+          "Thông tin hồ sơ bổ sung",
+          "Tùy chọn tính năng cao cấp"
+        ],
+        "automaticTitle": "Thu thập tự động",
+        "automaticItems": [
+          "Thông tin thiết bị và địa chỉ IP",
+          "Phân tích sử dụng ứng dụng",
+          "Dữ liệu vị trí (với sự cho phép)",
+          "Tệp nhật ký và báo cáo lỗi"
+        ]
+      },
+      "section2": {
+        "title": "2. Cách chúng tôi sử dụng thông tin của bạn",
+        "intro": "Chúng tôi sử dụng thông tin của bạn cho các mục đích sau:",
+        "serviceTitle": "Cung cấp dịch vụ",
+        "serviceDesc": "Tạo kết nối, cho phép giao tiếp và cá nhân hóa trải nghiệm của bạn",
+        "securityTitle": "Bảo mật và xác minh",
+        "securityDesc": "Ngăn chặn gian lận, đảm bảo an toàn và duy trì các tiêu chuẩn cộng đồng",
+        "improvementTitle": "Cải thiện dịch vụ",
+        "improvementDesc": "Phân tích, nghiên cứu và phát triển các tính năng mới",
+        "communicationTitle": "Giao tiếp",
+        "communicationDesc": "Gửi thông báo, cập nhật và hỗ trợ khách hàng"
+      },
+      "section3": {
+        "title": "3. Chia sẻ và tiết lộ thông tin",
+        "intro": "Chúng tôi không bao giờ bán thông tin cá nhân của bạn. Chúng tôi chỉ có thể chia sẻ thông tin của bạn trong các trường hợp hạn chế sau:",
+        "items": [
+          "Với người dùng khác: Thông tin hồ sơ bạn chọn hiển thị công khai",
+          "Nhà cung cấp dịch vụ: Các đối tác đáng tin cậy giúp chúng tôi vận hành dịch vụ của chúng tôi",
+          "Yêu cầu pháp lý: Khi được yêu cầu theo luật hoặc để bảo vệ quyền của chúng tôi",
+          "Chuyển nhượng kinh doanh: Trong trường hợp sáp nhập hoặc mua lại (có thông báo)"
+        ],
+        "neverShareTitle": "Chúng tôi không bao giờ chia sẻ:",
+        "neverShareDesc": "Tin nhắn riêng tư, thông tin tài chính hoặc dữ liệu vị trí chính xác của bạn với bên thứ ba cho mục đích tiếp thị."
+      },
+      "section4": {
+        "title": "4. Biện pháp bảo mật dữ liệu",
+        "intro": "Chúng tôi triển khai các biện pháp bảo mật toàn diện để bảo vệ dữ liệu của bạn:",
+        "technicalTitle": "Biện pháp bảo vệ kỹ thuật:",
+        "technicalItems": [
+          "Mã hóa SSL 256-bit",
+          "Lưu trữ cơ sở dữ liệu được mã hóa",
+          "Kiểm tra bảo mật thường xuyên",
+          "Trung tâm dữ liệu an toàn"
+        ],
+        "operationalTitle": "Biện pháp bảo vệ vận hành:",
+        "operationalItems": [
+          "Chương trình đào tạo nhân viên",
+          "Kiểm soát truy cập và giám sát",
+          "Quy trình ứng phó sự cố",
+          "Tuân thủ ISO 27001"
+        ]
+      },
+      "section5": {
+        "title": "5. Quyền riêng tư của bạn",
+        "intro": "Theo GDPR, bạn có các quyền sau đối với dữ liệu cá nhân của mình:",
+        "accessTitle": "Quyền truy cập",
+        "accessDesc": "Yêu cầu bản sao dữ liệu cá nhân của bạn",
+        "correctionTitle": "Quyền sửa chữa",
+        "correctionDesc": "Cập nhật hoặc sửa thông tin không chính xác",
+        "deletionTitle": "Quyền xóa",
+        "deletionDesc": "Yêu cầu xóa dữ liệu của bạn",
+        "portabilityTitle": "Quyền di chuyển dữ liệu",
+        "portabilityDesc": "Xuất dữ liệu của bạn ở định dạng có thể đọc được",
+        "exerciseTitle": "Thực hiện quyền của bạn",
+        "exerciseDesc": "Liên hệ privacy@2sweety.com hoặc sử dụng cài đặt trong ứng dụng của bạn để thực hiện các quyền này."
+      },
+      "section6": {
+        "title": "6. Lưu giữ dữ liệu",
+        "intro": "Chúng tôi chỉ lưu giữ dữ liệu của bạn trong thời gian cần thiết cho các mục đích được nêu trong chính sách này:",
+        "tableHeaders": {
+          "dataType": "Loại dữ liệu",
+          "retention": "Thời gian lưu giữ",
+          "reason": "Lý do"
+        },
+        "tableRows": {
+          "profile": {
+            "type": "Thông tin hồ sơ",
+            "period": "Cho đến khi xóa tài khoản",
+            "reason": "Cung cấp dịch vụ"
+          },
+          "messages": {
+            "type": "Tin nhắn",
+            "period": "1 năm sau khi xóa",
+            "reason": "Điều tra an toàn"
+          },
+          "analytics": {
+            "type": "Phân tích sử dụng",
+            "period": "2 năm",
+            "reason": "Cải thiện dịch vụ"
+          },
+          "support": {
+            "type": "Hồ sơ hỗ trợ",
+            "period": "3 năm",
+            "reason": "Tuân thủ pháp lý"
+          }
+        }
+      },
+      "section7": {
+        "title": "7. Cookie và theo dõi",
+        "intro": "Chúng tôi sử dụng cookie và các công nghệ tương tự để cải thiện trải nghiệm của bạn:",
+        "essentialTitle": "Cookie thiết yếu",
+        "essentialDesc": "Bắt buộc cho chức năng cơ bản và bảo mật của ứng dụng",
+        "analyticsTitle": "Cookie phân tích",
+        "analyticsDesc": "Giúp chúng tôi hiểu cách bạn sử dụng dịch vụ của chúng tôi (với sự đồng ý)",
+        "preferenceTitle": "Cookie tùy chọn",
+        "preferenceDesc": "Ghi nhớ cài đặt và tùy chọn của bạn",
+        "manageDesc": "Bạn có thể quản lý tùy chọn cookie trong cài đặt trình duyệt của mình hoặc thông qua cài đặt quyền riêng tư của chúng tôi."
+      },
+      "contact": {
+        "title": "Cán bộ bảo vệ dữ liệu",
+        "description": "Cán bộ bảo vệ dữ liệu của chúng tôi có sẵn để giúp đỡ với các câu hỏi liên quan đến quyền riêng tư",
+        "dpoTitle": "🛡️ Bảo vệ dữ liệu:",
+        "dpoEmail": "dpo@2sweety.com",
+        "dpoRole": "Cán bộ bảo mật",
+        "privacyTitle": "📧 Quyền riêng tư chung:",
+        "privacyEmail": "privacy@2sweety.com",
+        "privacyRole": "Nhóm quyền riêng tư",
+        "availability": "Phản hồi trong vòng 72 giờ • Tuân thủ GDPR • Hỗ trợ đa ngôn ngữ"
+      }
+    }
+  }
 }
