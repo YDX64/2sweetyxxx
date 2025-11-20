@@ -383,20 +383,22 @@ const Login = () => {
 
           {/* Social Login Buttons - FIRST */}
           <div className="space-y-3 mb-6">
-            {/* Google Login */}
-            <div className="w-full">
-              <GoogleLogin
-                onSuccess={handleGoogleLogin}
-                onError={handleGoogleError}
-                useOneTap
-                theme="outline"
-                size="large"
-                text="continue_with"
-                shape="rectangular"
-                logo_alignment="left"
-                width="100%"
-              />
-            </div>
+            {/* Google Login - Custom styled button with OAuth behind */}
+            <GoogleLogin
+              onSuccess={handleGoogleLogin}
+              onError={handleGoogleError}
+              useOneTap
+              render={(renderProps) => (
+                <button
+                  onClick={renderProps.onClick}
+                  disabled={renderProps.disabled}
+                  className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-white dark:bg-gray-700 border-2 border-gray-200 dark:border-gray-600 rounded-xl font-semibold text-gray-700 dark:text-gray-200 hover:border-pink-500 dark:hover:border-pink-500 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02]"
+                >
+                  <FaGoogle className="text-xl text-red-500" />
+                  <span>{t("Continue with Google")}</span>
+                </button>
+              )}
+            />
 
             {/* Apple Sign In */}
             <AppleSignin
