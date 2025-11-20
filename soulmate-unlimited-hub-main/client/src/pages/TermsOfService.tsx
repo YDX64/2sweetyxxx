@@ -24,14 +24,14 @@ const TermsOfService = () => {
             </div>
           </div>
           <h1 className="text-5xl font-bold text-gray-800 dark:text-gray-100 mb-6">
-            {t("termsOfService")}
+            {t("legalPages.terms.title")}
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Please read these terms carefully before using 2Sweety. By using our service, you agree to these terms.
+            {t("legalPages.terms.subtitle")}
           </p>
           <div className="mt-6 inline-flex items-center text-sm text-gray-500 dark:text-gray-400">
             <Clock className="w-4 h-4 mr-2" />
-            Last updated: December 2024
+            {t("legalPages.terms.lastUpdated")}
           </div>
         </div>
 
@@ -41,29 +41,28 @@ const TermsOfService = () => {
             <CardHeader>
               <CardTitle className="flex items-center space-x-2">
                 <CheckCircle className="w-6 h-6 text-blue-600 dark:text-blue-400" />
-                <span>Quick Overview</span>
+                <span>{t("legalPages.terms.quickOverview.title")}</span>
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-gray-700 dark:text-gray-300">
-                These Terms of Service govern your use of 2Sweety, a dating platform that connects people worldwide. 
-                By creating an account, you agree to follow our community guidelines and use our service responsibly.
+                {t("legalPages.terms.quickOverview.description")}
               </p>
               <div className="grid md:grid-cols-3 gap-4">
                 <div className="text-center p-4 bg-white dark:bg-gray-700/50 rounded-lg">
                   <User className="w-8 h-8 text-green-500 dark:text-green-400 mx-auto mb-2" />
-                  <div className="font-semibold text-sm dark:text-gray-200">18+ Only</div>
-                  <div className="text-xs text-gray-500 dark:text-gray-400">Age Verification Required</div>
+                  <div className="font-semibold text-sm dark:text-gray-200">{t("legalPages.terms.quickOverview.ageOnly")}</div>
+                  <div className="text-xs text-gray-500 dark:text-gray-400">{t("legalPages.terms.quickOverview.ageVerification")}</div>
                 </div>
                 <div className="text-center p-4 bg-white dark:bg-gray-700/50 rounded-lg">
                   <Shield className="w-8 h-8 text-blue-500 dark:text-blue-400 mx-auto mb-2" />
-                  <div className="font-semibold text-sm dark:text-gray-200">Safe Environment</div>
-                  <div className="text-xs text-gray-500 dark:text-gray-400">Verified Profiles</div>
+                  <div className="font-semibold text-sm dark:text-gray-200">{t("legalPages.terms.quickOverview.safeEnvironment")}</div>
+                  <div className="text-xs text-gray-500 dark:text-gray-400">{t("legalPages.terms.quickOverview.verifiedProfiles")}</div>
                 </div>
                 <div className="text-center p-4 bg-white dark:bg-gray-700/50 rounded-lg">
                   <Heart className="w-8 h-8 text-pink-500 dark:text-pink-400 mx-auto mb-2" />
-                  <div className="font-semibold text-sm dark:text-gray-200">Respectful Community</div>
-                  <div className="text-xs text-gray-500 dark:text-gray-400">Zero Tolerance Policy</div>
+                  <div className="font-semibold text-sm dark:text-gray-200">{t("legalPages.terms.quickOverview.respectfulCommunity")}</div>
+                  <div className="text-xs text-gray-500 dark:text-gray-400">{t("legalPages.terms.quickOverview.zeroTolerance")}</div>
                 </div>
               </div>
             </CardContent>
@@ -72,14 +71,14 @@ const TermsOfService = () => {
           {/* Section 1: Acceptance of Terms */}
           <Card className="dark:bg-gray-800/80 dark:border-gray-600/50">
             <CardHeader>
-              <CardTitle>1. Acceptance of Terms</CardTitle>
+              <CardTitle>{t("legalPages.terms.section1.title")}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-gray-700 dark:text-gray-300">
-                By accessing or using 2Sweety, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service and our Privacy Policy. If you do not agree to these terms, please do not use our service.
+                {t("legalPages.terms.section1.paragraph1")}
               </p>
               <p className="text-gray-700 dark:text-gray-300">
-                We may update these terms from time to time. Continued use of our service after changes constitutes acceptance of the updated terms.
+                {t("legalPages.terms.section1.paragraph2")}
               </p>
             </CardContent>
           </Card>
@@ -87,25 +86,25 @@ const TermsOfService = () => {
           {/* Section 2: Eligibility */}
           <Card className="dark:bg-gray-800/80 dark:border-gray-600/50">
             <CardHeader>
-              <CardTitle>2. Eligibility Requirements</CardTitle>
+              <CardTitle>{t("legalPages.terms.section2.title")}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-gray-700 dark:text-gray-300">
-                To use 2Sweety, you must:
+                {t("legalPages.terms.section2.intro")}
               </p>
               <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
-                <li>Be at least 18 years old</li>
-                <li>Provide accurate and complete information</li>
-                <li>Have the legal capacity to enter into these terms</li>
-                <li>Not be prohibited from using our service under applicable laws</li>
-                <li>Not have been previously banned from our platform</li>
+                <li>{t("legalPages.terms.section2.items.0")}</li>
+                <li>{t("legalPages.terms.section2.items.1")}</li>
+                <li>{t("legalPages.terms.section2.items.2")}</li>
+                <li>{t("legalPages.terms.section2.items.3")}</li>
+                <li>{t("legalPages.terms.section2.items.4")}</li>
               </ul>
               <div className="bg-gray-50 dark:bg-gray-800/80 border border-gray-200 dark:border-gray-600/50 rounded-lg p-4">
                 <div className="flex items-start space-x-3">
                   <AlertTriangle className="w-5 h-5 text-gray-600 dark:text-gray-400 mt-1" />
                   <div>
-                    <p className="font-semibold text-gray-800 dark:text-gray-300">Age Verification</p>
-                    <p className="text-gray-700 dark:text-gray-400 text-sm">We may request age verification documentation to ensure compliance with this requirement.</p>
+                    <p className="font-semibold text-gray-800 dark:text-gray-300">{t("legalPages.terms.section2.ageVerificationTitle")}</p>
+                    <p className="text-gray-700 dark:text-gray-400 text-sm">{t("legalPages.terms.section2.ageVerificationDesc")}</p>
                   </div>
                 </div>
               </div>
@@ -115,31 +114,31 @@ const TermsOfService = () => {
           {/* Section 3: Account Rules */}
           <Card className="dark:bg-gray-800/80 dark:border-gray-600/50">
             <CardHeader>
-              <CardTitle>3. Account Responsibilities</CardTitle>
+              <CardTitle>{t("legalPages.terms.section3.title")}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-gray-700 dark:text-gray-300">
-                When creating and maintaining your account, you agree to:
+                {t("legalPages.terms.section3.intro")}
               </p>
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <h4 className="font-semibold text-green-700 dark:text-green-400">✓ Allowed:</h4>
+                  <h4 className="font-semibold text-green-700 dark:text-green-400">{t("legalPages.terms.section3.allowedTitle")}</h4>
                   <ul className="list-disc pl-4 space-y-1 text-sm text-gray-700 dark:text-gray-300">
-                    <li>Use recent, accurate photos of yourself</li>
-                    <li>Provide truthful profile information</li>
-                    <li>Engage respectfully with others</li>
-                    <li>Report inappropriate behavior</li>
-                    <li>Maintain account security</li>
+                    <li>{t("legalPages.terms.section3.allowedItems.0")}</li>
+                    <li>{t("legalPages.terms.section3.allowedItems.1")}</li>
+                    <li>{t("legalPages.terms.section3.allowedItems.2")}</li>
+                    <li>{t("legalPages.terms.section3.allowedItems.3")}</li>
+                    <li>{t("legalPages.terms.section3.allowedItems.4")}</li>
                   </ul>
                 </div>
                 <div className="space-y-2">
-                  <h4 className="font-semibold text-red-700 dark:text-red-400">✗ Prohibited:</h4>
+                  <h4 className="font-semibold text-red-700 dark:text-red-400">{t("legalPages.terms.section3.prohibitedTitle")}</h4>
                   <ul className="list-disc pl-4 space-y-1 text-sm text-gray-700 dark:text-gray-300">
-                    <li>Creating fake or multiple accounts</li>
-                    <li>Using others' photos without permission</li>
-                    <li>Harassment or inappropriate content</li>
-                    <li>Commercial solicitation</li>
-                    <li>Sharing personal contact information</li>
+                    <li>{t("legalPages.terms.section3.prohibitedItems.0")}</li>
+                    <li>{t("legalPages.terms.section3.prohibitedItems.1")}</li>
+                    <li>{t("legalPages.terms.section3.prohibitedItems.2")}</li>
+                    <li>{t("legalPages.terms.section3.prohibitedItems.3")}</li>
+                    <li>{t("legalPages.terms.section3.prohibitedItems.4")}</li>
                   </ul>
                 </div>
               </div>
@@ -149,25 +148,25 @@ const TermsOfService = () => {
           {/* Section 4: Privacy and Data */}
           <Card className="dark:bg-gray-800/80 dark:border-gray-600/50">
             <CardHeader>
-              <CardTitle>4. Privacy and Data Protection</CardTitle>
+              <CardTitle>{t("legalPages.terms.section4.title")}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-gray-700 dark:text-gray-300">
-                Your privacy is important to us. We collect and process your data in accordance with our Privacy Policy and applicable data protection laws.
+                {t("legalPages.terms.section4.intro")}
               </p>
               <div className="space-y-3">
                 <div className="flex items-start space-x-3">
                   <Shield className="w-5 h-5 text-blue-500 dark:text-blue-400 mt-1" />
                   <div>
-                    <p className="font-semibold dark:text-gray-200">Data Security</p>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">We use industry-standard encryption and security measures to protect your information.</p>
+                    <p className="font-semibold dark:text-gray-200">{t("legalPages.terms.section4.dataSecurityTitle")}</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">{t("legalPages.terms.section4.dataSecurityDesc")}</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <User className="w-5 h-5 text-green-500 dark:text-green-400 mt-1" />
                   <div>
-                    <p className="font-semibold dark:text-gray-200">Your Rights</p>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">You have the right to access, modify, or delete your personal data at any time.</p>
+                    <p className="font-semibold dark:text-gray-200">{t("legalPages.terms.section4.yourRightsTitle")}</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">{t("legalPages.terms.section4.yourRightsDesc")}</p>
                   </div>
                 </div>
               </div>
@@ -177,21 +176,21 @@ const TermsOfService = () => {
           {/* Section 5: Premium Services */}
           <Card className="dark:bg-gray-800/80 dark:border-gray-600/50">
             <CardHeader>
-              <CardTitle>5. Premium Services and Payments</CardTitle>
+              <CardTitle>{t("legalPages.terms.section5.title")}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-gray-700 dark:text-gray-300">
-                2Sweety offers premium features through subscription plans. By purchasing a premium subscription:
+                {t("legalPages.terms.section5.intro")}
               </p>
               <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
-                <li>You agree to pay the specified fees</li>
-                <li>Subscriptions automatically renew unless cancelled</li>
-                <li>Refunds are subject to our refund policy</li>
-                <li>Premium features are subject to availability</li>
+                <li>{t("legalPages.terms.section5.items.0")}</li>
+                <li>{t("legalPages.terms.section5.items.1")}</li>
+                <li>{t("legalPages.terms.section5.items.2")}</li>
+                <li>{t("legalPages.terms.section5.items.3")}</li>
               </ul>
               <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
-                <p className="text-blue-800 dark:text-blue-300 font-semibold">Cancellation Policy</p>
-                <p className="text-blue-700 dark:text-blue-400 text-sm">You can cancel your subscription at any time. The cancellation will take effect at the end of your current billing period.</p>
+                <p className="text-blue-800 dark:text-blue-300 font-semibold">{t("legalPages.terms.section5.cancellationTitle")}</p>
+                <p className="text-blue-700 dark:text-blue-400 text-sm">{t("legalPages.terms.section5.cancellationDesc")}</p>
               </div>
             </CardContent>
           </Card>
@@ -199,27 +198,27 @@ const TermsOfService = () => {
           {/* Section 6: Termination */}
           <Card className="dark:bg-gray-800/80 dark:border-gray-600/50">
             <CardHeader>
-              <CardTitle>6. Account Termination</CardTitle>
+              <CardTitle>{t("legalPages.terms.section6.title")}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-gray-700 dark:text-gray-300">
-                Either party may terminate your account:
+                {t("legalPages.terms.section6.intro")}
               </p>
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <h4 className="font-semibold mb-2 dark:text-gray-200">By You:</h4>
+                  <h4 className="font-semibold mb-2 dark:text-gray-200">{t("legalPages.terms.section6.byYouTitle")}</h4>
                   <ul className="list-disc pl-4 space-y-1 text-sm text-gray-700 dark:text-gray-300">
-                    <li>Delete your account anytime</li>
-                    <li>Contact support for assistance</li>
-                    <li>Data deletion within 30 days</li>
+                    <li>{t("legalPages.terms.section6.byYouItems.0")}</li>
+                    <li>{t("legalPages.terms.section6.byYouItems.1")}</li>
+                    <li>{t("legalPages.terms.section6.byYouItems.2")}</li>
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-2 dark:text-gray-200">By Us:</h4>
+                  <h4 className="font-semibold mb-2 dark:text-gray-200">{t("legalPages.terms.section6.byUsTitle")}</h4>
                   <ul className="list-disc pl-4 space-y-1 text-sm text-gray-700 dark:text-gray-300">
-                    <li>Violation of terms</li>
-                    <li>Inappropriate behavior</li>
-                    <li>Suspicious activity</li>
+                    <li>{t("legalPages.terms.section6.byUsItems.0")}</li>
+                    <li>{t("legalPages.terms.section6.byUsItems.1")}</li>
+                    <li>{t("legalPages.terms.section6.byUsItems.2")}</li>
                   </ul>
                 </div>
               </div>
@@ -229,24 +228,24 @@ const TermsOfService = () => {
           {/* Section 7: Liability */}
           <Card className="dark:bg-gray-800/80 dark:border-gray-600/50">
             <CardHeader>
-              <CardTitle>7. Limitation of Liability</CardTitle>
+              <CardTitle>{t("legalPages.terms.section7.title")}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-gray-700 dark:text-gray-300">
-                2Sweety provides the service "as is" and makes no warranties regarding:
+                {t("legalPages.terms.section7.intro")}
               </p>
               <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
-                <li>Compatibility or success in finding matches</li>
-                <li>Accuracy of user-provided information</li>
-                <li>Uninterrupted service availability</li>
-                <li>Security against all possible threats</li>
+                <li>{t("legalPages.terms.section7.items.0")}</li>
+                <li>{t("legalPages.terms.section7.items.1")}</li>
+                <li>{t("legalPages.terms.section7.items.2")}</li>
+                <li>{t("legalPages.terms.section7.items.3")}</li>
               </ul>
               <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4">
                 <div className="flex items-start space-x-3">
                   <AlertTriangle className="w-5 h-5 text-red-600 dark:text-red-400 mt-1" />
                   <div>
-                    <p className="font-semibold text-red-800 dark:text-red-300">User Safety</p>
-                    <p className="text-red-700 dark:text-red-400 text-sm">While we strive to provide a safe environment, users are responsible for their own safety when meeting others.</p>
+                    <p className="font-semibold text-red-800 dark:text-red-300">{t("legalPages.terms.section7.safetyTitle")}</p>
+                    <p className="text-red-700 dark:text-red-400 text-sm">{t("legalPages.terms.section7.safetyDesc")}</p>
                   </div>
                 </div>
               </div>
@@ -256,18 +255,18 @@ const TermsOfService = () => {
           {/* Section 8: Governing Law */}
           <Card className="dark:bg-gray-800/80 dark:border-gray-600/50">
             <CardHeader>
-              <CardTitle>8. Governing Law and Disputes</CardTitle>
+              <CardTitle>{t("legalPages.terms.section8.title")}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-gray-700 dark:text-gray-300">
-                These terms are governed by the laws of Sweden. Any disputes will be resolved in the courts of Stockholm, Sweden.
+                {t("legalPages.terms.section8.intro")}
               </p>
               <div className="space-y-3">
                 <div className="flex items-start space-x-3">
                   <Scale className="w-5 h-5 text-blue-500 dark:text-blue-400 mt-1" />
                   <div>
-                    <p className="font-semibold dark:text-gray-200">Dispute Resolution</p>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">We encourage resolving disputes through our customer support before legal proceedings.</p>
+                    <p className="font-semibold dark:text-gray-200">{t("legalPages.terms.section8.disputeTitle")}</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">{t("legalPages.terms.section8.disputeDesc")}</p>
                   </div>
                 </div>
               </div>
@@ -277,15 +276,14 @@ const TermsOfService = () => {
           {/* Section 9: Changes to Terms */}
           <Card className="dark:bg-gray-800/80 dark:border-gray-600/50">
             <CardHeader>
-              <CardTitle>9. Changes to These Terms</CardTitle>
+              <CardTitle>{t("legalPages.terms.section9.title")}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-gray-700 dark:text-gray-300">
-                We may update these Terms of Service to reflect changes in our service or legal requirements. 
-                We will notify users of significant changes through the app or email.
+                {t("legalPages.terms.section9.paragraph1")}
               </p>
               <p className="text-gray-700 dark:text-gray-300">
-                Your continued use of 2Sweety after changes constitutes acceptance of the updated terms.
+                {t("legalPages.terms.section9.paragraph2")}
               </p>
             </CardContent>
           </Card>
@@ -294,22 +292,22 @@ const TermsOfService = () => {
           <Card className="bg-gradient-to-br from-blue-600 via-blue-700 to-purple-700 dark:from-gray-700 dark:via-gray-800 dark:to-gray-800 text-white shadow-xl border-0">
             <CardContent className="text-center py-8">
               <FileText className="w-12 h-12 mx-auto mb-4 text-white drop-shadow-lg" />
-              <h3 className="text-2xl font-bold mb-4 text-white">Questions About These Terms?</h3>
+              <h3 className="text-2xl font-bold mb-4 text-white">{t("legalPages.terms.contact.title")}</h3>
               <p className="mb-6 text-blue-100 dark:text-gray-300">
-                If you have any questions about these Terms of Service, please contact us
+                {t("legalPages.terms.contact.description")}
               </p>
               <div className="grid md:grid-cols-2 gap-6 text-left">
                 <div className="bg-white/10 dark:bg-white/5 backdrop-blur-sm rounded-lg p-4">
-                  <h4 className="font-semibold mb-3 text-white">📧 Legal Inquiries:</h4>
-                  <p className="text-sm text-blue-100 dark:text-gray-300">legal@2sweety.com</p>
+                  <h4 className="font-semibold mb-3 text-white">{t("legalPages.terms.contact.legalInquiries")}</h4>
+                  <p className="text-sm text-blue-100 dark:text-gray-300">{t("legalPages.terms.contact.legalEmail")}</p>
                 </div>
                 <div className="bg-white/10 dark:bg-white/5 backdrop-blur-sm rounded-lg p-4">
-                  <h4 className="font-semibold mb-3 text-white">💬 General Support:</h4>
-                  <p className="text-sm text-blue-100 dark:text-gray-300">support@2sweety.com</p>
+                  <h4 className="font-semibold mb-3 text-white">{t("legalPages.terms.contact.generalSupport")}</h4>
+                  <p className="text-sm text-blue-100 dark:text-gray-300">{t("legalPages.terms.contact.supportEmail")}</p>
                 </div>
               </div>
               <div className="mt-6 text-sm text-blue-200 dark:text-gray-300">
-                <p>Available 24/7 • Response within 24 hours</p>
+                <p>{t("legalPages.terms.contact.availability")}</p>
               </div>
             </CardContent>
           </Card>

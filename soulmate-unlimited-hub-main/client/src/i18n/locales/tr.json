@@ -2673,5 +2673,280 @@
   "yourSubscriptionRenewed": "Aboneliğiniz",
   "zodiacSign": "Burç",
   "zodiacSignLabel": "Burcunuz",
-  "zodiacSignPlaceholder": "Burcunuz"
+  "zodiacSignPlaceholder": "Burcunuz",
+  "legalPages": {
+    "terms": {
+      "title": "Kullanım Koşulları",
+      "subtitle": "2Sweety'yi kullanmadan önce lütfen bu koşulları dikkatlice okuyun. Hizmetimizi kullanarak bu koşulları kabul etmiş olursunuz.",
+      "lastUpdated": "Son güncelleme: Aralık 2024",
+      "quickOverview": {
+        "title": "Hızlı Genel Bakış",
+        "description": "Bu Kullanım Koşulları, dünya çapında insanları bir araya getiren bir flört platformu olan 2Sweety'nin kullanımınızı düzenler. Bir hesap oluşturarak, topluluk kurallarımızı takip etmeyi ve hizmetimizi sorumlu bir şekilde kullanmayı kabul edersiniz.",
+        "ageOnly": "Sadece 18+",
+        "ageVerification": "Yaş Doğrulaması Gerekli",
+        "safeEnvironment": "Güvenli Ortam",
+        "verifiedProfiles": "Doğrulanmış Profiller",
+        "respectfulCommunity": "Saygılı Topluluk",
+        "zeroTolerance": "Sıfır Tolerans Politikası"
+      },
+      "section1": {
+        "title": "1. Koşulların Kabulü",
+        "paragraph1": "2Sweety'ye erişerek veya kullanarak, bu Kullanım Koşullarını ve Gizlilik Politikamızı okuduğunuzu, anladığınızı ve bunlara bağlı kalmayı kabul ettiğinizi onaylarsınız. Bu koşulları kabul etmiyorsanız, lütfen hizmetimizi kullanmayın.",
+        "paragraph2": "Bu koşulları zaman zaman güncelleyebiliriz. Değişikliklerden sonra hizmetimizi kullanmaya devam etmeniz, güncellenen koşulları kabul ettiğiniz anlamına gelir."
+      },
+      "section2": {
+        "title": "2. Uygunluk Gereksinimleri",
+        "intro": "2Sweety'yi kullanmak için:",
+        "items": [
+          "En az 18 yaşında olmalısınız",
+          "Doğru ve eksiksiz bilgiler sağlamalısınız",
+          "Bu koşulları kabul etme yasal ehliyetine sahip olmalısınız",
+          "Geçerli yasalar uyarınca hizmetimizi kullanmanız yasaklanmamış olmalıdır",
+          "Platformumuzdan daha önce yasaklanmamış olmalısınız"
+        ],
+        "ageVerificationTitle": "Yaş Doğrulaması",
+        "ageVerificationDesc": "Bu gereksinime uygunluğu sağlamak için yaş doğrulama belgeleri isteyebiliriz."
+      },
+      "section3": {
+        "title": "3. Hesap Sorumlulukları",
+        "intro": "Hesabınızı oluştururken ve sürdürürken şunları kabul edersiniz:",
+        "allowedTitle": "✓ İzin Verilenler:",
+        "allowedItems": [
+          "Kendinize ait güncel ve doğru fotoğraflar kullanın",
+          "Gerçek profil bilgileri sağlayın",
+          "Diğerleriyle saygılı bir şekilde etkileşim kurun",
+          "Uygunsuz davranışları bildirin",
+          "Hesap güvenliğini koruyun"
+        ],
+        "prohibitedTitle": "✗ Yasaklananlar:",
+        "prohibitedItems": [
+          "Sahte veya birden fazla hesap oluşturma",
+          "Başkalarının fotoğraflarını izinsiz kullanma",
+          "Taciz veya uygunsuz içerik",
+          "Ticari talep",
+          "Kişisel iletişim bilgilerini paylaşma"
+        ]
+      },
+      "section4": {
+        "title": "4. Gizlilik ve Veri Koruma",
+        "paragraph1": "Gizliliğiniz bizim için önemlidir. Verilerinizi Gizlilik Politikamız ve geçerli veri koruma yasalarına uygun olarak topluyoruz ve işliyoruz.",
+        "dataSecurityTitle": "Veri Güvenliği",
+        "dataSecurityDesc": "Bilgilerinizi korumak için endüstri standardı şifreleme ve güvenlik önlemleri kullanıyoruz.",
+        "yourRightsTitle": "Haklarınız",
+        "yourRightsDesc": "Kişisel verilerinize her zaman erişme, değiştirme veya silme hakkına sahipsiniz."
+      },
+      "section5": {
+        "title": "5. Premium Hizmetler ve Ödemeler",
+        "intro": "2Sweety, abonelik planları aracılığıyla premium özellikler sunar. Premium abonelik satın alarak:",
+        "items": [
+          "Belirtilen ücretleri ödemeyi kabul edersiniz",
+          "Abonelikler iptal edilmediği sürece otomatik olarak yenilenir",
+          "İadeler iade politikamıza tabidir",
+          "Premium özellikler kullanılabilirliğe tabidir"
+        ],
+        "cancellationTitle": "İptal Politikası",
+        "cancellationDesc": "Aboneliğinizi istediğiniz zaman iptal edebilirsiniz. İptal, mevcut fatura döneminin sonunda geçerli olacaktır."
+      },
+      "section6": {
+        "title": "6. Hesap Sonlandırma",
+        "intro": "Her iki taraf da hesabınızı sonlandırabilir:",
+        "byYouTitle": "Sizin Tarafınızdan:",
+        "byYouItems": [
+          "Hesabınızı istediğiniz zaman silin",
+          "Yardım için destek ile iletişime geçin",
+          "30 gün içinde veri silinmesi"
+        ],
+        "byUsTitle": "Bizim Tarafımızdan:",
+        "byUsItems": [
+          "Koşulların ihlali",
+          "Uygunsuz davranış",
+          "Şüpheli aktivite"
+        ]
+      },
+      "section7": {
+        "title": "7. Sorumluluk Sınırlaması",
+        "intro": "2Sweety hizmeti \"olduğu gibi\" sağlar ve aşağıdakilerle ilgili hiçbir garanti vermez:",
+        "items": [
+          "Uyumluluk veya eşleşme bulma başarısı",
+          "Kullanıcı tarafından sağlanan bilgilerin doğruluğu",
+          "Kesintisiz hizmet kullanılabilirliği",
+          "Tüm olası tehditlere karşı güvenlik"
+        ],
+        "userSafetyTitle": "Kullanıcı Güvenliği",
+        "userSafetyDesc": "Güvenli bir ortam sağlamaya çalışsak da, kullanıcılar başkalarıyla buluşurken kendi güvenliklerinden sorumludur."
+      },
+      "section8": {
+        "title": "8. Uygulanacak Hukuk ve Uyuşmazlıklar",
+        "paragraph1": "Bu koşullar İsveç yasalarına tabidir. Her türlü uyuşmazlık Stockholm, İsveç mahkemelerinde çözülecektir.",
+        "disputeResolutionTitle": "Uyuşmazlık Çözümü",
+        "disputeResolutionDesc": "Yasal işlemlerden önce müşteri desteğimiz aracılığıyla uyuşmazlıkları çözmeyi teşvik ediyoruz."
+      },
+      "section9": {
+        "title": "9. Bu Koşullardaki Değişiklikler",
+        "paragraph1": "Hizmetimizdeki değişiklikleri veya yasal gereklilikleri yansıtmak için bu Kullanım Koşullarını güncelleyebiliriz. Önemli değişiklikleri kullanıcılara uygulama veya e-posta yoluyla bildireceğiz.",
+        "paragraph2": "Değişikliklerden sonra 2Sweety'yi kullanmaya devam etmeniz, güncellenen koşulları kabul ettiğiniz anlamına gelir."
+      },
+      "contact": {
+        "title": "Bu Koşullar Hakkında Sorularınız mı Var?",
+        "description": "Bu Kullanım Koşulları hakkında herhangi bir sorunuz varsa, lütfen bizimle iletişime geçin",
+        "legalInquiries": "📧 Yasal Sorular:",
+        "legalEmail": "legal@2sweety.com",
+        "generalSupport": "💬 Genel Destek:",
+        "supportEmail": "support@2sweety.com",
+        "availability": "7/24 Erişilebilir • 24 saat içinde yanıt"
+      }
+    },
+    "privacy": {
+      "title": "Gizlilik Politikası",
+      "subtitle": "Gizliliğiniz önceliğimizdir. Kişisel bilgilerinizi nasıl topladığımızı, kullandığımızı ve koruduğumuzu öğrenin.",
+      "lastUpdated": "Son güncelleme: Aralık 2024",
+      "overview": {
+        "title": "Gizliliğe Bir Bakış",
+        "description": "2Sweety'de gizliliğinizi korumaya ve kişisel verilerinizin güvenliğini sağlamaya kendimizi adadık. Bu politika GDPR ve diğer uluslararası gizlilik düzenlemelerine uygundur.",
+        "sslTitle": "256-bit SSL",
+        "sslDesc": "Şifreleme",
+        "storageTitle": "Güvenli Depolama",
+        "storageDesc": "Şifrelenmiş Veritabanları",
+        "controlTitle": "Sizin Kontrolünüz",
+        "controlDesc": "Gizlilik Ayarları",
+        "gdprTitle": "GDPR",
+        "gdprDesc": "Uyumlu"
+      },
+      "section1": {
+        "title": "1. Topladığımız Bilgiler",
+        "intro": "Gizliliğinizi ve güvenliğinizi korurken size en iyi flört deneyimini sağlamak için bilgi topluyoruz.",
+        "mandatoryTitle": "Sağladığınız Bilgiler (Zorunlu)",
+        "mandatoryItems": [
+          "İsim, yaş ve cinsiyet",
+          "E-posta adresi ve telefon numarası",
+          "Profil fotoğrafları ve biyografi",
+          "Konum (eşleştirme amacıyla)",
+          "İlgi alanları ve tercihler"
+        ],
+        "optionalTitle": "İsteğe Bağlı Bilgiler",
+        "optionalItems": [
+          "Eğitim ve meslek bilgileri",
+          "Sosyal medya bağlantıları",
+          "Ek profil bilgileri",
+          "Premium özellik tercihleri"
+        ],
+        "automaticTitle": "Otomatik Olarak Toplanan",
+        "automaticItems": [
+          "Cihaz bilgileri ve IP adresi",
+          "Uygulama kullanım analitiği",
+          "Konum verileri (izinle)",
+          "Günlük dosyaları ve çökme raporları"
+        ]
+      },
+      "section2": {
+        "title": "2. Bilgilerinizi Nasıl Kullanıyoruz",
+        "intro": "Bilgilerinizi aşağıdaki amaçlar için kullanıyoruz:",
+        "serviceTitle": "Hizmet Sunumu",
+        "serviceDesc": "Eşleşmeler oluşturma, iletişimi etkinleştirme ve deneyiminizi kişiselleştirme",
+        "securityTitle": "Güvenlik ve Doğrulama",
+        "securityDesc": "Dolandırıcılığı önleme, güvenliği sağlama ve topluluk standartlarını koruma",
+        "improvementTitle": "Hizmet İyileştirme",
+        "improvementDesc": "Analitik, araştırma ve yeni özellikler geliştirme",
+        "communicationTitle": "İletişim",
+        "communicationDesc": "Bildirimler, güncellemeler ve müşteri desteği gönderme"
+      },
+      "section3": {
+        "title": "3. Bilgi Paylaşımı ve Açıklama",
+        "intro": "Kişisel bilgilerinizi asla satmayız. Bilgilerinizi yalnızca aşağıdaki sınırlı durumlarda paylaşabiliriz:",
+        "items": [
+          "Diğer Kullanıcılarla: Herkese açık olarak görüntülemeyi seçtiğiniz profil bilgileri",
+          "Hizmet Sağlayıcıları: Hizmetimizi işletmemize yardımcı olan güvenilir ortaklar",
+          "Yasal Gereklilikler: Yasalarca gerekli olduğunda veya haklarımızı korumak için",
+          "İş Transferleri: Birleşme veya satın alma durumunda (bildirimle)"
+        ],
+        "neverShareTitle": "Asla Paylaşmadıklarımız:",
+        "neverShareDesc": "Özel mesajlarınız, finansal bilgileriniz veya tam konum verileriniz pazarlama amacıyla üçüncü taraflarla paylaşılmaz."
+      },
+      "section4": {
+        "title": "4. Veri Güvenliği Önlemleri",
+        "intro": "Verilerinizi korumak için kapsamlı güvenlik önlemleri uyguluyoruz:",
+        "technicalTitle": "Teknik Güvenlik Önlemleri:",
+        "technicalItems": [
+          "256-bit SSL şifreleme",
+          "Şifrelenmiş veritabanı depolama",
+          "Düzenli güvenlik denetimleri",
+          "Güvenli veri merkezleri"
+        ],
+        "operationalTitle": "Operasyonel Güvenlik Önlemleri:",
+        "operationalItems": [
+          "Çalışan eğitim programları",
+          "Erişim kontrolleri ve izleme",
+          "Olay müdahale prosedürleri",
+          "ISO 27001 uyumluluğu"
+        ]
+      },
+      "section5": {
+        "title": "5. Gizlilik Haklarınız",
+        "intro": "GDPR kapsamında, kişisel verilerinizle ilgili aşağıdaki haklara sahipsiniz:",
+        "accessTitle": "Erişim Hakkı",
+        "accessDesc": "Kişisel verilerinizin kopyalarını talep edin",
+        "correctionTitle": "Düzeltme Hakkı",
+        "correctionDesc": "Yanlış bilgileri güncelleyin veya düzeltin",
+        "deletionTitle": "Silme Hakkı",
+        "deletionDesc": "Verilerinizin silinmesini talep edin",
+        "portabilityTitle": "Taşınabilirlik Hakkı",
+        "portabilityDesc": "Verilerinizi okunabilir formatta dışa aktarın",
+        "exerciseTitle": "Haklarınızı Kullanın",
+        "exerciseDesc": "Bu hakları kullanmak için privacy@2sweety.com ile iletişime geçin veya uygulamanızdaki ayarları kullanın."
+      },
+      "section6": {
+        "title": "6. Veri Saklama",
+        "intro": "Verilerinizi yalnızca bu politikada belirtilen amaçlar için gerekli olduğu sürece saklarız:",
+        "tableHeaders": {
+          "dataType": "Veri Türü",
+          "retention": "Saklama Süresi",
+          "reason": "Sebep"
+        },
+        "tableRows": {
+          "profile": {
+            "type": "Profil Bilgileri",
+            "period": "Hesap silinene kadar",
+            "reason": "Hizmet sunumu"
+          },
+          "messages": {
+            "type": "Mesajlar",
+            "period": "Silmeden 1 yıl sonra",
+            "reason": "Güvenlik soruşturması"
+          },
+          "analytics": {
+            "type": "Kullanım Analitiği",
+            "period": "2 yıl",
+            "reason": "Hizmet iyileştirme"
+          },
+          "support": {
+            "type": "Destek Kayıtları",
+            "period": "3 yıl",
+            "reason": "Yasal uyumluluk"
+          }
+        }
+      },
+      "section7": {
+        "title": "7. Çerezler ve Takip",
+        "intro": "Deneyiminizi iyileştirmek için çerezler ve benzer teknolojiler kullanıyoruz:",
+        "essentialTitle": "Temel Çerezler",
+        "essentialDesc": "Temel uygulama işlevselliği ve güvenlik için gerekli",
+        "analyticsTitle": "Analitik Çerezler",
+        "analyticsDesc": "Hizmetimizi nasıl kullandığınızı anlamamıza yardımcı olur (onayınızla)",
+        "preferenceTitle": "Tercih Çerezleri",
+        "preferenceDesc": "Ayarlarınızı ve tercihlerinizi hatırlar",
+        "manageDesc": "Çerez tercihlerini tarayıcı ayarlarınızdan veya gizlilik ayarlarımızdan yönetebilirsiniz."
+      },
+      "contact": {
+        "title": "Veri Koruma Sorumlusu",
+        "description": "Veri Koruma Sorumlumuza gizlilikle ilgili sorularınız için ulaşabilirsiniz",
+        "dpoTitle": "🛡️ Veri Koruma:",
+        "dpoEmail": "dpo@2sweety.com",
+        "dpoRole": "Gizlilik Sorumlusu",
+        "privacyTitle": "📧 Genel Gizlilik:",
+        "privacyEmail": "privacy@2sweety.com",
+        "privacyRole": "Gizlilik Ekibi",
+        "availability": "72 saat içinde yanıt • GDPR Uyumlu • Çok dilli destek"
+      }
+    }
+  }
 }

@@ -2687,5 +2687,280 @@
   "yourSubscriptionRenewed": "Your",
   "zodiacSign": "Zodiac Sign",
   "zodiacSignLabel": "Zodiac Sign",
-  "zodiacSignPlaceholder": "Your zodiac sign"
+  "zodiacSignPlaceholder": "Your zodiac sign",
+  "legalPages": {
+    "terms": {
+      "title": "Tjenestevilkår",
+      "subtitle": "Vennligst les disse vilkårene nøye før du bruker 2Sweety. Ved å bruke vår tjeneste godtar du disse vilkårene.",
+      "lastUpdated": "Sist oppdatert: Desember 2024",
+      "quickOverview": {
+        "title": "Rask oversikt",
+        "description": "Disse tjenestevilkårene regulerer din bruk av 2Sweety, en datingplattform som forbinder mennesker over hele verden. Ved å opprette en konto godtar du å følge våre retningslinjer for samfunnet og bruke tjenesten vår på en ansvarlig måte.",
+        "ageOnly": "Kun 18+",
+        "ageVerification": "Aldersverifisering påkrevd",
+        "safeEnvironment": "Trygt miljø",
+        "verifiedProfiles": "Verifiserte profiler",
+        "respectfulCommunity": "Respektfullt samfunn",
+        "zeroTolerance": "Null-toleranse policy"
+      },
+      "section1": {
+        "title": "1. Aksept av vilkår",
+        "paragraph1": "Ved å få tilgang til eller bruke 2Sweety bekrefter du at du har lest, forstått og godtar å være bundet av disse tjenestevilkårene og vår personvernpolicy. Hvis du ikke godtar disse vilkårene, vennligst ikke bruk vår tjeneste.",
+        "paragraph2": "Vi kan oppdatere disse vilkårene fra tid til annen. Fortsatt bruk av vår tjeneste etter endringer utgjør aksept av de oppdaterte vilkårene."
+      },
+      "section2": {
+        "title": "2. Kvalifikasjonskrav",
+        "intro": "For å bruke 2Sweety må du:",
+        "items": [
+          "Være minst 18 år gammel",
+          "Oppgi nøyaktig og fullstendig informasjon",
+          "Ha juridisk kapasitet til å inngå disse vilkårene",
+          "Ikke være forbudt fra å bruke vår tjeneste i henhold til gjeldende lover",
+          "Ikke ha blitt utestengt fra vår plattform tidligere"
+        ],
+        "ageVerificationTitle": "Aldersverifisering",
+        "ageVerificationDesc": "Vi kan be om dokumentasjon for aldersverifisering for å sikre overholdelse av dette kravet."
+      },
+      "section3": {
+        "title": "3. Kontoansvar",
+        "intro": "Når du oppretter og vedlikeholder kontoen din, godtar du å:",
+        "allowedTitle": "✓ Tillatt:",
+        "allowedItems": [
+          "Bruke nylige, nøyaktige bilder av deg selv",
+          "Oppgi sannferdig profilinformasjon",
+          "Opptre respektfullt mot andre",
+          "Rapportere upassende oppførsel",
+          "Opprettholde kontosikkerhet"
+        ],
+        "prohibitedTitle": "✗ Forbudt:",
+        "prohibitedItems": [
+          "Opprette falske eller flere kontoer",
+          "Bruke andres bilder uten tillatelse",
+          "Trakassering eller upassende innhold",
+          "Kommersiell henvendelse",
+          "Deling av personlig kontaktinformasjon"
+        ]
+      },
+      "section4": {
+        "title": "4. Personvern og databeskyttelse",
+        "paragraph1": "Ditt personvern er viktig for oss. Vi samler inn og behandler dine data i samsvar med vår personvernpolicy og gjeldende databeskyttelseslover.",
+        "dataSecurityTitle": "Datasikkerhet",
+        "dataSecurityDesc": "Vi bruker bransjestandardkryptering og sikkerhetstiltak for å beskytte informasjonen din.",
+        "yourRightsTitle": "Dine rettigheter",
+        "yourRightsDesc": "Du har rett til å få tilgang til, endre eller slette dine personopplysninger når som helst."
+      },
+      "section5": {
+        "title": "5. Premiumtjenester og betalinger",
+        "intro": "2Sweety tilbyr premiumfunksjoner gjennom abonnementsplaner. Ved å kjøpe et premiumabonnement:",
+        "items": [
+          "Du godtar å betale de angitte gebyrene",
+          "Abonnementer fornyes automatisk med mindre de kanselleres",
+          "Refusjoner er underlagt vår refusjonspolicy",
+          "Premiumfunksjoner er underlagt tilgjengelighet"
+        ],
+        "cancellationTitle": "Kanselleringspolicy",
+        "cancellationDesc": "Du kan kansellere abonnementet ditt når som helst. Kanselleringen vil tre i kraft ved slutten av din nåværende faktureringsperiode."
+      },
+      "section6": {
+        "title": "6. Kontoavslutning",
+        "intro": "Begge parter kan avslutte kontoen din:",
+        "byYouTitle": "Av deg:",
+        "byYouItems": [
+          "Slett kontoen din når som helst",
+          "Kontakt support for assistanse",
+          "Datasletting innen 30 dager"
+        ],
+        "byUsTitle": "Av oss:",
+        "byUsItems": [
+          "Brudd på vilkårene",
+          "Upassende oppførsel",
+          "Mistenkelig aktivitet"
+        ]
+      },
+      "section7": {
+        "title": "7. Ansvarsbegrensning",
+        "intro": "2Sweety leverer tjenesten \"som den er\" og gir ingen garantier angående:",
+        "items": [
+          "Kompatibilitet eller suksess i å finne matcher",
+          "Nøyaktigheten av brukerlevert informasjon",
+          "Uavbrutt tjenestetilgjengelighet",
+          "Sikkerhet mot alle mulige trusler"
+        ],
+        "userSafetyTitle": "Brukersikkerhet",
+        "userSafetyDesc": "Selv om vi streber etter å tilby et trygt miljø, er brukere ansvarlige for sin egen sikkerhet når de møter andre."
+      },
+      "section8": {
+        "title": "8. Gjeldende lov og tvister",
+        "paragraph1": "Disse vilkårene reguleres av lovene i Sverige. Eventuelle tvister vil bli løst i domstolene i Stockholm, Sverige.",
+        "disputeResolutionTitle": "Tvisteløsning",
+        "disputeResolutionDesc": "Vi oppfordrer til å løse tvister gjennom vår kundestøtte før juridiske prosedyrer."
+      },
+      "section9": {
+        "title": "9. Endringer i disse vilkårene",
+        "paragraph1": "Vi kan oppdatere disse tjenestevilkårene for å gjenspeile endringer i vår tjeneste eller juridiske krav. Vi vil varsle brukere om vesentlige endringer gjennom appen eller e-post.",
+        "paragraph2": "Din fortsatte bruk av 2Sweety etter endringer utgjør aksept av de oppdaterte vilkårene."
+      },
+      "contact": {
+        "title": "Spørsmål om disse vilkårene?",
+        "description": "Hvis du har spørsmål om disse tjenestevilkårene, vennligst kontakt oss",
+        "legalInquiries": "📧 Juridiske henvendelser:",
+        "legalEmail": "legal@2sweety.com",
+        "generalSupport": "💬 Generell support:",
+        "supportEmail": "support@2sweety.com",
+        "availability": "Tilgjengelig 24/7 • Svar innen 24 timer"
+      }
+    },
+    "privacy": {
+      "title": "Personvernerklæring",
+      "subtitle": "Ditt personvern er vår prioritet. Lær hvordan vi samler inn, bruker og beskytter dine personopplysninger.",
+      "lastUpdated": "Sist oppdatert: Desember 2024",
+      "overview": {
+        "title": "Personvern i korte trekk",
+        "description": "Hos 2Sweety er vi forpliktet til å beskytte ditt personvern og sikre sikkerheten til dine personopplysninger. Denne policyen er i samsvar med GDPR og andre internasjonale personvernforskrifter.",
+        "sslTitle": "256-bit SSL",
+        "sslDesc": "Kryptering",
+        "storageTitle": "Sikker lagring",
+        "storageDesc": "Krypterte databaser",
+        "controlTitle": "Din kontroll",
+        "controlDesc": "Personverninnstillinger",
+        "gdprTitle": "GDPR",
+        "gdprDesc": "Kompatibel"
+      },
+      "section1": {
+        "title": "1. Informasjon vi samler inn",
+        "intro": "Vi samler inn informasjon for å gi deg den beste datingopplevelsen samtidig som vi opprettholder ditt personvern og sikkerhet.",
+        "mandatoryTitle": "Informasjon du oppgir (obligatorisk)",
+        "mandatoryItems": [
+          "Navn, alder og kjønn",
+          "E-postadresse og telefonnummer",
+          "Profilbilder og bio",
+          "Plassering (for matchingsformål)",
+          "Interesser og preferanser"
+        ],
+        "optionalTitle": "Valgfri informasjon",
+        "optionalItems": [
+          "Utdannelse og yrkesdetaljer",
+          "Sosiale mediekoblinger",
+          "Ytterligere profilinformasjon",
+          "Premiumfunksjonspreferanser"
+        ],
+        "automaticTitle": "Automatisk innsamlet",
+        "automaticItems": [
+          "Enhetsinformasjon og IP-adresse",
+          "Appbrukeranalyse",
+          "Plasseringsdata (med tillatelse)",
+          "Loggfiler og krasjrapporter"
+        ]
+      },
+      "section2": {
+        "title": "2. Hvordan vi bruker informasjonen din",
+        "intro": "Vi bruker informasjonen din til følgende formål:",
+        "serviceTitle": "Tjenesteleveranse",
+        "serviceDesc": "Opprette matcher, muliggjøre kommunikasjon og personliggjøre opplevelsen din",
+        "securityTitle": "Sikkerhet og verifisering",
+        "securityDesc": "Forebygge svindel, sikre sikkerhet og opprettholde samfunnsstandarder",
+        "improvementTitle": "Tjenesteforbedring",
+        "improvementDesc": "Analyse, forskning og utvikling av nye funksjoner",
+        "communicationTitle": "Kommunikasjon",
+        "communicationDesc": "Sende varsler, oppdateringer og kundestøtte"
+      },
+      "section3": {
+        "title": "3. Deling og avsløring av informasjon",
+        "intro": "Vi selger aldri dine personopplysninger. Vi kan bare dele informasjonen din under følgende begrensede omstendigheter:",
+        "items": [
+          "Med andre brukere: Profilinformasjon du velger å vise offentlig",
+          "Tjenesteleverandører: Pålitelige partnere som hjelper oss med å drive tjenesten vår",
+          "Juridiske krav: Når det kreves ved lov eller for å beskytte våre rettigheter",
+          "Forretningsoverføringer: I tilfelle fusjon eller oppkjøp (med varsel)"
+        ],
+        "neverShareTitle": "Vi deler aldri:",
+        "neverShareDesc": "Dine private meldinger, finansiell informasjon eller presis plasseringsdata med tredjeparter for markedsføringsformål."
+      },
+      "section4": {
+        "title": "4. Datasikkerhetstiltak",
+        "intro": "Vi implementerer omfattende sikkerhetstiltak for å beskytte dine data:",
+        "technicalTitle": "Tekniske sikkerhetstiltak:",
+        "technicalItems": [
+          "256-bit SSL-kryptering",
+          "Kryptert databaselagring",
+          "Regelmessige sikkerhetsrevisjoner",
+          "Sikre datasentre"
+        ],
+        "operationalTitle": "Operasjonelle sikkerhetstiltak:",
+        "operationalItems": [
+          "Opplæringsprogrammer for ansatte",
+          "Tilgangskontroller og overvåking",
+          "Hendelsesresponsprosedyrer",
+          "ISO 27001-overholdelse"
+        ]
+      },
+      "section5": {
+        "title": "5. Dine personvernrettigheter",
+        "intro": "I henhold til GDPR har du følgende rettigheter angående dine personopplysninger:",
+        "accessTitle": "Rett til tilgang",
+        "accessDesc": "Be om kopier av dine personopplysninger",
+        "correctionTitle": "Rett til retting",
+        "correctionDesc": "Oppdatere eller korrigere unøyaktig informasjon",
+        "deletionTitle": "Rett til sletting",
+        "deletionDesc": "Be om sletting av dine data",
+        "portabilityTitle": "Rett til dataportabilitet",
+        "portabilityDesc": "Eksportere dine data i lesbart format",
+        "exerciseTitle": "Utøv dine rettigheter",
+        "exerciseDesc": "Kontakt privacy@2sweety.com eller bruk innstillingene i appen din for å utøve disse rettighetene."
+      },
+      "section6": {
+        "title": "6. Dataoppbevaring",
+        "intro": "Vi oppbevarer dine data bare så lenge det er nødvendig for formålene som er beskrevet i denne policyen:",
+        "tableHeaders": {
+          "dataType": "Datatype",
+          "retention": "Oppbevaringsperiode",
+          "reason": "Årsak"
+        },
+        "tableRows": {
+          "profile": {
+            "type": "Profilinformasjon",
+            "period": "Til kontosletting",
+            "reason": "Tjenesteleveranse"
+          },
+          "messages": {
+            "type": "Meldinger",
+            "period": "1 år etter sletting",
+            "reason": "Sikkerhetsetterforskning"
+          },
+          "analytics": {
+            "type": "Brukeranalyse",
+            "period": "2 år",
+            "reason": "Tjenesteforbedring"
+          },
+          "support": {
+            "type": "Supportjournaler",
+            "period": "3 år",
+            "reason": "Juridisk overholdelse"
+          }
+        }
+      },
+      "section7": {
+        "title": "7. Informasjonskapsler og sporing",
+        "intro": "Vi bruker informasjonskapsler og lignende teknologier for å forbedre opplevelsen din:",
+        "essentialTitle": "Essensielle informasjonskapsler",
+        "essentialDesc": "Nødvendig for grunnleggende appfunksjonalitet og sikkerhet",
+        "analyticsTitle": "Analyseinformasjonskapsler",
+        "analyticsDesc": "Hjelper oss å forstå hvordan du bruker tjenesten vår (med samtykke)",
+        "preferenceTitle": "Preferanseinformasjonskapsler",
+        "preferenceDesc": "Husker innstillingene og preferansene dine",
+        "manageDesc": "Du kan administrere informasjonskapsler i nettleserinnstillingene eller gjennom våre personverninnstillinger."
+      },
+      "contact": {
+        "title": "Personvernombud",
+        "description": "Vårt personvernombud er tilgjengelig for å hjelpe med personvernrelaterte spørsmål",
+        "dpoTitle": "🛡️ Databeskyttelse:",
+        "dpoEmail": "dpo@2sweety.com",
+        "dpoRole": "Personvernombud",
+        "privacyTitle": "📧 Generelt personvern:",
+        "privacyEmail": "privacy@2sweety.com",
+        "privacyRole": "Personvernteam",
+        "availability": "Svar innen 72 timer • GDPR-kompatibel • Flerspråklig støtte"
+      }
+    }
+  }
 }

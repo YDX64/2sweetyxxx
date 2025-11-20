@@ -2687,5 +2687,280 @@
   "yourSubscriptionRenewed": "Uw",
   "zodiacSign": "Sterrenbeeld",
   "zodiacSignLabel": "Sterrenbeeld",
-  "zodiacSignPlaceholder": "Uw sterrenbeeld"
+  "zodiacSignPlaceholder": "Uw sterrenbeeld",
+  "legalPages": {
+    "terms": {
+      "title": "Servicevoorwaarden",
+      "subtitle": "Lees deze voorwaarden zorgvuldig door voordat u 2Sweety gebruikt. Door onze dienst te gebruiken, gaat u akkoord met deze voorwaarden.",
+      "lastUpdated": "Laatst bijgewerkt: december 2024",
+      "quickOverview": {
+        "title": "Beknopt Overzicht",
+        "description": "Deze Servicevoorwaarden regelen uw gebruik van 2Sweety, een datingsplatform dat mensen wereldwijd verbindt. Door een account aan te maken, gaat u akkoord met het volgen van onze communityrichtlijnen en het verantwoord gebruiken van onze dienst.",
+        "ageOnly": "Alleen 18+",
+        "ageVerification": "Leeftijdsverificatie vereist",
+        "safeEnvironment": "Veilige omgeving",
+        "verifiedProfiles": "Geverifieerde profielen",
+        "respectfulCommunity": "Respectvolle gemeenschap",
+        "zeroTolerance": "Nultolerantiebeleid"
+      },
+      "section1": {
+        "title": "1. Acceptatie van Voorwaarden",
+        "paragraph1": "Door toegang te krijgen tot of gebruik te maken van 2Sweety, erkent u dat u deze Servicevoorwaarden en ons Privacybeleid heeft gelezen, begrepen en ermee akkoord gaat gebonden te zijn. Als u niet akkoord gaat met deze voorwaarden, gebruik dan onze dienst niet.",
+        "paragraph2": "We kunnen deze voorwaarden van tijd tot tijd bijwerken. Voortgezet gebruik van onze dienst na wijzigingen vormt acceptatie van de bijgewerkte voorwaarden."
+      },
+      "section2": {
+        "title": "2. Geschiktheidsvereisten",
+        "intro": "Om 2Sweety te gebruiken, moet u:",
+        "items": [
+          "Minstens 18 jaar oud zijn",
+          "Nauwkeurige en volledige informatie verstrekken",
+          "De wettelijke bevoegdheid hebben om deze voorwaarden aan te gaan",
+          "Niet worden verboden om onze dienst te gebruiken onder toepasselijke wetgeving",
+          "Niet eerder van ons platform zijn verbannen"
+        ],
+        "ageVerificationTitle": "Leeftijdsverificatie",
+        "ageVerificationDesc": "We kunnen documentatie voor leeftijdsverificatie opvragen om naleving van deze vereiste te waarborgen."
+      },
+      "section3": {
+        "title": "3. Accountverantwoordelijkheden",
+        "intro": "Bij het aanmaken en onderhouden van uw account gaat u akkoord met:",
+        "allowedTitle": "✓ Toegestaan:",
+        "allowedItems": [
+          "Gebruik recente, nauwkeurige foto's van uzelf",
+          "Verstrek waarheidsgetrouwe profielinformatie",
+          "Ga respectvol met anderen om",
+          "Rapporteer ongepast gedrag",
+          "Handhaaf accountbeveiliging"
+        ],
+        "prohibitedTitle": "✗ Verboden:",
+        "prohibitedItems": [
+          "Nepaccounts of meerdere accounts aanmaken",
+          "Foto's van anderen gebruiken zonder toestemming",
+          "Intimidatie of ongepaste inhoud",
+          "Commerciële sollicitatie",
+          "Persoonlijke contactinformatie delen"
+        ]
+      },
+      "section4": {
+        "title": "4. Privacy en Gegevensbescherming",
+        "paragraph1": "Uw privacy is belangrijk voor ons. We verzamelen en verwerken uw gegevens in overeenstemming met ons Privacybeleid en toepasselijke gegevensbeschermingswetten.",
+        "dataSecurityTitle": "Gegevensbeveiliging",
+        "dataSecurityDesc": "We gebruiken industriestandaard encryptie en beveiligingsmaatregelen om uw informatie te beschermen.",
+        "yourRightsTitle": "Uw Rechten",
+        "yourRightsDesc": "U heeft het recht om te allen tijde toegang te krijgen tot, te wijzigen of uw persoonlijke gegevens te verwijderen."
+      },
+      "section5": {
+        "title": "5. Premiumdiensten en Betalingen",
+        "intro": "2Sweety biedt premiumfuncties aan via abonnementsplannen. Door een premiumabonnement te kopen:",
+        "items": [
+          "Gaat u akkoord met het betalen van de gespecificeerde tarieven",
+          "Worden abonnementen automatisch verlengd tenzij geannuleerd",
+          "Zijn terugbetalingen onderworpen aan ons terugbetalingsbeleid",
+          "Zijn premiumfuncties onderhevig aan beschikbaarheid"
+        ],
+        "cancellationTitle": "Annuleringsbeleid",
+        "cancellationDesc": "U kunt uw abonnement op elk moment annuleren. De annulering wordt van kracht aan het einde van uw huidige factureringsperiode."
+      },
+      "section6": {
+        "title": "6. Accountbeëindiging",
+        "intro": "Beide partijen kunnen uw account beëindigen:",
+        "byYouTitle": "Door U:",
+        "byYouItems": [
+          "Verwijder uw account op elk moment",
+          "Neem contact op met ondersteuning voor hulp",
+          "Gegevensverwijdering binnen 30 dagen"
+        ],
+        "byUsTitle": "Door Ons:",
+        "byUsItems": [
+          "Schending van voorwaarden",
+          "Ongepast gedrag",
+          "Verdachte activiteit"
+        ]
+      },
+      "section7": {
+        "title": "7. Aansprakelijkheidsbeperking",
+        "intro": "2Sweety biedt de dienst \"zoals deze is\" aan en geeft geen garanties met betrekking tot:",
+        "items": [
+          "Compatibiliteit of succes bij het vinden van matches",
+          "Nauwkeurigheid van door gebruikers verstrekte informatie",
+          "Ononderbroken beschikbaarheid van de dienst",
+          "Beveiliging tegen alle mogelijke bedreigingen"
+        ],
+        "userSafetyTitle": "Gebruikersveiligheid",
+        "userSafetyDesc": "Hoewel we streven naar een veilige omgeving, zijn gebruikers verantwoordelijk voor hun eigen veiligheid bij het ontmoeten van anderen."
+      },
+      "section8": {
+        "title": "8. Toepasselijk Recht en Geschillen",
+        "paragraph1": "Deze voorwaarden worden beheerst door de wetten van Zweden. Eventuele geschillen zullen worden opgelost in de rechtbanken van Stockholm, Zweden.",
+        "disputeResolutionTitle": "Geschillenbeslechting",
+        "disputeResolutionDesc": "We moedigen aan geschillen op te lossen via onze klantenondersteuning voordat juridische stappen worden ondernomen."
+      },
+      "section9": {
+        "title": "9. Wijzigingen in Deze Voorwaarden",
+        "paragraph1": "We kunnen deze Servicevoorwaarden bijwerken om wijzigingen in onze dienst of wettelijke vereisten weer te geven. We zullen gebruikers op de hoogte stellen van belangrijke wijzigingen via de app of e-mail.",
+        "paragraph2": "Uw voortgezet gebruik van 2Sweety na wijzigingen vormt acceptatie van de bijgewerkte voorwaarden."
+      },
+      "contact": {
+        "title": "Vragen Over Deze Voorwaarden?",
+        "description": "Als u vragen heeft over deze Servicevoorwaarden, neem dan contact met ons op",
+        "legalInquiries": "📧 Juridische Vragen:",
+        "legalEmail": "legal@2sweety.com",
+        "generalSupport": "💬 Algemene Ondersteuning:",
+        "supportEmail": "support@2sweety.com",
+        "availability": "24/7 beschikbaar • Reactie binnen 24 uur"
+      }
+    },
+    "privacy": {
+      "title": "Privacybeleid",
+      "subtitle": "Uw privacy is onze prioriteit. Leer hoe we uw persoonlijke informatie verzamelen, gebruiken en beschermen.",
+      "lastUpdated": "Laatst bijgewerkt: december 2024",
+      "overview": {
+        "title": "Privacy in één oogopslag",
+        "description": "Bij 2Sweety zijn we toegewijd aan het beschermen van uw privacy en het waarborgen van de veiligheid van uw persoonlijke gegevens. Dit beleid voldoet aan de AVG en andere internationale privacyregelgeving.",
+        "sslTitle": "256-bit SSL",
+        "sslDesc": "Versleuteling",
+        "storageTitle": "Veilige Opslag",
+        "storageDesc": "Versleutelde Databases",
+        "controlTitle": "Uw Controle",
+        "controlDesc": "Privacy-instellingen",
+        "gdprTitle": "AVG",
+        "gdprDesc": "Conform"
+      },
+      "section1": {
+        "title": "1. Informatie Die We Verzamelen",
+        "intro": "We verzamelen informatie om u de beste dating-ervaring te bieden terwijl we uw privacy en veiligheid handhaven.",
+        "mandatoryTitle": "Informatie Die U Verstrekt (Verplicht)",
+        "mandatoryItems": [
+          "Naam, leeftijd en geslacht",
+          "E-mailadres en telefoonnummer",
+          "Profielfoto's en bio",
+          "Locatie (voor matchingdoeleinden)",
+          "Interesses en voorkeuren"
+        ],
+        "optionalTitle": "Optionele Informatie",
+        "optionalItems": [
+          "Opleiding en beroepsdetails",
+          "Social media-verbindingen",
+          "Aanvullende profielinformatie",
+          "Voorkeuren voor premiumfuncties"
+        ],
+        "automaticTitle": "Automatisch Verzameld",
+        "automaticItems": [
+          "Apparaatinformatie en IP-adres",
+          "App-gebruiksanalyses",
+          "Locatiegegevens (met toestemming)",
+          "Logbestanden en crashrapporten"
+        ]
+      },
+      "section2": {
+        "title": "2. Hoe We Uw Informatie Gebruiken",
+        "intro": "We gebruiken uw informatie voor de volgende doeleinden:",
+        "serviceTitle": "Dienstverlening",
+        "serviceDesc": "Matches maken, communicatie mogelijk maken en uw ervaring personaliseren",
+        "securityTitle": "Beveiliging & Verificatie",
+        "securityDesc": "Fraude voorkomen, veiligheid waarborgen en gemeenschapsnormen handhaven",
+        "improvementTitle": "Dienstverbetering",
+        "improvementDesc": "Analyses, onderzoek en ontwikkeling van nieuwe functies",
+        "communicationTitle": "Communicatie",
+        "communicationDesc": "Meldingen, updates verzenden en klantenondersteuning"
+      },
+      "section3": {
+        "title": "3. Informatie Delen en Openbaarmaking",
+        "intro": "We verkopen nooit uw persoonlijke informatie. We kunnen uw informatie alleen delen in de volgende beperkte omstandigheden:",
+        "items": [
+          "Met Andere Gebruikers: Profielinformatie die u kiest om openbaar weer te geven",
+          "Dienstverleners: Vertrouwde partners die ons helpen onze dienst te exploiteren",
+          "Wettelijke Vereisten: Wanneer vereist door de wet of om onze rechten te beschermen",
+          "Bedrijfsoverdrachten: In geval van fusie of overname (met kennisgeving)"
+        ],
+        "neverShareTitle": "We Delen Nooit:",
+        "neverShareDesc": "Uw privéberichten, financiële informatie of nauwkeurige locatiegegevens met derden voor marketingdoeleinden."
+      },
+      "section4": {
+        "title": "4. Gegevensbeveiligingsmaatregelen",
+        "intro": "We implementeren uitgebreide beveiligingsmaatregelen om uw gegevens te beschermen:",
+        "technicalTitle": "Technische Waarborgen:",
+        "technicalItems": [
+          "256-bit SSL-versleuteling",
+          "Versleutelde databaseopslag",
+          "Regelmatige beveiligingsaudits",
+          "Veilige datacenters"
+        ],
+        "operationalTitle": "Operationele Waarborgen:",
+        "operationalItems": [
+          "Medewerkerstrainingsprogramma's",
+          "Toegangscontroles en monitoring",
+          "Procedures voor incidentrespons",
+          "ISO 27001-naleving"
+        ]
+      },
+      "section5": {
+        "title": "5. Uw Privacyrechten",
+        "intro": "Volgens de AVG heeft u de volgende rechten met betrekking tot uw persoonlijke gegevens:",
+        "accessTitle": "Recht op Toegang",
+        "accessDesc": "Vraag kopieën aan van uw persoonlijke gegevens",
+        "correctionTitle": "Recht op Correctie",
+        "correctionDesc": "Update of corrigeer onjuiste informatie",
+        "deletionTitle": "Recht op Verwijdering",
+        "deletionDesc": "Vraag verwijdering van uw gegevens aan",
+        "portabilityTitle": "Recht op Overdraagbaarheid",
+        "portabilityDesc": "Exporteer uw gegevens in leesbaar formaat",
+        "exerciseTitle": "Uw Rechten Uitoefenen",
+        "exerciseDesc": "Neem contact op met privacy@2sweety.com of gebruik de instellingen in uw app om deze rechten uit te oefenen."
+      },
+      "section6": {
+        "title": "6. Gegevensbewaring",
+        "intro": "We bewaren uw gegevens alleen zo lang als nodig is voor de doeleinden die in dit beleid worden beschreven:",
+        "tableHeaders": {
+          "dataType": "Gegevenstype",
+          "retention": "Bewaringsperiode",
+          "reason": "Reden"
+        },
+        "tableRows": {
+          "profile": {
+            "type": "Profielinformatie",
+            "period": "Tot accountverwijdering",
+            "reason": "Dienstverlening"
+          },
+          "messages": {
+            "type": "Berichten",
+            "period": "1 jaar na verwijdering",
+            "reason": "Veiligheidsonderzoek"
+          },
+          "analytics": {
+            "type": "Gebruiksanalyses",
+            "period": "2 jaar",
+            "reason": "Dienstverbetering"
+          },
+          "support": {
+            "type": "Ondersteuningsgegevens",
+            "period": "3 jaar",
+            "reason": "Wettelijke naleving"
+          }
+        }
+      },
+      "section7": {
+        "title": "7. Cookies en Tracking",
+        "intro": "We gebruiken cookies en vergelijkbare technologieën om uw ervaring te verbeteren:",
+        "essentialTitle": "Essentiële Cookies",
+        "essentialDesc": "Vereist voor basale app-functionaliteit en beveiliging",
+        "analyticsTitle": "Analytische Cookies",
+        "analyticsDesc": "Helpen ons begrijpen hoe u onze dienst gebruikt (met toestemming)",
+        "preferenceTitle": "Voorkeurscookies",
+        "preferenceDesc": "Onthouden uw instellingen en voorkeuren",
+        "manageDesc": "U kunt cookievoorkeuren beheren in uw browserinstellingen of via onze privacy-instellingen."
+      },
+      "contact": {
+        "title": "Functionaris voor Gegevensbescherming",
+        "description": "Onze Functionaris voor Gegevensbescherming is beschikbaar om te helpen met privacy-gerelateerde vragen",
+        "dpoTitle": "🛡️ Gegevensbescherming:",
+        "dpoEmail": "dpo@2sweety.com",
+        "dpoRole": "Privacyfunctionaris",
+        "privacyTitle": "📧 Algemene Privacy:",
+        "privacyEmail": "privacy@2sweety.com",
+        "privacyRole": "Privacyteam",
+        "availability": "Reactie binnen 72 uur • AVG-conform • Meertalige ondersteuning"
+      }
+    }
+  }
 }
