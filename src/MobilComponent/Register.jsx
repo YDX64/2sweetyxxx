@@ -9,6 +9,8 @@ import { MyContext } from "../Context/MyProvider";
 import axios from "axios";
 import { showTost } from "../showTost";
 import { useTranslation } from 'react-i18next';
+import { GoogleLogin } from '@react-oauth/google';
+import { jwtDecode } from 'jwt-decode';
 
 const Register = () => {
   const [Bio, setbio] = useState("");
@@ -36,11 +38,75 @@ const Register = () => {
   const navigation = useNavigate();
   const { t } = useTranslation();
 
-  // Social Registration Handlers - Placeholder for future OAuth integration
-  const handleGoogleSignup = () => {
-    console.log('Google signup clicked');
-    // TODO: Implement Google OAuth
-    showTost({ title: "Google signup coming soon!" });
+  // Google OAuth Success Handler
+  const handleGoogleSignup = async (credentialResponse) => {
+    try {
+      setIsLoading(true);
+      const decoded = jwtDecode(credentialResponse.credential);
+      
+      // Extract user info from Google token
+      const googleUserData = {
+        email: decoded.email,
+        name: decoded.name,
+        picture: decoded.picture,
+        googleId: decoded.sub,
+        emailVerified: decoded.email_verified
+      };
+
+      // Register with backend using Google credentials
+      const response = await axios.post(`${basUrl}u_register.php`, {
+        name: googleUserData.name,
+        email: googleUserData.email,
+        password: `google_${googleUserData.googleId}`, // Generate secure password
+        ccode: "+1",
+        mobile: "",
+        rcode: ReferralCode || "",
+        lats: "0",
+        longs: "0",
+        imei: "web",
+        auth_type: "google",
+        google_id: googleUserData.googleId,
+        profile_pic: googleUserData.picture
+      });
+
+      if (response.data.Result === "true") {
+        // Save user data
+        setName(googleUserData.name);
+        setEmail(googleUserData.email);
+        setPassword(`google_${googleUserData.googleId}`);
+        
+        showTost({ 
+          title: "Registration successful!",
+          type: "success"
+        });
+        
+        // Navigate to home or profile setup
+        setTimeout(() => {
+          navigation("/home");
+        }, 1000);
+      } else {
+        showTost({ 
+          title: response.data.ResponseMsg || "Registration failed",
+          type: "error"
+        });
+      }
+    } catch (error) {
+      console.error('Google signup error:', error);
+      showTost({ 
+        title: "Google signup failed. Please try again.",
+        type: "error"
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  // Google OAuth Error Handler
+  const handleGoogleError = () => {
+    showTost({ 
+      title: "Google signup cancelled or failed",
+      type: "error"
+    });
   };
 
   const handleAppleSignup = () => {
@@ -193,13 +259,20 @@ const Register = () => {
 
           {/* Social Registration Buttons - FIRST */}
           <div className="space-y-3 mb-6">
-            <button
-              onClick={handleGoogleSignup}
-              className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-white dark:bg-gray-700 border-2 border-gray-200 dark:border-gray-600 rounded-xl font-semibold text-gray-700 dark:text-gray-200 hover:border-pink-500 dark:hover:border-pink-500 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02]"
-            >
-              <FaGoogle className="text-xl text-red-500" />
-              <span>{t("Sign up with Google")}</span>
-            </button>
+            {/* Google OAuth Button */}
+            <div className="w-full">
+              <GoogleLogin
+                onSuccess={handleGoogleSignup}
+                onError={handleGoogleError}
+                useOneTap
+                theme="outline"
+                size="large"
+                text="signup_with"
+                shape="rectangular"
+                logo_alignment="left"
+                width="100%"
+              />
+            </div>
 
             <button
               onClick={handleAppleSignup}

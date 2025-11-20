@@ -14,11 +14,14 @@ import { db } from "../Users_Chats/Firebase";
 import { showTost } from "../showTost";
 import { uid } from "uid";
 import { useTranslation } from 'react-i18next';
+import { GoogleLogin } from '@react-oauth/google';
+import { jwtDecode } from 'jwt-decode';
 
 const Login = () => {
   const Data = useContext(TodoContext);
   const { basUrl, setToastShow } = useContext(MyContext);
   const { t } = useTranslation();
+  const [isGoogleLoading, setIsGoogleLoading] = useState(false);
 
   const [Email, setemail] = useState("");
   const [Password, setpassword] = useState("");
@@ -39,11 +42,76 @@ const Login = () => {
   const inputFocus = useRef();
   const Inputref = useRef(Array.from({ length: 6 }, () => null));
 
-  // Social Login Handlers - Placeholder for future OAuth integration
-  const handleGoogleLogin = () => {
-    console.log('Google login clicked');
-    // TODO: Implement Google OAuth
-    showTost({ title: "Google login coming soon!" });
+  // Google OAuth Success Handler
+  const handleGoogleLogin = async (credentialResponse) => {
+    try {
+      setIsGoogleLoading(true);
+      const decoded = jwtDecode(credentialResponse.credential);
+      
+      // Extract user info from Google token
+      const googleUserData = {
+        email: decoded.email,
+        name: decoded.name,
+        picture: decoded.picture,
+        googleId: decoded.sub,
+        emailVerified: decoded.email_verified
+      };
+
+      // Login with backend using Google credentials
+      const response = await axios.post(`${basUrl}user_login.php`, {
+        mobile: googleUserData.email,
+        ccode: "+1",
+        password: `google_${googleUserData.googleId}`,
+        auth_type: "google",
+        google_id: googleUserData.googleId
+      });
+
+      if (response.data.Result === "true") {
+        setToastShow(true);
+        showTost({ 
+          title: response.data.ResponseMsg || "Login successful!",
+          type: "success"
+        });
+        
+        // Save user data
+        UserAddHandler(response.data.UserLogin);
+        Data.setDemo(Data.demo + "123");
+        const token = response.data.token || uid(32);
+        localStorage.setItem("token", token);
+        localStorage.setItem("UserId", response.data.UserLogin.id);
+        localStorage.setItem("Register_User", JSON.stringify(response.data.UserLogin));
+        
+        // Navigate to home
+        setTimeout(() => {
+          navigate("/");
+        }, 500);
+      } else {
+        // If user doesn't exist, suggest registration
+        showTost({ 
+          title: "Account not found. Please sign up first.",
+          type: "error"
+        });
+        setTimeout(() => {
+          navigate("/register");
+        }, 2000);
+      }
+    } catch (error) {
+      console.error('Google login error:', error);
+      showTost({ 
+        title: "Google login failed. Please try again.",
+        type: "error"
+      });
+    } finally {
+      setIsGoogleLoading(false);
+    }
+  };
+
+  // Google OAuth Error Handler
+  const handleGoogleError = () => {
+    showTost({ 
+      title: "Google login cancelled or failed",
+      type: "error"
+    });
   };
 
   const handleAppleLogin = () => {
@@ -264,13 +332,20 @@ const Login = () => {
 
           {/* Social Login Buttons - FIRST */}
           <div className="space-y-3 mb-6">
-            <button
-              onClick={handleGoogleLogin}
-              className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-white dark:bg-gray-700 border-2 border-gray-200 dark:border-gray-600 rounded-xl font-semibold text-gray-700 dark:text-gray-200 hover:border-pink-500 dark:hover:border-pink-500 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02]"
-            >
-              <FaGoogle className="text-xl text-red-500" />
-              <span>{t("Continue with Google")}</span>
-            </button>
+            {/* Google OAuth Button */}
+            <div className="w-full">
+              <GoogleLogin
+                onSuccess={handleGoogleLogin}
+                onError={handleGoogleError}
+                useOneTap
+                theme="outline"
+                size="large"
+                text="continue_with"
+                shape="rectangular"
+                logo_alignment="left"
+                width="100%"
+              />
+            </div>
 
             <button
               onClick={handleAppleLogin}
