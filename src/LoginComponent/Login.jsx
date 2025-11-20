@@ -14,6 +14,10 @@ import { db } from "../Users_Chats/Firebase";
 import { showTost } from "../showTost";
 import { uid } from "uid";
 import { useTranslation } from 'react-i18next';
+import { GoogleLogin } from '@react-oauth/google';
+import { jwtDecode } from 'jwt-decode';
+import FacebookLogin from '@greatsumini/react-facebook-login';
+import AppleSignin from 'react-apple-signin-auth';
 
 const Login = () => {
   const { t } = useTranslation();
@@ -39,23 +43,138 @@ const Login = () => {
   const inputFocus = useRef();
   const Inputref = useRef(Array.from({ length: 6 }, () => null));
 
-  // Social Login Handlers - Placeholder for future OAuth integration
-  const handleGoogleLogin = () => {
-    console.log('Google login clicked');
-    // TODO: Implement Google OAuth
-    showTost({ title: "Google login coming soon!" });
+  // Google OAuth Login Handler
+  const handleGoogleLogin = async (credentialResponse) => {
+    try {
+      setIsLoading(true);
+      const decoded = jwtDecode(credentialResponse.credential);
+      
+      const googleData = {
+        email: decoded.email,
+        name: decoded.name,
+        profile_pic: decoded.picture,
+        social_id: decoded.sub,
+        auth_type: 'google'
+      };
+
+      // Try to login with social_login_v2.php
+      const response = await axios.post(`${basUrl}social_login_v2.php`, googleData);
+
+      if (response.data.Result === "true") {
+        // Successful login
+        showTost({ title: response.data.ResponseMsg });
+        UserAddHandler(response.data.UserLogin);
+        Data.setDemo(Data.demo + "123");
+        const token = response.data.token || uid(32);
+        localStorage.setItem("token", token);
+        localStorage.setItem("UserId", response.data.UserLogin.id);
+        localStorage.setItem("Register_User", JSON.stringify(response.data.UserLogin));
+        setTimeout(() => navigate("/"), 500);
+      } else if (response.data.ResponseCode === "201") {
+        // Need to register - redirect to registration with pre-filled data
+        showTost({ title: "Please complete your registration" });
+        localStorage.setItem("social_signup_data", JSON.stringify(googleData));
+        setTimeout(() => navigate("/register"), 1000);
+      } else {
+        showTost({ title: response.data.ResponseMsg });
+      }
+    } catch (error) {
+      console.error('Google login error:', error);
+      showTost({ title: "Google login failed. Please try again." });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
-  const handleAppleLogin = () => {
-    console.log('Apple login clicked');
-    // TODO: Implement Apple Sign In
-    showTost({ title: "Apple login coming soon!" });
+  const handleGoogleError = () => {
+    showTost({ title: "Google login cancelled" });
   };
 
-  const handleFacebookLogin = () => {
-    console.log('Facebook login clicked');
-    // TODO: Implement Facebook Login
-    showTost({ title: "Facebook login coming soon!" });
+  // Facebook Login Handler
+  const handleFacebookLogin = async (response) => {
+    try {
+      setIsLoading(true);
+      
+      if (response.accessToken) {
+        // Get user data from Facebook
+        const fbResponse = await axios.get(
+          `https://graph.facebook.com/me?fields=id,name,email,picture&access_token=${response.accessToken}`
+        );
+
+        const facebookData = {
+          email: fbResponse.data.email,
+          name: fbResponse.data.name,
+          profile_pic: fbResponse.data.picture?.data?.url || '',
+          social_id: fbResponse.data.id,
+          auth_type: 'facebook'
+        };
+
+        // Try to login
+        const loginResponse = await axios.post(`${basUrl}social_login_v2.php`, facebookData);
+
+        if (loginResponse.data.Result === "true") {
+          showTost({ title: loginResponse.data.ResponseMsg });
+          UserAddHandler(loginResponse.data.UserLogin);
+          Data.setDemo(Data.demo + "123");
+          const token = loginResponse.data.token || uid(32);
+          localStorage.setItem("token", token);
+          localStorage.setItem("UserId", loginResponse.data.UserLogin.id);
+          localStorage.setItem("Register_User", JSON.stringify(loginResponse.data.UserLogin));
+          setTimeout(() => navigate("/"), 500);
+        } else if (loginResponse.data.ResponseCode === "201") {
+          showTost({ title: "Please complete your registration" });
+          localStorage.setItem("social_signup_data", JSON.stringify(facebookData));
+          setTimeout(() => navigate("/register"), 1000);
+        } else {
+          showTost({ title: loginResponse.data.ResponseMsg });
+        }
+      }
+    } catch (error) {
+      console.error('Facebook login error:', error);
+      showTost({ title: "Facebook login failed. Please try again." });
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  // Apple Sign In Handler
+  const handleAppleLogin = async (response) => {
+    try {
+      setIsLoading(true);
+      
+      if (response.authorization) {
+        const appleData = {
+          email: response.user?.email || '',
+          name: response.user?.name ? `${response.user.name.firstName} ${response.user.name.lastName}` : 'Apple User',
+          social_id: response.authorization.id_token,
+          auth_type: 'apple'
+        };
+
+        const loginResponse = await axios.post(`${basUrl}social_login_v2.php`, appleData);
+
+        if (loginResponse.data.Result === "true") {
+          showTost({ title: loginResponse.data.ResponseMsg });
+          UserAddHandler(loginResponse.data.UserLogin);
+          Data.setDemo(Data.demo + "123");
+          const token = loginResponse.data.token || uid(32);
+          localStorage.setItem("token", token);
+          localStorage.setItem("UserId", loginResponse.data.UserLogin.id);
+          localStorage.setItem("Register_User", JSON.stringify(loginResponse.data.UserLogin));
+          setTimeout(() => navigate("/"), 500);
+        } else if (loginResponse.data.ResponseCode === "201") {
+          showTost({ title: "Please complete your registration" });
+          localStorage.setItem("social_signup_data", JSON.stringify(appleData));
+          setTimeout(() => navigate("/register"), 1000);
+        } else {
+          showTost({ title: loginResponse.data.ResponseMsg });
+        }
+      }
+    } catch (error) {
+      console.error('Apple login error:', error);
+      showTost({ title: "Apple login failed. Please try again." });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const validateEmail = (email) => {
@@ -264,29 +383,57 @@ const Login = () => {
 
           {/* Social Login Buttons - FIRST */}
           <div className="space-y-3 mb-6">
-            <button
-              onClick={handleGoogleLogin}
-              className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-white dark:bg-gray-700 border-2 border-gray-200 dark:border-gray-600 rounded-xl font-semibold text-gray-700 dark:text-gray-200 hover:border-pink-500 dark:hover:border-pink-500 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02]"
-            >
-              <FaGoogle className="text-xl text-red-500" />
-              <span>{t("Continue with Google")}</span>
-            </button>
+            {/* Google Login */}
+            <div className="w-full">
+              <GoogleLogin
+                onSuccess={handleGoogleLogin}
+                onError={handleGoogleError}
+                useOneTap
+                theme="outline"
+                size="large"
+                text="continue_with"
+                shape="rectangular"
+                logo_alignment="left"
+                width="100%"
+              />
+            </div>
 
-            <button
-              onClick={handleAppleLogin}
-              className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-black dark:bg-gray-900 border-2 border-black dark:border-gray-800 rounded-xl font-semibold text-white hover:bg-gray-900 dark:hover:bg-gray-800 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02]"
-            >
-              <FaApple className="text-xl" />
-              <span>{t("Continue with Apple")}</span>
-            </button>
+            {/* Apple Sign In */}
+            <AppleSignin
+              authOptions={{
+                clientId: process.env.REACT_APP_APPLE_CLIENT_ID || 'com.2sweety.web',
+                scope: 'email name',
+                redirectURI: window.location.origin,
+                usePopup: true,
+              }}
+              onSuccess={handleAppleLogin}
+              onError={(error) => console.error('Apple login error:', error)}
+              render={(props) => (
+                <button
+                  {...props}
+                  className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-black dark:bg-gray-900 border-2 border-black dark:border-gray-800 rounded-xl font-semibold text-white hover:bg-gray-900 dark:hover:bg-gray-800 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02]"
+                >
+                  <FaApple className="text-xl" />
+                  <span>{t("Continue with Apple")}</span>
+                </button>
+              )}
+            />
 
-            <button
-              onClick={handleFacebookLogin}
-              className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-[#1877f2] dark:bg-[#166fe5] border-2 border-[#1877f2] dark:border-[#166fe5] rounded-xl font-semibold text-white hover:bg-[#166fe5] dark:hover:bg-[#1559c7] hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02]"
-            >
-              <FaFacebook className="text-xl" />
-              <span>{t("Continue with Facebook")}</span>
-            </button>
+            {/* Facebook Login */}
+            <FacebookLogin
+              appId={process.env.REACT_APP_FACEBOOK_APP_ID || ""}
+              onSuccess={handleFacebookLogin}
+              onFail={(error) => console.error('Facebook login error:', error)}
+              render={({ onClick }) => (
+                <button
+                  onClick={onClick}
+                  className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-[#1877f2] dark:bg-[#166fe5] border-2 border-[#1877f2] dark:border-[#166fe5] rounded-xl font-semibold text-white hover:bg-[#166fe5] dark:hover:bg-[#1559c7] hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02]"
+                >
+                  <FaFacebook className="text-xl" />
+                  <span>{t("Continue with Facebook")}</span>
+                </button>
+              )}
+            />
           </div>
 
           {/* Divider */}
