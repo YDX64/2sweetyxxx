@@ -124,7 +124,7 @@ jobs:
 
     environment:
       name: production
-      url: https://2sweety.app
+      url: https://2sweety.com
 
     steps:
       - name: Checkout code
@@ -212,7 +212,7 @@ jobs:
 
       - name: Check SSL certificate
         run: |
-          echo | openssl s_client -servername 2sweety.app -connect 2sweety.app:443 2>/dev/null | openssl x509 -noout -dates
+          echo | openssl s_client -servername 2sweety.com -connect 2sweety.com:443 2>/dev/null | openssl x509 -noout -dates
 
       - name: Check critical endpoints
         run: |
@@ -227,7 +227,7 @@ jobs:
 # ============================================
 # COOLIFY_WEBHOOK_URL - Coolify deployment webhook
 # COOLIFY_API_TOKEN - Coolify API token
-# PRODUCTION_URL - Production URL (e.g., https://2sweety.app)
+# PRODUCTION_URL - Production URL (e.g., https://2sweety.com)
 # SLACK_WEBHOOK_URL - Optional Slack notifications
 # All REACT_APP_* environment variables
 # ============================================

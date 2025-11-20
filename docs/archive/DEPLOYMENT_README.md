@@ -174,8 +174,8 @@ See `.env.example` for complete list.
 
 After obtaining keys, **restrict them**:
 
-- **Firebase**: Add 2sweety.app to authorized domains
-- **Google Maps**: Restrict to HTTPS referrers (2sweety.app)
+- **Firebase**: Add 2sweety.com to authorized domains
+- **Google Maps**: Restrict to HTTPS referrers (2sweety.com)
 - **Agora**: Enable App Certificate, implement token auth
 - **Payment Gateways**: Add domain to authorized list
 
@@ -210,7 +210,7 @@ After obtaining keys, **restrict them**:
    - SSL/TLS termination
    - HTTPS redirect
    ↓
-8. App is live at https://2sweety.app
+8. App is live at https://2sweety.com
 ```
 
 ### What Gets Built

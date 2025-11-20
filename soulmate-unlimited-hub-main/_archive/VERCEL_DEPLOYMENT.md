@@ -53,10 +53,10 @@ Vercel dashboard'unuzda aşağıdaki environment variables'ları tanımlamanız 
    - Değer: `ERROR`
 
 4. **VITE_APPLE_PAY_MERCHANT_ID**
-   - Değer: `merchant.com.2sweety.app`
+   - Değer: `merchant.com.2sweety.com`
 
 5. **VITE_APPLE_PAY_DOMAIN**
-   - Değer: `2sweety.app`
+   - Değer: `2sweety.com`
 
 6. **VITE_GOOGLE_PAY_MERCHANT_ID**
    - Değer: Google Pay merchant ID'niz

@@ -303,7 +303,7 @@ const decrypted = CryptoJS.AES.decrypt(encrypted, secretKey).toString(CryptoJS.e
 ```
 Firebase Console → Project Settings → General
 → Set application restrictions (Android, iOS, Web)
-→ Add authorized domains: 2sweety.app, localhost
+→ Add authorized domains: 2sweety.com, localhost
 ```
 
 **Note**: Firebase API key is not secret. Security comes from Firestore rules and Auth.
@@ -313,7 +313,7 @@ Firebase Console → Project Settings → General
 Google Cloud Console → APIs & Services → Credentials
 → Edit API Key
 → Application restrictions: HTTP referrers
-→ Add: https://2sweety.app/*, http://localhost:3000/*
+→ Add: https://2sweety.com/*, http://localhost:3000/*
 → API restrictions:
   - Maps JavaScript API
   - Geocoding API
@@ -332,7 +332,7 @@ Agora Console → Project Management → [Your Project]
 ```
 OneSignal Dashboard → Settings → Keys & IDs
 → Web Push Configuration
-→ Allowed Origins: https://2sweety.app
+→ Allowed Origins: https://2sweety.com
 ```
 
 ### 3. API Key Rotation
@@ -443,7 +443,7 @@ add_header Strict-Transport-Security "max-age=31536000; includeSubDomains; prelo
 ```javascript
 // axios config
 axios.defaults.withCredentials = true;
-axios.defaults.headers.common['Origin'] = 'https://2sweety.app';
+axios.defaults.headers.common['Origin'] = 'https://2sweety.com';
 ```
 
 **Backend** (must configure on backend API):
@@ -453,8 +453,8 @@ const cors = require('cors');
 
 app.use(cors({
   origin: [
-    'https://2sweety.app',
-    'https://www.2sweety.app'
+    'https://2sweety.com',
+    'https://www.2sweety.com'
   ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
@@ -541,7 +541,7 @@ if ($http_user_agent ~* (bot|crawler|spider)) {
 }
 
 # Block by referrer (prevent hotlinking)
-valid_referers none blocked 2sweety.app *.2sweety.app;
+valid_referers none blocked 2sweety.com *.2sweety.com;
 if ($invalid_referer) {
   return 403;
 }
@@ -739,7 +739,7 @@ Firebase Console → Authentication → Settings
 **Authorized Domains**:
 ```
 Firebase Console → Authentication → Settings → Authorized domains
-→ Add: 2sweety.app
+→ Add: 2sweety.com
 → Remove: localhost (for production project)
 ```
 
@@ -895,7 +895,7 @@ const paymentIntent = await stripe.paymentIntents.create({
 **Secure Configuration**:
 ```
 OneSignal Dashboard → Settings → All Browsers
-→ Allowed Origins: https://2sweety.app
+→ Allowed Origins: https://2sweety.com
 → HTTPS Required: Yes
 → Service Worker scope: /
 
@@ -1369,13 +1369,13 @@ if (formData.website) {
 ### 3. Contact Information
 
 **Security Contacts**:
-- **Security Team**: security@2sweety.app
+- **Security Team**: security@2sweety.com
 - **On-call Engineer**: +1-XXX-XXX-XXXX
 - **External Security Firm**: [If applicable]
 
 **Regulatory Contacts**:
-- **Data Protection Officer**: dpo@2sweety.app
-- **Legal Counsel**: legal@2sweety.app
+- **Data Protection Officer**: dpo@2sweety.com
+- **Legal Counsel**: legal@2sweety.com
 
 ### 4. Post-Incident Review
 

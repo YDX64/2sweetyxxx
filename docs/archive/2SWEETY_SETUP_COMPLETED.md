@@ -11,7 +11,7 @@
 
 **2Sweety Brand Identity**:
 - **Name**: 2Sweety
-- **Domain**: https://2sweety.app/
+- **Domain**: https://2sweety.com/
 - **Primary Color**: #ec4899 (pink-500)
 - **Color Scheme**: Pink-Red-Orange gradient
 - **Logo**: Copied to `GoMeet Web/public/logo.png`
@@ -263,8 +263,8 @@ color: #f97316;  /* Accent orange */
 
 1. **API URLs**: We kept your current API URLs unchanged - only frontend branding was updated
 2. **Firebase**: Current Firebase config still points to GoMeet - update when ready
-3. **Payment Gateways**: Will need reconfiguration when you change domain to 2sweety.app
-4. **OAuth**: Social login redirect URLs need updating for 2sweety.app domain
+3. **Payment Gateways**: Will need reconfiguration when you change domain to 2sweety.com
+4. **OAuth**: Social login redirect URLs need updating for 2sweety.com domain
 
 ## 📞 Need Help?
 

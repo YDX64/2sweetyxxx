@@ -127,9 +127,9 @@ DESCRIBE tbl_user;
 3. Configure consent screen first (if prompted):
    - User Type: **External**
    - App name: `2Sweety`
-   - User support email: `support@2sweety.app`
-   - Developer email: `developer@2sweety.app`
-   - Authorized domains: `2sweety.app`
+   - User support email: `support@2sweety.com`
+   - Developer email: `developer@2sweety.com`
+   - Authorized domains: `2sweety.com`
    - Scopes: Default (email, profile, openid)
 
 4. Create OAuth Client ID:
@@ -138,15 +138,15 @@ DESCRIBE tbl_user;
    
 5. **Authorized JavaScript origins:**
    ```
-   https://2sweety.app
-   https://www.2sweety.app
+   https://2sweety.com
+   https://www.2sweety.com
    http://localhost:3000
    ```
 
 6. **Authorized redirect URIs:**
    ```
-   https://2sweety.app
-   https://www.2sweety.app
+   https://2sweety.com
+   https://www.2sweety.com
    http://localhost:3000
    ```
 
@@ -167,11 +167,11 @@ REACT_APP_GOOGLE_CLIENT_ID=YOUR_CLIENT_ID.apps.googleusercontent.com
    ```bash
    keytool -list -v -keystore ~/.android/debug.keystore -alias androiddebugkey -storepass android -keypass android
    ```
-3. Package name: `com.2sweety.app`
+3. Package name: `com.2sweety.com`
 
 **iOS:**
 1. Create iOS OAuth Client ID
-2. Bundle ID: `com.2sweety.app`
+2. Bundle ID: `com.2sweety.com`
 3. Download `GoogleService-Info.plist`
 
 ---
@@ -184,14 +184,14 @@ REACT_APP_GOOGLE_CLIENT_ID=YOUR_CLIENT_ID.apps.googleusercontent.com
 2. Click **My Apps** → **Create App**
 3. App Type: **Consumer**
 4. App Name: `2Sweety`
-5. App Contact Email: `support@2sweety.app`
+5. App Contact Email: `support@2sweety.com`
 
 ### Step 2: Add Facebook Login Product
 
 1. Dashboard → **Add Product**
 2. Select **Facebook Login** → **Set Up**
 3. Platform: **Website**
-4. Site URL: `https://2sweety.app`
+4. Site URL: `https://2sweety.com`
 
 ### Step 3: Configure Settings
 
@@ -199,23 +199,23 @@ REACT_APP_GOOGLE_CLIENT_ID=YOUR_CLIENT_ID.apps.googleusercontent.com
 
 2. **Valid OAuth Redirect URIs:**
    ```
-   https://2sweety.app
-   https://www.2sweety.app
+   https://2sweety.com
+   https://www.2sweety.com
    http://localhost:3000
    ```
 
 3. **Allowed Domains for the JavaScript SDK:**
    ```
-   2sweety.app
+   2sweety.com
    localhost
    ```
 
 4. Go to **Settings** → **Basic**
    - Copy **App ID**
    - Copy **App Secret** (for backend)
-   - Add **App Domains:** `2sweety.app`
-   - **Privacy Policy URL:** `https://2sweety.app/privacy`
-   - **Terms of Service URL:** `https://2sweety.app/terms`
+   - Add **App Domains:** `2sweety.com`
+   - **Privacy Policy URL:** `https://2sweety.com/privacy`
+   - **Terms of Service URL:** `https://2sweety.com/terms`
 
 ### Step 4: Add to Environment Variables
 
@@ -248,7 +248,7 @@ Before going live with 100+ users:
 1. **Certificates, Identifiers & Profiles** → **Identifiers**
 2. Click **+** → **App IDs**
 3. Description: `2Sweety`
-4. Bundle ID: `com.2sweety.app`
+4. Bundle ID: `com.2sweety.com`
 5. Enable **Sign In with Apple**
 6. Save
 
@@ -259,8 +259,8 @@ Before going live with 100+ users:
 3. Identifier: `com.2sweety.web`
 4. Enable **Sign In with Apple**
 5. Click **Configure**:
-   - **Domains:** `2sweety.app`
-   - **Return URLs:** `https://2sweety.app`
+   - **Domains:** `2sweety.com`
+   - **Return URLs:** `https://2sweety.com`
 6. Save
 
 ### Step 4: Create Key
@@ -313,7 +313,7 @@ Upload these files to your backend:
 
 **Test Social Login:**
 ```bash
-curl -X POST https://api.2sweety.app/social_login_v2.php \
+curl -X POST https://api.2sweety.com/social_login_v2.php \
   -H "Content-Type: application/json" \
   -d '{
     "email": "test@gmail.com",
@@ -360,7 +360,7 @@ Create `.env.production`:
 
 ```bash
 # API
-REACT_APP_API_BASE_URL=https://api.2sweety.app/
+REACT_APP_API_BASE_URL=https://api.2sweety.com/
 
 # Google OAuth
 REACT_APP_GOOGLE_CLIENT_ID=YOUR_CLIENT_ID.apps.googleusercontent.com
@@ -382,7 +382,7 @@ Deploy the `build/` folder to your hosting.
 
 ### Step 3: Verify on Production
 
-1. Open `https://2sweety.app/login`
+1. Open `https://2sweety.com/login`
 2. Click "Continue with Google"
 3. Should see Google login popup
 4. After login, should redirect to home
@@ -406,7 +406,7 @@ dependencies:
 **android/app/build.gradle:**
 ```gradle
 defaultConfig {
-    applicationId "com.2sweety.app"
+    applicationId "com.2sweety.com"
     ...
 }
 ```
@@ -455,7 +455,7 @@ Future<void> signInWithGoogle() async {
     if (account != null) {
       // Send to backend
       final response = await http.post(
-        Uri.parse('https://api.2sweety.app/social_login_v2.php'),
+        Uri.parse('https://api.2sweety.com/social_login_v2.php'),
         body: json.encode({
           'email': account.email,
           'name': account.displayName,

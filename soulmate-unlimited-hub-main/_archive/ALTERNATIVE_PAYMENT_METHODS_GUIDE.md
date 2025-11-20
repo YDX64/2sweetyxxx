@@ -87,14 +87,14 @@ Sadece şu roller manuel abonelik verebilir:
 ### 3.2 Apple Developer Ayarları
 1. [developer.apple.com](https://developer.apple.com) giriş yapın
 2. **Certificates, Identifiers & Profiles** → **Identifiers** → **Merchant IDs**
-3. Yeni Merchant ID oluşturun: `merchant.com.2sweety.app`
+3. Yeni Merchant ID oluşturun: `merchant.com.2sweety.com`
 4. Domain doğrulama için dosyayı indirin ve sunucuya yükleyin
 
 ### 3.3 Ortam Değişkenleri
 ```bash
 # .env dosyasına ekleyin
-VITE_APPLE_PAY_MERCHANT_ID=merchant.com.2sweety.app
-VITE_APPLE_PAY_DOMAIN=2sweety.app
+VITE_APPLE_PAY_MERCHANT_ID=merchant.com.2sweety.com
+VITE_APPLE_PAY_DOMAIN=2sweety.com
 ```
 
 ### 3.4 Edge Functions
@@ -276,7 +276,7 @@ npx expo install expo-apple-pay
   "expo": {
     "ios": {
       "entitlements": {
-        "com.apple.developer.in-app-payments": ["merchant.com.2sweety.app"]
+        "com.apple.developer.in-app-payments": ["merchant.com.2sweety.com"]
       }
     }
   }
@@ -294,7 +294,7 @@ const makeApplePayPayment = async (tier: SubscriptionTier) => {
   
   // Create payment request
   const paymentRequest = {
-    merchantIdentifier: 'merchant.com.2sweety.app',
+    merchantIdentifier: 'merchant.com.2sweety.com',
     merchantCapabilities: ApplePay.MerchantCapability.threeDSecure,
     countryCode: 'US',
     currencyCode: 'USD',

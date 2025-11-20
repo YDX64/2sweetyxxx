@@ -17,7 +17,7 @@ Quick reference guide for deploying 2Sweety React dating app to Coolify.
 ### Prerequisites Checklist
 
 - [ ] Coolify instance running and accessible
-- [ ] Domain name configured (e.g., 2sweety.app)
+- [ ] Domain name configured (e.g., 2sweety.com)
 - [ ] GitHub repository with 2Sweety code
 - [ ] Firebase project configured (sweet-a6718) ✅
 - [ ] API keys obtained from third-party services
@@ -36,7 +36,7 @@ Quick reference guide for deploying 2Sweety React dating app to Coolify.
    - Health Check Method: `GET`
 
 3. **Add Domain**
-   - Domain: `2sweety.app`
+   - Domain: `2sweety.com`
    - Enable SSL/TLS: ✅
    - Force HTTPS: ✅
 
@@ -74,7 +74,7 @@ See `COOLIFY_DEPLOYMENT_GUIDE.md` for complete list.
 1. Click **"Deploy"** in Coolify
 2. Monitor build logs (takes 2-3 minutes)
 3. Wait for health check to pass
-4. Visit `https://2sweety.app` to verify
+4. Visit `https://2sweety.com` to verify
 
 ---
 
@@ -142,7 +142,7 @@ This deployment setup includes the following files:
 ```
 ┌─────────────────────────────────────────────────────────┐
 │                      CLIENT BROWSER                      │
-│                    (https://2sweety.app)                 │
+│                    (https://2sweety.com)                 │
 └──────────────────────┬──────────────────────────────────┘
                        │
                        ▼
@@ -378,8 +378,8 @@ Use this checklist for production deployment:
 **Quick Fix**:
 1. Verify HTTPS is enabled (service workers require HTTPS)
 2. Check files are accessible:
-   - `curl https://2sweety.app/firebase-messaging-sw.js`
-   - `curl https://2sweety.app/OneSignalSDKWorker.js`
+   - `curl https://2sweety.com/firebase-messaging-sw.js`
+   - `curl https://2sweety.com/OneSignalSDKWorker.js`
 3. Clear browser cache and re-register service worker
 
 ### Issue: Video Calls Not Working
@@ -510,7 +510,7 @@ npx webpack-bundle-analyzer build/static/js/*.js
 
 Your deployment is successful when:
 
-- ✅ Application loads at `https://2sweety.app`
+- ✅ Application loads at `https://2sweety.com`
 - ✅ HTTPS is enforced (no mixed content warnings)
 - ✅ Users can register and login
 - ✅ Chat functionality works (Firebase Firestore)

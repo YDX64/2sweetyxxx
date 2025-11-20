@@ -205,7 +205,7 @@ npx expo install expo-build-properties
       [
         "@stripe/stripe-react-native",
         {
-          "merchantIdentifier": "merchant.com.2sweety.app",
+          "merchantIdentifier": "merchant.com.2sweety.com",
           "enableGooglePay": true
         }
       ]
@@ -222,7 +222,7 @@ export default function App() {
   return (
     <StripeProvider
       publishableKey="pk_test_..." // Test key
-      merchantIdentifier="merchant.com.2sweety.app"
+      merchantIdentifier="merchant.com.2sweety.com"
     >
       {/* App content */}
     </StripeProvider>

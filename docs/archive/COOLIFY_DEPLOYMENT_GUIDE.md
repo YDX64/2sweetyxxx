@@ -177,7 +177,7 @@ In Coolify application settings:
    - **Dockerfile Path**: `Dockerfile`
 
 3. **Domain Settings**:
-   - Add your domain: `2sweety.app` or `app.2sweety.com`
+   - Add your domain: `2sweety.com` or `app.2sweety.com`
    - Enable **SSL/TLS** (Let's Encrypt)
    - Enable **Force HTTPS**
 
@@ -232,14 +232,14 @@ REACT_APP_FACEBOOK_APP_ID=your_facebook_app_id_here
 
 ```bash
 # Check if app is running
-curl https://2sweety.app/health
+curl https://2sweety.com/health
 
 # Check main page
-curl https://2sweety.app/
+curl https://2sweety.com/
 
 # Check service workers
-curl https://2sweety.app/firebase-messaging-sw.js
-curl https://2sweety.app/OneSignalSDKWorker.js
+curl https://2sweety.com/firebase-messaging-sw.js
+curl https://2sweety.com/OneSignalSDKWorker.js
 ```
 
 ---
@@ -255,7 +255,7 @@ Add the following secrets:
 **Coolify Integration**:
 - `COOLIFY_WEBHOOK_URL`: Your Coolify deployment webhook URL
 - `COOLIFY_API_TOKEN`: Coolify API token
-- `PRODUCTION_URL`: Your production URL (e.g., https://2sweety.app)
+- `PRODUCTION_URL`: Your production URL (e.g., https://2sweety.com)
 
 **Application Secrets** (all REACT_APP_* variables from above):
 - `REACT_APP_API_BASE_URL`
@@ -405,7 +405,7 @@ REACT_APP_MAX_IMAGES_PER_PROFILE=6
 1. Sign up at https://onesignal.com/
 2. Create new app → **Web Push**
 3. Configure:
-   - Site URL: `https://2sweety.app`
+   - Site URL: `https://2sweety.com`
    - Auto Resubscribe: ON
    - Default Notification Icon: Upload your icon
 4. Get **App ID** from Settings → Keys & IDs
@@ -422,7 +422,7 @@ REACT_APP_MAX_IMAGES_PER_PROFILE=6
 4. Create credentials → API Key
 5. Restrict API key:
    - Application restrictions: HTTP referrers
-   - Add: `https://2sweety.app/*`
+   - Add: `https://2sweety.com/*`
    - API restrictions: Select only enabled APIs
 6. Set `REACT_APP_GOOGLE_MAPS_API_KEY=your_api_key`
 
@@ -460,10 +460,10 @@ REACT_APP_MAX_IMAGES_PER_PROFILE=6
 3. Create OAuth 2.0 Client ID
 4. Application type: **Web application**
 5. Authorized JavaScript origins:
-   - `https://2sweety.app`
+   - `https://2sweety.com`
    - `http://localhost:3000` (for development)
 6. Authorized redirect URIs:
-   - `https://2sweety.app/login`
+   - `https://2sweety.com/login`
 7. Get **Client ID**
 8. Set `REACT_APP_GOOGLE_CLIENT_ID=your_client_id.apps.googleusercontent.com`
 
@@ -473,11 +473,11 @@ REACT_APP_MAX_IMAGES_PER_PROFILE=6
 2. Create app → **Consumer**
 3. Add **Facebook Login** product
 4. Settings → Basic:
-   - App Domains: `2sweety.app`
+   - App Domains: `2sweety.com`
    - Privacy Policy URL: Your URL
    - Terms of Service URL: Your URL
 5. Facebook Login → Settings:
-   - Valid OAuth Redirect URIs: `https://2sweety.app/login`
+   - Valid OAuth Redirect URIs: `https://2sweety.com/login`
 6. Get **App ID**
 7. Set `REACT_APP_FACEBOOK_APP_ID=your_app_id`
 
@@ -490,7 +490,7 @@ REACT_APP_MAX_IMAGES_PER_PROFILE=6
 **Firebase**:
 ```bash
 # Test Firestore connection
-# Open browser console on https://2sweety.app
+# Open browser console on https://2sweety.com
 # Should see Firebase initialized without errors
 ```
 
@@ -554,9 +554,9 @@ In Coolify:
 3. Force HTTPS redirect
 4. Configure DNS:
    ```
-   A    2sweety.app          → [Coolify_Server_IP]
-   A    www.2sweety.app      → [Coolify_Server_IP]
-   AAAA 2sweety.app          → [Coolify_Server_IPv6] (if available)
+   A    2sweety.com          → [Coolify_Server_IP]
+   A    www.2sweety.com      → [Coolify_Server_IP]
+   AAAA 2sweety.com          → [Coolify_Server_IPv6] (if available)
    ```
 
 ### 4. Set Up Monitoring
@@ -605,14 +605,14 @@ Sentry.init({
    - Cache Level: Standard
 4. Page Rules:
    ```
-   *2sweety.app/static/*
+   *2sweety.com/static/*
    - Cache Level: Cache Everything
    - Edge Cache TTL: 1 month
    ```
 
 **Option B: BunnyCDN**:
 1. Create Pull Zone
-2. Origin URL: `https://2sweety.app`
+2. Origin URL: `https://2sweety.com`
 3. Update DNS CNAME
 4. Configure caching rules
 
@@ -764,7 +764,7 @@ Sentry.init({
 
 #### Issue 2: App Loads but Shows Blank Page
 
-**Symptoms**: 2sweety.app loads but shows white screen
+**Symptoms**: 2sweety.com loads but shows white screen
 
 **Diagnosis**:
 ```bash
@@ -800,8 +800,8 @@ Sentry.init({
 **Diagnosis**:
 ```bash
 # Check service worker files are accessible
-curl https://2sweety.app/firebase-messaging-sw.js
-curl https://2sweety.app/OneSignalSDKWorker.js
+curl https://2sweety.com/firebase-messaging-sw.js
+curl https://2sweety.com/OneSignalSDKWorker.js
 
 # Should return JavaScript code, not 404
 ```
@@ -857,7 +857,7 @@ curl https://2sweety.app/OneSignalSDKWorker.js
 **Diagnosis**:
 ```bash
 # Test response time
-curl -o /dev/null -s -w '%{time_total}' https://2sweety.app
+curl -o /dev/null -s -w '%{time_total}' https://2sweety.com
 
 # Check server load in Coolify
 # Review nginx logs for slow requests
@@ -879,7 +879,7 @@ curl -o /dev/null -s -w '%{time_total}' https://2sweety.app
    ```bash
    # Verify gzip enabled in nginx.conf (already configured)
    # Check Content-Encoding header
-   curl -I https://2sweety.app | grep -i content-encoding
+   curl -I https://2sweety.com | grep -i content-encoding
    ```
 
 4. **Resource Optimization**:
@@ -907,15 +907,15 @@ curl -o /dev/null -s -w '%{time_total}' https://2sweety.app
    - Check keys match environment (Razorpay, PayPal, Stripe)
 
 2. **Domain Not Authorized**:
-   - Add `2sweety.app` to authorized domains in gateway dashboard
+   - Add `2sweety.com` to authorized domains in gateway dashboard
    - Verify HTTPS is used (required for payments)
 
 3. **Webhook Configuration**:
    ```bash
    # Configure webhook URLs in gateway dashboard
-   # Razorpay: https://2sweety.app/api/razorpay-webhook
-   # PayPal: https://2sweety.app/api/paypal-webhook
-   # Stripe: https://2sweety.app/api/stripe-webhook
+   # Razorpay: https://2sweety.com/api/razorpay-webhook
+   # PayPal: https://2sweety.com/api/paypal-webhook
+   # Stripe: https://2sweety.com/api/stripe-webhook
    ```
 
 #### Issue 7: Push Notifications Not Received
@@ -952,12 +952,12 @@ curl -o /dev/null -s -w '%{time_total}' https://2sweety.app
 
 **Solutions**:
 1. **Incorrect Redirect URIs**:
-   - Google: Add `https://2sweety.app/login` to authorized URIs
+   - Google: Add `https://2sweety.com/login` to authorized URIs
    - Facebook: Add same to valid OAuth redirect URIs
 
 2. **Domain Not Authorized**:
-   - Google: Add `2sweety.app` to authorized JavaScript origins
-   - Facebook: Add `2sweety.app` to app domains
+   - Google: Add `2sweety.com` to authorized JavaScript origins
+   - Facebook: Add `2sweety.com` to app domains
 
 3. **Client ID Mismatch**:
    - Verify `REACT_APP_GOOGLE_CLIENT_ID` matches Google Console

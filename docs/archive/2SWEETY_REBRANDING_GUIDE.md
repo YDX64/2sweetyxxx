@@ -9,7 +9,7 @@ This document outlines all the changes needed to rebrand the GoMeet dating syste
 - **New**: 2Sweety
 
 ### Domain & URLs
-- **Production URL**: https://2sweety.app/
+- **Production URL**: https://2sweety.com/
 - **API Base URL**: (Keep your current API URL for now)
 
 ### Theme Colors
@@ -189,7 +189,7 @@ Update app names in:
 
 #### Privacy Policy
 - Company name: 2Sweety
-- Website: https://2sweety.app/
+- Website: https://2sweety.com/
 - Last updated: December 2024
 - GDPR compliant
 - Mentions 256-bit SSL encryption, secure storage
@@ -261,7 +261,7 @@ Update app names in:
    - Update email subject lines
 
 3. **Domain & Deployment**
-   - Configure 2sweety.app domain
+   - Configure 2sweety.com domain
    - Update API CORS settings
    - Update OAuth redirect URLs
 
@@ -293,7 +293,7 @@ Update app names in:
 1. **API URLs**: Keep your current API URLs until backend is ready
 2. **Firebase**: Will need to reconfigure when changing package names
 3. **Payment Gateways**: May need to reconfigure with new domain
-4. **OAuth**: Callback URLs will need updating with 2sweety.app domain
+4. **OAuth**: Callback URLs will need updating with 2sweety.com domain
 5. **App Store**: Will need new app listings for renamed mobile apps
 
 ## Resources Needed
