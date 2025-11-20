@@ -2743,7 +2743,7 @@
       },
       "section4": {
         "title": "4. Privatliv og Databeskyttelse",
-        "paragraph1": "Dit privatliv er vigtigt for os. Vi indsamler og behandler dine data i overensstemmelse med vores Fortrolighedspolitik og gældende databeskyttelseslove.",
+        "intro": "Dit privatliv er vigtigt for os. Vi indsamler og behandler dine data i overensstemmelse med vores Fortrolighedspolitik og gældende databeskyttelseslove.",
         "dataSecurityTitle": "Datasikkerhed",
         "dataSecurityDesc": "Vi bruger branchestandardkryptering og sikkerhedsforanstaltninger til at beskytte dine oplysninger.",
         "yourRightsTitle": "Dine Rettigheder",
@@ -2786,14 +2786,14 @@
           "Uafbrudt servicetilgængelighed",
           "Sikkerhed mod alle mulige trusler"
         ],
-        "userSafetyTitle": "Brugersikkerhed",
-        "userSafetyDesc": "Selvom vi stræber efter at give et sikkert miljø, er brugerne ansvarlige for deres egen sikkerhed, når de møder andre."
+        "safetyTitle": "Brugersikkerhed",
+        "safetyDesc": "Selvom vi stræber efter at give et sikkert miljø, er brugerne ansvarlige for deres egen sikkerhed, når de møder andre."
       },
       "section8": {
         "title": "8. Gældende Lov og Tvister",
         "paragraph1": "Disse vilkår er underlagt svensk lov. Eventuelle tvister vil blive løst i domstolene i Stockholm, Sverige.",
-        "disputeResolutionTitle": "Tvistløsning",
-        "disputeResolutionDesc": "Vi opfordrer til at løse tvister gennem vores kundesupport før retssager."
+        "disputeTitle": "Tvistløsning",
+        "disputeDesc": "Vi opfordrer til at løse tvister gennem vores kundesupport før retssager."
       },
       "section9": {
         "title": "9. Ændringer af Disse Vilkår",

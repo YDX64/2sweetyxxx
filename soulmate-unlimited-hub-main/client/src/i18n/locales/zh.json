@@ -2743,7 +2743,7 @@
       },
       "section4": {
         "title": "4. 隐私和数据保护",
-        "paragraph1": "您的隐私对我们很重要。我们根据我们的隐私政策和适用的数据保护法收集和处理您的数据。",
+        "intro": "您的隐私对我们很重要。我们根据我们的隐私政策和适用的数据保护法收集和处理您的数据。",
         "dataSecurityTitle": "数据安全",
         "dataSecurityDesc": "我们使用行业标准的加密和安全措施来保护您的信息。",
         "yourRightsTitle": "您的权利",
@@ -2786,14 +2786,14 @@
           "服务的不间断可用性",
           "针对所有可能威胁的安全性"
         ],
-        "userSafetyTitle": "用户安全",
-        "userSafetyDesc": "尽管我们努力提供安全的环境，但用户在见面时对自己的安全负责。"
+        "safetyTitle": "用户安全",
+        "safetyDesc": "尽管我们努力提供安全的环境，但用户在见面时对自己的安全负责。"
       },
       "section8": {
         "title": "8. 适用法律和争议",
         "paragraph1": "这些条款受瑞典法律管辖。任何争议将在瑞典斯德哥尔摩法院解决。",
-        "disputeResolutionTitle": "争议解决",
-        "disputeResolutionDesc": "我们鼓励在法律程序之前通过我们的客户支持解决争议。"
+        "disputeTitle": "争议解决",
+        "disputeDesc": "我们鼓励在法律程序之前通过我们的客户支持解决争议。"
       },
       "section9": {
         "title": "9. 这些条款的更改",

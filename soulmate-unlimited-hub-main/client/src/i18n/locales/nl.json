@@ -2743,7 +2743,7 @@
       },
       "section4": {
         "title": "4. Privacy en Gegevensbescherming",
-        "paragraph1": "Uw privacy is belangrijk voor ons. We verzamelen en verwerken uw gegevens in overeenstemming met ons Privacybeleid en toepasselijke gegevensbeschermingswetten.",
+        "intro": "Uw privacy is belangrijk voor ons. We verzamelen en verwerken uw gegevens in overeenstemming met ons Privacybeleid en toepasselijke gegevensbeschermingswetten.",
         "dataSecurityTitle": "Gegevensbeveiliging",
         "dataSecurityDesc": "We gebruiken industriestandaard encryptie en beveiligingsmaatregelen om uw informatie te beschermen.",
         "yourRightsTitle": "Uw Rechten",
@@ -2786,14 +2786,14 @@
           "Ononderbroken beschikbaarheid van de dienst",
           "Beveiliging tegen alle mogelijke bedreigingen"
         ],
-        "userSafetyTitle": "Gebruikersveiligheid",
-        "userSafetyDesc": "Hoewel we streven naar een veilige omgeving, zijn gebruikers verantwoordelijk voor hun eigen veiligheid bij het ontmoeten van anderen."
+        "safetyTitle": "Gebruikersveiligheid",
+        "safetyDesc": "Hoewel we streven naar een veilige omgeving, zijn gebruikers verantwoordelijk voor hun eigen veiligheid bij het ontmoeten van anderen."
       },
       "section8": {
         "title": "8. Toepasselijk Recht en Geschillen",
         "paragraph1": "Deze voorwaarden worden beheerst door de wetten van Zweden. Eventuele geschillen zullen worden opgelost in de rechtbanken van Stockholm, Zweden.",
-        "disputeResolutionTitle": "Geschillenbeslechting",
-        "disputeResolutionDesc": "We moedigen aan geschillen op te lossen via onze klantenondersteuning voordat juridische stappen worden ondernomen."
+        "disputeTitle": "Geschillenbeslechting",
+        "disputeDesc": "We moedigen aan geschillen op te lossen via onze klantenondersteuning voordat juridische stappen worden ondernomen."
       },
       "section9": {
         "title": "9. Wijzigingen in Deze Voorwaarden",

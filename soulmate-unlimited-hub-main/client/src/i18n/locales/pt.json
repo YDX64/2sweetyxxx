@@ -2743,7 +2743,7 @@
       },
       "section4": {
         "title": "4. Privacidade e Proteção de Dados",
-        "paragraph1": "Sua privacidade é importante para nós. Coletamos e processamos seus dados de acordo com nossa Política de Privacidade e leis de proteção de dados aplicáveis.",
+        "intro": "Sua privacidade é importante para nós. Coletamos e processamos seus dados de acordo com nossa Política de Privacidade e leis de proteção de dados aplicáveis.",
         "dataSecurityTitle": "Segurança de Dados",
         "dataSecurityDesc": "Usamos criptografia e medidas de segurança padrão do setor para proteger suas informações.",
         "yourRightsTitle": "Seus Direitos",
@@ -2786,14 +2786,14 @@
           "Disponibilidade ininterrupta do serviço",
           "Segurança contra todas as ameaças possíveis"
         ],
-        "userSafetyTitle": "Segurança do Usuário",
-        "userSafetyDesc": "Embora nos esforcemos para fornecer um ambiente seguro, os usuários são responsáveis por sua própria segurança ao conhecer outras pessoas."
+        "safetyTitle": "Segurança do Usuário",
+        "safetyDesc": "Embora nos esforcemos para fornecer um ambiente seguro, os usuários são responsáveis por sua própria segurança ao conhecer outras pessoas."
       },
       "section8": {
         "title": "8. Lei Aplicável e Disputas",
         "paragraph1": "Estes termos são regidos pelas leis da Suécia. Quaisquer disputas serão resolvidas nos tribunais de Estocolmo, Suécia.",
-        "disputeResolutionTitle": "Resolução de Disputas",
-        "disputeResolutionDesc": "Incentivamos a resolução de disputas através de nosso suporte ao cliente antes de procedimentos legais."
+        "disputeTitle": "Resolução de Disputas",
+        "disputeDesc": "Incentivamos a resolução de disputas através de nosso suporte ao cliente antes de procedimentos legais."
       },
       "section9": {
         "title": "9. Alterações a Estes Termos",

@@ -2743,7 +2743,7 @@
       },
       "section4": {
         "title": "4. Personvern og databeskyttelse",
-        "paragraph1": "Ditt personvern er viktig for oss. Vi samler inn og behandler dine data i samsvar med vår personvernpolicy og gjeldende databeskyttelseslover.",
+        "intro": "Ditt personvern er viktig for oss. Vi samler inn og behandler dine data i samsvar med vår personvernpolicy og gjeldende databeskyttelseslover.",
         "dataSecurityTitle": "Datasikkerhet",
         "dataSecurityDesc": "Vi bruker bransjestandardkryptering og sikkerhetstiltak for å beskytte informasjonen din.",
         "yourRightsTitle": "Dine rettigheter",
@@ -2786,14 +2786,14 @@
           "Uavbrutt tjenestetilgjengelighet",
           "Sikkerhet mot alle mulige trusler"
         ],
-        "userSafetyTitle": "Brukersikkerhet",
-        "userSafetyDesc": "Selv om vi streber etter å tilby et trygt miljø, er brukere ansvarlige for sin egen sikkerhet når de møter andre."
+        "safetyTitle": "Brukersikkerhet",
+        "safetyDesc": "Selv om vi streber etter å tilby et trygt miljø, er brukere ansvarlige for sin egen sikkerhet når de møter andre."
       },
       "section8": {
         "title": "8. Gjeldende lov og tvister",
         "paragraph1": "Disse vilkårene reguleres av lovene i Sverige. Eventuelle tvister vil bli løst i domstolene i Stockholm, Sverige.",
-        "disputeResolutionTitle": "Tvisteløsning",
-        "disputeResolutionDesc": "Vi oppfordrer til å løse tvister gjennom vår kundestøtte før juridiske prosedyrer."
+        "disputeTitle": "Tvisteløsning",
+        "disputeDesc": "Vi oppfordrer til å løse tvister gjennom vår kundestøtte før juridiske prosedyrer."
       },
       "section9": {
         "title": "9. Endringer i disse vilkårene",

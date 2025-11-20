@@ -2729,7 +2729,7 @@
       },
       "section4": {
         "title": "4. Quyền riêng tư và bảo vệ dữ liệu",
-        "paragraph1": "Quyền riêng tư của bạn rất quan trọng đối với chúng tôi. Chúng tôi thu thập và xử lý dữ liệu của bạn phù hợp với Chính sách bảo mật của chúng tôi và các luật bảo vệ dữ liệu hiện hành.",
+        "intro": "Quyền riêng tư của bạn rất quan trọng đối với chúng tôi. Chúng tôi thu thập và xử lý dữ liệu của bạn phù hợp với Chính sách bảo mật của chúng tôi và các luật bảo vệ dữ liệu hiện hành.",
         "dataSecurityTitle": "Bảo mật dữ liệu",
         "dataSecurityDesc": "Chúng tôi sử dụng mã hóa tiêu chuẩn ngành và các biện pháp bảo mật để bảo vệ thông tin của bạn.",
         "yourRightsTitle": "Quyền của bạn",
@@ -2772,14 +2772,14 @@
           "Tính khả dụng dịch vụ không bị gián đoạn",
           "Bảo mật chống lại tất cả các mối đe dọa có thể"
         ],
-        "userSafetyTitle": "An toàn người dùng",
-        "userSafetyDesc": "Mặc dù chúng tôi cố gắng cung cấp một môi trường an toàn, người dùng chịu trách nhiệm về sự an toàn của chính họ khi gặp gỡ người khác."
+        "safetyTitle": "An toàn người dùng",
+        "safetyDesc": "Mặc dù chúng tôi cố gắng cung cấp một môi trường an toàn, người dùng chịu trách nhiệm về sự an toàn của chính họ khi gặp gỡ người khác."
       },
       "section8": {
         "title": "8. Luật điều chỉnh và tranh chấp",
         "paragraph1": "Các điều khoản này được điều chỉnh bởi luật pháp Thụy Điển. Mọi tranh chấp sẽ được giải quyết tại tòa án Stockholm, Thụy Điển.",
-        "disputeResolutionTitle": "Giải quyết tranh chấp",
-        "disputeResolutionDesc": "Chúng tôi khuyến khích giải quyết tranh chấp thông qua hỗ trợ khách hàng của chúng tôi trước các thủ tục pháp lý."
+        "disputeTitle": "Giải quyết tranh chấp",
+        "disputeDesc": "Chúng tôi khuyến khích giải quyết tranh chấp thông qua hỗ trợ khách hàng của chúng tôi trước các thủ tục pháp lý."
       },
       "section9": {
         "title": "9. Thay đổi các điều khoản này",

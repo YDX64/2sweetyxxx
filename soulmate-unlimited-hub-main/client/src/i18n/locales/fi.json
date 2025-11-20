@@ -2743,7 +2743,7 @@
       },
       "section4": {
         "title": "4. Yksityisyys ja tietosuoja",
-        "paragraph1": "Yksityisyytesi on meille tärkeää. Keräämme ja käsittelemme tietojasi tietosuojakäytäntömme ja sovellettavien tietosuojalakien mukaisesti.",
+        "intro": "Yksityisyytesi on meille tärkeää. Keräämme ja käsittelemme tietojasi tietosuojakäytäntömme ja sovellettavien tietosuojalakien mukaisesti.",
         "dataSecurityTitle": "Tietoturva",
         "dataSecurityDesc": "Käytämme alan standardin mukaista salausta ja turvatoimia tietojesi suojaamiseen.",
         "yourRightsTitle": "Oikeutesi",
@@ -2786,14 +2786,14 @@
           "Keskeytymätön palvelun saatavuus",
           "Turvallisuus kaikkia mahdollisia uhkia vastaan"
         ],
-        "userSafetyTitle": "Käyttäjien turvallisuus",
-        "userSafetyDesc": "Vaikka pyrimme tarjoamaan turvallisen ympäristön, käyttäjät ovat vastuussa omasta turvallisuudestaan tavatessaan muita."
+        "safetyTitle": "Käyttäjien turvallisuus",
+        "safetyDesc": "Vaikka pyrimme tarjoamaan turvallisen ympäristön, käyttäjät ovat vastuussa omasta turvallisuudestaan tavatessaan muita."
       },
       "section8": {
         "title": "8. Sovellettava laki ja riidat",
         "paragraph1": "Näitä ehtoja säätelee Ruotsin laki. Kaikki riidat ratkaistaan Tukholman, Ruotsi tuomioistuimissa.",
-        "disputeResolutionTitle": "Riitojen ratkaisu",
-        "disputeResolutionDesc": "Kannustamme ratkaisemaan riidat asiakastukemme kautta ennen oikeustoimia."
+        "disputeTitle": "Riitojen ratkaisu",
+        "disputeDesc": "Kannustamme ratkaisemaan riidat asiakastukemme kautta ennen oikeustoimia."
       },
       "section9": {
         "title": "9. Muutokset näihin ehtoihin",

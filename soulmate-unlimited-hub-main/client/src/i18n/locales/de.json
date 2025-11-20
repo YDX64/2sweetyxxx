@@ -2729,7 +2729,7 @@
       },
       "section4": {
         "title": "4. Datenschutz und Datenschutz",
-        "paragraph1": "Ihr Datenschutz ist uns wichtig. Wir erfassen und verarbeiten Ihre Daten gemäß unserer Datenschutzrichtlinie und geltenden Datenschutzgesetzen.",
+        "intro": "Ihr Datenschutz ist uns wichtig. Wir erfassen und verarbeiten Ihre Daten gemäß unserer Datenschutzrichtlinie und geltenden Datenschutzgesetzen.",
         "dataSecurityTitle": "Datensicherheit",
         "dataSecurityDesc": "Wir verwenden branchenübliche Verschlüsselung und Sicherheitsmaßnahmen zum Schutz Ihrer Informationen.",
         "yourRightsTitle": "Ihre Rechte",
@@ -2772,14 +2772,14 @@
           "Ununterbrochene Serviceverfügbarkeit",
           "Sicherheit gegen alle möglichen Bedrohungen"
         ],
-        "userSafetyTitle": "Benutzersicherheit",
-        "userSafetyDesc": "Obwohl wir uns bemühen, eine sichere Umgebung zu bieten, sind Benutzer für ihre eigene Sicherheit beim Treffen anderer verantwortlich."
+        "safetyTitle": "Benutzersicherheit",
+        "safetyDesc": "Obwohl wir uns bemühen, eine sichere Umgebung zu bieten, sind Benutzer für ihre eigene Sicherheit beim Treffen anderer verantwortlich."
       },
       "section8": {
         "title": "8. Anwendbares Recht und Streitigkeiten",
         "paragraph1": "Diese Bedingungen unterliegen schwedischem Recht. Alle Streitigkeiten werden vor den Gerichten in Stockholm, Schweden, beigelegt.",
-        "disputeResolutionTitle": "Streitbeilegung",
-        "disputeResolutionDesc": "Wir ermutigen zur Lösung von Streitigkeiten über unseren Kundensupport vor rechtlichen Verfahren."
+        "disputeTitle": "Streitbeilegung",
+        "disputeDesc": "Wir ermutigen zur Lösung von Streitigkeiten über unseren Kundensupport vor rechtlichen Verfahren."
       },
       "section9": {
         "title": "9. Änderungen dieser Bedingungen",

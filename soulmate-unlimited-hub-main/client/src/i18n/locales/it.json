@@ -2729,7 +2729,7 @@
       },
       "section4": {
         "title": "4. Privacy e Protezione dei Dati",
-        "paragraph1": "La tua privacy è importante per noi. Raccogliamo e trattiamo i tuoi dati in conformità con la nostra Informativa sulla Privacy e le leggi applicabili sulla protezione dei dati.",
+        "intro": "La tua privacy è importante per noi. Raccogliamo e trattiamo i tuoi dati in conformità con la nostra Informativa sulla Privacy e le leggi applicabili sulla protezione dei dati.",
         "dataSecurityTitle": "Sicurezza dei Dati",
         "dataSecurityDesc": "Utilizziamo crittografia e misure di sicurezza standard del settore per proteggere le tue informazioni.",
         "yourRightsTitle": "I Tuoi Diritti",
@@ -2772,14 +2772,14 @@
           "Disponibilità del servizio senza interruzioni",
           "Sicurezza contro tutte le possibili minacce"
         ],
-        "userSafetyTitle": "Sicurezza dell'Utente",
-        "userSafetyDesc": "Sebbene ci sforziamo di fornire un ambiente sicuro, gli utenti sono responsabili della propria sicurezza quando incontrano altri."
+        "safetyTitle": "Sicurezza dell'Utente",
+        "safetyDesc": "Sebbene ci sforziamo di fornire un ambiente sicuro, gli utenti sono responsabili della propria sicurezza quando incontrano altri."
       },
       "section8": {
         "title": "8. Legge Applicabile e Controversie",
         "paragraph1": "Questi termini sono regolati dalle leggi della Svezia. Eventuali controversie saranno risolte nei tribunali di Stoccolma, Svezia.",
-        "disputeResolutionTitle": "Risoluzione delle Controversie",
-        "disputeResolutionDesc": "Incoraggiamo la risoluzione delle controversie attraverso il nostro supporto clienti prima di procedere legalmente."
+        "disputeTitle": "Risoluzione delle Controversie",
+        "disputeDesc": "Incoraggiamo la risoluzione delle controversie attraverso il nostro supporto clienti prima di procedere legalmente."
       },
       "section9": {
         "title": "9. Modifiche a Questi Termini",

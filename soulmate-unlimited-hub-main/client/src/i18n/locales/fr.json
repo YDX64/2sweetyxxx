@@ -2729,7 +2729,7 @@
       },
       "section4": {
         "title": "4. Confidentialité et Protection des Données",
-        "paragraph1": "Votre confidentialité est importante pour nous. Nous collectons et traitons vos données conformément à notre Politique de Confidentialité et aux lois applicables sur la protection des données.",
+        "intro": "Votre confidentialité est importante pour nous. Nous collectons et traitons vos données conformément à notre Politique de Confidentialité et aux lois applicables sur la protection des données.",
         "dataSecurityTitle": "Sécurité des Données",
         "dataSecurityDesc": "Nous utilisons un cryptage standard de l'industrie et des mesures de sécurité pour protéger vos informations.",
         "yourRightsTitle": "Vos Droits",
@@ -2772,14 +2772,14 @@
           "La disponibilité ininterrompue du service",
           "La sécurité contre toutes les menaces possibles"
         ],
-        "userSafetyTitle": "Sécurité des Utilisateurs",
-        "userSafetyDesc": "Bien que nous nous efforcions de fournir un environnement sûr, les utilisateurs sont responsables de leur propre sécurité lorsqu'ils rencontrent d'autres personnes."
+        "safetyTitle": "Sécurité des Utilisateurs",
+        "safetyDesc": "Bien que nous nous efforcions de fournir un environnement sûr, les utilisateurs sont responsables de leur propre sécurité lorsqu'ils rencontrent d'autres personnes."
       },
       "section8": {
         "title": "8. Loi Applicable et Litiges",
         "paragraph1": "Ces conditions sont régies par les lois de la Suède. Tout litige sera résolu devant les tribunaux de Stockholm, Suède.",
-        "disputeResolutionTitle": "Résolution des Litiges",
-        "disputeResolutionDesc": "Nous encourageons la résolution des litiges par notre service clientèle avant toute procédure judiciaire."
+        "disputeTitle": "Résolution des Litiges",
+        "disputeDesc": "Nous encourageons la résolution des litiges par notre service clientèle avant toute procédure judiciaire."
       },
       "section9": {
         "title": "9. Modifications de ces Conditions",

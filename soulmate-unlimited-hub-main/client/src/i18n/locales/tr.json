@@ -2729,7 +2729,7 @@
       },
       "section4": {
         "title": "4. Gizlilik ve Veri Koruma",
-        "paragraph1": "Gizliliğiniz bizim için önemlidir. Verilerinizi Gizlilik Politikamız ve geçerli veri koruma yasalarına uygun olarak topluyoruz ve işliyoruz.",
+        "intro": "Gizliliğiniz bizim için önemlidir. Verilerinizi Gizlilik Politikamız ve geçerli veri koruma yasalarına uygun olarak topluyoruz ve işliyoruz.",
         "dataSecurityTitle": "Veri Güvenliği",
         "dataSecurityDesc": "Bilgilerinizi korumak için endüstri standardı şifreleme ve güvenlik önlemleri kullanıyoruz.",
         "yourRightsTitle": "Haklarınız",
@@ -2772,14 +2772,14 @@
           "Kesintisiz hizmet kullanılabilirliği",
           "Tüm olası tehditlere karşı güvenlik"
         ],
-        "userSafetyTitle": "Kullanıcı Güvenliği",
-        "userSafetyDesc": "Güvenli bir ortam sağlamaya çalışsak da, kullanıcılar başkalarıyla buluşurken kendi güvenliklerinden sorumludur."
+        "safetyTitle": "Kullanıcı Güvenliği",
+        "safetyDesc": "Güvenli bir ortam sağlamaya çalışsak da, kullanıcılar başkalarıyla buluşurken kendi güvenliklerinden sorumludur."
       },
       "section8": {
         "title": "8. Uygulanacak Hukuk ve Uyuşmazlıklar",
         "paragraph1": "Bu koşullar İsveç yasalarına tabidir. Her türlü uyuşmazlık Stockholm, İsveç mahkemelerinde çözülecektir.",
-        "disputeResolutionTitle": "Uyuşmazlık Çözümü",
-        "disputeResolutionDesc": "Yasal işlemlerden önce müşteri desteğimiz aracılığıyla uyuşmazlıkları çözmeyi teşvik ediyoruz."
+        "disputeTitle": "Uyuşmazlık Çözümü",
+        "disputeDesc": "Yasal işlemlerden önce müşteri desteğimiz aracılığıyla uyuşmazlıkları çözmeyi teşvik ediyoruz."
       },
       "section9": {
         "title": "9. Bu Koşullardaki Değişiklikler",

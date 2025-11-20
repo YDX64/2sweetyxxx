@@ -2729,7 +2729,7 @@
       },
       "section4": {
         "title": "4. Privacy and Data Protection",
-        "paragraph1": "Your privacy is important to us. We collect and process your data in accordance with our Privacy Policy and applicable data protection laws.",
+        "intro": "Your privacy is important to us. We collect and process your data in accordance with our Privacy Policy and applicable data protection laws.",
         "dataSecurityTitle": "Data Security",
         "dataSecurityDesc": "We use industry-standard encryption and security measures to protect your information.",
         "yourRightsTitle": "Your Rights",
@@ -2772,14 +2772,14 @@
           "Uninterrupted service availability",
           "Security against all possible threats"
         ],
-        "userSafetyTitle": "User Safety",
-        "userSafetyDesc": "While we strive to provide a safe environment, users are responsible for their own safety when meeting others."
+        "safetyTitle": "User Safety",
+        "safetyDesc": "While we strive to provide a safe environment, users are responsible for their own safety when meeting others."
       },
       "section8": {
         "title": "8. Governing Law and Disputes",
         "paragraph1": "These terms are governed by the laws of Sweden. Any disputes will be resolved in the courts of Stockholm, Sweden.",
-        "disputeResolutionTitle": "Dispute Resolution",
-        "disputeResolutionDesc": "We encourage resolving disputes through our customer support before legal proceedings."
+        "disputeTitle": "Dispute Resolution",
+        "disputeDesc": "We encourage resolving disputes through our customer support before legal proceedings."
       },
       "section9": {
         "title": "9. Changes to These Terms",

@@ -60,7 +60,9 @@ export function AppRoutes() {
       {/* Legal and Info Pages */}
       <Route path="/about" element={<AboutUs />} />
       <Route path="/terms-of-service" element={<TermsOfService />} />
+      <Route path="/terms" element={<TermsOfService />} />
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+      <Route path="/privacy" element={<PrivacyPolicy />} />
       <Route path="/gdpr" element={<GDPRCompliance />} />
       
       {/* Admin Panel */}

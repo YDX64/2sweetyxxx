@@ -2743,7 +2743,7 @@
       },
       "section4": {
         "title": "4. Integritet och dataskydd",
-        "paragraph1": "Din integritet är viktig för oss. Vi samlar in och behandlar dina data i enlighet med vår integritetspolicy och tillämpliga dataskyddslagar.",
+        "intro": "Din integritet är viktig för oss. Vi samlar in och behandlar dina data i enlighet med vår integritetspolicy och tillämpliga dataskyddslagar.",
         "dataSecurityTitle": "Datasäkerhet",
         "dataSecurityDesc": "Vi använder branschstandardkryptering och säkerhetsåtgärder för att skydda din information.",
         "yourRightsTitle": "Dina rättigheter",
@@ -2786,14 +2786,14 @@
           "Oavbruten tjänstetillgänglighet",
           "Säkerhet mot alla möjliga hot"
         ],
-        "userSafetyTitle": "Användarsäkerhet",
-        "userSafetyDesc": "Även om vi strävar efter att tillhandahålla en säker miljö är användare ansvariga för sin egen säkerhet när de träffar andra."
+        "safetyTitle": "Användarsäkerhet",
+        "safetyDesc": "Även om vi strävar efter att tillhandahålla en säker miljö är användare ansvariga för sin egen säkerhet när de träffar andra."
       },
       "section8": {
         "title": "8. Tillämplig lag och tvister",
         "paragraph1": "Dessa villkor regleras av lagarna i Sverige. Eventuella tvister kommer att lösas i domstolarna i Stockholm, Sverige.",
-        "disputeResolutionTitle": "Tvistlösning",
-        "disputeResolutionDesc": "Vi uppmuntrar till att lösa tvister genom vår kundsupport innan juridiska förfaranden."
+        "disputeTitle": "Tvistlösning",
+        "disputeDesc": "Vi uppmuntrar till att lösa tvister genom vår kundsupport innan juridiska förfaranden."
       },
       "section9": {
         "title": "9. Ändringar i dessa villkor",
