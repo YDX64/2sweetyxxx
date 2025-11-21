@@ -9,7 +9,7 @@ import { MyContext } from "../Context/MyProvider";
 import axios from "axios";
 import { showTost } from "../showTost";
 import { useTranslation } from 'react-i18next';
-import { GoogleLogin } from '@react-oauth/google';
+import { GoogleLogin, useGoogleLogin } from '@react-oauth/google';
 import { jwtDecode } from 'jwt-decode';
 import FacebookLogin from '@greatsumini/react-facebook-login';
 import AppleSignin from 'react-apple-signin-auth';
@@ -51,7 +51,50 @@ const Register = () => {
     }
   }, []);
 
-  // Google OAuth Registration Handler
+  // Custom Google Signup with useGoogleLogin hook
+  const googleSignup = useGoogleLogin({
+    onSuccess: async (tokenResponse) => {
+      try {
+        setIsLoading(true);
+        // Get user info from Google
+        const userInfoResponse = await axios.get(
+          'https://www.googleapis.com/oauth2/v3/userinfo',
+          { headers: { Authorization: `Bearer ${tokenResponse.access_token}` } }
+        );
+        
+        const userData = userInfoResponse.data;
+        const googleData = {
+          email: userData.email,
+          name: userData.name,
+          profile_pic: userData.picture,
+          social_id: userData.sub,
+          auth_type: 'google'
+        };
+
+        // Try to register with social_register.php
+        const response = await axios.post(`${basUrl}social_register.php`, googleData);
+
+        if (response.data.Result === "true") {
+          showTost({ title: response.data.ResponseMsg });
+          localStorage.setItem("UserId", response.data.UserLogin.id);
+          localStorage.setItem("Register_User", JSON.stringify(response.data.UserLogin));
+          setTimeout(() => navigation("/phonenumber"), 500);
+        } else {
+          showTost({ title: response.data.ResponseMsg });
+        }
+      } catch (error) {
+        console.error('Google signup error:', error);
+        showTost({ title: "Google signup failed. Please try again." });
+      } finally {
+        setIsLoading(false);
+      }
+    },
+    onError: () => {
+      showTost({ title: "Google signup cancelled" });
+    }
+  });
+
+  // Google OAuth Registration Handler (legacy for credential-based signup)
   const handleGoogleSignup = async (credentialResponse) => {
     try {
       setIsLoading(true);
@@ -295,22 +338,15 @@ const Register = () => {
 
           {/* Social Registration Buttons - FIRST */}
           <div className="space-y-3 mb-6">
-            {/* Google Signup - Custom styled button with OAuth */}
-            <GoogleLogin
-              onSuccess={handleGoogleSignup}
-              onError={handleGoogleError}
-              useOneTap
-              render={(renderProps) => (
-                <button
-                  onClick={renderProps.onClick}
-                  disabled={renderProps.disabled}
-                  className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-white dark:bg-gray-700 border-2 border-gray-200 dark:border-gray-600 rounded-xl font-semibold text-gray-700 dark:text-gray-200 hover:border-pink-500 dark:hover:border-pink-500 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02]"
-                >
-                  <FaGoogle className="text-xl text-red-500" />
-                  <span>{t("Sign up with Google")}</span>
-                </button>
-              )}
-            />
+            {/* Google Signup - Custom styled button */}
+            <button
+              onClick={() => googleSignup()}
+              disabled={isLoading}
+              className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-white dark:bg-gray-700 border-2 border-gray-200 dark:border-gray-600 rounded-xl font-semibold text-gray-700 dark:text-gray-200 hover:border-pink-500 dark:hover:border-pink-500 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              <FaGoogle className="text-xl text-red-500" />
+              <span>{t("Sign up with Google")}</span>
+            </button>
 
             {/* Apple Sign In */}
             <AppleSignin
