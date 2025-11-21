@@ -1613,6 +1613,12 @@ const resources = {
       "Password reset successful": "Şifre sıfırlama başarılı",
       "Mobile number is required": "Cep telefonu numarası gereklidir",
       "OTP is required": "OTP gereklidir",
+      // Yasal Sayfalar - Temel
+      "Terms of Service": "Kullanım Koşulları",
+      "Privacy Policy": "Gizlilik Politikası",
+      "Please read these terms carefully before using 2Sweety. By using our service, you agree to these terms.": "2Sweety'yi kullanmadan önce lütfen bu koşulları dikkatlice okuyun. Hizmetimizi kullanarak bu koşulları kabul etmiş olursunuz.",
+      "Your privacy is our priority. Learn how we collect, use, and protect your personal information.": "Gizliliğiniz önceliğimizdir. Kişisel bilgilerinizi nasıl topladığımızı, kullandığımızı ve koruduğumuzu öğrenin.",
+      "Last updated: December 2024": "Son güncelleme: Aralık 2024",
     }
   },
   ar: {
@@ -3469,6 +3475,12 @@ const resources = {
       "Password reset successful": "Wachtwoord succesvol gereset",
       "Mobile number is required": "Mobiel nummer is verplicht",
       "OTP is required": "OTP is verplicht",
+      // Legal Pages - Basic
+      "Terms of Service": "Servicevoorwaarden",
+      "Privacy Policy": "Privacybeleid",
+      "Please read these terms carefully before using 2Sweety. By using our service, you agree to these terms.": "Lees deze voorwaarden zorgvuldig door voordat u 2Sweety gebruikt. Door onze dienst te gebruiken, gaat u akkoord met deze voorwaarden.",
+      "Your privacy is our priority. Learn how we collect, use, and protect your personal information.": "Uw privacy is onze prioriteit. Leer hoe we uw persoonlijke gegevens verzamelen, gebruiken en beschermen.",
+      "Last updated: December 2024": "Laatst bijgewerkt: December 2024",
     }
   },
   ja: {
