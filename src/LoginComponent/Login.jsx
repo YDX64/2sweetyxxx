@@ -14,7 +14,7 @@ import { db } from "../Users_Chats/Firebase";
 import { showTost } from "../showTost";
 import { uid } from "uid";
 import { useTranslation } from 'react-i18next';
-import { GoogleLogin } from '@react-oauth/google';
+import { GoogleLogin, useGoogleLogin } from '@react-oauth/google';
 import { jwtDecode } from 'jwt-decode';
 import FacebookLogin from '@greatsumini/react-facebook-login';
 import AppleSignin from 'react-apple-signin-auth';
@@ -43,7 +43,58 @@ const Login = () => {
   const inputFocus = useRef();
   const Inputref = useRef(Array.from({ length: 6 }, () => null));
 
-  // Google OAuth Login Handler
+  // Custom Google Login with useGoogleLogin hook
+  const googleLogin = useGoogleLogin({
+    onSuccess: async (tokenResponse) => {
+      try {
+        setIsLoading(true);
+        // Get user info from Google
+        const userInfoResponse = await axios.get(
+          'https://www.googleapis.com/oauth2/v3/userinfo',
+          { headers: { Authorization: `Bearer ${tokenResponse.access_token}` } }
+        );
+        
+        const userData = userInfoResponse.data;
+        const googleData = {
+          email: userData.email,
+          name: userData.name,
+          profile_pic: userData.picture,
+          social_id: userData.sub,
+          auth_type: 'google'
+        };
+
+        // Try to login with social_login_v2.php
+        const response = await axios.post(`${basUrl}social_login_v2.php`, googleData);
+
+        if (response.data.Result === "true") {
+          showTost({ title: response.data.ResponseMsg });
+          UserAddHandler(response.data.UserLogin);
+          Data.setDemo(Data.demo + "123");
+          const token = response.data.token || uid(32);
+          localStorage.setItem("token", token);
+          localStorage.setItem("UserId", response.data.UserLogin.id);
+          localStorage.setItem("Register_User", JSON.stringify(response.data.UserLogin));
+          setTimeout(() => navigate("/"), 500);
+        } else if (response.data.ResponseCode === "201") {
+          showTost({ title: "Please complete your registration" });
+          localStorage.setItem("social_signup_data", JSON.stringify(googleData));
+          setTimeout(() => navigate("/register"), 1000);
+        } else {
+          showTost({ title: response.data.ResponseMsg });
+        }
+      } catch (error) {
+        console.error('Google login error:', error);
+        showTost({ title: "Google login failed. Please try again." });
+      } finally {
+        setIsLoading(false);
+      }
+    },
+    onError: () => {
+      showTost({ title: "Google login cancelled" });
+    }
+  });
+
+  // Google OAuth Login Handler (legacy for credential-based login)
   const handleGoogleLogin = async (credentialResponse) => {
     try {
       setIsLoading(true);
@@ -383,22 +434,15 @@ const Login = () => {
 
           {/* Social Login Buttons - FIRST */}
           <div className="space-y-3 mb-6">
-            {/* Google Login - Custom styled button with OAuth behind */}
-            <GoogleLogin
-              onSuccess={handleGoogleLogin}
-              onError={handleGoogleError}
-              useOneTap
-              render={(renderProps) => (
-                <button
-                  onClick={renderProps.onClick}
-                  disabled={renderProps.disabled}
-                  className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-white dark:bg-gray-700 border-2 border-gray-200 dark:border-gray-600 rounded-xl font-semibold text-gray-700 dark:text-gray-200 hover:border-pink-500 dark:hover:border-pink-500 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02]"
-                >
-                  <FaGoogle className="text-xl text-red-500" />
-                  <span>{t("Continue with Google")}</span>
-                </button>
-              )}
-            />
+            {/* Google Login - Custom styled button */}
+            <button
+              onClick={() => googleLogin()}
+              disabled={isLoading}
+              className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-white dark:bg-gray-700 border-2 border-gray-200 dark:border-gray-600 rounded-xl font-semibold text-gray-700 dark:text-gray-200 hover:border-pink-500 dark:hover:border-pink-500 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              <FaGoogle className="text-xl text-red-500" />
+              <span>{t("Continue with Google")}</span>
+            </button>
 
             {/* Apple Sign In */}
             <AppleSignin
