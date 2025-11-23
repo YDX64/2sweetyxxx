@@ -37,6 +37,15 @@ const Register = () => {
     terms: ""
   });
 
+  // Check if social login credentials are configured
+  const googleClientId = process.env.REACT_APP_GOOGLE_CLIENT_ID;
+  const facebookAppId = process.env.REACT_APP_FACEBOOK_APP_ID;
+  const appleClientId = process.env.REACT_APP_APPLE_CLIENT_ID;
+
+  const isGoogleConfigured = googleClientId && googleClientId !== 'your_google_client_id_here.apps.googleusercontent.com';
+  const isFacebookConfigured = facebookAppId && facebookAppId !== 'your_facebook_app_id_here';
+  const isAppleConfigured = appleClientId && appleClientId !== 'com.2sweety.web';
+
   const { setName, setEmail, setPassword, setBio, basUrl } = useContext(MyContext);
   const navigation = useNavigate();
 
@@ -339,51 +348,84 @@ const Register = () => {
           {/* Social Registration Buttons - FIRST */}
           <div className="space-y-3 mb-6">
             {/* Google Signup - Custom styled button */}
-            <button
-              onClick={() => googleSignup()}
-              disabled={isLoading}
-              className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-white dark:bg-gray-700 border-2 border-gray-200 dark:border-gray-600 rounded-xl font-semibold text-gray-700 dark:text-gray-200 hover:border-pink-500 dark:hover:border-pink-500 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              <FaGoogle className="text-xl text-red-500" />
-              <span>{t("Sign up with Google")}</span>
-            </button>
+            {isGoogleConfigured ? (
+              <button
+                onClick={() => googleSignup()}
+                disabled={isLoading}
+                className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-white dark:bg-gray-700 border-2 border-gray-200 dark:border-gray-600 rounded-xl font-semibold text-gray-700 dark:text-gray-200 hover:border-pink-500 dark:hover:border-pink-500 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                <FaGoogle className="text-xl text-red-500" />
+                <span>{t("Sign up with Google")}</span>
+              </button>
+            ) : (
+              <button
+                onClick={() => showTost({ title: "Google signup is not configured. Please contact support." })}
+                disabled={true}
+                className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-gray-400 dark:bg-gray-600 border-2 border-gray-400 dark:border-gray-600 rounded-xl font-semibold text-gray-100 dark:text-gray-300 opacity-60 cursor-not-allowed"
+              >
+                <FaGoogle className="text-xl text-gray-300 dark:text-gray-400" />
+                <span>{t("Sign up with Google")} (Not Configured)</span>
+              </button>
+            )}
 
             {/* Apple Sign In */}
-            <AppleSignin
-              authOptions={{
-                clientId: process.env.REACT_APP_APPLE_CLIENT_ID || 'com.2sweety.web',
-                scope: 'email name',
-                redirectURI: window.location.origin,
-                usePopup: true,
-              }}
-              onSuccess={handleAppleSignup}
-              onError={(error) => console.error('Apple signup error:', error)}
-              render={(props) => (
-                <button
-                  {...props}
-                  className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-black dark:bg-gray-900 border-2 border-black dark:border-gray-800 rounded-xl font-semibold text-white hover:bg-gray-900 dark:hover:bg-gray-800 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02]"
-                >
-                  <FaApple className="text-xl" />
-                  <span>{t("Continue with Apple")}</span>
-                </button>
-              )}
-            />
+            {isAppleConfigured ? (
+              <AppleSignin
+                authOptions={{
+                  clientId: process.env.REACT_APP_APPLE_CLIENT_ID || 'com.2sweety.web',
+                  scope: 'email name',
+                  redirectURI: window.location.origin,
+                  usePopup: true,
+                }}
+                onSuccess={handleAppleSignup}
+                onError={(error) => console.error('Apple signup error:', error)}
+                render={(props) => (
+                  <button
+                    {...props}
+                    className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-black dark:bg-gray-900 border-2 border-black dark:border-gray-800 rounded-xl font-semibold text-white hover:bg-gray-900 dark:hover:bg-gray-800 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02]"
+                  >
+                    <FaApple className="text-xl" />
+                    <span>{t("Continue with Apple")}</span>
+                  </button>
+                )}
+              />
+            ) : (
+              <button
+                onClick={() => showTost({ title: "Apple signup is not configured. Please contact support." })}
+                disabled={true}
+                className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-gray-400 dark:bg-gray-600 border-2 border-gray-400 dark:border-gray-600 rounded-xl font-semibold text-gray-100 dark:text-gray-300 opacity-60 cursor-not-allowed"
+              >
+                <FaApple className="text-xl text-gray-300 dark:text-gray-400" />
+                <span>{t("Continue with Apple")} (Not Configured)</span>
+              </button>
+            )}
 
             {/* Facebook Signup */}
-            <FacebookLogin
-              appId={process.env.REACT_APP_FACEBOOK_APP_ID || ""}
-              onSuccess={handleFacebookSignup}
-              onFail={(error) => console.error('Facebook signup error:', error)}
-              render={({ onClick }) => (
-                <button
-                  onClick={onClick}
-                  className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-[#1877f2] dark:bg-[#166fe5] border-2 border-[#1877f2] dark:border-[#166fe5] rounded-xl font-semibold text-white hover:bg-[#166fe5] dark:hover:bg-[#1559c7] hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02]"
-                >
-                  <FaFacebook className="text-xl" />
-                  <span>{t("Continue with Facebook")}</span>
-                </button>
-              )}
-            />
+            {isFacebookConfigured ? (
+              <FacebookLogin
+                appId={process.env.REACT_APP_FACEBOOK_APP_ID || ""}
+                onSuccess={handleFacebookSignup}
+                onFail={(error) => console.error('Facebook signup error:', error)}
+                render={({ onClick }) => (
+                  <button
+                    onClick={onClick}
+                    className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-[#1877f2] dark:bg-[#166fe5] border-2 border-[#1877f2] dark:border-[#166fe5] rounded-xl font-semibold text-white hover:bg-[#166fe5] dark:hover:bg-[#1559c7] hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02]"
+                  >
+                    <FaFacebook className="text-xl" />
+                    <span>{t("Continue with Facebook")}</span>
+                  </button>
+                )}
+              />
+            ) : (
+              <button
+                onClick={() => showTost({ title: "Facebook signup is not configured. Please contact support." })}
+                disabled={true}
+                className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-gray-400 dark:bg-gray-600 border-2 border-gray-400 dark:border-gray-600 rounded-xl font-semibold text-gray-100 dark:text-gray-300 opacity-60 cursor-not-allowed"
+              >
+                <FaFacebook className="text-xl text-gray-300 dark:text-gray-400" />
+                <span>{t("Continue with Facebook")} (Not Configured)</span>
+              </button>
+            )}
           </div>
 
           {/* Divider */}

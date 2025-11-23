@@ -43,6 +43,15 @@ const Login = () => {
   const inputFocus = useRef();
   const Inputref = useRef(Array.from({ length: 6 }, () => null));
 
+  // Check if social login credentials are configured
+  const googleClientId = process.env.REACT_APP_GOOGLE_CLIENT_ID;
+  const facebookAppId = process.env.REACT_APP_FACEBOOK_APP_ID;
+  const appleClientId = process.env.REACT_APP_APPLE_CLIENT_ID;
+
+  const isGoogleConfigured = googleClientId && googleClientId !== 'your_google_client_id_here.apps.googleusercontent.com';
+  const isFacebookConfigured = facebookAppId && facebookAppId !== 'your_facebook_app_id_here';
+  const isAppleConfigured = appleClientId && appleClientId !== 'com.2sweety.web';
+
   // Custom Google Login with useGoogleLogin hook
   const googleLogin = useGoogleLogin({
     onSuccess: async (tokenResponse) => {
@@ -435,51 +444,81 @@ const Login = () => {
           {/* Social Login Buttons - FIRST */}
           <div className="space-y-3 mb-6">
             {/* Google Login - Custom styled button */}
-            <button
-              onClick={() => googleLogin()}
-              disabled={isLoading}
-              className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-white dark:bg-gray-700 border-2 border-gray-200 dark:border-gray-600 rounded-xl font-semibold text-gray-700 dark:text-gray-200 hover:border-pink-500 dark:hover:border-pink-500 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              <FaGoogle className="text-xl text-red-500" />
-              <span>{t("Continue with Google")}</span>
-            </button>
+            {isGoogleConfigured ? (
+              <button
+                onClick={() => googleLogin()}
+                disabled={isLoading}
+                className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-white dark:bg-gray-700 border-2 border-gray-200 dark:border-gray-600 rounded-xl font-semibold text-gray-700 dark:text-gray-200 hover:border-pink-500 dark:hover:border-pink-500 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                <FaGoogle className="text-xl text-red-500" />
+                <span>{t("Continue with Google")}</span>
+              </button>
+            ) : (
+              <button
+                onClick={() => showTost({ title: "Google login is not configured. Please use email/password login." })}
+                className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-gray-100 dark:bg-gray-700 border-2 border-gray-300 dark:border-gray-600 rounded-xl font-semibold text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-60"
+              >
+                <FaGoogle className="text-xl text-gray-400" />
+                <span>{t("Continue with Google")} (Not Configured)</span>
+              </button>
+            )}
 
             {/* Apple Sign In */}
-            <AppleSignin
-              authOptions={{
-                clientId: process.env.REACT_APP_APPLE_CLIENT_ID || 'com.2sweety.web',
-                scope: 'email name',
-                redirectURI: window.location.origin,
-                usePopup: true,
-              }}
-              onSuccess={handleAppleLogin}
-              onError={(error) => console.error('Apple login error:', error)}
-              render={(props) => (
-                <button
-                  {...props}
-                  className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-black dark:bg-gray-900 border-2 border-black dark:border-gray-800 rounded-xl font-semibold text-white hover:bg-gray-900 dark:hover:bg-gray-800 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02]"
-                >
-                  <FaApple className="text-xl" />
-                  <span>{t("Continue with Apple")}</span>
-                </button>
-              )}
-            />
+            {isAppleConfigured ? (
+              <AppleSignin
+                authOptions={{
+                  clientId: process.env.REACT_APP_APPLE_CLIENT_ID || 'com.2sweety.web',
+                  scope: 'email name',
+                  redirectURI: window.location.origin,
+                  usePopup: true,
+                }}
+                onSuccess={handleAppleLogin}
+                onError={(error) => console.error('Apple login error:', error)}
+                render={(props) => (
+                  <button
+                    {...props}
+                    className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-black dark:bg-gray-900 border-2 border-black dark:border-gray-800 rounded-xl font-semibold text-white hover:bg-gray-900 dark:hover:bg-gray-800 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02]"
+                  >
+                    <FaApple className="text-xl" />
+                    <span>{t("Continue with Apple")}</span>
+                  </button>
+                )}
+              />
+            ) : (
+              <button
+                onClick={() => showTost({ title: "Apple login is not configured. Please use email/password login." })}
+                className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-gray-700 dark:bg-gray-800 border-2 border-gray-600 dark:border-gray-700 rounded-xl font-semibold text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-60"
+              >
+                <FaApple className="text-xl text-gray-400" />
+                <span>{t("Continue with Apple")} (Not Configured)</span>
+              </button>
+            )}
 
             {/* Facebook Login */}
-            <FacebookLogin
-              appId={process.env.REACT_APP_FACEBOOK_APP_ID || ""}
-              onSuccess={handleFacebookLogin}
-              onFail={(error) => console.error('Facebook login error:', error)}
-              render={({ onClick }) => (
-                <button
-                  onClick={onClick}
-                  className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-[#1877f2] dark:bg-[#166fe5] border-2 border-[#1877f2] dark:border-[#166fe5] rounded-xl font-semibold text-white hover:bg-[#166fe5] dark:hover:bg-[#1559c7] hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02]"
-                >
-                  <FaFacebook className="text-xl" />
-                  <span>{t("Continue with Facebook")}</span>
-                </button>
-              )}
-            />
+            {isFacebookConfigured ? (
+              <FacebookLogin
+                appId={process.env.REACT_APP_FACEBOOK_APP_ID || ""}
+                onSuccess={handleFacebookLogin}
+                onFail={(error) => console.error('Facebook login error:', error)}
+                render={({ onClick }) => (
+                  <button
+                    onClick={onClick}
+                    className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-[#1877f2] dark:bg-[#166fe5] border-2 border-[#1877f2] dark:border-[#166fe5] rounded-xl font-semibold text-white hover:bg-[#166fe5] dark:hover:bg-[#1559c7] hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02]"
+                  >
+                    <FaFacebook className="text-xl" />
+                    <span>{t("Continue with Facebook")}</span>
+                  </button>
+                )}
+              />
+            ) : (
+              <button
+                onClick={() => showTost({ title: "Facebook login is not configured. Please use email/password login." })}
+                className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-gray-300 dark:bg-gray-700 border-2 border-gray-400 dark:border-gray-600 rounded-xl font-semibold text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-60"
+              >
+                <FaFacebook className="text-xl text-gray-400" />
+                <span>{t("Continue with Facebook")} (Not Configured)</span>
+              </button>
+            )}
           </div>
 
           {/* Divider */}
