@@ -9,10 +9,30 @@ import { MyContext } from "../Context/MyProvider";
 import axios from "axios";
 import { showTost } from "../showTost";
 import { useTranslation } from 'react-i18next';
-import { GoogleLogin, useGoogleLogin } from '@react-oauth/google';
 import { jwtDecode } from 'jwt-decode';
 import FacebookLogin from '@greatsumini/react-facebook-login';
 import AppleSignin from 'react-apple-signin-auth';
+
+// Google Signup Button Component - only uses hook when rendered
+const GoogleSignupButton = ({ onSuccess, onError, isLoading, t }) => {
+  const { useGoogleLogin } = require('@react-oauth/google');
+
+  const googleSignup = useGoogleLogin({
+    onSuccess: onSuccess,
+    onError: onError
+  });
+
+  return (
+    <button
+      onClick={() => googleSignup()}
+      disabled={isLoading}
+      className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-white dark:bg-gray-700 border-2 border-gray-200 dark:border-gray-600 rounded-xl font-semibold text-gray-700 dark:text-gray-200 hover:border-pink-500 dark:hover:border-pink-500 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed"
+    >
+      <FaGoogle className="text-xl text-red-500" />
+      <span>{t("Sign up with Google")}</span>
+    </button>
+  );
+};
 
 const Register = () => {
   const { t } = useTranslation();
@@ -60,48 +80,47 @@ const Register = () => {
     }
   }, []);
 
-  // Custom Google Signup with useGoogleLogin hook
-  const googleSignup = useGoogleLogin({
-    onSuccess: async (tokenResponse) => {
-      try {
-        setIsLoading(true);
-        // Get user info from Google
-        const userInfoResponse = await axios.get(
-          'https://www.googleapis.com/oauth2/v3/userinfo',
-          { headers: { Authorization: `Bearer ${tokenResponse.access_token}` } }
-        );
-        
-        const userData = userInfoResponse.data;
-        const googleData = {
-          email: userData.email,
-          name: userData.name,
-          profile_pic: userData.picture,
-          social_id: userData.sub,
-          auth_type: 'google'
-        };
+  // Google Signup Success Handler
+  const handleGoogleSignupSuccess = async (tokenResponse) => {
+    try {
+      setIsLoading(true);
+      // Get user info from Google
+      const userInfoResponse = await axios.get(
+        'https://www.googleapis.com/oauth2/v3/userinfo',
+        { headers: { Authorization: `Bearer ${tokenResponse.access_token}` } }
+      );
 
-        // Try to register with social_register.php
-        const response = await axios.post(`${basUrl}social_register.php`, googleData);
+      const userData = userInfoResponse.data;
+      const googleData = {
+        email: userData.email,
+        name: userData.name,
+        profile_pic: userData.picture,
+        social_id: userData.sub,
+        auth_type: 'google'
+      };
 
-        if (response.data.Result === "true") {
-          showTost({ title: response.data.ResponseMsg });
-          localStorage.setItem("UserId", response.data.UserLogin.id);
-          localStorage.setItem("Register_User", JSON.stringify(response.data.UserLogin));
-          setTimeout(() => navigation("/phonenumber"), 500);
-        } else {
-          showTost({ title: response.data.ResponseMsg });
-        }
-      } catch (error) {
-        console.error('Google signup error:', error);
-        showTost({ title: "Google signup failed. Please try again." });
-      } finally {
-        setIsLoading(false);
+      // Try to register with social_register.php
+      const response = await axios.post(`${basUrl}social_register.php`, googleData);
+
+      if (response.data.Result === "true") {
+        showTost({ title: response.data.ResponseMsg });
+        localStorage.setItem("UserId", response.data.UserLogin.id);
+        localStorage.setItem("Register_User", JSON.stringify(response.data.UserLogin));
+        setTimeout(() => navigation("/phonenumber"), 500);
+      } else {
+        showTost({ title: response.data.ResponseMsg });
       }
-    },
-    onError: () => {
-      showTost({ title: "Google signup cancelled" });
+    } catch (error) {
+      console.error('Google signup error:', error);
+      showTost({ title: "Google signup failed. Please try again." });
+    } finally {
+      setIsLoading(false);
     }
-  });
+  };
+
+  const handleGoogleSignupError = () => {
+    showTost({ title: "Google signup cancelled" });
+  };
 
   // Google OAuth Registration Handler (legacy for credential-based signup)
   const handleGoogleSignup = async (credentialResponse) => {
@@ -347,24 +366,21 @@ const Register = () => {
 
           {/* Social Registration Buttons - FIRST */}
           <div className="space-y-3 mb-6">
-            {/* Google Signup - Custom styled button */}
+            {/* Google Signup */}
             {isGoogleConfigured ? (
+              <GoogleSignupButton
+                onSuccess={handleGoogleSignupSuccess}
+                onError={handleGoogleSignupError}
+                isLoading={isLoading}
+                t={t}
+              />
+            ) : (
               <button
-                onClick={() => googleSignup()}
-                disabled={isLoading}
-                className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-white dark:bg-gray-700 border-2 border-gray-200 dark:border-gray-600 rounded-xl font-semibold text-gray-700 dark:text-gray-200 hover:border-pink-500 dark:hover:border-pink-500 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed"
+                onClick={() => showTost({ title: t("Google signup coming soon!") })}
+                className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-white dark:bg-gray-700 border-2 border-gray-200 dark:border-gray-600 rounded-xl font-semibold text-gray-700 dark:text-gray-200 hover:border-pink-500 dark:hover:border-pink-500 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02]"
               >
                 <FaGoogle className="text-xl text-red-500" />
                 <span>{t("Sign up with Google")}</span>
-              </button>
-            ) : (
-              <button
-                onClick={() => showTost({ title: "Google signup is not configured. Please contact support." })}
-                disabled={true}
-                className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-gray-400 dark:bg-gray-600 border-2 border-gray-400 dark:border-gray-600 rounded-xl font-semibold text-gray-100 dark:text-gray-300 opacity-60 cursor-not-allowed"
-              >
-                <FaGoogle className="text-xl text-gray-300 dark:text-gray-400" />
-                <span>{t("Sign up with Google")} (Not Configured)</span>
               </button>
             )}
 
@@ -385,18 +401,17 @@ const Register = () => {
                     className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-black dark:bg-gray-900 border-2 border-black dark:border-gray-800 rounded-xl font-semibold text-white hover:bg-gray-900 dark:hover:bg-gray-800 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02]"
                   >
                     <FaApple className="text-xl" />
-                    <span>{t("Continue with Apple")}</span>
+                    <span>{t("Sign up with Apple")}</span>
                   </button>
                 )}
               />
             ) : (
               <button
-                onClick={() => showTost({ title: "Apple signup is not configured. Please contact support." })}
-                disabled={true}
-                className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-gray-400 dark:bg-gray-600 border-2 border-gray-400 dark:border-gray-600 rounded-xl font-semibold text-gray-100 dark:text-gray-300 opacity-60 cursor-not-allowed"
+                onClick={() => showTost({ title: t("Apple signup coming soon!") })}
+                className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-black dark:bg-gray-900 border-2 border-black dark:border-gray-800 rounded-xl font-semibold text-white hover:bg-gray-900 dark:hover:bg-gray-800 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02]"
               >
-                <FaApple className="text-xl text-gray-300 dark:text-gray-400" />
-                <span>{t("Continue with Apple")} (Not Configured)</span>
+                <FaApple className="text-xl" />
+                <span>{t("Sign up with Apple")}</span>
               </button>
             )}
 
@@ -412,18 +427,17 @@ const Register = () => {
                     className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-[#1877f2] dark:bg-[#166fe5] border-2 border-[#1877f2] dark:border-[#166fe5] rounded-xl font-semibold text-white hover:bg-[#166fe5] dark:hover:bg-[#1559c7] hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02]"
                   >
                     <FaFacebook className="text-xl" />
-                    <span>{t("Continue with Facebook")}</span>
+                    <span>{t("Sign up with Facebook")}</span>
                   </button>
                 )}
               />
             ) : (
               <button
-                onClick={() => showTost({ title: "Facebook signup is not configured. Please contact support." })}
-                disabled={true}
-                className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-gray-400 dark:bg-gray-600 border-2 border-gray-400 dark:border-gray-600 rounded-xl font-semibold text-gray-100 dark:text-gray-300 opacity-60 cursor-not-allowed"
+                onClick={() => showTost({ title: t("Facebook signup coming soon!") })}
+                className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-[#1877f2] dark:bg-[#166fe5] border-2 border-[#1877f2] dark:border-[#166fe5] rounded-xl font-semibold text-white hover:bg-[#166fe5] dark:hover:bg-[#1559c7] hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02]"
               >
-                <FaFacebook className="text-xl text-gray-300 dark:text-gray-400" />
-                <span>{t("Continue with Facebook")} (Not Configured)</span>
+                <FaFacebook className="text-xl" />
+                <span>{t("Sign up with Facebook")}</span>
               </button>
             )}
           </div>
@@ -617,14 +631,14 @@ const Register = () => {
                   )}
                 </div>
                 <span className="text-sm text-gray-600 dark:text-gray-300 leading-tight">
-                  I agree to the{" "}
-                  <a href="#" className="text-pink-500 font-semibold hover:text-pink-600 dark:hover:text-pink-400">
-                    Terms of Service
-                  </a>{" "}
-                  and{" "}
-                  <a href="#" className="text-pink-500 font-semibold hover:text-pink-600 dark:hover:text-pink-400">
-                    Privacy Policy
-                  </a>
+                  {t('I agree to the')}{" "}
+                  <Link to="/terms" className="text-pink-500 font-semibold hover:text-pink-600 dark:hover:text-pink-400">
+                    {t('Terms of Service')}
+                  </Link>{" "}
+                  {t('and')}{" "}
+                  <Link to="/privacy" className="text-pink-500 font-semibold hover:text-pink-600 dark:hover:text-pink-400">
+                    {t('Privacy Policy')}
+                  </Link>
                 </span>
               </label>
               {errors.terms && (
@@ -667,13 +681,13 @@ const Register = () => {
 
           {/* Footer Links */}
           <div className="mt-6 flex items-center justify-center gap-4 text-xs text-gray-500 dark:text-gray-400">
-            <a href="#" className="hover:text-pink-500 dark:hover:text-pink-400 transition-colors">
-              Privacy Policy
-            </a>
+            <Link to="/privacy" className="hover:text-pink-500 dark:hover:text-pink-400 transition-colors">
+              {t('Privacy Policy')}
+            </Link>
             <span>•</span>
-            <a href="#" className="hover:text-pink-500 dark:hover:text-pink-400 transition-colors">
-              Terms of Service
-            </a>
+            <Link to="/terms" className="hover:text-pink-500 dark:hover:text-pink-400 transition-colors">
+              {t('Terms of Service')}
+            </Link>
           </div>
         </div>
       </div>

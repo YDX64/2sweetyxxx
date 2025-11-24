@@ -14,10 +14,30 @@ import { db } from "../Users_Chats/Firebase";
 import { showTost } from "../showTost";
 import { uid } from "uid";
 import { useTranslation } from 'react-i18next';
-import { GoogleLogin, useGoogleLogin } from '@react-oauth/google';
 import { jwtDecode } from 'jwt-decode';
 import FacebookLogin from '@greatsumini/react-facebook-login';
 import AppleSignin from 'react-apple-signin-auth';
+
+// Google Login Button Component - only uses hook when rendered
+const GoogleLoginButton = ({ onSuccess, onError, isLoading, t }) => {
+  const { useGoogleLogin } = require('@react-oauth/google');
+
+  const googleLogin = useGoogleLogin({
+    onSuccess: onSuccess,
+    onError: onError
+  });
+
+  return (
+    <button
+      onClick={() => googleLogin()}
+      disabled={isLoading}
+      className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-white dark:bg-gray-700 border-2 border-gray-200 dark:border-gray-600 rounded-xl font-semibold text-gray-700 dark:text-gray-200 hover:border-pink-500 dark:hover:border-pink-500 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed"
+    >
+      <FaGoogle className="text-xl text-red-500" />
+      <span>{t("Continue with Google")}</span>
+    </button>
+  );
+};
 
 const Login = () => {
   const { t } = useTranslation();
@@ -52,56 +72,55 @@ const Login = () => {
   const isFacebookConfigured = facebookAppId && facebookAppId !== 'your_facebook_app_id_here';
   const isAppleConfigured = appleClientId && appleClientId !== 'com.2sweety.web';
 
-  // Custom Google Login with useGoogleLogin hook
-  const googleLogin = useGoogleLogin({
-    onSuccess: async (tokenResponse) => {
-      try {
-        setIsLoading(true);
-        // Get user info from Google
-        const userInfoResponse = await axios.get(
-          'https://www.googleapis.com/oauth2/v3/userinfo',
-          { headers: { Authorization: `Bearer ${tokenResponse.access_token}` } }
-        );
-        
-        const userData = userInfoResponse.data;
-        const googleData = {
-          email: userData.email,
-          name: userData.name,
-          profile_pic: userData.picture,
-          social_id: userData.sub,
-          auth_type: 'google'
-        };
+  // Google Login Success Handler
+  const handleGoogleSuccess = async (tokenResponse) => {
+    try {
+      setIsLoading(true);
+      // Get user info from Google
+      const userInfoResponse = await axios.get(
+        'https://www.googleapis.com/oauth2/v3/userinfo',
+        { headers: { Authorization: `Bearer ${tokenResponse.access_token}` } }
+      );
 
-        // Try to login with social_login_v2.php
-        const response = await axios.post(`${basUrl}social_login_v2.php`, googleData);
+      const userData = userInfoResponse.data;
+      const googleData = {
+        email: userData.email,
+        name: userData.name,
+        profile_pic: userData.picture,
+        social_id: userData.sub,
+        auth_type: 'google'
+      };
 
-        if (response.data.Result === "true") {
-          showTost({ title: response.data.ResponseMsg });
-          UserAddHandler(response.data.UserLogin);
-          Data.setDemo(Data.demo + "123");
-          const token = response.data.token || uid(32);
-          localStorage.setItem("token", token);
-          localStorage.setItem("UserId", response.data.UserLogin.id);
-          localStorage.setItem("Register_User", JSON.stringify(response.data.UserLogin));
-          setTimeout(() => navigate("/"), 500);
-        } else if (response.data.ResponseCode === "201") {
-          showTost({ title: "Please complete your registration" });
-          localStorage.setItem("social_signup_data", JSON.stringify(googleData));
-          setTimeout(() => navigate("/register"), 1000);
-        } else {
-          showTost({ title: response.data.ResponseMsg });
-        }
-      } catch (error) {
-        console.error('Google login error:', error);
-        showTost({ title: "Google login failed. Please try again." });
-      } finally {
-        setIsLoading(false);
+      // Try to login with social_login_v2.php
+      const response = await axios.post(`${basUrl}social_login_v2.php`, googleData);
+
+      if (response.data.Result === "true") {
+        showTost({ title: response.data.ResponseMsg });
+        UserAddHandler(response.data.UserLogin);
+        Data.setDemo(Data.demo + "123");
+        const token = response.data.token || uid(32);
+        localStorage.setItem("token", token);
+        localStorage.setItem("UserId", response.data.UserLogin.id);
+        localStorage.setItem("Register_User", JSON.stringify(response.data.UserLogin));
+        setTimeout(() => navigate("/"), 500);
+      } else if (response.data.ResponseCode === "201") {
+        showTost({ title: "Please complete your registration" });
+        localStorage.setItem("social_signup_data", JSON.stringify(googleData));
+        setTimeout(() => navigate("/register"), 1000);
+      } else {
+        showTost({ title: response.data.ResponseMsg });
       }
-    },
-    onError: () => {
-      showTost({ title: "Google login cancelled" });
+    } catch (error) {
+      console.error('Google login error:', error);
+      showTost({ title: "Google login failed. Please try again." });
+    } finally {
+      setIsLoading(false);
     }
-  });
+  };
+
+  const handleGoogleLoginError = () => {
+    showTost({ title: "Google login cancelled" });
+  };
 
   // Google OAuth Login Handler (legacy for credential-based login)
   const handleGoogleLogin = async (credentialResponse) => {
@@ -443,23 +462,21 @@ const Login = () => {
 
           {/* Social Login Buttons - FIRST */}
           <div className="space-y-3 mb-6">
-            {/* Google Login - Custom styled button */}
+            {/* Google Login */}
             {isGoogleConfigured ? (
+              <GoogleLoginButton
+                onSuccess={handleGoogleSuccess}
+                onError={handleGoogleLoginError}
+                isLoading={isLoading}
+                t={t}
+              />
+            ) : (
               <button
-                onClick={() => googleLogin()}
-                disabled={isLoading}
-                className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-white dark:bg-gray-700 border-2 border-gray-200 dark:border-gray-600 rounded-xl font-semibold text-gray-700 dark:text-gray-200 hover:border-pink-500 dark:hover:border-pink-500 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed"
+                onClick={() => showTost({ title: t("Google login coming soon!") })}
+                className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-white dark:bg-gray-700 border-2 border-gray-200 dark:border-gray-600 rounded-xl font-semibold text-gray-700 dark:text-gray-200 hover:border-pink-500 dark:hover:border-pink-500 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02]"
               >
                 <FaGoogle className="text-xl text-red-500" />
                 <span>{t("Continue with Google")}</span>
-              </button>
-            ) : (
-              <button
-                onClick={() => showTost({ title: "Google login is not configured. Please use email/password login." })}
-                className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-gray-100 dark:bg-gray-700 border-2 border-gray-300 dark:border-gray-600 rounded-xl font-semibold text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-60"
-              >
-                <FaGoogle className="text-xl text-gray-400" />
-                <span>{t("Continue with Google")} (Not Configured)</span>
               </button>
             )}
 
@@ -486,11 +503,11 @@ const Login = () => {
               />
             ) : (
               <button
-                onClick={() => showTost({ title: "Apple login is not configured. Please use email/password login." })}
-                className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-gray-700 dark:bg-gray-800 border-2 border-gray-600 dark:border-gray-700 rounded-xl font-semibold text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-60"
+                onClick={() => showTost({ title: t("Apple login coming soon!") })}
+                className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-black dark:bg-gray-900 border-2 border-black dark:border-gray-800 rounded-xl font-semibold text-white hover:bg-gray-900 dark:hover:bg-gray-800 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02]"
               >
-                <FaApple className="text-xl text-gray-400" />
-                <span>{t("Continue with Apple")} (Not Configured)</span>
+                <FaApple className="text-xl" />
+                <span>{t("Continue with Apple")}</span>
               </button>
             )}
 
@@ -512,11 +529,11 @@ const Login = () => {
               />
             ) : (
               <button
-                onClick={() => showTost({ title: "Facebook login is not configured. Please use email/password login." })}
-                className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-gray-300 dark:bg-gray-700 border-2 border-gray-400 dark:border-gray-600 rounded-xl font-semibold text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-60"
+                onClick={() => showTost({ title: t("Facebook login coming soon!") })}
+                className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-[#1877f2] dark:bg-[#166fe5] border-2 border-[#1877f2] dark:border-[#166fe5] rounded-xl font-semibold text-white hover:bg-[#166fe5] dark:hover:bg-[#1559c7] hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02]"
               >
-                <FaFacebook className="text-xl text-gray-400" />
-                <span>{t("Continue with Facebook")} (Not Configured)</span>
+                <FaFacebook className="text-xl" />
+                <span>{t("Continue with Facebook")}</span>
               </button>
             )}
           </div>
@@ -634,13 +651,13 @@ const Login = () => {
 
           {/* Footer Links */}
           <div className="mt-6 flex items-center justify-center gap-4 text-xs text-gray-500 dark:text-gray-400">
-            <a href="#" className="hover:text-pink-500 dark:hover:text-pink-400 transition-colors">
-              Privacy Policy
-            </a>
+            <Link to="/privacy" className="hover:text-pink-500 dark:hover:text-pink-400 transition-colors">
+              {t('Privacy Policy')}
+            </Link>
             <span>•</span>
-            <a href="#" className="hover:text-pink-500 dark:hover:text-pink-400 transition-colors">
-              Terms of Service
-            </a>
+            <Link to="/terms" className="hover:text-pink-500 dark:hover:text-pink-400 transition-colors">
+              {t('Terms of Service')}
+            </Link>
           </div>
         </div>
 
