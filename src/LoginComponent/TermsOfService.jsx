@@ -40,7 +40,7 @@ const TermsOfService = () => {
           <div className="border-2 border-blue-200 dark:border-blue-800 bg-blue-50 dark:bg-gray-800/80 rounded-lg p-6">
             <div className="flex items-center space-x-2 mb-4">
               <FaCheckCircle className="w-6 h-6 text-blue-600 dark:text-blue-400" />
-              <h2 className="text-2xl font-bold">{t('Quick Overview')}</h2>
+              <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100">{t('Quick Overview')}</h2>
             </div>
             <p className="text-gray-700 dark:text-gray-300 mb-6">
               {t('These Terms of Service govern your use of 2Sweety, a dating platform that connects people worldwide. By creating an account, you agree to follow our community guidelines and use our service responsibly.')}
@@ -66,7 +66,7 @@ const TermsOfService = () => {
 
           {/* Section 1: Acceptance of Terms */}
           <div className="bg-white dark:bg-gray-800/80 dark:border-gray-600/50 border rounded-lg p-6">
-            <h2 className="text-2xl font-bold mb-4">{t('1. Acceptance of Terms')}</h2>
+            <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4">{t('1. Acceptance of Terms')}</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
               {t('By accessing or using 2Sweety, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service and our Privacy Policy. If you do not agree to these terms, please do not use our service.')}
             </p>
@@ -77,7 +77,7 @@ const TermsOfService = () => {
 
           {/* Section 2: Eligibility */}
           <div className="bg-white dark:bg-gray-800/80 dark:border-gray-600/50 border rounded-lg p-6">
-            <h2 className="text-2xl font-bold mb-4">{t('2. Eligibility Requirements')}</h2>
+            <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4">{t('2. Eligibility Requirements')}</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
               {t('To use 2Sweety, you must:')}
             </p>
@@ -101,7 +101,7 @@ const TermsOfService = () => {
 
           {/* Section 3: Account Rules */}
           <div className="bg-white dark:bg-gray-800/80 dark:border-gray-600/50 border rounded-lg p-6">
-            <h2 className="text-2xl font-bold mb-4">{t('3. Account Responsibilities')}</h2>
+            <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4">{t('3. Account Responsibilities')}</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
               {t('When creating and maintaining your account, you agree to:')}
             </p>
@@ -131,7 +131,7 @@ const TermsOfService = () => {
 
           {/* Section 4: Privacy and Data */}
           <div className="bg-white dark:bg-gray-800/80 dark:border-gray-600/50 border rounded-lg p-6">
-            <h2 className="text-2xl font-bold mb-4">{t('4. Privacy and Data Protection')}</h2>
+            <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4">{t('4. Privacy and Data Protection')}</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-6">
               {t('Your privacy is important to us. We collect and process your data in accordance with our Privacy Policy and applicable data protection laws.')}
             </p>
@@ -155,7 +155,7 @@ const TermsOfService = () => {
 
           {/* Section 5: Premium Services */}
           <div className="bg-white dark:bg-gray-800/80 dark:border-gray-600/50 border rounded-lg p-6">
-            <h2 className="text-2xl font-bold mb-4">{t('5. Premium Services and Payments')}</h2>
+            <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4">{t('5. Premium Services and Payments')}</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
               {t('2Sweety offers premium features through subscription plans. By purchasing a premium subscription:')}
             </p>
@@ -173,7 +173,7 @@ const TermsOfService = () => {
 
           {/* Section 6: Termination */}
           <div className="bg-white dark:bg-gray-800/80 dark:border-gray-600/50 border rounded-lg p-6">
-            <h2 className="text-2xl font-bold mb-4">{t('6. Account Termination')}</h2>
+            <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4">{t('6. Account Termination')}</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
               {t('Either party may terminate your account:')}
             </p>
@@ -199,7 +199,7 @@ const TermsOfService = () => {
 
           {/* Section 7: Liability */}
           <div className="bg-white dark:bg-gray-800/80 dark:border-gray-600/50 border rounded-lg p-6">
-            <h2 className="text-2xl font-bold mb-4">{t('7. Limitation of Liability')}</h2>
+            <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4">{t('7. Limitation of Liability')}</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
               {t('2Sweety provides the service as is and makes no warranties regarding:')}
             </p>
@@ -222,7 +222,7 @@ const TermsOfService = () => {
 
           {/* Section 8: Governing Law */}
           <div className="bg-white dark:bg-gray-800/80 dark:border-gray-600/50 border rounded-lg p-6">
-            <h2 className="text-2xl font-bold mb-4">{t('8. Governing Law and Disputes')}</h2>
+            <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4">{t('8. Governing Law and Disputes')}</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-6">
               {t('These terms are governed by the laws of Sweden. Any disputes will be resolved in the courts of Stockholm, Sweden.')}
             </p>
@@ -239,7 +239,7 @@ const TermsOfService = () => {
 
           {/* Section 9: Changes to Terms */}
           <div className="bg-white dark:bg-gray-800/80 dark:border-gray-600/50 border rounded-lg p-6">
-            <h2 className="text-2xl font-bold mb-4">{t('9. Changes to These Terms')}</h2>
+            <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4">{t('9. Changes to These Terms')}</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
               {t('We may update these Terms of Service to reflect changes in our service or legal requirements. We will notify users of significant changes through the app or email.')}
             </p>

@@ -40,7 +40,7 @@ const PrivacyPolicy = () => {
           <div className="border-2 border-green-200 dark:border-green-800 bg-green-50 dark:bg-gray-800/80 rounded-lg p-6">
             <div className="flex items-center space-x-2 mb-4">
               <FaShieldAlt className="w-6 h-6 text-green-600 dark:text-green-400" />
-              <h2 className="text-2xl font-bold">{t('Privacy at a Glance')}</h2>
+              <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100">{t('Privacy at a Glance')}</h2>
             </div>
             <p className="text-gray-700 dark:text-gray-300 mb-6">
               {t('At 2Sweety, we are committed to protecting your privacy and ensuring the security of your personal data. This policy complies with GDPR and other international privacy regulations.')}
@@ -71,7 +71,7 @@ const PrivacyPolicy = () => {
 
           {/* Information We Collect */}
           <div className="bg-white dark:bg-gray-800/80 dark:border-gray-600/50 border rounded-lg p-6">
-            <h2 className="text-2xl font-bold mb-4">{t('1. Information We Collect')}</h2>
+            <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4">{t('1. Information We Collect')}</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-6">
               {t('We collect information to provide you with the best dating experience while maintaining your privacy and security.')}
             </p>
@@ -112,7 +112,7 @@ const PrivacyPolicy = () => {
 
           {/* How We Use Your Information */}
           <div className="bg-white dark:bg-gray-800/80 dark:border-gray-600/50 border rounded-lg p-6">
-            <h2 className="text-2xl font-bold mb-4">{t('2. How We Use Your Information')}</h2>
+            <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4">{t('2. How We Use Your Information')}</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-6">
               {t('We use your information for the following purposes:')}
             </p>
@@ -158,7 +158,7 @@ const PrivacyPolicy = () => {
 
           {/* Information Sharing */}
           <div className="bg-white dark:bg-gray-800/80 dark:border-gray-600/50 border rounded-lg p-6">
-            <h2 className="text-2xl font-bold mb-4">{t('3. Information Sharing and Disclosure')}</h2>
+            <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4">{t('3. Information Sharing and Disclosure')}</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-6">
               {t('We never sell your personal information. We may share your information only in the following limited circumstances:')}
             </p>
@@ -178,7 +178,7 @@ const PrivacyPolicy = () => {
 
           {/* Data Security */}
           <div className="bg-white dark:bg-gray-800/80 dark:border-gray-600/50 border rounded-lg p-6">
-            <h2 className="text-2xl font-bold mb-4">{t('4. Data Security Measures')}</h2>
+            <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4">{t('4. Data Security Measures')}</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-6">
               {t('We implement comprehensive security measures to protect your data:')}
             </p>
@@ -207,7 +207,7 @@ const PrivacyPolicy = () => {
 
           {/* Your Rights */}
           <div className="bg-white dark:bg-gray-800/80 dark:border-gray-600/50 border rounded-lg p-6">
-            <h2 className="text-2xl font-bold mb-4">{t('5. Your Privacy Rights')}</h2>
+            <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4">{t('5. Your Privacy Rights')}</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-6">
               {t('Under GDPR, you have the following rights regarding your personal data:')}
             </p>
@@ -254,7 +254,7 @@ const PrivacyPolicy = () => {
 
           {/* Data Retention */}
           <div className="bg-white dark:bg-gray-800/80 dark:border-gray-600/50 border rounded-lg p-6">
-            <h2 className="text-2xl font-bold mb-4">{t('6. Data Retention')}</h2>
+            <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4">{t('6. Data Retention')}</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-6">
               {t('We retain your data only as long as necessary for the purposes outlined in this policy:')}
             </p>
@@ -296,7 +296,7 @@ const PrivacyPolicy = () => {
 
           {/* Cookies */}
           <div className="bg-white dark:bg-gray-800/80 dark:border-gray-600/50 border rounded-lg p-6">
-            <h2 className="text-2xl font-bold mb-4">{t('7. Cookies and Tracking')}</h2>
+            <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4">{t('7. Cookies and Tracking')}</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-6">
               {t('We use cookies and similar technologies to improve your experience:')}
             </p>
