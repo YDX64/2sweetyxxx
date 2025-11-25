@@ -82,14 +82,14 @@
         "title": "EU"
       },
       "privacy": {
-        "description": "Your privacy is our priority. Learn how we collect, use, and protect your personal information.",
-        "lastUpdated": "December 2024",
-        "title": "Privacy"
+        "description": "Yksityisyytesi on prioriteettimme. Opi, miten keräämme, käytämme ja suojaamme henkilötietojasi.",
+        "lastUpdated": "Joulukuu 2024",
+        "title": "Tietosuoja"
       },
       "terms": {
-        "description": "Please read these terms carefully before using 2Sweety.",
-        "lastUpdated": "December 2024",
-        "title": "Legal"
+        "description": "Lue nämä ehdot huolellisesti ennen kuin käytät 2Sweetyä.",
+        "lastUpdated": "Joulukuu 2024",
+        "title": "Oikeudelliset tiedot"
       }
     },
     "preview": "Preview",
