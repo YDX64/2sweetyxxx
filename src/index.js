@@ -17,10 +17,12 @@ document.body.appendChild(portalRoot);
 
 const client = AgoraRTC.createClient({ mode: "rtc", codec: "vp8" });
 
-// Conditional Google OAuth Provider - only initialize if client ID is configured
+// Google OAuth Configuration
+const GOOGLE_CLIENT_ID = '630419143615-bjtr3e3bfrjtr65qgsb4sgu6cle4t2ar.apps.googleusercontent.com';
+
 const AppWithProviders = () => {
-  const googleClientId = process.env.REACT_APP_GOOGLE_CLIENT_ID;
-  const hasValidGoogleClientId = googleClientId && googleClientId !== 'your_google_client_id_here.apps.googleusercontent.com';
+  const googleClientId = GOOGLE_CLIENT_ID;
+  const hasValidGoogleClientId = true; // Google is configured
 
   const app = (
     <I18nextProvider i18n={i18n}>

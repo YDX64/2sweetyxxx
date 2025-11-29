@@ -57,12 +57,12 @@ const Register = () => {
     terms: ""
   });
 
-  // Check if social login credentials are configured
-  const googleClientId = process.env.REACT_APP_GOOGLE_CLIENT_ID;
+  // Social Login Configuration - hardcoded for reliability
+  const googleClientId = '630419143615-bjtr3e3bfrjtr65qgsb4sgu6cle4t2ar.apps.googleusercontent.com';
   const facebookAppId = process.env.REACT_APP_FACEBOOK_APP_ID;
   const appleClientId = process.env.REACT_APP_APPLE_CLIENT_ID;
 
-  const isGoogleConfigured = googleClientId && googleClientId !== 'your_google_client_id_here.apps.googleusercontent.com';
+  const isGoogleConfigured = true; // Google is configured
   const isFacebookConfigured = facebookAppId && facebookAppId !== 'your_facebook_app_id_here';
   const isAppleConfigured = appleClientId && appleClientId !== 'com.2sweety.web';
 
