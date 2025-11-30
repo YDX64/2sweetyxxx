@@ -35,7 +35,7 @@ const Terms_Conditions = () => {
                     <div className="mt-[90px]">
                         {
                             list.map((item, index) => {
-                                if (item.title.toLowerCase() === Title) {
+                                if (item.title.toLowerCase() === Title || item.title.toLowerCase().startsWith(Title)) {
                                     return <div key={index} className="">
                                         <div className="bg-white mx-[20px] p-[16px] my-[30px] rounded-[0.56rem]">
                                             <h3 className='mb-0'>{item.title}</h3>
