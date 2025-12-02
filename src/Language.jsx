@@ -470,6 +470,20 @@ const resources = {
       "Response within 72 hours": "Response within 72 hours",
       "GDPR Compliant": "GDPR Compliant",
       "Multi-language support": "Multi-language support",
+
+      // About / Contact page
+      "Welcome to 2Sweety!": "Welcome to 2Sweety!",
+      "What Makes Us Unique?": "What Makes Us Unique?",
+      "Join Our Growing Community": "Join Our Growing Community",
+      "Countries": "Countries",
+      "Messages Sent": "Messages Sent",
+      "Ready to Find Your Match?": "Ready to Find Your Match?",
+      "Contact Us": "Contact Us",
+      "Get in Touch": "Get in Touch",
+      "Customer Support": "Customer Support",
+      "Email us": "Email us",
+      "We typically respond within 24 hours": "We typically respond within 24 hours",
+      "Partnerships": "Partnerships",
     }
   },
   sv: {
@@ -934,6 +948,22 @@ const resources = {
       "GDPR Compliant": "GDPR Compliant",
       "Multi-language support": "Multi-language support",
 
+      // Om / Kontakt & Footer
+      "We Accept": "Vi accepterar",
+      "Secure payments": "Säkra betalningar",
+      "Welcome to 2Sweety!": "Välkommen till 2Sweety!",
+      "What Makes Us Unique?": "Vad gör oss unika?",
+      "Join Our Growing Community": "Gå med i vår växande gemenskap",
+      "Countries": "Länder",
+      "Messages Sent": "Skickade meddelanden",
+      "Ready to Find Your Match?": "Redo att hitta din match?",
+      "Contact Us": "Kontakta oss",
+      "Get in Touch": "Kom i kontakt",
+      "Customer Support": "Kundsupport",
+      "Email us": "Mejla oss",
+      "We typically respond within 24 hours": "Vi svarar vanligtvis inom 24 timmar",
+      "Partnerships": "Partnerskap",
+
     }
   },
   no: {
@@ -1203,7 +1233,23 @@ const resources = {
       "Mobile number is required": "Mobilnummer er påkrevd",
       "OTP is required": "OTP er påkrevd",
 
-      "Please read these terms carefully before using 2Sweety. By using our service, you agree to these terms.": "Vennligst les disse vilkårene nøye før du bruker 2Sweety. Ved å bruke tjenesten vår godtar du disse vilkårene.",
+      // Om / Kontakt & Footer
+      "We Accept": "Vi aksepterer",
+      "Secure payments": "Sikre betalinger",
+      "Welcome to 2Sweety!": "Velkommen til 2Sweety!",
+      "What Makes Us Unique?": "Hva gjør oss unike?",
+      "Join Our Growing Community": "Bli med i vårt voksende fellesskap",
+      "Countries": "Land",
+      "Messages Sent": "Sendte meldinger",
+      "Ready to Find Your Match?": "Klar til å finne din match?",
+      "Contact Us": "Kontakt oss",
+      "Get in Touch": "Ta kontakt",
+      "Customer Support": "Kundeservice",
+      "Email us": "Send oss e-post",
+      "We typically respond within 24 hours": "Vi svarer vanligvis innen 24 timer",
+      "Partnerships": "Partnerskap",
+
+      "Please read these terms carefully before using 2Sweety. By using our service, you agree to these terms.":
       "Your privacy is our priority. Learn how we collect, use, and protect your personal information.": "Ditt personvern er vår prioritet. Lær hvordan vi samler inn, bruker og beskytter dine personopplysninger.",
       "Last updated: December 2024": "Sist oppdatert: Desember 2024",
       "Last updated": "Sist oppdatert",

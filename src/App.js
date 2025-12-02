@@ -48,6 +48,7 @@ import PaymentRespons from "./PaymentMethod/PaymentRespons";
 import PrivacyPolicy from "./LoginComponent/PrivacyPolicy";
 import TermsOfService from "./LoginComponent/TermsOfService";
 import AboutUs from "./LoginComponent/AboutUs";
+import ContactUs from "./LoginComponent/ContactUs";
 import SharedHeader from "./components/SharedHeader";
 
 const App = () => {
@@ -110,6 +111,8 @@ const App = () => {
               <Route path="/terms" element={<TermsOfService />} />
               <Route path="/about" element={<AboutUs />} />
               <Route path="/page/about" element={<AboutUs />} />
+              <Route path="/contact" element={<ContactUs />} />
+              <Route path="/page/contact" element={<ContactUs />} />
               <Route path="*" element={<NotFound />} />
               </Routes>
             </div>
