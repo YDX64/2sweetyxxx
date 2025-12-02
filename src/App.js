@@ -47,6 +47,7 @@ import Validate from "./MobilComponent/Validate";
 import PaymentRespons from "./PaymentMethod/PaymentRespons";
 import PrivacyPolicy from "./LoginComponent/PrivacyPolicy";
 import TermsOfService from "./LoginComponent/TermsOfService";
+import AboutUs from "./LoginComponent/AboutUs";
 import SharedHeader from "./components/SharedHeader";
 
 const App = () => {
@@ -107,6 +108,8 @@ const App = () => {
               <Route path="/notification" element={<NotificationShow />} />
               <Route path="/privacy" element={<PrivacyPolicy />} />
               <Route path="/terms" element={<TermsOfService />} />
+              <Route path="/about" element={<AboutUs />} />
+              <Route path="/page/about" element={<AboutUs />} />
               <Route path="*" element={<NotFound />} />
               </Routes>
             </div>
