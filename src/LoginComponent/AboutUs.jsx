@@ -34,7 +34,7 @@ const AboutUs = () => {
 
         <div className="max-w-4xl mx-auto space-y-8">
           {/* Welcome Section */}
-          <div className="border-2 border-pink-200 dark:border-pink-800 bg-gradient-to-br from-pink-50 to-red-50 dark:bg-gray-800/80 rounded-xl p-8 shadow-lg">
+          <div className="border-2 border-pink-200 dark:border-pink-800 bg-gradient-to-br from-pink-50 to-red-50 dark:from-gray-800 dark:to-gray-700 rounded-xl p-8 shadow-lg">
             <div className="flex items-center space-x-3 mb-6">
               <FaHeart className="w-8 h-8 text-pink-500 dark:text-pink-400" />
               <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-100">{t('Welcome to 2Sweety!')}</h2>
@@ -64,7 +64,7 @@ const AboutUs = () => {
             
             <div className="grid md:grid-cols-2 gap-6 mt-8">
               {/* Safety First */}
-              <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 rounded-xl p-6 border border-blue-200 dark:border-blue-700">
+              <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-gray-700 dark:to-gray-600 rounded-xl p-6 border border-blue-200 dark:border-blue-800">
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="bg-blue-500 p-3 rounded-full">
                     <FaShieldAlt className="w-6 h-6 text-white" />
@@ -77,7 +77,7 @@ const AboutUs = () => {
               </div>
 
               {/* Smart Matching */}
-              <div className="bg-gradient-to-br from-pink-50 to-pink-100 dark:from-pink-900/20 dark:to-pink-800/20 rounded-xl p-6 border border-pink-200 dark:border-pink-700">
+              <div className="bg-gradient-to-br from-pink-50 to-pink-100 dark:from-gray-700 dark:to-gray-600 rounded-xl p-6 border border-pink-200 dark:border-pink-800">
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="bg-pink-500 p-3 rounded-full">
                     <FaHeart className="w-6 h-6 text-white" />
@@ -90,7 +90,7 @@ const AboutUs = () => {
               </div>
 
               {/* Global Community */}
-              <div className="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 rounded-xl p-6 border border-green-200 dark:border-green-700">
+              <div className="bg-gradient-to-br from-green-50 to-green-100 dark:from-gray-700 dark:to-gray-600 rounded-xl p-6 border border-green-200 dark:border-green-800">
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="bg-green-500 p-3 rounded-full">
                     <FaGlobe className="w-6 h-6 text-white" />
@@ -103,7 +103,7 @@ const AboutUs = () => {
               </div>
 
               {/* Video & Chat */}
-              <div className="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 rounded-xl p-6 border border-purple-200 dark:border-purple-700">
+              <div className="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-gray-700 dark:to-gray-600 rounded-xl p-6 border border-purple-200 dark:border-purple-800">
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="bg-purple-500 p-3 rounded-full">
                     <FaVideo className="w-6 h-6 text-white" />
