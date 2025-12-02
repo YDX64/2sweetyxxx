@@ -29,7 +29,7 @@ const ContactUs = () => {
 
           <div className="bg-white dark:bg-gray-800/80 rounded-xl p-6 border dark:border-gray-700 text-center">
             <FaEnvelope className="w-8 h-8 text-blue-500 mx-auto mb-3" />
-            <h3 className="font-bold mb-1">Legal</h3>
+            <h3 className="font-bold mb-1">{t('Legal')}</h3>
             <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">{t('Email us')}</p>
             <a href="mailto:legal@2sweety.com" className="text-primary-600 hover:underline">legal@2sweety.com</a>
           </div>

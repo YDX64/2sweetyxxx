@@ -14,6 +14,7 @@ import {
     FaUndo,
     FaBolt
 } from 'react-icons/fa';
+import SharedFooter from "../components/SharedFooter";
 
 const Home = () => {
     const { setValidateId } = useContext(MyContext);
@@ -524,37 +525,7 @@ const Home = () => {
             </section>
 
             {/* Footer */}
-            <footer className="bg-gray-900 text-white py-12">
-                <div className="container mx-auto px-4">
-                    <div className="grid md:grid-cols-4 gap-8 mb-8">
-                        <div>
-                            <img src="/logo.png" alt="2Sweety" className="h-10 mb-4" />
-                            <p className="text-gray-400">{t('Find your perfect match')}</p>
-                        </div>
-                        <div>
-                            <h4 className="font-bold mb-4">{t('Company')}</h4>
-                            <ul className="space-y-2 text-gray-400">
-                                <li><Link to="/page/about" className="hover:text-white no-underline">{t('About Us')}</Link></li>
-                                <li><Link to="/page/contact" className="hover:text-white no-underline">{t('Contact')}</Link></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 className="font-bold mb-4">{t('Legal')}</h4>
-                            <ul className="space-y-2 text-gray-400">
-                                <li><Link to="/page/privacy" className="hover:text-white no-underline">{t('Privacy Policy')}</Link></li>
-                                <li><Link to="/page/terms" className="hover:text-white no-underline">{t('Terms of Service')}</Link></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 className="font-bold mb-4">{t('Follow Us')}</h4>
-                            <p className="text-gray-400">{t('Stay connected')}</p>
-                        </div>
-                    </div>
-                    <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-                        <p>&copy; 2024 2Sweety. {t('All rights reserved')}.</p>
-                    </div>
-                </div>
-            </footer>
+            <SharedFooter />
         </div>
     );
 };

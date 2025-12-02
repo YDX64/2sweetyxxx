@@ -57,10 +57,10 @@ const SharedFooter = () => {
             <h4 className="font-bold mb-4">{t('We Accept')}</h4>
             <div className="flex flex-wrap gap-3">
               {/* Use static assets to ensure visibility across themes */}
-              <img src="/payments/visa.svg" alt="Visa" className="bg-white rounded-md p-2 h-10 w-14 object-contain" />
-              <img src="/payments/mastercard.svg" alt="Mastercard" className="bg-white rounded-md p-2 h-10 w-14 object-contain" />
-              <img src="/payments/applepay.svg" alt="Apple Pay" className="bg-white rounded-md p-2 h-10 w-14 object-contain" />
-              <img src="/payments/googlepay.svg" alt="Google Pay" className="bg-white rounded-md p-2 h-10 w-14 object-contain" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" alt="Visa" className="bg-white rounded-md p-2 h-10 w-14 object-contain" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" className="bg-white rounded-md p-2 h-10 w-14 object-contain" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Apple_Pay_logo.svg" alt="Apple Pay" className="bg-white rounded-md p-2 h-10 w-14 object-contain" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Pay_Logo_(2020).svg" alt="Google Pay" className="bg-white rounded-md p-2 h-10 w-14 object-contain" />
             </div>
             <p className="text-gray-500 text-xs mt-3">{t('Secure payments')}</p>
           </div>
