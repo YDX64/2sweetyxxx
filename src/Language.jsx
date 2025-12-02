@@ -1249,7 +1249,7 @@ const resources = {
       "We typically respond within 24 hours": "Vi svarer vanligvis innen 24 timer",
       "Partnerships": "Partnerskap",
 
-      "Please read these terms carefully before using 2Sweety. By using our service, you agree to these terms.":
+      "Please read these terms carefully before using 2Sweety. By using our service, you agree to these terms.": "Vennligst les disse vilkårene nøye før du bruker 2Sweety. Ved å bruke vår tjeneste godtar du disse vilkårene.",
       "Your privacy is our priority. Learn how we collect, use, and protect your personal information.": "Ditt personvern er vår prioritet. Lær hvordan vi samler inn, bruker og beskytter dine personopplysninger.",
       "Last updated: December 2024": "Sist oppdatert: Desember 2024",
       "Last updated": "Sist oppdatert",
