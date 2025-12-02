@@ -117,6 +117,10 @@ const App = () => {
               <Route path="/page/contact" element={<ContactUs />} />
               <Route path="/page/contact-us" element={<ContactUs />} />
               <Route path="/page/kontakt" element={<ContactUs />} />
+              <Route path="/page/terms" element={<TermsOfService />} />
+              <Route path="/page/terms-of-service" element={<TermsOfService />} />
+              <Route path="/page/privacy" element={<PrivacyPolicy />} />
+              <Route path="/page/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="*" element={<NotFound />} />
               </Routes>
             </div>
