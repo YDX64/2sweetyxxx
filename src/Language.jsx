@@ -2372,6 +2372,34 @@ const resources = {
       "GDPR Compliant": "GDPR Compliant",
       "Multi-language support": "Multi-language support",
 
+      // About Us Page
+      "We Accept": "Vi accepterer",
+      "Secure payments": "Sikre betalinger",
+      "Welcome to 2Sweety!": "Velkommen til 2Sweety!",
+      "2Sweety is a modern dating platform created to help people find meaningful connections and relationships. We believe that love is everywhere - you just need the right tools to find it.": "2Sweety er en moderne datingplatform skabt for at hjælpe mennesker med at finde meningsfulde forbindelser og forhold. Vi tror på, at kærlighed er overalt - du skal bare have de rigtige værktøjer til at finde den.",
+      "Our Vision": "Vores Vision",
+      "We strive to create a safe, inclusive, and fun environment where people can meet, chat, and build relationships. Whether you are looking for friendship, dating, or your soulmate - 2Sweety is here for you.": "Vi stræber efter at skabe et sikkert, inkluderende og sjovt miljø, hvor mennesker kan mødes, chatte og opbygge relationer. Uanset om du søger venskab, dating eller din sjælefrænde - 2Sweety er her for dig.",
+      "What Makes Us Unique?": "Hvad Gør Os Unikke?",
+      "Safety First": "Sikkerhed Først",
+      "We prioritize your privacy and security with advanced verification systems.": "Vi prioriterer dit privatliv og sikkerhed med avancerede verifikationssystemer.",
+      "Our algorithm helps you find people who share your interests and values.": "Vores algoritme hjælper dig med at finde mennesker, der deler dine interesser og værdier.",
+      "Global Community": "Globalt Fællesskab",
+      "Meet people from around the world or focus on your local area.": "Mød mennesker fra hele verden eller fokuser på dit lokale område.",
+      "Video & Chat": "Video & Chat",
+      "Communicate your way with video and voice calls.": "Kommuniker på din måde med video- og stemmeopkald.",
+      "Join Our Growing Community": "Bliv en del af vores voksende fællesskab",
+      "Countries": "Lande",
+      "Messages Sent": "Beskeder sendt",
+      "Ready to Find Your Match?": "Klar til at finde dit match?",
+      "Join thousands of people who have already found their perfect match on 2Sweety.": "Slutt deg til tusindvis af mennesker, der allerede har fundet deres perfekte match på 2Sweety.",
+
+      // Contact Us Page
+      "Contact Us": "Kontakt Os",
+      "Get in Touch": "Kom i kontakt",
+      "Customer Support": "Kundesupport",
+      "Email us": "Send os en e-mail",
+      "We typically respond within 24 hours": "Vi svarer typisk inden for 24 timer",
+      "Partnerships": "Partnerskaber"
     }
   },
   tr: {
