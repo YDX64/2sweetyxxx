@@ -96,6 +96,18 @@ const App = () => {
               <Route path="/buyCoin" element={<BuyCoin />} />
               <Route path="/history" element={<History />} />
               <Route path="/blockUser" element={<BlockUser />} />
+              {/* Specific /page/* routes must come BEFORE the generic /page/:title */}
+              <Route path="/page/about" element={<AboutUs />} />
+              <Route path="/page/about-us" element={<AboutUs />} />
+              <Route path="/page/om-oss" element={<AboutUs />} />
+              <Route path="/page/contact" element={<ContactUs />} />
+              <Route path="/page/contact-us" element={<ContactUs />} />
+              <Route path="/page/kontakt" element={<ContactUs />} />
+              <Route path="/page/terms" element={<TermsOfService />} />
+              <Route path="/page/terms-of-service" element={<TermsOfService />} />
+              <Route path="/page/privacy" element={<PrivacyPolicy />} />
+              <Route path="/page/privacy-policy" element={<PrivacyPolicy />} />
+              {/* Generic page route - catches all other /page/* URLs */}
               <Route path="/page/:title" element={<Pages />} />
               <Route path="/razorpay" element={<Razorpay />} />
               <Route path="/paypal" element={<PayPal />} />
@@ -110,17 +122,7 @@ const App = () => {
               <Route path="/privacy" element={<PrivacyPolicy />} />
               <Route path="/terms" element={<TermsOfService />} />
               <Route path="/about" element={<AboutUs />} />
-              <Route path="/page/about" element={<AboutUs />} />
-              <Route path="/page/about-us" element={<AboutUs />} />
-              <Route path="/page/om-oss" element={<AboutUs />} />
               <Route path="/contact" element={<ContactUs />} />
-              <Route path="/page/contact" element={<ContactUs />} />
-              <Route path="/page/contact-us" element={<ContactUs />} />
-              <Route path="/page/kontakt" element={<ContactUs />} />
-              <Route path="/page/terms" element={<TermsOfService />} />
-              <Route path="/page/terms-of-service" element={<TermsOfService />} />
-              <Route path="/page/privacy" element={<PrivacyPolicy />} />
-              <Route path="/page/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="*" element={<NotFound />} />
               </Routes>
             </div>
