@@ -2,6 +2,7 @@
 /* jshint ignore:start */
 import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import '@testing-library/jest-dom';
 import { I18nextProvider } from 'react-i18next';
 import LanguageSelector from '../LanguageSelector';
 import i18n from '../../Language';
@@ -23,8 +24,8 @@ const renderWithProviders = (component) => {
 
 describe('LanguageSelector Component - Language Switching Tests', () => {
   beforeEach(() => {
-    localStorage.clear();
-    sessionStorage.clear();
+    if (typeof localStorage !== 'undefined' && localStorage) localStorage.clear();
+    if (typeof sessionStorage !== 'undefined' && sessionStorage) sessionStorage.clear();
     jest.clearAllMocks();
     document.documentElement.dir = 'ltr';
     document.documentElement.lang = 'en';
@@ -34,7 +35,7 @@ describe('LanguageSelector Component - Language Switching Tests', () => {
     test('TC-1.1: Should display all 19 languages', () => {
       renderWithProviders(<LanguageSelector />);
 
-      const languageButton = screen.getByRole('button', { name: /English|🇬🇧/i });
+      const languageButton = screen.getByRole('button', { name: /Select language/i });
       fireEvent.click(languageButton);
 
       const expectedLanguages = [
@@ -51,7 +52,7 @@ describe('LanguageSelector Component - Language Switching Tests', () => {
     test('TC-1.1: Each language should have correct flag emoji', () => {
       renderWithProviders(<LanguageSelector />);
 
-      const languageButton = screen.getByRole('button');
+      const languageButton = screen.getByRole('button', { name: /Select language/i });
       fireEvent.click(languageButton);
 
       const expectedFlags = ['🇬🇧', '🇸🇪', '🇳🇴', '🇫🇮', '🇩🇰', '🇹🇷', '🇸🇦',
@@ -66,7 +67,7 @@ describe('LanguageSelector Component - Language Switching Tests', () => {
     test('TC-1.2: Should change language and trigger page reload', () => {
       renderWithProviders(<LanguageSelector />);
 
-      fireEvent.click(screen.getByRole('button'));
+      fireEvent.click(screen.getByRole('button', { name: /Select language/i }));
       fireEvent.click(screen.getByText('Español'));
 
       expect(localStorage.getItem('i18nextLng')).toBe('es');
@@ -78,7 +79,8 @@ describe('LanguageSelector Component - Language Switching Tests', () => {
       const { unmount } = renderWithProviders(<LanguageSelector />);
 
       // Test German
-      fireEvent.click(screen.getByRole('button'));
+      const languageButton = screen.getByRole('button', { name: /Select language/i });
+      fireEvent.click(languageButton);
       fireEvent.click(screen.getByText('Deutsch'));
       expect(localStorage.getItem('i18nextLng')).toBe('de');
 
@@ -87,7 +89,7 @@ describe('LanguageSelector Component - Language Switching Tests', () => {
 
       // Test Japanese
       renderWithProviders(<LanguageSelector />);
-      fireEvent.click(screen.getByRole('button'));
+      fireEvent.click(screen.getByRole('button', { name: /Select language/i }));
       fireEvent.click(screen.getByText('日本語'));
       expect(localStorage.getItem('i18nextLng')).toBe('ja');
     });
@@ -96,7 +98,7 @@ describe('LanguageSelector Component - Language Switching Tests', () => {
       i18n.changeLanguage('de');
       renderWithProviders(<LanguageSelector />);
 
-      fireEvent.click(screen.getByRole('button'));
+      fireEvent.click(screen.getByRole('button', { name: /Select language/i }));
 
       const germanOption = screen.getByText('Deutsch').closest('button');
       expect(germanOption).toHaveClass('bg-pink-50');
@@ -107,7 +109,7 @@ describe('LanguageSelector Component - Language Switching Tests', () => {
       i18n.changeLanguage('fr');
       renderWithProviders(<LanguageSelector />);
 
-      fireEvent.click(screen.getByRole('button'));
+      fireEvent.click(screen.getByRole('button', { name: /Select language/i }));
 
       const frenchOption = screen.getByText('Français').closest('button');
       const checkmark = frenchOption.querySelector('span.ml-auto');
@@ -118,7 +120,7 @@ describe('LanguageSelector Component - Language Switching Tests', () => {
       i18n.changeLanguage('it');
       renderWithProviders(<LanguageSelector />);
 
-      fireEvent.click(screen.getByRole('button'));
+      fireEvent.click(screen.getByRole('button', { name: /Select language/i }));
 
       const highlightedOptions = document.querySelectorAll('.bg-pink-50');
       expect(highlightedOptions.length).toBe(1);
@@ -129,7 +131,7 @@ describe('LanguageSelector Component - Language Switching Tests', () => {
     test('TC-2.1: Should persist language in localStorage', () => {
       renderWithProviders(<LanguageSelector />);
 
-      fireEvent.click(screen.getByRole('button'));
+      fireEvent.click(screen.getByRole('button', { name: /Select language/i }));
       fireEvent.click(screen.getByText('Italiano'));
 
       expect(localStorage.getItem('i18nextLng')).toBe('it');
@@ -157,7 +159,7 @@ describe('LanguageSelector Component - Language Switching Tests', () => {
     test('TC-2.4: Should sync localStorage and sessionStorage', () => {
       renderWithProviders(<LanguageSelector />);
 
-      fireEvent.click(screen.getByRole('button'));
+      fireEvent.click(screen.getByRole('button', { name: /Select language/i }));
       fireEvent.click(screen.getByText('日本語'));
 
       expect(localStorage.getItem('i18nextLng')).toBe('ja');
@@ -189,7 +191,7 @@ describe('LanguageSelector Component - Language Switching Tests', () => {
         sessionStorage.clear();
 
         const { unmount } = renderWithProviders(<LanguageSelector />);
-        fireEvent.click(screen.getByRole('button'));
+        fireEvent.click(screen.getByRole('button', { name: /Select language/i }));
         fireEvent.click(screen.getByText(languageNames[code]));
 
         expect(localStorage.getItem('i18nextLng')).toBe(code);
@@ -281,7 +283,7 @@ describe('LanguageSelector Component - Language Switching Tests', () => {
       expect(screen.queryByText('Português')).not.toBeInTheDocument();
 
       // Open dropdown
-      fireEvent.click(screen.getByRole('button'));
+      fireEvent.click(screen.getByRole('button', { name: /Select language/i }));
       expect(screen.getByText('Português')).toBeInTheDocument();
     });
 
@@ -289,7 +291,7 @@ describe('LanguageSelector Component - Language Switching Tests', () => {
       renderWithProviders(<LanguageSelector />);
 
       // Open dropdown
-      fireEvent.click(screen.getByRole('button'));
+      fireEvent.click(screen.getByRole('button', { name: /Select language/i }));
       expect(screen.getByText('Nederlands')).toBeInTheDocument();
 
       // Click backdrop
@@ -304,7 +306,7 @@ describe('LanguageSelector Component - Language Switching Tests', () => {
     test('TC-4.2: Should toggle dropdown on multiple clicks', () => {
       renderWithProviders(<LanguageSelector />);
 
-      const button = screen.getByRole('button');
+      const button = screen.getByRole('button', { name: /Select language/i });
 
       // Open
       fireEvent.click(button);
@@ -323,7 +325,7 @@ describe('LanguageSelector Component - Language Switching Tests', () => {
     test('TC-4.2: Chevron should rotate when dropdown opens', () => {
       const { container } = renderWithProviders(<LanguageSelector />);
 
-      const button = screen.getByRole('button');
+      const button = screen.getByRole('button', { name: /Select language/i });
 
       // Initially not rotated
       let chevron = container.querySelector('svg.transition-transform');
@@ -338,7 +340,9 @@ describe('LanguageSelector Component - Language Switching Tests', () => {
     test('TC-4.3: Dropdown should have scrollable class', () => {
       renderWithProviders(<LanguageSelector />);
 
-      fireEvent.click(screen.getByRole('button'));
+      // Open dropdown
+      const triggerButton = screen.getByRole('button', { name: /Select language/i });
+      fireEvent.click(triggerButton);
 
       const dropdown = document.querySelector('.max-h-96.overflow-y-auto');
       expect(dropdown).toBeInTheDocument();
@@ -347,7 +351,7 @@ describe('LanguageSelector Component - Language Switching Tests', () => {
     test('TC-4.3: Dropdown should contain all language options', () => {
       renderWithProviders(<LanguageSelector />);
 
-      fireEvent.click(screen.getByRole('button'));
+      fireEvent.click(screen.getByRole('button', { name: /Select language/i }));
 
       const dropdown = document.querySelector('.max-h-96.overflow-y-auto');
       const options = dropdown.querySelectorAll('button');
@@ -362,7 +366,7 @@ describe('LanguageSelector Component - Language Switching Tests', () => {
       renderWithProviders(<LanguageSelector />);
 
       // Should not crash and should fall back
-      expect(screen.getByRole('button')).toBeInTheDocument();
+      expect(screen.getByRole('button', { name: /Select language/i })).toBeInTheDocument();
     });
 
     test('TC-6.2: Should work when storage is empty', () => {
@@ -372,13 +376,13 @@ describe('LanguageSelector Component - Language Switching Tests', () => {
       renderWithProviders(<LanguageSelector />);
 
       // Should render without errors
-      expect(screen.getByRole('button')).toBeInTheDocument();
+      expect(screen.getByRole('button', { name: /Select language/i })).toBeInTheDocument();
     });
 
     test('TC-6.3: Should handle rapid language changes', () => {
       renderWithProviders(<LanguageSelector />);
 
-      fireEvent.click(screen.getByRole('button'));
+      fireEvent.click(screen.getByRole('button', { name: /Select language/i }));
 
       // Rapidly click different languages
       fireEvent.click(screen.getByText('Español'));
@@ -388,7 +392,7 @@ describe('LanguageSelector Component - Language Switching Tests', () => {
       jest.clearAllMocks();
 
       // Click another language
-      fireEvent.click(screen.getByRole('button'));
+      fireEvent.click(screen.getByRole('button', { name: /Select language/i }));
       fireEvent.click(screen.getByText('Français'));
       expect(window.location.reload).toHaveBeenCalledTimes(1);
     });
@@ -461,7 +465,7 @@ describe('LanguageSelector Component - Language Switching Tests', () => {
       renderWithProviders(<LanguageSelector />);
 
       // Open dropdown
-      fireEvent.click(screen.getByRole('button'));
+      fireEvent.click(screen.getByRole('button', { name: /Select language/i }));
       expect(screen.getByText('Svenska')).toBeInTheDocument();
 
       // Select a language
@@ -475,7 +479,7 @@ describe('LanguageSelector Component - Language Switching Tests', () => {
     test('Should maintain dropdown z-index hierarchy', () => {
       renderWithProviders(<LanguageSelector />);
 
-      fireEvent.click(screen.getByRole('button'));
+      fireEvent.click(screen.getByRole('button', { name: /Select language/i }));
 
       const backdrop = document.querySelector('.fixed.inset-0');
       const dropdown = document.querySelector('.absolute.right-0');
@@ -491,7 +495,7 @@ describe('LanguageSelector Component - Language Switching Tests', () => {
 
       const initialLanguage = i18n.language;
 
-      fireEvent.click(screen.getByRole('button'));
+      fireEvent.click(screen.getByRole('button', { name: /Select language/i }));
       fireEvent.click(screen.getByText('Deutsch'));
 
       // Language should be changed in i18n instance
@@ -532,7 +536,7 @@ describe('LanguageSelector Component - Language Switching Tests', () => {
     test('TC-9.1: Language selector button should be accessible', () => {
       renderWithProviders(<LanguageSelector />);
 
-      const button = screen.getByRole('button');
+      const button = screen.getByRole('button', { name: /Select language/i });
       expect(button).toBeInTheDocument();
       expect(button).toBeVisible();
     });
@@ -540,7 +544,7 @@ describe('LanguageSelector Component - Language Switching Tests', () => {
     test('TC-9.1: All language options should be accessible', () => {
       renderWithProviders(<LanguageSelector />);
 
-      fireEvent.click(screen.getByRole('button'));
+      fireEvent.click(screen.getByRole('button', { name: /Select language/i }));
 
       const options = screen.getAllByRole('button');
       // Should have main button + 19 language options
@@ -550,7 +554,7 @@ describe('LanguageSelector Component - Language Switching Tests', () => {
     test('Should have proper ARIA attributes', () => {
       const { container } = renderWithProviders(<LanguageSelector />);
 
-      const button = screen.getByRole('button');
+      const button = screen.getByRole('button', { name: /Select language/i });
       expect(button).toBeInTheDocument();
 
       // Check for accessibility features
@@ -562,7 +566,7 @@ describe('LanguageSelector Component - Language Switching Tests', () => {
     test('Should maintain consistent language order', () => {
       renderWithProviders(<LanguageSelector />);
 
-      fireEvent.click(screen.getByRole('button'));
+      fireEvent.click(screen.getByRole('button', { name: /Select language/i }));
 
       const dropdown = document.querySelector('.max-h-96.overflow-y-auto');
       const languageButtons = Array.from(dropdown.querySelectorAll('button'));
@@ -589,11 +593,15 @@ describe('LanguageSelector Component - Language Switching Tests', () => {
       };
 
       renderWithProviders(<LanguageSelector />);
-      fireEvent.click(screen.getByRole('button'));
+      // Initial click to open dropdown might need to be specific if there are multiple buttons
+      // Assuming English is the default
+      // Use aria-label if possible or just get the first button if it's the toggle
+      const triggerButton = screen.getByRole('button', { name: /Select language/i });
+      fireEvent.click(triggerButton);
 
       Object.entries(flagMap).forEach(([langName, flag]) => {
         const langButton = screen.getByText(langName).closest('button');
-        expect(langButton).toContainHTML(flag);
+        expect(langButton.innerHTML).toContain(flag);
       });
     });
   });

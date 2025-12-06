@@ -688,7 +688,7 @@ const Login = () => {
                       onClick={() => inputFocus.current.focus()}
                       className="absolute mt-3 ml-16 text-gray-400 dark:text-gray-500 pointer-events-none"
                     >
-                      Mobile Number
+                      {t("Mobile Number")}
                     </label>
                   )}
                   <PhoneInput
@@ -703,7 +703,7 @@ const Login = () => {
 
                 {otpShow && (
                   <div className="space-y-3">
-                    <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100">Enter OTP</h3>
+                    <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100">{t("Enter OTP")}</h3>
                     <div className="flex justify-center gap-2">
                       {Inputref.current.map((ref, index) => (
                         <input
@@ -724,11 +724,11 @@ const Login = () => {
                   <div className="space-y-4">
                     <div>
                       <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                        New Password
+                        {t("New Password")}
                       </label>
                       <input
                         type="password"
-                        placeholder="Enter new password"
+                        placeholder={t("New Password")}
                         value={Password2}
                         onChange={(e) => setpassword2(e.target.value)}
                         className="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 rounded-xl focus:border-pink-500 outline-none transition-all"
@@ -736,11 +736,11 @@ const Login = () => {
                     </div>
                     <div>
                       <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                        Confirm Password
+                        {t("Confirm Password")}
                       </label>
                       <input
                         type="password"
-                        placeholder="Confirm password"
+                        placeholder={t("Confirm Password")}
                         value={Confirm}
                         onChange={(e) => setconfirm(e.target.value)}
                         className="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 rounded-xl focus:border-pink-500 outline-none transition-all"
@@ -759,7 +759,7 @@ const Login = () => {
                   }
                   className="w-full bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 text-white font-bold text-lg py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300"
                 >
-                  {otpShow ? "Verify OTP" : passwordShow ? "Reset Password" : "Send OTP"}
+                  {otpShow ? t("Verify OTP") : passwordShow ? t("Reset Password") : t("Send OTP")}
                 </button>
               </div>
             </div>

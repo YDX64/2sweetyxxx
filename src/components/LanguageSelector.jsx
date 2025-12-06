@@ -39,7 +39,8 @@ const LanguageSelector = () => {
 
   // Initialize language from localStorage on mount
   useEffect(() => {
-    const savedLang = localStorage.getItem('i18nextLng') || sessionStorage.getItem('I18');
+    const savedLang = (typeof localStorage !== 'undefined' && localStorage ? localStorage.getItem('i18nextLng') : null) ||
+                      (typeof sessionStorage !== 'undefined' && sessionStorage ? sessionStorage.getItem('I18') : null);
     if (savedLang && languages.some(lang => lang.code === savedLang)) {
       i18n.changeLanguage(savedLang);
     }
@@ -74,6 +75,7 @@ const LanguageSelector = () => {
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+          aria-label="Select language"
         >
           <FaGlobe className="text-gray-700 dark:text-gray-300" />
           <span className="text-sm font-medium text-gray-700 dark:text-gray-300">

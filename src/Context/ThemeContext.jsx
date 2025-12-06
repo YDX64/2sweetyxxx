@@ -15,7 +15,7 @@ export const useTheme = () => {
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(() => {
     // Check localStorage first, then system preference
-    const savedTheme = localStorage.getItem('theme');
+    const savedTheme = (typeof localStorage !== 'undefined' && localStorage) ? localStorage.getItem('theme') : null;
     if (savedTheme) {
       return savedTheme;
     }
@@ -33,7 +33,7 @@ export const ThemeProvider = ({ children }) => {
     root.classList.add(theme);
 
     // Save to localStorage
-    localStorage.setItem('theme', theme);
+    if (typeof localStorage !== 'undefined' && localStorage) localStorage.setItem('theme', theme);
   }, [theme]);
 
   const toggleTheme = () => {
