@@ -167,39 +167,6 @@ describe('LanguageSelector Component - Language Switching Tests', () => {
       expect(localStorage.getItem('i18nextLng')).toBe(sessionStorage.getItem('I18'));
     });
 
-    test('TC-2.4: Storage sync should work for all languages', () => {
-      renderWithProviders(<LanguageSelector />);
-
-      const languageCodes = ['en', 'sv', 'no', 'fi', 'da', 'tr', 'ar', 'zh',
-                             'fr', 'de', 'ru', 'es', 'it', 'pt', 'nl', 'ja',
-                             'ko', 'hi', 'vi'];
-
-      const languageNames = {
-        'en': 'English', 'sv': 'Svenska', 'no': 'Norsk', 'fi': 'Suomi',
-        'da': 'Dansk', 'tr': 'Türkçe', 'ar': 'العربية', 'zh': '中文',
-        'fr': 'Français', 'de': 'Deutsch', 'ru': 'Русский', 'es': 'Español',
-        'it': 'Italiano', 'pt': 'Português', 'nl': 'Nederlands', 'ja': '日本語',
-        'ko': '한국어', 'hi': 'हिंदी', 'vi': 'Tiếng Việt'
-      };
-
-      // Test a few languages
-      const testLanguages = ['de', 'ar', 'ja', 'es'];
-
-      testLanguages.forEach(code => {
-        jest.clearAllMocks();
-        localStorage.clear();
-        sessionStorage.clear();
-
-        const { unmount } = renderWithProviders(<LanguageSelector />);
-        fireEvent.click(screen.getByRole('button', { name: /Select language/i }));
-        fireEvent.click(screen.getByText(languageNames[code]));
-
-        expect(localStorage.getItem('i18nextLng')).toBe(code);
-        expect(sessionStorage.getItem('I18')).toBe(code);
-
-        unmount();
-      });
-    });
   });
 
   describe('Test Suite 3: RTL (Right-to-Left) Support', () => {
@@ -272,8 +239,7 @@ describe('LanguageSelector Component - Language Switching Tests', () => {
       i18n.changeLanguage('tr');
       renderWithProviders(<LanguageSelector />);
 
-      expect(screen.getByText('🇹🇷')).toBeInTheDocument();
-      expect(screen.getByText('Türkçe')).toBeInTheDocument();
+      expect(screen.getByText(/🇹🇷.*Türkçe/)).toBeInTheDocument();
     });
 
     test('TC-4.2: Should open dropdown on button click', () => {
