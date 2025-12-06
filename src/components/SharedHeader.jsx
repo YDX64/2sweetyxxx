@@ -20,7 +20,7 @@ const SharedHeader = ({ isAuthenticated = false }) => {
       ]
     : [
         { to: '/', label: t('home'), isHash: false },
-        { to: '#features', label: 'Features', isHash: true },
+        { to: '#features', label: t('Features'), isHash: true },
         { to: '#premium', label: t('Premium'), isHash: true },
       ];
 
@@ -71,7 +71,7 @@ const SharedHeader = ({ isAuthenticated = false }) => {
                   to="/login"
                   className="px-4 py-2 text-gray-700 dark:text-gray-300 hover:text-pink-500 dark:hover:text-pink-400 font-medium transition-colors"
                 >
-                  Login
+                  {t('Login')}
                 </Link>
                 <Link
                   to="/register"
@@ -144,7 +144,7 @@ const SharedHeader = ({ isAuthenticated = false }) => {
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="block w-full px-4 py-2.5 text-center text-gray-700 dark:text-gray-300 border-2 border-gray-300 dark:border-gray-700 rounded-full font-semibold hover:border-pink-500 transition-colors"
                 >
-                  Login
+                  {t('Login')}
                 </Link>
                 <Link
                   to="/register"

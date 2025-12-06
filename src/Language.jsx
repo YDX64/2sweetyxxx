@@ -484,6 +484,8 @@ const resources = {
       "Email us": "Email us",
       "We typically respond within 24 hours": "We typically respond within 24 hours",
       "Partnerships": "Partnerships",
+      "Login": "Login",
+      "Features": "Features",
     }
   },
   sv: {
@@ -615,7 +617,7 @@ const resources = {
       "Number of coin": "Antal mynt",
       "Payout id": "Utbetalnings-ID",
       "User Chat": "Användarchatt",
-      "Messages": "Messages",
+      "Messages": "Meddelanden",
       "Online now": "Online nu",
       "Select User": "Välj användare",
       "Offline": "Offline",
@@ -994,6 +996,8 @@ const resources = {
       "Legal": "Juridisk",
       "Email us": "Mejla oss",
       "Partnerships": "Partnerskap",
+      "Login": "Logga in",
+      "Features": "Funktioner",
     }
   },
   no: {
@@ -1125,7 +1129,7 @@ const resources = {
       "Number of coin": "Antall mynter",
       "Payout id": "Utbetalings-ID",
       "User Chat": "Brukerchat",
-      "Messages": "Messages",
+      "Messages": "Meldinger",
       "Online now": "Online nå",
       "Select User": "Velg bruker",
       "Offline": "Offline",
@@ -1582,6 +1586,8 @@ const resources = {
       "Join thousands of people who have already found their perfect match on 2Sweety.": "Bli med tusenvis av mennesker som allerede har funnet sin perfekte match på 2Sweety.",
       "Get Started": "Kom i gang",
       "Back to Home": "Tilbake til hjem",
+      "Login": "Logg inn",
+      "Features": "Funksjoner",
     }
   },
   fi: {
@@ -1713,7 +1719,7 @@ const resources = {
       "Number of coin": "Kolikoiden määrä",
       "Payout id": "Maksutunnus",
       "User Chat": "Käyttäjäkeskustelu",
-      "Messages": "Messages",
+      "Messages": "Viestit",
       "Online now": "Online nyt",
       "Select User": "Valitse käyttäjä",
       "Offline": "Offline",
@@ -2076,6 +2082,8 @@ const resources = {
       "Legal": "Laillinen",
       "Email us": "Lähetä sähköpostia",
       "Partnerships": "Kumppanuudet",
+      "Login": "Kirjaudu sisään",
+      "Features": "Ominaisuudet",
     }
   },
   da: {
@@ -2207,7 +2215,7 @@ const resources = {
       "Number of coin": "Antal mønter",
       "Payout id": "Udbetalings-ID",
       "User Chat": "Brugerchat",
-      "Messages": "Messages",
+      "Messages": "Beskeder",
       "Online now": "Online nu",
       "Select User": "Vælg bruger",
       "Offline": "Offline",
@@ -2599,6 +2607,8 @@ const resources = {
       "Legal": "Juridisk",
       "Email us": "Send os en e-mail",
       "Partnerships": "Partnerskaber",
+      "Login": "Log ind",
+      "Features": "Funktioner",
     }
   },
   tr: {
@@ -3105,6 +3115,8 @@ const resources = {
       "Legal": "Yasal",
       "Email us": "Bize e-posta gönderin",
       "Partnerships": "Ortaklıklar",
+      "Login": "Giriş Yap",
+      "Features": "Özellikler",
     }
   },
   ar: {
@@ -3236,7 +3248,7 @@ const resources = {
       "Number of coin": "عدد العملات",
       "Payout id": "معرف الدفع",
       "User Chat": "دردشة المستخدم",
-      "Messages": "Messages",
+      "Messages": "الرسائل",
       "Online now": "متصل الآن",
       "Select User": "اختر مستخدم",
       "Offline": "غير متصل",
@@ -3599,6 +3611,8 @@ const resources = {
       "Legal": "Юридический",
       "Email us": "Напишите нам",
       "Partnerships": "Партнерство",
+      "Login": "تسجيل الدخول",
+      "Features": "المميزات",
     }
   },
   zh: {
@@ -3730,7 +3744,7 @@ const resources = {
       "Number of coin": "金币数量",
       "Payout id": "支付ID",
       "User Chat": "用户聊天",
-      "Messages": "Messages",
+      "Messages": "消息",
       "Online now": "现在在线",
       "Select User": "选择用户",
       "Offline": "离线",
@@ -4093,6 +4107,8 @@ const resources = {
       "Legal": "法律",
       "Email us": "给我们发邮件",
       "Partnerships": "合作伙伴",
+      "Login": "登录",
+      "Features": "功能",
     }
   },
   fr: {
@@ -4587,6 +4603,8 @@ const resources = {
       "Legal": "Légal",
       "Email us": "Envoyez-nous un email",
       "Partnerships": "Partenariats",
+      "Login": "Connexion",
+      "Features": "Fonctionnalités",
     }
   },
   de: {
@@ -4718,7 +4736,7 @@ const resources = {
       "Number of coin": "Anzahl der Münzen",
       "Payout id": "Auszahlungs-ID",
       "User Chat": "Benutzer-Chat",
-      "Messages": "Messages",
+      "Messages": "Nachrichten",
       "Online now": "Jetzt online",
       "Select User": "Benutzer auswählen",
       "Offline": "Offline",
@@ -5081,6 +5099,8 @@ const resources = {
       "Legal": "Rechtliches",
       "Email us": "Senden Sie uns eine E-Mail",
       "Partnerships": "Partnerschaften",
+      "Login": "Anmelden",
+      "Features": "Funktionen",
     }
   },
   ru: {
@@ -5212,7 +5232,7 @@ const resources = {
       "Number of coin": "Количество монет",
       "Payout id": "ID выплаты",
       "User Chat": "Чат пользователя",
-      "Messages": "Messages",
+      "Messages": "Сообщения",
       "Online now": "Сейчас онлайн",
       "Select User": "Выбрать пользователя",
       "Offline": "Не в сети",
@@ -5575,6 +5595,8 @@ const resources = {
       "Legal": "Legal",
       "Email us": "Envíanos un correo",
       "Partnerships": "Asociaciones",
+      "Login": "Войти",
+      "Features": "Функции",
     }
   },
   es: {
@@ -5873,7 +5895,7 @@ const resources = {
       "Profile Information": "Profile Information",
       "Until account deletion": "Until account deletion",
       "Service provision": "Service provision",
-      "Messages": "Messages",
+      "Messages": "Mensajes",
       "1 year after deletion": "1 year after deletion",
       "Safety investigation": "Safety investigation",
       "Usage Analytics": "Usage Analytics",
@@ -5931,6 +5953,8 @@ const resources = {
       "Legal": "Legale",
       "Email us": "Scrivici",
       "Partnerships": "Partnership",
+      "Login": "Iniciar sesión",
+      "Features": "Características",
     }
   },
   it: {
@@ -6229,7 +6253,7 @@ const resources = {
       "Profile Information": "Profile Information",
       "Until account deletion": "Until account deletion",
       "Service provision": "Service provision",
-      "Messages": "Messages",
+      "Messages": "Messaggi",
       "1 year after deletion": "1 year after deletion",
       "Safety investigation": "Safety investigation",
       "Usage Analytics": "Usage Analytics",
@@ -6287,6 +6311,8 @@ const resources = {
       "Legal": "Legal",
       "Email us": "Envie-nos um e-mail",
       "Partnerships": "Parcerias",
+      "Login": "Accedi",
+      "Features": "Funzionalità",
     }
   },
   pt: {
@@ -6585,7 +6611,7 @@ const resources = {
       "Profile Information": "Profile Information",
       "Until account deletion": "Until account deletion",
       "Service provision": "Service provision",
-      "Messages": "Messages",
+      "Messages": "Mensagens",
       "1 year after deletion": "1 year after deletion",
       "Safety investigation": "Safety investigation",
       "Usage Analytics": "Usage Analytics",
@@ -6643,6 +6669,8 @@ const resources = {
       "Legal": "Juridisch",
       "Email us": "E-mail ons",
       "Partnerships": "Partnerschappen",
+      "Login": "Entrar",
+      "Features": "Recursos",
     }
   },
   nl: {
@@ -6943,7 +6971,7 @@ const resources = {
       "Profile Information": "Profile Information",
       "Until account deletion": "Until account deletion",
       "Service provision": "Service provision",
-      "Messages": "Messages",
+      "Messages": "Berichten",
       "1 year after deletion": "1 year after deletion",
       "Safety investigation": "Safety investigation",
       "Usage Analytics": "Usage Analytics",
@@ -7001,6 +7029,8 @@ const resources = {
       "Legal": "法的",
       "Email us": "メールでのお問い合わせ",
       "Partnerships": "パートナーシップ",
+      "Login": "Inloggen",
+      "Features": "Functies",
     }
   },
   ja: {
@@ -7299,7 +7329,7 @@ const resources = {
       "Profile Information": "Profile Information",
       "Until account deletion": "Until account deletion",
       "Service provision": "Service provision",
-      "Messages": "Messages",
+      "Messages": "メッセージ",
       "1 year after deletion": "1 year after deletion",
       "Safety investigation": "Safety investigation",
       "Usage Analytics": "Usage Analytics",
@@ -7326,6 +7356,8 @@ const resources = {
       "Response within 72 hours": "Response within 72 hours",
       "GDPR Compliant": "GDPR Compliant",
       "Multi-language support": "Multi-language support",
+      "Login": "ログイン",
+      "Features": "機能",
 
     }
   },
@@ -7625,7 +7657,7 @@ const resources = {
       "Profile Information": "Profile Information",
       "Until account deletion": "Until account deletion",
       "Service provision": "Service provision",
-      "Messages": "Messages",
+      "Messages": "메시지",
       "1 year after deletion": "1 year after deletion",
       "Safety investigation": "Safety investigation",
       "Usage Analytics": "Usage Analytics",
@@ -7652,6 +7684,8 @@ const resources = {
       "Response within 72 hours": "Response within 72 hours",
       "GDPR Compliant": "GDPR Compliant",
       "Multi-language support": "Multi-language support",
+      "Login": "로그인",
+      "Features": "기능",
 
     }
   },
@@ -7951,7 +7985,7 @@ const resources = {
       "Profile Information": "Profile Information",
       "Until account deletion": "Until account deletion",
       "Service provision": "Service provision",
-      "Messages": "Messages",
+      "Messages": "संदेश",
       "1 year after deletion": "1 year after deletion",
       "Safety investigation": "Safety investigation",
       "Usage Analytics": "Usage Analytics",
@@ -7978,6 +8012,8 @@ const resources = {
       "Response within 72 hours": "Response within 72 hours",
       "GDPR Compliant": "GDPR Compliant",
       "Multi-language support": "Multi-language support",
+      "Login": "लॉगिन",
+      "Features": "विशेषताएं",
 
     }
   },
@@ -8277,7 +8313,7 @@ const resources = {
       "Profile Information": "Profile Information",
       "Until account deletion": "Until account deletion",
       "Service provision": "Service provision",
-      "Messages": "Messages",
+      "Messages": "Tin nhắn",
       "1 year after deletion": "1 year after deletion",
       "Safety investigation": "Safety investigation",
       "Usage Analytics": "Usage Analytics",
@@ -8304,12 +8340,14 @@ const resources = {
       "Response within 72 hours": "Response within 72 hours",
       "GDPR Compliant": "GDPR Compliant",
       "Multi-language support": "Multi-language support",
+      "Login": "Đăng nhập",
+      "Features": "Tính năng",
 
     }
   },
 };
 
-// Get saved language preference or default to 'en'
+// Get saved language preferenceor default to 'en'
 const savedLanguage = localStorage.getItem('i18nextLng') ||
                       sessionStorage.getItem('I18') ||
                       'en';
