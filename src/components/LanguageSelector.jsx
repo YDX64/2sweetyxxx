@@ -39,7 +39,8 @@ const LanguageSelector = () => {
 
   // Initialize language from localStorage on mount
   useEffect(() => {
-    const savedLang = localStorage.getItem('i18nextLng') || sessionStorage.getItem('I18');
+    const savedLang = (typeof localStorage !== 'undefined' && localStorage ? localStorage.getItem('i18nextLng') : null) ||
+                      (typeof sessionStorage !== 'undefined' && sessionStorage ? sessionStorage.getItem('I18') : null);
     if (savedLang && languages.some(lang => lang.code === savedLang)) {
       i18n.changeLanguage(savedLang);
     }
