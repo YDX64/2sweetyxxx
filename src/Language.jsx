@@ -1,4 +1,10 @@
 /* jshint esversion: 6 */
+/* 
+ * Complete i18n translations for 2Sweety platform
+ * Supports 19 languages: en, sv, no, fi, da, tr, ar, zh, fr, de, ru, es, it, pt, nl, ja, ko, hi, vi
+ * All Privacy and Terms page content fully translated
+ * Last updated: December 2024
+ */
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
