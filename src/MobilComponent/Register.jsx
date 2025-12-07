@@ -12,14 +12,14 @@ import { useTranslation } from 'react-i18next';
 import { jwtDecode } from 'jwt-decode';
 import FacebookLogin from '@greatsumini/react-facebook-login';
 import AppleSignin from 'react-apple-signin-auth';
+import { useGoogleLogin } from '@react-oauth/google';
 
-// Google Signup Button Component - only uses hook when rendered
+// Google Signup Button Component - uses hook correctly at top level
 const GoogleSignupButton = ({ onSuccess, onError, isLoading, t }) => {
-  const { useGoogleLogin } = require('@react-oauth/google');
-
   const googleSignup = useGoogleLogin({
     onSuccess: onSuccess,
-    onError: onError
+    onError: onError,
+    flow: 'implicit'
   });
 
   return (
@@ -27,6 +27,7 @@ const GoogleSignupButton = ({ onSuccess, onError, isLoading, t }) => {
       onClick={() => googleSignup()}
       disabled={isLoading}
       className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-white dark:bg-gray-700 border-2 border-gray-200 dark:border-gray-600 rounded-xl font-semibold text-gray-700 dark:text-gray-200 hover:border-pink-500 dark:hover:border-pink-500 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed"
+      aria-label="Sign up with Google"
     >
       <FaGoogle className="text-xl text-red-500" />
       <span>{t("Sign up with Google")}</span>
@@ -143,7 +144,7 @@ const Register = () => {
         showTost({ title: response.data.ResponseMsg });
         localStorage.setItem("UserId", response.data.UserLogin.id);
         localStorage.setItem("Register_User", JSON.stringify(response.data.UserLogin));
-        setTimeout(() => navigation("/phone"), 500);
+        setTimeout(() => navigation("/phonenumber"), 500);
       } else {
         showTost({ title: response.data.ResponseMsg });
       }
@@ -183,7 +184,7 @@ const Register = () => {
           showTost({ title: registerResponse.data.ResponseMsg });
           localStorage.setItem("UserId", registerResponse.data.UserLogin.id);
           localStorage.setItem("Register_User", JSON.stringify(registerResponse.data.UserLogin));
-          setTimeout(() => navigation("/phone"), 500);
+          setTimeout(() => navigation("/phonenumber"), 500);
         } else {
           showTost({ title: registerResponse.data.ResponseMsg });
         }
@@ -215,7 +216,7 @@ const Register = () => {
           showTost({ title: registerResponse.data.ResponseMsg });
           localStorage.setItem("UserId", registerResponse.data.UserLogin.id);
           localStorage.setItem("Register_User", JSON.stringify(registerResponse.data.UserLogin));
-          setTimeout(() => navigation("/phone"), 500);
+          setTimeout(() => navigation("/phonenumber"), 500);
         } else {
           showTost({ title: registerResponse.data.ResponseMsg });
         }
@@ -290,7 +291,7 @@ const Register = () => {
       newErrors.password = t("Password is required");
       isValid = false;
     } else if (Password.length < 8) {
-      newErrors.password = t("Password must be at least 6 characters");
+      newErrors.password = t("Password must be at least 8 characters");
       isValid = false;
     }
 

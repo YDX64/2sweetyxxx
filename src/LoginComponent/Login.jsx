@@ -17,14 +17,14 @@ import { useTranslation } from 'react-i18next';
 import { jwtDecode } from 'jwt-decode';
 import FacebookLogin from '@greatsumini/react-facebook-login';
 import AppleSignin from 'react-apple-signin-auth';
+import { useGoogleLogin } from '@react-oauth/google';
 
-// Google Login Button Component - only uses hook when rendered
+// Google Login Button Component - uses hook correctly at top level
 const GoogleLoginButton = ({ onSuccess, onError, isLoading, t }) => {
-  const { useGoogleLogin } = require('@react-oauth/google');
-
   const googleLogin = useGoogleLogin({
     onSuccess: onSuccess,
-    onError: onError
+    onError: onError,
+    flow: 'implicit'
   });
 
   return (
@@ -32,6 +32,7 @@ const GoogleLoginButton = ({ onSuccess, onError, isLoading, t }) => {
       onClick={() => googleLogin()}
       disabled={isLoading}
       className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-white dark:bg-gray-700 border-2 border-gray-200 dark:border-gray-600 rounded-xl font-semibold text-gray-700 dark:text-gray-200 hover:border-pink-500 dark:hover:border-pink-500 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed"
+      aria-label="Continue with Google"
     >
       <FaGoogle className="text-xl text-red-500" />
       <span>{t("Continue with Google")}</span>
