@@ -81,15 +81,22 @@ const Register = () => {
     }
   }, []);
 
-  // Google Signup Success Handler
+  // Google Signup Success Handler - WITH ULTRA DETAILED LOGGING
   const handleGoogleSignupSuccess = async (tokenResponse) => {
+    console.log('=== GOOGLE SIGNUP DEBUG START ===');
+    console.log('[1] tokenResponse received:', JSON.stringify(tokenResponse, null, 2));
+    console.log('[2] basUrl being used:', basUrl);
+
     try {
       setIsLoading(true);
-      // Get user info from Google
+
+      // Step 1: Get user info from Google
+      console.log('[3] Fetching user info from Google...');
       const userInfoResponse = await axios.get(
         'https://www.googleapis.com/oauth2/v3/userinfo',
         { headers: { Authorization: `Bearer ${tokenResponse.access_token}` } }
       );
+      console.log('[4] Google userinfo response:', JSON.stringify(userInfoResponse.data, null, 2));
 
       const userData = userInfoResponse.data;
       const googleData = {
@@ -99,23 +106,43 @@ const Register = () => {
         social_id: userData.sub,
         auth_type: 'google'
       };
+      console.log('[5] Prepared googleData for API:', JSON.stringify(googleData, null, 2));
 
-      // Try to register with social_register.php
-      const response = await axios.post(`${basUrl}social_register.php`, googleData);
+      // Step 2: Register with backend
+      const apiUrl = `${basUrl}social_register.php`;
+      console.log('[6] Calling API:', apiUrl);
+
+      const response = await axios.post(apiUrl, googleData);
+      console.log('[7] API Response status:', response.status);
+      console.log('[8] API Response data:', JSON.stringify(response.data, null, 2));
 
       if (response.data.Result === "true") {
+        console.log('[9] SUCCESS - Registration complete');
         showTost({ title: response.data.ResponseMsg });
         localStorage.setItem("UserId", response.data.UserLogin.id);
         localStorage.setItem("Register_User", JSON.stringify(response.data.UserLogin));
         setTimeout(() => navigation("/phonenumber"), 500);
       } else {
+        console.log('[9] FAILED - API returned false:', response.data.ResponseMsg);
         showTost({ title: response.data.ResponseMsg });
       }
     } catch (error) {
-      console.error('Google signup error:', error);
+      console.error('=== GOOGLE SIGNUP ERROR ===');
+      console.error('[ERROR] Type:', error.name);
+      console.error('[ERROR] Message:', error.message);
+      console.error('[ERROR] Full error:', error);
+      if (error.response) {
+        console.error('[ERROR] Response status:', error.response.status);
+        console.error('[ERROR] Response data:', JSON.stringify(error.response.data, null, 2));
+        console.error('[ERROR] Response headers:', JSON.stringify(error.response.headers, null, 2));
+      }
+      if (error.request) {
+        console.error('[ERROR] Request was made but no response:', error.request);
+      }
       showTost({ title: "Google signup failed. Please try again." });
     } finally {
       setIsLoading(false);
+      console.log('=== GOOGLE SIGNUP DEBUG END ===');
     }
   };
 
