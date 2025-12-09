@@ -492,6 +492,12 @@ const resources = {
       "Partnerships": "Partnerships",
       "Login": "Login",
       "Features": "Features",
+      "Phone Verification": "Phone Verification",
+      "Phone Number Description": "Enter your phone number to verify your identity. This helps us keep our community safe and secure.",
+      "Phone Privacy Notice": "Your phone number is private and will never be shared with other users.",
+      "Enter OTP": "Enter Verification Code",
+      "Resend OTP": "Resend Code",
+      "Back": "Back",
     }
   },
   sv: {
@@ -1005,6 +1011,12 @@ const resources = {
       "Partnerships": "Partnerskap",
       "Login": "Logga in",
       "Features": "Funktioner",
+      "Phone Verification": "Telefonverifiering",
+      "Phone Number Description": "Ange ditt telefonnummer för att verifiera din identitet. Detta hjälper oss att hålla vår community säker.",
+      "Phone Privacy Notice": "Ditt telefonnummer är privat och kommer aldrig att delas med andra användare.",
+      "Enter OTP": "Ange verifieringskod",
+      "Resend OTP": "Skicka kod igen",
+      "Back": "Tillbaka",
     }
   },
   no: {
@@ -1596,6 +1608,12 @@ const resources = {
       "Back to Home": "Tilbake til hjem",
       "Login": "Logg inn",
       "Features": "Funksjoner",
+      "Phone Verification": "Telefonverifisering",
+      "Phone Number Description": "Skriv inn telefonnummeret ditt for å bekrefte identiteten din. Dette hjelper oss med å holde fellesskapet vårt trygt.",
+      "Phone Privacy Notice": "Telefonnummeret ditt er privat og vil aldri bli delt med andre brukere.",
+      "Enter OTP": "Skriv inn bekreftelseskode",
+      "Resend OTP": "Send kode på nytt",
+      "Back": "Tilbake",
     }
   },
   fi: {
@@ -2093,6 +2111,12 @@ const resources = {
       "Partnerships": "Kumppanuudet",
       "Login": "Kirjaudu sisään",
       "Features": "Ominaisuudet",
+      "Phone Verification": "Puhelinvarmistus",
+      "Phone Number Description": "Syötä puhelinnumerosi henkilöllisyytesi vahvistamiseksi. Tämä auttaa meitä pitämään yhteisömme turvallisena.",
+      "Phone Privacy Notice": "Puhelinnumerosi on yksityinen, eikä sitä koskaan jaeta muiden käyttäjien kanssa.",
+      "Enter OTP": "Syötä vahvistuskoodi",
+      "Resend OTP": "Lähetä koodi uudelleen",
+      "Back": "Takaisin",
     }
   },
   da: {
@@ -2619,6 +2643,12 @@ const resources = {
       "Partnerships": "Partnerskaber",
       "Login": "Log ind",
       "Features": "Funktioner",
+      "Phone Verification": "Telefonbekræftelse",
+      "Phone Number Description": "Indtast dit telefonnummer for at bekræfte din identitet. Dette hjælper os med at holde vores fællesskab sikkert.",
+      "Phone Privacy Notice": "Dit telefonnummer er privat og vil aldrig blive delt med andre brugere.",
+      "Enter OTP": "Indtast bekræftelseskode",
+      "Resend OTP": "Send kode igen",
+      "Back": "Tilbage",
     }
   },
   tr: {
@@ -3127,6 +3157,12 @@ const resources = {
       "Partnerships": "Ortaklıklar",
       "Login": "Giriş Yap",
       "Features": "Özellikler",
+      "Phone Verification": "Telefon Doğrulama",
+      "Phone Number Description": "Kimliğinizi doğrulamak için telefon numaranızı girin. Bu, topluluğumuzu güvende tutmamıza yardımcı olur.",
+      "Phone Privacy Notice": "Telefon numaranız gizlidir ve diğer kullanıcılarla asla paylaşılmayacaktır.",
+      "Enter OTP": "Doğrulama kodunu girin",
+      "Resend OTP": "Kodu tekrar gönder",
+      "Back": "Geri",
     }
   },
   ar: {
@@ -3624,6 +3660,12 @@ const resources = {
       "Partnerships": "Партнерство",
       "Login": "تسجيل الدخول",
       "Features": "المميزات",
+      "Phone Verification": "التحقق من الهاتف",
+      "Phone Number Description": "أدخل رقم هاتفك للتحقق من هويتك. يساعدنا هذا في الحفاظ على أمان مجتمعنا.",
+      "Phone Privacy Notice": "رقم هاتفك خاص ولن يتم مشاركته أبداً مع المستخدمين الآخرين.",
+      "Enter OTP": "أدخل رمز التحقق",
+      "Resend OTP": "إعادة إرسال الرمز",
+      "Back": "رجوع",
     }
   },
   zh: {
@@ -4121,6 +4163,12 @@ const resources = {
       "Partnerships": "合作伙伴",
       "Login": "登录",
       "Features": "功能",
+      "Phone Verification": "电话验证",
+      "Phone Number Description": "输入您的电话号码以验证您的身份。这有助于我们保持社区的安全。",
+      "Phone Privacy Notice": "您的电话号码是私密的，永远不会与其他用户共享。",
+      "Enter OTP": "输入验证码",
+      "Resend OTP": "重新发送验证码",
+      "Back": "返回",
     }
   },
   fr: {
@@ -4618,6 +4666,12 @@ const resources = {
       "Partnerships": "Partenariats",
       "Login": "Connexion",
       "Features": "Fonctionnalités",
+      "Phone Verification": "Vérification téléphonique",
+      "Phone Number Description": "Entrez votre numéro de téléphone pour vérifier votre identité. Cela nous aide à maintenir notre communauté en sécurité.",
+      "Phone Privacy Notice": "Votre numéro de téléphone est privé et ne sera jamais partagé avec d'autres utilisateurs.",
+      "Enter OTP": "Entrez le code de vérification",
+      "Resend OTP": "Renvoyer le code",
+      "Back": "Retour",
     }
   },
   de: {
@@ -5115,6 +5169,12 @@ const resources = {
       "Partnerships": "Partnerschaften",
       "Login": "Anmelden",
       "Features": "Funktionen",
+      "Phone Verification": "Telefonverifizierung",
+      "Phone Number Description": "Geben Sie Ihre Telefonnummer ein, um Ihre Identität zu bestätigen. Dies hilft uns, unsere Community sicher zu halten.",
+      "Phone Privacy Notice": "Ihre Telefonnummer ist privat und wird niemals mit anderen Nutzern geteilt.",
+      "Enter OTP": "Bestätigungscode eingeben",
+      "Resend OTP": "Code erneut senden",
+      "Back": "Zurück",
     }
   },
   ru: {
@@ -5612,6 +5672,12 @@ const resources = {
       "Partnerships": "Asociaciones",
       "Login": "Войти",
       "Features": "Функции",
+      "Phone Verification": "Подтверждение телефона",
+      "Phone Number Description": "Введите свой номер телефона для подтверждения личности. Это помогает нам поддерживать безопасность нашего сообщества.",
+      "Phone Privacy Notice": "Ваш номер телефона является конфиденциальным и никогда не будет передан другим пользователям.",
+      "Enter OTP": "Введите код подтверждения",
+      "Resend OTP": "Отправить код повторно",
+      "Back": "Назад",
     }
   },
   es: {
@@ -5971,6 +6037,12 @@ const resources = {
       "Partnerships": "Partnership",
       "Login": "Iniciar sesión",
       "Features": "Características",
+      "Phone Verification": "Verificación de teléfono",
+      "Phone Number Description": "Ingrese su número de teléfono para verificar su identidad. Esto nos ayuda a mantener nuestra comunidad segura.",
+      "Phone Privacy Notice": "Su número de teléfono es privado y nunca se compartirá con otros usuarios.",
+      "Enter OTP": "Ingrese el código de verificación",
+      "Resend OTP": "Reenviar código",
+      "Back": "Atrás",
     }
   },
   it: {
@@ -6330,6 +6402,12 @@ const resources = {
       "Partnerships": "Parcerias",
       "Login": "Accedi",
       "Features": "Funzionalità",
+      "Phone Verification": "Verifica telefonica",
+      "Phone Number Description": "Inserisci il tuo numero di telefono per verificare la tua identità. Questo ci aiuta a mantenere la nostra comunità sicura.",
+      "Phone Privacy Notice": "Il tuo numero di telefono è privato e non verrà mai condiviso con altri utenti.",
+      "Enter OTP": "Inserisci il codice di verifica",
+      "Resend OTP": "Invia di nuovo il codice",
+      "Back": "Indietro",
     }
   },
   pt: {
@@ -6689,6 +6767,12 @@ const resources = {
       "Partnerships": "Partnerschappen",
       "Login": "Entrar",
       "Features": "Recursos",
+      "Phone Verification": "Verificação de telefone",
+      "Phone Number Description": "Digite seu número de telefone para verificar sua identidade. Isso nos ajuda a manter nossa comunidade segura.",
+      "Phone Privacy Notice": "Seu número de telefone é privado e nunca será compartilhado com outros usuários.",
+      "Enter OTP": "Digite o código de verificação",
+      "Resend OTP": "Reenviar código",
+      "Back": "Voltar",
     }
   },
   nl: {
@@ -7050,6 +7134,12 @@ const resources = {
       "Partnerships": "パートナーシップ",
       "Login": "Inloggen",
       "Features": "Functies",
+      "Phone Verification": "Telefonische verificatie",
+      "Phone Number Description": "Voer uw telefoonnummer in om uw identiteit te verifiëren. Dit helpt ons om onze gemeenschap veilig te houden.",
+      "Phone Privacy Notice": "Uw telefoonnummer is privé en wordt nooit gedeeld met andere gebruikers.",
+      "Enter OTP": "Voer verificatiecode in",
+      "Resend OTP": "Code opnieuw verzenden",
+      "Back": "Terug",
     }
   },
   ja: {
@@ -7378,7 +7468,12 @@ const resources = {
       "Multi-language support": "多言語サポート",
       "Login": "ログイン",
       "Features": "機能",
-
+      "Phone Verification": "電話認証",
+      "Phone Number Description": "身元確認のために電話番号を入力してください。これにより、コミュニティの安全を維持できます。",
+      "Phone Privacy Notice": "電話番号はプライベートであり、他のユーザーと共有されることはありません。",
+      "Enter OTP": "確認コードを入力",
+      "Resend OTP": "コードを再送信",
+      "Back": "戻る",
     }
   },
   ko: {
@@ -7707,7 +7802,12 @@ const resources = {
       "Multi-language support": "다국어 지원",
       "Login": "로그인",
       "Features": "기능",
-
+      "Phone Verification": "전화 인증",
+      "Phone Number Description": "신원 확인을 위해 전화번호를 입력해주세요. 이를 통해 커뮤니티를 안전하게 유지할 수 있습니다.",
+      "Phone Privacy Notice": "귀하의 전화번호는 비공개이며 다른 사용자와 절대 공유되지 않습니다.",
+      "Enter OTP": "인증 코드 입력",
+      "Resend OTP": "코드 다시 보내기",
+      "Back": "뒤로",
     }
   },
   hi: {
@@ -8036,7 +8136,12 @@ const resources = {
       "Multi-language support": "बहु-भाषा समर्थन",
       "Login": "लॉगिन",
       "Features": "विशेषताएं",
-
+      "Phone Verification": "फोन सत्यापन",
+      "Phone Number Description": "अपनी पहचान सत्यापित करने के लिए अपना फोन नंबर दर्ज करें। इससे हमें अपने समुदाय को सुरक्षित रखने में मदद मिलती है।",
+      "Phone Privacy Notice": "आपका फोन नंबर निजी है और इसे अन्य उपयोगकर्ताओं के साथ कभी साझा नहीं किया जाएगा।",
+      "Enter OTP": "सत्यापन कोड दर्ज करें",
+      "Resend OTP": "कोड फिर से भेजें",
+      "Back": "वापस",
     }
   },
   vi: {
@@ -8365,7 +8470,12 @@ const resources = {
       "Multi-language support": "Hỗ trợ đa ngôn ngữ",
       "Login": "Đăng nhập",
       "Features": "Tính năng",
-
+      "Phone Verification": "Xác minh điện thoại",
+      "Phone Number Description": "Nhập số điện thoại của bạn để xác minh danh tính. Điều này giúp chúng tôi giữ cho cộng đồng an toàn.",
+      "Phone Privacy Notice": "Số điện thoại của bạn là riêng tư và sẽ không bao giờ được chia sẻ với người dùng khác.",
+      "Enter OTP": "Nhập mã xác minh",
+      "Resend OTP": "Gửi lại mã",
+      "Back": "Quay lại",
     }
   },
 };

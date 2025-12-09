@@ -8,7 +8,10 @@ import { useNavigate } from "react-router-dom";
 import { MyContext } from "../Context/MyProvider";
 import axios from "axios";
 import { showTost } from "../showTost";
+import { useTranslation } from "react-i18next";
+
 const PhoneNum = () => {
+  const { t } = useTranslation();
 
   const { setNumber, setCcode, basUrl } = useContext(MyContext);
 
@@ -133,14 +136,15 @@ const PhoneNum = () => {
         <div className="container mx-auto">
           {otpShow
             ? <section className="steps step-1 active rounded-[40px] relative">
-              <div className="w-[100%] bg-[#EFEDEE]  pt-[30px] z-[999]  pb-[20px] fixed top-[0px] ">
+              {/* Progress bar - relative positioning to avoid SharedHeader conflict */}
+              <div className="w-[100%] bg-[#EFEDEE] pt-[10px] pb-[15px] mb-[20px] rounded-lg">
                 <div className="bg-white w-[83%] h-[5px] mx-auto rounded-full">
-                  <div className="bg-[rgba(152,14,255,255)]  rounded-full w-[18%] h-[5px] "></div>
+                  <div className="bg-[rgba(152,14,255,255)] rounded-full w-[18%] h-[5px]"></div>
                 </div>
               </div>
-              <div className="text-center mt-[10px]">
+              <div className="text-center">
                 <h1 className="text-[28px] max-_430_:text-[26px] font-[600] max-_430_:w-[300px]">
-                  Enter Your Otp
+                  {t('Enter OTP')}
                 </h1>
               </div>
               <div className="mt-[20px] w-[100%]">
@@ -161,7 +165,7 @@ const PhoneNum = () => {
                   ))}
                 </div>
               </div>
-              <button disabled={isActive} ref={ResendRef} onClick={ResendOtpHandler} className="mt-[40px] font-[600] text-[16px] text-[rgba(152,14,255,255)]">Resend Otp</button>
+              <button disabled={isActive} ref={ResendRef} onClick={ResendOtpHandler} className="mt-[40px] font-[600] text-[16px] text-[rgba(152,14,255,255)]">{t('Resend OTP')}</button>
               <button
                 style={{ background: "rgba(152,14,255,255)" }}
                 onClick={CheckOtpHandler}
@@ -169,25 +173,28 @@ const PhoneNum = () => {
               >
                 <div className="flex items-center justify-center gap-[10px]">
                   <span className="font-bold text-[1.25rem] text-white">
-                    Submit
+                    {t('Submit')}
                   </span>
                 </div>
               </button>
-              <h3 onClick={() => setOtpShow(false)} className="mt-[20px] cursor-pointer">Back</h3>
+              <h3 onClick={() => setOtpShow(false)} className="mt-[20px] cursor-pointer">{t('Back')}</h3>
             </section>
             : <section className="steps step-1 active rounded-[40px] relative ">
-              <div className="w-[100%] bg-[#EFEDEE]  pt-[30px] z-[999]  pb-[20px] fixed top-[0px] ">
+              {/* Progress bar - relative positioning to avoid SharedHeader conflict */}
+              <div className="w-[100%] bg-[#EFEDEE] pt-[10px] pb-[15px] mb-[20px] rounded-lg">
                 <div className="bg-white w-[83%] h-[5px] mx-auto rounded-full">
-                  <div className="bg-[rgba(152,14,255,255)]  rounded-full w-[18%] h-[5px] "></div>
+                  <div className="bg-[rgba(152,14,255,255)] rounded-full w-[18%] h-[5px]"></div>
                 </div>
               </div>
-              <div className="text-start mt-[10px]">
+              <div className="text-start">
                 <h1 className="text-[28px] max-_430_:text-[26px] font-[600] max-_430_:w-[300px]">
-                  Your GoMeet identity &#128526;
+                  {t('Phone Verification')} 📱
                 </h1>
-                <p className="text-[20px] mt-[10px] max-_430_:text-[17px] max-_380_:text-[16px]">
-                  Add your phone number and your job to tell other what you
-                  do for a living.
+                <p className="text-[18px] mt-[10px] max-_430_:text-[16px] max-_380_:text-[15px] text-gray-700">
+                  {t('Phone Number Description')}
+                </p>
+                <p className="text-[14px] mt-[8px] max-_430_:text-[13px] text-gray-500 italic">
+                  🔒 {t('Phone Privacy Notice')}
                 </p>
               </div>
               <div className="mt-[20px] w-[100%]">
@@ -195,7 +202,7 @@ const PhoneNum = () => {
                   <PhoneInput
                     className="text-black w-[100%] px-[15px] py-[15px] Demo"
                     international
-                    defaultCountry={"IN"}
+                    defaultCountry={"SE"}
                     value={value}
                     onChange={setValue}
                     name="phone"
