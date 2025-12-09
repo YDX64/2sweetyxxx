@@ -83,6 +83,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: false
+          load: true
           tags: 2sweety-web:test
           cache-from: type=gha
           cache-to: type=gha,mode=max
@@ -108,9 +109,9 @@ jobs:
 
       - name: Test Docker image
         run: |
-          docker run -d --name test-container -p 8080:8080 2sweety-web:test
+          docker run -d --name test-container -p 8080:80 2sweety-web:test
           sleep 10
-          curl -f http://localhost:8080/health || exit 1
+          curl -f http://localhost:8080/ || exit 1
           docker stop test-container
 
   # ============================================
