@@ -7,6 +7,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import AgoraRTC, { AgoraRTCProvider } from "agora-rtc-react";
+import { ThemeProvider } from './Context/ThemeContext';
 
 const rootElement = document.getElementById('root');
 const root = ReactDOM.createRoot(rootElement);
@@ -19,9 +20,11 @@ const client = AgoraRTC.createClient({ mode: "rtc", codec: "vp8" });
 
 root.render(
   <React.StrictMode>
-    <AgoraRTCProvider client={client}>
-      <App />
-    </AgoraRTCProvider>
+    <ThemeProvider>
+      <AgoraRTCProvider client={client}>
+        <App />
+      </AgoraRTCProvider>
+    </ThemeProvider>
   </React.StrictMode>
 );
 

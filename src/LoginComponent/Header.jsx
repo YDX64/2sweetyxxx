@@ -9,7 +9,9 @@ import { Link, useNavigate } from "react-router-dom";
 import { BiEditAlt } from "react-icons/bi";
 import axios from "axios";
 import { MyContext } from "../Context/MyProvider";
+import { useTheme } from "../Context/ThemeContext";
 import { useTranslation } from "react-i18next";
+import { FiSun, FiMoon } from "react-icons/fi";
 import { TodoContext } from "../Context";
 import { collection, doc, getDoc, getDocs, setDoc, updateDoc } from "firebase/firestore";
 import { db, messaging } from "../Users_Chats/Firebase";
@@ -35,6 +37,8 @@ const Header = () => {
   const Data = useContext(TodoContext);
 
   const { t, i18n } = useTranslation();
+
+  const { theme, toggleTheme, isDark } = useTheme();
 
   const { imageBaseURL, basUrl, updateId, callStatus, color, setColor, chatId, setChatId, setCallstatus, setChatUserName, atendCall, setAtendCall, setOnesignalAppId, setAgoraAppId, setOnesignalKey } = useContext(MyContext);
 
@@ -667,8 +671,22 @@ const Header = () => {
             </div>
             <div onClick={() => ColorHandler("Notification")} className="flex items-center">
               <Link to="/notification" >
-                <IoIosNotificationsOutline className="text-[25px] text-black" />
+                <IoIosNotificationsOutline className="text-[25px] text-black dark:text-white" />
               </Link>
+            </div>
+            <div className="header-element">
+              <button
+                onClick={toggleTheme}
+                className="btn p-2 d-flex align-items-center justify-content-center rounded-circle"
+                style={{ width: '40px', height: '40px' }}
+                title={isDark ? t('Switch to Light Mode') : t('Switch to Dark Mode')}
+              >
+                {isDark ? (
+                  <FiSun className="text-[20px] text-yellow-400" />
+                ) : (
+                  <FiMoon className="text-[20px] text-gray-600" />
+                )}
+              </button>
             </div>
             <div className="header-element">
               <div className="dropdown">
