@@ -56,7 +56,6 @@ const MyProvider = ({ children }) => {
     const [atendCall, setAtendCall] = useState(false);
     const [toastMsg, setToastMsg] = useState();
     const [toastShow, setToastShow] = useState(false);
-    const [valodateId, setValidateId] = useState(false);
     const [agoraAppId, setAgoraAppId] = useState();
     const [onesignalAppId, setOnesignalAppId] = useState();
     const [onesignalKey, setOnesignalKey] = useState();
@@ -106,7 +105,6 @@ const MyProvider = ({ children }) => {
         atendCall, setAtendCall,
         toastMsg, setToastMsg,
         toastShow, setToastShow,
-        valodateId, setValidateId,
         agoraAppId, setAgoraAppId,
         onesignalAppId, setOnesignalAppId,
         onesignalKey, setOnesignalKey,

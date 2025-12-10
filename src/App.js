@@ -29,7 +29,6 @@ import BuyCoin from "./LoginComponent/BuyCoin";
 import History from "./LoginComponent/History";
 import BlockUser from "./LoginComponent/BlockUser";
 import { MyProvider } from "./Context/MyProvider";
-import { ThemeProvider } from "./Context/ThemeContext";
 import NotFound from "./NotFound";
 import Pages from "./LoginComponent/Pages";
 import Razorpay from "./PaymentMethod/Razorpay";
@@ -37,20 +36,13 @@ import PayPal from "./PaymentMethod/PayPal";
 import Payment from "./PaymentMethod/Payment";
 import Payfast from "./PaymentMethod/Payfast";
 import Success, { Cancel } from "./PaymentMethod/Success";
-// i18n is now initialized in index.js with I18nextProvider
+import i18n from "./Language";
 import { TodoContext } from "./Context";
 import UserChat from "./LoginComponent/UserChat";
 import NotificationShow from "./LoginComponent/NotificationShow";
 import Dashboard from "./LoginComponent/Dashboard";
 import Register from "./MobilComponent/Register";
-import Validate from "./MobilComponent/Validate";
 import PaymentRespons from "./PaymentMethod/PaymentRespons";
-import PrivacyPolicy from "./LoginComponent/PrivacyPolicy";
-import TermsOfService from "./LoginComponent/TermsOfService";
-import AboutUs from "./LoginComponent/AboutUs";
-import ContactUs from "./LoginComponent/ContactUs";
-import SharedHeader from "./components/SharedHeader";
-
 const App = () => {
 
   const [demo, setDemo] = useState();
@@ -62,13 +54,12 @@ const App = () => {
   }, [demo]);
 
   return (
-    <ThemeProvider>
+    <div>
       <MyProvider>
         <TodoContext.Provider value={{ demo, setDemo }}>
           <Router>
-            <SharedHeader isAuthenticated={!!isAuthenticated} />
-            <div className="pt-16 md:pt-20">
-              <Routes>
+            {isAuthenticated && <Header />}
+            <Routes>
               {isAuthenticated ? (
                 <Route path="/" element={<Dashboard />} />
               ) :(
@@ -96,18 +87,6 @@ const App = () => {
               <Route path="/buyCoin" element={<BuyCoin />} />
               <Route path="/history" element={<History />} />
               <Route path="/blockUser" element={<BlockUser />} />
-              {/* Specific /page/* routes must come BEFORE the generic /page/:title */}
-              <Route path="/page/about" element={<AboutUs />} />
-              <Route path="/page/about-us" element={<AboutUs />} />
-              <Route path="/page/om-oss" element={<AboutUs />} />
-              <Route path="/page/contact" element={<ContactUs />} />
-              <Route path="/page/contact-us" element={<ContactUs />} />
-              <Route path="/page/kontakt" element={<ContactUs />} />
-              <Route path="/page/terms" element={<TermsOfService />} />
-              <Route path="/page/terms-of-service" element={<TermsOfService />} />
-              <Route path="/page/privacy" element={<PrivacyPolicy />} />
-              <Route path="/page/privacy-policy" element={<PrivacyPolicy />} />
-              {/* Generic page route - catches all other /page/* URLs */}
               <Route path="/page/:title" element={<Pages />} />
               <Route path="/razorpay" element={<Razorpay />} />
               <Route path="/paypal" element={<PayPal />} />
@@ -116,16 +95,10 @@ const App = () => {
               <Route path="/done" element={<Success />} />
               <Route path="/cancel" element={<Cancel />} />
               <Route path="/chat" element={<UserChat />} />
-              <Route path="/validate" element={<Validate />} />
               <Route path="/PaymentRespons" element={<PaymentRespons />} />
               <Route path="/notification" element={<NotificationShow />} />
-              <Route path="/privacy" element={<PrivacyPolicy />} />
-              <Route path="/terms" element={<TermsOfService />} />
-              <Route path="/about" element={<AboutUs />} />
-              <Route path="/contact" element={<ContactUs />} />
               <Route path="*" element={<NotFound />} />
-              </Routes>
-            </div>
+            </Routes>
           </Router>
         </TodoContext.Provider>
       </MyProvider>
@@ -142,7 +115,7 @@ const App = () => {
         pauseOnHover
         theme="light"
       />
-    </ThemeProvider>
+    </div>
   );
 };
 
