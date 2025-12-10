@@ -59,46 +59,48 @@ const App = () => {
         <TodoContext.Provider value={{ demo, setDemo }}>
           <Router>
             {isAuthenticated && <Header />}
-            <Routes>
-              {isAuthenticated ? (
-                <Route path="/" element={<Dashboard />} />
-              ) :(
-                <Route path="/" element={<Home />} />
-              )}
-              <Route path="/register" element={<Register />} />
-              <Route path="/phonenumber" element={<PhoneNum />} />
-              <Route path="/birthdate" element={<Birthdate />} />
-              <Route path="/gender" element={<Gender />} />
-              <Route path="/golas" element={<Golas />} />
-              <Route path="/nearby" element={<Nearby />} />
-              <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/hobbies" element={<Hobbies />} />
-              <Route path="/languages" element={<Languages />} />
-              <Route path="/religion" element={<Religion />} />
-              <Route path="/preference" element={<Gender2 />} />
-              <Route path="/image" element={<Image />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/home" element={<Home />} />
-              <Route path="/wallet" element={<Wallet />} />
-              <Route path="/detail/:name" element={<Detail />} />
-              <Route path="/explore" element={<Favorites />} />
-              <Route path="/profile" element={<Profile />} />
-              <Route path="/upgrade" element={<Upgrade />} />
-              <Route path="/buyCoin" element={<BuyCoin />} />
-              <Route path="/history" element={<History />} />
-              <Route path="/blockUser" element={<BlockUser />} />
-              <Route path="/page/:title" element={<Pages />} />
-              <Route path="/razorpay" element={<Razorpay />} />
-              <Route path="/paypal" element={<PayPal />} />
-              <Route path="/payment" element={<Payment />} />
-              <Route path="/payfast" element={<Payfast />} />
-              <Route path="/done" element={<Success />} />
-              <Route path="/cancel" element={<Cancel />} />
-              <Route path="/chat" element={<UserChat />} />
-              <Route path="/PaymentRespons" element={<PaymentRespons />} />
-              <Route path="/notification" element={<NotificationShow />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
+            <div className={isAuthenticated ? "main-content ml-[18.65rem] max-lg:ml-0 pt-[75px] min-h-screen" : ""}>
+              <Routes>
+                {isAuthenticated ? (
+                  <Route path="/" element={<Dashboard />} />
+                ) :(
+                  <Route path="/" element={<Home />} />
+                )}
+                <Route path="/register" element={<Register />} />
+                <Route path="/phonenumber" element={<PhoneNum />} />
+                <Route path="/birthdate" element={<Birthdate />} />
+                <Route path="/gender" element={<Gender />} />
+                <Route path="/golas" element={<Golas />} />
+                <Route path="/nearby" element={<Nearby />} />
+                <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/hobbies" element={<Hobbies />} />
+                <Route path="/languages" element={<Languages />} />
+                <Route path="/religion" element={<Religion />} />
+                <Route path="/preference" element={<Gender2 />} />
+                <Route path="/image" element={<Image />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/home" element={<Home />} />
+                <Route path="/wallet" element={<Wallet />} />
+                <Route path="/detail/:name" element={<Detail />} />
+                <Route path="/explore" element={<Favorites />} />
+                <Route path="/profile" element={<Profile />} />
+                <Route path="/upgrade" element={<Upgrade />} />
+                <Route path="/buyCoin" element={<BuyCoin />} />
+                <Route path="/history" element={<History />} />
+                <Route path="/blockUser" element={<BlockUser />} />
+                <Route path="/page/:title" element={<Pages />} />
+                <Route path="/razorpay" element={<Razorpay />} />
+                <Route path="/paypal" element={<PayPal />} />
+                <Route path="/payment" element={<Payment />} />
+                <Route path="/payfast" element={<Payfast />} />
+                <Route path="/done" element={<Success />} />
+                <Route path="/cancel" element={<Cancel />} />
+                <Route path="/chat" element={<UserChat />} />
+                <Route path="/PaymentRespons" element={<PaymentRespons />} />
+                <Route path="/notification" element={<NotificationShow />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </div>
           </Router>
         </TodoContext.Provider>
       </MyProvider>
