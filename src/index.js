@@ -1,5 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+// Import CSS files - order matters for proper cascade
+import './css/bootstrap.min.css';
+import './css/style.css';
+import './css/responsive.css';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';

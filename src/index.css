@@ -1,9 +1,3 @@
-/* Bootstrap and custom CSS must come first for proper cascade */
-@import "./css/bootstrap.min.css";
-@import "./css/style.css";
-@import "./css/responsive.css";
-
-/* Tailwind layers */
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
