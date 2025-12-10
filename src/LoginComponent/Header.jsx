@@ -2,6 +2,7 @@
 /* jshint esversion: 8 */
 /* jshint ignore:start */
 import React, { useContext, useEffect, useRef, useState } from "react";
+import imag from "../images/logos/logo.png";
 import imag3 from "../images/flag/united-kingdom.png";
 import Crown from "../Icon/crown-alt.png";
 import { Link, useNavigate } from "react-router-dom";
@@ -29,10 +30,6 @@ import { IoMdClose } from "react-icons/io";
 import UserChat from "./UserChat";
 import SendMessage from "../images/icons/Chat-Icon.svg"
 import Keepswiping from "../images/icons/keepswap.svg"
-
-// Use 2Sweety logo from public folder
-const imag = "/logo.png";
-
 const Header = () => {
 
   const Data = useContext(TodoContext);
@@ -66,19 +63,7 @@ const Header = () => {
   const [totalLiked, setTotalLiked] = useState([]);
   const [myData, setMyData] = useState();
   const [showChat, setShowChat] = useState(false);
-  const languageData = [
-    { title: "English", img: require("../images/flag/united-kingdom.png"), id: "en" },
-    { title: "Swedish", img: require("../images/flag/united-kingdom.png"), id: "sv" },
-    { title: "Norwegian", img: require("../images/flag/united-kingdom.png"), id: "no" },
-    { title: "Finnish", img: require("../images/flag/united-kingdom.png"), id: "fi" },
-    { title: "Danish", img: require("../images/flag/united-kingdom.png"), id: "da" },
-    { title: "Turkish", img: require("../images/flag/united-kingdom.png"), id: "tr" },
-    { title: "Arabic", img: require("../images/flag/arabic.png"), id: "ar" },
-    { title: "Chinese", img: require("../images/flag/united-kingdom.png"), id: "zh" },
-    { title: "French", img: require("../images/flag/spain.png"), id: "fr" },
-    { title: "German", img: require("../images/flag/united-kingdom.png"), id: "de" },
-    { title: "Russian", img: require("../images/flag/united-kingdom.png"), id: "ru" }
-  ];
+  const languageData = [{ title: "English", img: require("../images/flag/united-kingdom.png"), id: "en" }, { title: "Arabic", img: require("../images/flag/arabic.png"), id: "ar" }, { title: "Spanish", img: require("../images/flag/spain.png"), id: "sp" }, { title: "Gujarati", img: require("../images/flag/flag.png"), id: "gu" }, { title: "Hindi", img: require("../images/flag/flag.png"), id: "hi" }, { title: "Africans", img: require("../images/flag/south-africa.png"), id: "af" }, { title: "Bengali", img: require("../images/flag/bangladesh.png"), id: "ba" }, { title: "Indonesian", img: require("../images/flag/indonesia-flag.png"), id: "in" }];
 
   const newProfile = user && user.profile_pic;
 
@@ -102,7 +87,7 @@ const Header = () => {
 
   const changeLanguage = (lang) => {
     i18n.changeLanguage(lang);
-    localStorage.setItem("i18nextLng", lang);
+    sessionStorage.setItem("I18", lang);
   };
 
   const SelectLanuguageHandler = (img, name) => {
@@ -190,7 +175,7 @@ const Header = () => {
       setLanguage(Json.Name);
     }
 
-    const Lan = localStorage.getItem("i18nextLng");
+    const Lan = sessionStorage.getItem("I18");
     if (Lan) {
       i18n.changeLanguage(Lan);
     }
@@ -329,7 +314,7 @@ const Header = () => {
       const UserId = JSON.parse(UserData);
 
       OneSignal.init({
-        appId: process.env.REACT_APP_ONESIGNAL_APP_ID || "94b2b6c5-fabb-4454-a2b7-75cf75b84789",
+        appId: "94b2b6c5-fabb-4454-a2b7-75cf75b84789",
         notifyButton: {
           enable: true,
         },
@@ -619,19 +604,7 @@ const Header = () => {
       <header className="header-wrapper">
         <div className="main-header-container border-b-[1px] container-fluid px-md-4 px-3 h-[75px]">
           <div className="header-content-left">
-            {/* Logo - visible on larger screens */}
-            <div className="header-element d-none d-lg-block">
-              <Link to="/" onClick={() => ColorHandler("Home")} className="d-flex align-items-center">
-                <img
-                  src={imag}
-                  alt="2Sweety Logo"
-                  className="h-[50px] w-auto object-contain"
-                  style={{ maxHeight: '50px' }}
-                />
-              </Link>
-            </div>
 
-            {/* Mobile menu toggle */}
             <div className="header-element">
               <button
                 onClick={SlidBarHAndler}
@@ -670,7 +643,7 @@ const Header = () => {
             <div className="header-element">
               <Link onClick={() => ColorHandler("Upgrade")}
                 to="/upgrade"
-                style={{ background: "#ec4899" }}
+                style={{ background: "rgba(152,14,255,255)" }}
                 className="btn text-white gap-1 df-center"
               >
                 <svg
@@ -765,7 +738,7 @@ const Header = () => {
           </button>
           <button
             onClick={SlidBarHAndler}
-            className="btn-close-sidebar d-lg-none text-[#ec4899]"
+            className="btn-close-sidebar d-lg-none text-[rgba(152,14,255,255)]"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -783,7 +756,7 @@ const Header = () => {
 
         <div className="main-sidebar scroll-container" id="sidebar-scroll">
           <div className="text-right">
-            <div className="rounded-full py-[2px] px-[7px] bg-[#ec4899] inline-block ">
+            <div className="rounded-full py-[2px] px-[7px] bg-[rgba(152,14,255,255)] inline-block ">
               <button
                 onClick={ProfileHandler}
                 className="text-end text-white flex items-center"
@@ -798,7 +771,7 @@ const Header = () => {
                 src={Crown}
                 style={{ width: "25px", height: "25px" }}
                 alt="user-avatar"
-                className="bg-[#ec4899] rounded-full p-[2px]"
+                className="bg-[rgba(152,14,255,255)] rounded-full p-[2px]"
               />
             </div>}
             <div className="relative size-40 w-[114px]">
@@ -820,7 +793,7 @@ const Header = () => {
                   cy="18"
                   r="16"
                   fill="none"
-                  className="stroke-current text-[#ec4899] dark:text-[#ec4899]"
+                  className="stroke-current text-[rgba(152,14,255,255)] dark:text-[rgba(152,14,255,255)]"
                   stroke-width="2"
                   stroke-dasharray="100"
                   stroke-dashoffset={100 - localStorage.getItem("Profile_ratio")}
@@ -845,7 +818,7 @@ const Header = () => {
               </div>
             </div>
             <div className="bg-white py-[2px] px-[4px] rounded-full -mt-[20px] z-[777]">
-              <span className="bg-[#ec4899] text-white rounded-full px-[5px]">
+              <span className="bg-[rgba(152,14,255,255)] text-white rounded-full px-[5px]">
                 {localStorage.getItem("Profile_ratio") + '%'}
               </span>
             </div>
@@ -895,7 +868,7 @@ const Header = () => {
                         >
                           <path
                             style={{
-                              fill: color === "Home" && "#ec4899",
+                              fill: color === "Home" && "rgba(152,14,255,255)",
                             }}
                             d="M16 19.75H11.75V14.5C11.75 13.535 10.965 12.75 10 12.75C9.035 12.75 8.25 13.535 8.25 14.5V19.75H4C1.582 19.75 0.25 18.418 0.25 16V9.65004C0.25 7.52704 0.835992 6.93401 1.79199 6.14101L7.91199 1.01003C9.12099 -0.00497067 10.879 -0.00497067 12.088 1.01003L18.208 6.14101C19.164 6.93401 19.75 7.52804 19.75 9.65004V16C19.75 18.418 18.418 19.75 16 19.75ZM13.25 18.25H16C17.577 18.25 18.25 17.577 18.25 16V9.65004C18.25 8.12404 17.998 7.91506 17.251 7.29506L11.125 2.15908C10.473 1.61308 9.527 1.61308 8.875 2.15908L2.74902 7.29506C2.00202 7.91506 1.75 8.12404 1.75 9.65004V16C1.75 17.577 2.423 18.25 4 18.25H6.75V14.5C6.75 12.708 8.208 11.25 10 11.25C11.792 11.25 13.25 12.708 13.25 14.5V18.25Z"
                             fill="#25314C"
@@ -903,7 +876,7 @@ const Header = () => {
                         </svg>
                         <span
                           style={{
-                            color: color === "Home" && "#ec4899",
+                            color: color === "Home" && "rgba(152,14,255,255)",
                           }}
                         >
                           Home
@@ -922,7 +895,7 @@ const Header = () => {
                           <path
                             style={{
                               fill:
-                                color === "Explore" && "#ec4899",
+                                color === "Explore" && "rgba(152,14,255,255)",
                             }}
                             d="M9.99997 18.75C9.89397 18.75 9.78793 18.728 9.68893 18.683C9.36193 18.534 1.66598 14.965 0.431976 8.609C-0.0450242 6.15 0.433982 3.75098 1.71298 2.19298C2.74798 0.930984 4.23594 0.259967 6.01694 0.250967C6.02594 0.250967 6.03494 0.250967 6.04294 0.250967C8.07494 0.250967 9.31399 1.408 9.99899 2.393C10.687 1.404 11.9359 0.241967 13.9809 0.250967C15.7629 0.259967 17.2519 0.930984 18.2879 2.19298C19.5649 3.74998 20.0429 6.14898 19.5649 8.60998C18.3329 14.966 10.6359 18.536 10.3089 18.684C10.2119 18.728 10.106 18.75 9.99997 18.75ZM6.04196 1.74999C6.03596 1.74999 6.03099 1.74999 6.02499 1.74999C4.68699 1.75599 3.62702 2.22497 2.87302 3.14397C1.87402 4.36097 1.513 6.29699 1.905 8.32299C2.86 13.247 8.59297 16.447 9.99997 17.165C11.407 16.447 17.14 13.247 18.094 8.32299C18.488 6.29599 18.127 4.35997 17.13 3.14397C16.376 2.22597 15.3159 1.75797 13.9749 1.75097C13.9689 1.75097 13.963 1.75097 13.958 1.75097C11.586 1.75097 10.745 4.12799 10.711 4.22899C10.607 4.53199 10.3209 4.73797 10.0009 4.73797C9.99895 4.73797 9.99792 4.73797 9.99692 4.73797C9.67592 4.73697 9.38993 4.53198 9.28793 4.22698C9.25493 4.12698 8.41296 1.74999 6.04196 1.74999Z"
                             fill="#25314C"
@@ -931,7 +904,7 @@ const Header = () => {
                         <span
                           style={{
                             color:
-                              color === "Explore" && "#ec4899",
+                              color === "Explore" && "rgba(152,14,255,255)",
                           }}
                         >
                           Explore
@@ -950,7 +923,7 @@ const Header = () => {
                           <path
                             style={{
                               fill:
-                                color === "Settings" && "#ec4899",
+                                color === "Settings" && "rgba(152,14,255,255)",
                             }}
                             d="M10 6.25C7.93202 6.25 6.25001 7.932 6.25001 10C6.25001 12.068 7.93202 13.75 10 13.75C12.068 13.75 13.75 12.068 13.75 10C13.75 7.932 12.068 6.25 10 6.25ZM10 12.25C8.75902 12.25 7.75001 11.241 7.75001 10C7.75001 8.759 8.75902 7.75 10 7.75C11.241 7.75 12.25 8.759 12.25 10C12.25 11.241 11.241 12.25 10 12.25ZM19.208 11.953C18.514 11.551 18.082 10.803 18.081 10C18.08 9.199 18.509 8.45201 19.212 8.04501C19.727 7.74601 19.903 7.08299 19.605 6.56699L17.933 3.681C17.635 3.166 16.972 2.98901 16.456 3.28601C15.757 3.68901 14.888 3.68901 14.187 3.28201C13.496 2.88101 13.066 2.13601 13.066 1.33701C13.066 0.738006 12.578 0.251007 11.979 0.251007H8.024C7.424 0.251007 6.93703 0.738006 6.93703 1.33701C6.93703 2.13601 6.50701 2.881 5.81401 3.284C5.11501 3.689 4.24702 3.68999 3.54802 3.28699C3.03102 2.98899 2.36903 3.16701 2.07103 3.68201L0.397018 6.57101C0.0990181 7.08601 0.276005 7.74799 0.796005 8.04999C1.489 8.45099 1.92102 9.19799 1.92302 9.99899C1.92502 10.801 1.49501 11.55 0.793014 11.957C0.543014 12.102 0.363016 12.335 0.289016 12.615C0.215016 12.894 0.253025 13.185 0.398025 13.436L2.06902 16.32C2.36702 16.836 3.03002 17.015 3.54802 16.716C4.24702 16.313 5.11402 16.314 5.80302 16.713L5.80501 16.714C5.80801 16.716 5.81102 16.718 5.81502 16.72C6.50602 17.121 6.93501 17.866 6.93401 18.666C6.93401 19.265 7.421 19.752 8.02 19.752H11.979C12.578 19.752 13.065 19.265 13.065 18.667C13.065 17.867 13.495 17.122 14.189 16.719C14.887 16.314 15.755 16.312 16.455 16.716C16.971 17.014 17.633 16.837 17.932 16.322L19.606 13.433C19.903 12.916 19.726 12.253 19.208 11.953ZM16.831 15.227C15.741 14.752 14.476 14.817 13.434 15.42C12.401 16.019 11.719 17.078 11.587 18.25H8.41002C8.28002 17.078 7.596 16.017 6.563 15.419C5.523 14.816 4.25602 14.752 3.16902 15.227L1.89302 13.024C2.84802 12.321 3.425 11.193 3.42101 9.99301C3.418 8.80101 2.84201 7.681 1.89201 6.978L3.16902 4.77399C4.25702 5.24799 5.52402 5.18399 6.56602 4.57999C7.59802 3.98199 8.28 2.92201 8.412 1.75101H11.587C11.718 2.92301 12.401 3.982 13.436 4.582C14.475 5.185 15.742 5.24899 16.831 4.77499L18.108 6.978C17.155 7.68 16.579 8.806 16.581 10.004C16.582 11.198 17.158 12.32 18.109 13.025L16.831 15.227Z"
                             fill="#25314C"
@@ -959,7 +932,7 @@ const Header = () => {
                         <span
                           style={{
                             color:
-                              color === "Settings" && "#ec4899",
+                              color === "Settings" && "rgba(152,14,255,255)",
                           }}
                         >
                           Settings
@@ -978,7 +951,7 @@ const Header = () => {
                           <path
                             style={{
                               fill:
-                                color === "Wallet" && "#ec4899",
+                                color === "Wallet" && "rgba(152,14,255,255)",
                             }}
                             d="M16.75 4.297V4C16.75 1.582 15.418 0.25 13 0.25H3C1.483 0.25 0.25 1.483 0.25 3V16C0.25 18.418 1.582 19.75 4 19.75H16C18.418 19.75 19.75 18.418 19.75 16V8C19.75 5.845 18.692 4.553 16.75 4.297ZM18.25 13.75H14.5C13.535 13.75 12.75 12.965 12.75 12C12.75 11.035 13.535 10.25 14.5 10.25H18.25V13.75ZM3 1.75H13C14.577 1.75 15.25 2.423 15.25 4V4.25H3C2.311 4.25 1.75 3.689 1.75 3C1.75 2.311 2.311 1.75 3 1.75ZM16 18.25H4C2.423 18.25 1.75 17.577 1.75 16V5.44897C2.125 5.64097 2.55 5.75 3 5.75H16C17.577 5.75 18.25 6.423 18.25 8V8.75H14.5C12.708 8.75 11.25 10.208 11.25 12C11.25 13.792 12.708 15.25 14.5 15.25H18.25V16C18.25 17.577 17.577 18.25 16 18.25ZM15.01 11H15.02C15.573 11 16.02 11.448 16.02 12C16.02 12.552 15.573 13 15.02 13C14.468 13 14.015 12.552 14.015 12C14.015 11.448 14.458 11 15.01 11Z"
                             fill="#25314C"
@@ -986,7 +959,7 @@ const Header = () => {
                         </svg>
                         <span
                           style={{
-                            color: color === "Wallet" && "#ec4899",
+                            color: color === "Wallet" && "rgba(152,14,255,255)",
                           }}
                         >
                           Wallet
@@ -1005,7 +978,7 @@ const Header = () => {
                           <path
                             style={{
                               fill:
-                                color === "BuyCoin" && "#ec4899",
+                                color === "BuyCoin" && "rgba(152,14,255,255)",
                             }}
                             d="M6.66693 12.0481L6.66694 12.0481C8.26631 12.5047 9.49467 13.733 9.95192 15.3331L10.4713 17.1511C10.5387 17.3872 10.7543 17.55 11 17.55C11.2457 17.55 11.4613 17.3872 11.5287 17.1511L11.4807 17.1373L11.5287 17.1511L12.0481 15.3331C12.5053 13.733 13.733 12.5053 15.3331 12.0481L17.1511 11.5287C17.3872 11.4613 17.55 11.2457 17.55 11C17.55 10.7543 17.3872 10.5387 17.1511 10.4713L17.1373 10.5193L17.1511 10.4713L15.3331 9.95192L15.3331 9.95192C13.7337 9.49533 12.5053 8.26699 12.0481 6.66693C12.0481 6.66693 12.0481 6.66693 12.0481 6.66693L11.5287 4.84894L11.4807 4.86267L11.5287 4.84893C11.4613 4.61282 11.2457 4.45 11 4.45C10.7543 4.45 10.5387 4.61282 10.4713 4.84893L10.5193 4.86267L10.4713 4.84894L9.95192 6.66693C9.95192 6.66693 9.95192 6.66693 9.95192 6.66693C9.49467 8.26698 8.26698 9.49467 6.66693 9.95192C6.66693 9.95192 6.66693 9.95192 6.66693 9.95192L4.84894 10.4713L4.86267 10.5193L4.84893 10.4713C4.61282 10.5387 4.45 10.7543 4.45 11C4.45 11.2457 4.61282 11.4613 4.84893 11.5287L4.86267 11.4807L4.84894 11.5287L6.66693 12.0481ZM14.9991 11.0002C13.0582 11.5672 11.5675 13.0581 11.0007 14.999C10.4339 13.0581 8.9426 11.5666 7.00243 11.0002C8.94265 10.4331 10.4329 8.94275 10.9998 7.00242C11.567 8.94313 13.0587 10.4343 14.9991 11.0002Z"
                             fill="#25314C"
@@ -1015,7 +988,7 @@ const Header = () => {
                           <rect
                             style={{
                               stroke:
-                                color === "BuyCoin" && "#ec4899",
+                                color === "BuyCoin" && "rgba(152,14,255,255)",
                             }}
                             className="ttt"
                             x="0.75"
@@ -1030,7 +1003,7 @@ const Header = () => {
                         <span
                           style={{
                             color:
-                              color === "BuyCoin" && "#ec4899",
+                              color === "BuyCoin" && "rgba(152,14,255,255)",
                           }}
                         >
                           Buy Coin
@@ -1049,7 +1022,7 @@ const Header = () => {
                           <path
                             style={{
                               fill:
-                                color === "Account" && "#ec4899",
+                                color === "Account" && "rgba(152,14,255,255)",
                             }}
                             d="M10 21.7501C9.92 21.7501 9.83994 21.7371 9.76294 21.7111C8.17394 21.1811 0.25 18.1221 0.25 9.88805V4.00012C0.25 3.64312 0.502027 3.33401 0.853027 3.26501C5.73303 2.28901 7.46305 1.43111 9.65405 0.344109C9.86505 0.239109 10.145 0.225193 10.356 0.330193C12.517 1.41919 14.2239 2.28001 19.1479 3.26501C19.4989 3.33501 19.751 3.64312 19.751 4.00012V9.88903C19.751 18.123 11.827 21.182 10.238 21.712C10.16 21.737 10.08 21.7501 10 21.7501ZM1.75 4.61218V9.88805C1.75 16.7531 8.168 19.5482 10 20.2052C11.832 19.5482 18.25 16.7521 18.25 9.88805V4.61218C13.829 3.68718 11.9699 2.81901 10.0149 1.83801C7.93789 2.86501 6.135 3.69618 1.75 4.61218ZM9.54199 13.5301L13.542 9.53014C13.835 9.23714 13.835 8.76211 13.542 8.46911C13.249 8.17611 12.774 8.17611 12.481 8.46911L9.01099 11.9391L7.54102 10.4691C7.24802 10.1761 6.77298 10.1761 6.47998 10.4691C6.18698 10.7621 6.18698 11.2371 6.47998 11.5301L8.47998 13.5301C8.62598 13.6761 8.81801 13.7501 9.01001 13.7501C9.20201 13.7501 9.39599 13.6771 9.54199 13.5301Z"
                             fill="#25314C"
@@ -1058,7 +1031,7 @@ const Header = () => {
                         <span
                           style={{
                             color:
-                              color === "Account" && "#ec4899",
+                              color === "Account" && "rgba(152,14,255,255)",
                           }}
                         >
                           Account & Security
@@ -1070,13 +1043,13 @@ const Header = () => {
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path style={{
                             fill:
-                              color === "Chat" && "#ec4899",
+                              color === "Chat" && "rgba(152,14,255,255)",
                           }} d="M3.85693 21.75C3.71193 21.75 3.57111 21.748 3.43311 21.743C2.93311 21.731 2.49497 21.411 2.32397 20.928C2.15197 20.442 2.29408 19.9131 2.68408 19.5811C3.61608 18.8291 3.98892 17.997 4.13892 17.426C2.90192 15.947 2.24902 14.08 2.24902 12.001C2.24902 6.84798 6.25902 3.25 11.999 3.25C17.739 3.25 21.749 6.84898 21.749 12.001C21.749 17.153 17.739 20.752 11.999 20.752C10.812 20.752 9.67398 20.591 8.60498 20.2729C7.24198 21.4599 5.36393 21.75 3.85693 21.75ZM3.47803 20.243C3.48003 20.243 3.48189 20.243 3.48389 20.243C3.48089 20.244 3.47903 20.244 3.47803 20.243ZM12 4.75C7.143 4.75 3.75 7.73198 3.75 12.001C3.75 13.837 4.35498 15.463 5.50098 16.703C5.65598 16.871 5.72692 17.101 5.69092 17.328C5.52292 18.399 4.99511 19.412 4.18311 20.243C5.34311 20.201 6.90304 19.934 7.86304 18.91C8.06404 18.694 8.37603 18.617 8.65503 18.714C9.69003 19.072 10.815 19.2531 12 19.2531C16.857 19.2531 20.25 16.271 20.25 12.002C20.25 7.73295 16.857 4.75 12 4.75ZM13.02 12C13.02 11.448 12.573 11 12.02 11H12.01C11.458 11 11.0149 11.448 11.0149 12C11.0149 12.552 11.468 13 12.02 13C12.572 13 13.02 12.552 13.02 12ZM17.02 12C17.02 11.448 16.573 11 16.02 11H16.01C15.458 11 15.0149 11.448 15.0149 12C15.0149 12.552 15.468 13 16.02 13C16.572 13 17.02 12.552 17.02 12ZM9.02002 12C9.02002 11.448 8.57302 11 8.02002 11H8.01001C7.45801 11 7.01489 11.448 7.01489 12C7.01489 12.552 7.46802 13 8.02002 13C8.57202 13 9.02002 12.552 9.02002 12Z" fill="#25314C" />
                         </svg>
                         <span
                           style={{
                             color:
-                              color === "Chat" && "#ec4899",
+                              color === "Chat" && "rgba(152,14,255,255)",
                           }}
                         >
                           {t('User Chat')}
@@ -1099,7 +1072,7 @@ const Header = () => {
                             >
                               <path
                                 style={{
-                                  fill: color === item.title && "#ec4899",
+                                  fill: color === item.title && "rgba(152,14,255,255)",
                                 }}
                                 d="M14 2.25H13.73C13.633 0.996 12.821 0.25 11.5 0.25H6.5C5.179 0.25 4.36702 0.996 4.27002 2.25H4C1.582 2.25 0.25 3.582 0.25 6V16C0.25 18.418 1.582 19.75 4 19.75H14C16.418 19.75 17.75 18.418 17.75 16V6C17.75 3.582 16.418 2.25 14 2.25ZM5.75 2.5C5.75 1.911 5.911 1.75 6.5 1.75H11.5C12.089 1.75 12.25 1.911 12.25 2.5V3.5C12.25 4.089 12.089 4.25 11.5 4.25H6.5C5.911 4.25 5.75 4.089 5.75 3.5V2.5ZM16.25 16C16.25 17.577 15.577 18.25 14 18.25H4C2.423 18.25 1.75 17.577 1.75 16V6C1.75 4.423 2.423 3.75 4 3.75H4.27002C4.36702 5.004 5.179 5.75 6.5 5.75H11.5C12.821 5.75 13.633 5.004 13.73 3.75H14C15.577 3.75 16.25 4.423 16.25 6V16ZM12.75 10C12.75 10.414 12.414 10.75 12 10.75H6C5.586 10.75 5.25 10.414 5.25 10C5.25 9.586 5.586 9.25 6 9.25H12C12.414 9.25 12.75 9.586 12.75 10ZM10.75 14C10.75 14.414 10.414 14.75 10 14.75H6C5.586 14.75 5.25 14.414 5.25 14C5.25 13.586 5.586 13.25 6 13.25H10C10.414 13.25 10.75 13.586 10.75 14Z"
                                 fill="#25314C"
@@ -1107,7 +1080,7 @@ const Header = () => {
                             </svg>
                             <span
                               style={{
-                                color: color === item.title && "#ec4899",
+                                color: color === item.title && "rgba(152,14,255,255)",
                               }}
                             >
                               {item.title}
@@ -1139,11 +1112,11 @@ const Header = () => {
             </nav>
           </div>
           {packageId > 0
-            ? <div onClick={() => { ColorHandler(""); SlidBarHAndler() }} className="mx-[10px] px-[10px] py-[10px] rounded-[10px] bg-[#ec4899] mt-[20px]">
+            ? <div onClick={() => { ColorHandler(""); SlidBarHAndler() }} className="mx-[10px] px-[10px] py-[10px] rounded-[10px] bg-[rgba(152,14,255,255)] mt-[20px]">
               <Link to="/upgrade">
                 <div className="flex items-center">
                   <h6 className="text-white Demo">{t("You're Activated Membersip")}</h6>
-                  <button className="bg-white text-[#ec4899] px-[10px] py-[3px] rounded-[10px] font-[500]">
+                  <button className="bg-white text-[rgba(152,14,255,255)] px-[10px] py-[3px] rounded-[10px] font-[500]">
                     {t('Active')}
                   </button>
                 </div>
@@ -1152,11 +1125,11 @@ const Header = () => {
                 </h6>
               </Link>
             </div>
-            : <div onClick={() => { ColorHandler(""); SlidBarHAndler() }} className="mx-[10px] px-[10px] py-[10px] rounded-[10px] bg-[#ec4899] mt-[20px]">
+            : <div onClick={() => { ColorHandler(""); SlidBarHAndler() }} className="mx-[10px] px-[10px] py-[10px] rounded-[10px] bg-[rgba(152,14,255,255)] mt-[20px]">
               <Link to="/upgrade">
                 <div className="flex items-center">
                   <h6 className="text-white Demo">{t("Join Our Membership Today!")}</h6>
-                  <button className="bg-white text-[#ec4899] px-[10px] py-[3px] rounded-[10px] font-[500]">
+                  <button className="bg-white text-[rgba(152,14,255,255)] px-[10px] py-[3px] rounded-[10px] font-[500]">
                     {t('Go')}
                   </button>
                 </div>
